@@ -44,6 +44,12 @@ int main(int argc, char **argv)
     cout << "msgstr \"\"\n";
     cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
     cout << "\"Plural-Forms: nplurals=1; plural=0;\\n\"\n";
+    cout << "\"Project-Id-Version: " << filename << "\\n\"\n";
+    cout << "\"PO-Revision-Date: 2003-02-12 22:36+0100\\n\"\n";
+    cout << "\"Last-Translator: transxx\\n\"\n";
+    cout << "\"Language-Team: xx <xx@nowhere.xx>\\n\"\n";
+    cout << "\"MIME-Version: 1.0\\n\"\n";
+    cout << "\"Content-Transfer-Encoding: 8bit\\n\"\n";
     cout << "\n";
 
     for (MsgList::ConstIterator it = translated.begin();
@@ -68,7 +74,7 @@ int main(int argc, char **argv)
 
             if ( is_desktop ) {
                 msgstr = msgid.left( msgid.find( '=' ) + 1);
-                msgstr += translation + msgid.mid( msgid.find( '=' ) + 1) + translation;
+                msgstr += translation;
                 outputMsg( "msgstr", escapePO(msgstr) );
                 cout << "\n";
                 continue;
@@ -79,9 +85,9 @@ int main(int argc, char **argv)
             }
 
             if (msgid.endsWith("%"))
-                msgstr = translation + msgid + " " + translation;
+                msgstr = translation;
             else
-                msgstr = translation + msgid + translation;
+                msgstr = translation;
 
             if ( msgid.endsWith("\\n" ) )
                 msgstr += "\n";
