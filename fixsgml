@@ -56,6 +56,21 @@ text = re.sub('ü', '&uuml;', text)
 text = re.sub('ä', '&auml;', text)
 text = re.sub('ß', '&szlig;', text)
 
+text = re.sub("<graphic(\s[^>]*)>\s*</graphic>",
+			  "<mediaobject>\n"
+			  "<imageobject>\n"
+			  "<imagedata\\1>\n"
+			  "</imageobject>\n"
+			  "</mediaobject>", text)
+text = re.sub("<inlinegraphic(\s[^>]*)>\s*</inlinegraphic>",
+			  "<inlinemediaobject>\n"
+			  "<imageobject>\n"
+			  "<imagedata\\1>\n"
+			  "</imageobject>\n"
+			  "</inlinemediaobject>", text)
+
+text = re.sub("<imagedata(\\s.*)format=\"png\"", "<imagedata\\1format=\"PNG\"", text)
+
 docbookfile = open(sys.argv[1], 'w')
 docbookfile.write(text)
 docbookfile.close()
