@@ -601,7 +601,7 @@ void StructureParser::cleanupTags( QString &contents )
         contents.replace(index, unclosed.matchedLength(), QString("</%1>").arg(tag));
     }
 
-    QRegExp start("<((\\s*[^<>\\s])*)\\s\\s*>");
+    QRegExp start("<((\\s*[^<>\\s])*)\\s\\s*(/?)>");
     start.setMinimal(true);
 
     index = -1;
@@ -611,7 +611,7 @@ void StructureParser::cleanupTags( QString &contents )
             break;
         QString tag = start.cap(1);
         // qDebug("UNCLO %s %d -%s-", start.cap(0).latin1(), index, tag.latin1());
-        contents.replace(index, start.matchedLength(), QString("<%1>").arg(tag));
+        contents.replace(index, start.matchedLength(), QString("<%1%2>").arg(tag).arg(start.cap(2)));
     }
 
     QRegExp singletag("<(\\w*)\\s([^><]*)/>");
