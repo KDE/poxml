@@ -1,10 +1,10 @@
-<?xml version='1.0' ?>
-
-
-
-
-
-
+<?xml version='1.0' ?><!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V4.1-Based Variant V1.0//EN" "dtd/kde-next.dtd" [
+  <!ENTITY kappname "&kde;" > <!-- replace kapp here. This only *seems* redundant -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+  <!ENTITY % ents SYSTEM "-//KDE//ENTITIES Documentation V2.0//EN">
+  %ents;
+]>
 <!--Time-stamp: "2000-11-29 01:57:01 weetiong"-->
 
 <book lang="&language;">
@@ -2369,7 +2369,6 @@ url="http://kde.themes.org/">http://kde.themes.org/</ulink>.</para>
 <para>How do I change &MIME; Types?</para>
 </question>
 <answer>
-<para>kde 1.1</para>
 <para>If you are using &kfm;, first open a &kfm; window and choose
 <menuchoice><guimenu>Edit</guimenu><guimenuitem>Mime
 Types</guimenuitem></menuchoice>.  Find the type you want to change
@@ -2377,7 +2376,6 @@ Types</guimenuitem></menuchoice>.  Find the type you want to change
 select <guimenuitem>Properties</guimenuitem>, choose the
 <guilabel>Binding</guilabel> tab, and set Default Application to
 whatever you want.</para>
-<para>kde 2.x</para>
 <para>If you are using &konqueror;, do this instead: first, open a
 &konqueror; window and choose
 <menuchoice><guimenu>Edit</guimenu><guimenuitem>File

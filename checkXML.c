@@ -415,12 +415,6 @@ commentDebug(void *a, const xmlChar *b)
 void
 warningDebug(void *ctx, const char *msg, ...)
 {
-    va_list args;
-
-    va_start(args, msg);
-    fprintf(stdout, "SAX.warning: ");
-    vfprintf(stdout, msg, args);
-    va_end(args);
 }
 
 /**

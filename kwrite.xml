@@ -1,8 +1,8 @@
 <?xml version='1.0' ?><!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V4.1-Based Variant V1.0//EN" "dtd/kde-next.dtd" [
- <!ENTITY kappname "&kwrite;"> <!-- this only *seems* redundant -->  
+ <!ENTITY kappname "&kwrite;" > <!-- this only *seems* redundant -->  
  <!ENTITY % addindex "IGNORE"> 
  <!ENTITY % English "INCLUDE">   
- <!ENTITY % ents SYSTEM "-//KDE//ENTITIES Documentation V1.0//EN">  
+ <!ENTITY % ents PUBLIC "-//KDE//ENTITIES Documentation V2.0//EN" "entities/kde-prologue.entities">  
  %ents;  
 ]>  
   
@@ -1524,7 +1524,7 @@ www.kde.org</ulink>.</para>
   
 
   
-<![ %addindex; [ &kdedocindex; ]]>  
+<!-- should be removed ![ %addindex; [ &kdedocindex; ]] -->  
 </book>  
 <!--  
 Local Variables:  

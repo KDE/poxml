@@ -3,7 +3,7 @@ EXTRA_PROGRAMS = checkXML
 
 bin_PROGRAMS = split $(LIBXML_PROGRAMS) xml2pot po2xml
 bin_SCRIPTS = xmlizer fixsgml
-# AM_CPPFLAGS = -DNDEBUG
+AM_CPPFLAGS = -DNDEBUG
 
 INCLUDES = -I$(srcdir)/antlr $(all_includes)
 KDE_CXXFLAGS = $(USE_EXCEPTIONS) 
@@ -55,7 +55,7 @@ $(srcdir)/faq_de.xml: po2xml $(srcdir)/docbook_faq.po
 $(srcdir)/lauri_de.xml: po2xml $(srcdir)/lauri.po
 	./po2xml $(srcdir)/lauri.xml $(srcdir)/lauri.po > $(srcdir)/lauri_de.xml
 
-test: $(srcdir)/kwrite_de.xml $(srcdir)/faq_de.xml $(srcdir)/lauri_de.xml
+test: $(srcdir)/kwrite_de.xml $(srcdir)/faq_de.xml $(srcdir)/lauri_de.xml checkXML
 	./checkXML $(srcdir)/kwrite_de.xml 
 	./checkXML $(srcdir)/faq_de.xml
 	./checkXML $(srcdir)/lauri_de.xml

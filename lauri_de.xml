@@ -1,14 +1,24 @@
 <?xml version='1.0'?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML CALS Table Model V4.1//EN" "dummy.dtd">
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V4.1-Based Variant V1.0//EN"
+        "dtd/kde-next.dtd" [
+		<!ENTITY lauri "<emphasis>Lauri</emphasis>">
+]>
 
 <book>
-<para><term> Start </term> <keycap> Schieber </keycap> <keycap> Hilfe </keycap></para>
+<title>Testtext</title>
 
-<para><variablelist> <varlistentry> <term> Schrift 1 </term> <listitem> <para id="blah"> Schrift 2 <note> <para> Text 3 "alles" <footnote> <para> Text 4 \"noch mehr\" </para> </footnote> </para> </note> </para> </listitem> </varlistentry> </variablelist></para>
+<chapter id="hello">
 
-<para>Ende</para>
+<para> <note><para> Starttext f&uuml;r &lauri; </para></note> <keycap> Schieber </keycap> <keycap> Hilfe </keycap> </para>
 
-<literallayout>Matthias Hoelzer
+<para> <variablelist> <varlistentry> <term> Schrift 1 </term> <listitem> <para id="blah"> Schrift 2 <note> <para> Text 3 "alles" <variablelist><varlistentry><term>Alles</term><listitem>Ist klar</listitem></varlistentry></variablelist> <variablelist><varlistentry><term>Nichts</term><listitem>ist falsch</listitem></varlistentry></variablelist> <footnote> <para> Text 4 \"noch mehr\" </para> <screen>
+		print "$b4 /path/to/KDE/libs/libpng.a $af\n"; \
+
+		hallo \
+		 </screen> </footnote> </para> </note> </para> </listitem> </varlistentry> </variablelist> </para>
+
+<para> Ende: <literallayout>
+Matthias Hoelzer
 KDE-Verein i.G.
 Account-Nr. 2798296
 
@@ -17,9 +27,13 @@ Hofstrasse 9
 97070 Wuerzburg
 Germany
 BLZ 790 500 00
-SWIFT-Address: BYLA DE 77</literallayout>
+SWIFT-Address: BYLA DE 77
+print "$b4 /path/to/KDE/libs/libpng.a $af\n";\
+hello
+</literallayout> </para>
 
-<screen>Expect       ogin:           <lineannotation># Dies ist alles nicht so schlimm!</lineannotation>
+<screen>
+Expect       ogin:           <lineannotation># Dies ist alles nicht so schlimm!</lineannotation>
 ID           ""              <lineannotation># kppp sends the id you configured in the main dialog</lineannotation>
 Expect       for userxyz:    <lineannotation># a list of available numbers is shown, the user should choose one</lineannotation> 
 Send         userxyz-home    <lineannotation># the user wants to be called back on their home number</lineannotation>
@@ -27,18 +41,22 @@ Expect       ogin:           <lineannotation># The callback process is now runni
 ID
 Expect       assword:        <lineannotation># Now send your password</lineannotation>
 Expect       &gt;               <lineannotation># Wait for the command prompt (the prompt may vary)</lineannotation>
-Send         start_ppp       <lineannotation># this command starts the pppd</lineannotation></screen>
+Send         start_ppp       <lineannotation># this command starts the pppd</lineannotation>
+</screen>
 
-<screen>Send                         <lineannotation># send einen leerenstring</lineannotation>
+<screen>
+Send                         <lineannotation># send einen leerenstring</lineannotation>
 Expect           ID:
 Send             itsme
 Expect           word:
 Send             forgot
 Expect           granted
-Send             ppp</screen>
+Send             ppp
+</screen>
 
 
-<programlisting>-&gt;  #include &lt;qpixmap.h&gt;
+<programlisting>
+-&gt;  #include &lt;qpixmap.h&gt;
 -&gt;  #include &lt;qpen.h&gt;
      class KScribbleDoc
      {
@@ -57,7 +75,9 @@ Send             ppp</screen>
       private:
 -&gt;      QPen pen;
         /** das veraenderte flag of the current document */
-        bool modified;</programlisting>
+        bool modified;
+</programlisting>
 
+</chapter>
 </book>
 

@@ -17,8 +17,6 @@ QString translate(QString xml, QString orig, QString translation)
         return xml;
     }
 
-    orig.replace(QRegExp("\\\\\n"), "\n");
-    translation.replace(QRegExp("\\\\\n"), "\n");
     int index = xml.find(orig);
     if (index == -1) {
         qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
@@ -26,6 +24,49 @@ QString translate(QString xml, QString orig, QString translation)
     }
     xml.replace(index, orig.length(), translation);
     return xml;
+}
+
+QString escapePO(QString msgid)
+{
+    int index = 0;
+    while (true) {
+        index = msgid.find("\\n", index);
+        if (index == -1)
+            break;
+        if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
+            msgid.replace(index - 1, 3, "\\n");
+            index += 3;
+        } else
+            msgid.replace(index, 2, "\n");
+    }
+    index = 0;
+    while (true) {
+        index = msgid.find("\\\"", index);
+        if (index == -1)
+            break;
+        if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\')
+            msgid.replace(index - 1, 3, "\\\"");
+        else
+            msgid.replace(index, 2, "\"");
+    }
+    index = 0;
+    while (true) {
+        index = msgid.find("\\t", index);
+        if (index == -1)
+            break;
+        if (msgid.at(index - 1) == '\\')
+            msgid.replace(index - 1, 3, "\\t");
+        else
+            msgid.replace(index, 2, "\t");
+    }
+    while (true) {
+        int index = msgid.find("\\\\");
+        if (index == -1)
+            break;
+        msgid.replace(index, 2, "\\");
+    }
+
+    return msgid;
 }
 
 int main( int argc, char **argv )
@@ -53,10 +94,8 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = translated.begin();
          it != translated.end(); ++it)
     {
-        QString msgid = (*it).msgid;
-        msgid.replace(QRegExp("\\\\n"), "\n");
-        QString msgstr = (*it).msgstr;
-        msgstr.replace(QRegExp("\\\\n"), "\n");
+        QString msgid = escapePO((*it).msgid);
+        QString msgstr = escapePO((*it).msgstr);
         translations.insert(msgid, msgstr);
     }
 
@@ -112,20 +151,20 @@ int main( int argc, char **argv )
         BlockInfo bi = (*it).lines.first();
         int start_pos = line_offsets[bi.start_line - 1] + bi.start_col;
         int end_pos = line_offsets[bi.end_line - 1] + bi.end_col - 1;
-        while (xml_text.at(end_pos) != '<')
-            end_pos--;
 
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
-        StructureParser::descape(xml, !(*it).literal);
+        StructureParser::descape(xml);
+        xml.replace(QRegExp("\\s*<!--.*-->\\s*"), " ");
 
 #ifndef NDEBUG
-        qDebug("english %s %s %d %d %d %d %d", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end, xml.find("The location"));
+        qDebug("english %s %s %d %d %d %d", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end);
 #endif
-
         if ((*it).end) {
-            if (!(*it).lines.first().offset && start_pos != old_pos) {
+            if (!(*it).lines.first().offset && end_pos != old_pos) {
+                assert(start_pos >= old_pos);
                 ts << xml_text.mid(old_pos, start_pos - old_pos);
             }
+
             ts << translate(xml.mid(bi.offset, (*it).end - bi.offset),
                                     (*it).msgid, translations[(*it).msgid]);
             old_pos = end_pos;
@@ -141,10 +180,6 @@ int main( int argc, char **argv )
     }
 
     ts << xml_text.mid(old_pos);
-
-    output.replace(QRegExp("\\\\\""), "\"");
-    output.replace(QRegExp("\\\\\\"), "\\");
-    output.replace(QRegExp("\\\\\n"), "\n");
 
     cout << output.latin1();
     return 0;

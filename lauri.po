@@ -14,35 +14,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.8\n"
 
-#: index.docbook:5
-msgid "Leading Text"
-msgstr "Start"
+#: index.docbook:8
+msgid "test document"
+msgstr "Testtext"
 
-#: index.docbook:5
+#: index.docbook:12
+msgid "Leading Text for &lauri;"
+msgstr "Starttext f&uuml;r &lauri;"
+
+#: index.docbook:12
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: index.docbook:17
+#: index.docbook:24
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:17
+#: index.docbook:24
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:17
+#: index.docbook:24
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:17
+#: index.docbook:24
+msgid "Everything"
+msgstr "Alles"
+
+#: index.docbook:24
+msgid "Is correct"
+msgstr "Ist klar"
+
+#: index.docbook:24
+msgid "Nothing"
+msgstr "Nichts"
+
+#: index.docbook:24
+msgid "Is wrong"
+msgstr "ist falsch"
+
+#: index.docbook:24
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:42
-msgid "Ending Text"
-msgstr "Ende"
+#: index.docbook:24
+msgid ""
+"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
+"\n"
+"\t\thello \\"
+msgstr ""
+"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
+"\n"
+"\t\thallo \\"
 
-#: index.docbook:46
+#: index.docbook:56
+msgid "Ending Text:"
+msgstr "Ende:"
+
+#: index.docbook:56
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -53,7 +83,11 @@ msgid ""
 "97070 Wuerzburg\n"
 "Germany\n"
 "BLZ 790 500 00\n"
-"SWIFT-Address: BYLA DE 77"
+"SWIFT-Address: BYLA DE 77\n"
+"\n"
+"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
+"you see it here\n"
+"whereever"
 msgstr ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -64,9 +98,11 @@ msgstr ""
 "97070 Wuerzburg\n"
 "Germany\n"
 "BLZ 790 500 00\n"
-"SWIFT-Address: BYLA DE 77"
+"SWIFT-Address: BYLA DE 77\n"
+"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
+"hello"
 
-#: index.docbook:59
+#: index.docbook:77
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -104,7 +140,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:71
+#: index.docbook:89
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -124,7 +160,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:82
+#: index.docbook:100
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"

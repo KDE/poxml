@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V4.1-Based Variant V1.0//EN"
         "dtd/kde-next.dtd" [
-	<!ENTITY lauri "Lauri">
+		<!ENTITY lauri "<emphasis>Lauri</emphasis>">
 ]>
 
 <book>
@@ -33,10 +33,17 @@
            <note>
              <para>
                Text 3 "everything"
-               <footnote>
+		<variablelist><varlistentry><term>Everything</term><listitem>Is correct</listitem></varlistentry></variablelist>
+		<variablelist><varlistentry><term>Nothing</term><listitem>Is wrong</listitem></varlistentry></variablelist>
+		<footnote>
                   <para>
                      Text 4 \"even more\"
                   </para>
+		  <screen>
+		print "$b4 /path/to/KDE/libs/libpng.a $af\n"; \
+
+		hello \
+		 </screen>
                </footnote>
              </para>
            </note>
@@ -47,8 +54,7 @@
 </para>
 
 <para>
-  Ending Text
-</para>
+  Ending Text:
 
 <literallayout>
 Matthias Hoelzer
@@ -61,7 +67,12 @@ Hofstrasse 9
 Germany
 BLZ 790 500 00
 SWIFT-Address: BYLA DE 77
+
+print "$b4 /path/to/KDE/libs/libpng.a $af\n"; \
+you see it here
+whereever
 </literallayout>
+</para>
 
 <screen>
 Expect       ogin:           <lineannotation># remember, we do ordinary terminal login</lineannotation>
