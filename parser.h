@@ -97,6 +97,7 @@ public:
     static QString escapeLiterals( const QString &contents);
     static QString descapeLiterals( const QString &contents);
     static void cleanupTags( QString &contents );
+    static void removeEmptyTags( QString &contents);
     static void stripWhiteSpace( QString &contents);
 
 private:

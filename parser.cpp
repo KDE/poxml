@@ -787,6 +787,28 @@ void StructureParser::cleanupTags( QString &contents )
 
 }
 
+void StructureParser::removeEmptyTags( QString &contents )
+{
+    bool removed;
+    do {
+        removed = false;
+
+        for (int index = 0; cuttingtags[index]; index++) {
+            QRegExp empty(QString("<%1[^>]*>\\s*</%2\\s*>").arg(cuttingtags[index]).arg(cuttingtags[index]));
+            int strindex = 0;
+            while (true) {
+                strindex = contents.find(empty, strindex);
+                if (strindex < 0)
+                    break;
+                qDebug("found empty tag %s", cuttingtags[index]);
+                contents.replace(strindex, empty.matchedLength(), "");
+                strindex++;
+                removed = true;
+            }
+        }
+    } while (removed);
+}
+
 bool StructureParser::characters(const QString &ch)
 {
     if (inside && !ch.isEmpty())
@@ -936,10 +958,16 @@ MsgList parseXML(const char *filename)
         changed = false;
         QMap<QString, QString> msgids;
 
-        for (MsgList::ConstIterator it = english.begin();
+        for (MsgList::Iterator it = english.begin();
              it != english.end(); it++)
         {
-            QMap<QString,QString>::ConstIterator found = msgids.find((*it).msgid);
+            QMap<QString,QString>::Iterator found = msgids.find((*it).msgid);
+            if ((*it).msgid.length() < 4) {
+                (*it).msgid = QString("<%1>").arg((*it).tag) + (*it).msgid +
+                              QString("</%1>").arg((*it).tag);
+                changed = true;
+                break;
+            }
             if (found != msgids.end()) {
                 if (found.data() != (*it).tag) {
 #ifdef POXML_DEBUG
