@@ -659,10 +659,10 @@ bool StructureParser::comment ( const QString &c )
 {
     if (c.left(7) != " TRANS:")
         return true;
-    if (inside) {
+/*    if (inside) {
         qWarning("ERROR: to translated string in nested block. Ignoring %s!", c.stripWhiteSpace().utf8().data());
         return true;
-    }
+        } */
     QString string = c.mid(7).stripWhiteSpace();
     MsgBlock m;
     m.msgid = c.mid(7).stripWhiteSpace();
