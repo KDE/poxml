@@ -27,8 +27,12 @@
 <title>Section 1</title>
 <sect2>
 <title>Section 1.1</title>
-<para>
   <anchor id="try"/>
+       <para><emphasis><emphasis role="blah">Warum kann ich
+        meinem Rechner nicht einfach
+        ausschalten?</emphasis></emphasis>Hier noch</para>
+    <para><application>me</application> can't be turned off.</para>
+<para>
   <note><para>
     Leading &quot;Text&quot; for &lauri;
   </para></note>

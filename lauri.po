@@ -49,12 +49,26 @@ msgstr "Abschnitt 1"
 msgid "Section 1.1"
 msgstr "Abschnitt 1.1"
 
-#: lauri.xml:32
+#: lauri.xml:31
+#, no-c-format
+msgid ""
+"<emphasis><emphasis role=\"blah\">Warum kann ich meinem Rechner nicht "
+"einfach ausschalten?</emphasis></emphasis>Hier noch"
+msgstr ""
+"<emphasis><emphasis role=\"blah\">Warum kann ich meinem Rechner nicht "
+"einfach ausschalten?</emphasis></emphasis>Hier noch"
+
+#: lauri.xml:34
+#, no-c-format
+msgid "<application>me</application> can't be turned off."
+msgstr "Das <application>me</application> kann nicht ausgemacht werden."
+
+#: lauri.xml:36
 #, no-c-format
 msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "&quot;Starttext&quot; f&uuml;r &lauri;"
 
-#: lauri.xml:35
+#: lauri.xml:39
 #, no-c-format
 msgid ""
 "we pretend her name was Höpfner, but that <anchor id=\"help\"/> is a good "
@@ -62,17 +76,17 @@ msgid ""
 msgstr ""
 "sagen wir mal sie heisst Höpfner, aber <anchor id=\"help\"/> ist auch gut"
 
-#: lauri.xml:36
+#: lauri.xml:39
 #, no-c-format
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: lauri.xml:41
+#: lauri.xml:45
 #, no-c-format
 msgid "<primary>kde</primary>"
 msgstr "<primary>kde.de</primary>"
 
-#: lauri.xml:42
+#: lauri.xml:46
 #, no-c-format
 msgid ""
 "an archive of the developer's mailing list is at <ulink url=\"http://lists."
@@ -81,52 +95,52 @@ msgstr ""
 "Es gibt ein Archiv <ulink url=\"http://lists.kde.org/?l=kde-kmail&amp;"
 "r=1&amp;w=2\">lists.kde.org</ulink>."
 
-#: lauri.xml:52
+#: lauri.xml:56
 #, no-c-format
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: lauri.xml:56
+#: lauri.xml:60
 #, no-c-format
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: lauri.xml:59
+#: lauri.xml:63
 #, no-c-format
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: lauri.xml:61
+#: lauri.xml:65
 #, no-c-format
 msgid "Everything"
 msgstr "Alles"
 
-#: lauri.xml:61
+#: lauri.xml:65
 #, no-c-format
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: lauri.xml:62
+#: lauri.xml:66
 #, no-c-format
 msgid "Nothing"
 msgstr "Nichts"
 
-#: lauri.xml:62
+#: lauri.xml:66
 #, no-c-format
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: lauri.xml:64
+#: lauri.xml:68
 #, no-c-format
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: lauri.xml:69
+#: lauri.xml:73
 #, no-c-format
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: lauri.xml:82
+#: lauri.xml:85
 #, no-c-format
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></"
@@ -137,24 +151,24 @@ msgstr ""
 "shortcut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</"
 "accel>eu</guimenuitem>"
 
-#: lauri.xml:84
+#: lauri.xml:88
 #, no-c-format
 msgid "This starts a new Document in a new instance of the editor."
 msgstr "Dies macht alles neu."
 
-#: lauri.xml:92
+#: lauri.xml:96
 #, no-c-format
 msgid "What XML looks like"
 msgstr "Wie XML aussieht"
 
-#: lauri.xml:94
+#: lauri.xml:98
 #, no-c-format
 msgid ""
 "Here is an example of an XML file used by <application>Columbo</application> "
 "to describe a search site on the Internet:"
 msgstr "Dies ist <application>Columbo</application>:"
 
-#: lauri.xml:106
+#: lauri.xml:110
 #, no-c-format
 msgid ""
 "\n"
@@ -211,7 +225,7 @@ msgstr ""
 "</search>]]>\n"
 "               "
 
-#: lauri.xml:109
+#: lauri.xml:113
 #, no-c-format
 msgid ""
 "This instruction is normally used to declare the DTD of the document. Here "
@@ -219,7 +233,7 @@ msgid ""
 "varname>) appears."
 msgstr "Das ist normalerweise DTD"
 
-#: lauri.xml:117
+#: lauri.xml:120
 #, no-c-format
 msgid ""
 "<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
@@ -230,7 +244,7 @@ msgstr ""
 "it extends to the end of the document (<sgmltag class=\"endtag\">search</"
 "sgmltag>)."
 
-#: lauri.xml:123
+#: lauri.xml:127
 #, no-c-format
 msgid ""
 "This is an example of an empty element. Empty elements do not need a closing "
@@ -239,17 +253,17 @@ msgstr ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
 
-#: lauri.xml:135
+#: lauri.xml:139
 #, no-c-format
 msgid "The ugly part"
 msgstr "Der schlimme Teil"
 
-#: lauri.xml:136
+#: lauri.xml:140
 #, no-c-format
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: lauri.xml:139
+#: lauri.xml:143
 #, no-c-format
 msgid ""
 "\n"
@@ -276,7 +290,7 @@ msgstr ""
 "FrankenSWIFT-Address: BYLA DE 77\n"
 "hallo Du\n"
 
-#: lauri.xml:142
+#: lauri.xml:146
 #, no-c-format
 msgid ""
 "\n"
@@ -317,7 +331,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the pppd</"
 "lineannotation>\n"
 
-#: lauri.xml:146
+#: lauri.xml:150
 #, no-c-format
 msgid ""
 "\n"
@@ -340,7 +354,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp\n"
 
-#: lauri.xml:148
+#: lauri.xml:152
 #, no-c-format
 msgid ""
 "\n"
