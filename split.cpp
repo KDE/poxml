@@ -92,6 +92,13 @@ int main( int argc, char **argv )
         tit++;
     }
 
+    cout << "#, fuzzy\n";
+    cout << "msgid \"\"\n";
+    cout << "msgstr \"\"\n";
+    cout << "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
+    cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
+    cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
+
     for (MsgList::ConstIterator it = english.begin();
          it != english.end(); ++it)
     {
