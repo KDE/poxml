@@ -2,8 +2,6 @@
   <!ENTITY kappname "&kde;" > <!-- replace kapp here. This only *seems* redundant -->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE" > <!-- change language only here -->
-  <!ENTITY % ents SYSTEM "-//KDE//ENTITIES Documentation V2.0//EN">
-  %ents;
 ]>
 <!--Time-stamp: "2000-11-29 01:57:01 weetiong"-->
 
@@ -1623,7 +1621,8 @@ xsetroot -cursor_name left_ptr
 <para>Wie entpacken/installieren Sie diff-Dateien?</para>
 </question>
 <answer>
-<para>Um eine diff-Datei, die f&uuml;r das "Patchen" von Quelltext-Dateien nutzbar ist, zu erzeugen, f&uuml;hren Sie den Befehl <command>diff <replaceable>old-file new-file</replaceable> > <replaceable>patchfile</replaceable></command> aus. Um diese &Auml;nderungen in eine andere Datei einzuspielen, (<abbrev>z.B.</abbrev> "patch the file"), f&uuml;hren Sie den Befehl <command>patch &lt; <replaceable>patchfile</replaceable></command> aus.</para> </answer>
+<para>Um eine diff-Datei, die f&uuml;r das "Patchen" von Quelltext-Dateien nutzbar ist, zu erzeugen, f&uuml;hren Sie den Befehl <command>diff <replaceable>old-file new-file</replaceable> > <replaceable>patchfile</replaceable></command> aus. Um diese &Auml;nderungen in eine andere Datei einzuspielen, (<abbrev>z.B.</abbrev> "patch the file"), f&uuml;hren Sie den Befehl <command>patch &lt; <replaceable>patchfile</replaceable></command> aus.</para> 
+</answer>
 </qandaentry>
 
 <qandaentry>

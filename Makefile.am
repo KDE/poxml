@@ -5,7 +5,7 @@ bin_PROGRAMS = split $(LIBXML_PROGRAMS) xml2pot po2xml
 bin_SCRIPTS = xmlizer fixsgml
 AM_CPPFLAGS = -DNDEBUG
 
-INCLUDES = -I$(srcdir)/antlr $(all_includes)
+INCLUDES = -I$(srcdir)/antlr $(all_includes) -I/usr/local/include
 KDE_CXXFLAGS = $(USE_EXCEPTIONS) 
 
 SUBDIRS = antlr
@@ -15,7 +15,8 @@ split_LDFLAGS = $(all_libraries)
 split_LDADD = $(LIB_QT)
 
 checkXML_SOURCES = checkXML.c
-checkXML_LDADD = -lxml
+checkXML_LDFLAGS = -L/usr/local/lib
+checkXML_LDADD = -lxml2
 
 xml2pot_SOURCES = qxml.cpp xml2pot.cpp parser.cpp
 xml2pot_LDFLAGS = $(all_libraries)
@@ -37,6 +38,9 @@ $(srcdir)/docbook_faq.pot: xml2pot faq.xml
 $(srcdir)/lauri.pot: xml2pot lauri.xml
 	./xml2pot $(srcdir)/lauri.xml > $(srcdir)/lauri.pot
 	msgmerge $(srcdir)/lauri.pot $(srcdir)/lauri.pot > d && mv d $(srcdir)/lauri.pot
+$(srcdir)/docbook_kabalone.pot: xml2pot kabalone.xml
+	./xml2pot $(srcdir)/kabalone.xml > $(srcdir)/docbook_kabalone.pot
+	msgmerge -o $(srcdir)/docbook_kabalone.pot $(srcdir)/docbook_kabalone.pot $(srcdir)/docbook_kabalone.pot  
 
 $(srcdir)/docbook_kwrite.po: $(srcdir)/docbook_kwrite.pot
 	msgmerge $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.po 
@@ -47,6 +51,9 @@ $(srcdir)/docbook_faq.po: $(srcdir)/docbook_faq.pot
 $(srcdir)/lauri.po: $(srcdir)/lauri.pot
 	msgmerge $(srcdir)/lauri.po $(srcdir)/lauri.pot > d && mv d $(srcdir)/lauri.po
 	msgfmt --statistics $(srcdir)/lauri.po -o /dev/null
+$(srcdir)/docbook_kabalone.po: $(srcdir)/docbook_kabalone.pot
+	msgmerge $(srcdir)/docbook_kabalone.po $(srcdir)/docbook_kabalone.pot > d && mv d $(srcdir)/docbook_kabalone.po 
+	msgfmt --statistics $(srcdir)/docbook_kabalone.po -o /dev/null
 
 $(srcdir)/kwrite_de.xml: po2xml $(srcdir)/docbook_kwrite.po
 	./po2xml $(srcdir)/kwrite.xml $(srcdir)/docbook_kwrite.po > $(srcdir)/kwrite_de.xml
@@ -54,10 +61,14 @@ $(srcdir)/faq_de.xml: po2xml $(srcdir)/docbook_faq.po
 	./po2xml $(srcdir)/faq.xml $(srcdir)/docbook_faq.po > $(srcdir)/faq_de.xml
 $(srcdir)/lauri_de.xml: po2xml $(srcdir)/lauri.po
 	./po2xml $(srcdir)/lauri.xml $(srcdir)/lauri.po > $(srcdir)/lauri_de.xml
+$(srcdir)/kabalone_da.xml: po2xml $(srcdir)/docbook_kabalone.po
+	./po2xml $(srcdir)/kabalone.xml $(srcdir)/docbook_kabalone.po > $(srcdir)/kabalone_da.xml
 
-test: $(srcdir)/kwrite_de.xml $(srcdir)/faq_de.xml $(srcdir)/lauri_de.xml checkXML
+test: $(srcdir)/kwrite_de.xml $(srcdir)/faq_de.xml $(srcdir)/lauri_de.xml $(srcdir)/kabalone_da.xml checkXML
 	./checkXML $(srcdir)/kwrite_de.xml 
 	./checkXML $(srcdir)/faq_de.xml
 	./checkXML $(srcdir)/lauri_de.xml
+	./checkXML $(srcdir)/kabalone_da.xml
+
 
 

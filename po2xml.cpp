@@ -119,7 +119,11 @@ int main( int argc, char **argv )
         }
         xml.close();
         pclose(p);
+
     }
+    xml_text.replace(QRegExp("&amp;"), "&amp-internal;");
+    xml_text.replace(QRegExp("&lt;"), "&lt-internal;");
+    xml_text.replace(QRegExp("&gt;"), "&gt-internal;");
 
     QValueList<int> line_offsets;
     line_offsets.append(0);
@@ -168,12 +172,14 @@ int main( int argc, char **argv )
         int end_pos = line_offsets[bi.end_line - 1] + bi.end_col - 1;
 
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
-        int ret = StructureParser::descape(xml);
-        end_pos -= ret;
+        StructureParser::descape(xml);
         xml.replace(QRegExp("\\s*<!--.*-->\\s*"), " ");
 
 #ifndef NDEBUG
-        qDebug("english \"%s\" \"%s\" %d %d %d %d \"%s\" %d", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end, xml.mid((*it).lines.first().offset, 15).latin1(), ret);
+        qDebug("english \"%s\" \"%s\" %d(%d-%d) %d(%d-%d) %d %d \"%s\"", xml.latin1(), (*it).msgid.latin1(),
+               start_pos, bi.start_line, bi.start_col,
+               end_pos, bi.end_line, bi.end_col,
+               (*it).lines.first().offset, (*it).end, xml.mid((*it).lines.first().offset, 15).latin1());
 #endif
         if ((*it).end) {
             if (!(*it).lines.first().offset && end_pos != old_pos) {
@@ -198,6 +204,6 @@ int main( int argc, char **argv )
 
     ts << xml_text.mid(old_pos);
 
-    cout << output.latin1();
+    cout << output.utf8().data();
     return 0;
 }

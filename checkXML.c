@@ -15,7 +15,7 @@
 #include <libxml/tree.h>
 #include <libxml/debugXML.h>
 #include <libxml/xmlmemory.h>
-#include <libxml/xml-error.h>
+#include <libxml/xmlerror.h>
 
 static int debug = 0;
 static int copy = 0;

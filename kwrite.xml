@@ -2,8 +2,6 @@
  <!ENTITY kappname "&kwrite;" > <!-- this only *seems* redundant -->  
  <!ENTITY % addindex "IGNORE"> 
  <!ENTITY % English "INCLUDE">   
- <!ENTITY % ents PUBLIC "-//KDE//ENTITIES Documentation V2.0//EN" "entities/kde-prologue.entities">  
- %ents;  
 ]>  
   
 <book lang="&language;">  

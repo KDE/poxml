@@ -1,0 +1,725 @@
+<?xml version="1.0" ?><!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+<!ENTITY kappname "&kabalone;">
+<!ENTITY % English "INCLUDE">
+<!ENTITY % addindex "IGNORE">
+  
+  
+]>
+
+<book lang="&language;">
+<bookinfo>
+<title>The &kabalone; Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Josef</firstname>
+<surname>Weidendorfer</surname>
+</author>
+<author>
+<firstname>Philip</firstname>
+<surname>Rodrigues</surname>
+<affiliation>
+<address><email>philip.rodrigues@libertysurf.co.uk</email></address>
+</affiliation>
+</author>
+
+<othercredit role="reviewer">
+<firstname>Lauri</firstname>
+<surname>Watts</surname>
+<affiliation>
+<address><email>vampyr@atconnex.net</email></address>
+</affiliation>
+<contrib>Reviewer</contrib>
+</othercredit>
+
+</authorgroup>
+
+<date>20/01/2001</date>
+<releaseinfo>1.06.00</releaseinfo>
+
+<copyright>
+<year>2001</year>
+<holder>Philip Rodrigues</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<abstract><para>&kabalone; is a simple board strategy game that is played by two
+players.</para> </abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>game</keyword>
+<keyword>abalone</keyword>
+<keyword>linux</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+<para>&kabalone; is a simple board strategy game that is played by two
+players. There are red and yellow pieces for each player. Beginning from a
+start position where each player has 14 pieces, moves are drawn until one
+player has pushed 6 of his opponent's pieces out of the board.</para>
+<para>The original program was developed in 1993 for DOS and pure Xlib. For
+&kde; there was a major rewrite.</para>
+
+<note><para> The game idea is not by me. It is a real board game vendored by a
+German game producing firm (I believe).</para></note>
+
+</chapter>
+
+<chapter id="rules-of-the-game">
+<title>Rules of the Game</title>
+<para>Red always moves first.</para>
+<para>Two types of moves are allowed:</para>
+
+<variablelist>
+<varlistentry>
+<term>Normal</term>
+<listitem><para>One, two or three pieces of yours in a row can be moved be one
+in the 6 directions. Side moves are also allowed.</para>
+<para>Press the left mouse button on the first piece you want to move.
+The piece will then be highlighted. Now drag the mouse in the desired direction. If the move is valid, the cursor will change to an arrow in that direction and all the pieces of the move will be highlighted. If this is the move you want to draw, release the mouse button.</para>
+<para>Side moves are handled another way: For two adjacent pieces click between
+them and drag; for three pieces press the <mousebutton>middle</mousebutton>
+mouse button on the middle piece - if a side move is allowed for the pieces they
+will be highlighted. Otherwise only the middle one is highlighted and you draw a
+normal move. </para> 
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Pushing</term>
+
+<listitem><para>You can push a maximum of two pieces of the opponent in front of
+your own pieces as long as the number of pieces you move is greater than the
+number of the opponent's pieces that you push. That means with three of your
+pieces you can push one or two of the opponent's and with two pieces one.</para>
+<para>Special pushing moves are those which push a piece of the opponent out of
+the board.  If you have pushed six of your opponent's pieces out of the board
+you have won. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>If you still do not know what &kabalone; is all about, look at a game
+where the computer plays both sides. After executing &kabalone;, select
+<menuchoice><guimenu>Settings</guimenu><guisubmenu>Computer
+plays</guisubmenu><guimenuitem>Both</guimenuitem></menuchoice> and start a new
+game. </para>
+</chapter>
+
+<chapter id="network-play">
+<title>Network Play</title>
+<sect1 id="general-network-play">
+<title>General Network Play</title>
+
+<para>
+&kabalone; supports playing across a network. This allows two people to play against
+each other on different computers, or one person to observe the game play of
+another &kabalone; program. To use &kabalone;'s network features, &kabalone;
+must be set to Network Mode by selecting
+<menuchoice><guimenu>Game</guimenu><guimenuitem>Network</guimenuitem></menuchoice>.</para> 
+
+
+<para>
+All running &kabalone; programs which are in Network Mode broadcast
+changed positions to each other.</para>
+
+<para>To exchange positions, the &kabalone; programs have to be told about each
+other. If they are running on the same machine, nothing is needed (apart from
+switching to Network Mode). If running on different computers you
+have to specify the other's machine on the command line with the
+<option>-h</option> switch, as so:
+<screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option> <replaceable>SomeHostName</replaceable></userinput>
+</screen>
+</para>
+
+<note><para> For insiders: &kabalone;, when in Network Mode, listens on a
+<acronym>TCP</acronym> socket for position change commands by other Abalone
+programs. You can specify the port number with the <option>-p</option> command
+line switch.  You need this if you want to play two different Abalone Network
+games.</para></note>
+
+<sect2 id="network-examples">
+<title>Examples</title>
+
+<itemizedlist>
+<listitem>
+<para>Chris on machine1 and Mary on machine2 want to play against
+each other: Mary simply starts &kabalone;, sets
+<menuchoice><guimenu>Options</guimenu><guisubmenu>Computer plays</guisubmenu></menuchoice> to <guimenuitem>None</guimenuitem>
+and switches to Network Mode. Chris starts &kabalone; with
+<screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option> <replaceable>machine2</replaceable></userinput>
+</screen>
+and then does the same as Mary.
+Now one of the two can start the game and draw a red move. Each time the
+position is changed in one program, it automatically changes in the other one
+too.</para>
+</listitem>
+
+<listitem>
+<para>John wants to observe the game: He does the same as Chris, but
+doesn't draw a move himself.</para>
+</listitem>
+
+<listitem>
+<para>Two different &kabalone; Network Games will run among machines
+<systemitem class="systemname">m1</systemitem> and <systemitem class="systemname">m2</systemitem>. To distinguish the games, we choose port
+number 12345 for one. On <systemitem class="systemname">m1</systemitem> we start as usual:
+<screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command></userinput>
+</screen>
+for the first game, and (not so usual):
+<screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-p</option> <replaceable>12345</replaceable></userinput>
+</screen>
+for the second.
+On <systemitem class="systemname">m2</systemitem> we start the first game with:
+<screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option> <replaceable>m1</replaceable></userinput>
+</screen>
+and the second with:
+<screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option>  <replaceable>m1:12345</replaceable></userinput>
+</screen>
+(The colon separates host and port as in a &URL;).</para> </listitem>
+</itemizedlist>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="advanced-options">
+<title>Advanced Options</title>
+
+<sect1 id="modify-mode">
+<title>Modify Mode</title>
+<para>
+You can edit the actual board
+position by selecting <menuchoice><guimenu>Edit</guimenu><guimenuitem>Modify</guimenuitem></menuchoice> to put &kabalone; in Modify Mode.You can  add red or yellow pieces or delete them. The status
+line shows the number of red and yellow pieces, the move number,
+the side which is to draw the next move, and whether the position
+is valid: An exclamation sign means no, a checked symbol yes. 
+</para>
+<important>
+<para>
+If the position is invalid and you switch back to normal Play Mode, you
+can't play! Only valid positions can be used as a starting position
+for a game.
+</para>
+</important>
+
+<para><action>Take back</action> and <action>Forward</action> simply decrement
+and increment the move number, but don't change any pieces.</para>
+
+<sect2 id="modify-mode-usage">
+<title>Usage</title>
+
+<para>By pressing the <mousebutton>left</mousebutton> or
+<mousebutton>right</mousebutton> mouse button on an empty or yellow field, you
+enter <quote>Red piece Adding</quote> mode; by pressing the
+<mousebutton>middle</mousebutton> button on an empty or red field, you get in
+<quote>Yellow piece Adding</quote> mode. Finally by pressing the
+<mousebutton>left</mousebutton> or the <mousebutton>right</mousebutton> mouse
+button on a red piece, or the <mousebutton>middle</mousebutton> mouse button on
+an yellow piece, you enter <quote>Piece Deleting</quote> Mode. Any piece that
+the mouse passes over with the button pressed will be deleted.
+</para>
+
+<para>To exit Modify Mode and re-enter Play Mode, just uncheck
+<guimenuitem>Modify</guimenuitem> in the <guimenu>Edit</guimenu> menu.</para>
+
+<sect3 id="clipboard-features">
+<title>Using the Clipboard</title>
+
+<para>The current &kabalone; board can be copied to the clipboard using the
+<guimenuitem>Copy</guimenuitem> command in the <guimenu>Edit</guimenu> menu, and
+then pasted back in usng <guimenuitem>Paste</guimenuitem>.  This way you can
+copy the board positions of one &kabalone; program to another by pressing
+<guimenuitem>Copy</guimenuitem> in one program and
+<guimenuitem>Paste</guimenuitem> in the other, but this is better done with
+Network Mode (see above). Another usage is to save positions into a text file
+(using <guimenuitem>Copy</guimenuitem> and your Editor of choice) and retrieve a
+position later by selecting it in the editor and pasting in &kabalone;.</para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="computer-level">
+<title>Computer Level</title>
+<para>The computer can play at four different levels, namely:</para>
+<itemizedlist>
+<listitem><para><guimenuitem>Easy</guimenuitem></para>
+</listitem>
+<listitem><para><guimenuitem>Normal</guimenuitem></para>
+</listitem>
+<listitem><para><guimenuitem>Hard</guimenuitem></para>
+</listitem>
+<listitem><para><guimenuitem>Challenge</guimenuitem></para>
+</listitem>
+</itemizedlist>
+
+<para>The harder the setting, the longer the computer searches for a move. You can
+interrupt the search by pressing the <keycap>S</keycap>
+key.</para>
+
+</sect1>
+
+
+<sect1 id="spying">
+<title>Spying</title>
+
+<para>
+<quote>Spying</quote> can be turned on and off from the
+<guimenu>Settings</guimenu> menu, and the <guimenuitem>Spy</guimenuitem> option.
+If it is your turn, you can see the computer's rating of the move you want to
+play in the status bar. If it's the computer's turn you can see (in status bar
+and highlighted pieces) the move he actually thinks is the best to play. Of
+course this changes along his search.</para>
+</sect1>
+
+<sect1 id="computer-plays">
+<title>Selecting what colour the computer plays</title>
+<para>
+You can make the computer play Red, Yellow or both sides. Choose
+between these options before starting a new game. Of course it works in a game
+too if you want to change sides. Choose <guimenuitem>None</guimenuitem> to play
+against another human. This is very useful in Network Mode.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="menu-reference">
+<title>Menu Reference</title>
+<sect1 id="general">
+<title>General</title>
+<para>Drawing moves is explained under <link
+linkend="rules-of-the-game">Rules of the Game</link>. The buttons in
+the toolbar have the same meaning as entries in the
+<guimenu>Game</guimenu> or <guimenu>Edit</guimenu> menu.</para>
+</sect1>
+
+<sect1 id ="the-game-menu">
+<title>The Game Menu</title>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>N</keycap>
+</keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu>
+<guimenuitem><accel>N</accel>ew</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Starts a new game</action> even if a game is currently
+in play.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>S</keycap></keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu>
+<guimenuitem><accel>S</accel>top Search</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para>
+When the computer is thinking, his depth search is interrupted and he
+draws the best move he has found so far.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo><keycap>PgUp</keycap></keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu><guimenuitem>Take <accel>B</accel>ack</guimenuitem>
+</menuchoice>
+</term>
+
+<listitem>
+<para>
+Take back your previous move. Two (!) moves are undone: the opponents move and
+your last move.  So it's your turn again. 100 moves are remembered; so don't
+hesitate to take back moves until you are at the beginning of the game (faster
+with the <keycap>F2</keycap> key).  When in Modify mode (see
+<menuchoice><guimenu>Edit</guimenu><guimenuitem>Modify</guimenuitem></menuchoice>
+below), decrement move number of this position.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo><keycap>PgDown</keycap></keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu><guimenuitem><accel>F</accel>orward</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para>Only useful in Modify mode: Increment move number of this position.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo><keycap>H</keycap></keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu><guimenuitem><accel>H</accel>int</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para>
+A hint for your next move is shown. Only possible if you play at level normal or above,
+the move number is 2 or greater and you have not undone your
+move.</para> 
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo><keycap>N</keycap></keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu><guimenuitem><accel>N</accel>etwork Play</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>
+If this toggle is switched on, the application is in Network Mode.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo>&Ctrl;<keycap>Q</keycap></keycombo>
+</shortcut>
+<guimenu><accel>G</accel>ame</guimenu><guimenuitem><accel>Q</accel>uit</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para><action>Quits</action>&kabalone;.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="the-edit-menu">
+<title>The <guimenu>Edit</guimenu> Menu</title>
+
+<variablelist>
+
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo>&Ctrl;<keycap>C</keycap></keycombo>
+</shortcut>
+<guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>Copy a representation of the &kabalone; board to the clipboard</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo>&Ctrl;<keycap>V</keycap></keycombo>
+</shortcut>
+<guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem>
+</menuchoice></term>
+<listitem><para>
+Interpret the content of the X clipboard as an ASCII representation of
+a &kabalone; board, and copy it to the current board. A valid
+ASCII representation is generated by <guimenuitem>Copy</guimenuitem>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>Ins</keycap></keycombo>
+</shortcut>
+<guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>M</accel>odify</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>Switches &kabalone; to Modify Mode.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo>&Ctrl;<keycap>S</keycap></keycombo>
+</shortcut>
+<guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>S</accel>ave Position</guimenuitem>
+</menuchoice></term>
+<listitem><para>
+Save the actual position to be retrieved later with
+<menuchoice><guimenu>Edit</guimenu> <guimenuitem>Restore Position</guimenuitem>
+</menuchoice>.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo>&Ctrl;<keycap>O</keycap></keycombo>
+</shortcut>
+<guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>R</accel>estore Position</guimenuitem>
+</menuchoice></term>
+<listitem><para>
+Restore the board position stored in the &kabalone; Configuration file by <guimenu>Edit</guimenu> <guimenuitem>Save Position</guimenuitem>.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="the-settings-menu">
+<title>The <guimenu>Settings</guimenu> Menu</title>
+
+<variablelist>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo>&Ctrl; <keycap>M</keycap>
+</keycombo>
+</shortcut>
+<guimenu><accel>S</accel>ettings</guimenu>
+<guimenuitem>Show <accel>M</accel>enubar</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para>Shows or hides the &kabalone; Menubar.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Show <accel>T</accel>oolbar</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para>Shows or hides the &kabalone; Toolbar.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Show St<accel>a</accel>tusbar</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>Shows or hides the &kabalone; Statusbar at the base of the screen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>S</accel>ave Settings</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>
+Saves the current settings to become the default for &kabalone;.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure <accel>K</accel>ey Bindings...</guimenuitem>
+</menuchoice></term>
+<listitem><para>
+Brings up the standard &kde; key bindings configuration window to customize thekey bindings used by &kabalone;.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure Tool<accel>b</accel>ars...</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>Brings up the standard &kde; toolbar configuration window to customize the &kabalone; toolbar.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guisubmenu><accel>L</accel>evel</guisubmenu>
+</menuchoice></term>
+<listitem><para>
+Select the level that the computer plays at. Can be one of:
+<itemizedlist>
+<listitem><para><guimenuitem><accel>E</accel>asy</guimenuitem></para>
+</listitem>
+<listitem><para><guimenuitem><accel>N</accel>ormal</guimenuitem></para>
+</listitem>
+<listitem><para><guimenuitem><accel>H</accel>ard</guimenuitem></para>
+</listitem>
+<listitem><para><guimenuitem><accel>C</accel>hallenge</guimenuitem></para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guisubmenu><accel>C</accel>omputer Plays</guisubmenu>
+</menuchoice></term>
+<listitem><para>
+Choose which colours the computer plays. Can be one of:
+<itemizedlist>
+<listitem>
+<para><guimenuitem><accel>R</accel>ed</guimenuitem></para>
+</listitem>
+<listitem>
+<para><guimenuitem><accel>Y</accel>ellow</guimenuitem></para>
+</listitem>
+<listitem>
+<para><guimenuitem><accel>B</accel>oth</guimenuitem></para>
+</listitem>
+<listitem>
+<para><guimenuitem><accel>N</accel>one</guimenuitem></para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>M</accel>ove Slow</guimenuitem>
+</menuchoice></term>
+<listitem><para>
+A move drawn by the computer when this option is checked is shown by
+blinking and highlighting the pieces used in this move. Uncheck this option if you don't want to wait for this animation: Then only a quick highlighting is done.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>R</accel>ender Balls</guimenuitem>
+</menuchoice></term>
+<listitem>
+<para>
+If checked, the pieces are rendered online by an internal simple ray
+tracer when needed (&eg; when resizing the window).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu><guimenuitem>Spy</guimenuitem>
+</menuchoice></term>
+<listitem><para>
+If checked: Turns on <quote>spying</quote>.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+</chapter>
+
+
+<chapter id="commandline-options">
+<title>Command line options</title>
+
+    <cmdsynopsis>
+      <command>kabalone</command>
+      <arg>-p MyPortNumber</arg>
+      <arg>-h host<arg>:Port</arg></arg>
+    </cmdsynopsis>
+
+<para>With <option>-p</option> you specify the port number of the listening TCP
+socket when in Network Mode.</para> 
+<para>With <option>-h</option> you specify a remote &kabalone; process (with
+optional port number, when not using the default port on the remote machine) to
+communicate with when in Network mode. You can specify multiple remote
+processes.</para>
+
+</chapter>
+
+<chapter id="credits-and-licenses">
+<title>Credits &amp; Licenses</title>
+
+<para>&kabalone;</para>
+
+<para>Program copyright 1997-2000 Josef Weidendorfer
+<email>weidendo@informatik.tu-muenchen.de</email></para>
+
+<para>Original Documentation by Robert Williams
+<email>rwilliams@kde.org</email> and Josef Weidendorfer</para>
+
+<para>Documentation updated for &kde; 2.0 by Philip Rodrigues <email>philip.rodrigues@libertysurf.co.uk</email></para>
+
+&underFDL;
+&underGPL;
+
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+<sect1 id="getting-kabalone">
+<title>How to obtain &kabalone;</title>
+<para>
+&kabalone; is part of the &kde; Project
+<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
+&kabalone; can be found in the kdegames package on
+<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>, the
+main &FTP; site of the &kde; project.</para>
+<para>
+All required libraries can also be found
+on <ulink url="ftp://ftp.kde.org">The &kde; &FTP; site</ulink>.
+</para>
+</sect1>
+
+<sect1 id="compilation">
+<title>Compilation and Installation</title>
+
+<para>
+In order to compile and install &kabalone; on your system, type the
+following in the &kabalone; directory in the kdegames distribution:</para>
+
+<screen width="40"> 
+<prompt>%</prompt> <userinput><command>./configure</command></userinput> 
+<prompt>%</prompt> <userinput><command>make</command></userinput>
+<prompt>%</prompt> <userinput><command>make</command> <option>install</option></userinput>
+</screen>
+
+<para>Since &kabalone; uses <application>autoconf</application> and
+<application>automake</application> you should have not trouble compiling
+it. Should you run into problems please report them to the author at <email>weidendo@informatik.tu-muenchen.de</email></para>
+
+</sect1>
+
+</appendix>
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-omittag: nil
+sgml-shorttag: t
+sgml-general-insert-case: lower
+End:
+-->
+
+

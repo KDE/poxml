@@ -1,0 +1,243 @@
+<?xml version="1.0" ?><!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+<!ENTITY kappname "&kabalone;">
+<!ENTITY % English "INCLUDE">
+<!ENTITY % addindex "IGNORE">
+  
+  
+]>
+
+<book lang="&language;">
+<bookinfo>
+<title>&kabalone; håndbog</title>
+
+<authorgroup>
+<author> <firstname>Josef</firstname> <surname>Weidendorfer</surname> </author>
+<author> <firstname>Philip</firstname> <surname>Rodrigues</surname> <affiliation> <address><email>philip.rodrigues@libertysurf.co.uk</email></address> </affiliation> </author>
+
+<othercredit role="reviewer">
+<firstname>Lauri</firstname>
+<surname>Watts</surname>
+<affiliation>
+<address><email>vampyr@atconnex.net</email></address>
+</affiliation>
+<contrib>Tester</contrib>
+</othercredit>
+
+</authorgroup>
+
+<date>20/01/2001</date>
+<releaseinfo>1.06.00</releaseinfo>
+
+<copyright>
+<year>2001</year>
+<holder>Philip Rodrigues</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<abstract><para>&kabalone; er et simpelt bræt strategispil der spilles af to spillere.</para> </abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>spil</keyword>
+<keyword>abalone</keyword>
+<keyword>linux</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title>Indledning</title>
+<para>&kabalone; er et simpelt bræt strategispil der spilles af to spillere. Der er røde og gule brikker for hver spiller. Fra en startposition hvor hver spiller har 14 brikker trækkes der, indtil en spiller har skubbet 6 af modstanderens brikker af brættet.</para>
+<para>Det oprindelige program blev udviklet i 1993 for DOS for ren Xlib. For &kde; var der en større omskrivning.</para>
+
+<note><para> Spillets idé er ikke min. Det er et rigtigt brætspil forhandlet af en tysk spilproducent (tror jeg).</para></note>
+
+</chapter>
+
+<chapter id="rules-of-the-game">
+<title>Spillets regler</title>
+<para>Rød trækker altid først.</para>
+<para>To typer træk er tilladt:</para>
+
+<variablelist> <varlistentry> <term>Normal</term> <listitem><para>Én, to eller tre af dine brikker i en række kan flyttes i en af 6 retninger. Sidebevægelser er også tilladte.</para> <para>Tryk med venstre museknap på den første brik du ønsker at flytte. Brikken bliver nu markeret. Træk så musen i den ønskede retning. Hvis trækket er gyldigt, vil markøren forvandle sig til en pil i den retning og alle brikker i trækket vil blive markerede. Hvis du ønsker at udføre trækket, så giv slip på museknappen.</para> <para>Sidelæns træk behandles på en anden måde: For to brikker ved siden af hinanden, klik mellem dem og træk; hvis der er tre, så tryk på den midterste knap på den midterste brik - hvis en sidelæns bevægelse er tilladt, så vil brikkerne blive markerede. Ellers vil kun den midterste blive markeret og man kan lave et normalt træk. </para> </listitem> </varlistentry> <varlistentry> <term>Skubning</term> <listitem><para>Man kan skubbe op til to af modstanderens brikker på brættet hvis de er foran ens egne brikker og der er flere af ens egne end af modstanderens. Det vil sige med tre kan man skubbe to ud, og med to kan man skubbe en ud.</para> <para>Særlige skubbetræk er de der skubber modstanderens brikker af brættet. Når man har seks af disse har man vundet. </para> </listitem> </varlistentry> </variablelist>
+
+<para>Hvis du stadig ikke ved hvad &kabalone; drejer sig om, så kig på et spil hvor maskinen spiller begge sider. Efter at have startet &kabalone;, vælg <menuchoice> <guimenu>Indstillinger</guimenu> <guisubmenu>Maskinen spiller</guisubmenu> <guimenuitem>Begge</guimenuitem> </menuchoice> og start et nyt spil. </para>
+</chapter>
+
+<chapter id="network-play">
+<title>Netværksspil</title>
+<sect1 id="general-network-play">
+<title>Generelt netværksspil</title>
+
+<para> &kabalone; understøtter spi lover et netværk. Dette tillader to spillere at spille mod hinanden på forskellige maskiner, eller at én person observerer spillet af et  &kabalone; spil på en anden maskine. For at bruge &kabalone;'s netværksegenskaber skal &kabalone; sættes til netværkstilstand ved at vælge <menuchoice><guimenu>Spil</guimenu><guimenuitem>Netværk</guimenuitem></menuchoice>.</para> 
+
+
+<para> Alle kørende &kabalone; programmer der er i netværkstilstand, sender ændrede stillinger til hinanden.</para>
+
+<para>For at udveksle positioner skal &kabalone; programmerne kende til hinanden. Hvis de kører på den samme maskine behøves intet (udover at skifte til netværkstilstand). Hvis de kører på forskellige computere skal man angive de andre maskiner med <option>-h</option> kommandolinievalget. <screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option> <replaceable>EtVærtsNavn</replaceable></userinput>
+</screen> </para>
+
+<note><para> For kendere: Når &kabalone; er i netværkstilstand lytter den til en Tcp sokkel for ændrede stillinger i det andet Kabalone; program. Man kan angive portnummeret ved hjælp af <option>-p</option> kommandolinievalge. Dette bliver man nødt til hvis flere vil spille på to forskellige maskiner.</para></note>
+
+<sect2 id="network-examples">
+<title>Eksempler</title>
+
+<itemizedlist> <listitem> <para>Peter på <systemitem class="systemname">maskine1</systemitem> og Marie på <systemitem class="systemname">maskine2</systemitem> vilspille mod hinanden. Marie starter simpelthen &kabalone;, sætter menupunktet <menuchoice><guimenu>Indstillinger</guimenu> <guisubmenu>Maskinen spiller</guisubmenu> </menuchoice> til <guimenuitem>Ingen</guimenuitem> og skifter til netværkstilstand. Peter starter &kabalone; med <command>kabalone <option>-h <replaceable>maskine2</replaceable></option></command>, og gør i øvrigt det samme. Nu kan én af dem starte et spil og trække som rød. Hver gang stillingen ændres hos den ene ændres den hos den anden også.</para> </listitem> <listitem> <para>Søren vil gerne kigge på spillet: Han gør det samme som Peter, men han trækker ikke selv.</para> </listitem> <listitem> <para>To forskellige &kabalone; netværksspil vil køre mellem maskinerne <systemitem class="systemname">m1</systemitem> and <systemitem class="systemname">m2</systemitem>. For at skelne mellem spillen vælger vi port number 12345 for den ene. På <systemitem class="systemname">m1</systemitem> starter vi som sædvanlig: <screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command></userinput>
+</screen> for det første spil, og (ikke som sædvanlig): <screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-p</option> <replaceable>12345</replaceable></userinput>
+</screen> for det andet. På <systemitem class="systemname">m2</systemitem> starter vi det første spil med: <screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option> <replaceable>m1</replaceable></userinput>
+</screen> og det andet med: <screen width="40">
+<prompt>%</prompt><userinput><command>kabalone</command> <option>-h</option>  <replaceable>m1:12345</replaceable></userinput>
+</screen> (Kolon adskiller vært og port som in &URL;).</para> </listitem> </itemizedlist>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="advanced-options">
+<title>Avancerede indstillinger</title>
+
+<sect1 id="modify-mode">
+<title>Ændringstilstand</title>
+<para> Man kan redigere den aktuelle brætstilling ved at vælge <menuchoice><guimenu>Redigér</guimenu><guimenuitem>Ændr</guimenuitem></menuchoice> for at sætte &kabalone; i ændringstilstand. Man kan tilføje røde eller gule brikker eller slette dem. Statuslinien viser antallet af røde og gule brikker, flytningstallet, hvis side har næste træk og om stillingen er gyldig: Et udråbstegn betyder nej, et afkrydset symbol ja. </para>
+<important> <para> Hvis stillingen er ugyldig og du skifter tilbage til normal spilletilstand, kan du ikke spille! Kun gyldige stillinger kan bruges som startstilling for et spil. </para> </important>
+
+<para><action>Tag tilbage</action> og <action>Fremad</action> formindsker og forøger simpelthen træknummeret, men ændrer ingen brikker.</para>
+
+<sect2 id="modify-mode-usage">
+<title>Brug</title>
+
+<para>Ved at trykke på <mousebutton>venstre</mousebutton> eller <mousebutton>højre</mousebutton> museknap på et tomt eller gult felt, går man ind i <quote>Rød brik tilføj</quote> tilstand; ved at trykke på den  <mousebutton>midterste</mousebutton> knap på et tomt felt eller et rødt felt, går man ind i <quote>Gul brik tilføj</quote> tilstand. Endelig ved at trykk epå den <mousebutton>venstre</mousebutton> eller den <mousebutton>højre</mousebutton> museknap på en rød brik, eller den<mousebutton>midterste</mousebutton> museknap på en gul brik, går man ind i <quote>Slet brik</quote> tilstand. Enhver brik som musen går hen over med knappen presset ned, vil blive slettet. </para>
+
+<para>Man skal blot fjerne krydset fra <guimenuitem>Ændr</guimenuitem> i <guimenu>Redigér</guimenu>menuen, for at gå ud af ændrigstilstand og tilbage til spilletilstand.</para>
+
+<sect3 id="clipboard-features">
+<title>Brug af klippebordet</title>
+
+<para>Det aktuelle &kabalone; bræt kan kopieres til klippebordet ved brug af <guimenuitem>Kopiér</guimenuitem> kommandoen i <guimenu>Redigér</guimenu>menuen, ogindsættes ved brug af <guimenuitem>Indsæt</guimenuitem>. På denne måde kan man kopiere brætstillingerne fra et &kabalone; program til et andet ved at trykke på <guimenuitem>Kopiér</guimenuitem> i et program og <guimenuitem>Indsæt</guimenuitem> i det andet, men det gøres bedre med netværkstilstand (se ovenfor). En anden brug er at gemme stillinger i en tekst fil (ved brug af <guimenuitem>Kopiér</guimenuitem> og din favorit tekstredigering) og hente en stilling tilbage senere ved at vælge iredigeringen og indsætte i &kabalone;.</para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="computer-level">
+<title>Computerniveau</title>
+<para>Computeren kan spille på fire forskellige niveauer, nemlig</para>
+<itemizedlist> <listitem><para><guimenuitem>Let</guimenuitem></para> </listitem> <listitem><para><guimenuitem>Normal</guimenuitem></para> </listitem> <listitem><para><guimenuitem>Svært</guimenuitem></para> </listitem> <listitem><para><guimenuitem>Udfordring</guimenuitem></para> </listitem> </itemizedlist>
+
+<para>Jo hårdere indstilling, jo længere tager computeren for at finde et træk. Man kan afbryde søgningen ved at trykke på <keycap>S</keycap> tasten.</para>
+
+</sect1>
+
+
+<sect1 id="spying">
+<title>Spionering</title>
+
+<para> <quote>Spionering</quote> kan slås til og fra i <guimenu>Opsætnings</guimenu>menuen , under <guimenuitem>Spion</guimenuitem> indstillingen. Hvis det er din tur, kan du se computerens vurdering af det træk du ønsker at spillei statuslinien. Hvis det er computerens tur kan du se (i statuslinien og demarkerede brikker) det træk den synes er bedst at spille for øjeblikker. Dette ændresnaturligvis under søgningen.</para>
+</sect1>
+
+<sect1 id="computer-plays">
+<title>Vælg hvilken farve computeren spiller</title>
+<para> Du kan lade computeren spille rød, gul, eller begge sider. Vælg mellem disse mulighederfør starten på et nyt spil. Det virker selvfølgelig også midt i et spil, hvis du ønsker at skifte side. Vælg <guimenuitem>Ingen</guimenuitem> for at spille mod et andet menneske. Dette er meget nyttigt i netværkstilstand.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="menu-reference">
+<title>Menureference</title>
+<sect1 id="general">
+<title>Generelt</title>
+<para>Trækkene er forklaret under <link linkend="rules-of-the-game">Spillets regler</link>. Knapperne i redskabslinien har samme betydning som indgangene i i <guimenu>Spil</guimenu> menuen.</para>
+</sect1>
+
+<sect1 id ="the-game-menu">
+<title>Spilmenuen</title>
+<variablelist> <varlistentry> <term><menuchoice> <shortcut> <keycombo action="simul">&Ctrl;<keycap>N</keycap> </keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu> <guimenuitem><accel>N</accel>yt</guimenuitem> </menuchoice></term> <listitem><para><action>Starter et nyt spil</action> også selvom et spil er i gang.</para></listitem> </varlistentry> <varlistentry> <term><menuchoice> <shortcut> <keycombo><keycap>S</keycap></keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu> <guimenuitem><accel>S</accel>top søgning</guimenuitem> </menuchoice> </term> <listitem> <para> Når maskinen tænker, afbrudes dens dybe tænkning og den bruger det bedst træk fundet indtil nu.</para> </listitem> </varlistentry> <varlistentry> <term> <menuchoice> <shortcut> <keycombo><keycap>PgUp</keycap></keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu><guimenuitem>Tag <accel>T</accel>ilbage</guimenuitem> </menuchoice> </term> <listitem> <para> Tag dit tidligere træk tilbage. To (!) træk gøres om: modstanderens træk og dit sidste træk. Så det er din tur igen. 100 træk huskes; så tøv ikke med at gå tilbage indtil du er ved begyndelsen af spillet of the game (hurtigere med <keycap>Pg Up</keycap> tasten). I ændringtilstand (se Menu <menuchoice><guimenu>Redigér</guimenu> <guimenuitem>Ændr</guimenuitem> </menuchoice> nedenfor), går træknummeret for stillingen ned.</para> </listitem> </varlistentry> <varlistentry> <term> <menuchoice> <shortcut> <keycombo><keycap>PgDown</keycap></keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu><guimenuitem><accel>F</accel>remad</guimenuitem> </menuchoice> </term> <listitem> <para>Kun nyttigt i ændringstilstand: Øg træk nummer for denne stilling.</para> </listitem> </varlistentry> <varlistentry> <term> <menuchoice> <shortcut> <keycombo><keycap>H</keycap></keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu><guimenuitem><accel>V</accel>ink</guimenuitem> </menuchoice> </term> <listitem> <para> Et vink for dit næste træk vises. Kun muligt hvis du spiller på normalt niveau eller over, trækket er over 2 og du ikke har omgjort træk.</para> </listitem> </varlistentry> <varlistentry> <term> <menuchoice> <shortcut> <keycombo><keycap>N</keycap></keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu><guimenuitem><accel>N</accel>etværksspil</guimenuitem> </menuchoice></term> <listitem> <para> Hvis dette er aktiveret er anvendelsen i netværkstilstand. </para> </listitem> </varlistentry> <varlistentry> <term> <menuchoice> <shortcut> <keycombo>&Ctrl;<keycap>Q</keycap></keycombo> </shortcut> <guimenu><accel>S</accel>pil</guimenu><guimenuitem><accel>A</accel>fslut</guimenuitem> </menuchoice> </term> <listitem> <para><action>Afslutter</action>&kabalone;.</para> </listitem> </varlistentry> </variablelist>
+
+</sect1>
+
+<sect1 id="the-edit-menu">
+<title><guimenu>Redigerings</guimenu>menuen</title>
+
+<variablelist> <varlistentry> <term> <menuchoice> <shortcut> <keycombo>&Ctrl;<keycap>C</keycap></keycombo> </shortcut> <guimenu>Redigér</guimenu><guimenuitem>Kopiér</guimenuitem> </menuchoice></term> <listitem> <para>Kopiér en repræsentation af den &kabalone; til klippebordet</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <shortcut> <keycombo>&Ctrl;<keycap>V</keycap></keycombo> </shortcut> <guimenu>Redigér</guimenu><guimenuitem>Indsæt</guimenuitem> </menuchoice></term> <listitem><para> Fortolk indholdet af X klippebordet som en ascii repræsentationaf &kabalone; brættet svarende til en vis brætstilling. En gyldigASCII repræsentation kan genereres af <guimenuitem>Kopiér</guimenuitem>.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <shortcut> <keycombo><keycap>Ctrl</keycap><keycap>Ins</keycap></keycombo> </shortcut> <guimenu><accel>R</accel>edigér</guimenu><guimenuitem><accel>Æ</accel>ndr</guimenuitem> </menuchoice></term> <listitem> <para>Skifter &kabalone; til ændringstilstand.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <shortcut> <keycombo>&Ctrl;<keycap>S</keycap></keycombo> </shortcut> <guimenu><accel>R</accel>edigér</guimenu><guimenuitem><accel>G</accel>em stilling</guimenuitem> </menuchoice></term> <listitem><para> Gem den aktuelle stilling for at blive hentet senere med <menuchoice><guimenu>Redigér</guimenu> <guimenuitem>Genopret stilling</guimenuitem> </menuchoice>. </para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <shortcut> <keycombo>&Ctrl;<keycap>O</keycap></keycombo> </shortcut> <guimenu><accel>R</accel>edigér</guimenu><guimenuitem><accel>G</accel>enopret stilling</guimenuitem> </menuchoice></term> <listitem><para> Genopret brætstillingen i &kabalone;'s indstillingsfil med <guimenu>Redigér</guimenu> <guimenuitem>Genopret stilling</guimenuitem>.</para> </listitem> </varlistentry> </variablelist>
+
+</sect1>
+
+<sect1 id="the-settings-menu">
+<title><guimenu>Opsætnings</guimenu>menuen</title>
+
+<variablelist> <varlistentry> <term><menuchoice> <shortcut> <keycombo>&Ctrl; <keycap>M</keycap> </keycombo> </shortcut> <guimenu><accel>O</accel>psætning</guimenu> <guimenuitem>Vis <accel>M</accel>enulinie</guimenuitem> </menuchoice> </term> <listitem> <para>Viser eller skjuler &kabalone;'s menulinie.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guimenuitem>Vis <accel>V</accel>ærktøjslinie</guimenuitem> </menuchoice> </term> <listitem> <para>Viser eller skjuler &kabalone;'s værktøjslinie.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guimenuitem>Vis St<accel>a</accel>tuslinie</guimenuitem> </menuchoice></term> <listitem> <para>Viser eller skjuler &kabalone;'s statuslinie i bunden af skærmen.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guimenuitem><accel>G</accel>em opsætning</guimenuitem> </menuchoice></term> <listitem> <para> Gemmer de aktuelle indstillinger som standard for &kabalone;.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guimenuitem>Indstil <accel>T</accel>astebindinger...</guimenuitem> </menuchoice></term> <listitem><para> Får &kde;'s standard tastebinding indstillingsvindue frem så man kan brugerindstille bindinger brugt af &kabalone;.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guimenuitem>Indstil værktøjs<accel>l</accel>inier...</guimenuitem> </menuchoice></term> <listitem> <para>Får &kde;'s standard værktøjslinie indstillingsvindue frem så man kan brugerindstille &kabalone;'s værktjslinie.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guisubmenu><accel>N</accel>iveau</guisubmenu> </menuchoice></term> <listitem><para> Vælg det niveau computeren spille på. Kan være en af: <itemizedlist> <listitem><para><guimenuitem><accel>L</accel>et</guimenuitem></para> </listitem> <listitem><para><guimenuitem><accel>N</accel>ormalt</guimenuitem></para> </listitem> <listitem><para><guimenuitem><accel>S</accel>vært</guimenuitem></para> </listitem> <listitem><para><guimenuitem><accel>U</accel>dfrodring</guimenuitem></para> </listitem> </itemizedlist> </para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guisubmenu><accel>C</accel>omputer spiller</guisubmenu> </menuchoice></term> <listitem><para> Vælg med hvilke farver computeren spiller. Kan være en af: <itemizedlist> <listitem> <para><guimenuitem><accel>R</accel>ød</guimenuitem></para> </listitem> <listitem> <para><guimenuitem><accel>G</accel>ul</guimenuitem></para> </listitem> <listitem> <para><guimenuitem><accel>B</accel>egge</guimenuitem></para> </listitem> <listitem> <para><guimenuitem><accel>I</accel>ngen</guimenuitem></para> </listitem> </itemizedlist> </para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psætning</guimenu><guimenuitem><accel>F</accel>lyt langsomt</guimenuitem> </menuchoice></term> <listitem><para> Et træk udført af computeren vises ved blinkende markerede brikker der bruges i trækket når der er afkrydset her. Hvis du ikke ønsker denne animering, så kryds ikke af her. Så vilder kun være en hurtig markering.</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu><accel>O</accel>psatning</guimenu><guimenuitem><accel>P</accel>ræsenter bolde</guimenuitem> </menuchoice></term> <listitem> <para> Hvis afkrydset, så vises brikkerne ved en indre simpel stråle når det behøves(&eg; når et vindue ændrer størrelse).</para> </listitem> </varlistentry> <varlistentry> <term><menuchoice> <guimenu>Opsætning</guimenu><guimenuitem>Spionér</guimenuitem> </menuchoice></term> <listitem><para> Slår <quote>spionering</quote> til hvis det er krydset af.</para> </listitem> </varlistentry> </variablelist>
+
+</sect1>
+</chapter>
+
+
+<chapter id="commandline-options">
+<title>Kommandolinievalg</title>
+
+    <cmdsynopsis>
+      <command>kabalone</command>
+      <arg>-p MyPortNumber</arg>
+      <arg>-h host<arg>:Port</arg></arg>
+    </cmdsynopsis>
+
+<para>Med <option>-p</option> angiver du portnummeret fro den lyttende TCP sokkel når du er i netværkstilstand.</para> 
+<para>Med <option>-h</option> angiver man en fremmed &kabalone; proces (med muligt port nummer, når man ikke bruger standardporten på den fremmede maskine) til at kommunikere med i netværkstilstand. Man kan angive flere fjerne processer.</para>
+
+</chapter>
+
+<chapter id="credits-and-licenses">
+<title>Medvirkende &amp; licens</title>
+
+<para>&kabalone;</para>
+
+<para>Program ophavsret 1997-2000 Josef Weidendorfer <email>weidendo@informatik.tu-muenchen.de</email></para>
+
+<para>Oprindelig dokumentation ved Robert Williams <email>rwilliams@kde.org</email> og Josef Weidendorfer</para>
+
+<para>Dokumentation opdateret for &kde; 2.0 ved Philip Rodrigues <email>philip.rodrigues@libertysurf.co.uk</email></para>
+
+&underFDL;
+&underGPL;
+
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+<sect1 id="getting-kabalone">
+<title>Hvordan får man fat på &kabalone;</title>
+<para> &kabalone; er en del af &kde; projektet<ulink url="http://www.kde.org">http://www.kde.org</ulink>.&kabalone; findes i kdegames pakken på<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>, somer hoved &ftp;-stedet for &kde; projektet.</para>
+<para> Alle nødvendige biblioteker kan findes på <ulink url="ftp://ftp.kde.org">&kde; &FTP; stedet</ulink>. </para>
+</sect1>
+
+<sect1 id="compilation">
+<title>Kompilering og installation</title>
+
+<para> For at kompilere og installere &kmines; på dit system, skal du skrive følgende i &kabalone; mappen i kdegames distributionen:</para>
+
+<screen width="40"> 
+<prompt>%</prompt> <userinput><command>./configure</command></userinput> 
+<prompt>%</prompt> <userinput><command>make</command></userinput>
+<prompt>%</prompt> <userinput><command>make</command> <option>install</option></userinput>
+</screen>
+
+<para>Da &kabalone;  bruger <application>autoconf</application> og<application>automake</application> skulle det ikke give problemer at kompilere den. Hvis du løber ind i problemer, så rapportér dem venligst til forfatteren på <email>weidendo@informatik.tu-muenchen.de</email></para>
+
+</sect1>
+
+</appendix>
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-omittag: nil
+sgml-shorttag: t
+sgml-general-insert-case: lower
+End:
+-->
+
+

@@ -14,11 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.8\n"
 
-#: index.docbook:12
+#: index.docbook:10
 msgid "The &kwrite; Handbook"
 msgstr "Das &kwrite;-Handbuch"
 
-#: index.docbook:14
+#: index.docbook:12
 msgid ""
 "<firstname>Thad</firstname><surname>McGinnis</surname> "
 "<affiliation><address><email>ctmcginnis@compuserve.com</email></address> "
@@ -28,55 +28,55 @@ msgstr ""
 "<affiliation><address><email>ctmcginnis@compuserve.com</email></address> "
 "</affiliation>"
 
-#: index.docbook:22
+#: index.docbook:20
 msgid "Principal Developer"
 msgstr "Haupt-Entwicklung"
 
-#: index.docbook:28 index.docbook:33
+#: index.docbook:26 index.docbook:31
 msgid "Additional Development"
 msgstr "Weitere Entwicklung"
 
-#: index.docbook:39
+#: index.docbook:37
 msgid "Original Help Document"
 msgstr "Originale Hilfedatei"
 
-#: index.docbook:45
+#: index.docbook:43
 msgid "Reviewer"
 msgstr "Korrektor"
 
-#: index.docbook:56
+#: index.docbook:54
 msgid "Thad McGinnis"
 msgstr "Thad McGinnis"
 
-#: index.docbook:64
+#: index.docbook:62
 msgid "This handbook describes &kwrite; Version 2.0"
 msgstr "Dieses Handbuch beschreibt &kwrite; Version 2.0"
 
-#: index.docbook:65
+#: index.docbook:63
 msgid "&kwrite; is a text editor for KDE 2.0"
 msgstr "&kwrite; ist ein Texteditor f&uuml;r KDE 2.0"
 
-#: index.docbook:69
+#: index.docbook:67
 msgid "<keyword>KDE</keyword>"
 msgstr "<keyword>KDE</keyword>"
 
-#: index.docbook:70
+#: index.docbook:68
 msgid "KWrite"
 msgstr "KWrite"
 
-#: index.docbook:71
+#: index.docbook:69
 msgid "text"
 msgstr "text"
 
-#: index.docbook:72
+#: index.docbook:70
 msgid "editor"
 msgstr "editor"
 
-#: index.docbook:78
+#: index.docbook:76
 msgid "Introduction"
 msgstr "Einleitung"
 
-#: index.docbook:80
+#: index.docbook:78
 msgid ""
 "&kwrite; is more than a text editor for the KDE Desktop. It is meant to be a "
 "programmer's editor, and could be considered as at least a partial "
@@ -97,11 +97,11 @@ msgstr ""
 "verschiedene Programmiersprachen wie: C/C++, &Java;, Python, Perl, Bash, "
 "Modula 2, <acronym>HTML</acronym> und Ada."
 
-#: index.docbook:92
+#: index.docbook:90
 msgid "Some Fundamentals"
 msgstr "Grunds&auml;tzliches"
 
-#: index.docbook:94
+#: index.docbook:92
 msgid ""
 "&kwrite; is very simple to use. Anyone that has used a text editor should "
 "have no problems."
@@ -109,11 +109,11 @@ msgstr ""
 "&kwrite; ist sehr einfach zu nutzen. Jeder, der schon einen Texteditor "
 "benutzt hat, sollte keine Probleme haben."
 
-#: index.docbook:98
+#: index.docbook:96
 msgid "Drag and Drop"
 msgstr "Drag and Drop (Ziehen und Ablegen)"
 
-#: index.docbook:100
+#: index.docbook:98
 msgid ""
 "&kwrite; uses the KDE Drag and Drop protocol. Files may be dragged and "
 "dropped onto &kwrite; from the Desktop, &konqueror; or some remote ftp site "
@@ -124,11 +124,11 @@ msgstr ""
 "&konqueror;, oder einer FTP-Seite, die in einem &konqueror;-Fenster "
 "ge&ouml;ffnet ist."
 
-#: index.docbook:107
+#: index.docbook:105
 msgid "Command Line Options"
 msgstr "Befehlszeilenargumente"
 
-#: index.docbook:109
+#: index.docbook:107
 msgid ""
 "Though &kwrite; may most often be started from the KDE program menu, or a "
 "desktop icon, it can also be opened at the command line prompt of a terminal "
@@ -139,11 +139,11 @@ msgstr ""
 "in einem Terminalfenster gestartet werden. Es gibt hierbei einige "
 "n&uuml;tzliche Optionen."
 
-#: index.docbook:115
+#: index.docbook:113
 msgid "Specify a File"
 msgstr "Angabe eines Dateinamens"
 
-#: index.docbook:117
+#: index.docbook:115
 msgid ""
 "By specifying the path and name of a particular file the user can have "
 "&kwrite; open (or create) that file immediately upon startup. This option "
@@ -152,7 +152,7 @@ msgstr ""
 "Der Benutzer kann Pfad und Dateinamen einer Datei angeben, die dann beim "
 "Starten ge&ouml;ffnet (oder erzeugt) wird. Hierzu ein Beispiel:"
 
-#: index.docbook:121
+#: index.docbook:119
 msgid ""
 "<prompt>%</prompt> <userinput><command>kwrite</command> "
 "<option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></use"
@@ -162,11 +162,11 @@ msgstr ""
 "<option><replaceable>/home/jochen/docs/meintext.xt</replaceable></option></us"
 "erinput>"
 
-#: index.docbook:127
+#: index.docbook:125
 msgid "Specify a file on the internet"
 msgstr "Angabe eines Dateinamens im Internet"
 
-#: index.docbook:129
+#: index.docbook:127
 msgid ""
 "The above-mentioned method could even be used to open files on the internet "
 "(if the user has an active connection at the time.) An example of this might "
@@ -176,7 +176,7 @@ msgstr ""
 "zu &ouml;ffnen (wenn der Nutzer eine aktive Verbindung hat). Hierzu wieder "
 "ein Beispiel:"
 
-#: index.docbook:133
+#: index.docbook:131
 msgid ""
 "<prompt>%</prompt> <userinput><command>kwrite</command> "
 "<option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></opt"
@@ -186,31 +186,31 @@ msgstr ""
 "<option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></opt"
 "ion></userinput>"
 
-#: index.docbook:141
+#: index.docbook:139
 msgid "Other Command Line Options"
 msgstr "Andere Befehlszeilenargumente"
 
-#: index.docbook:143
+#: index.docbook:141
 msgid "The following command line help options are available"
 msgstr ""
 "Die folgenden Hilfe-M&ouml;glichkeiten sind &uuml;ber die Befehlszeile "
 "verf&uuml;gbar"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "<command>kwrite</command> <option>--help</option>"
 msgstr "<command>kwrite</command> <option>--help</option>"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "This lists the most basic options available at the command line."
 msgstr ""
 "Zeigt die grunds&auml;tzlichsten M&ouml;glichkeiten f&uuml;r die "
 "Befehlszeile an."
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "<command>kwrite</command> <option>--help-qt</option>"
 msgstr "<command>kwrite</command> <option>--help-qt</option>"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid ""
 "This lists the options available for changing the way &kwrite; interacts "
 "with &Qt;."
@@ -218,11 +218,11 @@ msgstr ""
 "Zeigt die M&ouml;glichkeiten f&uuml;r die Einstellung der Zusammenarbeit von "
 "&kwrite; mit Qt an."
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "<command>kwrite</command> <option>--help-kde</option>"
 msgstr "<command>kwrite</command> <option>--help-kde</option>"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid ""
 "This lists the options available for changing the way &kwrite; interacts "
 "with KDE."
@@ -230,27 +230,27 @@ msgstr ""
 "Zeigt die M&ouml;glichkeiten f&uuml;r die Einstellung der Zusammenarbeit von "
 "&kwrite; mit KDE an."
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "<command>kwrite</command> <option>--help-all</option>"
 msgstr "<command>kwrite</command> <option>--help-all</option>"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "This lists all of the command line options."
 msgstr "Zeigt alle M&ouml;glichkeiten der Befehlszeile an."
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "<command>kwrite</command> <option>--author</option>"
 msgstr "<command>kwrite</command> <option>--author</option>"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "Lists &kwrite;'s authors in the terminal window"
 msgstr "Zeigt die Autoren von &kwrite; im Terminalfenster an."
 
-#: index.docbook:145
+#: index.docbook:143
 msgid "<command>kwrite</command> <option>--version</option>"
 msgstr "<command>kwrite</command> <option>--version</option>"
 
-#: index.docbook:145
+#: index.docbook:143
 msgid ""
 "Lists version information for &Qt;, KDE, and &kwrite;. Also available "
 "through <userinput><command>kwrite</command> <option>-V</option></userinput>"
@@ -259,11 +259,11 @@ msgstr ""
 "verf&uuml;gbar durch: <userinput><command>kwrite</command> "
 "<option>-V</option></userinput>"
 
-#: index.docbook:178
+#: index.docbook:176
 msgid "Key Bindings"
 msgstr "Tastenfunktionen"
 
-#: index.docbook:180
+#: index.docbook:178
 msgid ""
 "Many of the key bindings (shortcuts) are configurable by way of the <link "
 "linkend=\"settings\">Settings</link> menu. By default &kwrite; honors the "
@@ -273,11 +273,11 @@ msgstr ""
 "linkend=\"settings\">Einstellungen</link>-Men&uuml;. In der Grundeinstellung "
 "hat &kwrite; die folgenden Tastenfunktionen."
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Insert"
 msgstr "Einf"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid ""
 "Toggle between Insert and Overwrite mode. When in insert mode the editor "
 "will add any typed characters to the text while pushing along any data to "
@@ -291,236 +291,236 @@ msgstr ""
 "&Uuml;berschreibemodus werden die Zeichen rechts vom Cursor sofort durch die "
 "neu geschriebenen Zeichen ersetzt."
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Left Arrow"
 msgstr "Pfeil links"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor one character to the left"
 msgstr "Bewegt den Cursor ein Zeichen nach links"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Right Arrow"
 msgstr "Pfeil rechts"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor one character to the right"
 msgstr "Bewegt den Cursor ein Zeichen nach rechts"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Up Arrow"
 msgstr "Pfeil nach oben"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor up one line"
 msgstr "Bewegt den Cursor um eine Zeile nach oben"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Down Arrow"
 msgstr "Pfeil nach unten"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor down one line"
 msgstr "Bewegt den Cursor um eine Zeile nach unten"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Page Up"
 msgstr "Bild aufw&auml;rts"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor up one page"
 msgstr "Bewegt den Cursor um eine Seite nach oben"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Page Down"
 msgstr "Bild abw&auml;rts"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor down one page"
 msgstr "Bewegt den Cursor um eine Seite nach unten"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Backspace"
 msgstr "R&uuml;cktaste"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Delete the character to the left of the cursor"
 msgstr "L&ouml;scht das Zeichen links vom Cursor"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Home"
 msgstr "Pos1"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor to the beginning of the line"
 msgstr "Setzt den Cursor an den Zeilenanfang"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>End</keycap>"
 msgstr "<keycap>Ende</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Move the cursor to the end of the line"
 msgstr "Setzt den Cursor an das Zeilenende"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Delete"
 msgstr "Entf"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Delete the character to the right of the cursor (or any selected text)"
 msgstr "L&ouml;scht das Zeichen rechts vom Cursor (oder den markierten Text)"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Shift</keycap><keycap>Left Arrow</keycap>"
 msgstr "<keycap>Umschalt</keycap><keycap>Pfeil links</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Mark text one character to the left"
 msgstr "Markiert Text ein Zeichen nach links"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Shift</keycap><keycap>Right Arrow</keycap>"
 msgstr "<keycap>Umschalt</keycap><keycap>Pfeil rechts</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Mark text one character to the right"
 msgstr "Markiert Text ein Zeichen nach rechts"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>F1</keycap>"
 msgstr "<keycap>F1</keycap>"
 
 # index.docbook:246, index.docbook:744
-#: index.docbook:186 index.docbook:648
+#: index.docbook:184 index.docbook:646
 msgid "Help"
 msgstr "Hilfe"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Shift</keycap><keycap>F1</keycap>"
 msgstr "<keycap>Umschalt</keycap><keycap>F1</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "What's this?"
 msgstr "Was ist das?"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>F</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Find"
 msgstr "Suchen"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>F3</keycap>"
 msgstr "<keycap>F3</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Find again"
 msgstr "Weitersuchen"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>C</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>C</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Copy the marked text to the clipboard."
 msgstr "Kopiert den markierten Text in die Zwischenablage."
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>M</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>M</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Set a Bookmark"
 msgstr "Marker hinzuf&uuml;gen"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>N</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>N</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<link linkend=\"new\">New</link> document"
 msgstr "<link linkend=\"new\">Neue</link> Datei"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>P</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>P</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Print"
 msgstr "Drucken"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>Q</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>Q</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Quit - close active copy of editor"
 msgstr "Aktives Editorfenster schlie&szlig;en"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>R</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>R</keycap>"
 
 # index.docbook:282, index.docbook:689
-#: index.docbook:186 index.docbook:648
+#: index.docbook:184 index.docbook:646
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>S</keycap>"
 msgstr "<keycap>Ctrl</keycap><keycap>S</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid ""
 "Invokes the <link linkend=\"save\"><guilabel>Save</guilabel></link> command."
 msgstr ""
 "F&uuml;hrt den Befehl <link "
 "linkend=\"save\"><guilabel>Sichern</guilabel></link> aus."
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>V</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>V</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Paste the clipboard text into line edit."
 msgstr "Inhalt der Zwischenablage einf&uuml;gen."
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>X</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>X</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Delete the marked text and copy it to the clipboard."
 msgstr "Markierten Text l&ouml;schen und in die Zwischenablage kopieren"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>Z</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>Z</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Undo"
 msgstr "R&uuml;ckg&auml;ngig"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "<keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Z</keycap>"
 msgstr "<keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap>"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid "Redo"
 msgstr "Wiederherstellen"
 
-#: index.docbook:312
+#: index.docbook:310
 msgid "The Menu Entries"
 msgstr "Die Men&uuml;punkte"
 
-#: index.docbook:315
+#: index.docbook:313
 msgid "The <guimenu>File</guimenu> Menu"
 msgstr "Das <guimenu>Datei</guimenu>men&uuml;"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
 "cut> "
@@ -531,7 +531,7 @@ msgstr ""
 "cut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu "
 "</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This starts a new Document in the editor. If there is a current document "
 "with unsaved changes the user is given a chance to save it."
@@ -539,7 +539,7 @@ msgstr ""
 "Erzeugt eine neue Datei. Wenn eine Datei mit ungesicherten &Auml;nderungen "
 "ge&ouml;ffnet ist, fragt das Programm, ob diese gespeichert werden soll."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></short"
 "cut> "
@@ -550,7 +550,7 @@ msgstr ""
 "cut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem> "
 "<accel>&Ouml;</accel>ffnen</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This command opens a file. It does this by means of a dialog box which "
 "allows the user to navigate the file system. The dialog operates like a "
@@ -581,7 +581,7 @@ msgstr ""
 "eine Statusleiste mit Information &uuml;ber die Anzahl der Dateien und "
 "Unterverzeichnisse im aktuellen Verzeichnis angezeigt."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "The toolbar, which is located at the top of the dialog, has left and right "
 "arrow buttons that let the user move back and forth through previously "
@@ -607,7 +607,7 @@ msgstr ""
 "Schraubenschl&uuml;ssel zum &Auml;ndern einiger Einstellungen und ein Feld "
 "mit einer Liste h&auml;ufig benutzter Verzeichnisse."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<guimenu><accel>F</accel>ile</guimenu><guimenuitem>Open "
 "<accel>R</accel>ecent</guimenuitem>"
@@ -615,7 +615,7 @@ msgstr ""
 "<guimenu><accel>D</accel>atei</guimenu><guimenuitem>Zu<accel>l</accel>etzt "
 "ge&ouml;ffnete Dateien</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This is a shortcut to open recently saved documents. Clicking on this item "
 "opens a list to the side of the menu with several of the most recently saved "
@@ -627,7 +627,7 @@ msgstr ""
 "bearbeiteten Dateien. Klicken auf eine der Dateien &ouml;ffnet diese in "
 "&kwrite; - wenn diese Datei noch am selben Ort gespeichert ist."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo></short"
 "cut> "
@@ -639,7 +639,7 @@ msgstr ""
 "<guimenu><accel>D</accel>atei</guimenu><guimenuitem>S<accel>p</accel>eichern "
 "</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This saves the current document. If there has already been a save of the "
 "document then this will overwrite the previously saved file without asking "
@@ -650,7 +650,7 @@ msgstr ""
 "Speichern unter...-Dialog ge&ouml;ffnet, ansonsten wird ohne Nachfrage "
 "&uuml;berschrieben."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<guimenu><accel>F</accel>ile</guimenu><guimenuitem>Save "
 "<accel>A</accel>s</guimenuitem>"
@@ -658,7 +658,7 @@ msgstr ""
 "<guimenu><accel>D</accel>atei</guimenu> <guimenuitem>Speichern "
 "<accel>u</accel>nter...</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This allows a document to be saved with a new file name. This is done by "
 "means of the file dialog box described above in the <link "
@@ -668,7 +668,7 @@ msgstr ""
 "Dateinamens erfolgt durch einen Dialog wie bei <link "
 "linkend=\"open\">&Ouml;ffnen</link> beschrieben."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo></short"
 "cut> "
@@ -680,7 +680,7 @@ msgstr ""
 "<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>D</accel>rucken..."
 " </guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "Opens a simple print dialog allowing the user to specify what, where, and "
 "how to print"
@@ -688,7 +688,7 @@ msgstr ""
 "&Ouml;ffnet ein einfaches Dialogfenster, in dem der Nutzer einstellen kann, "
 "was, wo und wie zu drucken ist."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<guimenu><accel>F</accel>ile</guimenu><guimenuitem>New "
 "<accel>W</accel>indow</guimenuitem>"
@@ -696,7 +696,7 @@ msgstr ""
 "<guimenu><accel>D</accel>atei</guimenu> <guimenuitem>Neues "
 "<accel>F</accel>enster</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This creates a new window, &ie; a new instance of &kwrite;. In this way the "
 "user can easily work on more than one file at a time with &kwrite;."
@@ -704,7 +704,7 @@ msgstr ""
 "&Ouml;ffnet ein neues leeres Fenster, ein neues &kwrite;. Das erlaubt dem "
 "Nutzer, an mehreren Dateien gleichzeitig zu arbeiten."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<guimenu><accel>F</accel>ile</guimenu><guimenuitem>New "
 "<accel>V</accel>iew</guimenuitem>"
@@ -712,7 +712,7 @@ msgstr ""
 "<guimenu><accel>D</accel>atei</guimenu> <guimenuitem>Neue "
 "<accel>A</accel>nsicht</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This creates a new view of the current document, &ie;, a new instance of "
 "&kwrite; (as explained in the previous entry) but containing the same "
@@ -724,7 +724,7 @@ msgstr ""
 "&Auml;nderungen, die seit &Ouml;ffnen der Datei im alten Fenster vorgenommen "
 "wurden, sind auch im neuen Fenster vorhanden."
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo></short"
 "cut> "
@@ -735,7 +735,7 @@ msgstr ""
 "cut> <guimenu><accel>D</accel>atei</guimenu> "
 "<guimenuitem>B<accel>e</accel>enden</guimenuitem>"
 
-#: index.docbook:317
+#: index.docbook:315
 msgid ""
 "This will close the editor window, if you have more than one instance of "
 "&kwrite; running, through the <guimenuitem>New View</guimenuitem> or "
@@ -746,11 +746,11 @@ msgstr ""
 "z.B. durch <guimenuitem>Neue Ansicht</guimenuitem> oder <guimenuitem>Neues "
 "Fenster</guimenuitem> werden die anderen &kwrite;'s nicht geschlossen."
 
-#: index.docbook:432
+#: index.docbook:430
 msgid "The <guimenu>Edit</guimenu> Menu"
 msgstr "Das <guimenu>Bearbeiten</guimenu>men&uuml;"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo></short"
 "cut> "
@@ -761,7 +761,7 @@ msgstr ""
 "cut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem><accel>R</accel>&uuml;ckg&auml;ngig</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This is used to eliminate or reverse the most recent user action or "
 "operation. Just what constitutes such an action may be better understood by "
@@ -773,7 +773,7 @@ msgstr ""
 "linkend=\"group-undos\">R&uuml;ckg&auml;ngig gruppieren</link> dieses "
 "Hilfetextes nachlesen."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Z</key"
 "cap></keycombo></shortcut> "
@@ -784,12 +784,12 @@ msgstr ""
 "keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem>Wieder<accel>h</accel>erstellen</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid "This will reverse the most recent change (if any) made using Undo"
 msgstr ""
 "Macht das letzte R&uuml;ckg&auml;ngig (wenn vorhanden) r&uuml;ckg&auml;ngig."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<guimenu><accel>E</accel>dit</guimenu><guimenuitem>Undo/Redo "
 "<accel>H</accel>istory</guimenuitem>"
@@ -798,7 +798,7 @@ msgstr ""
 "<guimenuitem><accel>V</accel>erlauf "
 "R&uuml;ckg&auml;ngig/Wiederherstellen</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This will call a display box showing a list of the most recent actions on "
 "the left and another list of actions which have been 'undone' on the right. "
@@ -837,7 +837,7 @@ msgstr ""
 "vorw&auml;rtsgehen, ohne sich m&uuml;hselig durch einzelne "
 "Bearbeitungsschritte durchzuarbeiten."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo></short"
 "cut> "
@@ -848,7 +848,7 @@ msgstr ""
 "cut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem>Auss<accel>c</accel>hneiden</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This command deletes the current selection and places it on the clipboard. "
 "The clipboard is a feature of KDE that works invisibly to provide a way to "
@@ -857,7 +857,7 @@ msgstr ""
 "Schneidet den ausgew&auml;hlten Text aus und kopiert diesen in die "
 "Zwischenablage."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo></short"
 "cut> "
@@ -868,14 +868,14 @@ msgstr ""
 "cut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem><accel>K</accel>opieren</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This copies the currently selected text to the clipboard so that it may be "
 "pasted elsewhere. The clipboard is a feature of KDE that works invisibly to "
 "provide a way to transfer data between applications."
 msgstr "Kopiert den ausgew&auml;hlten Text in die Zwischenablage."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo></short"
 "cut> "
@@ -886,7 +886,7 @@ msgstr ""
 "cut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem>Ein<accel>f</accel>&uuml;gen</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This will insert the contents of the clipboard at the cursor position. The "
 "clipboard is feature of KDE that works invisibly to provide a way to "
@@ -895,7 +895,7 @@ msgstr ""
 "F&uuml;gt den in der Zwischenablage gespeicherten Text an der Cursorposition "
 "ein."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo></short"
 "cut> <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Select "
@@ -904,7 +904,7 @@ msgstr ""
 "<guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem><accel>A</accel>lles ausw&auml;hlen</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This will select the entire document. This could be very useful for copying "
 "the entire file to another application."
@@ -912,7 +912,7 @@ msgstr ""
 "Die gesamte Datei wird ausgew&auml;hlt. Dies ist besonders zum Kopieren der "
 "gesamten Datei in eine andere Anwendung n&uuml;tzlich."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<guimenu><accel>E</accel>dit</guimenu><guimenuitem>Invert "
 "<accel>S</accel>election</guimenuitem>"
@@ -920,7 +920,7 @@ msgstr ""
 "<guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem>Auswahl "
 "<accel>u</accel>mkehren</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This selects any unselected text while unselecting any selected text - "
 "effectively reversing the current state of selection."
@@ -928,7 +928,7 @@ msgstr ""
 "Invertiert die Auswahl von Text. Aller bisher unausgew&auml;hlter Text wird "
 "ausgew&auml;hlt und aller bisher ausgew&auml;hlter Text wird freigegeben."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></short"
 "cut> "
@@ -939,7 +939,7 @@ msgstr ""
 "cut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem><accel>S</accel>uchen...</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This opens the find dialog which is used to specify the <guilabel>Text to "
 "Find</guilabel> in the document. There is small text box for entering the "
@@ -975,7 +975,7 @@ msgstr ""
 "der Datei (oder vom Ende bei gleichzeitig verwendeter Option "
 "<guilabel>R&uuml;ckw&auml;rts suchen</guilabel>)."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>F3</keycap></keycombo></shortcut> "
 "<guimenu><accel>E</accel>dit</guimenu><guimenuitem>Find "
@@ -985,7 +985,7 @@ msgstr ""
 "<guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem><accel>W</accel>eitersuchen</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This repeats the last find operation, if any, without calling the find "
 "dialog box."
@@ -993,7 +993,7 @@ msgstr ""
 "Wiederholt die zuletzt ausgef&uuml;hrte Suche, ohne dass erst das "
 "Dialogfenster ge&ouml;ffnet wird."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo></short"
 "cut> "
@@ -1004,7 +1004,7 @@ msgstr ""
 "cut> <guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem><accel>E</accel>rsetzen...</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This command opens the replace dialog box. The replace dialog is almost "
 "identical to the above-mentioned find dialog. In addition to the features in "
@@ -1022,7 +1022,7 @@ msgstr ""
 "&kwrite; vor dem Ersetzen an jeder gefundenen Stelle nachfragt - oder das "
 "Ersetzen f&uuml;r die ganze Datei ohne nochmaliges Nachfragen ausf&uuml;hrt."
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "<guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>I</accel>nsert "
 "File</guimenuitem>"
@@ -1030,7 +1030,7 @@ msgstr ""
 "<guimenu><accel>B</accel>earbeiten</guimenu> "
 "<guimenuitem>Ein<accel>f</accel>&uuml;ge</guimenuitem>"
 
-#: index.docbook:434
+#: index.docbook:432
 msgid ""
 "This <action>opens</action> the <guimenu>File</guimenu> <link "
 "linkend=\"open\"><guimenuitem>Open</guimenuitem></link> dialog box whereby "
@@ -1042,11 +1042,11 @@ msgstr ""
 "Dialogfenster in dem Sie eine Datei ausw&auml;hlen k&ouml;nnen. An der "
 "aktuellen Cursorposition wird dann die gesamte Datei eingef&uuml;gt."
 
-#: index.docbook:589
+#: index.docbook:587
 msgid "The <guimenu>Go</guimenu> Menu"
 msgstr "Das <guimenu>Gehe zu</guimenu> Men&uuml;"
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "<guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>G</accel>o to "
 "line</guimenuitem>"
@@ -1054,7 +1054,7 @@ msgstr ""
 "<guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem>Gehe zu "
 "<accel>Z</accel>eile...</guimenuitem>"
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "This opens the goto line dialog box which is used to have the cursor jump to "
 "a particular line (specified by number) in the document. The line number may "
@@ -1070,7 +1070,7 @@ msgstr ""
 "werden. Sie k&ouml;nnen auch den Regler an der Seite verschieben, um zu der "
 "gew&uuml;nschten Seite zu gelangen."
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo></short"
 "cut> <guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>A</accel>dd "
@@ -1080,7 +1080,7 @@ msgstr ""
 "</shortcut> <guimenu><accel>G</accel>ehe zu</guimenu> "
 "<guimenuitem><accel>M</accel>arker hinzuf&uuml;gen</guimenuitem>"
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "This creates a marker in the document at the line where the cursor is "
 "located and places it at the bottom of the list of markers located at the "
@@ -1089,7 +1089,7 @@ msgstr ""
 "Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im <guimenu>Gehe "
 "zu</guimenu> Men&uuml; aufgerufen werden kann."
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "Markers are points within a &kwrite; document marked for easy return. If the "
 "user thinks (s)he may need to return to a specific point (s)he may by way of "
@@ -1100,7 +1100,7 @@ msgstr ""
 "mehr als 10 Marker zu setzen, so ignoriert &kwrite; diese Versuche ohne "
 "Warnung."
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "<guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>S</accel>et "
 "Marker</guimenuitem>"
@@ -1108,7 +1108,7 @@ msgstr ""
 "<guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem>Marker "
 "se<accel>t</accel>zen </guimenuitem>"
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "This creates a marker in the document at the line where the cursor is "
 "located, and allows the user to choose its position in the list of bookmarks "
@@ -1123,7 +1123,7 @@ msgstr ""
 "k&ouml;nnen die Zuweisung auch durch Dr&uuml;cken der Tasten 1 bis 0 "
 "vornehmen."
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "<guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>C</accel>lear "
 "Markers</guimenuitem>"
@@ -1131,7 +1131,7 @@ msgstr ""
 "<guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem>Marker "
 "l<accel>&ouml;</accel>schen </guimenuitem>"
 
-#: index.docbook:590
+#: index.docbook:588
 msgid ""
 "This command will remove all the markers from the docucument as well as the "
 "list of markers which is appended at the bottom of this menu item."
@@ -1139,7 +1139,7 @@ msgstr ""
 "L&ouml;scht alle Marker aus der Datei sowie die Markerliste, die am unteren "
 "Ende dieses Men&uuml;s eingef&uuml;gt wird."
 
-#: index.docbook:641
+#: index.docbook:639
 msgid ""
 "At the bottom of this menu, a list of markers appears if any markers are "
 "available for this window."
@@ -1147,11 +1147,11 @@ msgstr ""
 "Am unteren Ende diese Men&uuml;s wird ein Untermen&uuml; aktiv, wenn Marker "
 "in diesem Fenster vorhanden sind."
 
-#: index.docbook:646
+#: index.docbook:644
 msgid "The <guimenu>Tools</guimenu> Menu"
 msgstr "Das <guimenu>Werkzeuge</guimenu> Men&uuml;"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "<guimenu><accel>T</accel>ools</guimenu><guimenuitem><accel>S</accel>pelling.."
 ".</guimenuitem>"
@@ -1159,7 +1159,7 @@ msgstr ""
 "<guimenu><accel>W</accel>erkzeuge</guimenu> "
 "<guimenuitem>Re<accel>c</accel>htschreibung...</guimenuitem>"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "<action>This initiates the spell checking program - a program designed to "
 "help the user catch and correct any spelling errors.</action> Clicking on "
@@ -1176,11 +1176,11 @@ msgstr ""
 "Mitte des Dialogfensters mit deren zugeh&ouml;rigen Namen links daneben. "
 "Diese sind von oben nach unten:"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Misspelled Word:"
 msgstr "Falsches Wort:"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "Here, the spell checker indicates the word currently under consideration. "
 "This happens when the checker encounters a word not in its dictionary - a "
@@ -1194,11 +1194,11 @@ msgstr ""
 "mit denen das Rechtschreibpr&uuml;fungsprogramm jedes einzelne Wort des zu "
 "pr&uuml;fenden Textes vergleicht."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Replacement:"
 msgstr "Ersetzung:"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "If the checker has any similar words in its dictionary the first one will be "
 "listed here. The user can accept the suggestion, type in his or her own "
@@ -1209,11 +1209,11 @@ msgstr ""
 "Vorschlag akzeptieren, eine eigene Korrektur eingeben oder einen anderen "
 "Vorschlag aus dem n&auml;chsten Feld ausw&auml;hlen."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Suggestions:"
 msgstr "Vorschl&auml;ge:"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "The checker may list here a number of possible replacements for the word "
 "under consideration. Clicking on any one of the suggestions will cause that "
@@ -1223,7 +1223,7 @@ msgstr ""
 "Ersetzungen f&uuml;r das aktuelle Wort auf. Klicken auf eines dieser Worte "
 "tr&auml;gt dieses in das Feld <guilabel>Ersetzung:</guilabel> ein."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "On the right side of the dialog box are 6 buttons that allow the user to "
 "control the spell check process. They are:"
@@ -1232,7 +1232,7 @@ msgstr ""
 "denen der Nutzer den Pr&uuml;fungsprozess steuern kann. Diese sind im "
 "Einzelnen:"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This button has the checker replace the word under consideration in the "
 "document with the word in the <guilabel>Replacement:</guilabel> box."
@@ -1240,11 +1240,11 @@ msgstr ""
 "Klicken auf diesen Knopf ersetzt das Wort im Feld <guilabel>Falsches "
 "Wort:</guilabel> mit dem Wort im Feld <guilabel>Ersetzung:</guilabel>."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Replace All"
 msgstr "Alle ersetzen"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This button causes the checker to replace not only the current "
 "<guilabel>Misspelled Word:</guilabel> but to automatically make the same "
@@ -1255,11 +1255,11 @@ msgstr ""
 "<guilabel>Falsches Wort:</guilabel> angezeigten Wortes im gesamten Text mit "
 "dem Wort im Feld <guilabel>Ersetzung:</guilabel> ersetzt werden."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Ignore"
 msgstr "Ignorieren"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "Activating this button will have the checker move on without making any "
 "changes."
@@ -1267,11 +1267,11 @@ msgstr ""
 "Die Rechtschreibpr&uuml;fung wird ohne &Auml;nderungen am aktuellen Wort "
 "fortgesetzt."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Ignore All"
 msgstr "Alle ignorieren"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This button tells the checker to do nothing with the current "
 "<guilabel>Misspelled Word:</guilabel> and to pass over any other instances "
@@ -1281,7 +1281,7 @@ msgstr ""
 "&Auml;nderungen am aktuellen Wort fort und ignoriert alle weiteren Vorkommen "
 "dieses Wortes im gesamten Dokument."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This only applies to the current spell check run. If the checker is run "
 "again later it will stop on this same word."
@@ -1290,11 +1290,11 @@ msgstr ""
 "sp&auml;ter noch einmal die Rechtschreibung gepr&uuml;ft wird, wird dasselbe "
 "Wort wieder als falsch erkannt."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "<guibutton>Add</guibutton>"
 msgstr "<guibutton>Add</guibutton>"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "Pressing this button adds the word in the <guilabel>Misspelled "
 "Word:</guilabel> box to the checker's dictionary. This means that in the "
@@ -1304,15 +1304,15 @@ msgstr ""
 "Wort:</guilabel> zum W&ouml;rtebuch hinzu. Dieses Wort wird dann in der "
 "Zukunft immer als richtig erkannt."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Stop"
 msgstr "Anhalten"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "This button stops the spell check process."
 msgstr "Dieser Knopf stoppt die Rechtschreibpr&uuml;fung."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "Located horizontally along the bottom of the spell check dialog is a "
 "progress bar. As the checking process proceeds the bar will fill from left "
@@ -1324,7 +1324,7 @@ msgstr ""
 "Rechtschreibpr&uuml;fung innerhalb der Datei anzeigt. Dieser Wert wird "
 "graphisch und durch Ziffern angezeigt."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "A numerical display of the spell check process is simultaneously displayed "
 "in the status bar of the editor. The <link linkend=\"show-statusbar\">status "
@@ -1336,34 +1336,34 @@ msgstr ""
 "linkend=\"show-statusbar\">Statusleiste</link> ist der liegende Streifen am "
 "unteren Rand des Editorfensters unterhalb des Texteingabebereiches."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Two more buttons are located below the progress bar. They are:"
 msgstr ""
 "Zwei weitere Kn&ouml;pfe befinden sich unter dem Anzeigebalken im Dialogfeld:"
 
 # index.docbook:745, index.docbook:936
-#: index.docbook:648 index.docbook:930
+#: index.docbook:646 index.docbook:928
 msgid ""
 "This invokes the KDE help system starting at the &kwrite; help pages (this "
 "document)."
 msgstr "Dieser Knopf ruft die Online-Hilfe zu &kwrite; auf (Dieses Dokument)."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "Cancel"
 msgstr "Cancel"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "This button cancels the spell check process."
 msgstr "Dieser Knopf bricht die Rechtschreibpr&uuml;fung ab."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "<guimenu>Tools</guimenu><guimenuitem>Indent</guimenuitem>"
 msgstr ""
 "<shortcut><keycombo><keycap>Strg</keycap><keycap>I</keycap></keycombo></short"
 "cut> <guimenu><accel>W</accel>erkzeuge</guimenu> "
 "<guimenuitem>Ein<accel>r</accel>&uuml;cken</guimenuitem>"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This increases the paragraph's indentation by one step. The size of the step "
 "depends on the <link linkend=\"pref-indent\"> indentation settings</link>."
@@ -1372,14 +1372,14 @@ msgstr ""
 "Schrittgr&ouml;&szlig;e wird in <link linkend=\"pref-indent\"> "
 "Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "<guimenu>Tools</guimenu><guimenuitem>Unindent</guimenuitem>"
 msgstr ""
 "<shortcut><keycombo><keycap>Strg</keycap><keycap>U</keycap></keycombo></short"
 "cut> <guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;cken "
 "r&uuml;ckg&auml;ngig</guimenuitem>"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This reduces the paragraph's indentation by one step. The size of the step "
 "depends on the <link linkend=\"pref-indent\"> indentation settings</link>."
@@ -1388,24 +1388,24 @@ msgstr ""
 "Schrittgr&ouml;&szlig;e wird in <link linkend=\"pref-indent\"> "
 "Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "<guimenu>Tools</guimenu><guimenuitem>Clean Indentation</guimenuitem>"
 msgstr ""
 "<guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;ckungen "
 "l&ouml;schen</guimenuitem>"
 
 # index.docbook:777, index.docbook:1157, index.docbook:1239
-#: index.docbook:648 index.docbook:1124 index.docbook:1165
+#: index.docbook:646 index.docbook:1122 index.docbook:1163
 msgid "Not yet implemented"
 msgstr "Noch nicht verf&uuml;gbar."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "<guimenu>Tools</guimenu><guimenuitem>Comment</guimenuitem>"
 msgstr ""
 "<guimenu>Werkzeuge</guimenu><guimenuitem><accel>K</accel>ommen "
 "tar</guimenuitem>"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This adds one space to the beginning of the line where the text cursor is "
 "located or to the beginning of any selected lines."
@@ -1413,13 +1413,13 @@ msgstr ""
 "Dieser Befehl f&uuml;gt ein Leerzeichen am Zeilenanfang der aktuellen Zeile "
 "oder an den Zeilenanf&auml;ngen aller markierten Zeilen ein."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid "<guimenu>Tools</guimenu><guimenuitem>Uncomment</guimenuitem>"
 msgstr ""
 "<guimenu>Werkzeuge</guimenu> <guimenuitem>Kommentar "
 "ent<accel>f</accel>ernen</guimenuitem>"
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "This removes one space (if any exist) from the beginning of the line where "
 "the text cursor is located or from the beginning of any selected lines."
@@ -1427,11 +1427,11 @@ msgstr ""
 "Dieser Befehl entfernt (wenn vorhanden) ein Leerzeichen vom Zeilenanfang der "
 "aktuellen Zeile oder von den Zeilenanf&auml;ngen der markierten Zeilen."
 
-#: index.docbook:804
+#: index.docbook:802
 msgid "The <guimenu>Settings</guimenu> Menu"
 msgstr "Das <guimenu>Einstellungen</guimenu>-Men&uuml;"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Show "
 "<accel>T</accel>oolbar</guimenuitem>"
@@ -1439,7 +1439,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem>Werk<accel>z</accel>eugleiste anzeigen</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "When checked, this displays a movable toolbar containing buttons used to "
 "initiate frequently used commands. When unchecked the toolbar is hidden."
@@ -1447,7 +1447,7 @@ msgstr ""
 "Schaltet die Anzeige der Werkzeugleiste mit oft benutzten Befehlen ein und "
 "aus. Diese kann auch verschoben werden."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Show "
 "<accel>S</accel>tatusbar</guimenuitem>"
@@ -1455,7 +1455,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem><accel>S</accel>tatuszeile anzeigen</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "When checked, this displays a small bar at the bottom of the editor "
 "containing information about the status of the current document. When "
@@ -1464,7 +1464,7 @@ msgstr ""
 "Schaltet die Anzeige der Statusleiste mit Informationen &uuml;ber den "
 "aktuellen Text am unteren Ende des &kwrite;-Fensters ein und aus."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Sho<accel>w</accel> "
 "Path</guimenuitem>"
@@ -1472,7 +1472,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem><accel>P</accel>fad anzeigen</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "When selected, this displays in the title bar the path (its location in the "
 "file system) of the current document. When unchecked the path is hidden."
@@ -1480,7 +1480,7 @@ msgstr ""
 "Schaltet die Anzeige des vollst&auml;ndigen Pfades der aktuellen Datei im "
 "Kopf des Fensters ein und aus."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure "
 "<accel>K</accel>ey Bindings</guimenuitem>"
@@ -1488,7 +1488,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem><accel>T</accel>astenzuordnungen vornehmen...</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "This command opens a dialog box whereby the <link "
 "linkend=\"keybindings\">key bindings</link> may be changed. A display window "
@@ -1526,7 +1526,7 @@ msgstr ""
 "<keycap>Strg</keycap>+<keycap>Alt</keycap>+<keycap>K</keycap> als Kurzbefehl "
 "zum Anzeigen der <guilabel>&Uuml;ber KWrite</guilabel> Information."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure "
 "Tool<accel>b</accel>ars</guimenuitem>"
@@ -1534,7 +1534,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem>Wer<accel>k</accel>zeugleisten einrichten...</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "This will open the dialog whereby the toolbar configuration may be changed. "
 "The user can choose which shortcut buttons should appear on the toolbar. A "
@@ -1562,7 +1562,7 @@ msgstr ""
 "ausgew&auml;hlter Befehl wird durch einen Klick auf Links aus der "
 "Werkzeugleiste entfernt."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>P</accel>refere"
 "nces</guimenuitem>"
@@ -1570,7 +1570,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem><accel>E</accel>instellungen...</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "This menu item opens a dialog whereby several different <link "
 "linkend=\"pref-dialog\">settings</link> may be adjusted."
@@ -1578,7 +1578,7 @@ msgstr ""
 "&Ouml;ffnet ein Dialogfenster zur Auswahl von verschiedenen <link "
 "linkend=\"pref-dialog\">Einstellungen</link>."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure "
 "Highlighti<accel>n</accel>g</guimenuitem>"
@@ -1586,7 +1586,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem>Her<accel>v</accel>orhebungsmodus einrichten...</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "Opens a dialog box allowing configuration of the syntax highlighting. The "
 "dialog is described in <xref linkend=\"pref-highlighting\"/>."
@@ -1595,7 +1595,7 @@ msgstr ""
 "Hervorhebungsmodus. Die Einstellung ist im <xref "
 "linkend=\"pref-highlighting\"/> beschrieben."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>V</accel>ertica"
 "l Selection</guimenuitem>"
@@ -1603,7 +1603,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem><accel>V</accel>ertikale Auswahl</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "This is used to turn on or off the vertical selection feature. Vertical "
 "selection allows text to be selected by column as well as by row. In other "
@@ -1615,7 +1615,7 @@ msgstr ""
 "Textauswahl nach Spalten, so dass nur rechteckige Bereiche ausgew&auml;hlt "
 "werden k&ouml;nnen."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>H</accel>ighlig"
 "ht Mode</guimenuitem>"
@@ -1623,7 +1623,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instellungen</guimenu> "
 "<guimenuitem><accel>H</accel>ervorhebungsmodus</guimenuitem>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "This allows the user to choose the style of color highlighting which the "
 "editor uses to display the text. The styles are selected by programming "
@@ -1635,7 +1635,7 @@ msgstr ""
 "<guisubmenu>Normal</guisubmenu> f&uuml;r die Darstellung ohne Hervorhebungen "
 "oder die verwendete Sprache, um Hervorhebungen zu erhalten."
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "<guimenu><accel>S</accel>ettings</guimenu><guisubmenu><accel>E</accel>nd of "
 "Line</guisubmenu>"
@@ -1643,7 +1643,7 @@ msgstr ""
 "<guimenu><accel>E</accel>instelllungen</guimenu> "
 "<guisubmenu>Zeilen<accel>e</accel>nde</guisubmenu>"
 
-#: index.docbook:806
+#: index.docbook:804
 msgid ""
 "This opens a sub-menu from which the user can select the type of <quote>end "
 "of line</quote> code for &kwrite; to use, <abbrev>i.e.</abbrev>, the "
@@ -1653,11 +1653,11 @@ msgstr ""
 "<quote>Zeilenendezeichens</quote> das &kwrite; benutzen soll, ausgew&auml;ht "
 "werden kann. Zur Auswahl stehen: Unix, &Mac; oder MSDOS/&Windows;."
 
-#: index.docbook:928
+#: index.docbook:926
 msgid "The <guimenuitem>Help</guimenuitem> Menu"
 msgstr "Das <guimenuitem>Hilfe</guimenuitem> Men&uuml;"
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "<shortcut><keycombo><keycap>F1</keycap></keycombo></shortcut> "
 "<guimenu><accel>H</accel>elp</guimenu><guimenuitem><accel>C</accel>ontents</g"
@@ -1667,7 +1667,7 @@ msgstr ""
 "<guimenu><accel>H</accel>ilfe</guimenu> "
 "<guimenuitem><accel>I</accel>nhalt</guimenuitem>"
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "<shortcut><keycombo><keycap>Shift</keycap><keycap>F1</keycap></keycombo></sho"
 "rtcut> <guimenu><accel>H</accel>elp</guimenu><guimenuitem>What's "
@@ -1677,7 +1677,7 @@ msgstr ""
 "shortcut> <guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem>Was ist "
 "<accel>d</accel>as?</guimenuitem>"
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "This changes the mouse cursor to a combination arrow and question mark. "
 "Clicking on items within &kwrite; with this arrow will open a help window "
@@ -1687,7 +1687,7 @@ msgstr ""
 "Klicken auf beliebige Bedienungselemente von &kwrite; &ouml;ffnet ein "
 "Hilfefenster mit Erkl&auml;rung zu diesem Element - wenn diese existiert."
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "<guimenu><accel>H</accel>elp</guimenu><guimenuitem><accel>R</accel>eport "
 "Bug</guimenuitem>"
@@ -1696,7 +1696,7 @@ msgstr ""
 "<guimenuitem>Be<accel>r</accel>ichten Sie Probleme oder "
 "W&uuml;nsche</guimenuitem>"
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "This calls a dialog box to help the user help the KDE team to track down and "
 "solve any problems(bugs) in the program. The dialog attempts to do this by "
@@ -1709,7 +1709,7 @@ msgstr ""
 "W&uuml;nsche sind hier willkommen. Klicken Sie auf Senden, um Ihre E-Mail "
 "Ihrem System zur Weiterleitung zu &uuml;bergeben."
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "<guimenu><accel>H</accel>elp</guimenu><guimenuitem><accel>A</accel>bout "
 "KWrite</guimenuitem>"
@@ -1717,12 +1717,12 @@ msgstr ""
 "<guimenu><accel>H</accel>ilfe</guimenu> "
 "<guimenuitem>&Uuml;<accel>b</accel>er KWrite</guimenuitem>"
 
-#: index.docbook:930
+#: index.docbook:928
 msgid "This will display version and author information"
 msgstr ""
 "Zeigt Versionsinformation, Autor und Lizenzinformationen von &kwrite; an."
 
-#: index.docbook:930
+#: index.docbook:928
 msgid ""
 "<guimenu><accel>H</accel>elp</guimenu><guimenuitem>About "
 "<accel>K</accel>DE</guimenuitem>"
@@ -1730,15 +1730,15 @@ msgstr ""
 "<guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem>&Uuml;ber "
 "<accel>K</accel>DE</guimenuitem>"
 
-#: index.docbook:930
+#: index.docbook:928
 msgid "This displays the KDE version and other basic information."
 msgstr "Zeigt Versionsinformation und Grunds&auml;tzliches zu KDE an."
 
-#: index.docbook:981
+#: index.docbook:979
 msgid "Configure &kwrite;"
 msgstr "Einrichten von &kwrite;"
 
-#: index.docbook:983
+#: index.docbook:981
 msgid ""
 "Selecting <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure "
 "KWrite</guimenuitem></menuchoice> from the menu brings up the "
@@ -1768,11 +1768,11 @@ msgstr ""
 "<guilabel>Bearbeiten</guilabel> und <guilabel>Rechtschreibung</guilabel> "
 "sind nachfolgend erl&auml;utert."
 
-#: index.docbook:999
+#: index.docbook:997
 msgid "Colors"
 msgstr "Farben"
 
-#: index.docbook:1001
+#: index.docbook:999
 msgid ""
 "This section provides access to <link linkend=\"pref-color-settings\">five "
 "different color settings</link>, described below. Each of these settings may "
@@ -1786,7 +1786,7 @@ msgstr ""
 "ein Dialogfeld zum Einstellen der Farbe. Die Kn&ouml;pfe nehmen die jeweils "
 "eingestellte Farbe an."
 
-#: index.docbook:1008
+#: index.docbook:1006
 msgid ""
 "The color dialog box provides a convenient and graphical way to select a "
 "color. In the upper left of the box is a rectangular display of a spectrum "
@@ -1821,7 +1821,7 @@ msgstr ""
 "<guilabel>HTML</guilabel>: zeigt den Farbcode in <acronym>HTML</acronym> an, "
 "wie er f&uuml;r Webseiten verwendet wird."
 
-#: index.docbook:1027
+#: index.docbook:1025
 msgid ""
 "In addition to the above, the color dialog allows the capture of any color "
 "currently displayed on the desktop or in another program. Clicking on the "
@@ -1836,7 +1836,7 @@ msgstr ""
 "irgendeinen Punkt auf dem Bildschirm anklicken, dann werden die "
 "Einstellungen f&uuml;r die Farbe dieses Punktes &uuml;bernommen."
 
-#: index.docbook:1034
+#: index.docbook:1032
 msgid ""
 "Furthermore the user has the option of adding any color to a personal "
 "palette of <quote>Custom Colors</quote> by clicking on the wide button "
@@ -1853,20 +1853,20 @@ msgstr ""
 "wenn Sie Eigene Farben im Auswahlfeld rechts oben ausw&auml;hlen. "
 "Zus&auml;tzlich stehen noch einige vordefinierte Paletten bereit."
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid "Background"
 msgstr "Hintergrund:"
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid ""
 "Here the user can specify a color for the general background of &kwrite;."
 msgstr "Stellt die generelle Hintergrundfarbe ein."
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid "Text Background"
 msgstr "Texthintergrund:"
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid ""
 "This is used to set a particular color to display in the background of those "
 "areas of the document containing text."
@@ -1874,11 +1874,11 @@ msgstr ""
 "Stellt die Hintergrundfarbe ein, die zum Hinterlegen von Text verwendet wird."
 
 # index.docbook:1058, index.docbook:1381
-#: index.docbook:1043 index.docbook:1338
+#: index.docbook:1041 index.docbook:1336
 msgid "Selected"
 msgstr "Ausgew&auml;hlt:"
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid ""
 "This allows the user to select a color to be used for indicating selected "
 "(or highlighted) portions of the document."
@@ -1886,11 +1886,11 @@ msgstr ""
 "Stellt die Hintergrundfarbe ein, die zur Darstellung von ausgew&auml;hltem "
 "Text verwendet wird."
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid "Found"
 msgstr "Gefunden:"
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid ""
 "This specifies the preferred color with which to mark text encountered as "
 "the result of a <link linkend=\"find\">find</link> operation."
@@ -1898,11 +1898,11 @@ msgstr ""
 "Stellt die Hintergrundfarbe ein, die zur Darstellung von Text verwendet "
 "wird, der mit <link linkend=\"find\">Suche</link> gefunden wurde."
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid "Selected + Found"
 msgstr "Ausgew&auml;hlt + Gefunden:"
 
-#: index.docbook:1043
+#: index.docbook:1041
 msgid ""
 "This sets the color for text that has not only been found as in the previous "
 "entry above but that has also been selected."
@@ -1911,15 +1911,15 @@ msgstr ""
 "wird, der mit <link linkend=\"find\">Suche</link> gefunden wurde und sich "
 "au&szlig;erdem in einem ausgew&auml;hlten Bereich befindet."
 
-#: index.docbook:1078
+#: index.docbook:1076
 msgid "Indent"
 msgstr "Einr&uuml;cken"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "Auto Indent"
 msgstr "Automatisch einr&uuml;cken"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid ""
 "This causes new lines to begin with the same indentation level as the "
 "previous line."
@@ -1927,11 +1927,11 @@ msgstr ""
 "Ankreuzen dieser Option sorgt daf&uuml;r, dass neue Zeilen genauso "
 "einger&uuml;ckt werden wie die dar&uuml;berstehende Zeile."
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "Indent With Spaces"
 msgstr "Mit Leerzeichen einr&uuml;cken"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid ""
 "This replaces tabs with the number of spaces selected in the Tab Width "
 "window in the <link linkend=\"pref-edit\">Edit</link> section of the "
@@ -1941,11 +1941,11 @@ msgstr ""
 "Die Anzahl der Leerzeichen wird im Feld Tabulator-Breite in der Sektion "
 "Bearbeiten der Einstellungen... vorgenommen."
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "Backspace Key Indents"
 msgstr "R&uuml;cktasten-Ausr&uuml;ckung"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid ""
 "This allows the <keycombo><keycap>backspace</keycap></keycombo> key to be "
 "used to indent."
@@ -1954,11 +1954,11 @@ msgstr ""
 "<keycombo><keycap>R&uuml;cktaste</keycap></keycombo>-Taste zum "
 "Ausr&uuml;cken benutzt werden."
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "Tab Key Indents"
 msgstr "Tabulator-Einr&uuml;ckung"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid ""
 "This allows the <keycombo><keycap>tab</keycap></keycombo> key to be used to "
 "indent."
@@ -1967,22 +1967,22 @@ msgstr ""
 "<keycombo><keycap>Tab</keycap></keycombo>-Taste zum Einr&uuml;cken benutzt "
 "werden."
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "Keep Indent Profile"
 msgstr "Einr&uuml;ckung und Profil speichern"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "This retains current indentation settings for future documents."
 msgstr ""
 "Wenn dieses Feld angekreuzt ist, werden die Einstellungen f&uuml;r das "
 "Einr&uuml;cken gespeichert und automatisch f&uuml;r beim Neustart von "
 "&kwrite; wieder verwendet."
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid "Keep Extra Spaces"
 msgstr "Zus&auml;tzliche Leerzeichen beibehalten"
 
-#: index.docbook:1079
+#: index.docbook:1077
 msgid ""
 "Indentations of more than the selected number of spaces will not be "
 "shortened."
@@ -1990,15 +1990,15 @@ msgstr ""
 "Einr&uuml;ckungen von mehr als der voreingestellten Anzahl von Leerzeichen "
 "werden nicht gek&uuml;rzt."
 
-#: index.docbook:1123
+#: index.docbook:1121
 msgid "Select"
 msgstr "Ausw&auml;hlen"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "Persistent Selections"
 msgstr "Durchgehende Auswahl"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid ""
 "This prevents key input or cursor movement by way of the arrow keys from "
 "causing the elimination of text selection."
@@ -2006,7 +2006,7 @@ msgstr ""
 "Diese Einstellung verhindert, dass beim Bewegen des Cursors mit den "
 "Pfeiltasten Textauswahl ausgelassen wird."
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid ""
 "(Note: If the Overwrite Selections option is activated then any typed "
 "character input or paste operation will replace the selected text.)"
@@ -2015,22 +2015,22 @@ msgstr ""
 "ersetzt jedes eingegebene Zeichen oder Einf&uuml;geoperation den "
 "ausgew&auml;hlten Text.)"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "Overwrite Selections"
 msgstr "Auswahl &uuml;berschreiben"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid ""
 "Any keyed character input or paste operation will replace the selected text."
 msgstr ""
 "Jedes eingegebene Zeichen oder Einf&uuml;geoperation "
 "ersetzt(&uuml;berschreibt) den ausgew&auml;hlten Text."
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "Mouse Autocopy"
 msgstr "Automatisch mit Maus kopieren"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid ""
 "Any text selected with the mouse will be automatically copied to the "
 "clipboard."
@@ -2038,19 +2038,19 @@ msgstr ""
 "Text, der mit der Maus ausgew&auml;hlt wird, wird automatisch in die "
 "Zwischenablage kopiert."
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "X11-like Single Selection"
 msgstr "Einfache Auswahl nach dem X11-Standard"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "Not implemented yet."
 msgstr "Diese Einstellung wird noch nicht verwendet."
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "Vertical Selections"
 msgstr "Vertikale Auswahl"
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid ""
 "This activates the <link linkend=\"vertical-selection\">Vertical "
 "Selection</link> option."
@@ -2058,19 +2058,19 @@ msgstr ""
 "Wenn diese Option aktiviert ist, erfolgt die Auswahl in Rechteckform und "
 "nicht in ganzen Zeilen, sobald der Cursor vertikal bewegt wird."
 
-#: index.docbook:1124
+#: index.docbook:1122
 msgid "Toggle Old"
 msgstr "Alt Ein/Aus"
 
-#: index.docbook:1164
+#: index.docbook:1162
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Word Wrap"
 msgstr "Zeilenumbruch"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "Word wrap is a feature that causes the editor to automatically start a new "
 "line of text and move (wrap) the cursor to the beginning of that new line. "
@@ -2084,11 +2084,11 @@ msgstr ""
 "neue Zeile, sobald die aktuelle Zeile die L&auml;nge erreicht, die im Feld "
 "<link linkend=\"pref-wrap-words-at\">Zeilenumbruch bei:</link> angegeben ist."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Wrap Words At:"
 msgstr "Zeilenumbruch bei:"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "If the <link linkend=\"pref-word-wrap\">Word Wrap</link> option is selected "
 "this entry determines the length (in characters) at which the editor will "
@@ -2098,11 +2098,11 @@ msgstr ""
 "ist, bestimmt dieses Feld, beim Erreichen welcher Position &kwrite; eine "
 "neue Zeile beginnt."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Replace Tabs By Spaces"
 msgstr "Tabs durch Leerzeichen ersetzen"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "&kwrite; will replace any tabs with the number of spaces indicated in the "
 "<link linkend=\"pref-tab-width\">Tab Width:</link> entry."
@@ -2111,11 +2111,11 @@ msgstr ""
 "die im Feld <link linkend=\"pref-tab-width\">Tabulator-Breite:</link> "
 "eingestellte Anzahl Leerzeichen."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Tab Width"
 msgstr "Tabulator-Breite:"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "If the <link linkend=\"pref-word-wrap\"><guilabel>Replace Tabs By "
 "Spaces</guilabel></link> option is selected this entry determines the number "
@@ -2125,11 +2125,11 @@ msgstr ""
 "Leerzeichen ersetzen</guilabel></link> aktiv ist, gibt dieses Feld die "
 "Anzahl der Leerzeichen an, die an Stelle eines Tabs treten."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Remove Trailing Spaces"
 msgstr "Leerzeichen am Zeilenende entfernen"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "&kwrite; will automatically eliminate extra spaces at the ends of lines of "
 "text."
@@ -2137,11 +2137,11 @@ msgstr ""
 "Wenn diese Option aktiv ist, entfernt &kwrite; automatisch alle "
 "zus&auml;tzlichen Leerzeichen an Zeilenenden."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Auto Brackets"
 msgstr "Automatische Klammern"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "When the user types a left bracket ([,(, or {) &kwrite; automatically enters "
 "the right bracket (}, ), or ]) to the right of the cursor."
@@ -2149,11 +2149,11 @@ msgstr ""
 "When the user types a left bracket ([,(, or {) &kwrite; automatically enters "
 "the right bracket (}, ), or ]) to the right of the cursor."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Group Undos"
 msgstr "R&uuml;ckg&auml;ngig gruppieren"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "Groups of similar actions are to be considered a single <link "
 "linkend=\"undo\">Undo</link> step by &kwrite;. In other words, a series of "
@@ -2170,7 +2170,7 @@ msgstr ""
 "bei R&uuml;ckg&auml;ngig alle seit der letzten Unterbrechnung eingegebenen "
 "Zeichen auf einmal."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "When this option is not selected &kwrite; considers each keystroke to be a "
 "single step. So if the user (with this option active) were to type several "
@@ -2186,11 +2186,11 @@ msgstr ""
 "einen Schritt. Zum Entfernen des letzten eingegebenen Wortes w&auml;ren dann "
 "mehrere R&uuml;ckg&auml;ngig-Schritte notwendig."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Show Tabs"
 msgstr "Tabulatoren anzeigen"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "The editor will display a symbol to indicate the presence of a tab in the "
 "text."
@@ -2198,15 +2198,15 @@ msgstr ""
 "Wenn diese Option aktiv ist, zeigt &kwrite; ein Symbol an, wo ein Tabulator "
 "vorhanden ist."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Smart Home"
 msgstr "Intelligente Pos1-Taste"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Page Up/Down Moves Cursor"
 msgstr "Bild Auf/Ab bewegt Cursor"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "This option changes the behavior of the cursor when the user presses the "
 "<keycap>Page Up</keycap> or <keycap>Page Down</keycap> key. If unselected "
@@ -2227,11 +2227,11 @@ msgstr ""
 "Tasten, dass der Cursor an den Anfang oder das Ende des sichtbaren Textes "
 "bewegt wird."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "Wrap Cursor"
 msgstr "Zeilenumbruch am Cursor"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "When this option is chosen, moving the cursor with the arrow keys off the "
 "end of a line (to the right) causes it to jump down to the beginning of the "
@@ -2249,11 +2249,11 @@ msgstr ""
 "am Zeilenende auf der selben Zeile weiter nach rechts und tut nichts, wenn "
 "am Zeilenanfang versucht wird, weiter nach links zu gehen."
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid "<link linkend=\"undo\">Undo</link> steps:"
 msgstr "Anzahl <link linkend=\"undo\">R&uuml;ckg&auml;ngig</link>"
 
-#: index.docbook:1165
+#: index.docbook:1163
 msgid ""
 "Here the user may specify the number of steps &kwrite; will retain in memory "
 "for purposes of undoing entries and actions. This means that the higher the "
@@ -2267,11 +2267,11 @@ msgstr ""
 "das, dass Sie die letzten 10 Schritte mit R&uuml;ckg&auml;ngig ungeschehen "
 "machen k&ouml;nnen."
 
-#: index.docbook:1278
+#: index.docbook:1276
 msgid "Spelling"
 msgstr "Rechtschreibung..."
 
-#: index.docbook:1278
+#: index.docbook:1276
 msgid ""
 "A spell checker is a program designed to help the user catch and correct any "
 "spelling errors. This section of the preferences dialog allows certain "
@@ -2281,13 +2281,13 @@ msgstr ""
 "Schreibfehlern. In diesem Abschnitt werden die wichtigen Einstellungen "
 "hierzu vorgenommen."
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid "Create root/affix combinations not in dictionary"
 msgstr ""
 "Kombinationen aus Wortstamm+Zus&auml;tzen erstellen, die nicht im "
 "W&ouml;rterbuch stehen"
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid ""
 "Selecting this option allows the spell checker to register as 'correct' "
 "combinations of root words with suffixes or prefixes even if the particular "
@@ -2297,11 +2297,11 @@ msgstr ""
 "als richtig erkannt, auch wenn diese Schreibung nicht im W&ouml;rterbuch "
 "enthalten ist."
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid "Consider run-together words as spelling errors"
 msgstr "Zusammengezogene W&ouml;rter als Rechtschreibfehler betrachten"
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid ""
 "Selecting this will cause the spell checker to register as 'misspelled' two "
 "or more correctly spelled words that are 'run-together', "
@@ -2310,11 +2310,11 @@ msgstr ""
 "Bei Auswahl dieser Funktion werden zwei korrekt geschriebene W&ouml;rter als "
 "Fehler erkannt, wenn sie zusammengeschrieben sind."
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid "Dictionary:"
 msgstr "W&ouml;rterbuch:"
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid ""
 "Depending on the user's installation one or more different language spelling "
 "dictionaries may be available. This drop down box allows the user to choose "
@@ -2325,11 +2325,11 @@ msgstr ""
 "Einstellung des von der Rechtschreibpr&uuml;fung zu benutzenden "
 "W&ouml;rterbuches."
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid "Encoding:"
 msgstr "Kodierung:"
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid ""
 "There are different coding systems used to associate particular codes with "
 "particular characters and symbols. If the user knows which code he or she is "
@@ -2339,11 +2339,11 @@ msgstr ""
 "Hier erfolgt die Auswahl des benutzten Codesystems und des Zeichensatzes, so "
 "dass die Rechtschreibpr&uuml;fung korrekt arbeiten kann."
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid "Client:"
 msgstr "Programm:"
 
-#: index.docbook:1282
+#: index.docbook:1280
 msgid ""
 "Since &kwrite; does not contain its own spell checker, an external one must "
 "be chosen. This is where the user may specify which spell check program to "
@@ -2352,11 +2352,11 @@ msgstr ""
 "Weil &kwrite; keine eigene Rechtschreibpr&uuml;fung enth&auml;lt, muss hier "
 "eine externe Rechtschreibpr&uuml;fung ausgew&auml;hlt werden."
 
-#: index.docbook:1328
+#: index.docbook:1326
 msgid "Highlighting"
 msgstr "Hervorhebungsmodus einrichten..."
 
-#: index.docbook:1330
+#: index.docbook:1328
 msgid ""
 "The <guilabel>Configure Highlighting</guilabel> dialog consists of two "
 "pages, <guilabel>Defaults</guilabel> and <guilabel>Highlighting "
@@ -2369,18 +2369,18 @@ msgstr ""
 "Seite durch Klicken auf die entsprechende Karteikarte oben im Dialogfenster "
 "aufrufen."
 
-#: index.docbook:1335
+#: index.docbook:1333
 msgid ""
 "Items available on the <guilabel>Defaults</guilabel> page are as follows:"
 msgstr ""
 "Auf der Seite <guilabel>Standars</guilabel> sind folgende "
 "Einstellungsm&ouml;glichkeiten vorhanden:"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Default Item Styles"
 msgstr "Standard-Elementstile"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "The user can configure the default appearance for particular items. This "
 "would allow a programmer to more easily identify different items (types of "
@@ -2391,11 +2391,11 @@ msgstr ""
 "in Quelltext."
 
 # index.docbook:1349, index.docbook:1447
-#: index.docbook:1338 index.docbook:1433
+#: index.docbook:1336 index.docbook:1431
 msgid "Item"
 msgstr "Element:"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "This drop down list offers a variety of items that the user might want to "
 "highlight. They include <guilabel>Normal</guilabel> for text does not fit in "
@@ -2416,11 +2416,11 @@ msgstr ""
 "Abschnitt beschrieben werden, werden auf das in diesem Auswahlfeld "
 "ausgew&auml;hlte Element angewendet."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Normal"
 msgstr "Normal"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "This allows the user to choose the item's normal (unselected) color. This is "
 "done by means of a color selection dialog box, a further explanation of "
@@ -2433,11 +2433,11 @@ msgstr ""
 "linkend=\"prefcolors\">Farben</link> im Kapitel <link "
 "linkend=\"pref-dialog\">Einrichten von &kwrite;</link>."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Bold"
 msgstr "Fett"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "This option determines whether or not the item should be displayed in bold "
 "text."
@@ -2445,11 +2445,11 @@ msgstr ""
 "Aktivieren Sie diese Option, wenn das Element fettgedruckt angezeigt werden "
 "soll."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Italic"
 msgstr "Kursiv"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "This option determines whether or not the item should be displayed in italic "
 "text."
@@ -2457,7 +2457,7 @@ msgstr ""
 "Aktivieren Sie diese Option, wenn das Element in Kursivschrift angezeigt "
 "werden soll."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "This allows the user to choose the item's color when selected. This is done "
 "by means of a color selection dialog box, a further explanation of which may "
@@ -2470,21 +2470,21 @@ msgstr ""
 "linkend=\"prefcolors\">Farben</link> im Kapitel <link "
 "linkend=\"pref-dialog\">Einrichten von &kwrite;</link>."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Default Font"
 msgstr "Standardschrift"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Here the user can choose the default font for all text."
 msgstr ""
 "Hier kann der Nutzer die f&uuml;r den gesamten Text verwendete Schrift "
 "einstellen."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Family"
 msgstr "Familie"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid ""
 "This is used to choose the font family. The default is Fixed. For most "
 "programming purposes, a monospaced font (one in which a w takes up the same "
@@ -2494,24 +2494,24 @@ msgstr ""
 "die meisten Programmiersprachen ist eine Schrift mit gleich breiten "
 "Buchstaben die beste Wahl."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Size"
 msgstr "Gr&ouml;&szlig;e"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "The font size can be changed here. The default is 12 points."
 msgstr ""
 "Hier wird die Schriftgr&ouml;&szlig;e eingestellt. Standard ist 12 Points."
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Charset"
 msgstr "Zeichensatz"
 
-#: index.docbook:1338
+#: index.docbook:1336
 msgid "Here the user can choose which character set to work in."
 msgstr "Hier kann der Nutzer den gew&uuml;nschten Zeichensatz ausw&auml;hlen."
 
-#: index.docbook:1426
+#: index.docbook:1424
 msgid ""
 "Items on the <guilabel>Highlight Modes</guilabel> tab allow the user to "
 "define more specific highlighting depending on the language style."
@@ -2520,7 +2520,7 @@ msgstr ""
 "erlauben weitreichende Einstellungen, abh&auml;ngig von der "
 "ausgew&auml;hlten Programmiersprache."
 
-#: index.docbook:1429
+#: index.docbook:1427
 msgid ""
 "One need not set every available option, items not configured specifically "
 "will use the default configuration specified on the previous "
@@ -2530,11 +2530,11 @@ msgstr ""
 "nicht eingestellt sind, behalten die Standardeinstellung, wie in der "
 "<guilabel>Standards</guilabel>seite."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "Config Select"
 msgstr "Auswahl einrichten"
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid ""
 "This group of options is used to customize the highlighting styles for each "
 "programming language type. Any changes you made in other areas of this "
@@ -2544,15 +2544,15 @@ msgstr ""
 "aus, deren Einstellungen Sie ver&auml;ndern wollen. Alle anderen "
 "Einstellungen werden auf die hier ausgew&auml;hlte Sprache angewendet."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "Highlight"
 msgstr "Hervorhebung"
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "This is used to choose the language type to configure"
 msgstr "Hier wird die einzurichtende Programmierspracheausgew&auml;hlt."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid ""
 "This is to choose the syntax item to configure. Remember this only "
 "configures <emphasis>this</emphasis> item for <emphasis>this</emphasis> "
@@ -2562,7 +2562,7 @@ msgstr ""
 "sich die Einstellung nur auf <emphasis>dieses</emphasis> Element in "
 "<emphasis>dieser</emphasis> Programmiersprache bezieht."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid ""
 "As an example, if the user wished to configure the appearance of "
 "<quote>comments</quote> while writing C++, she or he could choose C++ in the "
@@ -2583,11 +2583,11 @@ msgstr ""
 "Einstellung f&uuml;r Kommentare f&uuml;r alle Programmiersprachen auf der "
 "Seite <guilabel>Hervorhebungsmodi</guilabel> unver&auml;ndert."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "Item Style"
 msgstr "Element-Stil"
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid ""
 "Here the user can configure the general appearance of the above selected "
 "item. Checking the <guilabel>Default</guilabel> checkbox causes the default "
@@ -2607,11 +2607,11 @@ msgstr ""
 "<guilabel>Fett</guilabel> und <guilabel>Kursiv</guilabel> stehen zur "
 "Verf&uuml;gung."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "Highlight Auto Select"
 msgstr "Automatische Hervorhebungen"
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid ""
 "&kwrite; can apply syntax highlighting automatically, depending on the file "
 "extension or mime-type of the opened file. The defaults are fairly "
@@ -2632,16 +2632,16 @@ msgstr ""
 "<filename>foo.h</filename> ge&ouml;ffnet wird, wendet &kwrite; automatisch "
 "die Hervorhebungen f&uuml;r die C++ Programmiersprache an."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "Item Font"
 msgstr "Element-Schrift"
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid "Here the user can choose the font for the selected item."
 msgstr ""
 "Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten Elementes ein."
 
-#: index.docbook:1433
+#: index.docbook:1431
 msgid ""
 "The default style can be applied by checking the "
 "<guilabel>Default</guilabel> checkbox or the user can choose a specific font "
@@ -2655,11 +2655,11 @@ msgstr ""
 "Die Einstellungsm&ouml;glichkeiten sind dieselben, wie f&uuml;r die "
 "<guilabel>Standards</guilabel>seite beschrieben."
 
-#: index.docbook:1497
+#: index.docbook:1495
 msgid "Credits and Licenses"
 msgstr "Mitwirkende und Lizenz"
 
-#: index.docbook:1499
+#: index.docbook:1497
 msgid ""
 "&kwrite; Copyright 2000 by Jochen Wilhelmy "
 "<email>digisnap@cs.tu-berlin.de</email>"
@@ -2667,26 +2667,26 @@ msgstr ""
 "&kwrite; Copyright 2000 by Jochen Wilhelmy "
 "<email>digisnap@cs.tu-berlin.de</email>"
 
-#: index.docbook:1501
+#: index.docbook:1499
 msgid "Contributions:"
 msgstr "Mitarbeit:"
 
-#: index.docbook:1502
+#: index.docbook:1500
 msgid ""
 "Additional contributions by Glen Parker <email>glenebob@nwlink.com</email>"
 msgstr "Weitere Mitarbeit durch Glen Parker <email>glenebob@nwlink.com</email>"
 
-#: index.docbook:1502
+#: index.docbook:1500
 msgid "Michael Koch <email>koch@kde.org</email>"
 msgstr "Michael Koch <email>koch@kde.org</email>"
 
-#: index.docbook:1505
+#: index.docbook:1503
 msgid "Documentation by Thad McGinnis <email>ctmcginnis@compuserve.com</email>"
 msgstr ""
 "Diese Dokumentation wurde von Thad McGinnis "
 "<email>ctmcginnis@compuserve.com</email>"
 
-#: index.docbook:1506
+#: index.docbook:1504
 msgid ""
 "This version of the &kwrite; Handbook is based on the original by Cristian "
 "Tibirna <email>tibirna@kde.org</email>"
@@ -2694,7 +2694,7 @@ msgstr ""
 "Dieser Version des &kwrite;-Handbuchs liegt das Original von Cristian "
 "Tibirna <email>tibirna@kde.org</email> zugrunde."
 
-#: index.docbook:1508
+#: index.docbook:1506
 msgid ""
 "Converted to docbook/proofreading by Lauri Watts "
 "<email>vampyr@atconnex.net</email>"
@@ -2702,11 +2702,11 @@ msgstr ""
 "In das Docbook-Format &uuml;berf&uuml;hrt und Korrektur gelesen wurde dieses "
 "Handbuch von Lauri Watts <email>vampyr@atconnex.net</email>"
 
-#: index.docbook:1516
+#: index.docbook:1514
 msgid "Installation"
 msgstr "Installation"
 
-#: index.docbook:1518
+#: index.docbook:1516
 msgid ""
 "&kwrite; is packaged as part of the kdebase package. For more information on "
 "installing and compiling KDE please see <ulink url=\"http://www.kde.org\"> "

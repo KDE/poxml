@@ -14,15 +14,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.8\n"
 
-#: index.docbook:13
+#: index.docbook:11
 msgid "&kde; Frequently Asked Questions"
 msgstr "&kde;: Die meistgestellten Fragen (FAQ)"
 
-#: index.docbook:16 index.docbook:26
+#: index.docbook:14 index.docbook:24
 msgid "The KDE Team"
 msgstr "Das KDE Team"
 
-#: index.docbook:35
+#: index.docbook:33
 msgid ""
 "This is a compilation of the most frequently asked questions about the K "
 "Desktop Environment. Please report any bugs, inconsistencies, or omissions "
@@ -36,32 +36,32 @@ msgstr ""
 "<email>kde-faq@kde.org</email> mit. Bitte stellen Sie dorthin aber keine "
 "Fragen, stellen Sie diese in einer der &kde;-Mailinglisten oder -Newsgroups."
 
-#: index.docbook:44
+#: index.docbook:42
 msgid "<keyword>KDE</keyword>"
 msgstr "<keyword>KDE</keyword>"
 
-#: index.docbook:45
+#: index.docbook:43
 msgid "<keyword>FAQ</keyword>"
 msgstr "<keyword>FAQ</keyword>"
 
-#: index.docbook:46
+#: index.docbook:44
 msgid "question"
 msgstr "Frage"
 
-#: index.docbook:47
+#: index.docbook:45
 msgid "answer"
 msgstr "Antwort"
 
-#: index.docbook:52
+#: index.docbook:50
 msgid "About this <acronym>FAQ</acronym>"
 msgstr "&Uuml;ber diese <acronym>FAQ</acronym>"
 
-#: index.docbook:57
+#: index.docbook:55
 msgid "What can I do to help out with this <acronym>FAQ</acronym>?"
 msgstr ""
 "Was k&ouml;nnen Sie tun, um bei dieser <acronym>FAQ</acronym> zu helfen?"
 
-#: index.docbook:60
+#: index.docbook:58
 msgid ""
 "First, send us any errors that you may find. Also, any suggestions that you "
 "might have are also appreciated. Better yet, anything that you think is "
@@ -74,7 +74,7 @@ msgstr ""
 "oder sogar dazu, wie man es klar verst&auml;ndlich schreiben kann. Unsere "
 "E-Mail-Adresse ist <email>kde-faq@kde.org</email>."
 
-#: index.docbook:64
+#: index.docbook:62
 msgid ""
 "Second, send us your solutions of those frequently-asked questions which are "
 "still not in this <acronym>FAQ</acronym>. We will put them in as soon as "
@@ -84,7 +84,7 @@ msgstr ""
 "gestellten Fragen, die noch nicht in der <acronym>FAQ</acronym> beantwortet "
 "sind. Wir werden diese dann so bald wie m&ouml;glich aufnehmen."
 
-#: index.docbook:67
+#: index.docbook:65
 msgid ""
 "Last but not least, please make full use of this <acronym>FAQ</acronym>. "
 "Read this <acronym>FAQ</acronym> (and other relevant documentation) well "
@@ -94,7 +94,7 @@ msgstr ""
 "andere wichtigen Dokumentationen gr&uuml;ndlich durch, bevor Sie Fragen an "
 "die verschiedenen &kde;-Mailinglisten und Newsgroups stellen."
 
-#: index.docbook:70
+#: index.docbook:68
 msgid ""
 "You might also want to consider becoming a <acronym>FAQ</acronym> "
 "maintainer. Please refer to <xref linkend=\"FAQ-maintainer-HOWTO\"/> for "
@@ -104,11 +104,11 @@ msgstr ""
 "finden Sie weitere Details in der n&auml;chsten Frage: <xref "
 "linkend=\"FAQ-maintainer-HOWTO\"/>."
 
-#: index.docbook:80
+#: index.docbook:78
 msgid "How do I become a <acronym>FAQ</acronym> maintainer?"
 msgstr "Wie wird man <acronym>FAQ</acronym>-Betreuer?"
 
-#: index.docbook:83
+#: index.docbook:81
 msgid ""
 "Actually, it is very easy to become an <acronym>FAQ</acronym> maintainer. "
 "And we are always in need of fresh blood. :-) Just send us an email at "
@@ -117,15 +117,15 @@ msgstr ""
 "Dies ist ganz einfach. Schicken Sie uns einfach eine E-Mail an "
 "<email>kde-faq@kde.org</email>."
 
-#: index.docbook:92
+#: index.docbook:90
 msgid "Introduction"
 msgstr "Einleitung"
 
-#: index.docbook:97
+#: index.docbook:95
 msgid "What is &kde;?"
 msgstr "Was ist &kde;?"
 
-#: index.docbook:100
+#: index.docbook:98
 msgid ""
 "&kde; is the K Desktop Environment. It is a project initiated by <ulink "
 "url=\"mailto:ettrich@kde.org\">Matthias Ettrich</ulink> in 1996. The aim of "
@@ -137,11 +137,11 @@ msgstr ""
 "des &kde;-Projektes ist, die St&auml;rken des &UNIX;-Betriebssystems mit dem "
 "Komfort einer modernen grafischen Nutzeropberfl&auml;che zu verbinden."
 
-#: index.docbook:105
+#: index.docbook:103
 msgid "In short, &kde; will bring &UNIX; to the desktop!"
 msgstr "Kurz gesagt, &kde; bringt &UNIX; auf den Schreibtisch."
 
-#: index.docbook:106
+#: index.docbook:104
 msgid ""
 "If you want further information about &kde;, have a look at <ulink "
 "url=\"http://www.kde.org/whatiskde/index.html\">What is &kde;?</ulink>"
@@ -149,11 +149,11 @@ msgstr ""
 "Weitere Informationen &uuml;ber &kde; finden Sie unter <ulink "
 "url=\"http://www.kde.org/whatiskde/index.html\">Was ist &kde;?</ulink>"
 
-#: index.docbook:114
+#: index.docbook:112
 msgid "What does the K in &kde; stand for?"
 msgstr "Was bedeutet das K in &kde;?"
 
-#: index.docbook:117
+#: index.docbook:115
 msgid ""
 "It stands for Kool. Take a look at the <ulink "
 "url=\"http://www.via.ecp.fr/lyx/archive/9610/msg00368.html\">message</ulink> "
@@ -163,11 +163,11 @@ msgstr ""
 "url=\"http://www.via.ecp.fr/lyx/archive/9610/msg00368.htm\">die Mitteilung, "
 "mit der Alles anfing</ulink> ."
 
-#: index.docbook:125
+#: index.docbook:123
 msgid "On which platforms can I expect &kde; to work?"
 msgstr "Auf welchen Systemen l&auml;uft &kde;?"
 
-#: index.docbook:128
+#: index.docbook:126
 msgid ""
 "&kde; is a Desktop Environment for all flavors of &UNIX;. While it is true "
 "that most &kde; developers use &Linux;, &kde; runs smoothly on a wide range "
@@ -182,43 +182,43 @@ msgstr ""
 "&UNIX; zu kompilieren, oder wenn Sie nicht die &GNU;-Entwicklungsumgebung "
 "benutzen, besonders den &gcc;-Kompiler."
 
-#: index.docbook:134
+#: index.docbook:132
 msgid "Some of systems on which &kde; is running are:"
 msgstr "Einige der Systeme, auf denen &kde; l&auml;uft, sind:"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "&Linux;"
 msgstr "&Linux;"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "&Solaris;"
 msgstr "&Solaris;"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "FreeBSD"
 msgstr "FreeBSD"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "&IRIX;"
 msgstr "&IRIX;"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "&HP-UX;"
 msgstr "&HP-UX;"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "MKLinux"
 msgstr "MKLinux"
 
-#: index.docbook:135
+#: index.docbook:133
 msgid "&LinuxPPC;"
 msgstr "&LinuxPPC;"
 
-#: index.docbook:149
+#: index.docbook:147
 msgid "Is &kde; a window manager?"
 msgstr "Ist &kde; ein Fenstermanager?"
 
-#: index.docbook:152
+#: index.docbook:150
 msgid ""
 "No, &kde; is not a window manager. While &kde; includes a very sophisticated "
 "window manager (&kwm; in &kde; before version 2 and &kwin; in &kde; version "
@@ -230,7 +230,7 @@ msgstr ""
 "&kde; Version 2), &kde; ist aber viel mehr als das. Es ist eine voll "
 "ausgebaute integrierte Arbeitsumgebung."
 
-#: index.docbook:156
+#: index.docbook:154
 msgid ""
 "&kde; provides a complete desktop environment, including a file manager, a "
 "window manager, a help system, a configuration system, uncountable tools and "
@@ -244,7 +244,7 @@ msgstr ""
 "z.B. Mail- und News-Clients, Zeichenprogrammen, &PostScript;- und "
 "&DVI;-Betrachtern und so weiter, bereit."
 
-#: index.docbook:167
+#: index.docbook:165
 msgid ""
 "Is &kde; a <acronym>CDE</acronym>, &Windows; 95 or &Mac; "
 "<acronym>OS</acronym> clone?"
@@ -252,7 +252,7 @@ msgstr ""
 "Ist &kde; ein <acronym>CDE</acronym>, &Windows; 95 oder &Mac; "
 "<acronym>OS</acronym> Clone?"
 
-#: index.docbook:171
+#: index.docbook:169
 msgid ""
 "No, &kde; is not a clone. Specifically &kde; is not a <acronym>CDE</acronym> "
 "or &Windows; clone. While the &kde; developers have and will continue to "
@@ -265,11 +265,11 @@ msgstr ""
 "Arbeitsumgebungen sammeln; aber &kde; ist eine wirklich einmalige "
 "Arbeitsumgebung, die weiter ihren eigenen Weg gehen wird."
 
-#: index.docbook:182
+#: index.docbook:180
 msgid "Is &kde; free software?"
 msgstr "Ist &kde; freie Software?"
 
-#: index.docbook:186
+#: index.docbook:184
 msgid ""
 "Yes, &kde; is free software according to the &GNU; General Public License. "
 "All &kde; libraries are available under the <acronym>LGPL</acronym> making "
@@ -282,7 +282,7 @@ msgstr ""
 "&kde;-Arbeitsumgebung, aber alle &kde;-Anwendungen sind lizensiert unter den "
 "Bedingungen der <acronym>GPL</acronym>."
 
-#: index.docbook:192
+#: index.docbook:190
 msgid ""
 "KDE uses the <link linkend=\"Qt\">&Qt; C++ crossplatform toolkit</link>, "
 "which is also released (since version 2.2) under the <acronym>GPL</acronym>."
@@ -291,7 +291,7 @@ msgstr ""
 "der (seit Version 2.2) auch unter der <acronym>GPL</acronym> "
 "ver&ouml;ffentlicht ist."
 
-#: index.docbook:195
+#: index.docbook:193
 msgid ""
 "It is absolutely legal to make &kde; and &Qt; available on &CD-ROM; free of "
 "charge. No runtime fees of any kind are incurred."
@@ -300,15 +300,15 @@ msgstr ""
 "ver&ouml;ffentlichen. Keine Geb&uuml;hren f&uuml;r Lizenzen irgendeiner Art "
 "sind hierf&uuml;r zu zahlen."
 
-#: index.docbook:204
+#: index.docbook:202
 msgid "Getting &kde;"
 msgstr "&kde; erhalten"
 
-#: index.docbook:209
+#: index.docbook:207
 msgid "Where do I get &kde;?"
 msgstr "Wo bekommen Sie &kde;?"
 
-#: index.docbook:212
+#: index.docbook:210
 msgid ""
 "The main distribution site for &kde; is <ulink "
 "url=\"ftp://ftp.kde.org\">ftp.kde.org</ulink>. However, this site is often "
@@ -323,11 +323,11 @@ msgstr ""
 "Spiegel finden Sie <ulink "
 "url=\"http://www.kde.org/mirrors.html\">hier</ulink>."
 
-#: index.docbook:222
+#: index.docbook:220
 msgid "Are there &Linux; distributions that come with &kde;?"
 msgstr "Gibt es &Linux;-Distributionen mit &kde;?"
 
-#: index.docbook:225
+#: index.docbook:223
 msgid ""
 "Yes, major &Linux; distributions already ship &kde;. As building a "
 "distribution takes some time, they might not always contain the latest "
@@ -340,7 +340,7 @@ msgstr ""
 "das Herunterladen von gro&szlig;en Datenmengen aus dem Internet zu "
 "vermeiden, ist dies trotzdem ein guter Anfang."
 
-#: index.docbook:229
+#: index.docbook:227
 msgid ""
 "You can find an up-to-date list of distributions that ship with &kde; <ulink "
 "url=\"http://www.kde.org/kdeships.html\">here</ulink>."
@@ -350,15 +350,15 @@ msgstr ""
 "url=\"http://www.kde.org/kdeships.html\">http://www.kde.org/kdeships.html</ul"
 "ink>."
 
-#: index.docbook:237
+#: index.docbook:235
 msgid "What is the current version?"
 msgstr "Was ist die aktuelle Version?"
 
-#: index.docbook:240
+#: index.docbook:238
 msgid "Currently, the latest stable version is 2.0.1."
 msgstr "Die aktuelle stabile Version ist 2.0.1."
 
-#: index.docbook:241
+#: index.docbook:239
 msgid ""
 "The <ulink url=\"http://www.kde.org/info/2.0.html\">&kde; 2.0 Info "
 "Page</ulink> contains a lot of information specific to this long-awaited "
@@ -368,11 +368,11 @@ msgstr ""
 "Page</ulink> enth&auml;lt viele Informationen &uuml;ber dieses lang "
 "erwartete Release."
 
-#: index.docbook:250
+#: index.docbook:248
 msgid "Where do I find &kde; snapshots?"
 msgstr "Wo finden Sie &kde;-Snapshots?"
 
-#: index.docbook:253
+#: index.docbook:251
 msgid ""
 "You can get the latest snapshots from <ulink "
 "url=\"ftp://ftp.kde.org/pub/kde/unstable/CVS/snapshots\">ftp://ftp.kde.org/pu"
@@ -391,7 +391,7 @@ msgstr ""
 "<application>cvsup</application> to get &kde;</ulink> nach. Dort finden Sie "
 "eine Anleitung"
 
-#: index.docbook:260
+#: index.docbook:258
 msgid ""
 "By the way, if you want to know what <acronym>CVS</acronym> is, please refer "
 "to <link linkend=\"CVS\">What is <acronym>CVS</acronym>?</link>."
@@ -400,11 +400,11 @@ msgstr ""
 "sehen Sie unter <link linkend=\"CVS\">Was ist <acronym>CVS</acronym>?</link> "
 "nach."
 
-#: index.docbook:267
+#: index.docbook:265
 msgid "Where do I get &Qt;?"
 msgstr "Wo bekommen Sie &Qt;?"
 
-#: index.docbook:270
+#: index.docbook:268
 msgid ""
 "&Qt; is a product of a Norwegian company, Troll Tech. You can always get the "
 "latest &Qt; version from their <ulink url=\"ftp://ftp.troll.no\">&FTP; "
@@ -414,7 +414,7 @@ msgstr ""
 "jeweils neueste &Qt;-Version auf deren <ulink "
 "url=\"ftp://ftp.troll.no\">&FTP; server</ulink>."
 
-#: index.docbook:273
+#: index.docbook:271
 msgid ""
 "However, you should also be able to get &Qt; from the above-mentioned <link "
 "linkend=\"where-to-get-kde\">&kde; sites</link>. And with most up-to-date "
@@ -427,11 +427,11 @@ msgstr ""
 "unter <xref linkend=\"prerequisites\"/> nach, welche Version von &Qt; Sie "
 "brauchen."
 
-#: index.docbook:284
+#: index.docbook:282
 msgid "What is &Qt;, by the way?"
 msgstr "Was ist &Qt;?"
 
-#: index.docbook:287
+#: index.docbook:285
 msgid ""
 "&Qt; is a C++-based class library to build user interfaces. It provides most "
 "of the widgets you will see in a &kde; application: menus, buttons, sliders, "
@@ -449,11 +449,11 @@ msgstr ""
 "&uuml;ber &Qt; finden Sie unter <ulink "
 "url=\"http://www.troll.no\">http://www.troll.no</ulink>."
 
-#: index.docbook:299
+#: index.docbook:297
 msgid "Installation instructions"
 msgstr "Installationsanleitung"
 
-#: index.docbook:301
+#: index.docbook:299
 msgid ""
 "These are the generic installation instructions for the K Desktop "
 "Environment. Please complement your reading with the "
@@ -474,7 +474,7 @@ msgstr ""
 "Nutzung der Mailinglisten finden Sie unter <ulink "
 "url=\"http://www.kde.org/contact.html\">diesem Link</ulink>)."
 
-#: index.docbook:311
+#: index.docbook:309
 msgid ""
 "&kde; 2.0 users should refer to the <ulink "
 "url=\"http://www.kde.org/info/2.0.html\">&kde; 2.0 Info Page</ulink> for "
@@ -484,11 +484,11 @@ msgstr ""
 "url=\"http://www.kde.org/info/2.0.html\">&kde; 2.0-Infoseite</ulink> "
 "f&uuml;r einige spezielle &kde; 2.0-Information nachsehen."
 
-#: index.docbook:319
+#: index.docbook:317
 msgid "To the would-be converts"
 msgstr "An die eventuellen \"&Uuml;berl&auml;ufer\""
 
-#: index.docbook:322
+#: index.docbook:320
 msgid ""
 "So you have heard the rumors. Or you have seen the screenshots. And you are "
 "dying to get hold of &kde;. But you know next to nothing about this whole "
@@ -500,7 +500,7 @@ msgstr ""
 "nichts &uuml;ber das <quote>alternative OS</quote>-Gesch&auml;ft. Macht "
 "nichts, Sie werden einiges lesen m&uuml;ssen, das ist Alles!"
 
-#: index.docbook:327
+#: index.docbook:325
 msgid ""
 "&kde; does not run on &Windows; 95/98/NT or OS/2 (yet). To run &kde;, you "
 "need to have a &UNIX; system. Please refer to <xref linkend=\"platform\"/> "
@@ -510,7 +510,7 @@ msgstr ""
 "m&uuml;ssen ein &UNIX;-System haben, um &kde; laufen zu lassen. Weitere "
 "Informationen hierzu finden Sie unter <xref linkend=\"platform\"/>."
 
-#: index.docbook:330
+#: index.docbook:328
 msgid ""
 "Let's say you have decided to install &Linux;. You can either download it "
 "from the Internet, or buy a &CD-ROM; set that contains the distribution of "
@@ -522,27 +522,27 @@ msgstr ""
 "folgenden Links k&ouml;nnen Ihnen bei der Entscheidung und Installation "
 "eventuell von Nutzen sein:"
 
-#: index.docbook:334
+#: index.docbook:332
 msgid "Control-Escape: Alternative Software, &Linux; Help"
 msgstr "Control-Escape: Alternative Software, &Linux;-Hilfe"
 
-#: index.docbook:334
+#: index.docbook:332
 msgid "&Linux; Documentation Project"
 msgstr "&Linux; Dokumentations Projekt"
 
-#: index.docbook:334
+#: index.docbook:332
 msgid "&Linux; Frequently Asked Questions with Answers"
 msgstr "&Linux; meist gestellte Fragen mit Antworten"
 
-#: index.docbook:334
+#: index.docbook:332
 msgid "The &Linux; Home Page at &Linux; Online"
 msgstr "Die &Linux; Homepage bei &Linux; Online"
 
-#: index.docbook:334
+#: index.docbook:332
 msgid "Usenet newsgroups like comp.os.linux.*"
 msgstr "Usenet Newsgroups wie comp.os.linux.*"
 
-#: index.docbook:347
+#: index.docbook:345
 msgid ""
 "In order to run &kde; on &Linux;, you need to set up the &X; first. The &X; "
 "is the de facto &GUI; on &UNIX; systems. You might want to take a look at "
@@ -552,19 +552,19 @@ msgstr ""
 "einrichten. &X; ist der de facto Standard f&uuml;r &GUI; auf "
 "&UNIX;-Systemen. Folgende Links sind m&ouml;glicherweise hierbei hilfreich:"
 
-#: index.docbook:350
+#: index.docbook:348
 msgid "X.org"
 msgstr "X.org"
 
-#: index.docbook:350
+#: index.docbook:348
 msgid "XFree86(TM): Home Page"
 msgstr "XFree86(TM): Home Page"
 
-#: index.docbook:350
+#: index.docbook:348
 msgid "Usenet newsgroups like comp.os.linux.x and comp.windows.x.*."
 msgstr "Usenet Newsgroups wie comp.os.linux.x und comp.windows.x.*."
 
-#: index.docbook:358
+#: index.docbook:356
 msgid ""
 "Finally, you are ready to commence the &kde; installation. Please start "
 "reading from the next section. To get &kde;, please refer to <xref "
@@ -585,15 +585,15 @@ msgstr ""
 "zum Beantworten; besonders wenn die Antwort in dieser <acronym>FAQ</acronym> "
 "steht."
 
-#: index.docbook:367
+#: index.docbook:365
 msgid "Good luck and have fun!"
 msgstr "Viel Gl&uuml;ck und viel Spa&szlig;!"
 
-#: index.docbook:373
+#: index.docbook:371
 msgid "Available package formats"
 msgstr "Verf&uuml;gbare Paketformate"
 
-#: index.docbook:377
+#: index.docbook:375
 msgid ""
 "The &kde; team provides six different kinds of packages: source and binary "
 "<acronym>RPM</acronym>s, source and binary <filename>.tgz</filename> "
@@ -617,7 +617,7 @@ msgstr ""
 "linkend=\"bzip2\"/> nach. Zus&auml;tzlich wurden auch "
 "<filename>pkg</filename>-Pakete f&uuml;r &Solaris; 2.6 und 7 bereitgestellt."
 
-#: index.docbook:386
+#: index.docbook:384
 msgid ""
 "The installation process depends on which package format you choose. After "
 "the installation, there are post-installation procedures that apply for all "
@@ -636,7 +636,7 @@ msgstr ""
 "machen bin&auml;re <acronym>RPM</acronym>s auf ihren &FTP;-Servern "
 "verf&uuml;gbar."
 
-#: index.docbook:393
+#: index.docbook:391
 msgid ""
 "If you need special configuration options (<abbrev>e.g.</abbrev> because you "
 "have shadow passwords and want to use the screensavers), your best bet is to "
@@ -647,7 +647,7 @@ msgstr ""
 "wahrscheinlich am besten, wenn Sie die Quellen benutzen und &kde; selbst "
 "kompilieren."
 
-#: index.docbook:393
+#: index.docbook:391
 msgid ""
 "<ulink url=\"mailto:bill.mote@bigfoot.com\">Bill Mote</ulink> has published "
 "a home page called \"KDE 1.1 Installation via RPM\". Go see it <ulink "
@@ -657,11 +657,11 @@ msgstr ""
 "Homepage mit dem Namen \"KDE 1.1 Installation via RPM\". Diese finden Sie "
 "<ulink url=\"http://home.fuse.net/bmote/kde.htm\">hier</ulink>."
 
-#: index.docbook:404
+#: index.docbook:402
 msgid "Prerequisites"
 msgstr "Voraussetzungen"
 
-#: index.docbook:407
+#: index.docbook:405
 msgid ""
 "For &kde; 2.0, you need the &Qt; library version 2.2 or higher, while for "
 "&kde; 1.1, &kde; 1.1.1, and &kde; 1.1.2, you need version 1.42 or higher. "
@@ -688,11 +688,11 @@ msgstr ""
 "installieren. Ein Beispiel ist die libssl, die verschl&uuml;sselte "
 "Verbindungen f&uuml;r &konqueror; erm&ouml;glicht."
 
-#: index.docbook:424
+#: index.docbook:422
 msgid "Description of the base packages"
 msgstr "Beschreibung der Pakete"
 
-#: index.docbook:427
+#: index.docbook:425
 msgid ""
 "The base distribution currently consists of eleven packages. Some are "
 "required, while others are optional. Each package is available in each of "
@@ -702,15 +702,15 @@ msgstr ""
 "notwendig, andere sind optional. Alle Pakete sind in allen oben "
 "aufgelisteten Formaten verf&uuml;gbar."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdesupport"
 msgstr "kdesupport"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "Recommended"
 msgstr "Empfohlen"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid ""
 "This package contains support libraries that have not been written as part "
 "of the &kde; project, but are needed nevertheless. If you already have the "
@@ -726,16 +726,16 @@ msgstr ""
 "installieren. Im Zweifelsfall installieren Sie es. Wenn Sie &kde; mit "
 "Debian-Paketen betreiben wollen, m&uuml;ssen Sie dieses Paket installieren."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdelibs"
 msgstr "kdelibs"
 
 # index.docbook:446, index.docbook:454
-#: index.docbook:430
+#: index.docbook:428
 msgid "Required"
 msgstr "Erforderlich"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid ""
 "This package contains shared libraries that are needed by all &kde; "
 "applications."
@@ -743,11 +743,11 @@ msgstr ""
 "Dieses Paket enth&auml;lt Bibliotheken, die von allen &kde;-Anwendungen "
 "gebraucht werden."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdebase"
 msgstr "kdebase"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid ""
 "This package contains the base applications that form the core of the K "
 "Desktop Environment like the window manager, the terminal emulator, the "
@@ -757,24 +757,24 @@ msgstr ""
 "&kde;-Arbeitsumgebung bilden; den Fenstermanager, den Terminal-Emulator, das "
 "Kontrollzentrum, den Dateimanager und die Kontrollleiste."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdegames"
 msgstr "kdegames"
 
 # index.docbook:463, index.docbook:471, index.docbook:479, index.docbook:487, index.docbook:494, index.docbook:502, index.docbook:509, index.docbook:516
-#: index.docbook:430
+#: index.docbook:428
 msgid "Optional"
 msgstr "Optional"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "Various games like mahjongg, snake, asteroids, and tetris."
 msgstr "Verschiede Spiele wie Mahjongg, Snake, Asteroids und Tetris."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdegraphics"
 msgstr "kdegraphics"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid ""
 "Various graphics-related programs like &PostScript; previewer, &DVI; "
 "previewer, and a drawing program."
@@ -782,29 +782,29 @@ msgstr ""
 "Verschiedene graphische Programme wie ein Programm zum Anzeigen von "
 "&PostScript;- und &DVI;-Dateien und ein Zeichenprogramm."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdeutils"
 msgstr "kdeutils"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid ""
 "Various desktop tools like a calculator, an editor and other nifty stuff."
 msgstr ""
 "Verschiedene Schreibtischutensilien wie Taschenrechner, Editor und anderes."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdemultimedia"
 msgstr "kdemultimedia"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "Multimedia applications like a &CD; player and a mixer."
 msgstr "Multimediaanwendungen wie &CD;-Spieler und Mixer (Mischpult)."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdenetwork"
 msgstr "kdenetwork"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid ""
 "Network applications. Currently contains the mail program, the news reader, "
 "and several other network-related programs."
@@ -812,31 +812,31 @@ msgstr ""
 "Netzwerkanwendungen. Zur Zeit enth&auml;t dieses Paket das E-Mail-Programm, "
 "den Newsreader und einige andere Programme zum Thema Netzwerke."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdeadmin"
 msgstr "kdeadmin"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "System administration programs."
 msgstr "Systemverwaltungsprogramme."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "kdetoys"
 msgstr "kdetoys"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "Toys!"
 msgstr "Nette Kleinigkeiten, Spielzeuge."
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "&korganizer;"
 msgstr "&korganizer;"
 
-#: index.docbook:430
+#: index.docbook:428
 msgid "Your desktop would never be complete without an organizer, right?"
 msgstr "Kein Schreibtisch ist komplett ohne Organizer, richtig?"
 
-#: index.docbook:522
+#: index.docbook:520
 msgid ""
 "kdesupport (if needed) should be installed before everything else. The next "
 "(or first) package should be kdelibs. The other packages can be installed in "
@@ -847,11 +847,11 @@ msgstr ""
 "installiert werden. Alle anderen Pakete k&ouml;nnen in beliebiger "
 "Reihenfolge installiert werden."
 
-#: index.docbook:530
+#: index.docbook:528
 msgid "Installation instructions for the different package formats"
 msgstr "Installationsanleitung f&uuml;r die verschiedenen Paketformate"
 
-#: index.docbook:534
+#: index.docbook:532
 msgid ""
 "Please do not forget to read the <filename>README</filename> and "
 "<filename>INSTALL</filename> files if they are available."
@@ -859,11 +859,11 @@ msgstr ""
 "Lesen Sie unbedingt die Dateien <filename>README</filename> und "
 "<filename>INSTALL</filename>."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "Installation of the Debian packages"
 msgstr "Installation von Debianpaketen"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "The Debian packages install according to the upcoming FHS (File Hierarchy "
 "Standard)."
@@ -872,11 +872,11 @@ msgstr ""
 "Hierarchy Standard)."
 
 # index.docbook:545, index.docbook:557, index.docbook:564, index.docbook:608
-#: index.docbook:538
+#: index.docbook:536
 msgid "become superuser"
 msgstr "Melden Sie sich mit Systemverwalterrechten an."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "run <command>dpkg <option>-i "
 "<replaceable>packagename.deb</replaceable></option></command> for every "
@@ -886,15 +886,15 @@ msgstr ""
 "<replaceable>packagename.deb</replaceable></option></command> for every "
 "package you want to install."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "Installation of the <acronym>RPM</acronym> packages"
 msgstr "Installation von <acronym>RPM</acronym> Paketen"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "To install binary <acronym>RPM</acronym>s"
 msgstr "Installieren von bin&auml;ren <acronym>RPM</acronym>s"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "execute <command>rpm <option>-ivh "
 "<replaceable>packagename.rpm</replaceable></option></command>"
@@ -902,7 +902,7 @@ msgstr ""
 "F&uuml;hren Sie den folgenden Befehl aus: <command>rpm <option>-ivh "
 "<replaceable>packagename.rpm</replaceable></option></command>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "To create and install a binary <acronym>RPM</acronym> from the source "
 "<acronym>RPM</acronym>"
@@ -910,7 +910,7 @@ msgstr ""
 "Erzeugen und Installieren eines bin&auml;ren <acronym>RPM</acronym>-Paketes "
 "aus Quellen"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "run <command>rpm <option>-ivh "
 "<replaceable>packagename.src.rpm</replaceable></option></command>"
@@ -918,15 +918,15 @@ msgstr ""
 "F&uuml;hren Sie folgendene Befehle aus: <command>rpm <option>-ivh "
 "<replaceable>packagename.src.rpm</replaceable></option></command>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "cd /usr/src/redhat/SPECS"
 msgstr "cd /usr/src/redhat/SPECS"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "rpm <option>-bb <replaceable>packagename.spec</replaceable></option>"
 msgstr "rpm <option>-bb <replaceable>packagename.spec</replaceable></option>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "<command>cd ../RPMS/<replaceable>i386</replaceable></command> (or whatever "
 "architecture you use)"
@@ -934,17 +934,17 @@ msgstr ""
 "<command>cd ../RPMS/<replaceable>i386</replaceable></command> (f&uml;r "
 "welche Architektur Sie nutzen)"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "rpm <option>-ivh <replaceable>packagename.i386.rpm</replaceable></option>"
 msgstr ""
 "rpm <option>-ivh <replaceable>packagename.i386.rpm</replaceable> </option>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "Installation of the source <filename>.tar.gz</filename> files"
 msgstr "Installation von Quellen <filename>.tar.gz</filename>-Dateien"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "The source <filename>.tgz</filename> package installs into <filename "
 "class=\"directory\">/usr/local/kde</filename> by default. You can override "
@@ -957,7 +957,7 @@ msgstr ""
 "ver&auml;ndern, indem Sie die <option>--prefix</option> Option des "
 "\"<filename>configure</filename>\"-Skripts benutzen."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "unpack the packages with <command>tar <option>xvzf "
 "<replaceable>packagename.tar.gz</replaceable></option></command>"
@@ -965,7 +965,7 @@ msgstr ""
 "Entpacken Sie die Pakete mit <command>tar <option>xvzf "
 "<replaceable>packagename.tar.gz</replaceable></option></command>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "change directory to the package directory: <command>cd "
 "<replaceable>packagename</replaceable></command>"
@@ -973,11 +973,11 @@ msgstr ""
 "Wechseln Sie in das Verzeichnis des Paketes: <command>cd "
 "<replaceable>packagename</replaceable></command>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "configure the package: <command>./configure</command>"
 msgstr "Konfigurieren Sie das Paket mit: <command>make</command>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "Some packages (notably kdebase) have special configuration options that "
 "might be applicable to your installation. Type <command>./configure "
@@ -988,11 +988,11 @@ msgstr ""
 "<option>--help</option></command> ein, um die vorhandenen Optionen angezeigt "
 "zu bekommen."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "build the package: <command>make</command>"
 msgstr "Erstellen Sie das Paket mit: <command>make</command>"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "install the package: <command>su <option>-c \"make "
 "install\"</option></command> (if you aren't already root). If you already "
@@ -1003,11 +1003,11 @@ msgstr ""
 "angemeldet sind). Wenn Sie schon als Systemverwalter angemeldet sind, dann "
 "geben Sie ein: <command>make<option> install</option></command>."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "Installation of the binary <filename>.tar.gz</filename> files"
 msgstr "Installation von bin&auml;ren <filename>.tar.gz</filename> Dateien"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid ""
 "The binary .tar.gz package installs into <filename "
 "class=\"directory\">/opt/kde</filename>."
@@ -1015,20 +1015,20 @@ msgstr ""
 "Die bin&auml;ren .tar.gz Pakete installieren sich in das Verzeichnis "
 "<filename class=\"directory\">/opt/kde</filename>."
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "cd /"
 msgstr "cd /"
 
-#: index.docbook:538
+#: index.docbook:536
 msgid "tar <option>xvzf <replaceable>packagename.tar.gz</replaceable></option>"
 msgstr ""
 "tar <option>xvzf <replaceable>packagename.tar.gz</replaceable></option>"
 
-#: index.docbook:620
+#: index.docbook:618
 msgid "Post-installation procedures"
 msgstr "Nach-Installations Prozeduren"
 
-#: index.docbook:623
+#: index.docbook:621
 msgid ""
 "First of all, please make sure that you have added &kde;'s binary "
 "installation directory (<abbrev>e.g.</abbrev> <filename "
@@ -1054,7 +1054,7 @@ msgstr ""
 "Basis Ihres &kde;-Verzeichnisbaumes, <abbrev>z.B.</abbrev> <filename "
 "class=\"directory\">/opt/kde</filename>."
 
-#: index.docbook:623
+#: index.docbook:621
 msgid ""
 "Please bear in mind that it is unwise to set <envar>LD_LIBRARY_PATH</envar> "
 "blindly. In the vast majority of cases it is unnecessary and can do more "
@@ -1072,7 +1072,7 @@ msgstr ""
 "url=\"http://www.cis.ohio-state.edu/~barr/ldpath.html\">http://www.cis.ohio-s"
 "tate.edu/~barr/ldpath.html</ulink>."
 
-#: index.docbook:644
+#: index.docbook:642
 msgid ""
 "Even though you can use most of the &kde; applications simply by calling "
 "them, you can only benefit fully from &kde;'s advanced features if you use "
@@ -1083,7 +1083,7 @@ msgstr ""
 "Eigenschaften nur, wenn Sie den &kde;-Fenstermanager und dessen "
 "Hilfprogramme benutzen."
 
-#: index.docbook:648
+#: index.docbook:646
 msgid ""
 "In order to make it easy for you, we have provided a simple script called "
 "<filename>startkde</filename> which gets installed in <filename "
@@ -1096,7 +1096,7 @@ msgstr ""
 "class=\"directory\">$<envar>KDEDIR</envar>/bin</filename>-Verzeichnis "
 "installiert wird und damit in Ihrem Pfad vorhanden ist."
 
-#: index.docbook:652
+#: index.docbook:650
 msgid ""
 "Edit the file <filename>.xinitrc</filename> in your home directory (make a "
 "backup copy first!), remove everything that looks like calling a window "
@@ -1118,7 +1118,7 @@ msgstr ""
 "dann erzeugen Sie einfach eine neue Datei, die nur eine Zeile "
 "\"<command>startkde</command>\" enth&auml;lt."
 
-#: index.docbook:652
+#: index.docbook:650
 msgid ""
 "Some systems (notably &RedHat; &Linux;) use <filename>.Xclients</filename> "
 "instead."
@@ -1126,7 +1126,7 @@ msgstr ""
 "Some systems (notably &RedHat; &Linux;) use <filename>.Xclients</filename> "
 "instead."
 
-#: index.docbook:663
+#: index.docbook:661
 msgid ""
 "This should present you with a new shining &kde; desktop. You can now start "
 "to explore the wonderful world of &kde;. In case you want to read some "
@@ -1143,12 +1143,12 @@ msgstr ""
 "leitung</ulink>. Weiterhin hat jede Anwendung eine Onlinehilfe, die Sie "
 "&uuml;ber das Hilfemen&uuml;aufrufen k&ouml;nnen."
 
-#: index.docbook:675
+#: index.docbook:673
 msgid "Micro-HOWTO: Compiling &kde; 1.1.1 on &SGI; &IRIX; 6.x"
 msgstr ""
 "Da diese Frage nicht mehr aktuell ist, wurde sie noch nicht uebersetzt."
 
-#: index.docbook:679
+#: index.docbook:677
 msgid ""
 "<ulink url=\"mailto:berry@ieeecs.concordia.ca\">Chris Berry</ulink> posted "
 "the following updated micro-HOWTO (edited for layout) to comp.windows.x.kde."
@@ -1156,7 +1156,7 @@ msgstr ""
 "<ulink url=\"mailto:berry@ieeecs.concordia.ca\">Chris Berry</ulink> posted "
 "the following updated micro-HOWTO (edited for layout) to comp.windows.x.kde."
 
-#: index.docbook:682
+#: index.docbook:680
 msgid ""
 "This is a (blatant) modification of the original Micro-HOWTO posted by "
 "<ulink url=\"mailto:sterritt@mrj.com\">Chris Sterritt</ulink>. This is valid "
@@ -1186,7 +1186,7 @@ msgstr ""
 "url=\"http://alcor.concordia.ca/~c_berry/\">http://alcor.concordia.ca/~c_berr"
 "y/</ulink>."
 
-#: index.docbook:693
+#: index.docbook:691
 msgid ""
 "Also, if this isn't your cup of tea, I have uploaded binaries of kde-1.1.1 "
 "and egcs-1.1.2 to <ulink "
@@ -1204,7 +1204,7 @@ msgstr ""
 "Please also download and <emphasis>read</emphasis> the README in the "
 "directory, as it contains important installation information."
 
-#: index.docbook:699
+#: index.docbook:697
 msgid ""
 "Finally, neither I nor Environment Canada accept any responsibility vis a "
 "vis the worthiness of these instructions. They have worked for me. If they "
@@ -1222,19 +1222,19 @@ msgstr ""
 "personally won't be able to test any fixes after August 20, 1999 as I will "
 "be returning to school (and using SunOS)."
 
-#: index.docbook:706
+#: index.docbook:704
 msgid "Enjoy!"
 msgstr "Enjoy!"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Compiling &kde; 1.1.1 on &SGI; &IRIX; 6.x"
 msgstr "Compiling &kde; 1.1.1 on &SGI; &IRIX; 6.x"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Install &Qt; 1.42 or higher"
 msgstr "Install &Qt; 1.42 or higher"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "I am installing &kde; as me (not root) so I have a <envar>KDEDIR</envar> "
 "environmental variable which is set to something other than /usr/local/ or "
@@ -1252,7 +1252,7 @@ msgstr ""
 "(jpeg comes in kdesupport); I found them as source <acronym>RPM</acronym>s "
 "in one of the &RedHat; &FTP; mirrors."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Get <application>egcs</application> 1.1.1 or later and compile it with "
 "<option>-fsquangle</option> support on. This is because &SGI;'s assembler "
@@ -1272,11 +1272,11 @@ msgstr ""
 "only (if you have another &gcc; installed somewhere). When I do a "
 "<command>g++ <option>-v</option></command> I get:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "gcc version egcs-2.91.60 19981201 (egcs-1.1.1 release)"
 msgstr "gcc version egcs-2.91.60 19981201 (egcs-1.1.1 release)"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Do a <command>setenv <option>LDFLAGS \" \"</option></command> because the "
 "configure scripts insist on trying <command>g++ "
@@ -1288,7 +1288,7 @@ msgstr ""
 "<option>-s</option></command> when compiling a test program, which always "
 "fails on the &SGI;s."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Unpack \"kdesupport\" and enter its directory. Run its configure with "
 "<option>--prefix</option> if you need to:"
@@ -1296,7 +1296,7 @@ msgstr ""
 "Unpack \"kdesupport\" and enter its directory. Run its configure with "
 "<option>--prefix</option> if you need to:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "./configure --prefix=$KDEDIR --x-includes=/usr/include/X11 \\\n"
 "--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
@@ -1306,7 +1306,7 @@ msgstr ""
 "--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
 "--with-qt-libs=/opt/kde-1.1.1 --enable-shared"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Modify this to reflect your reality. In my case, I have &Qt; stuck in the "
 "same dir as &kde;, so I had to explicitly name the includes and libs dir. "
@@ -1322,15 +1322,15 @@ msgstr ""
 "<filename>.login</filename> file as the instructions in the &Qt; "
 "installation asked?)."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Run the script (which I'll include below) as follows:"
 msgstr "Run the script (which I'll include below) as follows:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "find <option>. -name Makefile -exec ../FixMakesSq {} \\;</option>"
 msgstr "find <option>. -name Makefile -exec ../FixMakesSq {} \\;</option>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "This fixes all the compile lines so that all the \"replicated\" libraries "
 "(jpeg and png) are replaced with full paths so they won't be linked with the "
@@ -1340,7 +1340,7 @@ msgstr ""
 "(jpeg and png) are replaced with full paths so they won't be linked with the "
 "&SGI; ones."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "In the original HOWTO, <option>-fsquangle</option> was added to each "
 "makefile. This caused compilation errors. I found that it was really only "
@@ -1350,11 +1350,11 @@ msgstr ""
 "makefile. This caused compilation errors. I found that it was really only "
 "needed in one makefile. It will be noted below."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Here's the FixMakesSq script:"
 msgstr "Here's the FixMakesSq script:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "#!/bin/perl -ni.bak\n"
 " \n"
@@ -1422,12 +1422,12 @@ msgstr ""
 "    print;\n"
 "}"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "<para> Do:</para>"
 msgstr "<para> Do:</para>"
 
 # index.docbook:708, index.docbook:708, index.docbook:708
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "<command>gmake</command>\n"
 "<command>gmake <option>install</option></command>"
@@ -1435,11 +1435,11 @@ msgstr ""
 "<command>gmake</command>\n"
 "<command>gmake <option>install</option></command>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Go to the <filename>libz</filename> source directory, do:"
 msgstr "Go to the <filename>libz</filename> source directory, do:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "<command>./configure <option>--prefix=$KDEDIR</option></command>\n"
 "<command>gmake</command>\n"
@@ -1449,11 +1449,11 @@ msgstr ""
 "<command>gmake</command>\n"
 "<command>gmake install</command>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Go to the <filename>libpng</filename> source directory, do:"
 msgstr "Go to the <filename>libpng</filename> source directory, do:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "<command>./configure <option>--prefix=$KDEDIR</option></command>\n"
 "<command>gmake</command>\n"
@@ -1463,7 +1463,7 @@ msgstr ""
 "<command>gmake</command>\n"
 "<command>gmake <option>install</option></command>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Unpack kdelibs and enter its directory. Note the "
 "<option>--enable-new-stuff</option> argument to "
@@ -1475,7 +1475,7 @@ msgstr ""
 "<command>./configure</command> (this might not be needed, but nothing "
 "complains if you use it):"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "<command>./configure <option>--prefix=$KDEDIR --x-includes=/usr/include/X11 "
 "\\\n"
@@ -1493,7 +1493,7 @@ msgstr ""
 "<command>find <option>. -name Makefile -exec ../FixMakesSq {} "
 "\\;</option></command>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Find <filename>kprocctrl.cpp</filename>, and fix the "
 "<filename>Makefile</filename> in that directory. Only if you did not "
@@ -1507,7 +1507,7 @@ msgstr ""
 "<option>-D_LANGUAGE_C_PLUS_PLUS</option> to the CXXFLAGS line. This makes it "
 "get the right definition for signal functions (has an int arg)."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Find <filename>addressbook.cc</filename>, and fix the "
 "<filename>Makefile</filename> in that directory. Add "
@@ -1519,12 +1519,12 @@ msgstr ""
 "<option>-fsquangle</option> to the CXXFLAGS line. This makes it able to "
 "handle the huge name that's going to pop out."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Unpack kdebase and enter its directory. Do:"
 msgstr "Unpack kdebase and enter its directory. Do:"
 
 # index.docbook:708, index.docbook:708
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 "
 "\\\n"
@@ -1540,7 +1540,7 @@ msgstr ""
 "<command>find <option>. -name Makefile -exec ../FixMakesSq {} "
 "\\;</option></command>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Fix <filename>memory_sgi.cpp</filename> (do a find from "
 "<filename>kdebase</filename> directory). I just #ifdef'd out the contents of "
@@ -1552,7 +1552,7 @@ msgstr ""
 "the whole function... it doesn't compile on my machine, and I never open "
 "that part of &kpanel; anyway :-)."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Fix <filename>TEShell.C</filename> (in "
 "<filename>kdebase-1.1.1/konsole/src/</filename> directory). It is the "
@@ -1564,7 +1564,7 @@ msgstr ""
 "operation for getting a pty for the new &konsole;. Alas, it was not written "
 "with &IRIX; in mind, and needs to be patched with the diff included below:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "*** TEShell.C   Mon Apr 12 00:12:37 1999\n"
 "--- /users/dor/aspg/ber/data/kdedown/kdebase-1.1.1/konsole/src/TEShell.C\n"
@@ -1636,15 +1636,15 @@ msgstr ""
 "  \n"
 "    if (ptyfd &lt; 0) // Linux, FIXME: Trouble on other systems?"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Then:"
 msgstr "Then:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid "Unpack kdeutils."
 msgstr "Unpack kdeutils."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Find <filename>kcalc_core.cpp</filename> and fix its "
 "<filename>Makefile</filename> like you did for "
@@ -1654,7 +1654,7 @@ msgstr ""
 "<filename>Makefile</filename> like you did for "
 "<filename>kprocctrl.cpp</filename> above."
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "gmake\n"
 "gmake install"
@@ -1662,7 +1662,7 @@ msgstr ""
 "gmake\n"
 "gmake install"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "Unpack kdegames, kdegraphics, and kdetoys and for each one, enter its "
 "directory and do:"
@@ -1670,7 +1670,7 @@ msgstr ""
 "Unpack kdegames, kdegraphics, and kdetoys and for each one, enter its "
 "directory and do:"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 "
 "\\\n"
@@ -1690,7 +1690,7 @@ msgstr ""
 "<command>gmake</command>\n"
 "<command>gmake <option>install</option></command>"
 
-#: index.docbook:708
+#: index.docbook:706
 msgid ""
 "This step is optional for &kde;-1.1. I don't think it is necessary for "
 "&kde;-1.1.1. &knotes; has never crashed on me. I have left it here for "
@@ -1718,16 +1718,16 @@ msgstr ""
 "support) instead of <option>-O2</option> (optimization) it ran fine. Go "
 "figure :-)."
 
-#: index.docbook:950
+#: index.docbook:948
 msgid "And that's it. You should now be able to run &kde;."
 msgstr "And that's it. You should now be able to run &kde;."
 
-#: index.docbook:956
+#: index.docbook:954
 msgid "Should I remove old version xyz before installing a new one?"
 msgstr ""
 "Sollen Sie die alte Version xyz entfernen, bevor Sie eine neue installieren?"
 
-#: index.docbook:960
+#: index.docbook:958
 msgid ""
 "In principle, this is not necessary. <acronym>RPM</acronym> and DEP packages "
 "should take care of all dependencies."
@@ -1735,7 +1735,7 @@ msgstr ""
 "Im Prinzip ist dies nicht n&ouml;tig. <acronym>RPM</acronym> und "
 "Debian-Pakete sollten sich um alle Abh&auml;ngigkeiten k&uuml;mmern."
 
-#: index.docbook:962
+#: index.docbook:960
 msgid ""
 "If you compile the source code yourself, you might take care not to compile "
 "different versions of the &kde; packages. So if you install a new version, "
@@ -1746,7 +1746,7 @@ msgstr ""
 "neue Version installieren, erstellen und installieren Sie zuerst kdesupport, "
 "dann kdelibs, dann kdebase."
 
-#: index.docbook:966
+#: index.docbook:964
 msgid ""
 "One thing you should avoid: installing two or more versions of &kde; in "
 "parallel. This might happen if you specify a different target directory for "
@@ -1763,11 +1763,11 @@ msgstr ""
 "passieren, wenn Sie schon eine &auml;ltere Version von &Qt; zusammen mit "
 "einer &Linux;distribution installiert haben."
 
-#: index.docbook:980
+#: index.docbook:978
 msgid "How do I start &kde;?"
 msgstr "Wie starten Sie &kde;?"
 
-#: index.docbook:983
+#: index.docbook:981
 msgid ""
 "The most comfortable method to start &kde; is to use the "
 "<filename>startkde</filename> script. Simply put the line "
@@ -1792,13 +1792,13 @@ msgstr ""
 "haben, erstellen Sie einfach eine neue, die nur eine Zeile mit dem Befehl "
 "<command>startkde</command> enth&auml;lt."
 
-#: index.docbook:995
+#: index.docbook:993
 msgid "Whenever I start &kde;, it complains about \"shadow passwords\". Why?"
 msgstr ""
 "Immer, wenn Sie &kde; starten, bekommen Sie eine Fehlermeldung &uuml;ber "
 "\"Schattenpassw&ouml;rter\". Warum?"
 
-#: index.docbook:999
+#: index.docbook:997
 msgid ""
 "When your system uses shadow passwords, the screensaver can only run "
 "properly if the suid bit is set. This bit gives the screensavers root "
@@ -1809,7 +1809,7 @@ msgstr ""
 "Dieses gibt dem Bildschirmschoner Systemverwalterrechte, die er braucht, um "
 "auf die Schattenpassw&ouml;rter zuzugreifen."
 
-#: index.docbook:999
+#: index.docbook:997
 msgid ""
 "The screensavers might be configured to secure the machine until the "
 "password is entered."
@@ -1817,23 +1817,23 @@ msgstr ""
 "The screensavers might be configured to secure the machine until the "
 "password is entered."
 
-#: index.docbook:1004
+#: index.docbook:1002
 msgid "Setting the suid bit on the screensavers"
 msgstr "Setzen des suid Bits f&uuml;r die Bildschirmschoner."
 
-#: index.docbook:1004
+#: index.docbook:1002
 msgid "become root"
 msgstr "Melden Sie sich mit Systemverwalterrechten an"
 
-#: index.docbook:1004
+#: index.docbook:1002
 msgid "chown root $<envar>KDEDIR</envar>/bin/*.kss"
 msgstr "chown root $<envar>KDEDIR</envar>/bin/*.kss"
 
-#: index.docbook:1004
+#: index.docbook:1002
 msgid "chmod u+s $<envar>KDEDIR</envar>/bin/*.kss"
 msgstr "chmod u+s $<envar>KDEDIR</envar>/bin/*.kss"
 
-#: index.docbook:1012
+#: index.docbook:1010
 msgid ""
 "Alternatively, if you compile &kde; from source, you can use "
 "<command>./configure <option>--with-shadow</option></command> to configure "
@@ -1846,11 +1846,11 @@ msgstr ""
 "notrwendigen Dateien automatisch w&auml;hrend der Installation mit dem "
 "Befehl <command>make install</command> gesetzt."
 
-#: index.docbook:1021
+#: index.docbook:1019
 msgid "Is it possible to install &kde; in a user directory?"
 msgstr "Ist es m&ouml;glich, &kde; in ein Nutzerverzeichns zu installieren?"
 
-#: index.docbook:1024
+#: index.docbook:1022
 msgid ""
 "Yes, you can install &kde; in any directory you want. What you have to do "
 "depends on the kind of packages you want to install:"
@@ -1859,11 +1859,11 @@ msgstr ""
 "Was hierbei zu beachten ist, h&auml;ngt von der Art der Pakete ab, die Sie "
 "installieren wollen:"
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid "Source packages"
 msgstr "Quellenpakete"
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid ""
 "Configure and install the package using <command>configure "
 "<option>--prefix=<replaceable>/users/myhome/kde</replaceable></option>; "
@@ -1875,7 +1875,7 @@ msgstr ""
 "make; make install</command> zum Installieren in <filename "
 "class=\"directory\">/users/myhome/kde</filename>."
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid ""
 "Add the following to your init files. Please note that if it is not "
 "necessary for you to set <envar>LD_LIBRARY_PATH</envar>, it is better to "
@@ -1886,11 +1886,11 @@ msgstr ""
 "<envar>LD_LIBRARY_PATH</envar> zu setzen, es ist meistens besser dies nicht "
 "zu tun."
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid "For csh or tcsh:"
 msgstr "F&uuml;r csh oder tcsh:"
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid ""
 "setenv KDEDIR /users/myhome/kde\n"
 "\n"
@@ -1916,11 +1916,11 @@ msgstr ""
 "   setenv LIBRARY_PATH $LD_LIBRARY_PATH\n"
 "endif"
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid "For <application>bash</application>:"
 msgstr "F&uuml;r die <application>bash</application>:"
 
-#: index.docbook:1026
+#: index.docbook:1024
 msgid ""
 "KDEDIR=/users/myhome/kde\n"
 "PATH=$KDEDIR/bin:$PATH\n"
@@ -1934,11 +1934,11 @@ msgstr ""
 "LIBRARY_PATH=$LD_LIBRARY_PATH\n"
 "export KDEDIR PATH LD_LIBRARY_PATH LIBRARY_PATH"
 
-#: index.docbook:1058
+#: index.docbook:1056
 msgid "<acronym>RPM</acronym> packages"
 msgstr "<acronym>RPM</acronym> Pakete"
 
-#: index.docbook:1058
+#: index.docbook:1056
 msgid ""
 "<command>rpm</command> allows you to use the <option>--prefix</option> "
 "option to select the directory you want to install to. For example, "
@@ -1953,7 +1953,7 @@ msgstr ""
 "package.rpm</replaceable></option></command> installiert das Paket in das "
 "Verzeichnis <filename class=\"directory\">/users/myhome/kde</filename>."
 
-#: index.docbook:1067
+#: index.docbook:1065
 msgid ""
 "Although &kde; will run from a user directory, there are some problems with "
 "programs that require suid root, <abbrev>e.g.</abbrev> the programs in the "
@@ -1966,7 +1966,7 @@ msgstr ""
 "normalerweise nicht von Nutzern benutzt werden, ist dies eigentlich kein "
 "Problem."
 
-#: index.docbook:1067
+#: index.docbook:1065
 msgid ""
 "However, on systems using shadow passwords, the screensavers have to be suid "
 "root to enable password access for unlocking the screen, so this option will "
@@ -1976,7 +1976,7 @@ msgstr ""
 "root to enable password access for unlocking the screen, so this option will "
 "not work."
 
-#: index.docbook:1081
+#: index.docbook:1079
 msgid ""
 "<command>startkde</command> fails with <errorname>can not connect to X "
 "server</errorname>. What is wrong?"
@@ -1984,7 +1984,7 @@ msgstr ""
 "<command>startkde</command> bricht mit der Fehlermeldung <errorname>\"can "
 "not connect to X server\"</errorname> ab. Was ist falsch?"
 
-#: index.docbook:1085
+#: index.docbook:1083
 msgid ""
 "You probably tried to start the X server with <command>startkde</command>. "
 "The X server is started with <command>startx</command>. "
@@ -2002,7 +2002,7 @@ msgstr ""
 "Server-D&auml;monenx f&uuml;r &kde; zu starten. Weitere Informationen hierzu "
 "finden Sie unter: <xref linkend=\"startkde\"/>."
 
-#: index.docbook:1096
+#: index.docbook:1094
 msgid ""
 "Installing Debian packages with <command>dpkg</command> says "
 "<errorname>giflib2 is missing</errorname>"
@@ -2010,7 +2010,7 @@ msgstr ""
 "Installieren von Debian Paketen mit <command>dpkg</command> gibt eine "
 "Fehlermeldung <errorname>\"giflib2 is missing\"</errorname> zur&uuml;ck"
 
-#: index.docbook:1100
+#: index.docbook:1098
 msgid ""
 "Sometimes when installing &kde; Debian packages, <command>dpkg</command> "
 "complains about <errorname>dependency problems: giflib2 is "
@@ -2025,11 +2025,11 @@ msgstr ""
 "--ignore-depends=giflib2 "
 "<replaceable>package.deb</replaceable></option></command>"
 
-#: index.docbook:1112
+#: index.docbook:1110
 msgid "&kde; on &AIX;?"
 msgstr "&kde; auf &AIX;?"
 
-#: index.docbook:1115
+#: index.docbook:1113
 msgid ""
 "If you have trouble building &kde; on &AIX; check out Stefan Westerfeld's "
 "<ulink url=\"http://space.twc.de/~stefan/kde/aix.html\">Running &kde; on "
@@ -2042,7 +2042,7 @@ msgstr ""
 "Aix</ulink> nach. Dort finden Sie jede Menge Hilfe &uuml;ber das Erstellen "
 "von &kde; auf dieser au&szlig;ergew&ouml;hnlichen &UNIX;-Variante nach."
 
-#: index.docbook:1125
+#: index.docbook:1123
 msgid ""
 "Installing &RedHat; packages says <errorname>libncurses.so.3.0 is "
 "needed</errorname>"
@@ -2050,7 +2050,7 @@ msgstr ""
 "Installieren von &RedHat;-Paketen gibt eine Fehlermeldung "
 "<errorname>\"libncurses.so.3.0 is needed\"</errorname> aur&uuml;ck"
 
-#: index.docbook:1129
+#: index.docbook:1127
 msgid ""
 "If there is no rpm for it on your &RedHat; &CD-ROM;, poke around the "
 "&RedHat; &FTP; site and its mirrors to get it. Do bear in mind that "
@@ -2064,24 +2064,24 @@ msgstr ""
 "eine mit der anderen ersetzen m&uuml;ssen, also ist hier ein einfaches "
 "<command>rpm -i</command> vollkommen ausreichend."
 
-#: index.docbook:1133
+#: index.docbook:1131
 msgid "Or you might try the following (as root):"
 msgstr ""
 ">Sie k&ouml;nnen auch folgendes probieren (mit Systemverwalterrechten):"
 
-#: index.docbook:1134
+#: index.docbook:1132
 msgid "cd /usr/lib"
 msgstr "cd /usr/lib"
 
-#: index.docbook:1134
+#: index.docbook:1132
 msgid "ln <option>-s libncurses.so.4 libncurses.so.3</option>"
 msgstr "ln <option>-s libncurses.so.4 libncurses.so.3</option>"
 
-#: index.docbook:1134
+#: index.docbook:1132
 msgid "ldconfig"
 msgstr "ldconfig"
 
-#: index.docbook:1140
+#: index.docbook:1138
 msgid ""
 "Since libncurses-3 and -4 are 100% compatible both at binary and at source "
 "level, installing both is just a waste of space."
@@ -2089,11 +2089,11 @@ msgstr ""
 "Weil libncurses-3 und -4 auf Bin&auml;r- und Quellenniveau 100% kompatibel "
 "sind, ist das Installieren von beiden nur ein Verschwenden von Platz."
 
-#: index.docbook:1147
+#: index.docbook:1145
 msgid "&kde; on a laptop?"
 msgstr "&kde; auf einem Laptop?"
 
-#: index.docbook:1150
+#: index.docbook:1148
 msgid ""
 "If you can get the &X; to run, you should not have any problem getting &kde; "
 "to run on it. In addition, you might find the following links helpful:"
@@ -2102,15 +2102,15 @@ msgstr ""
 "&kde; zum Laufen zu bringen. Zus&auml;tzlich k&ouml;nnen folgende Links "
 "hilfreich sein:"
 
-#: index.docbook:1153
+#: index.docbook:1151
 msgid "http://www.cs.utexas.edu/users/kharker/linux-laptop/"
 msgstr "http://www.cs.utexas.edu/users/kharker/linux-laptop/"
 
-#: index.docbook:1153
+#: index.docbook:1151
 msgid "http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html"
 msgstr "http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html"
 
-#: index.docbook:1161
+#: index.docbook:1159
 msgid ""
 "For laptops with exotic resolution like 1024x600, you can try editing the "
 "<filename>XF86Config</filename> file (in <filename "
@@ -2134,7 +2134,7 @@ msgstr ""
 "url=\"http://sunsite.unc.edu/LDP/HOWTO/XFree86-Video-Timings-HOWTO.html\">XFr"
 "ee86 Video Timings HOWTO</ulink>."
 
-#: index.docbook:1176
+#: index.docbook:1174
 msgid ""
 "I do not like the default &kde; directory after installation. How do I move "
 "it without breaking anything?"
@@ -2142,7 +2142,7 @@ msgstr ""
 "Wie k&ouml;nnen Sie das Standard-&kde;-Verzeichnis nach der Installation "
 "verschieben, ohne irgendetwas zu st&ouml;ren?"
 
-#: index.docbook:1180
+#: index.docbook:1178
 msgid ""
 "Assuming the default is <filename class=\"directory\">/opt/kde</filename> "
 "and you want to move it to <filename "
@@ -2153,19 +2153,19 @@ msgstr ""
 "class=\"directory\">/usr/local/kde</filename> verschieben, m&uuml;ssen Sie "
 "folgendes tun:"
 
-#: index.docbook:1184
+#: index.docbook:1182
 msgid "change to superuser if you aren't already"
 msgstr "Melden Sie sich mit Systemverwalterrechten an"
 
-#: index.docbook:1184
+#: index.docbook:1182
 msgid "mv /opt/kde /usr/local/kde"
 msgstr "mv /opt/kde /usr/local/kde"
 
-#: index.docbook:1184
+#: index.docbook:1182
 msgid "ln -s /usr/local/kde /opt/kde"
 msgstr "ln -s /usr/local/kde /opt/kde"
 
-#: index.docbook:1190
+#: index.docbook:1188
 msgid ""
 "This will put all your &kde; files in <filename "
 "class=\"directory\">/usr/local/kde</filename> but everything is still "
@@ -2175,11 +2175,11 @@ msgstr ""
 "class=\"directory\">/usr/local/kde</filename> aber alle sind weiterhin "
 "zugreifbar von <filename class=\"directory\">/opt/kde</filename>."
 
-#: index.docbook:1199
+#: index.docbook:1197
 msgid "Where has the snapshot configure script gone?"
 msgstr "Wo ist das Snapshot Konfigurationsskript geblieben?"
 
-#: index.docbook:1202
+#: index.docbook:1200
 msgid ""
 "Maybe this has already been rectified, but just in case it isn't, here's the "
 "solution: <command>make <option>-f admin/Makefile.common "
@@ -2189,11 +2189,11 @@ msgstr ""
 "aber im Fall es ist noch nicht, hier die L&ouml;sung: <command>make "
 "<option>-f admin/Makefile.common cvs</option></command>"
 
-#: index.docbook:1210
+#: index.docbook:1208
 msgid "How do I unzip tarballs with the bz2 extension?"
 msgstr "Wie entpacken Sie Dateien mit bz2-Erweiterung?"
 
-#: index.docbook:1213
+#: index.docbook:1211
 msgid ""
 "First, you need the bzip2 package. Get it from your favorite &FTP; site if "
 "you have not already got one. Next, to view the contents, simply do this: "
@@ -2223,7 +2223,7 @@ msgstr ""
 "url=\"http://sources.redhat.com/bzip2/index.html\">http://sources.redhat.com/"
 "bzip2 /index.html</ulink>."
 
-#: index.docbook:1232
+#: index.docbook:1230
 msgid ""
 "What files can I delete from my &kde; install directory? Can all the "
 "<filename>*.h</filename>, <filename>*.c</filename> and "
@@ -2233,7 +2233,7 @@ msgstr ""
 "l&ouml;schen? K&ouml;nnen Sie alle <filename>*.h</filename>, "
 "<filename>*.c</filename> und <filename>*.o</filename> l&ouml;schen?"
 
-#: index.docbook:1237
+#: index.docbook:1235
 msgid ""
 "There should not be any need to keep the <filename>.c</filename> and "
 "<filename>.o</filename> files, but you might want to keep the "
@@ -2249,11 +2249,11 @@ msgstr ""
 "Quellprogramm hinzuf&uuml;gen wollen (anstatt alles neu herunterzuladen), "
 "dann sollten Sie alle diese Dateien behalten."
 
-#: index.docbook:1248
+#: index.docbook:1246
 msgid "Will I lose my current settings when I upgrade &kde;?"
 msgstr "Verlieren Sie Ihre aktuellen Einstellungen, wenn Sie &kde; upgraden?"
 
-#: index.docbook:1251
+#: index.docbook:1249
 msgid ""
 "There are mixed reports of results when moving to KDE 2.0 from KDE 1.x. "
 "Settings are kept in the <filename class=\"directory\">.kde</filename> "
@@ -2279,7 +2279,7 @@ msgstr ""
 "Upgrades ohne jegliche Schwierigkeiten; so dass es nicht wirklich "
 "vorhersagbar ist, welche Ergebnisse Sie erhalten."
 
-#: index.docbook:1266
+#: index.docbook:1264
 msgid ""
 "Compiling kdebase gives me a <errorname>bin/sh: msgfmt: command not "
 "found</errorname> error!"
@@ -2287,7 +2287,7 @@ msgstr ""
 "Kompilieren von kdebase gibt eine Fehlermeldung <errorname>bin/sh: msgfmt: "
 "command not found</errorname> zur&uuml;ck!"
 
-#: index.docbook:1270
+#: index.docbook:1268
 msgid ""
 "You need the <acronym>GNU</acronym> <application>msgfmt</application> which "
 "is part of the <acronym>GNU</acronym> i18n package "
@@ -2299,13 +2299,13 @@ msgstr ""
 "<application>gettext</application> ist. Sie k&ouml;nnen dieses von jedem "
 "<acronym>GNU</acronym> Mirror herunterladen."
 
-#: index.docbook:1279
+#: index.docbook:1277
 msgid "How do I uninstall &kde; applications compiled from scratch?"
 msgstr ""
 "Wie k&ouml;nnen Sie &kde; Anwendungen deinstallieren, die von Grund auf neu "
 "kompiliert wurden?"
 
-#: index.docbook:1283
+#: index.docbook:1281
 msgid ""
 "You can uninstall your programs by typing <command>make uninstall</command> "
 "in the directory where you did <command>make install</command>. If you have "
@@ -2323,11 +2323,11 @@ msgstr ""
 "class=\"directory\">$<envar>KDEDIR</envar>/bin</filename> und l&ouml;schen "
 "Sie die Dateien einzeln."
 
-#: index.docbook:1294
+#: index.docbook:1292
 msgid "What is up with &GIF; support?"
 msgstr "Was ist Besonderes an der Unterst&uuml;tzung von &GIF;-Dateien?"
 
-#: index.docbook:1297
+#: index.docbook:1295
 msgid ""
 "This has something to do with Unisys' &LZW; patent. &GIF; support is turned "
 "off from &Qt; 1.44 onwards by default. Either use an older &Qt; (if you are "
@@ -2339,11 +2339,11 @@ msgstr ""
 "k&ouml;nnen entweder eine &auml;ltere &Qt; benutzen oder &Qt; mit dem Befehl "
 "<command>./configure <option>-gif</option></command> neukompilieren."
 
-#: index.docbook:1307
+#: index.docbook:1305
 msgid "How do I install &kde; themes?"
 msgstr "Wie installieren Sie &kde; themes?"
 
-#: index.docbook:1310
+#: index.docbook:1308
 msgid ""
 "There is no theme manager in &kde; 2 yet; please refer to <ulink "
 "url=\"http://kde.themes.org/php/comments.phtml?forum=news.26.34\">http://kde."
@@ -2355,23 +2355,23 @@ msgstr ""
 "theme s.org/php/comments.phtml?forum=news.26.34</ulink> sollten Sie aber "
 "weitere Informationen finden."
 
-#: index.docbook:1319
+#: index.docbook:1317
 msgid "The panel"
 msgstr "Die Kontrollleiste"
 
-#: index.docbook:1324
+#: index.docbook:1322
 msgid "How do I add applications to the panel?"
 msgstr "Wie f&uuml;gen Sie Anwendungen zur Kontrollleiste hinzu?"
 
-#: index.docbook:1327
+#: index.docbook:1325
 msgid "There are several ways to add an application to the panel:"
 msgstr "Hierf&uuml;r gibt es mehrere Wege:"
 
-#: index.docbook:1329
+#: index.docbook:1327
 msgid "Using the panel menu"
 msgstr "Benutzen Sie das Kontrollleistenmen&uuml;"
 
-#: index.docbook:1329
+#: index.docbook:1327
 msgid ""
 "Perhaps the easiest method is to use the entry "
 "<menuchoice><guimenu>Panel</guimenu><guimenuitem>Add "
@@ -2388,11 +2388,11 @@ msgstr ""
 "installierten &kde;-Anwendungen. Zum Hinzuf&uuml;gen klicken Sie einfach auf "
 "die Anwendung."
 
-#: index.docbook:1329
+#: index.docbook:1327
 msgid "Using the file manager"
 msgstr "Benutzen Sie den Dateimanager"
 
-#: index.docbook:1329
+#: index.docbook:1327
 msgid ""
 "You can also simply drag a <filename>.desktop</filename> file from a window "
 "of the file manager to the panel."
@@ -2400,11 +2400,11 @@ msgstr ""
 "Sie k&ouml;nnen auch einfach eine <filename>.desktop</filename>Datei von "
 "einem Fenster des Dateimanagers auf die Kontrollleiste ziehen."
 
-#: index.docbook:1353
+#: index.docbook:1351
 msgid "Why is the panel clock showing the wrong time?"
 msgstr "Warum zeigt die Uhr eine falsche Zeit an?"
 
-#: index.docbook:1356
+#: index.docbook:1354
 msgid ""
 "On some &RedHat; systems, the clock in the panel always shows the time in "
 "&GMT;. This is a bug in the &RedHat; setup. To solve it, just create this "
@@ -2417,13 +2417,13 @@ msgstr ""
 "Link erzeugen: <command>ln -s /usr/share/zoneinfo "
 "/usr/lib/zoneinfo</command>."
 
-#: index.docbook:1365
+#: index.docbook:1363
 msgid "Is it possible to run &kpanel; in a non-&kde;-compliant window manager?"
 msgstr ""
 "Ist es m&ouml;glich, &kpanel; in einem nicht-&kde;-basierten Fenstermanager "
 "zu betreiben?"
 
-#: index.docbook:1369
+#: index.docbook:1367
 msgid ""
 "Yes. Try starting it with something like this: <command>kpanel "
 "<option>-no-KDE-compliant-window-manager</option></command>."
@@ -2431,7 +2431,7 @@ msgstr ""
 "Ja. Versuchen Sie den Start mit dem folgenden Befehl: <command>kpanel "
 "<option>-no-KDE-compliant-window-manager</option></command>."
 
-#: index.docbook:1376
+#: index.docbook:1374
 msgid ""
 "Is it possible to change the <guibutton>K</guibutton> button of the panel to "
 "another picture?"
@@ -2440,11 +2440,11 @@ msgstr ""
 "Kontrollleiste zu &auml;ndern?"
 
 # index.docbook:1381, index.docbook:1663, index.docbook:2283
-#: index.docbook:1380 index.docbook:1662 index.docbook:2282
+#: index.docbook:1378 index.docbook:1660 index.docbook:2280
 msgid "&kde; 1.x"
 msgstr "&kde; 1.x"
 
-#: index.docbook:1380
+#: index.docbook:1378
 msgid ""
 "Look for "
 "<filename>$<envar>HOME</envar>/.kde/share/apps/kpanel/pics/go.xpm</filename> "
@@ -2462,11 +2462,11 @@ msgstr ""
 "Verzeichnisse wenn diese nicht existieren. Starten Sie &kpanel; neu."
 
 # index.docbook:1389, index.docbook:1685, index.docbook:2293
-#: index.docbook:1380 index.docbook:1662 index.docbook:2282
+#: index.docbook:1378 index.docbook:1660 index.docbook:2280
 msgid "&kde; 2"
 msgstr "&kde; 2"
 
-#: index.docbook:1380
+#: index.docbook:1378
 msgid ""
 "Look for "
 "<filename>$<envar>HOME</envar>/.kde/share/apps/kicker/pics/go.png</filename> "
@@ -2484,11 +2484,11 @@ msgstr ""
 "eine Ebene zu reduzieren, sonst sehen Sie nichts. Erstellen Sie die "
 "Verzeichnisse wenn diese nicht existieren. Starten Sie &kicker; neu."
 
-#: index.docbook:1403
+#: index.docbook:1401
 msgid "How do I get a taskbar external to the panel in &kde; 2?"
 msgstr "Wie starten Sie die Programmleiste au&szlig;erhalb der Kontrollleiste?"
 
-#: index.docbook:1407
+#: index.docbook:1405
 msgid ""
 "You can't if you are using &kde; 2 final. It is now implemented in the "
 "current <acronym>CVS</acronym> snapshot, though. Read more about it at "
@@ -2500,15 +2500,15 @@ msgstr ""
 "Informationen finden Sie unter: <ulink "
 "url=\"http://dot.kde.org/972916165\">http://dot.kde.org/972916165</ulink>."
 
-#: index.docbook:1417
+#: index.docbook:1415
 msgid "The desktop"
 msgstr "Die Arbeitsfl&auml;che"
 
-#: index.docbook:1422
+#: index.docbook:1420
 msgid "How do I add an application to the desktop?"
 msgstr "Wie f&uuml;gen Sie eine Anwendung zur Arbeitsfl&auml;che hinzu?"
 
-#: index.docbook:1425
+#: index.docbook:1423
 msgid ""
 "This is a simple exercise: click on the desktop with the &RMB;. In the menu, "
 "select "
@@ -2521,7 +2521,7 @@ msgstr ""
 "</menuchoice>. Geben Sie den Titel der Anwendung ein und diese wird auf der "
 "Arbeitsfl&auml;che erscheinen."
 
-#: index.docbook:1430
+#: index.docbook:1428
 msgid ""
 "You might want to change the new icon's properties, so click on the program "
 "name with the &RMB; , and select <guimenuitem>Properties</guimenuitem>. In "
@@ -2533,17 +2533,17 @@ msgstr ""
 "<guimenuitem>Eigenschaften</guimenuitem>. Im Dialog sollten Sie mindestens "
 "das auszuf&uuml;hrende Programm und das Symbol &auml;ndern. Das ist alles."
 
-#: index.docbook:1440
+#: index.docbook:1438
 msgid "How do I mount/unmount a device from the desktop?"
 msgstr ""
 "Wie (un)mounten Sie ein Ger&auml;t (Dateisystem) von der Arbeitsfl&auml;che "
 "aus?"
 
-#: index.docbook:1443
+#: index.docbook:1441
 msgid "There are two steps involved:"
 msgstr "Dies erfordert zwei Schritte:"
 
-#: index.docbook:1444
+#: index.docbook:1442
 msgid ""
 "Make sure you are allowed to mount/unmount the device. Normally, only root "
 "is allowed to mount/unmount devices. If you are not running &kde; as root "
@@ -2558,7 +2558,7 @@ msgstr ""
 "eingetragen sein. Hier muss die Option <option>user</option> zu den Optionen "
 "des Dateisystems, das Sie (un)mounten wollen, hinzugef&uuml;gt werden."
 
-#: index.docbook:1444
+#: index.docbook:1442
 msgid ""
 "For example, to mount the floppy, your <filename>/etc/fstab</filename> "
 "should include:"
@@ -2566,11 +2566,11 @@ msgstr ""
 "z.B. zum (un)Mounten des Diskettenlaufwerkes sollte Ihre Datei "
 "<filename>/etc/fstab</filename> folgende Zeile enthalten:"
 
-#: index.docbook:1444
+#: index.docbook:1442
 msgid "/dev/fd0   /floppy   msdos   noauto,user,sync 0 0"
 msgstr "/dev/fd0   /floppy   msdos   noauto,user,sync 0 0"
 
-#: index.docbook:1444
+#: index.docbook:1442
 msgid ""
 "Create a <filename>.desktop</filename> file for the filesystem. An example "
 "for a device <filename>.desktop</filename> file is:"
@@ -2578,7 +2578,7 @@ msgstr ""
 "Erstellen Sie eine <filename>.desktop</filename>-Datei f&uuml;r das "
 "Dateisystem. Ein Beispiel hierf&uuml;r ist:"
 
-#: index.docbook:1444
+#: index.docbook:1442
 msgid ""
 "# KDE Config File\n"
 "[KDE Desktop Entry]\n"
@@ -2602,11 +2602,11 @@ msgstr ""
 "Type=FSDevice\n"
 "Comment=Floppy Disc"
 
-#: index.docbook:1480
+#: index.docbook:1478
 msgid "How do I use a screensaver as background?"
 msgstr "Wie nutzen Sie einen Bildschirmschoner als Hintergrund?"
 
-#: index.docbook:1483
+#: index.docbook:1481
 msgid ""
 "It is possible to use a screensaver instead of a background image. To do "
 "this, call any screensaver with the <option>-inroot</option> parameter, for "
@@ -2622,11 +2622,11 @@ msgstr ""
 "einstellen. Bedenken Sie aber, dass die Verwendung eines Bildschirmschoners "
 "als Hintergrund CPU- und X-Zeit verbraucht...."
 
-#: index.docbook:1494
+#: index.docbook:1492
 msgid "Where are the icons kept?"
 msgstr "Wo werden die Symbole gespeichert?"
 
-#: index.docbook:1497
+#: index.docbook:1495
 msgid ""
 "The icons can be found only in <filename "
 "class=\"directory\">$<envar>KDEDIR</envar>/share/icons</filename> or "
@@ -2643,13 +2643,13 @@ msgstr ""
 "sind, m&uuml;ssen Sie diese entweder in eines der oben genannten "
 "Verzeichnisse kopieren oder symbolische Links erstellen."
 
-#: index.docbook:1507
+#: index.docbook:1505
 msgid "How do I change the standard menu items as non-root?"
 msgstr ""
 "Wie &auml;ndern Sie die Standardmen&uuml;eintr&auml;ge als "
 "Nicht-Systemverwalter?"
 
-#: index.docbook:1510
+#: index.docbook:1508
 msgid ""
 "Try changing the permission and/or ownership of the directories and files in "
 "<filename "
@@ -2676,11 +2676,11 @@ msgstr ""
 "ist, dann m&uuml;ssen Sie sich mit dem Editieren Ihres Pers&ouml;nlichen "
 "Men&uuml;s begn&uuml;gen."
 
-#: index.docbook:1524
+#: index.docbook:1522
 msgid "How do I use the mouse scroll wheel in &kde;?"
 msgstr "Wie k&ouml;nnen Sie eine Maus mit Rollrad in &kde; nutzen?"
 
-#: index.docbook:1528
+#: index.docbook:1526
 msgid ""
 "Mouse wheel support comes with &Qt; 2.0 and above, so &kde; based on that "
 "will automagically support the use of the mouse scroll wheel. If you are "
@@ -2707,7 +2707,7 @@ msgstr ""
 "http://www.inria.fr/koala/colas/mouse-wheel-scroll/</ulink> sollten Ihnen "
 "auch weiterhelfen."
 
-#: index.docbook:1542
+#: index.docbook:1540
 msgid ""
 "What exactly is the <filename class=\"directory\">Templates</filename> "
 "folder?"
@@ -2715,7 +2715,7 @@ msgstr ""
 "Was genau ist das <filename "
 "class=\"directory\">Templates</filename>-Verzeichnis?"
 
-#: index.docbook:1545
+#: index.docbook:1543
 msgid ""
 "The <filename class=\"directory\">Templates</filename> folder holds items "
 "that you can create easily anywhere (on the Desktop or in a file manager "
@@ -2731,7 +2731,7 @@ msgstr ""
 "einfach mit der rechten Maustaste auf den Platz, wo Sie das neue Element "
 "platzieren wollen."
 
-#: index.docbook:1550
+#: index.docbook:1548
 msgid ""
 "You can put both files and directories in the <filename "
 "class=\"directory\">Templates</filename> folder, and they will automagically "
@@ -2744,7 +2744,7 @@ msgstr ""
 "erscheinen. Wenn Sie diese im Untermen&uuml; ausw&auml;hlen, werden sie zur "
 "aktuellen Stelle kopiert."
 
-#: index.docbook:1554
+#: index.docbook:1552
 msgid ""
 "This is exactly like opening the <filename "
 "class=\"directory\">Templates</filename> directory and copying the items "
@@ -2763,13 +2763,13 @@ msgstr ""
 "und neuen &MIME;-Typen zu erm&ouml;glichen, aber Sie k&ouml;nnen alles, was "
 "Sie wollen, darin speichern."
 
-#: index.docbook:1566
+#: index.docbook:1564
 msgid "Why can't I get system sound to work, like for opening windows?"
 msgstr ""
 "Warum k&ouml;nnen Sie die Systemkl&auml;nge nicht einschalten, z.B. zum "
 "&Ouml;ffnen von Fenstern?"
 
-#: index.docbook:1570
+#: index.docbook:1568
 msgid ""
 "System sound currently does not work on non-FreeBSD and non-&Linux; systems. "
 "This is being worked on. If you use FreeBSD or &Linux;, you have found a "
@@ -2781,15 +2781,15 @@ msgstr ""
 "Systemkl&auml;nge nicht einschalten, dann haben Sie einen Fehler gefunden; "
 "bitte senden Sie einen Problembericht."
 
-#: index.docbook:1578
+#: index.docbook:1576
 msgid "How do I launch applications in a particular desktop?"
 msgstr "Wie starten Sie Anwendungen auf einer bestimmten Arbeitsfl&auml;che?"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid "&kde; pre-1.1 and above"
 msgstr "&kde; pre-1.1 und dar&uuml;ber"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "&kde; pre-1.1 and above comes with a program called &kstart;. You can use it "
 "in a <filename>.kdelnk</filename> (<filename>.desktop</filename> for &kde; "
@@ -2799,7 +2799,7 @@ msgstr ""
 "k&ouml;nnen dieses in einer <filename>.kdelnk</filename>-Datei "
 "(<filename>.desktop</filename> f&uuml;r &kde; 2) wie dieser verwenden:"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "Name=Netscape\n"
 "Exec=kstart \"netscape\" -window \".*Netscape.*\" -desktop 2 -maximize\n"
@@ -2817,7 +2817,7 @@ msgstr ""
 "Type=Application\n"
 "Terminal=0"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "Or just run the following: <command>kstart <option>\"netscape\" -desktop 2 "
 "-activate</option></command>."
@@ -2825,18 +2825,18 @@ msgstr ""
 "Sie k&ouml;nnen auch einfach den folgenden Befehl ausf&uuml;hren: "
 "<command>kstart <option>\"netscape\" -desktop 2 -activate</option></command>."
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid "&kde; 1.0 and below"
 msgstr "&kde; 1.0 und darunter"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "Use a shell script to do it. The script should look something like this:"
 msgstr ""
 "Benutzen Sie ein Shellskript. Das folgende Skript sollte diese Aufgabe "
 "erf&uuml;llen:"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "kwmcom desktop2 <lineannotation>(or desktop3, desktop4, "
 "whatever)</lineannotation> netscape"
@@ -2844,7 +2844,7 @@ msgstr ""
 "kwmcom desktop2 <lineannotation>(or desktop3, desktop4, "
 "whatever)</lineannotation> netscape"
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "Please note that the above example has the (undesirable) effect of leaving "
 "you in desktop 2 while it is executing and also once it has finished "
@@ -2853,7 +2853,7 @@ msgstr ""
 "Dieses Beispielskript hat den unerw&uuml;nschten Effekt, Sie auf der "
 "Arbeitsfl&auml;che 2 zu lassen, wenn es fertig ist."
 
-#: index.docbook:1581
+#: index.docbook:1579
 msgid ""
 "On the off chance you have not used shell scripts, they are basically just "
 "text files you have run <command>chmod <option>+x</option></command> on. "
@@ -2866,7 +2866,7 @@ msgstr ""
 "Sie sind die &Linux;-Version der <acronym>DOS</acronym> *.bat-Dateien aber "
 "nat&uuml;rlich besser."
 
-#: index.docbook:1624
+#: index.docbook:1622
 msgid ""
 "I have played with the fonts section in the &kde; Control Center but the "
 "fonts are still way too small. What can I do?"
@@ -2874,7 +2874,7 @@ msgstr ""
 "Wie stellen Sie gr&ouml;&szlig;ere Schrift ein, wenn nach dem Einstellen im "
 "&kde;-Kontrollzentrum die Schriften immer noch zu klein sind?"
 
-#: index.docbook:1628
+#: index.docbook:1626
 msgid ""
 "Many users use the 75 <acronym>dpi</acronym> fonts as the default. If you "
 "have installed the 100 <acronym>dpi</acronym> fonts, make sure your "
@@ -2888,14 +2888,14 @@ msgstr ""
 "den 75 <acronym>dpi</acronym> Fonts erscheinen. Hier ist eine "
 "Schritt-f&uuml;r-Schrittanleitung dazu:"
 
-#: index.docbook:1631
+#: index.docbook:1629
 msgid ""
 "Open <filename>/etc/Xll/XF86Config</filename> using your favorite editor."
 msgstr ""
 "&Ouml;ffnen Sie <filename>/etc/Xll/XF86Config</filename> in Ihrem "
 "bevorzugten Editor."
 
-#: index.docbook:1631
+#: index.docbook:1629
 msgid ""
 "Near the top of the file is a several-row listing of fonts: type1, speedo, "
 "<abbrev>etc.</abbrev>, and at the bottom there are two entries: 75dpi and "
@@ -2911,11 +2911,11 @@ msgstr ""
 "<acronym>dpi</acronym> Fonts). Das verbessert die Anzeige von Schriften "
 "nochmals."
 
-#: index.docbook:1646
+#: index.docbook:1644
 msgid "Is it possible to extend the Desktop Icon Menus?"
 msgstr "Ist es m&ouml;glich, die Arbeitsfl&auml;chenmen&uuml;s zu erweitern?"
 
-#: index.docbook:1649
+#: index.docbook:1647
 msgid ""
 "Yes. Just add the applnk for the required command to <filename "
 "class=\"directory\">$<envar>KDEDIR</envar>/share/applnk</filename>, or use "
@@ -2926,7 +2926,7 @@ msgstr ""
 "class=\"directory\">$<envar>KDEDIR</envar>/share/applnk</filename> hinzu "
 "oder nutzen Sie &kmenuedit;."
 
-#: index.docbook:1657
+#: index.docbook:1655
 msgid ""
 "Can I get rid of the "
 "<guiicon>Trash</guiicon>/<guiicon>Templates</guiicon>/<guiicon>Autostart</gui"
@@ -2936,7 +2936,7 @@ msgstr ""
 "<guiicon>M&uuml;lleimer</guiicon>/<guiicon>Vorlagen</guiicon>/<guiicon> "
 "Autostart</guiicon> Symbole l&ouml;schen?"
 
-#: index.docbook:1662
+#: index.docbook:1660
 msgid ""
 "Yes. Simply edit <filename>$<envar>KDEDIR</envar>/bin/startkde</filename> "
 "and replace <command>kfm</command> with <command>kfm -w</command>. If that "
@@ -2950,7 +2950,7 @@ msgstr ""
 "Zeilen zur Datei "
 "<filename>$<envar>HOME</envar>/.kde/share/config/kfmrc</filename> hinzu:"
 
-#: index.docbook:1662
+#: index.docbook:1660
 msgid ""
 "[Paths]\n"
 "Trash=/home/me/Trash/\n"
@@ -2964,7 +2964,7 @@ msgstr ""
 "Templates=/home/me/Templates/\n"
 "Autostart=/home/me/Autostart/"
 
-#: index.docbook:1662
+#: index.docbook:1660
 msgid ""
 "The effect is to take Trash, Templates, and Autostart and put them into your "
 "home directory instead of your <filename "
@@ -2984,7 +2984,7 @@ msgstr ""
 "deleting it from the desktop. And then you will have a nice, clean desktop "
 "with no \"My Computer\" sort of look."
 
-#: index.docbook:1662
+#: index.docbook:1660
 msgid ""
 "Yes. Open the <application>&kde; Control Center</application> and select "
 "<guisubmenu>Desktop</guisubmenu> (under <guimenu>Look and Feel</guimenu> in "
@@ -2999,14 +2999,14 @@ msgstr ""
 "f&uuml;r die Verzeichnisse eingeben und &kde; verschiebt diese automatisch "
 "an den neuen Speicherort."
 
-#: index.docbook:1699
+#: index.docbook:1697
 msgid ""
 "Where do I save my files if I want them to appear directly on the desktop?"
 msgstr ""
 "Wo m&uuml;ssen Sie Dateien speichern, wenn Sie wollen, dass diese auf der "
 "Arbeitsfl&auml;che erscheinen?"
 
-#: index.docbook:1703
+#: index.docbook:1701
 msgid ""
 "<filename class=\"directory\">$<envar>HOME</envar>/Desktop</filename>. You "
 "might need to refresh your desktop after you have saved your files."
@@ -3017,11 +3017,11 @@ msgstr ""
 "Arbeitsfl&auml;che erscheinen zu lassen. Beim n&auml;chsten Anmelden "
 "geschieht dies automatisch."
 
-#: index.docbook:1711
+#: index.docbook:1709
 msgid "The window manager"
 msgstr "Der Fenstermanager"
 
-#: index.docbook:1713
+#: index.docbook:1711
 msgid ""
 "The default window manager provided by &kde; is the K Window Manager (&kwm; "
 "in &kde; 1.x and &kwin; in &kde; 2). Please read \"The K Window Manager "
@@ -3034,11 +3034,11 @@ msgstr ""
 "Center</application> finden <application>&kde;-Hilfezentrum</application>) "
 "f&uuml;r weitere Informationen nach."
 
-#: index.docbook:1721
+#: index.docbook:1719
 msgid "Are there keyboard shortcuts for &kwm; (&kwin;) operations?"
 msgstr "Gibt es Tastaturkurzbefehle f&uuml;r die &kwm;- (&kwin;)-Bedienung?"
 
-#: index.docbook:1724
+#: index.docbook:1722
 msgid ""
 "Yes. Please refer to \"The K Window Manager Handbook\" for the list of "
 "shortcuts available."
@@ -3046,11 +3046,11 @@ msgstr ""
 "Ja. Bitte lesen Sie im \"The K Window Manager Handbook\" nach, welche "
 "Tastaturkurzbefehle es gibt."
 
-#: index.docbook:1731
+#: index.docbook:1729
 msgid "Can I define my own set of keyboard shortcuts?"
 msgstr "K&ouml;nnen Sie einen eigenen Satz Tastaturkurzbefehle erstellen?"
 
-#: index.docbook:1734
+#: index.docbook:1732
 msgid ""
 "Yes, if you are using &kde; 1.1 and above. Launch the <application>&kde; "
 "Control Center</application> and select <menuchoice><guimenu>Look and "
@@ -3068,13 +3068,13 @@ msgstr ""
 "starten zu k&ouml;nnen, m&uuml;ssen Sie m&ouml;glicherweise "
 "<application>KHotKeys</application> installieren."
 
-#: index.docbook:1745
+#: index.docbook:1743
 msgid "When I \"iconify\" a window, it disappears. Where does it go?"
 msgstr ""
 "Wenn Sie ein Fenster \"minimieren\" und es verschwindet, wohin verschwindet "
 "es?"
 
-#: index.docbook:1749
+#: index.docbook:1747
 msgid ""
 "With many &X; &GUI;, the minimize button (a little dot) will erase the "
 "window that the program is running in and create, instead, an icon on the "
@@ -3086,11 +3086,11 @@ msgstr ""
 "Stelle realisiert. Nicht so bei &kde;. Hier wird das Fenster einfach "
 "versteckt und das Programm l&auml;uft noch."
 
-#: index.docbook:1754
+#: index.docbook:1752
 msgid "There are a few ways to access \"disappeared\" windows:"
 msgstr "Es gibt mehrere Wege, um auf ein verstecktes Fenster zuzugreifen:"
 
-#: index.docbook:1755
+#: index.docbook:1753
 msgid ""
 "If you are running the taskbar part of &kpanel; (or &kicker;), you can "
 "choose to have a list of tasks displayed on your desktop. Iconified tasks "
@@ -3101,7 +3101,7 @@ msgstr ""
 "Ihrer Arbeitsfl&auml;che angezeigt wird. Die Namen von versteckten "
 "Programmen werden in Klammern angezeigt."
 
-#: index.docbook:1755
+#: index.docbook:1753
 msgid ""
 "If you click the &MMB; on the root window (<abbrev>i.e.</abbrev> the "
 "background of the desktop), &kwm; (or &kwin;) will give you a list of all "
@@ -3112,11 +3112,11 @@ msgstr ""
 "Arbeitsfl&auml;che erzeugt eine Liste der laufenden Programme und auch hier "
 "werden die Namen der versteckten Programme in Klammern angezeigt."
 
-#: index.docbook:1773
+#: index.docbook:1771
 msgid "How do I get a sticky window with no border and focus?"
 msgstr "Wie erzeugen Sie ein angeheftetes Fenster ohne R&auml;nder und Focus?"
 
-#: index.docbook:1776
+#: index.docbook:1774
 msgid ""
 "If you have &kde; 1.x, you can use &kstart;. Assuming the application you "
 "want to start is <application>xosview</application>, just execute "
@@ -3136,7 +3136,7 @@ msgstr ""
 "<application>&kde;-Kontrollzentrum</application> unter "
 "<guimenu>Fenster</guimenu> vornehmen."
 
-#: index.docbook:1783
+#: index.docbook:1781
 msgid ""
 "In &kde; 1.0 you would need to write something like this in "
 "<filename>kwmrc</filename>:"
@@ -3144,7 +3144,7 @@ msgstr ""
 "In &kde; 1.0 m&uuml;ssen Sie die folgenden Zeilen in die Konfigurationsdatei "
 "<filename>kwmrc</filename> schreiben:"
 
-#: index.docbook:1785
+#: index.docbook:1783
 msgid ""
 "[Sticky]\n"
 "stickyClasses=xosview,\n"
@@ -3160,11 +3160,11 @@ msgstr ""
 "[Decoration]\n"
 "noDecorationClasses=xosview,"
 
-#: index.docbook:1798
+#: index.docbook:1796
 msgid "How do I kill &kwmpager;?"
 msgstr "Wie beenden Sie &kwmpager;?"
 
-#: index.docbook:1801
+#: index.docbook:1799
 msgid ""
 "Click on the border frame with the &RMB; to bring up a menu that will let "
 "you close the pager. By the way, &kwmpager; is obsolete and has been "
@@ -3175,7 +3175,7 @@ msgstr ""
 "k&ouml;nnen. &kwmpager; ist &uuml;brigens veraltet und wurde ersetzt durch "
 "<application>kpager</application>."
 
-#: index.docbook:1805
+#: index.docbook:1803
 msgid ""
 "In addition, if you prefer working through a terminal, type <command>ps ax | "
 "grep kwmpager</command> to find it and then kill it using <command>kill "
@@ -3196,13 +3196,13 @@ msgstr ""
 "R&uuml;ckg&auml;ngigmachen) des Beendens, Dr&uuml;cken Sie einfach noch "
 "einmal <keycombo action=\"simul\">&Strg;&Alt;&Esc;</keycombo>."
 
-#: index.docbook:1818
+#: index.docbook:1816
 msgid "How do I maximize windows only vertically or horizontally?"
 msgstr ""
 "Wie k&ouml;nnen Sie Fenster ausschlie&szlig;lich horizontal oder vertikal "
 "maximieren?"
 
-#: index.docbook:1821
+#: index.docbook:1819
 msgid ""
 "Provided your window is not already maximized, clicking on the maximize "
 "button with the &LMB;/&MMB;/&RMB; will maximize "
@@ -3212,11 +3212,11 @@ msgstr ""
 "Maximieren mit der linken Maustaste/mittleren Maustaste/rechten Maustaste "
 "maximiert das Fenster voll/vertikal/horizontal."
 
-#: index.docbook:1829
+#: index.docbook:1827
 msgid "What is \"shading\" a window?"
 msgstr "Was ist die \"Fensterheber\"-Funktion?"
 
-#: index.docbook:1832
+#: index.docbook:1830
 msgid ""
 "By \"shading\" a window we mean \"rolling up\" a window leaving just the "
 "title bar visible. You can do this by double clicking on the window title "
@@ -3226,7 +3226,7 @@ msgstr ""
 "dass nur die Titelleiste sichtbar bleibt. Dies k&ouml;nnen Sie durch "
 "Doppelklicken auf die Titelleiste ein- und ausschalten."
 
-#: index.docbook:1840
+#: index.docbook:1838
 msgid ""
 "Is it possible to have FVWM2-like shadow frameworks for the placement of "
 "windows?"
@@ -3234,7 +3234,7 @@ msgstr ""
 "Ist es m&ouml;glich, schattierte Rahmen wie in FVWM2 f&uuml;r die "
 "Platzierung von Fenstern einzustellen?"
 
-#: index.docbook:1844
+#: index.docbook:1842
 msgid ""
 "Yes. Run <application>&kde; Control Center</application> and select "
 "<guimenu>Look and Feel</guimenu> followed by <guisubmenu>Window "
@@ -3247,11 +3247,11 @@ msgstr ""
 "<guimenuitem>Aktionen</guimenuitem>. Dort finden Sie eine "
 "Einstellungsm&ouml;glichkeit f&uuml;r die Platzierung."
 
-#: index.docbook:1854
+#: index.docbook:1852
 msgid "The file manager"
 msgstr "Der Dateimanager"
 
-#: index.docbook:1856
+#: index.docbook:1854
 msgid ""
 "The file manager of choice for &kde; 1.x is &kfm; while for &kde; 2 is "
 "&konqueror;. The &konqueror; home page is located at <ulink "
@@ -3263,11 +3263,11 @@ msgstr ""
 "url=\"http://www.konqueror.org\">http://www.konqueror.org</ulink>. Dort gibt "
 "es auch eine <acronym>FAQ</acronym> zu &konqueror;."
 
-#: index.docbook:1867
+#: index.docbook:1865
 msgid "How do I use &kfm; or &konqueror; as a web browser with proxy?"
 msgstr "Wie nutzen Sie &kfm; oder &konqueror; als Web-Browser mit Proxy?"
 
-#: index.docbook:1870
+#: index.docbook:1868
 msgid ""
 "Both &kfm; and &konqueror; can be used via &HTTP; and &FTP; proxies. You can "
 "set the proxy server in &kfm; by selecting <guimenu>Options</guimenu> "
@@ -3285,7 +3285,7 @@ msgstr ""
 "<guimenu>Einstellungen</guimenu>-> <guimenuitem>Einstellungen "
 "speichern</guimenuitem> sichern, damit diese dauerhaft sind."
 
-#: index.docbook:1879
+#: index.docbook:1877
 msgid ""
 "As for &konqueror;, just select "
 "<menuchoice><guimenu>Settings</guimenu><guisubmenu>Configure</guisubmenu><gui"
@@ -3302,14 +3302,14 @@ msgstr ""
 "<guimenu>Einstellungen</guimenu>-><guimenuitem>Optionen "
 "speichern</guimenuitem> sichern, damit diese dauerhaft sind."
 
-#: index.docbook:1890
+#: index.docbook:1888
 msgid ""
 "How can I change the appearance of a directory in &kfm; and &konqueror;?"
 msgstr ""
 "Wie k&ouml;nnen Sie das Erscheinungsbild eines Verzeichnisses in &kfm; und "
 "&konqueror; einstellen?"
 
-#: index.docbook:1894
+#: index.docbook:1892
 msgid ""
 "When displaying a directory, both &kfm; and &konqueror; look for a hidden "
 "file called <filename>.directory</filename> inside the directory. You can "
@@ -3324,7 +3324,7 @@ msgstr ""
 "ver&auml;ndern. Die Datei ist einfach eine kdelnk- (oder "
 "<filename>desktop</filename>- f&uuml;r &kde; 2) Datei. Zum Beispiel:"
 
-#: index.docbook:1899
+#: index.docbook:1897
 msgid ""
 "# KDE Config File\n"
 "[KDE Desktop Entry]\n"
@@ -3344,7 +3344,7 @@ msgstr ""
 "SortOrder=Desktop,Input_Devices,KWM,Network,Information,Sound\n"
 "Icon=kcontrol.xpm"
 
-#: index.docbook:1909
+#: index.docbook:1907
 msgid ""
 "This is the file used to describe the Settings directory. It changes the "
 "icon used to display the directory, sets the (displayed) name of the "
@@ -3357,7 +3357,7 @@ msgstr ""
 "Verzeichnisses und legt die Reihenfolge, in der die Unterverzeichnisse "
 "angezeigt werden, fest."
 
-#: index.docbook:1913
+#: index.docbook:1911
 msgid ""
 "For the directories that build up the <guimenu>K</guimenu> menu, you can "
 "also use &kmenuedit; to change the appearance."
@@ -3366,13 +3366,13 @@ msgstr ""
 "k&ouml;nnen Sie auch &kmenuedit; zum &Auml;ndern des Erscheinungsbildes "
 "benutzen."
 
-#: index.docbook:1920
+#: index.docbook:1918
 msgid "How can I do non-anonymous &FTP; transfers with &kfm; and &konqueror;?"
 msgstr ""
 "Wie k&ouml;nnen Sie non-anonymous &FTP;-Transfers mit &kfm; und &konqueror; "
 "durchf&uuml;hren?"
 
-#: index.docbook:1924
+#: index.docbook:1922
 msgid ""
 "Normally, if you enter a &URL; like "
 "<userinput>ftp://<replaceable>ftp.somehost.com</replaceable></userinput>, "
@@ -3391,13 +3391,13 @@ msgstr ""
 "</userinput> ein. &kfm; und &konqueror; fragen nach einem Passwort und "
 "verbinden Sie dann mit dem Server."
 
-#: index.docbook:1937
+#: index.docbook:1935
 msgid "What causes <errorname>KFM cannot connect to \"localhost\"</errorname>?"
 msgstr ""
 "Was ruft die Fehlermeldung <errorname>KFM kann nicht zum \"localhost\" "
 "verbinden</errorname> hervor?"
 
-#: index.docbook:1941
+#: index.docbook:1939
 msgid ""
 "In most cases, this is due to an incorrectly configured loopback route on "
 "your system."
@@ -3405,17 +3405,17 @@ msgstr ""
 "In den meisten F&auml;llen wird dies durch eine nicht richtig eingerichtete "
 "Loopbackroute in Ihrem System."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid "How to check for problems"
 msgstr "Wo suchen Sie Probleme?"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid "Check if <command>ping localhost</command> returns similar output:"
 msgstr ""
 "Pr&uuml;fen Sie, ob <command>ping localhost</command> die folgende Ausgabe "
 "zur&uuml;ckgibt:"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "PING localhost (127.0.0.1): 56 data bytes\n"
 "64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.3 ms\n"
@@ -3429,14 +3429,14 @@ msgstr ""
 "64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.2 ms \n"
 "..."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "If it does not, your loopback interface or route is not properly configured."
 msgstr ""
 "Wenn nicht, dann ist Ihr Loopbackinterface oder dessen Route nicht richtig "
 "konfiguriert."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "The output of the <command>/sbin/route</command> command should contain "
 "lines like the following:"
@@ -3444,7 +3444,7 @@ msgstr ""
 "Die Ausgabe des Befehls <command>/sbin/route</command> sollte folgende "
 "Zeilen enthalten:"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "Destination     Gateway         Genmask         Flags MSS    Window Use "
 "Ifac\n"
@@ -3454,7 +3454,7 @@ msgstr ""
 "Ifac\n"
 "loopback        *               255.0.0.0       U     3584   0       13 lo"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "The important fields are the Destination, Gateway, Genmask, and Iface. The "
 "above means that the system is properly configured to route all loopback "
@@ -3464,7 +3464,7 @@ msgstr ""
 "Zeile sagt, dass das System richtig konfiguriert ist, um allen "
 "Loopback-Verkehr durch das Loopbackinterface (lo) zu leiten."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "The output of the <command>/sbin/ifconfig</command> command should contain "
 "the following lines:"
@@ -3472,7 +3472,7 @@ msgstr ""
 "Die Ausgabe des Befehls <command>/sbin/ifconfig</command> sollte die "
 "folgenden Zeilen enthalten:"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "lo        Link encap:Local Loopback\n"
 "          inet addr:127.0.0.1  Bcast:127.255.255.255  Mask:255.0.0.0\n"
@@ -3482,22 +3482,22 @@ msgstr ""
 "          inet addr:127.0.0.1  Bcast:127.255.255.255  Mask:255.0.0.0\n"
 "          UP BROADCAST LOOPBACK RUNNING  MTU:3584  Metric:1"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid "This indicates that the loopback interface is up and running."
 msgstr "Dies sagt, dass das Loopbackinterface arbeitet."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "Your <filename>/etc/hosts</filename> file should contain the following line:"
 msgstr ""
 "Die Datei <filename>/etc/hosts</filename> in Ihrem System sollte die "
 "folgende Zeile enthalten:"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid "127.0.0.1       localhost"
 msgstr "127.0.0.1       localhost"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "This ensures that the \"localhost\" hostname is associated with your system "
 "loopback address (127.0.0.1)."
@@ -3505,11 +3505,11 @@ msgstr ""
 "Dies stellt sicher, dass der Hostname \"localhost\" mit der Loopbackadresse "
 "(127.0.0.1) verbunden ist."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid "Fixing these problems"
 msgstr "Beheben dieser Probleme"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "Execute <command>/sbin/ifconfig <option>lo 127.0.0.1</option></command> "
 "followed by <command>/sbin/route <option>add -net "
@@ -3525,11 +3525,11 @@ msgstr ""
 "nicht geschieht, dann sehen Sie in den Netz-Startup-Dateien im Verzeichnis "
 "<filename class=\"directory\">/etc/rc.d</filename> nach."
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid "If it <emphasis>still</emphasis> does not work"
 msgstr "Wenn es dann <emphasis>immer noch nicht</emphasis> funktioniert"
 
-#: index.docbook:1943
+#: index.docbook:1941
 msgid ""
 "If none of these work, please send a full report to the <ulink "
 "url=\"http://bugs.kde.org\">&kde; bug tracking system</ulink>. Do not forget "
@@ -3540,14 +3540,14 @@ msgstr ""
 "Vergessen Sie nicht, anzugeben, dass Sie alle diese Dinge "
 "&uuml;berpr&uuml;ft haben."
 
-#: index.docbook:2007
+#: index.docbook:2005
 msgid ""
 "What are <option>%i</option> and <option>%m</option> in the Execute line?"
 msgstr ""
 "Was sind <option>%i</option> und <option>%m</option> in der Zeile "
 "Ausf&uuml;hren?"
 
-#: index.docbook:2011
+#: index.docbook:2009
 msgid ""
 "They are used by all &kde; applications (since they are implemented in "
 "<classname>KApplication</classname> and all good &kde; programs create a "
@@ -3559,7 +3559,7 @@ msgstr ""
 "ein <classname>KApplication</classname>-Objekt, noch bevor sie die "
 "Befehlszeilenargumente auswerten)."
 
-#: index.docbook:2015
+#: index.docbook:2013
 msgid ""
 "A standard line for a &kde; application looks like this: <command>foo "
 "<option>... %i %m -caption \\\"%c\\\"</option></command>. Pretty confusing, "
@@ -3583,7 +3583,7 @@ msgstr ""
 "festgelegt sind. Wenn die Icons nicht definiert sind, dann werden einfach "
 "die der ausf&uuml;hrbaren Datei \"foo\" benutzt."
 
-#: index.docbook:2025
+#: index.docbook:2023
 msgid ""
 "This way a user can change these things in &kmenuedit; for his or her "
 "applications. <option>-caption</option> is important, because no user will "
@@ -3608,11 +3608,11 @@ msgstr ""
 "<guimenuitem>CD Spieler</guimenuitem> startet und ein Fenster mit Namen "
 "<guilabel>CD-Spieler</guilabel> erh&auml;lt."
 
-#: index.docbook:2041
+#: index.docbook:2039
 msgid "How do I specify the startup directory for &kfm; and &konqueror;?"
 msgstr "Wie geben Sie das Startverzeichnis f&uuml;r &kfm; und &konqueror; an?"
 
-#: index.docbook:2045
+#: index.docbook:2043
 msgid ""
 "<mousebutton>Right</mousebutton> click on the &kfm; (or &konqueror;) icon "
 "and choose <guimenuitem>Properties</guimenuitem>. Under the "
@@ -3628,11 +3628,11 @@ msgstr ""
 "einfach <filename class=\"directory\">/root</filename> in das "
 "gew&uuml;nschte Verzeichnis, in dem &kfm; (oder &konqueror;) starten soll."
 
-#: index.docbook:2056
+#: index.docbook:2054
 msgid "How do I import &Netscape; bookmarks?"
 msgstr "Wie importieren Sie &Netscape; Lesezeichen?"
 
-#: index.docbook:2059
+#: index.docbook:2057
 msgid ""
 "Take a look at the full list of &kde; applications (not just those in the "
 "distribution) at <ulink "
@@ -3647,7 +3647,7 @@ msgstr ""
 "<application>knsbookmark</application>; dies ist das Werkzeug das Sie "
 "brauchen."
 
-#: index.docbook:2064
+#: index.docbook:2062
 msgid ""
 "If you are using &kde; 2, however, you are in luck! There is no need to "
 "import anything at all! &Netscape; bookmarks are automatically available "
@@ -3659,11 +3659,11 @@ msgstr ""
 "<guimenu>Lesezeichen</guimenu> in &konqueror;, ohne die Notwendigkeit "
 "irgendeines Einrichtens oder des Importierens."
 
-#: index.docbook:2073
+#: index.docbook:2071
 msgid "Is there a \"Save As...\" function in &kfm; and &konqueror;?"
 msgstr "Gibt es eine \"Sichern als\"-Funktion in &kfm; und &konqueror;?"
 
-#: index.docbook:2077
+#: index.docbook:2075
 msgid ""
 "There is something close: <guimenu>View</guimenu> followed by "
 "<guimenuitem>View Document Source</guimenuitem> opens &kedit; with the "
@@ -3680,7 +3680,7 @@ msgstr ""
 "auf das Bild und w&auml;hlen Sie <guimenu>&Ouml;ffnen</guimenu> in einem "
 "Grafikeditor, um die Datei zu &ouml;ffnen und dann von dort aus zu speichern."
 
-#: index.docbook:2089
+#: index.docbook:2087
 msgid ""
 "How do I fool a site into believing &konqueror; is &Netscape; or some other "
 "browsers?"
@@ -3688,7 +3688,7 @@ msgstr ""
 "Wie betr&uuml;gen Sie eine Webseite, so dass diese glaubt &konqueror; ist "
 "&Netscape; oder irgendein anderer Browser?"
 
-#: index.docbook:2094
+#: index.docbook:2092
 msgid ""
 "Fire up the <application>&kde; Control Center</application> and select "
 "<menuchoice><guimenu>Web Browser</guimenu><guimenuitem>User "
@@ -3699,12 +3699,12 @@ msgstr ""
 "Agent</guimenuitem></menuchoice>. F&uuml;gen Sie den gew&uuml;nschten User "
 "Agent hinzu."
 
-#: index.docbook:2103
+#: index.docbook:2101
 msgid "How do I configure &konqueror; to run &Java; applets?"
 msgstr ""
 "Wie konfigurieren Sie &konqueror; f&uuml;r das Anzeigen von &Java; Applets?"
 
-#: index.docbook:2107
+#: index.docbook:2105
 msgid ""
 "Choose "
 "<menuchoice><guimenu>Settings</guimenu><guisubmenu>Configure</guisubmenu><gui"
@@ -3718,11 +3718,11 @@ msgstr ""
 "Beachten Sie, dass Sie eine Webseite anzeigen m&uuml;ssen, damit das "
 "<guimenu>Settings</guimenu>-Men&uuml; nicht \"ausgegraut\" ist."
 
-#: index.docbook:2117
+#: index.docbook:2115
 msgid "Why can't &konqueror; render &GIF; images?"
 msgstr "Warum kann &konqueror; keine &GIF;-Bilddateien anzeigen?"
 
-#: index.docbook:2121
+#: index.docbook:2119
 msgid ""
 "It is because you did not enable &GIF; support in &Qt;. Please see <xref "
 "linkend=\"gif\"/> for more details."
@@ -3731,11 +3731,11 @@ msgstr ""
 "haben. Weitere Informationen hierzu finden Sie unter: <xref "
 "linkend=\"gif\"/>."
 
-#: index.docbook:2128
+#: index.docbook:2126
 msgid "How do I rename files?"
 msgstr "Wie k&ouml;nnen Sie Dateien umbenennen?"
 
-#: index.docbook:2131
+#: index.docbook:2129
 msgid ""
 "Simply right click on the file and select "
 "<guimenuitem>Properties</guimenuitem>. You can rename the file there."
@@ -3744,26 +3744,26 @@ msgstr ""
 "<guimenuitem>Eigenschaften</guimenuitem>. Dort k&ouml;nnen Sie die Datei "
 "umbenennen."
 
-#: index.docbook:2140
+#: index.docbook:2138
 msgid "Configuring &kde;"
 msgstr "Einrichten von &kde;"
 
-#: index.docbook:2145
+#: index.docbook:2143
 msgid "How do I set the language used by &kde;?"
 msgstr "Wie stellen Sie die Sprache, die von &kde; benutzt wird, ein?"
 
-#: index.docbook:2148
+#: index.docbook:2146
 msgid ""
 "There are two ways to set the language &kde; uses in the messages it will "
 "display:"
 msgstr ""
 "Es gibt zwei Wege, um die Sprache f&uuml;r die &kde;-Ausgaben einzustellen:"
 
-#: index.docbook:2150
+#: index.docbook:2148
 msgid "Using the <application>&kde; Control Center</application>"
 msgstr "Benutzen Sie das &kde;-Kontrollzentrum"
 
-#: index.docbook:2150
+#: index.docbook:2148
 msgid ""
 "Fire up the <application>&kde; Control Center</application> and select "
 "<guimenu>Personalization</guimenu> followed by <guimenuitem>Country and "
@@ -3778,7 +3778,7 @@ msgstr ""
 "die Standardsprache eingestellt. Normalerweise ist das (amerikanisches) "
 "Englisch."
 
-#: index.docbook:2150
+#: index.docbook:2148
 msgid ""
 "Using the <application>&kde; Control Center</application> is the preferred "
 "way of choosing languages in &kde;."
@@ -3786,11 +3786,11 @@ msgstr ""
 "Benutzen des &kde;-Kontrollzentrums ist der beste Weg, um die Sprache in "
 "&kde; einzustellen."
 
-#: index.docbook:2150
+#: index.docbook:2148
 msgid "Using the <envar>LANG</envar> environment variable"
 msgstr "Benutzen der <envar>LANG</envar> Umgebungsvariable"
 
-#: index.docbook:2150
+#: index.docbook:2148
 msgid ""
 "The second method uses the standard locale setting on your system. To change "
 "the language, simply set the environment variable <envar>LANG</envar> "
@@ -3803,13 +3803,13 @@ msgstr ""
 "f&uuml;hren Sie den Befehl <command>export LANG=de</command> aus, um Deutsch "
 "als Sprache einzustellen."
 
-#: index.docbook:2174
+#: index.docbook:2172
 msgid "Is there any keyboard switcher for international keyboards for &kde;?"
 msgstr ""
 "Gibt es eine Umschaltung f&uuml;r Tastaturen verschiedener L&auml;nder in "
 "&kde;?"
 
-#: index.docbook:2178
+#: index.docbook:2176
 msgid ""
 "&kde; 1.x used to come with &kikbd; but that has since been completely "
 "removed and one should use <application>xkb</application> instead."
@@ -3818,7 +3818,7 @@ msgstr ""
 "erlaubt, aber &kikbd; ist komplett entfernt worden. Benutzen Sie an dessen "
 "Stelle <application>xkb</application>."
 
-#: index.docbook:2186
+#: index.docbook:2184
 msgid ""
 "How do I replace the standard &Linux; text login screen with the &kde; login "
 "screen?"
@@ -3826,7 +3826,7 @@ msgstr ""
 "Wie k&ouml;nnen Sie den Standard &Linux; Text Login Bildschirm mit dem &kde; "
 "Login Bildschirm ersetzen?"
 
-#: index.docbook:2190
+#: index.docbook:2188
 msgid ""
 "First, you need to change to the \"xdm runlevel\" (runlevel 5 on &RedHat; "
 "systems, 3 on S.u.S.E.) by editing your <filename>/etc/inittab</filename> "
@@ -3849,11 +3849,11 @@ msgstr ""
 "<userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm "
 "-nodaemon</userinput>."
 
-#: index.docbook:2190
+#: index.docbook:2188
 msgid "The location of &kdm; may differ on your system."
 msgstr "The location of &kdm; may differ on your system."
 
-#: index.docbook:2202
+#: index.docbook:2200
 msgid ""
 "For changes to take effect immediately, type <command>init 5</command> (for "
 "&RedHat; systems) at the shell prompt."
@@ -3861,7 +3861,7 @@ msgstr ""
 "For changes to take effect immediately, type <command>init 5</command> (for "
 "&RedHat; systems) at the shell prompt."
 
-#: index.docbook:2202
+#: index.docbook:2200
 msgid ""
 "It is risky to initiate a graphical login without checking beforehand "
 "whether it works. If it fails to work, you would be in for a hard time "
@@ -3873,7 +3873,7 @@ msgstr ""
 "kommen.... Aktivieren Sie dieses also erst, wenn die grafische "
 "Benutzeroberfl&auml;che grunds&auml;tzlich funktioniert."
 
-#: index.docbook:2212
+#: index.docbook:2210
 msgid ""
 "How do I replace &kwm; or &kwin; with another &kde;-compliant window manager "
 "like <application>Blackbox</application> and &windowmaker;?"
@@ -3881,7 +3881,7 @@ msgstr ""
 "Wie ersetzen Sie &kwm; oder &kwin; mit einem anderen &kde;-kompatiblen "
 "Fenstermanager wie <application>Blackbox</application> oder &windowmaker;?"
 
-#: index.docbook:2217
+#: index.docbook:2215
 msgid ""
 "First, download the source code and compile them. You would probably need to "
 "specify some option when you execute the <filename>configure</filename> "
@@ -3908,7 +3908,7 @@ msgstr ""
 "<option>--windowmanager "
 "<replaceable>my_window_manager</replaceable></option> ausgef&uuml;hrt wird."
 
-#: index.docbook:2230
+#: index.docbook:2228
 msgid ""
 "<application>Blackbox</application> is yet another addition to the list of "
 "window managers for the &X;. It is built with C++ and shares no common code "
@@ -3930,7 +3930,7 @@ msgstr ""
 "url=\"http://www.draknor.net/kbb/\">KBB - getting "
 "<application>Blackbox</application> to work with &kde;</ulink> useful."
 
-#: index.docbook:2239
+#: index.docbook:2237
 msgid ""
 "To use <application>Blackbox</application> with &kde;, download the source "
 "tarball, untar it, enter the newly created directory, and run "
@@ -3945,7 +3945,7 @@ msgstr ""
 "Option <option>--with-kde</option> schaltet die &kde;-Unterst&uuml;tzung "
 "ein)."
 
-#: index.docbook:2244
+#: index.docbook:2242
 msgid ""
 "Next, edit the <filename>startkde</filename> script as mentioned above to "
 "call <command>blackbox</command> instead. Save the new script as, for "
@@ -3960,7 +3960,7 @@ msgstr ""
 "die letzte Zeile Ihrer X-Startdatei so dass diese das neue Skript startet. "
 "Starten Sie dann &X; und Sie sind fertig."
 
-#: index.docbook:2249
+#: index.docbook:2247
 msgid ""
 "&windowmaker; is an X11 window manager designed to give additional "
 "integration support for <ulink "
@@ -3981,11 +3981,11 @@ msgstr ""
 "url=\"http://www.windowmaker.org/\">Official Window Maker Website</ulink> "
 "finden Sie weitere Informationen"
 
-#: index.docbook:2262
+#: index.docbook:2260
 msgid "How do I change the &RedHat; &Linux; logo bootup screen image?"
 msgstr "Wie &auml;ndern Sie das &RedHat; &Linux; Logo auf der Startseite?"
 
-#: index.docbook:2265
+#: index.docbook:2263
 msgid ""
 "&RedHat; uses <application>xbanner</application> to display its logo, so to "
 "disable it, just comment out the line calling "
@@ -4005,7 +4005,7 @@ msgstr ""
 "einfach hier hinein, z.B. "
 "<command><replaceable>/opt/kde</replaceable>/bin/kdmdesktop</command>."
 
-#: index.docbook:2278
+#: index.docbook:2276
 msgid ""
 "I would like to click the &LMB; anywhere on the desktop and have the "
 "<guimenu>K</guimenu> menu displayed."
@@ -4014,7 +4014,7 @@ msgstr ""
 "Arbeitsfl&auml;che klicken und das <guimenu>K</guimenu>-Men&uuml; angezeigt "
 "bekommen."
 
-#: index.docbook:2282
+#: index.docbook:2280
 msgid ""
 "First, edit "
 "<filename>$<envar>HOME</envar>/.kde/share/config/krootwmrc</filename> and "
@@ -4024,7 +4024,7 @@ msgstr ""
 "<filename>$<envar>HOME</envar>/.kde/share/config/krootwmrc</filename> and "
 "add the following two lines:"
 
-#: index.docbook:2282
+#: index.docbook:2280
 msgid ""
 "[MouseButtons]\n"
 "Left=Menu"
@@ -4032,11 +4032,11 @@ msgstr ""
 "[MouseButtons]\n"
 "Left=Menu"
 
-#: index.docbook:2282
+#: index.docbook:2280
 msgid "Then restart &kde;."
 msgstr "Starten Sie &kde; neu."
 
-#: index.docbook:2282
+#: index.docbook:2280
 msgid ""
 "Open the <application>&kde; Control Center</application> and choose "
 "<menuchoice><guisubmenu>Look and "
@@ -4054,13 +4054,13 @@ msgstr ""
 "menu open from a single &LMB; click, change the entry labeled <guilabel>Left "
 "button</guilabel> to say <guilabel>Application Menu</guilabel>."
 
-#: index.docbook:2309
+#: index.docbook:2307
 msgid "How do I use the three extra keys on my &Windows; keyboard in &kde;?"
 msgstr ""
 "Wie nutzen Sie die drei zus&auml;tzlichen Tasten auf der &Windows;-Tastatur "
 "in &kde;?"
 
-#: index.docbook:2313
+#: index.docbook:2311
 msgid ""
 "You may have to configure your X server via <command>xmodmap</command> to "
 "bind the keycodes of the &Windows; keys to useful X key symbols "
@@ -4071,7 +4071,7 @@ msgstr ""
 "&Windows;tasten n&uuml;tzlichen X Tastensymbolen zuzuordnen. Dabei hilft "
 "Ihnen der Befehl <command>xev</command>."
 
-#: index.docbook:2316
+#: index.docbook:2314
 msgid ""
 "First, create a file <filename>$<envar>HOME</envar>/.Xmodmap</filename> "
 "containing the entries:"
@@ -4080,7 +4080,7 @@ msgstr ""
 "<filename>$<envar>HOME</envar>/.Xmodmap</filename> erzeugen, die die "
 "folgenden Eintr&auml;ge enth&auml;lt:"
 
-#: index.docbook:2318
+#: index.docbook:2316
 msgid ""
 "keycode 115=F13\n"
 "keycode 117=F15"
@@ -4088,7 +4088,7 @@ msgstr ""
 "keycode 115=F13\n"
 "keycode 117=F15"
 
-#: index.docbook:2322
+#: index.docbook:2320
 msgid ""
 "Then run <command>xmodmap ~/.Xmodmap</command>. This sets the "
 "<keycap>Start</keycap> key to emit <keysym>F13</keysym> and the "
@@ -4109,7 +4109,7 @@ msgstr ""
 "<keysym>F13</keysym> f&uuml;r <guilabel>Aufklapp-Men&uuml;</guilabel> und "
 "<keysym>F15</keysym> f&uuml;r <guilabel>Fenster-Aktionen</guilabel>. Fertig."
 
-#: index.docbook:2322
+#: index.docbook:2320
 msgid ""
 "The numbers 115 and 117 may depend on the keyboard. If you are not sure, "
 "please check using <command>xev</command>. In addition, the above procedure "
@@ -4119,7 +4119,7 @@ msgstr ""
 "please check using <command>xev</command>. In addition, the above procedure "
 "requires &kde; 1.1 and above."
 
-#: index.docbook:2322
+#: index.docbook:2320
 msgid ""
 "&kikbd; is able to do this too, but keymaps have to be edited. The advantage "
 "of &kikbd; is that one can choose whether to use these mappings on several "
@@ -4129,7 +4129,7 @@ msgstr ""
 "of &kikbd; is that one can choose whether to use these mappings on several "
 "custom keymaps and have them hotswappable."
 
-#: index.docbook:2322
+#: index.docbook:2320
 msgid ""
 "It would be interesting to make a little script that will automatically do "
 "the keymap modifications on demand. &kikbd; should be able to "
@@ -4139,12 +4139,12 @@ msgstr ""
 "the keymap modifications on demand. &kikbd; should be able to "
 "read/understand user-side keymap files."
 
-#: index.docbook:2344
+#: index.docbook:2342
 msgid "After installing &kde;, the &RedHat; start menu disappears!"
 msgstr ""
 "Nach der Installation von &kde; verschwindet das &RedHat; Startmen&uuml;!"
 
-#: index.docbook:2347
+#: index.docbook:2345
 msgid ""
 "Just run the command <command>wmconfig <option>--output "
 "kde</option></command>. This will put the &RedHat;-specific icons into your "
@@ -4161,22 +4161,22 @@ msgstr ""
 "aber Sie k&ouml;nnen diese mit &kmenuedit; an jede beliebige Stelle kopieren "
 "oder verschieben."
 
-#: index.docbook:2359
+#: index.docbook:2357
 msgid "Where do I find information regarding &kde; themes?"
 msgstr "Wo finden Sie Informationen zu &kde;-Designs (themes)?"
 
-#: index.docbook:2362
+#: index.docbook:2360
 msgid ""
 "Go see <ulink url=\"http://kde.themes.org/\">http://kde.themes.org/</ulink>."
 msgstr ""
 "Gehen Sie nach: <ulink "
 "url=\"http://kde.themes.org/\">http://kde.themes.org/</ulink>."
 
-#: index.docbook:2369
+#: index.docbook:2367
 msgid "How do I change &MIME; Types?"
 msgstr "Wie &auml;ndern Sie &MIME;-Typen?"
 
-#: index.docbook:2372
+#: index.docbook:2370
 msgid ""
 "If you are using &kfm;, first open a &kfm; window and choose "
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Mime "
@@ -4194,7 +4194,7 @@ msgstr ""
 "<guilabel>Binding</guilabel> tab, and set Default Application to whatever "
 "you want."
 
-#: index.docbook:2379
+#: index.docbook:2377
 msgid ""
 "If you are using &konqueror;, do this instead: first, open a &konqueror; "
 "window and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>File "
@@ -4211,11 +4211,11 @@ msgstr ""
 "Dialogfenster, in dem Sie die aktuellen Dateizuordnungen angezeigt bekommen "
 "und diese &auml;ndern k&ouml;nnen."
 
-#: index.docbook:2391
+#: index.docbook:2389
 msgid "&kde; (&kdm;) does not read my <filename>.bash_profile</filename>!"
 msgstr "&kde; (&kdm;) liest Ihr <filename>.bash_profile</filename> nicht!"
 
-#: index.docbook:2395
+#: index.docbook:2393
 msgid ""
 "Well, <application>xdm</application> (and &kdm;) does not run a login shell, "
 "so <filename>.profile</filename>, <filename>.bash_profile</filename>, "
@@ -4236,11 +4236,11 @@ msgstr ""
 "Sie die Dateien <filename>Xsession</filename> und "
 "<filename>.xsession</filename>."
 
-#: index.docbook:2408
+#: index.docbook:2406
 msgid "How do I use &TrueType; fonts in &kde;?"
 msgstr "Wie benutzen Sie &TrueType;-Fonts in &kde;?"
 
-#: index.docbook:2411
+#: index.docbook:2409
 msgid ""
 "You need to install &TrueType; font support to your &X;. Please take a look "
 "at <ulink url=\"http://x.themes.org/\">x.themes.org</ulink> for the fonts, "
@@ -4257,7 +4257,7 @@ msgstr ""
 "url=\"http://X-TT.dsl.gr.jp/\">X-&TrueType; Server Project Home Page</ulink> "
 "&uuml;ber die Font-Server."
 
-#: index.docbook:2418
+#: index.docbook:2416
 msgid ""
 "If you have a bunch of &TrueType; fonts from &Microsoft; &Windows;, edit the "
 "<filename>XF86Config</filename> file to get the fonts from the font folder. "
@@ -4269,7 +4269,7 @@ msgstr ""
 "Fonts-Verzeichnis zu erhalten. Dann weisen Sie einfach &kde; mit dem "
 "&kde;-Kontrollzentrum an, diese zu benutzen."
 
-#: index.docbook:2422
+#: index.docbook:2420
 msgid ""
 "However, many &kde; 1.0 applications use a font dialog that does not use the "
 "font list of &kde;. But there is a workaround: edit the rc files of the "
@@ -4279,11 +4279,11 @@ msgstr ""
 "die Fontlisten von &kde;. Sie k&ouml;nnen jedoch die rc-Dateien dieser "
 "Anwendungen direkt editieren."
 
-#: index.docbook:2430
+#: index.docbook:2428
 msgid "Is it possible to enter, show and work with the Euro Symbol in &kde;?"
 msgstr "Ist es m&ouml;glich mit dem Euro-Symbol in &kde; zu arbeiten?"
 
-#: index.docbook:2434
+#: index.docbook:2432
 msgid ""
 "Yes and no. For details, look here: <ulink "
 "url=\"http://monitor.blvk.ch/euro/\">http://monitor.blvk.ch/euro/</ulink>."
@@ -4291,15 +4291,15 @@ msgstr ""
 "Ja und nein. Einzelheiten finden Sie hier: <ulink "
 "url=\"http://monitor.blvk.ch/euro/\">http://monitor.blvk.ch/euro/</ulink>."
 
-#: index.docbook:2442
+#: index.docbook:2440
 msgid "&kde; applications"
 msgstr "&kde;-Anwendungen"
 
-#: index.docbook:2447
+#: index.docbook:2445
 msgid "&kppp;"
 msgstr "&kppp;"
 
-#: index.docbook:2450
+#: index.docbook:2448
 msgid ""
 "Many &kde; users report problems using &kppp;. But before you complain about "
 "&kppp;, make sure you have already checked the following:"
@@ -4308,7 +4308,7 @@ msgstr ""
 "sich jedoch dar&uuml;ber beschweren, &uuml;berpr&uuml;fen Sie bitte "
 "folgendes:"
 
-#: index.docbook:2453
+#: index.docbook:2451
 msgid ""
 "Can you dialup to your <acronym>ISP</acronym> without using &kppp;? If you "
 "cannot, then perhaps &kppp; is not the culprit after all."
@@ -4316,7 +4316,7 @@ msgstr ""
 "K&ouml;nnen Sie ohne &kppp; zu Ihrem <acronym>ISP</acronym> w&auml;hlen? "
 "Wenn nicht, dann ist das Problem wahrscheinlich nicht in &kppp; zu suchen."
 
-#: index.docbook:2453
+#: index.docbook:2451
 msgid ""
 "Have you gone through the &kppp; documentation at least three times and "
 "follow its instructions and trouble-shooting suggestions?"
@@ -4324,7 +4324,7 @@ msgstr ""
 "Sind Sie die &kppp;-Dokumentation mindestens drei Mal durchgegangen und "
 "haben Sie deren Anweisungen und Fehlersuchevorschl&auml;ge befolgt?"
 
-#: index.docbook:2461
+#: index.docbook:2459
 msgid ""
 "The &kppp; documentation can be accessed through the <application>&kde; Help "
 "Center</application> or going directly to the documentation directory, "
@@ -4350,16 +4350,16 @@ msgstr ""
 "url=\"http://devel-home.kde.org/~kppp/\">http://devel-home.kde.org/~kppp/</ul"
 "ink>."
 
-#: index.docbook:2470
+#: index.docbook:2468
 msgid ""
 "Now, if you still encounter problems, here's what might help you solve them:"
 msgstr "Wenn Sie jetzt immer noch Probleme haben, hier noch einige Hinweise:"
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid "How do I change the &MTU; setting in &kppp;?"
 msgstr "Wie &auml;ndern Sie die &MTU;-Einstellung in &kppp;?"
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid ""
 "Open up the &kppp; dialog box and select <guibutton>Setup</guibutton>. "
 "Choose an existing account and click <guibutton>Edit</guibutton>, or "
@@ -4382,13 +4382,13 @@ msgstr ""
 "Eingaben im gro&szlig;en Textfeld und klicken Sie auf "
 "<guibutton>OK</guibutton>."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid "To check whether the options \"took\", do one of the followings:"
 msgstr ""
 "Zum &Uuml;berpr&uuml;fen, ob Ihre Optionen auch wirksam geworden sind, "
 "k&ouml;nnen Sie Verschiedenes tun:"
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid ""
 "In a terminal window, run <command>/sbin/ifconfig ppp0</command> and look at "
 "the reported &MTU; in the output. It should match your request."
@@ -4397,7 +4397,7 @@ msgstr ""
 "Terminal-Fenster aus und sehen Sie nach, ob die &MTU; in der Ausgabe mit dem "
 "von Ihnen eingestellten Wert &uuml;bereinstimmt."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid ""
 "Add <option>debug</option> and <option>kdebug</option> (each on a separate "
 "line) to your <filename>/etc/ppp/options</filename> file and restart your "
@@ -4409,7 +4409,7 @@ msgstr ""
 "&PPP; session. You will find debugging messages in "
 "<filename>/var/log/messages</filename>, including &MRU; and &MTU; settings."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid ""
 "If you want, the &MRU; and &MTU; settings can be added to the "
 "<filename>options</filename> file, one complete setting per line, no quotes "
@@ -4420,21 +4420,21 @@ msgstr ""
 "jede Option eine neue Zeile verwenden, Anf&uuml;hrungszeichen und "
 "Trennstriche sind hier verboten."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid "&kppp; connects at a slower speed than normal."
 msgstr "&kppp; verbindet nur mit niedrigen Geschwindigkeiten."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid "The following might do the trick:"
 msgstr "Eventuell hilft folgendes:"
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid "Try executing <command>setserial spd_hi</command>."
 msgstr ""
 "F&uuml;hren Sie den Befehl <command>setserial spd_hi</command> auf einer "
 "Befehlszeile aus."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid ""
 "The default &MTU; value is 1500, which maybe too large for a dialup "
 "connection. Try changing it to a smaller value like "
@@ -4444,7 +4444,7 @@ msgstr ""
 "&uuml;ber das Telefonnetz zu gro&szlig; sein. Versuchen Sie kleinere Werte "
 "wie <userinput>296</userinput> oder <userinput>576</userinput>."
 
-#: index.docbook:2472
+#: index.docbook:2470
 msgid ""
 "Check in your <filename "
 "class=\"directory\">$<envar>HOME</envar>/.kde/share/config</filename> for "
@@ -4457,15 +4457,15 @@ msgstr ""
 "richtige Modemgeschwindigkeit (Geschwindigkeit der Verbindung zwischen Modem "
 "und Rechner) eingestellt ist."
 
-#: index.docbook:2522
+#: index.docbook:2520
 msgid "&kvt; and &konsole;"
 msgstr "&kvt; und &konsole;"
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid "How do I page-up or page-down?"
 msgstr "Wie k&ouml;nnen Sie die Anzeige zur&uuml;ckrollen?"
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "Use <keycombo action=\"simul\"><keycap>Shift</keycap><keycap>Pg "
 "Up</keycap></keycombo> and <keycombo "
@@ -4477,14 +4477,14 @@ msgstr ""
 "action=\"simul\"><keycap>Umschalt</keycap><keycap>Bild "
 "Ab</keycap></keycombo> oder die Bildlaufleiste am rechten Fensterrand."
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "How do I toggle the behaviour of &Backspace; and <keycap>Delete</keycap>?"
 msgstr ""
 "Wie schalten Sie das Verhalten der Tasten &Backspace; und "
 "<keycap>Delete</keycap> um?"
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "Look under "
 "<menuchoice><guimenu>Options</guimenu><guimenuitem>Terminal</guimenuitem></me"
@@ -4494,13 +4494,13 @@ msgstr ""
 "<menuchoice><guimenu>Options</guimenu><guimenuitem>Terminal</guimenuitem></me"
 "nuchoice> of your console window."
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "How do I perform a simple \"cut\" from &kvt; (or &konsole;) to anything else?"
 msgstr ""
 "Wie kopieren Sie Text von &kvt; (oder &konsole;) zu einer anderen Anwendung?"
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "When I do a <command>ls</command>, first I select with the mouse the desired "
 "text, press <keycombo action=\"simul\">&Ctrl;<keycap>C</keycap></keycombo>, "
@@ -4523,13 +4523,13 @@ msgstr ""
 "eine Zwei-Tasten-Maus mit der Emulation f&uuml;r drei Tasten verwenden) auf "
 "das Ziel klicken."
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid "How do I set the size of the scroll-back buffer?"
 msgstr ""
 "Wie stellen Sie die Gr&ouml;&szlig;e des Puffers f&uuml;r das "
 "Zur&uuml;ckrollen in einem Terminalfenster ein?"
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "Try <command>kvt <option>-sl "
 "<replaceable>size</replaceable></option></command> for &kvt; and "
@@ -4542,7 +4542,7 @@ msgstr ""
 "<replaceable>Gr&ouml;&szlig;e</replaceable></option> </command> f&uuml;r "
 "&konsole;."
 
-#: index.docbook:2525
+#: index.docbook:2523
 msgid ""
 "If you execute &kvt; with some unknown option (<abbrev>e.g.</abbrev> "
 "<command>kvt <option>-x</option></command>), &kvt; will print out a list of "
@@ -4552,11 +4552,11 @@ msgstr ""
 "<command>kvt <option>-x</option></command>) in einem Terminalfenster "
 "starten, wird Ihnen eine Liste der verf&uuml;gbaren Optionen angezeigt."
 
-#: index.docbook:2571
+#: index.docbook:2569
 msgid "&kmail;"
 msgstr "&kmail;"
 
-#: index.docbook:2574
+#: index.docbook:2572
 msgid ""
 "&kmail; has its own home page at <ulink "
 "url=\"http://kmail.kde.org\">http://kmail.kde.org</ulink> where an "
@@ -4566,11 +4566,11 @@ msgstr ""
 "url=\"http://kmail.kde.org\">http://kmail.kde.org</ulink>. Dort finden Sie "
 "auch eine <acronym>FAQ</acronym>."
 
-#: index.docbook:2577
+#: index.docbook:2575
 msgid "How do I export &kmail; messages to &Netscape; Mail?"
 msgstr "Wie exportieren Sie &kmail;-E-Mails nach &Netscape; Mail?"
 
-#: index.docbook:2579
+#: index.docbook:2577
 msgid ""
 "Try (you might need to be root) <command>cat $<envar>HOME</envar>/Mail/inbox "
 ">> $<envar>MAIL</envar></command> and then start &Netscape; Mail asking it "
@@ -4581,11 +4581,11 @@ msgstr ""
 "$<envar>MAIL</envar></command> und starten Sie dann &Netscape; Mail und "
 "holen sie lokale E-Mail ab."
 
-#: index.docbook:2587
+#: index.docbook:2585
 msgid "&kbiff;"
 msgstr "&kbiff;"
 
-#: index.docbook:2590
+#: index.docbook:2588
 msgid ""
 "&kbiff; is a mail notification utility and its home page is at <ulink "
 "url=\"http://www.granroth.org/kbiff\">http://www.granroth.org/kbiff</ulink>."
@@ -4594,7 +4594,7 @@ msgstr ""
 "informiert und dessen Homepage finden Sie unter: <ulink "
 "url=\"http://www.granroth.org/kbiff\">http://www.granroth.org/kbiff</ulink>."
 
-#: index.docbook:2593
+#: index.docbook:2591
 msgid ""
 "How can one instance of &kbiff; monitor two mailboxes and take the "
 "appropriate action when new messages arrive?"
@@ -4602,7 +4602,7 @@ msgstr ""
 "Wie kann ein &kbiff; zwei Postf&auml;cher &uuml;berwachen und die "
 "notwendigen Aktionen veranlassen, wenn neue Post eintrifft?"
 
-#: index.docbook:2593
+#: index.docbook:2591
 msgid ""
 "Are you getting many messages in both mailboxes? If so, it would be better "
 "to use two instances to monitor them. If not, then go to the "
@@ -4616,15 +4616,15 @@ msgstr ""
 "Postfach-Symbol. Das erzeugt ein neues Postfach in demselben &kbiff;. "
 "&kbiff; reagiert dann auf neue E-Mails in jedem der beiden Postf&auml;cher."
 
-#: index.docbook:2609
+#: index.docbook:2607
 msgid "&ktop;"
 msgstr "&ktop;"
 
-#: index.docbook:2612
+#: index.docbook:2610
 msgid "Why can't I see anything on it?"
 msgstr "Warum sehen nichts?"
 
-#: index.docbook:2613
+#: index.docbook:2611
 msgid ""
 "It is a bug, albeit easily fixed. Just resize it by a few pixels and "
 "everything would be all right."
@@ -4632,15 +4632,15 @@ msgstr ""
 "Dies ist ein Fehler, aber einfach zu umgehen. Ver&auml;ndern Sie einfach die "
 "Fenstergr&ouml;&szlig;e um ein paar Pixel und alles ist OK."
 
-#: index.docbook:2620
+#: index.docbook:2618
 msgid "&knode;"
 msgstr "&knode;"
 
-#: index.docbook:2623
+#: index.docbook:2621
 msgid "How do I killfile someone?"
 msgstr "Wie \"killfile\"n Sie jemanden?"
 
-#: index.docbook:2623
+#: index.docbook:2621
 msgid ""
 "This feature is not yet implemented, and probably will not be implemented "
 "before &kde; 2.1."
@@ -4648,13 +4648,13 @@ msgstr ""
 "Diese Funktion ist noch nicht vorhanden und wird voraussichtlich in &kde; "
 "2.1. realisiert."
 
-#: index.docbook:2623
+#: index.docbook:2621
 msgid "Does &knode; support multiple selections in the article list?"
 msgstr ""
 "Unterst&uuml;tzt &knode; die Auswahl von mehreren Artikeln in der "
 "Artikelliste?"
 
-#: index.docbook:2623
+#: index.docbook:2621
 msgid ""
 "As of the time of this writing, no. It might be implemented for &kde; 2.1 "
 "though."
@@ -4662,11 +4662,11 @@ msgstr ""
 "Zur Zeit des Schreibens dieser FAQ noch nicht. Es k&ouml;nnte in &kde; 2.1 "
 "vorhanden sein."
 
-#: index.docbook:2640
+#: index.docbook:2638
 msgid "&kde; with non-&kde; applications"
 msgstr "&kde; mit nicht-&kde; Anwendungen"
 
-#: index.docbook:2645
+#: index.docbook:2643
 msgid ""
 "My non-&kde; applications like &Emacs; and <application>kterm</application> "
 "are running amok with large windows and strange fonts!"
@@ -4675,7 +4675,7 @@ msgstr ""
 "<application>kterm</application> spielen verr&uuml;ckt mit riesigen Fenstern "
 "und seltsamen Fonts!"
 
-#: index.docbook:2651
+#: index.docbook:2649
 msgid ""
 "It probably has to do with &kde; trying to \"apply KDE defaults to non-KDE "
 "apps\", which means it uses <command>xrdb</command> to apply X defaults that "
@@ -4693,7 +4693,7 @@ msgstr ""
 "beeintr&auml;chtigt, besonders, wenn Sie die X-Einstellungen Ihrer "
 "nicht-&kde;-Anwendungen sorgf&auml;tig getunt haben."
 
-#: index.docbook:2657
+#: index.docbook:2655
 msgid ""
 "The official solution for &kde; 1.x is click the <guibutton>K</guibutton> "
 "button, select "
@@ -4734,7 +4734,7 @@ msgstr ""
 "die X-Resourcen zu finden und das l&ouml;st das Problem. Sie m&uuml;ssen "
 "sich ab- und wieder anmelden, damit alles wieder normal funktioniert."
 
-#: index.docbook:2673
+#: index.docbook:2671
 msgid ""
 "If you do not want to, or cannot rename or delete the system-wide <filename "
 "class=\"directory\">app-defaults</filename> directory, you can always copy "
@@ -4751,15 +4751,15 @@ msgstr ""
 "kopieren und dann einzelne Dateien hierin editieren, l&ouml;schen oder "
 "hinzuf&uuml;gen, um Ihre gew&uuml;nschten Einstellungen zu erhalten."
 
-#: index.docbook:2684
+#: index.docbook:2682
 msgid "&Netscape;"
 msgstr "&Netscape;"
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid "Why does &Netscape; load so slow?"
 msgstr "Warum dauert das Laden von &Netscape; so lange?"
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid ""
 "&Netscape; loads slow because it is statically linked with &Motif; and has "
 "to load all the widgets, <abbrev>etc.</abbrev> when it loads."
@@ -4768,12 +4768,12 @@ msgstr ""
 "von &Motif; benutzt und beim Start alle Elemente der "
 "Programmoberfl&auml;che, <abbrev>etc.</abbrev> laden muss."
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid "Why does &Netscape; crash when I visit certain websites?"
 msgstr ""
 "Warum st&uuml;rzt &Netscape; ab, wenn Sie bestimmte Webseiten aufrufen?"
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid ""
 "What websites are you visiting? &Java; applets will often cause &Netscape; "
 "to crash. Since most people use &Java; applets for spinning buttons instead "
@@ -4785,11 +4785,11 @@ msgstr ""
 "f&uuml;r irgendetwas N&uuml;tzliches benutzen, schalten Sie einfach &Java; "
 "in &Netscape; aus."
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid "Why does &Netscape; display images in a pixelated manner?"
 msgstr "Warum zeigt &Netscape; Bilder so seltsam an?"
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid ""
 "When you run &Netscape;, try using the <option>-install</option> switch "
 "<abbrev>e.g.</abbrev> <command>netscape <option>-install</option> "
@@ -4801,7 +4801,7 @@ msgstr ""
 "<option>-install</option> &amp;</command>. Dies zwingt &Netscape; eine "
 "eigene Farbpalette zu nutzen, was hoffentlich das Problem l&ouml;st;"
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid ""
 "How do I make &kde; use &Netscape; when I create a WWWUrl kdelnk instead of "
 "&kfm;?"
@@ -4809,7 +4809,7 @@ msgstr ""
 "Wie stellen Sie &Netscape; als Browser f&uuml;r einen neuen WWWUrl kdelnk "
 "anstelle von &kfm; ein?"
 
-#: index.docbook:2687
+#: index.docbook:2685
 msgid ""
 "You need to create a <filename>.kdelnk</filename> for &Netscape;, then edit "
 "it (using &kfm;, <mousebutton>right</mousebutton> click and go to "
@@ -4840,15 +4840,15 @@ msgstr ""
 "auf die Zeile &konqueror; zu klicken, bevor Sie "
 "<guilabel>Entfernen</guilabel> bet&auml;tigen."
 
-#: index.docbook:2734
+#: index.docbook:2732
 msgid "Useful tips"
 msgstr "N&uuml;tzliche Tipps"
 
-#: index.docbook:2739
+#: index.docbook:2737
 msgid "Reading man pages in &kde;"
 msgstr "Lesen von Handbuchseiten in &kde;"
 
-#: index.docbook:2742
+#: index.docbook:2740
 msgid ""
 "Pop up the minicli window (<keycombo "
 "action=\"simul\">&Alt;<keycap>F2</keycap></keycombo> by default) and type "
@@ -4863,7 +4863,7 @@ msgstr ""
 "komprimierter Form gespeichert sind, werden sie automatisch in eine "
 "tempor&auml;re Datei entpackt."
 
-#: index.docbook:2747
+#: index.docbook:2745
 msgid ""
 "Or you can use the <application>&kde; Help Center</application> if you are "
 "using &kde; 2. Simply start the <application>&kde; Help Center</application> "
@@ -4881,12 +4881,12 @@ msgstr ""
 "sie auf diesen Eintrag klicken, k&ouml;nnen Sie durch alle Handbuchseiten, "
 "die auf Ihrem System installiert sind, bl&auml;ttern."
 
-#: index.docbook:2759
+#: index.docbook:2757
 msgid "Move or resize windows quickly"
 msgstr ""
 "Schnelles Verschieben oder Ver&auml;ndern der Gr&ouml;&szlig;e von Fenstern"
 
-#: index.docbook:2762
+#: index.docbook:2760
 msgid ""
 "To move a window, use <keycombo "
 "action=\"simul\">&Alt;<mousebutton>left</mousebutton></keycombo> mouse "
@@ -4907,15 +4907,15 @@ msgstr ""
 "hervor. F&uuml;r weitere Information &uuml;ber die Mausfunktionen lesen Sie "
 "bitte im \"The K Window Manager Handbook\" nach."
 
-#: index.docbook:2762
+#: index.docbook:2760
 msgid "&kde; 1.1 and above allows you to change these mouse bindings."
 msgstr "&kde; 1.1 and above allows you to change these mouse bindings."
 
-#: index.docbook:2777
+#: index.docbook:2775
 msgid "Killing windows in &kde;"
 msgstr "Beenden/Schlie&szlig;en von Fenstern in &kde;"
 
-#: index.docbook:2780
+#: index.docbook:2778
 msgid ""
 "There is a standard keybinding (<keycombo "
 "action=\"simul\">&Ctrl;&Alt;&Esc;</keycombo>) that gives you a "
@@ -4930,11 +4930,11 @@ msgstr ""
 "und dar&uuml;ber im <application>&kde;-Kontrollzentrum</application> ansehen "
 "oder ver&auml;ndern."
 
-#: index.docbook:2790
+#: index.docbook:2788
 msgid "Switching window managers on the fly in &kde; 1.x"
 msgstr "Umschalten von Fenstermanagern ohne Beenden von &kde; in &kde; 1.x"
 
-#: index.docbook:2793
+#: index.docbook:2791
 msgid ""
 "If you want to switch your window manager on the fly, type the following "
 "into a terminal window: <command>kwmcom "
@@ -4947,15 +4947,15 @@ msgstr ""
 "schaltet zum Fenstermanager blackbox um, aber sie k&ouml;nnen blackbox durch "
 "jeden Fenstermanager Ihrer Wahl ersetzen."
 
-#: index.docbook:2803
+#: index.docbook:2801
 msgid "Miscellaneous questions"
 msgstr "Verschiedenes"
 
-#: index.docbook:2808
+#: index.docbook:2806
 msgid "Why does &kde; use &Qt;?"
 msgstr "Warum nutzt &kde; &Qt;?"
 
-#: index.docbook:2811
+#: index.docbook:2809
 msgid ""
 "&Qt; is a very sophisticated toolkit that provides everything that is needed "
 "to build a modern user interface. &Qt; is written in C++, thus allowing "
@@ -4974,11 +4974,11 @@ msgstr ""
 "unverzeihlicher Fehler, &kde; mit etwas anderem als dem Besten zu "
 "programmieren."
 
-#: index.docbook:2823
+#: index.docbook:2821
 msgid "Why does &kde; not use gtk, xforms, xlib, whatever?"
 msgstr "Warum nutzt &kde; nicht gtk, xforms, xlib oder anderes?"
 
-#: index.docbook:2826
+#: index.docbook:2824
 msgid ""
 "There are a number of toolkits available. To provide a consistent user "
 "interface and to keep used resources such as memory to a minimum, &kde; can "
@@ -4990,11 +4990,11 @@ msgstr ""
 "Werkzeugsatz verwenden. &Qt; wurde aus den oben erl&auml;uterten "
 "Gr&uuml;nden ausgew&auml;hlt."
 
-#: index.docbook:2835
+#: index.docbook:2833
 msgid "But &Qt; isn't free, is it?"
 msgstr "Aber &Qt; ist nicht frei, oder doch?"
 
-#: index.docbook:2838
+#: index.docbook:2836
 msgid ""
 "It is! As of September 4, 2000, version 2.2 of the &Qt; libraries were "
 "licensed under the <acronym>GPL</acronym>, thereby fulfilling all aspects of "
@@ -5004,7 +5004,7 @@ msgstr ""
 "2.2 sind die &Qt;-Bibliotheken unter der <acronym>GPL</acronym> lizensiert, "
 "die alle Aspekte von \"freier Software\" erf&uuml;llt."
 
-#: index.docbook:2846
+#: index.docbook:2844
 msgid ""
 "How do I mount filesystems (<abbrev>e.g.</abbrev> my <hardware>CD-ROM "
 "drive</hardware>) in &kde;?"
@@ -5012,7 +5012,7 @@ msgstr ""
 "Wie \"mounten\" Sie Filesysteme (<abbrev>z.B.</abbrev> mein <hardware>CD-ROM "
 "Laufwerk</hardware>) in &kde;?"
 
-#: index.docbook:2849
+#: index.docbook:2847
 msgid ""
 "To mount your <hardware>CD-ROM drive</hardware>, first, you (as root) need "
 "to add the following line to <filename>/etc/fstab</filename>:"
@@ -5021,11 +5021,11 @@ msgstr ""
 "Sie (mit Systemverwalterrechten) als erstes die folgende Zeile zur Datei "
 "<filename>/etc/fstab</filename> hinzuf&uuml;gen:"
 
-#: index.docbook:2851
+#: index.docbook:2849
 msgid "/dev/cdrom     /cdrom     iso9660  ro,user,noauto,unhide"
 msgstr "/dev/cdrom     /cdrom     iso9660  ro,user,noauto,unhide"
 
-#: index.docbook:2854
+#: index.docbook:2852
 msgid ""
 "Please make sure that you have a soft link from <filename "
 "class=\"symlink\">/dev/cdrom</filename> to whatever /dev/hd? your "
@@ -5040,13 +5040,13 @@ msgstr ""
 "Laufwerk</hardware>). Sie sollten auf den Befehl <command>ls -l "
 "/dev/cdrom</command> ungef&auml;hr folgende Antwort erhalten:"
 
-#: index.docbook:2859
+#: index.docbook:2857
 msgid ""
 "lrwxrwxrwx   1 root     root            8 Jul 28 22:21 /dev/cdrom -> /dev/hdb"
 msgstr ""
 "lrwxrwxrwx   1 root     root            8 Jul 28 22:21 /dev/cdrom -> /dev/hdb"
 
-#: index.docbook:2862
+#: index.docbook:2860
 msgid ""
 "The above would be done with <command>ln -s /dev/hdb /dev/cdrom</command> "
 "(as root). Last but not least, make sure a valid mount point exists for the "
@@ -5058,7 +5058,7 @@ msgstr ""
 "Mountpunkt, um das <hardware>CD-ROM Laufwerk</hardware> in das Dateisystem "
 "einzubinden, z.B.:"
 
-#: index.docbook:2865
+#: index.docbook:2863
 msgid ""
 "% ls -la /cdrom\n"
 "total 2\n"
@@ -5070,7 +5070,7 @@ msgstr ""
 "drwxrwsr-x   2 root     cdrom        1024 Sep 14  1995 ./\n"
 "drwxr-xr-x  24 root     root         1024 Dec  1 21:00 ../"
 
-#: index.docbook:2871
+#: index.docbook:2869
 msgid ""
 "Now you can mount it from the command prompt by typing <command>mount "
 "/cdrom</command>. Or if you prefer, create a &kde; device link to your "
@@ -5087,7 +5087,7 @@ msgstr ""
 "f&uuml;r Sie. Wie Sie dieses Symbol erzeugen, finden Sie in der "
 "&kde;-Benutzeranleitung."
 
-#: index.docbook:2877
+#: index.docbook:2875
 msgid ""
 "More information on mounting filesystems can be found by running "
 "<command>man fstab</command> and <command>man mount</command> respectively."
@@ -5096,11 +5096,11 @@ msgstr ""
 "wenn Sie die Befehle <command>man fstab</command> oder <command>man "
 "mount</command> ausf&uuml;hren."
 
-#: index.docbook:2885
+#: index.docbook:2883
 msgid "Does &kde; have terminal emulators with transparent background?"
 msgstr "Hat &kde; Terminal-Emulatoren mit transparentem Hintergrund?"
 
-#: index.docbook:2889
+#: index.docbook:2887
 msgid ""
 "Yes and no. &konsole; has the ability to simulate transparency by redrawing "
 "the background of the window inside the &konsole; window. This gives the "
@@ -5116,7 +5116,7 @@ msgstr ""
 "url=\"http://www.eterm.org\">Eterm</ulink> sollte ohne Probleme "
 "funktionieren, wenn Sie mehr Transparenz wollen."
 
-#: index.docbook:2900
+#: index.docbook:2898
 msgid ""
 "Is there a way to get various kinds of information about my drive contents: "
 "free space, directory size, <abbrev>etc.</abbrev>?"
@@ -5125,7 +5125,7 @@ msgstr ""
 "Laufwerke zu erfahren: freier Platz, Verzeichnisgr&ouml;&szlig;e "
 "<abbrev>usw.</abbrev>?"
 
-#: index.docbook:2904
+#: index.docbook:2902
 msgid ""
 "The &kde; control panel will let you look at each drive and will give you "
 "information concerning free space, space used, <abbrev>etc.</abbrev> To "
@@ -5145,12 +5145,12 @@ msgstr ""
 "Gr&ouml;&szlig;e des Verzeichnisses und der darin vorhandenen "
 "Unterverzeichnisse - wenn vorhanden."
 
-#: index.docbook:2919
+#: index.docbook:2917
 msgid "How can I get &Backspace; to work correctly under &kde;?"
 msgstr ""
 "Wie stellen Sie die korrekte Funktion der &Backspace;-Taste unter &kde; ein?"
 
-#: index.docbook:2922
+#: index.docbook:2920
 msgid ""
 "Try running <command>xmodmap <option>-e 'keycode 22 = "
 "BackSpace'</option></command> and see if that fixes it (applications will "
@@ -5163,13 +5163,13 @@ msgstr ""
 "&Auml;nderungen wirksam werden). Wenn ja, dann k&ouml;nnen Sie diesen Befehl "
 "einfach in Ihrer X-Startup-Datei wie <filename>.xinitrc</filename> eintragen."
 
-#: index.docbook:2926
+#: index.docbook:2924
 msgid "Or simply upgrade to XFree86-3.3.3.1-1 and above."
 msgstr ""
 "Eine andere M&ouml;glichkeit ist, auf XFree86-3.3.3.1-1 oder h&ouml;her zu "
 "wechseln."
 
-#: index.docbook:2927
+#: index.docbook:2925
 msgid ""
 "Also, concerning the &Backspace;-Bug (Bug number: kb704): the bug is fixed "
 "somehow by putting the following line into "
@@ -5179,11 +5179,11 @@ msgstr ""
 "somehow by putting the following line into "
 "<filename>$<envar>HOME</envar>/.xinitrc</filename>:"
 
-#: index.docbook:2927
+#: index.docbook:2925
 msgid "xmodmap -  \"keysym Delete = BackSpace\""
 msgstr "xmodmap -  \"keysym Delete = BackSpace\""
 
-#: index.docbook:2939
+#: index.docbook:2937
 msgid ""
 "How do I create icons for non-&kde; applications that I can put in the "
 "<guimenu>K</guimenu> menu? Where do these icons (or kdelnk) go?"
@@ -5192,7 +5192,7 @@ msgstr ""
 "<guimenu>K</guimenu>-Men&uuml; einf&uuml;gen k&ouml;nnen? Wo werden diese "
 "Symbole (oder kdelnk's) gespeichert?"
 
-#: index.docbook:2944
+#: index.docbook:2942
 msgid ""
 "Create using your favorite image manipulator, for example, "
 "<application>GIMP</application>, and put them in <filename "
@@ -5216,22 +5216,22 @@ msgstr ""
 "url=\"http://w1.1358.telia.com/~u135800018/prog.html#KICONEDIT\"> "
 "http://w1.1358.telia.com/~u135800018/prog.html#KICONEDIT</ulink>."
 
-#: index.docbook:2959
+#: index.docbook:2957
 msgid ""
 "What about &kde; programs that do not have icons? How do I get them into the "
 "menu?"
 msgstr ""
 "Wie bekommen Sie &kde;-Programme, die keine Symbole haben, in das Men&uuml;?"
 
-#: index.docbook:2963
+#: index.docbook:2961
 msgid "Use &kmenuedit;."
 msgstr "Benutzen Sie &kmenuedit;."
 
-#: index.docbook:2969
+#: index.docbook:2967
 msgid "Does &kde; have a graphical &FTP; client?"
 msgstr "Hat &kde; einen graphischen &FTP;-Client?"
 
-#: index.docbook:2972
+#: index.docbook:2970
 msgid ""
 "Yes, and in &kde; 1.x it is none other than your favorite file manager, "
 "&kfm;! You can drag and drop remote files into local directories. There is "
@@ -5249,15 +5249,15 @@ msgstr ""
 "einfach in <application>KGet</application> ziehen, aber Sie k&ouml;nnen "
 "dieses nicht zum Browsen in &FTP;-Servern verwenden)."
 
-#: index.docbook:2979
+#: index.docbook:2977
 msgid "For &kde; 2, please use &konqueror; instead."
 msgstr "F&uuml;r &kde; 2, nutzen Sie &konqueror;."
 
-#: index.docbook:2985
+#: index.docbook:2983
 msgid "How do I exit &kde;?"
 msgstr "Wie verlassen Sie &kde;?"
 
-#: index.docbook:2988
+#: index.docbook:2986
 msgid ""
 "Simply click on the <guibutton>K</guibutton> button and select "
 "<guimenu>Logout</guimenu>. In addition, if you "
@@ -5270,7 +5270,7 @@ msgstr ""
 "Arbeitsfl&auml;che klicken, was ein Men&uuml; &ouml;ffnet, das Ihnen unter "
 "anderem den Punkt <guimenu>Abmelden...</guimenu> anbietet."
 
-#: index.docbook:2988
+#: index.docbook:2986
 msgid ""
 "<keycombo action=\"simul\">&Ctrl;&Alt;&Backspace;</keycombo> will also do "
 "the trick by killing the X server, but its use prevents session management."
@@ -5278,7 +5278,7 @@ msgstr ""
 "<keycombo action=\"simul\">&Ctrl;&Alt;&Backspace;</keycombo> will also do "
 "the trick by killing the X server, but its use prevents session management."
 
-#: index.docbook:3002
+#: index.docbook:3000
 msgid ""
 "Is there a program that checks for new mails at my <acronym>ISP</acronym> if "
 "and only if I am online?"
@@ -5286,7 +5286,7 @@ msgstr ""
 "Gibt es ein Programm, das nachsieht, ob neue E-Mail angekommen ist und dies "
 "nur tut, wenn das System online ist?"
 
-#: index.docbook:3006
+#: index.docbook:3004
 msgid ""
 "Either &kbiff; or &korn; will do the job. If you are not connected, they "
 "will just sit there (idling)."
@@ -5294,11 +5294,11 @@ msgstr ""
 "&kbiff; oder &korn; k&ouml;nnen dies. Wenn das System nicht mit dem Internet "
 "verbunden ist, wartet jedes der beiden nur ab."
 
-#: index.docbook:3013
+#: index.docbook:3011
 msgid "Is it really necessary to upgrade to the latest version?"
 msgstr "Ist es wirklich n&ouml;tig, die letze Version zu benutzen?"
 
-#: index.docbook:3016
+#: index.docbook:3014
 msgid ""
 "Not really. If you are happy with your &kde; right now, there is absolutly "
 "no reason to change. If, however, you want a more polished environment, an "
@@ -5309,15 +5309,15 @@ msgstr ""
 "Verbesserungen, schnellere Ausf&uuml;hrung und mehr Funktionen wollen, dann "
 "sollten Sie die neueste stabile Version verwenden."
 
-#: index.docbook:3025
+#: index.docbook:3023
 msgid "How do I copy and paste in &kde;?"
 msgstr "Wie k&ouml;nnen Sie Kopieren und Einf&uuml;gen in &kde;?"
 
-#: index.docbook:3028
+#: index.docbook:3026
 msgid "The simplest method is to use your mouse:"
 msgstr "Die einfachste Methode ist das Benutzen der Maus:"
 
-#: index.docbook:3029
+#: index.docbook:3027
 msgid ""
 "Highlight the text you want to copy by holding down the &LMB; and dragging "
 "across the text."
@@ -5325,7 +5325,7 @@ msgstr ""
 "Markieren Sie den Text, den Sie kopieren m&ouml;chten, durch Festhalten der "
 "linken Maustaste und Ziehen des Cursors &uuml;ber den Text."
 
-#: index.docbook:3029
+#: index.docbook:3027
 msgid ""
 "Go to the destination area; depending on your configuration, you might need "
 "to click it using the &LMB; to give it focus."
@@ -5334,7 +5334,7 @@ msgstr ""
 "m&ouml;chten - eventuell m&uuml;ssen Sie hier die linke Maustaste einmal "
 "klicken, um die Anwendung in den vordergrund zu holen."
 
-#: index.docbook:3029
+#: index.docbook:3027
 msgid ""
 "Click the &MMB; to paste. If you have a two button mouse and are emulating a "
 "three button mouse, push both buttons simultaneously."
@@ -5343,7 +5343,7 @@ msgstr ""
 "eine Zweitastenmaus verwenden, dann wird dieses durch Dr&uuml;cken von "
 "beiden Maustasten gleichzeitig emuliert."
 
-#: index.docbook:3044
+#: index.docbook:3042
 msgid ""
 "How do I convert the default &RedHat; menus into a menu in the "
 "<guimenu>K</guimenu> menu?"
@@ -5351,7 +5351,7 @@ msgstr ""
 "Wie k&ouml;nnen Sie die Standard &RedHat;-Men&uuml;s in das "
 "<guimenu>K</guimenu>-Men&uuml; umwandeln?"
 
-#: index.docbook:3048
+#: index.docbook:3046
 msgid ""
 "Click on the <guibutton>K</guibutton> button and select "
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Appfinder</guimenuitem></me"
@@ -5361,11 +5361,11 @@ msgstr ""
 "<menuchoice><guimenu>System</guimenu><guimenuitem>Anwendungssuche</guimenuite"
 "m> </menuchoice>."
 
-#: index.docbook:3055
+#: index.docbook:3053
 msgid "What is <acronym>CVS</acronym>?"
 msgstr "Was ist <acronym>CVS</acronym>?"
 
-#: index.docbook:3058
+#: index.docbook:3056
 msgid ""
 "It stands for Concurrent Versions System. It is a version control system and "
 "is based on <acronym>RCS</acronym> (Revision Control System), but offers "
@@ -5391,11 +5391,11 @@ msgstr ""
 "freie Nutzung erlaubt, ist es das System der Wahl, wenn Leute sich "
 "zusammenfinden, um freie Software wie &kde; zu entwickeln."
 
-#: index.docbook:3074
+#: index.docbook:3072
 msgid "Does &kde; support dual screen (Xinerama)?"
 msgstr "Unterst&uuml;tzt &kde; zwei Bildschirme (Xinerama)?"
 
-#: index.docbook:3077
+#: index.docbook:3075
 msgid ""
 "You need to have the a multi-headed X server (<abbrev>e.g.</abbrev> MetroX "
 "or XFree86 4.0 and above) and a window manager that understands multi-headed "
@@ -5406,11 +5406,11 @@ msgstr ""
 "Fenstermanager, der sogenanntes multi-headed Display versteht "
 "(<abbrev>z.B.</abbrev> &windowmaker;)."
 
-#: index.docbook:3086
+#: index.docbook:3084
 msgid "How do I check which version of &kde; I am using?"
 msgstr "Wie finden Sie heraus, welche Version von &kde; Sie nutzen?"
 
-#: index.docbook:3089
+#: index.docbook:3087
 msgid ""
 "Fire up your <application>&kde; Control Center</application>. If there is no "
 "mention of a version on the first screen, you have version 1.0 (and it is "
@@ -5420,11 +5420,11 @@ msgstr ""
 "dort keine Versionsanzeige auf dem ersten Bildschirm gibt dann nutzen Sie "
 "Version 1.0 (und es ist Zeit zum Wechseln!)."
 
-#: index.docbook:3098
+#: index.docbook:3096
 msgid "Can I write commerical software for &kde;?"
 msgstr "K&ouml;nnen Sie kommerzielle Software f&uuml;r &kde; schreiben?"
 
-#: index.docbook:3101
+#: index.docbook:3099
 msgid ""
 "You can use the &kde; libraries to write \"commercial and closed source\" as "
 "well as \"commercial and open source\" software. If you write open source "
@@ -5440,7 +5440,7 @@ msgstr ""
 "eine Lizenz f&uuml;r die Professional Edition von &Qt; von Troll Tech "
 "erwerben."
 
-#: index.docbook:3106
+#: index.docbook:3104
 msgid ""
 "If you want more information, please contact <ulink "
 "url=\"http://www.trolltech.com\">Troll Tech</ulink> directly."
@@ -5449,7 +5449,7 @@ msgstr ""
 "url=\"http://www.trolltech.com\">Troll Tech</ulink> auf, wenn Sie "
 "n&auml;here Einzelheiten wissen m&ouml;chten."
 
-#: index.docbook:3113
+#: index.docbook:3111
 msgid ""
 "Why does <application>&kde; Control Center</application> report my &kde; "
 "version as 2.0pre even though I have downloaded the newest version?"
@@ -5457,28 +5457,28 @@ msgstr ""
 "Warum zeigt das <application>&kde;-Kontrollzentrum</application> Ihre "
 "Version als 2.0pre an, obwohl Sie die neueste Version benutzen?"
 
-#: index.docbook:3118
+#: index.docbook:3116
 msgid "It is a bug and has since been fixed in the <acronym>CVS</acronym>."
 msgstr ""
 "Dies ist ein Fehler und ist im <acronym>CVS</acronym> in Ordnung gebracht "
 "worden."
 
-#: index.docbook:3125
+#: index.docbook:3123
 msgid "How do I go about creating themes and icons?"
 msgstr "Wie erzeugen Sie neue Designs und Symbole?"
 
-#: index.docbook:3128
+#: index.docbook:3126
 msgid ""
 "Go see <ulink url=\"http://artist.kde.org\">http://artist.kde.org</ulink>."
 msgstr ""
 "Sehen Sie sich <ulink "
 "url=\"http://artist.kde.org\">http://artist.kde.org</ulink> an."
 
-#: index.docbook:3135
+#: index.docbook:3133
 msgid "Is <application>KLyX</application> dead?"
 msgstr "Ist die Anwendung <application>KLyX</application> aufgegeben?"
 
-#: index.docbook:3138
+#: index.docbook:3136
 msgid ""
 "Yes. But future versions of <application>LyX</application> will be &GUI; "
 "independent. Check the progress of the various &GUI; frontends <ulink "
@@ -5488,11 +5488,11 @@ msgstr ""
 "&GUI;-unabh&auml;ngig sein. Sie finden Informationen hierzu unter: <ulink "
 "url=\"http://devel.lyx.org/guii.php3\">here</ulink>."
 
-#: index.docbook:3146
+#: index.docbook:3144
 msgid "How can I get to know about development updates?"
 msgstr "Wie erfahren Sie neue Entwicklungsschritte?"
 
-#: index.docbook:3149
+#: index.docbook:3147
 msgid ""
 "You might want to subscribe to the various &kde; mailing lists available, "
 "especially kde-cvs, which lists all commits done to the &kde; "
@@ -5506,15 +5506,15 @@ msgstr ""
 "url=\"http://lists.kde.org\">http://lists.kde.org</ulink> nach, wenn Sie "
 "diese Informationen lesen wollen, ohne die Listen zu abbonnieren."
 
-#: index.docbook:3160
+#: index.docbook:3158
 msgid "Not really &kde;-related, but frequently asked nevertheless :-)"
 msgstr "Nicht wirklich &kde;-bezogen, aber trotzdem oft gefragt"
 
-#: index.docbook:3166
+#: index.docbook:3164
 msgid "How do I change the screen resolution?"
 msgstr "Wie schalten sie die Bildschirmaufl&ouml;sung um?"
 
-#: index.docbook:3169
+#: index.docbook:3167
 msgid ""
 "Use <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>+</keycap></keycombo> and "
 "<keycombo action=\"simul\">&Ctrl;&Alt;<keycap>-</keycap></keycombo> to cycle "
@@ -5533,7 +5533,7 @@ msgstr ""
 "Aufl&ouml;sung als erste in der Datei anordnen (oder als einzige darin "
 "stehen lassen), startet &X; immer mit dieser Aufl&ouml;sung."
 
-#: index.docbook:3169
+#: index.docbook:3167
 msgid ""
 "Always make a backup copy of your <filename>XF86Config</filename> file "
 "<emphasis>before</emphasis> you start editing it. Errors in this file can "
@@ -5543,7 +5543,7 @@ msgstr ""
 "<emphasis>before</emphasis> you start editing it. Errors in this file can "
 "render your &X; unusable."
 
-#: index.docbook:3169
+#: index.docbook:3167
 msgid ""
 "These instructions are only valid if you are running version 3.3.x of the "
 "XFree86 server. If you are running XFree86 4.x, you must consult with the "
@@ -5553,11 +5553,11 @@ msgstr ""
 "XFree86 server. If you are running XFree86 4.x, you must consult with the "
 "<ulink url=\"http://xfree.org\">XFree86(TM): Home Page</ulink>."
 
-#: index.docbook:3190
+#: index.docbook:3188
 msgid "How do I change the color depth?"
 msgstr "Wie &auml;ndern Sie die Farbtiefe?"
 
-#: index.docbook:3193
+#: index.docbook:3191
 msgid ""
 "AFAIK, there is no way you can do it on the fly. You can either start the "
 "&X; using <command>startx <option> -bpp "
@@ -5579,7 +5579,7 @@ msgstr ""
 "die Zeile <userinput>:0 local /usr/X11R6/bin/X -bpp 16</userinput> "
 "hinzuf&uuml;gen, um die Farbtiefe 16 einzustellen."
 
-#: index.docbook:3203
+#: index.docbook:3201
 msgid ""
 "Alternatively, you can edit the <filename>XF86Config</filename> file and add "
 "a line like <userinput>DefaultColorDepth "
@@ -5592,11 +5592,11 @@ msgstr ""
 "zur Section \"Screen\" hinzuf&uuml;gen. Beim n&auml;chsten Start l&auml;uft "
 "&X; dann mit der neuen Farbtiefe."
 
-#: index.docbook:3213
+#: index.docbook:3211
 msgid "What can I do if I am using a 2-button mouse?"
 msgstr "K&ouml;nnen Sie auch mit einer Zweitastenmaus arbeiten?"
 
-#: index.docbook:3216
+#: index.docbook:3214
 msgid ""
 "Go buy a 3-button one, or use third button emulation. The third button is "
 "emulated by pressing both the &LMB; and the &RMB; together. You would need "
@@ -5609,11 +5609,11 @@ msgstr ""
 "<filename>XF86Config</filename> mit der Option "
 "<option>Emulate3Buttons</option> eingestellt sein."
 
-#: index.docbook:3225
+#: index.docbook:3223
 msgid "What is a \"sticky\" window?"
 msgstr "Was ist ein \"sticky\" Fenster?"
 
-#: index.docbook:3228
+#: index.docbook:3226
 msgid ""
 "In a virtual desktop environment with multiple virtual desktops, a "
 "\"sticky\" window will stay put on the screen when you switch between "
@@ -5627,11 +5627,11 @@ msgstr ""
 "des Monitors kleben. <application>Xclock</application> ist ein typischer "
 "Kandidat f&uuml;r die Nutzung dieser Eigenschaft."
 
-#: index.docbook:3239
+#: index.docbook:3237
 msgid "How do I replace the \"X\" mouse pointer with an arrow?"
 msgstr "Wie ersetzen Sie den \"X\"-Mauszeiger mit einem Pfeil?"
 
-#: index.docbook:3242
+#: index.docbook:3240
 msgid ""
 "The various types of cursor available in X are defined in <filename "
 "class=\"headerfile\">X11/cursorfont.h</filename>. You can change it using "
@@ -5646,11 +5646,11 @@ msgstr ""
 "ausf&uuml;hren. Zum Beispiel steht in meiner Datei "
 "<filename>.Xclients</filename>:"
 
-#: index.docbook:3247
+#: index.docbook:3245
 msgid "xsetroot -cursor_name left_ptr"
 msgstr "xsetroot -cursor_name left_ptr"
 
-#: index.docbook:3250
+#: index.docbook:3248
 msgid ""
 "This will create the common left-angled pointer. To see other alternatives, "
 "type <command>xfd -fn cursor</command>. And of course, do not forget that "
@@ -5661,11 +5661,11 @@ msgstr ""
 "Vergessen Sie nicht, mit <command>man xsetroot</command> um Rat zu fragen, "
 "wenn Sie hier nicht weiterwissen."
 
-#: index.docbook:3259
+#: index.docbook:3257
 msgid "How do I extract/install diff files?"
 msgstr "Wie entpacken/installieren Sie diff-Dateien?"
 
-#: index.docbook:3262
+#: index.docbook:3260
 msgid ""
 "To generate a context-diff suitable for patching, use <command>diff "
 "<replaceable>old-file new-file</replaceable> > "
@@ -5681,7 +5681,7 @@ msgstr ""
 "file\"), f&uuml;hren Sie den Befehl <command>patch &lt; "
 "<replaceable>patchfile</replaceable></command> aus."
 
-#: index.docbook:3272
+#: index.docbook:3270
 msgid ""
 "How do I get &Linux; to mount the floppy device both in dos and ext2 "
 "floppies?"
@@ -5689,7 +5689,7 @@ msgstr ""
 "Wie &uuml;berzeugen Sie &Linux; sowohl ext2- als auch dos-Disketten zu "
 "mounten?"
 
-#: index.docbook:3276
+#: index.docbook:3274
 msgid ""
 "Just specify the filesystem type as auto in <filename>/etc/fstab</filename>. "
 "Auto detection works fine for dos and ext2."
@@ -5698,11 +5698,11 @@ msgstr ""
 "<filename>/etc/fstab</filename> angeben. Dann wird der Typ der Diskette beim "
 "Mounten automatisch erkannt."
 
-#: index.docbook:3284
+#: index.docbook:3282
 msgid "How do I start &kde; with the <keycap>Num Lock</keycap> on?"
 msgstr "Wie starten Sie &kde; mit <keycap>Num Lock</keycap> ein?"
 
-#: index.docbook:3287
+#: index.docbook:3285
 msgid ""
 "Have you tried <command>man setleds</command>? In addition, you might want "
 "to edit your <filename>$<envar>HOME</envar>/.Xmodmap</filename> and put the "
@@ -5713,7 +5713,7 @@ msgstr ""
 "<filename>$<envar>HOME</envar>/.Xmodmap</filename> editieren und die "
 "folgenden Zeilen darin einf&uuml;gen:"
 
-#: index.docbook:3291
+#: index.docbook:3289
 msgid ""
 "! redefines numeric keypad to be used without NumLock\n"
 "keycode 79 = 7\n"
@@ -5755,11 +5755,11 @@ msgstr ""
 "! deactivates NumLock key\n"
 "keycode 77 ="
 
-#: index.docbook:3312
+#: index.docbook:3310
 msgid "Other possible alternatives:"
 msgstr "Andere m&ouml;gliche Alternativen:"
 
-#: index.docbook:3313
+#: index.docbook:3311
 msgid ""
 "<application>xkeycaps</application>: <mousebutton>right</mousebutton> "
 "clicking should allow edits. May have to do this as root."
@@ -5769,12 +5769,12 @@ msgstr ""
 "erlauben. Es kann sein, dass dies nur mit Systemverwalterrechten "
 "m&ouml;glich ist."
 
-#: index.docbook:3313
+#: index.docbook:3311
 msgid "<command>man XF86Config</command> and look under section Keyboard."
 msgstr ""
 "<command>man XF86Config</command> und sehen Sie unter Sektion Keyboard nach."
 
-#: index.docbook:3313
+#: index.docbook:3311
 msgid ""
 "Install <application>NumLockX</application> which is available from <ulink "
 "url=\"http://dforce.sh.cvut.cz/~seli/en/numlockx\">http://dforce.sh.cvut.cz/~"
@@ -5785,19 +5785,19 @@ msgstr ""
 "url=\"http://dforce.sh.cvut.cz/~seli/en/numlockx\">http://dforce.sh.cvut.cz/~"
 "seli/ en/numlockx</ulink> finden."
 
-#: index.docbook:3328
+#: index.docbook:3326
 msgid "How do I take window or desktop screenshots?"
 msgstr "Wie bekommen Sie Bildschirmfotos?"
 
-#: index.docbook:3331
+#: index.docbook:3329
 msgid "Use &ksnapshot;."
 msgstr "Benutzen Sie &ksnapshot;."
 
-#: index.docbook:3337
+#: index.docbook:3335
 msgid "Is there a tool to make webpages?"
 msgstr "Gibt es eine Anwendung zum Erstellen von Webseiten?"
 
-#: index.docbook:3340
+#: index.docbook:3338
 msgid ""
 "Yes, and there are a lot of them out there, including "
 "<application>StarOffice</application>, <application>&Netscape; "
@@ -5816,11 +5816,11 @@ msgstr ""
 "development</emphasis>. Probieren Sie so viele wie m&ouml;glich aus und "
 "entscheiden Sie sich f&uuml;r die Ihnen am meisten dienliche."
 
-#: index.docbook:3353
+#: index.docbook:3351
 msgid "What do all those acronyms like AFAIK mean?"
 msgstr "Was bedeuten alle diese Abk&uuml;rzungen wie AFAIK?"
 
-#: index.docbook:3356
+#: index.docbook:3354
 msgid ""
 "AAMOF: as a matter of fact\n"
 "AFAIK: as far as I know\n"
@@ -5868,15 +5868,15 @@ msgstr ""
 "TIA: thanks in advance\n"
 "YMMV: your mileage may vary"
 
-#: index.docbook:3386
+#: index.docbook:3384
 msgid "Getting more information"
 msgstr "Erhalten von weiterer Information"
 
-#: index.docbook:3391
+#: index.docbook:3389
 msgid "Where is the &kde; homepage?"
 msgstr "Wo ist die &kde; Homepage?"
 
-#: index.docbook:3394
+#: index.docbook:3392
 msgid ""
 "The &kde; homepage is located at <ulink "
 "url=\"http://www.kde.org\">http://www.kde.org</ulink>. If you prefer a local "
@@ -5892,11 +5892,11 @@ msgstr ""
 "url=\"http://www.kde.org/webmirrors.html\">http://www.kde.org/webmirrors.html"
 " </ulink>."
 
-#: index.docbook:3404
+#: index.docbook:3402
 msgid "Is there a &kde; mailing list?"
 msgstr "Gibt es eine &kde; Mailing Liste?"
 
-#: index.docbook:3407
+#: index.docbook:3405
 msgid ""
 "Well, there are more than one. Each focuses on a different aspect of &kde;. "
 "Some of them are for the developers, so they are not discussed in detail. "
@@ -5907,19 +5907,19 @@ msgstr ""
 "beschrieben. Einige der wichtigsten Listen sind:"
 
 # index.docbook:3414, index.docbook:3414
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "<term>kde</term>"
 msgstr "<term>kde</term>"
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "This is the main &kde; mailing list for general discussions."
 msgstr "Dies ist die &kde;-Hauptmailingliste f&uuml;r generelle Diskussionen."
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "kde-announce"
 msgstr "kde-announce"
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid ""
 "This list is used to announce new versions of &kde; as well as new tools and "
 "applications."
@@ -5927,19 +5927,19 @@ msgstr ""
 "Diese Liste wird zur Ank&uuml;ndigung von neuen Versionen von &kde; wie auch "
 "von neuen Werkzeugen und Anwendungen benutzt."
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "kde-user"
 msgstr "kde-user"
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "This list is intented for users helping other users."
 msgstr "Hier helfen &kde;-Nutzer anderen &kde;-Nutzern."
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "kde-look"
 msgstr "kde-look"
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid ""
 "This is the list that deals with questions of look and feel and general user "
 "interface considerations."
@@ -5947,16 +5947,16 @@ msgstr ""
 "Diese Liste behandelt Fragen des Erscheinungsbildes und generelle Fragen zur "
 "Nutzeroberfl&auml;che."
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid "kde-licensing"
 msgstr "kde-licensing"
 
-#: index.docbook:3411
+#: index.docbook:3409
 msgid ""
 "This list is devoted to discussions about the &kde; and &Qt; license issues."
 msgstr "Diese Liste ist Fragen der Lizensierung von &kde; und &Qt; gewidmet."
 
-#: index.docbook:3433
+#: index.docbook:3431
 msgid ""
 "For the complete list of mailing lists available, please refer to <ulink "
 "url=\"http://www.kde.org/contact.html\">http://www.kde.org/contact.html</ulin"
@@ -5966,7 +5966,7 @@ msgstr ""
 "url=\"http://www.kde.org/contact.html\">http://www.kde.org/contact.html</ulin"
 "k>."
 
-#: index.docbook:3436
+#: index.docbook:3434
 msgid ""
 "Please note that it is not a good idea to ask questions which are already "
 "answered in this <acronym>FAQ</acronym>."
@@ -5975,50 +5975,50 @@ msgstr ""
 "Mailinglisten Fragen stellen, die in einer <acronym>FAQ</acronym> "
 "beantwortet werden."
 
-#: index.docbook:3443
+#: index.docbook:3441
 msgid "How do I subscribe/unsubscribe to these lists?"
 msgstr "Wie abonnieren Sie Mailing Listen / bestellen Sie diese wieder ab?"
 
-#: index.docbook:3446
+#: index.docbook:3444
 msgid "All lists are available via the university of T&uuml;bingen."
 msgstr ""
 "Alle Listen sind &uuml;ber die Universit&auml;t von T&uuml;bingen erreichbar."
 
-#: index.docbook:3447
+#: index.docbook:3445
 msgid "To subscribe"
 msgstr "Zum Abonnieren:"
 
 # index.docbook:3450, index.docbook:3465
-#: index.docbook:3448 index.docbook:3463
+#: index.docbook:3446 index.docbook:3461
 msgid "Send an email to list-request, that is:"
 msgstr "Senden Sie eine E-Mmail an list-request, das ist im Einzelnen:"
 
 # index.docbook:3452, index.docbook:3467
-#: index.docbook:3449 index.docbook:3464
+#: index.docbook:3447 index.docbook:3462
 msgid "kde-request@kde.org"
 msgstr "kde-request@kde.org"
 
 # index.docbook:3454, index.docbook:3468
-#: index.docbook:3449 index.docbook:3464
+#: index.docbook:3447 index.docbook:3462
 msgid "kde-announce-request@kde.org"
 msgstr "kde-announce-request@kde.org"
 
 # index.docbook:3455, index.docbook:3469
-#: index.docbook:3449 index.docbook:3464
+#: index.docbook:3447 index.docbook:3462
 msgid "kde-user-request@kde.org"
 msgstr "kde-user-request@kde.org"
 
 # index.docbook:3457, index.docbook:3470
-#: index.docbook:3449 index.docbook:3464
+#: index.docbook:3447 index.docbook:3462
 msgid "kde-look-request@kde.org"
 msgstr "kde-look-request@kde.org"
 
 # index.docbook:3458, index.docbook:3471
-#: index.docbook:3449 index.docbook:3464
+#: index.docbook:3447 index.docbook:3462
 msgid "kde-licensing-request@kde.org"
 msgstr "kde-licensing-request@kde.org"
 
-#: index.docbook:3459
+#: index.docbook:3457
 msgid ""
 "The email must contain <userinput>subscribe "
 "<replaceable>your_email_address</replaceable></userinput> in the subject."
@@ -6027,11 +6027,11 @@ msgstr ""
 "<replaceable>Ihre_E-Mail_Adresse</replaceable></userinput> in der "
 "Betreff-Zeile."
 
-#: index.docbook:3462
+#: index.docbook:3460
 msgid "To unsubscribe"
 msgstr "Zum Abbestellen:"
 
-#: index.docbook:3471
+#: index.docbook:3469
 msgid ""
 "The email must contain <userinput>unsubscribe "
 "<replaceable>your_email_address</replaceable></userinput> in the subject."
@@ -6039,7 +6039,7 @@ msgstr ""
 "The email must contain <userinput>unsubscribe "
 "<replaceable>your_email_address</replaceable></userinput> in the subject."
 
-#: index.docbook:3471
+#: index.docbook:3469
 msgid ""
 "Never send subscribe/unsubscribe request to the mailing lists directly! Use "
 "the list-request instead."
@@ -6047,7 +6047,7 @@ msgstr ""
 "Never send subscribe/unsubscribe request to the mailing lists directly! Use "
 "the list-request instead."
 
-#: index.docbook:3477
+#: index.docbook:3475
 msgid ""
 "There is also a complete list of all &kde;-related mailing lists, and a web "
 "interface for subscribing and unsubscribing located at <ulink "
@@ -6060,11 +6060,11 @@ msgstr ""
 "url=\"http://master.kde.org/mailman/listinfo\">http://master.kde.org/mailman/"
 "listinfo </ulink>."
 
-#: index.docbook:3485
+#: index.docbook:3483
 msgid "Is there a mailing list archive?"
 msgstr "Gibt es Archive der Mailing Listen?"
 
-#: index.docbook:3488
+#: index.docbook:3486
 msgid ""
 "Yes, there is a searchable mailing list archive hosted by <ulink "
 "url=\"http://www.progressive-comp.com\">Progressive Computer "
@@ -6082,7 +6082,7 @@ msgstr ""
 "Niveau nur eine Suche nach Betreff oder Autor durchf&uuml;hren k&ouml;nnen. "
 "Sie werden damit wahrscheinlich nicht finden, was Sie suchen."
 
-#: index.docbook:3495
+#: index.docbook:3493
 msgid ""
 "To do a body search, you have to enter one of the mailing lists. Just click "
 "on the folder you want to search (<abbrev>e.g.</abbrev> \"kde\" or "
@@ -6098,11 +6098,11 @@ msgstr ""
 "sollten Sie wenigstens die Listen \"kde\", \"kde-user\" und \"kde-devel\" "
 "durchsuchen."
 
-#: index.docbook:3505
+#: index.docbook:3503
 msgid "Is there a newsgroup about &kde;?"
 msgstr "Gibt es eine Newsgroup &uuml;ber &kde;?"
 
-#: index.docbook:3508
+#: index.docbook:3506
 msgid ""
 "Yes, there is! It is at <literal>comp.windows.x.kde</literal>. In addition, "
 "there is also a German newsgroup at <literal>de.alt.comp.kde</literal>. "
@@ -6115,39 +6115,39 @@ msgstr ""
 "unh&ouml;flich gilt, Fragen zu stellen, die in einer <acronym>FAQ</acronym> "
 "eantwortet werden."
 
-#: index.docbook:3517
+#: index.docbook:3515
 msgid "Are there any other &kde;-related <acronym>FAQ</acronym>s?"
 msgstr "Gibt es andere &kde;-bezogene <acronym>FAQ</acronym>'s?"
 
-#: index.docbook:3521
+#: index.docbook:3519
 msgid "Yes. Here is a list of them:"
 msgstr "Ja. Hier ist eine - wahrscheinlich unvollst&auml;ndige Liste:"
 
-#: index.docbook:3522
+#: index.docbook:3520
 msgid "&kde; 2.0 <acronym>FAQ</acronym>"
 msgstr "&kde; 2.0 <acronym>FAQ</acronym>"
 
-#: index.docbook:3522
+#: index.docbook:3520
 msgid "&konqueror; <acronym>FAQ</acronym>"
 msgstr "&konqueror; <acronym>FAQ</acronym>"
 
-#: index.docbook:3522
+#: index.docbook:3520
 msgid "aRts sound server <acronym>FAQ</acronym>"
 msgstr "aRts Sound Server <acronym>FAQ</acronym>"
 
-#: index.docbook:3522
+#: index.docbook:3520
 msgid "&kmail; <acronym>FAQ</acronym>"
 msgstr "&kmail; <acronym>FAQ</acronym>"
 
-#: index.docbook:3543
+#: index.docbook:3541
 msgid "Contributing"
 msgstr "Mithelfen"
 
-#: index.docbook:3548
+#: index.docbook:3546
 msgid "How can I contribute to &kde;?"
 msgstr "Wie k&ouml;nnen Sie bei &kde; mithelfen?"
 
-#: index.docbook:3551
+#: index.docbook:3549
 msgid ""
 "&kde; is a free software project that lives from voluntary contributions. "
 "Everybody is encouraged to contribute to &kde;. Not only programmers are "
@@ -6159,11 +6159,11 @@ msgstr ""
 "sind willkommen. Es gibt jede Menge andere Wege, um mitzuhelfen, &kde; zu "
 "verbessern:"
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid "Test the software."
 msgstr "Testen Sie die Software."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid ""
 "Send in bug reports. For more information on this, see <link "
 "linkend=\"bug-report\">How do I commit a bug report?</link>."
@@ -6172,7 +6172,7 @@ msgstr ""
 "unter <link linkend=\"bug-report\">Wie verfassen Sie einen "
 "Fehlerbericht?</link> nach."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid ""
 "Write documentation or help files. You can get some information by visiting "
 "the <ulink url=\"http://i18n.kde.org/teams/en/index.html\">&kde; Editorial "
@@ -6183,7 +6183,7 @@ msgstr ""
 "url=\"http://i18n.kde.org/teams/en/index.html\">&kde; Editorial Team Home "
 "Page</ulink>."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid ""
 "Translate programs, documentation, and help files. For more information on "
 "this, you should visit <ulink url=\"http://i18n.kde.org\">The &kde; "
@@ -6195,7 +6195,7 @@ msgstr ""
 "unter <ulink url=\"http://i18n.kde.org/teams/de\">KDE "
 "&Uuml;bersetzungsprojekt: Deutsch</ulink>."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid ""
 "Draw nice icons or compose sound effects. You can visit the <ulink "
 "url=\"http://www.kde.org/artist/index.html\">&kde; artists page</ulink> to "
@@ -6206,7 +6206,7 @@ msgstr ""
 "url=\"http://www.kde.org/artist/index.html\">&kde; "
 "K&uuml;nstlerseite</ulink> besuchen, um mehr dar&uuml;ber herauszufinden."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid ""
 "Write articles and books about &kde;. If you want to help spread the word "
 "about &kde;, simply send an email to <email>kde-pr@kde.org</email>. This "
@@ -6217,7 +6217,7 @@ msgstr ""
 "<email>kde-pr@kde.org</email>. Die Freiwilligen Helfer f&uuml;r "
 "&Ouml;ffentlichkeitsarbeit werden sich dann um Sie k&uuml;mmern."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid ""
 "Program new &kde; applications. Please refer to <xref "
 "linkend=\"programming\"/> for more information."
@@ -6225,11 +6225,11 @@ msgstr ""
 "Programmieren Sie neue &kde; Anwendungen. Bitte sehen Sie unter <xref "
 "linkend=\"programming\"/> f&uuml;r weitere Informationen nach."
 
-#: index.docbook:3555
+#: index.docbook:3553
 msgid "Of course, sponsors are also welcome. :-)"
 msgstr "Sponsoren sind nat&uuml;rlich auch sehr willkommen. :-)"
 
-#: index.docbook:3580
+#: index.docbook:3578
 msgid ""
 "There are several places to look for more information if you want to get "
 "involved in the development. The first step is to subscribe to some of the "
@@ -6240,11 +6240,11 @@ msgstr ""
 "Mailing Listen. Dort werden Sie sicher bald etwas sehen, was verbessert "
 "werden k&ouml;nnte oder auch noch ganz fehlt."
 
-#: index.docbook:3589
+#: index.docbook:3587
 msgid "How do I commit a bug report?"
 msgstr "Wie senden Sie einen Fehlerbericht?"
 
-#: index.docbook:3592
+#: index.docbook:3590
 msgid ""
 "There is an automatic bug tracking system available at <ulink "
 "url=\"http://buglist.kde.org\">http://buglist.kde.org</ulink>. The system "
@@ -6259,7 +6259,7 @@ msgstr ""
 "Verf&uuml;gung. Bitte sehen Sie erst die Liste mit den bekannten Fehlern "
 "durch, bevor Sie einen neuen Fehler berichten."
 
-#: index.docbook:3597
+#: index.docbook:3595
 msgid ""
 "If you are using &kde; 2, the easiest way to commit a new bug if it has not "
 "already been reported is to select "
@@ -6287,13 +6287,13 @@ msgstr ""
 "Betriebssystem und Systemarchitektur (Hardware), sowie die Versionsangaben "
 "zu &X; und &kde;."
 
-#: index.docbook:3612
+#: index.docbook:3610
 msgid "I want to program for &kde;. What should I do first?"
 msgstr ""
 "Wo sollten Sie beginnen, wenn Sie ein Programm f&uuml;r &kde; schreiben "
 "wollen?"
 
-#: index.docbook:3615
+#: index.docbook:3613
 msgid ""
 "Everybody is encouraged to develop software for &kde;. What you should do "
 "first depends strongly on your experience, <abbrev>e.g.</abbrev> whether you "
@@ -6304,7 +6304,7 @@ msgstr ""
 "<abbrev>z.B.</abbrev> ob Sie schon C++ gelernt haben oder ob Sie Erfahrungen "
 "mit &Qt; haben usw."
 
-#: index.docbook:3619
+#: index.docbook:3617
 msgid ""
 "To get into &kde; programming, you will need some basic tools: "
 "<application>automake</application>, <application>autoconf</application>, "
@@ -6323,7 +6323,7 @@ msgstr ""
 "url=\"http://www.ph.unimelb.edu.au/~ssk/kde/devel/\">http://www.ph.unimelb.ed"
 "u.au/ ~ssk/kde/devel/</ulink>."
 
-#: index.docbook:3627
+#: index.docbook:3625
 msgid ""
 "Another excellent resource for learning &kde; programming is the &Qt; online "
 "tutorials. These are installed along with &Qt;. To view them, open "
@@ -6341,7 +6341,7 @@ msgstr ""
 "class=\"directory\" "
 "moreinfo=\"none\">$<envar>QTDIR</envar>/tutorial</filename> directory."
 
-#: index.docbook:3637
+#: index.docbook:3635
 msgid ""
 "There is, however, one thing that everybody interested in programming for "
 "&kde; should do: <emphasis>subscribe to the developers mailing "
@@ -6357,7 +6357,7 @@ msgstr ""
 "with the subject <userinput>subscribe "
 "<replaceable>your_email_address</replaceable></userinput>."
 
-#: index.docbook:3637
+#: index.docbook:3635
 msgid ""
 "Please read <link linkend=\"subscribe\">How to subscribe/unsubscribe to "
 "these lists</link> carefully. Everything said there applies to the "
@@ -6367,11 +6367,11 @@ msgstr ""
 "these lists</link> carefully. Everything said there applies to the "
 "development list as well."
 
-#: index.docbook:3653
+#: index.docbook:3651
 msgid "How do I get access to the <acronym>CVS</acronym>?"
 msgstr "Wie erhalten Sie Zugriff auf das <acronym>CVS</acronym>?"
 
-#: index.docbook:3656
+#: index.docbook:3654
 msgid ""
 "The &kde; project uses <acronym>CVS</acronym> to develop the core parts of "
 "the software. Usually, when you have changed one of the parts "
@@ -6387,7 +6387,7 @@ msgstr ""
 "die Unterschiede zum derzeitigen Zustand an den Entwickler/Betreuer f&uuml;r "
 "das entsprechende Programm zu schicken."
 
-#: index.docbook:3661
+#: index.docbook:3659
 msgid ""
 "If you are doing this more or less regularly, you can ask <ulink "
 "url=\"mailto:coolo@kde.org\">Stephan Kulow</ulink> for direct access to the "
@@ -6404,14 +6404,14 @@ msgstr ""
 "auf den <acronym>CVS</acronym>-Server m&ouml;glichst klein halten. Fragen "
 "kostet jedoch nichts!"
 
-#: index.docbook:3672
+#: index.docbook:3670
 msgid ""
 "I am just curious. Can I have read-only access to the <acronym>CVS</acronym>?"
 msgstr ""
 "Aus reiner Neugierde; k&ouml;nnen Sie Nur-Lese-Zugriff auf den "
 "<acronym>CVS</acronym>-Server erhalten?"
 
-#: index.docbook:3675
+#: index.docbook:3673
 msgid ""
 "Yes. It is possible to get read-only access to the <acronym>CVS</acronym> "
 "repository with the <application>cvsup</application> utility. You can find "
@@ -6424,7 +6424,7 @@ msgstr ""
 "<ulink url=\"http://www.kde.org/cvsup.html\">How to use "
 "<application>cvsup</application> to get &kde;</ulink>."
 
-#: index.docbook:3680
+#: index.docbook:3678
 msgid ""
 "In addition, anonymous <acronym>CVS</acronym> service is also available. To "
 "find out more about how to set up and use anonymous <acronym>CVS</acronym>, "
@@ -6434,11 +6434,11 @@ msgstr ""
 "finden weitere Informationen hierzu unter <ulink "
 "url=\"http://www.kde.org/anoncvs.html\">dieser Adresse</ulink>."
 
-#: index.docbook:3689
+#: index.docbook:3687
 msgid "Are there any <application>cvsup</application> mirror sites for &kde;?"
 msgstr "Gibt es <application>cvsup</application>-Spiegelseiten f&uuml;r &kde;?"
 
-#: index.docbook:3692
+#: index.docbook:3690
 msgid ""
 "Yes. The main &kde; server is normally very busy and unresponsive. Please "
 "take a look at <ulink "
@@ -6450,7 +6450,7 @@ msgstr ""
 "url=\"http://www.kde.org/cvsupmirrors.html\">http://www.kde.org/cvsupmirrors."
 "html</ulink> nach, welche Spiegelserver es gibt"
 
-#: index.docbook:3695
+#: index.docbook:3693
 msgid ""
 "Once you have selected a new <application>cvsup</application> server, simply "
 "replace <screen> \n"
@@ -6466,12 +6466,12 @@ msgstr ""
 "*default host=cvsup.your.new.host\n"
 "</screen> in your <application>cvsup</application> script."
 
-#: index.docbook:3709
+#: index.docbook:3707
 msgid "How do I go about translating &kde; programs into my native language?"
 msgstr ""
 "Wie starten Sie mit der &Uuml;bersetzung von &kde; in Ihre Heimatsprache?"
 
-#: index.docbook:3713
+#: index.docbook:3711
 msgid ""
 "Go poke around <ulink url=\"http://i18n.kde.org\">The &kde; Translators' and "
 "Documenters' Web Site</ulink> to see whether your program is already "
@@ -6484,23 +6484,23 @@ msgstr ""
 "weitere Informationen und insbesondere eine &Uuml;bersicht, was schon "
 "&uuml;bersetzt ist und was nicht (Vieles ist)."
 
-#: index.docbook:3723
+#: index.docbook:3721
 msgid "Credits and License"
 msgstr "Mitwirkende und Lizenz"
 
-#: index.docbook:3725
+#: index.docbook:3723
 msgid "The current <acronym>FAQ</acronym> maintainers are:"
 msgstr "Die aktuellen <acronym>FAQ</acronym>-Betreuer sind:"
 
-#: index.docbook:3727
+#: index.docbook:3725
 msgid "Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email>"
 msgstr "Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email>"
 
-#: index.docbook:3727
+#: index.docbook:3725
 msgid "Michael Demers <email>mdemers@nitemaster.yi.org</email>"
 msgstr "Michael Demers <email>mdemers@nitemaster.yi.org</email>"
 
-#: index.docbook:3734
+#: index.docbook:3732
 msgid ""
 "Many of the answers in this <acronym>FAQ</acronym> are taken from the "
 "various &kde; mailing lists and newsgroups. Here is a "
