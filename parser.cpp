@@ -379,7 +379,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             if (leave) {
                 result.append(msg1);
                 result.append(msg2);
-                goto error;
+                return result;
             }
             result = splitMessage(msg1);
             result += splitMessage(msg2);
