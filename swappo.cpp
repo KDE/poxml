@@ -1,5 +1,5 @@
-using namespace std;
 #include <iostream>
+using namespace std;
 #include "GettextParser.hpp"
 #include <fstream>
 #include "GettextLexer.hpp"
