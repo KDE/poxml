@@ -2,6 +2,7 @@
 
 #include <iostream.h>
 #include <qstring.h>
+#include <stdlib.h>
 
 class MsgBlock {
  public:

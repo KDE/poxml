@@ -16,6 +16,10 @@ def remove(matchobj):
 		str = str + '\n'
 	return str
 
+def xmlizeTag(text, tag):
+	pat = re.compile("(<%s(\s[ ]?[^>]*)?>)" % tag, re.DOTALL)
+	return re.sub(pat, addtag, text)
+	
 docbookfile = open(sys.argv[1])
 text = docbookfile.read()
 
@@ -32,19 +36,7 @@ replace_text = "<?xml version='1.0' ?>"
 text = re.sub(pat, remove, text)
 replace_text = ""
 
-pat = re.compile("(<imagedata( [ ]?[^>]*)?>)", re.DOTALL)
-text = re.sub(pat, addtag, text)
-
-pat = re.compile("(<colspec( [^>]*)?>)", re.DOTALL)
-text = re.sub(pat, addtag, text)
-
-pat = re.compile("(<anchor( [^>]*)?>)", re.DOTALL)
-text = re.sub(pat, addtag, text)
-
-pat = re.compile("(<xref( [^>]*)?>)", re.DOTALL)
-text = re.sub(pat, addtag, text)
-
-pat = re.compile("(<area( [^>]*)?>)", re.DOTALL)
-text = re.sub(pat, addtag, text)
-
+for tag in "imagedata", "colspec", "spanspec", "anchor", "xref", "area", "glossseealso":
+	text = xmlizeTag(text, tag)
+	
 print text
