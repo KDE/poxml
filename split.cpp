@@ -94,11 +94,11 @@ int main( int argc, char **argv )
          it != english.end(); ++it)
     {
         cout << "#: ";
-        for (QValueList<int>::ConstIterator it2 =
+        for (QValueList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
             if (it2 != (*it).lines.begin())
                 cout << ", ";
-            cout << "index.docbook:" << *it2;
+            cout << "index.docbook:" << (*it2).start_line;
 
         }
         cout << "\n";

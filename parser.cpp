@@ -19,7 +19,7 @@ bool StructureParser::startDocument()
 
 bool StructureParser::isCuttingTag(const QString &qName) const
 {
-    return (qName == "para" || qName == "title" || qName == "term" || qName == "entry" || qName == "contrib");
+    return (qName == "para" || qName == "title" || qName == "term" || qName == "entry" || qName == "contrib" || qName == "keyword");
 }
 
 bool StructureParser::isSingleTag(const QString &qName) const
@@ -49,6 +49,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
             message = QString::null;
             list.pc.increasePara();
             startline = locator->lineNumber();
+            startcol = locator->columnNumber();
         }
         inside++;
 
@@ -130,7 +131,12 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
         if (!inside) {
             MsgBlock m;
             m.msgid = formatMessage(message);
-            m.lines.append(startline);
+            BlockInfo bi;
+            bi.start_line = startline;
+            bi.start_col = startcol;
+            bi.end_line = locator->lineNumber();
+            bi.end_col = locator->columnNumber();
+            m.lines.append(bi);
             list.append(m);
         }
     } else if (inside) {

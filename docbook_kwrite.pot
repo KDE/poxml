@@ -42,6 +42,22 @@ msgstr ""
 msgid "&kwrite; is a text editor for KDE 2.0"
 msgstr ""
 
+#: index.docbook:69
+msgid "KDE"
+msgstr ""
+
+#: index.docbook:70
+msgid "KWrite"
+msgstr ""
+
+#: index.docbook:71
+msgid "text"
+msgstr ""
+
+#: index.docbook:72
+msgid "editor"
+msgstr ""
+
 #: index.docbook:78
 msgid "Introduction"
 msgstr ""

@@ -1,0 +1,9 @@
+// $ANTLR 2.7.1: gettext.g -> GettextParserTokenTypes.txt$
+GettextParser    // output token vocab name
+T_MSGID=4
+T_COMMENT=5
+T_STRING=6
+T_MSGSTR=7
+WS=8
+MSG_TAG=9
+ESC=10

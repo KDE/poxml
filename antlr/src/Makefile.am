@@ -1,9 +1,11 @@
 
 # Make #include <antlr/xxx> work..
 INCLUDES=-I$(srcdir)/..
+KDE_CXXFLAGS = $(USE_EXCEPTIONS)
 
 noinst_LTLIBRARIES = libantlr.la
-libantlr_la_LDFLAGS = -version-info $(LIBANTLR_SO_VERSION)
+
+libantlr_la_LDFLAGS = -no-undefined
 
 libantlr_la_SOURCES = \
 	ANTLRException.cpp \

@@ -1,8 +1,18 @@
+#ifndef PARSER_H
+#define PARSER_H
+
 #include <qxml.h>
+
+struct BlockInfo {
+    int start_line;
+    int start_col;
+    int end_line;
+    int end_col;
+};
 
 class MsgBlock {
  public:
-    QValueList<int> lines;
+    QValueList<BlockInfo> lines;
     QString msgid;
     QString msgstr;
 };
@@ -47,7 +57,7 @@ private:
 
     QXmlLocator *locator;
     QString message;
-    int inside, startline;
+    int inside, startline, startcol;
     int line;
     QString comment;
     MsgList list;
@@ -55,3 +65,5 @@ private:
 
 void outputMsg(const char *prefix, const QString &message);
 MsgList parseXML(const char *filename);
+
+#endif
