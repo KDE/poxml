@@ -36,9 +36,13 @@ for tag in "email", "para":
 	if n:
 		sys.stderr.write("fixed %d wrong end tags\n" % n)
 
-text, n = re.subn('&\s', '&amp; ', text)
-text, n2 = re.subn('&&\s', '&amp;&amp; ', text)
-n = n + n2
+for tag in "lt", "gt", "amp", "lcub", "rcub", "lowbar", "etago", "dollar", \
+	"percnt", "lsqb", "rsqb", "num", "verbar": # kdevelop strangeness
+	text = re.sub("&&%s;;" % tag, "&%s;" % tag, text)
+
+text, n2 = re.subn('&\s', '&amp; ', text)
+text, n3 = re.subn('&&\s', '&amp;&amp; ', text)
+n = n2 + n3
 if n:
 	sys.stderr.write("fixed %d wrong amps\n" % n)
 
@@ -50,6 +54,7 @@ text = re.sub('´', '\'', text)
 text = re.sub('ö', '&ouml;', text)
 text = re.sub('ü', '&uuml;', text)
 text = re.sub('ä', '&auml;', text)
+text = re.sub('ß', '&szlig;', text)
 
 docbookfile = open(sys.argv[1], 'w')
 docbookfile.write(text)

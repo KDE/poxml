@@ -36,7 +36,7 @@ replace_text = "<?xml version='1.0' ?>"
 text = re.sub(pat, remove, text)
 replace_text = ""
 
-for tag in "imagedata", "colspec", "spanspec", "anchor", "xref", "area", "glossseealso":
+for tag in "imagedata", "colspec", "spanspec", "anchor", "xref", "area", "glossseealso", "footnoteref", "glosssee":
 	text = xmlizeTag(text, tag)
 	
 print text
