@@ -11,6 +11,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
+                                    "imageobject", "varlistentry", "thead",
+                                    "tbody", "row",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -156,6 +158,13 @@ void StructureParser::descape(QString &message, bool white)
 QString StructureParser::formatMessage(QString message, int &offset) const
 {
     offset = 0;
+    bool changed = false;
+
+    if (message.isEmpty())
+        return message;
+
+    for (int index = 0; message.at(index) == ' '; index++, offset++) ;
+    message = message.stripWhiteSpace();
 
     // removing starting single tags
     for (int index = 0; singletags[index]; index++)
@@ -165,8 +174,20 @@ QString StructureParser::formatMessage(QString message, int &offset) const
             while (message.at(strindex) != '>')
                 strindex++;
             message = message.mid(strindex + 1);
+            changed = true;
             offset += strindex + 1;
+            for (int index = 0; message.at(index) == ' '; index++, offset++) ;
+            message = message.stripWhiteSpace();
         }
+    }
+
+    while (message.right(2) == "/>")
+    {
+        int strindex = message.length() - 2;
+        while (message.at(strindex) != '<')
+            strindex--;
+        message = message.left(strindex).stripWhiteSpace(); // only removed space at the end
+        changed = true;
     }
 
     for (int index = 0; message.at(index) == ' '; index++, offset++) ;
@@ -200,8 +221,15 @@ QString StructureParser::formatMessage(QString message, int &offset) const
             offset += strindex + 1;
             for (int index = 0; message.at(index) == ' '; index++, offset++) ;
             message = message.stripWhiteSpace();
+            changed = true;
         } else
             break;
+    }
+
+    if (changed) {
+        int to;
+        message = formatMessage(message, to);
+        offset += to;
     }
 
     return message;
@@ -332,7 +360,8 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 #ifndef NDEBUG
                     qDebug("parser %s %d %s", (*it).msgid.latin1(), (*it).lines.first().offset, m.msgid.mid((*it).lines.first().offset, 15).latin1());
 #endif
-                    list.append(*it);
+                    if (!(*it).msgid.isEmpty())
+                        list.append(*it);
                 }
             } else {
                 list.append(m);
@@ -389,6 +418,20 @@ MsgList parseXML(const char *filename)
     QCString contents;
     contents.assign(xmlFile.readAll());
     xmlFile.close();
+    QString tmp;
+    if (contents.left(5) != "<?xml") {
+        FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(filename).latin1(), "r");
+        xmlFile.open(IO_ReadOnly, p);
+        char buffer[4001];
+        contents.truncate(0);
+        int len;
+        while ((len = xmlFile.readBlock(buffer, 4000)) != 0) {
+            buffer[len] = 0;
+            contents += buffer;
+        }
+        xmlFile.close();
+        pclose(p);
+    }
     contents.replace(QRegExp("&amp;"), "&amp-internal;");
     contents.replace(QRegExp("&lt;"), "&lt-internal;");
     contents.replace(QRegExp("&gt;"), "&gt-internal;");

@@ -1,10 +1,10 @@
-<?xml version='1.0' ?>
-
-
-
-
-
-  
+<?xml version='1.0' ?><!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V4.1-Based Variant V1.0//EN" "dtd/kde-next.dtd" [
+ <!ENTITY kappname "&kwrite;"> <!-- this only *seems* redundant -->  
+ <!ENTITY % addindex "IGNORE"> 
+ <!ENTITY % English "INCLUDE">   
+ <!ENTITY % ents SYSTEM "-//KDE//ENTITIES Documentation V1.0//EN">  
+ %ents;  
+]>  
   
 <book lang="&language;">  
   
@@ -46,7 +46,7 @@
 <affiliation><address><email>vampyr@atconnex.net</email></address></affiliation>
 </othercredit>
 
-
+<!-- ROLES_OF_TRANSLATORS -->
 
 </authorgroup>
 
@@ -350,9 +350,9 @@ directories as well as an up arrow button for moving up the directory tree. The
 button with the little house takes the user to his or her home directory and the one
 with the two arrows curved in on each other updates the view of the current
 directory. The flag button lets the user set a new bookmark at the current directory
-or go to  one that was previously set. 
-
- The last button on the toolbar allows you to create a new
+or go to  one that was previously set. <!-- The button with the wrench (spanner) -->
+<!-- icon even permits the user to change a few basic settings for the dialog -->
+<!-- box.  --> The last button on the toolbar allows you to create a new
 directory, and finally  there is dropdown box with a list of some commonly
 frequented directories.</para> </listitem>
 </varlistentry>  
@@ -1202,8 +1202,8 @@ ends of lines of text.</para></listitem> </varlistentry>
   
 <varlistentry>  
 <term><guilabel>Auto Brackets</guilabel></term> <listitem><para>When the
-user types a left bracket  &kwrite; automatically
-enters the right bracket  to the right of the
+user types a left bracket ([,(, or {) &kwrite; automatically
+enters the right bracket (}, ), or ]) to the right of the
 cursor.</para></listitem>
 </varlistentry>
 
@@ -1413,9 +1413,9 @@ points.</para></listitem>
 <varlistentry>
 <term><guilabel>Charset</guilabel></term>
 <listitem><para>Here the user can choose which character set to work in.
-
-
-
+<!-- Lauri:  I think mine is way messed up... the only options are -->
+<!-- "jisx0208.1983-0" or "any" -->
+<!-- Thad:  Mine's ok, with "iso8859-1/0" & "any" depending on family -->
 </para></listitem>
 </varlistentry>
 </variablelist>  
@@ -1506,7 +1506,7 @@ the <guilabel>Defaults</guilabel> tab.</para></listitem>
 <itemizedlist>
 <listitem><para>This version of the &kwrite; Handbook is based on the original by Cristian Tibirna <email>tibirna@kde.org</email></para></listitem></itemizedlist>  
 <para>Converted to docbook/proofreading by Lauri Watts <email>vampyr@atconnex.net</email></para>  
-
+<!-- CREDITS_FOR_TRANSLATORS -->
  
 &underFDL;
 &underGPL;
@@ -1524,16 +1524,16 @@ www.kde.org</ulink>.</para>
   
 
   
-  
+<![ %addindex; [ &kdedocindex; ]]>  
 </book>  
-
-
-
-
-
-
-
-
-
-  
+<!--  
+Local Variables:  
+mode: sgml  
+sgml-namecase-general: t  
+sgml-namecase-entity: nil  
+sgml-general-insert-case: lower  
+sgml-minimize-attributes: nil  
+sgml-omittag: nil  
+End:  
+-->  
 

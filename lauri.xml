@@ -1,11 +1,18 @@
 <?xml version='1.0'?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML CALS Table Model V4.1//EN" "dummy.dtd">
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V4.1-Based Variant V1.0//EN"
+        "dtd/kde-next.dtd" [
+	<!ENTITY lauri "Lauri">
+]>
 
 <book>
+<title>test document</title>
+
+<chapter id="hello">
+
 <para>
-  <term>
-    Leading Text
-  </term>
+  <note><para>
+    Leading Text for &lauri;
+  </para></note>
   <keycap>
     Shift
   </keycap>
@@ -106,5 +113,6 @@ Send             ppp
         bool modified;
 </programlisting>
 
+</chapter>
 </book>
 
