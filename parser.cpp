@@ -17,7 +17,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "step", "holder", "listitem", "important",
                                     "author", "itemizedlist", "orderedlist",
 				    "caption", "textobject", "mediaobject",
-				    "tip",
+				    "tip", "glossterm", "glossdef",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -326,9 +326,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 // qDebug("inside %s %d", message.mid(strindex, 15).latin1(), inside);
 
                 int closing_index = message.find(QString::fromLatin1("</%1>").arg(tag),
-                                                 strindex + 1);
+                                                 strindex);
                 int starting_index = message.find(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
-                                                  strindex + 1);
+                                                  strindex);
 
                 // qDebug("index1 %d %d %d", closing_index, starting_index, strindex);
 
