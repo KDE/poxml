@@ -2,17 +2,17 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2001-02-28 11:05MET\n"
+"Last-Translator: Stephan Kulow <coolo@kde.org>\n"
+"Language-Team: german <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.8\n"
 
 #: index.docbook:13
 msgid "&kde; Frequently Asked Questions"
@@ -636,18 +636,22 @@ msgstr ""
 msgid ""
 "If you need special configuration options (<abbrev>e.g.</abbrev> because you "
 "have shadow passwords and want to use the screensavers), your best bet is to "
-"use the source packages and compile &kde; yourself. <note><para><ulink "
-"url=\"mailto:bill.mote@bigfoot.com\">Bill Mote</ulink> has published a home "
-"page called \"KDE 1.1 Installation via RPM\". Go see it <ulink "
-"url=\"http://home.fuse.net/bmote/kde.htm\">here</ulink>.</para></note>"
+"use the source packages and compile &kde; yourself."
 msgstr ""
 "Wenn Sie spezielle Optionen eingerichtet haben (z.B. wenn Sie versteckte "
 "Passw&ouml;rter haben und Bildschirmschoner benutzen wollen), dann ist es "
 "wahrscheinlich am besten, wenn Sie die Quellen benutzen und &kde; selbst "
-"kompilieren.<note><ulink url=\"mailto:bill.mote@bigfoot.com\">Bill "
-"Mote</ulink> hat eine Homepage mit dem Namen \"KDE 1.1 Installation via "
-"RPM\". Diese finden Sie <ulink "
-"url=\"http://home.fuse.net/bmote/kde.htm\">hier</ulink>.</note>"
+"kompilieren."
+
+#: index.docbook:393
+msgid ""
+"<ulink url=\"mailto:bill.mote@bigfoot.com\">Bill Mote</ulink> has published "
+"a home page called \"KDE 1.1 Installation via RPM\". Go see it <ulink "
+"url=\"http://home.fuse.net/bmote/kde.htm\">here</ulink>."
+msgstr ""
+"<ulink url=\"mailto:bill.mote@bigfoot.com\">Bill Mote</ulink> hat eine "
+"Homepage mit dem Namen \"KDE 1.1 Installation via RPM\". Diese finden Sie "
+"<ulink url=\"http://home.fuse.net/bmote/kde.htm\">hier</ulink>."
 
 #: index.docbook:404
 msgid "Prerequisites"
@@ -966,17 +970,19 @@ msgstr ""
 "<replaceable>packagename</replaceable></command>"
 
 #: index.docbook:589
+msgid "configure the package: <command>./configure</command>"
+msgstr "Konfigurieren Sie das Paket mit: <command>make</command>"
+
+#: index.docbook:589
 msgid ""
-"configure the package: <command>./configure</command> <note><para>Some "
-"packages (notably kdebase) have special configuration options that might be "
-"applicable to your installation. Type <command>./configure "
-"<option>--help</option></command> to see the available options.</para></note>"
+"Some packages (notably kdebase) have special configuration options that "
+"might be applicable to your installation. Type <command>./configure "
+"<option>--help</option></command> to see the available options."
 msgstr ""
-"Konfigurieren Sie das Paket: <command>./configure</command> <note>Einige "
-"Pakete (vor allem kdebase) haben spezielle Optionen, die f&uuml;r Ihre "
-"Installation notwendig sein k&ouml;nnen. Geben Sie <command>./configure "
+"Einige Pakete (vor allem kdebase) haben spezielle Optionen, die f&uuml;r "
+"Ihre Installation notwendig sein k&ouml;nnen. Geben Sie <command>./configure "
 "<option>--help</option></command> ein, um die vorhandenen Optionen angezeigt "
-"zu bekommen.</note>"
+"zu bekommen."
 
 #: index.docbook:594
 msgid "build the package: <command>make</command>"
@@ -1029,14 +1035,7 @@ msgid ""
 "variable may be called differently on some systems, <abbrev>e.g.</abbrev> it "
 "is called <envar>SHLIB_PATH</envar> on &IRIX;. Then set the environment "
 "variable <envar>KDEDIR</envar> to the base of your &kde; tree, "
-"<abbrev>e.g.</abbrev> <filename class=\"directory\">/opt/kde</filename>. "
-"<caution> <para>Please bear in mind that it is unwise to set "
-"<envar>LD_LIBRARY_PATH</envar> blindly. In the vast majority of cases it is "
-"unnecessary and can do more harm than good. There is a web page written by "
-"<ulink url=\"mailto:barr@cis.ohio-state.edu\">Dave Barr</ulink> explaining "
-"the evils of <envar>LD_LIBRARY_PATH</envar> and it can be found at <ulink "
-"url=\"http://www.cis.ohio-state.edu/~barr/ldpath.html\">http://www.cis.ohio-s"
-"tate.edu/~barr/ldpath.html</ulink>.</para> </caution>"
+"<abbrev>e.g.</abbrev> <filename class=\"directory\">/opt/kde</filename>."
 msgstr ""
 "Stellen Sie zuerst sicher, dass das bin&auml;re "
 "&kde;-Installationsverzeichnis (<abbrev>z.B.</abbrev> <filename "
@@ -1049,15 +1048,18 @@ msgstr ""
 "sein; <abbrev>z.B.</abbrev> sie hei&szlig;t <envar>SHLIB_PATH</envar> auf "
 "&IRIX;. Setzen Sie die Umgebungsvariable <envar>KDEDIR</envar> dann auf die "
 "Basis Ihres &kde;-Verzeichnisbaumes, <abbrev>z.B.</abbrev> <filename "
-"class=\"directory\">/opt/kde</filename>. <caution> Bitte beachten Sie, dass "
-"es unklug ist, <envar>LD_LIBRARY_PATH</envar> blindlings zu setzen. In der "
-"&uuml;berwiegenden Zahl der F&auml;lle ist es unn&ouml;tig und kann mehr "
-"Schaden anrichten als nutzen. Es gibt eine von <ulink "
-"url=\"mailto:barr@cis.ohio-state.edu\">Dave Barr</ulink> geschriebene "
-"Webseite, die die Untiefen von <envar>LD_LIBRARY_PATH</envar> erkl&auml;rt; "
-"diese Webseite finden Sie unter: <ulink "
+"class=\"directory\">/opt/kde</filename>."
+
+#: index.docbook:623
+msgid ""
+"Please bear in mind that it is unwise to set <envar>LD_LIBRARY_PATH</envar> "
+"blindly. In the vast majority of cases it is unnecessary and can do more "
+"harm than good. There is a web page written by <ulink "
+"url=\"mailto:barr@cis.ohio-state.edu\">Dave Barr</ulink> explaining the "
+"evils of <envar>LD_LIBRARY_PATH</envar> and it can be found at <ulink "
 "url=\"http://www.cis.ohio-state.edu/~barr/ldpath.html\">http://www.cis.ohio-s"
-"tate. edu/~barr/ldpath.html</ulink>. </caution>"
+"tate.edu/~barr/ldpath.html</ulink>."
+msgstr ""
 
 #: index.docbook:644
 msgid ""
@@ -1084,6 +1086,7 @@ msgstr ""
 "installiert wird und damit in Ihrem Pfad vorhanden ist."
 
 #: index.docbook:652
+#, fuzzy
 msgid ""
 "Edit the file <filename>.xinitrc</filename> in your home directory (make a "
 "backup copy first!), remove everything that looks like calling a window "
@@ -1092,9 +1095,7 @@ msgid ""
 "<filename>.xsession</filename> instead of <filename>.xinitrc</filename>. And "
 "if there is no <filename>.xinitrc</filename> or "
 "<filename>.xsession</filename> in your home directory, simply create a new "
-"one with just one line containing <command>startkde</command>. <note> "
-"<para>Some systems (notably &RedHat; &Linux;) use "
-"<filename>.Xclients</filename> instead.</para> </note>"
+"one with just one line containing <command>startkde</command>."
 msgstr ""
 "Editieren Sie die Datei <filename>.xinitrc</filename> in Ihrem "
 "Pers&ouml;nlichen Verzeichnis (machen Sie vorher eine Sicherungskopie!), "
@@ -1108,6 +1109,12 @@ msgstr ""
 "\"<command>startkde</command>\" enth&auml;lt. <note>Manche Systeme (vor "
 "allem &RedHat; &Linux;) nutzen statt dessen <filename>.Xclients</filename>. "
 "</note>"
+
+#: index.docbook:652
+msgid ""
+"Some systems (notably &RedHat; &Linux;) use <filename>.Xclients</filename> "
+"instead."
+msgstr ""
 
 #: index.docbook:663
 msgid ""
@@ -1532,12 +1539,11 @@ msgstr ""
 "\"Schattenpassw&ouml;rter\". Warum?"
 
 #: index.docbook:999
+#, fuzzy
 msgid ""
 "When your system uses shadow passwords, the screensaver can only run "
 "properly if the suid bit is set. This bit gives the screensavers root "
-"privileges, which are needed to access the shadow passwords. "
-"<caution><para>The screensavers might be configured to secure the machine "
-"until the password is entered.</para></caution>"
+"privileges, which are needed to access the shadow passwords."
 msgstr ""
 "Wenn Ihr System Schattenpassw&ouml;rter verwendet, kann der "
 "Bildschirmschoner nur dann richtig arbeiten, wenn das suid Bit gesetzt ist. "
@@ -1545,6 +1551,12 @@ msgstr ""
 "auf die Schattenpassw&ouml;rter zuzugreifen <caution>Die Bildschirmschoner "
 "k&ouml;nnen eingerichtet werden, das System zu sichern, bis das Passwort "
 "eingegeben ist.</caution>"
+
+#: index.docbook:999
+msgid ""
+"The screensavers might be configured to secure the machine until the "
+"password is entered."
+msgstr ""
 
 #: index.docbook:1005
 msgid "Setting the suid bit on the screensavers"
@@ -1643,14 +1655,12 @@ msgstr ""
 "Verzeichnis <filename class=\"directory\">/users/myhome/kde</filename>."
 
 #: index.docbook:1067
+#, fuzzy
 msgid ""
-"<para>Although &kde; will run from a user directory, there are some problems "
-"with programs that require suid root, <abbrev>e.g.</abbrev> the programs in "
-"the kdeadmin package. But since they are not meant to be run by users in the "
-"first place, this is nothing to worry about.</para> <para>However, on "
-"systems using shadow passwords, the screensavers have to be suid root to "
-"enable password access for unlocking the screen, so this option will not "
-"work.</para>"
+"Although &kde; will run from a user directory, there are some problems with "
+"programs that require suid root, <abbrev>e.g.</abbrev> the programs in the "
+"kdeadmin package. But since they are not meant to be run by users in the "
+"first place, this is nothing to worry about."
 msgstr ""
 "Auch wenn &kde; von einem Nutzerverzeichnis l&auml;uft, gibt es einige "
 "Probleme mit Programmen, die Systemverwalterrechte ben&ouml;tigen; "
@@ -1660,6 +1670,13 @@ msgstr ""
 "Bildschirmschoner Systemverwalterrechte haben, d.h. das suid Bit muss "
 "gesetzt werden. Ist dieses nicht m&ouml;glich, wird das Entsperren des "
 "Bildschirms nicht funktionieren."
+
+#: index.docbook:1067
+msgid ""
+"However, on systems using shadow passwords, the screensavers have to be suid "
+"root to enable password access for unlocking the screen, so this option will "
+"not work."
+msgstr ""
 
 #: index.docbook:1081
 msgid ""
@@ -2274,7 +2291,7 @@ msgstr ""
 "Es ist m&ouml;glich, einen Bildschirmschoner anstelle eines "
 "Hintergrundbildes zu nutzen. Um dies zu tun, starten Sie irgendeinen "
 "Bildschirmschoner mit dem <option>-inroot</option> Parameter, z.B. "
-"<command>kswarm.kss <option>-inroot</option> &</command>. Die meisten "
+"<command>kswarm.kss <option>-inroot</option> &amp;</command>. Die meisten "
 "Bildschirmschoner sehen am besten aus, wenn Sie die Hintergrundfarbe schwarz "
 "einstellen. Bedenken Sie aber, dass die Verwendung eines Bildschirmschoners "
 "als Hintergrund CPU- und X-Zeit verbraucht...."
@@ -2484,7 +2501,7 @@ msgstr ""
 "Dieses Beispielskript hat den unerw&uuml;nschten Effekt, Sie auf der "
 "Arbeitsfl&auml;che 2 zu lassen, wenn es fertig ist."
 
-#: index.docbook:1611
+#: index.docbook:1610
 msgid ""
 "On the off chance you have not used shell scripts, they are basically just "
 "text files you have run <command>chmod <option>+x</option></command> on. "
@@ -3317,7 +3334,7 @@ msgid ""
 "back on the default language. This will usually be (American) English."
 msgstr ""
 "Starten Sie &kde;-Kontrollzentrum und w&auml;hlen Sie "
-"<guimenu>Pers&ouml;nliche Einstellungen</guimenu>-><guimenuitem>Land & "
+"<guimenu>Pers&ouml;nliche Einstellungen</guimenu>-><guimenuitem>Land &amp; "
 "Sprache</guimenuitem>. Hier k&ouml;nnen Sie Sprache und Land einstellen. "
 "Wenn &kde; keine &Uuml;bersetzung in der gew&auml;hlten Sprache findet, wird "
 "die Standardsprache eingestellt. Normalerweise ist das (amerikanisches) "
@@ -3372,6 +3389,7 @@ msgstr ""
 "Login Bildschirm ersetzen?"
 
 #: index.docbook:2190
+#, fuzzy
 msgid ""
 "First, you need to change to the \"xdm runlevel\" (runlevel 5 on &RedHat; "
 "systems, 3 on S.u.S.E.) by editing your <filename>/etc/inittab</filename> "
@@ -3381,8 +3399,7 @@ msgid ""
 "comment out the following line: <userinput>x:5:respawn:/usr/bin/X11/xdm "
 "-nodaemon</userinput> and replace it with "
 "<userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm "
-"-nodaemon</userinput>. <note><para>The location of &kdm; may differ on your "
-"system.</para></note>"
+"-nodaemon</userinput>."
 msgstr ""
 "Erstens, Sie m&uuml;ssen in den \"xdm runlevel\" (Runlevel 5 in &RedHat; "
 "Systemen, 3 in S.u.S.E.) wechseln, dies erreichen Sie durch Editieren der "
@@ -3396,13 +3413,22 @@ msgstr ""
 "-nodaemon</userinput>. <note>Wo &kdm; in Ihrem System gespeichert ist, kann "
 "abweichend sein, passen Sie dies entsprechend an.</note>"
 
+#: index.docbook:2190
+msgid "The location of &kdm; may differ on your system."
+msgstr ""
+
 #: index.docbook:2202
 msgid ""
 "For changes to take effect immediately, type <command>init 5</command> (for "
-"&RedHat; systems) at the shell prompt. <caution><para>It is risky to "
-"initiate a graphical login without checking beforehand whether it works. If "
-"it fails to work, you would be in for a hard time getting "
-"back....</para></caution>"
+"&RedHat; systems) at the shell prompt."
+msgstr ""
+
+#: index.docbook:2202
+#, fuzzy
+msgid ""
+"It is risky to initiate a graphical login without checking beforehand "
+"whether it works. If it fails to work, you would be in for a hard time "
+"getting back...."
 msgstr ""
 "Um die &Auml;nderungen sofort wirksam werden zu lassen geben Sie den "
 "folgenden Befehl ein: <command>init 5</command> (f&uuml;r &RedHat; Systeme) "
@@ -3613,6 +3639,7 @@ msgstr ""
 "folgenden Eintr&auml;ge enth&auml;lt:"
 
 #: index.docbook:2322
+#, fuzzy
 msgid ""
 "Then run <command>xmodmap ~/.Xmodmap</command>. This sets the "
 "<keycap>Start</keycap> key to emit <keysym>F13</keysym> and the "
@@ -3621,15 +3648,7 @@ msgid ""
 "<menuchoice><guimenu>Shortcut Keys</guimenu><guimenuitem>Global "
 "Shortcut</guimenuitem></menuchoice>. Set <guilabel>Pop-up system "
 "menu</guilabel> to <keysym>F13</keysym> and <guilabel>Window operations "
-"menu</guilabel> to <keysym>F15</keysym>. That is it. <note><para>The numbers "
-"115 and 117 may depend on the keyboard. If you are not sure, please check "
-"using <command>xev</command>. In addition, the above procedure requires "
-"&kde; 1.1 and above.</para> <para>&kikbd; is able to do this too, but "
-"keymaps have to be edited. The advantage of &kikbd; is that one can choose "
-"whether to use these mappings on several custom keymaps and have them "
-"hotswappable.</para> <para>It would be interesting to make a little script "
-"that will automatically do the keymap modifications on demand. &kikbd; "
-"should be able to read/understand user-side keymap files.</para></note>"
+"menu</guilabel> to <keysym>F15</keysym>. That is it."
 msgstr ""
 "Danach f&uuml;hren sie den Befehl <command>xmodmap ~/.Xmodmap</command> aus. "
 "Dies veranlasst die <keycap>Start</keycap>-Taste, den Tastencode "
@@ -3652,6 +3671,27 @@ msgstr ""
 "schreiben, das diese Ver&auml;nderungen in den Tastenpl&auml;nen (keymaps) "
 "automatisch vornimmt, wenn diese gebraucht werden. &kikbd; sollte in der "
 "Lage sein, nutzereigene Tastenpl&auml;ne (keymaps) zu lesen/verstehen.</note>"
+
+#: index.docbook:2322
+msgid ""
+"The numbers 115 and 117 may depend on the keyboard. If you are not sure, "
+"please check using <command>xev</command>. In addition, the above procedure "
+"requires &kde; 1.1 and above."
+msgstr ""
+
+#: index.docbook:2322
+msgid ""
+"&kikbd; is able to do this too, but keymaps have to be edited. The advantage "
+"of &kikbd; is that one can choose whether to use these mappings on several "
+"custom keymaps and have them hotswappable."
+msgstr ""
+
+#: index.docbook:2322
+msgid ""
+"It would be interesting to make a little script that will automatically do "
+"the keymap modifications on demand. &kikbd; should be able to "
+"read/understand user-side keymap files."
+msgstr ""
 
 #: index.docbook:2344
 msgid "After installing &kde;, the &RedHat; start menu disappears!"
@@ -4320,8 +4360,8 @@ msgid ""
 msgstr ""
 "Wenn Sie &Netscape; starten, probieren Sie den Schalter "
 "<option>-install</option>; <abbrev>z.B.</abbrev> <command>netscape "
-"<option>-install</option> &</command>. Dies zwingt &Netscape; eine eigene "
-"Farbpalette zu nutzen, was hoffentlich das Problem l&ouml;st;"
+"<option>-install</option> &amp;</command>. Dies zwingt &Netscape; eine "
+"eigene Farbpalette zu nutzen, was hoffentlich das Problem l&ouml;st;"
 
 #: index.docbook:2712
 msgid ""
@@ -4409,6 +4449,7 @@ msgstr ""
 "Schnelles Verschieben oder Ver&auml;ndern der Gr&ouml;&szlig;e von Fenstern"
 
 #: index.docbook:2764
+#, fuzzy
 msgid ""
 "To move a window, use <keycombo "
 "action=\"simul\">&Alt;<mousebutton>left</mousebutton></keycombo> mouse "
@@ -4417,8 +4458,7 @@ msgid ""
 "button will resize the window. Last but not least, <keycombo "
 "action=\"simul\">&Alt;<mousebutton>middle</mousebutton></keycombo> mouse "
 "button raises/lowers the window. For more information about mouse control, "
-"please refer to \"The K Window Manager Handbook\". <note><para>&kde; 1.1 and "
-"above allows you to change these mouse bindings.</para></note>"
+"please refer to \"The K Window Manager Handbook\"."
 msgstr ""
 "Um ein Fenster zu verschieben, k&ouml;nnen Sie die Tastenkombination "
 "<keycombo action=\"simul\">&Alt;<mousebutton>linke</mousebutton></keycombo> "
@@ -4431,6 +4471,10 @@ msgstr ""
 "bitte im \"The K Window Manager Handbook\" nach. <note>&kde; 1.1 und "
 "dar&uuml;ber erlauben eine Einstellung dieser Funktionen nach Ihren "
 "W&uuml;nschen. </note>"
+
+#: index.docbook:2764
+msgid "&kde; 1.1 and above allows you to change these mouse bindings."
+msgstr ""
 
 #: index.docbook:2779
 msgid "Killing windows in &kde;"
@@ -4755,14 +4799,12 @@ msgid "How do I exit &kde;?"
 msgstr "Wie verlassen Sie &kde;?"
 
 #: index.docbook:2990
+#, fuzzy
 msgid ""
 "Simply click on the <guibutton>K</guibutton> button and select "
 "<guimenu>Logout</guimenu>. In addition, if you "
 "<mousebutton>right</mousebutton> click on an empty area of the desktop, you "
-"will be presented with a menu containing logout as one of the options. "
-"<note><para><keycombo action=\"simul\">&Ctrl;&Alt;&Backspace;</keycombo> "
-"will also do the trick by killing the X server, but its use prevents session "
-"management.</para></note>"
+"will be presented with a menu containing logout as one of the options."
 msgstr ""
 "Klicken Sie einfach auf den <guibutton>K</guibutton>-Knopf und w&auml;hlen "
 "Sie <guimenu>Abmelden...</guimenu>. Sie k&ouml;nnen auch einfach mit der "
@@ -4773,6 +4815,12 @@ msgstr ""
 "action=\"simul\">&Strg;&Alt;&Backspace;</keycombo> beendet auch die Sitzung "
 "(durch gewaltsames Beenden des X-Servers), aber deren Benutzung verhindert "
 "das Sitzungsmanagement.</note>"
+
+#: index.docbook:2990
+msgid ""
+"<keycombo action=\"simul\">&Ctrl;&Alt;&Backspace;</keycombo> will also do "
+"the trick by killing the X server, but its use prevents session management."
+msgstr ""
 
 #: index.docbook:3004
 msgid ""
@@ -5011,6 +5059,7 @@ msgid "How do I change the screen resolution?"
 msgstr "Wie schalten sie die Bildschirmaufl&ouml;sung um?"
 
 #: index.docbook:3171
+#, fuzzy
 msgid ""
 "Use <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>+</keycap></keycombo> and "
 "<keycombo action=\"simul\">&Ctrl;&Alt;<keycap>-</keycap></keycombo> to cycle "
@@ -5018,14 +5067,7 @@ msgid ""
 "(maybe under <filename class=\"directory\">/etc/X11</filename>; poke around "
 "first). If you prefer to get your hands dirty, you can always edit the file "
 "directly. By placing your favorite resolution at the beginning (or making it "
-"the only one listed), the &X; will always start up with that resolution. "
-"<caution><para>Always make a backup copy of your "
-"<filename>XF86Config</filename> file <emphasis>before</emphasis> you start "
-"editing it. Errors in this file can render your &X; "
-"unusable.</para></caution> <note><para>These instructions are only valid if "
-"you are running version 3.3.x of the XFree86 server. If you are running "
-"XFree86 4.x, you must consult with the <ulink "
-"url=\"http://xfree.org\">XFree86(TM): Home Page</ulink>.</para></note>"
+"the only one listed), the &X; will always start up with that resolution."
 msgstr ""
 "Die Tastenkombinationen <keycombo "
 "action=\"simul\">&Strg;&Alt;<keycap>+</keycap></keycombo> und <keycombo "
@@ -5041,6 +5083,20 @@ msgstr ""
 "</caution> <note> Diese Anleitung gilt nur f&uuml;r die Version 3.3.x des "
 "XFree86 Servers. F&uuml;r XFree86 4.x sehen Sie bitte auf der: <ulink "
 "url=\"http://xfree.org\">XFree86(TM): Homepage</ulink> nach.</note>"
+
+#: index.docbook:3171
+msgid ""
+"Always make a backup copy of your <filename>XF86Config</filename> file "
+"<emphasis>before</emphasis> you start editing it. Errors in this file can "
+"render your &X; unusable."
+msgstr ""
+
+#: index.docbook:3171
+msgid ""
+"These instructions are only valid if you are running version 3.3.x of the "
+"XFree86 server. If you are running XFree86 4.x, you must consult with the "
+"<ulink url=\"http://xfree.org\">XFree86(TM): Home Page</ulink>."
+msgstr ""
 
 #: index.docbook:3192
 msgid "How do I change the color depth?"
@@ -5163,7 +5219,7 @@ msgstr ""
 "<replaceable>old-file new-file</replaceable> > "
 "<replaceable>patchfile</replaceable></command> aus. Um diese &Auml;nderungen "
 "in eine andere Datei einzuspielen, (<abbrev>z.B.</abbrev> \"patch the "
-"file\"), f&uuml;hren Sie den Befehl <command>patch < "
+"file\"), f&uuml;hren Sie den Befehl <command>patch &lt; "
 "<replaceable>patchfile</replaceable></command> aus."
 
 #: index.docbook:3274
@@ -5929,8 +5985,8 @@ msgstr ""
 
 #: index.docbook:0
 msgid "ROLES_OF_TRANSLATORS"
-msgstr ""
+msgstr "aa"
 
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
-msgstr ""
+msgstr "bb"

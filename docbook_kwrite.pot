@@ -98,12 +98,20 @@ msgstr ""
 msgid "By specifying the path and name of a particular file the user can have &kwrite; open (or create) that file immediately upon startup. This option might look something like the following:"
 msgstr ""
 
+#: index.docbook:121
+msgid "<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></userinput>"
+msgstr ""
+
 #: index.docbook:127
 msgid "Specify a file on the internet"
 msgstr ""
 
 #: index.docbook:129
 msgid "The above-mentioned method could even be used to open files on the internet (if the user has an active connection at the time.) An example of this might look like the following:"
+msgstr ""
+
+#: index.docbook:133
+msgid "<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></option></userinput>"
 msgstr ""
 
 #: index.docbook:141

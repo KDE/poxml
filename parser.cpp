@@ -3,10 +3,15 @@
 #include <stdlib.h>
 #include <assert.h>
 
-static const char *singletags[] = {"imagedata", "colspec", "spanspec", "anchor", "xref",
-                                   "area", "glossseealso", "footnoteref", "glosssee", 0};
-static const char *cuttingtags[] = {"para", "title", "term", "entry", "contrib", "keyword",
-                                    "note", "footnote", 0};
+static const char *singletags[] = {"imagedata", "colspec", "spanspec",
+                                   "anchor", "xref", "area",
+                                   "glossseealso", "footnoteref",
+                                   "glosssee", 0};
+static const char *cuttingtags[] = {"para", "title", "term", "entry",
+                                    "contrib", "keyword",
+                                    "note", "footnote", "caution",
+                                    "informalexample",
+                                    0};
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
@@ -83,16 +88,16 @@ bool StructureParser::startElement( const QString& , const QString& ,
 
 bool StructureParser::closureTag(const QString& message, const QString &tag)
 {
-    qDebug("closureTag %s %s", message.latin1(), tag.latin1());
+    // qDebug("closureTag %s %s", message.latin1(), tag.latin1());
     int inside = 0;
     uint index = 0;
     while (true)
     {
         int nextclose = message.find(QString::fromLatin1("</%1>").arg(tag), index);
         int nextstart = message.find(QRegExp(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
-        qDebug("finding %d %d %d %d", nextstart, nextclose, index, inside);
+        // qDebug("finding %d %d %d %d", nextstart, nextclose, index, inside);
         if (nextclose == -1) {
-            qDebug("ending on no close anymore %d %d %d", inside, index, message.length());
+            //  qDebug("ending on no close anymore %d %d %d", inside, index, message.length());
             return !inside && index >= message.length();
         }
         if (nextstart == -1)
@@ -183,7 +188,9 @@ QString StructureParser::formatMessage(QString message, int &offset) const
 
 MsgList StructureParser::splitMessage(const MsgBlock &mb)
 {
-    // qDebug("splitMessage %s", message.latin1());
+#ifndef NDEBUG
+    qDebug("splitMessage %s", message.latin1());
+#endif
 
     MsgList result;
     MsgBlock msg1 = mb;
@@ -221,7 +228,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             msg2.msgid = formatMessage(message.mid(strindex + 1), offset);
             msg2.lines.first().offset += strindex + 1 + offset;
 
-            // qDebug("split into %s - %s", msg1.latin1(), msg2.latin1());
+#ifndef NDEBUG
+            qDebug("split into %s - %s", msg1.msgid.latin1(), msg2.msgid.latin1());
+#endif
             result = splitMessage(msg1);
             result += splitMessage(msg2);
             return result;
@@ -252,7 +261,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             msg2.msgid = formatMessage(message.mid(strindex + 1), offset);
             msg2.lines.first().offset += strindex + 1 + offset;
 
-            // qDebug("split into %s - %s", msg1.latin1(), msg2.latin1());
+#ifndef NDEBUG
+            qDebug("split into %s - %s", msg1.msgid.latin1(), msg2.msgid.latin1());
+#endif
             result = splitMessage(msg1);
             result += splitMessage(msg2);
 
@@ -288,6 +299,9 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             for (MsgList::ConstIterator it = messages.begin();
                  it != messages.end(); it++)
             {
+#ifndef NDEBUG
+                qDebug("parser %s %d %s", (*it).msgid.latin1(), (*it).lines.first().offset, m.msgid.mid((*it).lines.first().offset, 15).latin1());
+#endif
                 list.append(*it);
             }
         }

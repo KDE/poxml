@@ -12,12 +12,11 @@ using namespace std;
 
 QString translate(QString xml, QString orig, QString translation)
 {
-    orig.replace(QRegExp("\\\\\""), "\"");
     orig.replace(QRegExp("\\\\\n"), "\n");
-    orig.replace(QRegExp("\\\\\\"), "\\");
+    translation.replace(QRegExp("\\\\\n"), "\n");
     int index = xml.find(orig);
     if (index == -1) {
-        qDebug("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
+        qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
         ASSERT(false);
     }
     xml.replace(index, orig.length(), translation);
@@ -109,6 +108,11 @@ int main( int argc, char **argv )
 
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
         xml = xml.simplifyWhiteSpace();
+        StructureParser::descape(xml);
+
+#ifndef NDEBUG
+        qDebug("english %s %s %d %d %d %d %d", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end, xml.find("The location"));
+#endif
 
         if ((*it).end) {
             if (!(*it).lines.first().offset && start_pos != old_pos) {
@@ -131,6 +135,7 @@ int main( int argc, char **argv )
     ts << xml_text.mid(old_pos);
 
     output.replace(QRegExp("\\\\\""), "\"");
+    output.replace(QRegExp("\\\\\\"), "\\");
     output.replace(QRegExp("\\\\\n"), "\n");
 
     cout << output.latin1();

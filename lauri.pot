@@ -2,12 +2,13 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Stephan <EMAIL@ADDRESS>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
@@ -15,39 +16,37 @@ msgstr ""
 
 #: index.docbook:2
 msgid "Leading Text"
-msgstr "Start"
+msgstr ""
 
 #: index.docbook:2
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
-msgstr "<keycap>Schieber</keycap><keycap>Hilfe</keycap>"
+msgstr ""
 
 #: index.docbook:14
 msgid "Text 1"
-msgstr "Schrift 1"
+msgstr ""
 
 #: index.docbook:14
 msgid "Text 2"
-msgstr "Schrift 2"
+msgstr ""
 
 #: index.docbook:14
 msgid "Text 3 \"everything\""
-msgstr "Text 3 \"alles\""
+msgstr ""
 
 #: index.docbook:14
 msgid "Text 4 \\\"even more\\\""
-msgstr "Text 4 \\\"noch mehr\\\""
+msgstr ""
 
 #: index.docbook:39
 msgid "Ending Text"
-msgstr "Ende"
+msgstr ""
 
 #: index.docbook:0
 msgid "ROLES_OF_TRANSLATORS"
-msgstr "foo"
+msgstr ""
 
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
-msgstr "bar"
+msgstr ""
 
-#~ msgid "Text 4"
-#~ msgstr "Schrift 4"

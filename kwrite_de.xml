@@ -19,7 +19,7 @@
 
 <othercredit role="developer">
 <firstname>Jochen</firstname><surname>Wilhelmy</surname>
-<contrib>Entwicklung</contrib>
+<contrib>Haupt-Entwicklung</contrib>
 <affiliation><address><email>digisnap@cs.tu-berlin.de</email></address>
 </affiliation>
 </othercredit>
@@ -61,7 +61,7 @@
 <releaseinfo>2.00.00</releaseinfo>
 
 <abstract>
-<para>Dieses Handbuch beschreibt KWrite Version 2.0</para>
+<para>Dieses Handbuch beschreibt &kwrite; Version 2.0</para>
 <para>&kwrite; ist ein Texteditor f&uuml;r KDE 2.0</para>
 </abstract>
 
@@ -102,20 +102,14 @@
   
 <para>Der Benutzer kann Pfad und Dateinamen einer Datei angeben, die dann beim Starten ge&ouml;ffnet (oder erzeugt) wird. Hierzu ein Beispiel:</para>
 
-<informalexample><screen>
-<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></userinput>
-</screen>
-</informalexample>
+<informalexample><screen>  </screen></informalexample>
 </sect2>
 <sect2 id="editing-files-on-the-internet">
 <title>Angabe eines Dateinamens im Internet</title>
 
 <para>Die oben genannte Methode kann auch benutzt werden, um Dateien im Internet zu &ouml;ffnen (wenn der Nutzer eine aktive Verbindung hat). Hierzu wieder ein Beispiel:</para>
 
-<informalexample><screen>
-<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></option></userinput>
-</screen>
-</informalexample>
+<informalexample><screen>  </screen></informalexample>
 
 </sect2>
 
@@ -223,7 +217,7 @@
 </row>  
 <row>  
 <entry><para><keycombo><keycap>Strg</keycap><keycap>F</keycap></keycombo></para></entry>  
-<entry><para><link linkend="find"> Suchen...</link></para></entry>  
+<entry><para><link linkend="find"> Suchen</link></para></entry>  
 </row>  
 <row>  
 <entry><para><keycombo><keycap>F3</keycap></keycombo></para></entry>  
@@ -243,7 +237,7 @@
 </row>  
 <row>  
 <entry><para><keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo></para></entry>  
-<entry><para><link linkend="print">Drucken...</link> </para></entry>  
+<entry><para><link linkend="print">Drucken</link> </para></entry>  
 </row>  
 <row>
 <entry><para><keycombo><keycap>Strg</keycap><keycap>Q</keycap></keycombo></para></entry>
@@ -251,7 +245,7 @@
 </row>
 <row>
 <entry><para><keycombo><keycap>Strg</keycap><keycap>R</keycap></keycombo></para></entry>
-<entry><para><link linkend="replace"> Ersetzen...</link></para></entry>
+<entry><para><link linkend="replace"> Ersetzen</link></para></entry>
 </row>
 <row>
 <entry><para><keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo></para></entry>
@@ -267,11 +261,11 @@
 </row>  
 <row>  
 <entry><para><keycombo><keycap>Strg</keycap><keycap>Z</keycap></keycombo></para></entry>  
-<entry><para><link linkend="undo">Letzten Schritt r&uuml;ckg&auml;ngig machen</link></para></entry>  
+<entry><para><link linkend="undo">R&uuml;ckg&auml;ngig</link></para></entry>  
 </row>  
 <row>  
 <entry><para><keycombo><keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap></keycombo></para></entry>  
-<entry><para><link linkend="redo">Letzten Schritt wiederholen</link></para></entry>  
+<entry><para><link linkend="redo">Wiederherstellen</link></para></entry>  
 </row>  
 </tbody>  
 </tgroup>  
@@ -499,7 +493,7 @@
 
 <variablelist>
 <varlistentry>
-<term><guibutton>Ersetzen...</guibutton></term>
+<term><guibutton>Ersetzen</guibutton></term>
 <listitem><para>Klicken auf diesen Knopf ersetzt das Wort im Feld <guilabel>Falsches Wort:</guilabel> mit dem Wort im Feld <guilabel>Ersetzung:</guilabel>.</para></listitem>
 </varlistentry>
 <varlistentry>

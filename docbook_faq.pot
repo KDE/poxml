@@ -327,7 +327,11 @@ msgid "The installation process depends on which package format you choose. Afte
 msgstr ""
 
 #: index.docbook:393
-msgid "If you need special configuration options (<abbrev>e.g.</abbrev> because you have shadow passwords and want to use the screensavers), your best bet is to use the source packages and compile &kde; yourself. <note><para><ulink url=\"mailto:bill.mote@bigfoot.com\">Bill Mote</ulink> has published a home page called \"KDE 1.1 Installation via RPM\". Go see it <ulink url=\"http://home.fuse.net/bmote/kde.htm\">here</ulink>.</para></note>"
+msgid "If you need special configuration options (<abbrev>e.g.</abbrev> because you have shadow passwords and want to use the screensavers), your best bet is to use the source packages and compile &kde; yourself."
+msgstr ""
+
+#: index.docbook:393
+msgid "<ulink url=\"mailto:bill.mote@bigfoot.com\">Bill Mote</ulink> has published a home page called \"KDE 1.1 Installation via RPM\". Go see it <ulink url=\"http://home.fuse.net/bmote/kde.htm\">here</ulink>."
 msgstr ""
 
 #: index.docbook:404
@@ -527,7 +531,11 @@ msgid "change directory to the package directory: <command>cd <replaceable>packa
 msgstr ""
 
 #: index.docbook:589
-msgid "configure the package: <command>./configure</command> <note><para>Some packages (notably kdebase) have special configuration options that might be applicable to your installation. Type <command>./configure <option>--help</option></command> to see the available options.</para></note>"
+msgid "configure the package: <command>./configure</command>"
+msgstr ""
+
+#: index.docbook:589
+msgid "Some packages (notably kdebase) have special configuration options that might be applicable to your installation. Type <command>./configure <option>--help</option></command> to see the available options."
 msgstr ""
 
 #: index.docbook:594
@@ -559,7 +567,11 @@ msgid "Post-installation procedures"
 msgstr ""
 
 #: index.docbook:623
-msgid "First of all, please make sure that you have added &kde;'s binary installation directory (<abbrev>e.g.</abbrev> <filename class=\"directory\">/opt/kde/bin</filename>) to your <envar>PATH</envar> and &kde;'s library installation directory to your <envar>LD_LIBRARY_PATH</envar> (only necessary on systems that do not support rpath; on &Linux; &ELF;, it should work without). This environment variable may be called differently on some systems, <abbrev>e.g.</abbrev> it is called <envar>SHLIB_PATH</envar> on &IRIX;. Then set the environment variable <envar>KDEDIR</envar> to the base of your &kde; tree, <abbrev>e.g.</abbrev> <filename class=\"directory\">/opt/kde</filename>. <caution> <para>Please bear in mind that it is unwise to set <envar>LD_LIBRARY_PATH</envar> blindly. In the vast majority of cases it is unnecessary and can do more harm than good. There is a web page written by <ulink url=\"mailto:barr@cis.ohio-state.edu\">Dave Barr</ulink> explaining the evils of <envar>LD_LIBRARY_PATH</envar> and it can be found at <ulink url=\"http://www.cis.ohio-state.edu/~barr/ldpath.html\">http://www.cis.ohio-state.edu/~barr/ldpath.html</ulink>.</para> </caution>"
+msgid "First of all, please make sure that you have added &kde;'s binary installation directory (<abbrev>e.g.</abbrev> <filename class=\"directory\">/opt/kde/bin</filename>) to your <envar>PATH</envar> and &kde;'s library installation directory to your <envar>LD_LIBRARY_PATH</envar> (only necessary on systems that do not support rpath; on &Linux; &ELF;, it should work without). This environment variable may be called differently on some systems, <abbrev>e.g.</abbrev> it is called <envar>SHLIB_PATH</envar> on &IRIX;. Then set the environment variable <envar>KDEDIR</envar> to the base of your &kde; tree, <abbrev>e.g.</abbrev> <filename class=\"directory\">/opt/kde</filename>."
+msgstr ""
+
+#: index.docbook:623
+msgid "Please bear in mind that it is unwise to set <envar>LD_LIBRARY_PATH</envar> blindly. In the vast majority of cases it is unnecessary and can do more harm than good. There is a web page written by <ulink url=\"mailto:barr@cis.ohio-state.edu\">Dave Barr</ulink> explaining the evils of <envar>LD_LIBRARY_PATH</envar> and it can be found at <ulink url=\"http://www.cis.ohio-state.edu/~barr/ldpath.html\">http://www.cis.ohio-state.edu/~barr/ldpath.html</ulink>."
 msgstr ""
 
 #: index.docbook:644
@@ -571,7 +583,11 @@ msgid "In order to make it easy for you, we have provided a simple script called
 msgstr ""
 
 #: index.docbook:652
-msgid "Edit the file <filename>.xinitrc</filename> in your home directory (make a backup copy first!), remove everything that looks like calling a window manager, and insert <command>startkde</command> instead. Restart the &X;. If you use &kdm;/<application>xdm</application>, you will have to edit the file <filename>.xsession</filename> instead of <filename>.xinitrc</filename>. And if there is no <filename>.xinitrc</filename> or <filename>.xsession</filename> in your home directory, simply create a new one with just one line containing <command>startkde</command>. <note> <para>Some systems (notably &RedHat; &Linux;) use <filename>.Xclients</filename> instead.</para> </note>"
+msgid "Edit the file <filename>.xinitrc</filename> in your home directory (make a backup copy first!), remove everything that looks like calling a window manager, and insert <command>startkde</command> instead. Restart the &X;. If you use &kdm;/<application>xdm</application>, you will have to edit the file <filename>.xsession</filename> instead of <filename>.xinitrc</filename>. And if there is no <filename>.xinitrc</filename> or <filename>.xsession</filename> in your home directory, simply create a new one with just one line containing <command>startkde</command>."
+msgstr ""
+
+#: index.docbook:652
+msgid "Some systems (notably &RedHat; &Linux;) use <filename>.Xclients</filename> instead."
 msgstr ""
 
 #: index.docbook:663
@@ -735,7 +751,11 @@ msgid "Whenever I start &kde;, it complains about \"shadow passwords\". Why?"
 msgstr ""
 
 #: index.docbook:999
-msgid "When your system uses shadow passwords, the screensaver can only run properly if the suid bit is set. This bit gives the screensavers root privileges, which are needed to access the shadow passwords. <caution><para>The screensavers might be configured to secure the machine until the password is entered.</para></caution>"
+msgid "When your system uses shadow passwords, the screensaver can only run properly if the suid bit is set. This bit gives the screensavers root privileges, which are needed to access the shadow passwords."
+msgstr ""
+
+#: index.docbook:999
+msgid "The screensavers might be configured to secure the machine until the password is entered."
 msgstr ""
 
 #: index.docbook:1005
@@ -795,7 +815,11 @@ msgid "<command>rpm</command> allows you to use the <option>--prefix</option> op
 msgstr ""
 
 #: index.docbook:1067
-msgid "<para>Although &kde; will run from a user directory, there are some problems with programs that require suid root, <abbrev>e.g.</abbrev> the programs in the kdeadmin package. But since they are not meant to be run by users in the first place, this is nothing to worry about.</para> <para>However, on systems using shadow passwords, the screensavers have to be suid root to enable password access for unlocking the screen, so this option will not work.</para>"
+msgid "Although &kde; will run from a user directory, there are some problems with programs that require suid root, <abbrev>e.g.</abbrev> the programs in the kdeadmin package. But since they are not meant to be run by users in the first place, this is nothing to worry about."
+msgstr ""
+
+#: index.docbook:1067
+msgid "However, on systems using shadow passwords, the screensavers have to be suid root to enable password access for unlocking the screen, so this option will not work."
 msgstr ""
 
 #: index.docbook:1081
@@ -1150,7 +1174,7 @@ msgstr ""
 msgid "Please note that the above example has the (undesirable) effect of leaving you in desktop 2 while it is executing and also once it has finished executing."
 msgstr ""
 
-#: index.docbook:1611
+#: index.docbook:1610
 msgid "On the off chance you have not used shell scripts, they are basically just text files you have run <command>chmod <option>+x</option></command> on. They are the &Linux; version of the <acronym>DOS</acronym> batch file, but, of course, better."
 msgstr ""
 
@@ -1519,11 +1543,19 @@ msgid "How do I replace the standard &Linux; text login screen with the &kde; lo
 msgstr ""
 
 #: index.docbook:2190
-msgid "First, you need to change to the \"xdm runlevel\" (runlevel 5 on &RedHat; systems, 3 on S.u.S.E.) by editing your <filename>/etc/inittab</filename> file. In the file, you should have a line saying <userinput>id:3:initdefault:</userinput>. Change it to <userinput>id:5:initdefault:</userinput>. Now at the end of the file, comment out the following line: <userinput>x:5:respawn:/usr/bin/X11/xdm -nodaemon</userinput> and replace it with <userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm -nodaemon</userinput>. <note><para>The location of &kdm; may differ on your system.</para></note>"
+msgid "First, you need to change to the \"xdm runlevel\" (runlevel 5 on &RedHat; systems, 3 on S.u.S.E.) by editing your <filename>/etc/inittab</filename> file. In the file, you should have a line saying <userinput>id:3:initdefault:</userinput>. Change it to <userinput>id:5:initdefault:</userinput>. Now at the end of the file, comment out the following line: <userinput>x:5:respawn:/usr/bin/X11/xdm -nodaemon</userinput> and replace it with <userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm -nodaemon</userinput>."
+msgstr ""
+
+#: index.docbook:2190
+msgid "The location of &kdm; may differ on your system."
 msgstr ""
 
 #: index.docbook:2202
-msgid "For changes to take effect immediately, type <command>init 5</command> (for &RedHat; systems) at the shell prompt. <caution><para>It is risky to initiate a graphical login without checking beforehand whether it works. If it fails to work, you would be in for a hard time getting back....</para></caution>"
+msgid "For changes to take effect immediately, type <command>init 5</command> (for &RedHat; systems) at the shell prompt."
+msgstr ""
+
+#: index.docbook:2202
+msgid "It is risky to initiate a graphical login without checking beforehand whether it works. If it fails to work, you would be in for a hard time getting back...."
 msgstr ""
 
 #: index.docbook:2212
@@ -1587,7 +1619,19 @@ msgid "First, create a file <filename>$<envar>HOME</envar>/.Xmodmap</filename> c
 msgstr ""
 
 #: index.docbook:2322
-msgid "Then run <command>xmodmap ~/.Xmodmap</command>. This sets the <keycap>Start</keycap> key to emit <keysym>F13</keysym> and the <keycap>Windows</keycap> key to emit <keysym>F15</keysym>. Next, fire up the <application>&kde; Control Center</application> and select <menuchoice><guimenu>Shortcut Keys</guimenu><guimenuitem>Global Shortcut</guimenuitem></menuchoice>. Set <guilabel>Pop-up system menu</guilabel> to <keysym>F13</keysym> and <guilabel>Window operations menu</guilabel> to <keysym>F15</keysym>. That is it. <note><para>The numbers 115 and 117 may depend on the keyboard. If you are not sure, please check using <command>xev</command>. In addition, the above procedure requires &kde; 1.1 and above.</para> <para>&kikbd; is able to do this too, but keymaps have to be edited. The advantage of &kikbd; is that one can choose whether to use these mappings on several custom keymaps and have them hotswappable.</para> <para>It would be interesting to make a little script that will automatically do the keymap modifications on demand. &kikbd; should be able to read/understand user-side keymap files.</para></note>"
+msgid "Then run <command>xmodmap ~/.Xmodmap</command>. This sets the <keycap>Start</keycap> key to emit <keysym>F13</keysym> and the <keycap>Windows</keycap> key to emit <keysym>F15</keysym>. Next, fire up the <application>&kde; Control Center</application> and select <menuchoice><guimenu>Shortcut Keys</guimenu><guimenuitem>Global Shortcut</guimenuitem></menuchoice>. Set <guilabel>Pop-up system menu</guilabel> to <keysym>F13</keysym> and <guilabel>Window operations menu</guilabel> to <keysym>F15</keysym>. That is it."
+msgstr ""
+
+#: index.docbook:2322
+msgid "The numbers 115 and 117 may depend on the keyboard. If you are not sure, please check using <command>xev</command>. In addition, the above procedure requires &kde; 1.1 and above."
+msgstr ""
+
+#: index.docbook:2322
+msgid "&kikbd; is able to do this too, but keymaps have to be edited. The advantage of &kikbd; is that one can choose whether to use these mappings on several custom keymaps and have them hotswappable."
+msgstr ""
+
+#: index.docbook:2322
+msgid "It would be interesting to make a little script that will automatically do the keymap modifications on demand. &kikbd; should be able to read/understand user-side keymap files."
 msgstr ""
 
 #: index.docbook:2344
@@ -1911,7 +1955,11 @@ msgid "Move or resize windows quickly"
 msgstr ""
 
 #: index.docbook:2764
-msgid "To move a window, use <keycombo action=\"simul\">&Alt;<mousebutton>left</mousebutton></keycombo> mouse button. <keycombo action=\"simul\">&Alt;<mousebutton>right</mousebutton></keycombo> mouse button will resize the window. Last but not least, <keycombo action=\"simul\">&Alt;<mousebutton>middle</mousebutton></keycombo> mouse button raises/lowers the window. For more information about mouse control, please refer to \"The K Window Manager Handbook\". <note><para>&kde; 1.1 and above allows you to change these mouse bindings.</para></note>"
+msgid "To move a window, use <keycombo action=\"simul\">&Alt;<mousebutton>left</mousebutton></keycombo> mouse button. <keycombo action=\"simul\">&Alt;<mousebutton>right</mousebutton></keycombo> mouse button will resize the window. Last but not least, <keycombo action=\"simul\">&Alt;<mousebutton>middle</mousebutton></keycombo> mouse button raises/lowers the window. For more information about mouse control, please refer to \"The K Window Manager Handbook\"."
+msgstr ""
+
+#: index.docbook:2764
+msgid "&kde; 1.1 and above allows you to change these mouse bindings."
 msgstr ""
 
 #: index.docbook:2779
@@ -2047,7 +2095,11 @@ msgid "How do I exit &kde;?"
 msgstr ""
 
 #: index.docbook:2990
-msgid "Simply click on the <guibutton>K</guibutton> button and select <guimenu>Logout</guimenu>. In addition, if you <mousebutton>right</mousebutton> click on an empty area of the desktop, you will be presented with a menu containing logout as one of the options. <note><para><keycombo action=\"simul\">&Ctrl;&Alt;&Backspace;</keycombo> will also do the trick by killing the X server, but its use prevents session management.</para></note>"
+msgid "Simply click on the <guibutton>K</guibutton> button and select <guimenu>Logout</guimenu>. In addition, if you <mousebutton>right</mousebutton> click on an empty area of the desktop, you will be presented with a menu containing logout as one of the options."
+msgstr ""
+
+#: index.docbook:2990
+msgid "<keycombo action=\"simul\">&Ctrl;&Alt;&Backspace;</keycombo> will also do the trick by killing the X server, but its use prevents session management."
 msgstr ""
 
 #: index.docbook:3004
@@ -2171,7 +2223,15 @@ msgid "How do I change the screen resolution?"
 msgstr ""
 
 #: index.docbook:3171
-msgid "Use <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>+</keycap></keycombo> and <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>-</keycap></keycombo> to cycle among the resolutions you have defined in <filename>XF86Config</filename> (maybe under <filename class=\"directory\">/etc/X11</filename>; poke around first). If you prefer to get your hands dirty, you can always edit the file directly. By placing your favorite resolution at the beginning (or making it the only one listed), the &X; will always start up with that resolution. <caution><para>Always make a backup copy of your <filename>XF86Config</filename> file <emphasis>before</emphasis> you start editing it. Errors in this file can render your &X; unusable.</para></caution> <note><para>These instructions are only valid if you are running version 3.3.x of the XFree86 server. If you are running XFree86 4.x, you must consult with the <ulink url=\"http://xfree.org\">XFree86(TM): Home Page</ulink>.</para></note>"
+msgid "Use <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>+</keycap></keycombo> and <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>-</keycap></keycombo> to cycle among the resolutions you have defined in <filename>XF86Config</filename> (maybe under <filename class=\"directory\">/etc/X11</filename>; poke around first). If you prefer to get your hands dirty, you can always edit the file directly. By placing your favorite resolution at the beginning (or making it the only one listed), the &X; will always start up with that resolution."
+msgstr ""
+
+#: index.docbook:3171
+msgid "Always make a backup copy of your <filename>XF86Config</filename> file <emphasis>before</emphasis> you start editing it. Errors in this file can render your &X; unusable."
+msgstr ""
+
+#: index.docbook:3171
+msgid "These instructions are only valid if you are running version 3.3.x of the XFree86 server. If you are running XFree86 4.x, you must consult with the <ulink url=\"http://xfree.org\">XFree86(TM): Home Page</ulink>."
 msgstr ""
 
 #: index.docbook:3192

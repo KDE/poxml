@@ -254,7 +254,7 @@
 
 <para>Das &kde;-Team stellt sechs verschiedene Arten von Paketen bereit: Quellen- und bin&auml;re <acronym>RPM</acronym>-Pakete, Quellen- und bin&auml;re <filename>.tgz</filename> (<filename>.tar.gz</filename>) Dateien sowie Quellen- und bin&auml;re Debianpakete. Die ersten normalerweise fertiggestellten Pakete sind die Quellen im <filename>.tgz</filename> Format, aber die anderen Formate erscheinen kurz danach. Seit kurzem wurden auch Quellen und bin&auml;re Dateien im <filename>.tar.bz2</filename>-Format verf&uuml;gbar gemacht. F&uuml;r weitere Informationen, wie Sie Dateien mit der Endung <filename>.tar.bz2</filename> entpacken, sehen Sie unter <xref linkend="bzip2"/> nach. Zus&auml;tzlich wurden auch <filename>pkg</filename>-Pakete f&uuml;r &Solaris; 2.6 und 7 bereitgestellt.</para> 
 <para>Die genaue Installation h&auml;ngt vom gew&auml;hlten Paketformat - und nat&uuml;rlich der Distribution - ab. Nach der Installation sind f&uuml;r alle Paketformate Nach-Installationsprozeduren abzuarbeiten. Beachten Sie, dass Sie als unerfahrener &UNIX;-Anf&auml;nger am besten beraten sind, wenn Sie bin&auml;re <acronym>RPM</acronym>- oder Debian-Pakete von Ihrem Distributionshersteller verwenden. Mindestens Caldera, Delix, und S.u.S.E. machen bin&auml;re <acronym>RPM</acronym>s auf ihren &FTP;-Servern verf&uuml;gbar.</para>
-<para>Wenn Sie spezielle Optionen eingerichtet haben (z.B. wenn Sie versteckte Passw&ouml;rter haben und Bildschirmschoner benutzen wollen), dann ist es wahrscheinlich am besten, wenn Sie die Quellen benutzen und &kde; selbst kompilieren.<note><ulink url="mailto:bill.mote@bigfoot.com">Bill Mote</ulink> hat eine Homepage mit dem Namen "KDE 1.1 Installation via RPM". Diese finden Sie <ulink url="http://home.fuse.net/bmote/kde.htm">hier</ulink>.</note></para>
+<para>Wenn Sie spezielle Optionen eingerichtet haben (z.B. wenn Sie versteckte Passw&ouml;rter haben und Bildschirmschoner benutzen wollen), dann ist es wahrscheinlich am besten, wenn Sie die Quellen benutzen und &kde; selbst kompilieren. <note><para><ulink url="mailto:bill.mote@bigfoot.com">Bill Mote</ulink> hat eine Homepage mit dem Namen "KDE 1.1 Installation via RPM". Diese finden Sie <ulink url="http://home.fuse.net/bmote/kde.htm">hier</ulink>.</para></note></para>
 </answer>
 </qandaentry>
 
@@ -399,7 +399,7 @@
 <procedure>
 <step performance="required"><para>Entpacken Sie die Pakete mit <command>tar <option>xvzf <replaceable>packagename.tar.gz</replaceable></option></command></para></step>
 <step performance="required"><para>Wechseln Sie in das Verzeichnis des Paketes: <command>cd <replaceable>packagename</replaceable></command></para></step>
-<step performance="required"><para>Konfigurieren Sie das Paket: <command>./configure</command> <note>Einige Pakete (vor allem kdebase) haben spezielle Optionen, die f&uuml;r Ihre Installation notwendig sein k&ouml;nnen. Geben Sie <command>./configure <option>--help</option></command> ein, um die vorhandenen Optionen angezeigt zu bekommen.</note></para></step>
+<step performance="required"><para>Konfigurieren Sie das Paket mit: <command>make</command> <note><para>Einige Pakete (vor allem kdebase) haben spezielle Optionen, die f&uuml;r Ihre Installation notwendig sein k&ouml;nnen. Geben Sie <command>./configure <option>--help</option></command> ein, um die vorhandenen Optionen angezeigt zu bekommen.</para></note></para></step>
 <step performance="required"><para>Erstellen Sie das Paket mit: <command>make</command></para></step>
 <step performance="required"><para>Installieren Sie das Paket mit <command>su <option>-c "make install"</option></command> (Wenn Sie noch nicht mit Systemverwalterrechten angemeldet sind). Wenn Sie schon als Systemverwalter angemeldet sind, dann geben Sie ein: <command>make<option> install</option></command>.</para></step>
 </procedure>
@@ -425,10 +425,10 @@
 <para>Nach-Installations Prozeduren</para>
 </question>
 <answer>
-<para>Stellen Sie zuerst sicher, dass das bin&auml;re &kde;-Installationsverzeichnis (<abbrev>z.B.</abbrev> <filename class="directory">/opt/kde/bin</filename>) zu Ihrem <envar>PATH</envar> und das &kde;-Library-Installationsverzeichnis zu Ihrem <envar>LD_LIBRARY_PATH</envar> hinzugef&uuml;gt wurde. Dies gilt nur f&uuml;r Systeme, die rpath nicht unterst&uuml;tzen; auf &Linux; &ELF;, sollte es auch ohne dieses Hinzuf&uuml;gen funktionieren. Diese Umgebungsvariable kann auf verschiedenen Systemen unterschiedlich bezeichnet sein; <abbrev>z.B.</abbrev> sie hei&szlig;t <envar>SHLIB_PATH</envar> auf &IRIX;. Setzen Sie die Umgebungsvariable <envar>KDEDIR</envar> dann auf die Basis Ihres &kde;-Verzeichnisbaumes, <abbrev>z.B.</abbrev> <filename class="directory">/opt/kde</filename>. <caution> Bitte beachten Sie, dass es unklug ist, <envar>LD_LIBRARY_PATH</envar> blindlings zu setzen. In der &uuml;berwiegenden Zahl der F&auml;lle ist es unn&ouml;tig und kann mehr Schaden anrichten als nutzen. Es gibt eine von <ulink url="mailto:barr@cis.ohio-state.edu">Dave Barr</ulink> geschriebene Webseite, die die Untiefen von <envar>LD_LIBRARY_PATH</envar> erkl&auml;rt; diese Webseite finden Sie unter: <ulink url="http://www.cis.ohio-state.edu/~barr/ldpath.html">http://www.cis.ohio-state. edu/~barr/ldpath.html</ulink>. </caution></para>
+<para>Stellen Sie zuerst sicher, dass das bin&auml;re &kde;-Installationsverzeichnis (<abbrev>z.B.</abbrev> <filename class="directory">/opt/kde/bin</filename>) zu Ihrem <envar>PATH</envar> und das &kde;-Library-Installationsverzeichnis zu Ihrem <envar>LD_LIBRARY_PATH</envar> hinzugef&uuml;gt wurde. Dies gilt nur f&uuml;r Systeme, die rpath nicht unterst&uuml;tzen; auf &Linux; &ELF;, sollte es auch ohne dieses Hinzuf&uuml;gen funktionieren. Diese Umgebungsvariable kann auf verschiedenen Systemen unterschiedlich bezeichnet sein; <abbrev>z.B.</abbrev> sie hei&szlig;t <envar>SHLIB_PATH</envar> auf &IRIX;. Setzen Sie die Umgebungsvariable <envar>KDEDIR</envar> dann auf die Basis Ihres &kde;-Verzeichnisbaumes, <abbrev>z.B.</abbrev> <filename class="directory">/opt/kde</filename>. <caution> <para></para> </caution></para>
 <para>Auch wenn Sie die meisten &kde;-Anwendungen einfach durch Aufrufen beim Namen benutzen k&ouml;nnen, profitieren Sie von &kde;'s weitentwickelten Eigenschaften nur, wenn Sie den &kde;-Fenstermanager und dessen Hilfprogramme benutzen.</para>
 <para>Um Ihnen dies so einfach wie m&ouml;glich zu machen, stellt &kde; ein einfaches Skript mit dem Namen <command>startkde</command> bereit, welches im <filename class="directory">$<envar>KDEDIR</envar>/bin</filename>-Verzeichnis installiert wird und damit in Ihrem Pfad vorhanden ist.</para>
-<para>Editieren Sie die Datei <filename>.xinitrc</filename> in Ihrem Pers&ouml;nlichen Verzeichnis (machen Sie vorher eine Sicherungskopie!), entfernen Sie alles, was wie ein Fenstermanageraufruf aussieht und setzen Sie daf&uuml;r <command>startkde</command> ein. Starten Sie &X; neu. Wenn Sie &kdm;/ <application>xdm</application> nutzen, m&uuml;ssen Sie die Datei <filename>.xsession</filename> anstelle von <filename>.xinitrc</filename> editieren. Wenn Sie kein <filename>.xinitrc</filename> oder <filename>.xsession</filename> in Ihrem Pers&ouml;nlichen Verzeichnis haben, dann erzeugen Sie einfach eine neue Datei, die nur eine Zeile "<command>startkde</command>" enth&auml;lt. <note>Manche Systeme (vor allem &RedHat; &Linux;) nutzen statt dessen <filename>.Xclients</filename>. </note></para>
+<para>Editieren Sie die Datei <filename>.xinitrc</filename> in Ihrem Pers&ouml;nlichen Verzeichnis (machen Sie vorher eine Sicherungskopie!), entfernen Sie alles, was wie ein Fenstermanageraufruf aussieht und setzen Sie daf&uuml;r <command>startkde</command> ein. Starten Sie &X; neu. Wenn Sie &kdm;/ <application>xdm</application> nutzen, m&uuml;ssen Sie die Datei <filename>.xsession</filename> anstelle von <filename>.xinitrc</filename> editieren. Wenn Sie kein <filename>.xinitrc</filename> oder <filename>.xsession</filename> in Ihrem Pers&ouml;nlichen Verzeichnis haben, dann erzeugen Sie einfach eine neue Datei, die nur eine Zeile "<command>startkde</command>" enth&auml;lt. <note>Manche Systeme (vor allem &RedHat; &Linux;) nutzen statt dessen <filename>.Xclients</filename>. </note> <note> <para></para> </note></para>
 <para>Jetzt sollten Sie eine neue gl&auml;nzende &kde;-Arbeitsoberfl&auml;che sehen. Beginnen Sie nun mit der Erforschung der wunderbaren Welt von &kde;. Wenn Sie erst einiges an Dokumentation lesen wollen, finden Sie hier eine als sehr gut bekannte <ulink url="http://www.kde.org/documentation/quickstart/index.html">Schnellstartanleitung</ulink>. Weiterhin hat jede Anwendung eine Onlinehilfe, die Sie &uuml;ber das Hilfemen&uuml;aufrufen k&ouml;nnen.</para>
 </answer>
 </qandaentry>
@@ -476,8 +476,7 @@
 
 <para>This fixes all the compile lines so that all the "replicated" libraries (jpeg and png) are replaced with full paths so they won't be linked with the &SGI; ones.</para>
 
-<note><para>In the original HOWTO, <option>-fsquangle</option> was added to each makefile. This caused compilation errors. I found that it was really only needed in one makefile. It will be noted below.</para>
-</note>
+<note><para>In the original HOWTO, <option>-fsquangle</option> was added to each makefile. This caused compilation errors. I found that it was really only needed in one makefile. It will be noted below.</para></note>
 
 <para>Here's the FixMakesSq script:</para>
 <programlisting>#!/bin/perl -ni.bak
@@ -666,7 +665,7 @@ and link it from here-->
 <para>Immer, wenn Sie &kde; starten, bekommen Sie eine Fehlermeldung &uuml;ber "Schattenpassw&ouml;rter". Warum?</para>
 </question>
 <answer>
-<para>Wenn Ihr System Schattenpassw&ouml;rter verwendet, kann der Bildschirmschoner nur dann richtig arbeiten, wenn das suid Bit gesetzt ist. Dieses gibt dem Bildschirmschoner Systemverwalterrechte, die er braucht, um auf die Schattenpassw&ouml;rter zuzugreifen <caution>Die Bildschirmschoner k&ouml;nnen eingerichtet werden, das System zu sichern, bis das Passwort eingegeben ist.</caution></para>
+<para>Wenn Ihr System Schattenpassw&ouml;rter verwendet, kann der Bildschirmschoner nur dann richtig arbeiten, wenn das suid Bit gesetzt ist. Dieses gibt dem Bildschirmschoner Systemverwalterrechte, die er braucht, um auf die Schattenpassw&ouml;rter zuzugreifen <caution>Die Bildschirmschoner k&ouml;nnen eingerichtet werden, das System zu sichern, bis das Passwort eingegeben ist.</caution> <caution><para></para></caution></para>
 <procedure>
 <title>Setzen des suid Bits f&uuml;r die Bildschirmschoner.</title>
 <step performance="required"><para>Melden Sie sich mit Systemverwalterrechten an</para></step>
@@ -713,7 +712,7 @@ export KDEDIR PATH LD_LIBRARY_PATH LIBRARY_PATH
 <procedure><title><acronym>RPM</acronym> Pakete</title>
 <step performance="required"><para><command>rpm</command> gestattet Ihnen, die Option <option>--prefix</option> zur Auswahl des Verzeichnisses, in das Sie installieren wollen, zu benutzen. <abbrev>z.B.</abbrev> der Befehl <command>rpm <option>-i --prefix=<replaceable>/users/myhome/kde package.rpm</replaceable></option></command> installiert das Paket in das Verzeichnis <filename class="directory">/users/myhome/kde</filename>.</para></step>
 </procedure>
-<para><note> Auch wenn &kde; von einem Nutzerverzeichnis l&auml;uft, gibt es einige Probleme mit Programmen, die Systemverwalterrechte ben&ouml;tigen; <abbrev>z.B.</abbrev> die Programme im kdeadmin Paket. Aber weil diese normalerweise nicht von Nutzern benutzt werden, ist dies eigentlich kein Problem. Trotzdem m&uuml;ssen in Systemen mit Schattenpassw&ouml;rtern die Bildschirmschoner Systemverwalterrechte haben, d.h. das suid Bit muss gesetzt werden. Ist dieses nicht m&ouml;glich, wird das Entsperren des Bildschirms nicht funktionieren. </note></para>
+<para><note> <para>Auch wenn &kde; von einem Nutzerverzeichnis l&auml;uft, gibt es einige Probleme mit Programmen, die Systemverwalterrechte ben&ouml;tigen; <abbrev>z.B.</abbrev> die Programme im kdeadmin Paket. Aber weil diese normalerweise nicht von Nutzern benutzt werden, ist dies eigentlich kein Problem. Trotzdem m&uuml;ssen in Systemen mit Schattenpassw&ouml;rtern die Bildschirmschoner Systemverwalterrechte haben, d.h. das suid Bit muss gesetzt werden. Ist dieses nicht m&ouml;glich, wird das Entsperren des Bildschirms nicht funktionieren.</para> <para></para> </note></para>
 </answer>
 </qandaentry>
 
@@ -990,7 +989,7 @@ Comment=Floppy Disc
 <para>Wie nutzen Sie einen Bildschirmschoner als Hintergrund?</para>
 </question>
 <answer>
-<para>Es ist m&ouml;glich, einen Bildschirmschoner anstelle eines Hintergrundbildes zu nutzen. Um dies zu tun, starten Sie irgendeinen Bildschirmschoner mit dem <option>-inroot</option> Parameter, z.B. <command>kswarm.kss <option>-inroot</option> &</command>. Die meisten Bildschirmschoner sehen am besten aus, wenn Sie die Hintergrundfarbe schwarz einstellen. Bedenken Sie aber, dass die Verwendung eines Bildschirmschoners als Hintergrund CPU- und X-Zeit verbraucht....</para>
+<para>Es ist m&ouml;glich, einen Bildschirmschoner anstelle eines Hintergrundbildes zu nutzen. Um dies zu tun, starten Sie irgendeinen Bildschirmschoner mit dem <option>-inroot</option> Parameter, z.B. <command>kswarm.kss <option>-inroot</option> &amp;</command>. Die meisten Bildschirmschoner sehen am besten aus, wenn Sie die Hintergrundfarbe schwarz einstellen. Bedenken Sie aber, dass die Verwendung eines Bildschirmschoners als Hintergrund CPU- und X-Zeit verbraucht....</para>
 </answer>
 </qandaentry>
 
@@ -1070,9 +1069,7 @@ Terminal=0
 kwmcom desktop2 <lineannotation>(or desktop3, desktop4, whatever)</lineannotation> netscape
 </screen>
 <para>Dieses Beispielskript hat den unerw&uuml;nschten Effekt, Sie auf der Arbeitsfl&auml;che 2 zu lassen, wenn es fertig ist.</para>
-<note>
-<para>Wenn Sie bisher noch nicht mit Shellskripts gearbeitet haben, das ist ganz einfach, diese sind ganz normale Textdateien, die mit dem Befehl <command>chmod <option>+x</option></command> ausf&uuml;hrbar gemacht werden. Sie sind die &Linux;-Version der <acronym>DOS</acronym> *.bat-Dateien aber nat&uuml;rlich besser.</para>
-</note>
+<note><para>Wenn Sie bisher noch nicht mit Shellskripts gearbeitet haben, das ist ganz einfach, diese sind ganz normale Textdateien, die mit dem Befehl <command>chmod <option>+x</option></command> ausf&uuml;hrbar gemacht werden. Sie sind die &Linux;-Version der <acronym>DOS</acronym> *.bat-Dateien aber nat&uuml;rlich besser.</para></note>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -1338,7 +1335,7 @@ lo        Link encap:Local Loopback
 </question>
 <answer>
 <para>Diese werden von allen &kde;-Anwendungen benutzt (sie sind implementiert in <classname>KApplication</classname> und alle guten &kde;-Programme erzeugen ein <classname>KApplication</classname>-Objekt, noch bevor sie die Befehlszeilenargumente auswerten).</para>
-<para>Eine Standardzeile f&uuml;r eine &kde;-Anwendung sieht so aus: <command>foo <option>... %i %m -caption \\"%c\\"</option></command>. Das ist ziemlich un&uuml;bersichtlich, aber es musste so gemacht werden, um die Integration von &auml;lteren, nicht-&kde;-Anwendungen so einfach wie m&ouml;glich zu machen. &kfm; und &konqueror; erweitern diese Zeile zu <command>foo <option>-icon something.xpm -miniicon something_mini.xpm -caption \\"The Foo\\"</option></command>. Beide, das Icon und das Mini-Icon wie auch "The Foo" sind Eigenschaften, die in der .<filename>desktop</filename>-Datei festgelegt sind. Wenn die Icons nicht definiert sind, dann werden einfach die der ausf&uuml;hrbaren Datei "foo" benutzt.</para>
+<para>Eine Standardzeile f&uuml;r eine &kde;-Anwendung sieht so aus: <command>foo <option>... %i %m -caption \"%c\"</option></command>. Das ist ziemlich un&uuml;bersichtlich, aber es musste so gemacht werden, um die Integration von &auml;lteren, nicht-&kde;-Anwendungen so einfach wie m&ouml;glich zu machen. &kfm; und &konqueror; erweitern diese Zeile zu <command>foo <option>-icon something.xpm -miniicon something_mini.xpm -caption \"The Foo\"</option></command>. Beide, das Icon und das Mini-Icon wie auch "The Foo" sind Eigenschaften, die in der .<filename>desktop</filename>-Datei festgelegt sind. Wenn die Icons nicht definiert sind, dann werden einfach die der ausf&uuml;hrbaren Datei "foo" benutzt.</para>
 <para>Auf diese Weise kann der Benutzer mit &kmenuedit; diese Einstellungen ver&auml;ndern. <option>-caption</option> ist wichtig, denn niemand m&ouml;chte, dass <guilabel>Editor</guilabel> etwas mit Namen <guilabel>kedit-0.9pl4-build47</guilabel> startet. Statt dessen erwartet man ein Fenster mit Namen <guilabel>Editor</guilabel>. Weiterhin k&ouml;nnen diese Namen auf die Sprache des Benutzers angepasst werden, <abbrev>i.e.</abbrev> ein amerikanischer Nutzer startet <guimenuitem>CD-Player</guimenuitem> und bekommt ein Fenster mit Namen <guilabel>CD-Player</guilabel> w&auml;hrend ein deutscher Nutzer <guimenuitem>CD Spieler</guimenuitem> startet und ein Fenster mit Namen <guilabel>CD-Spieler</guilabel> erh&auml;lt.</para>
 </answer>
 </qandaentry>
@@ -1421,7 +1418,7 @@ lo        Link encap:Local Loopback
 <para>Es gibt zwei Wege, um die Sprache f&uuml;r die &kde;-Ausgaben einzustellen:</para>
 <variablelist>
 <varlistentry><term>Benutzen Sie das &kde;-Kontrollzentrum</term>
-<listitem><para>Starten Sie &kde;-Kontrollzentrum und w&auml;hlen Sie <guimenu>Pers&ouml;nliche Einstellungen</guimenu>-><guimenuitem>Land & Sprache</guimenuitem>. Hier k&ouml;nnen Sie Sprache und Land einstellen. Wenn &kde; keine &Uuml;bersetzung in der gew&auml;hlten Sprache findet, wird die Standardsprache eingestellt. Normalerweise ist das (amerikanisches) Englisch.</para>
+<listitem><para>Starten Sie &kde;-Kontrollzentrum und w&auml;hlen Sie <guimenu>Pers&ouml;nliche Einstellungen</guimenu>-><guimenuitem>Land &amp; Sprache</guimenuitem>. Hier k&ouml;nnen Sie Sprache und Land einstellen. Wenn &kde; keine &Uuml;bersetzung in der gew&auml;hlten Sprache findet, wird die Standardsprache eingestellt. Normalerweise ist das (amerikanisches) Englisch.</para>
 <note><para>Benutzen des &kde;-Kontrollzentrums ist der beste Weg, um die Sprache in &kde; einzustellen.</para></note></listitem>
 </varlistentry>
 <varlistentry><term>Benutzen der <envar>LANG</envar> Umgebungsvariable</term>
@@ -1445,8 +1442,8 @@ lo        Link encap:Local Loopback
 <para>Wie k&ouml;nnen Sie den Standard &Linux; Text Login Bildschirm mit dem &kde; Login Bildschirm ersetzen?</para>
 </question>
 <answer>
-<para>Erstens, Sie m&uuml;ssen in den "xdm runlevel" (Runlevel 5 in &RedHat; Systemen, 3 in S.u.S.E.) wechseln, dies erreichen Sie durch Editieren der Datei <filename>/etc/inittab</filename>. In dieser Datei finden Sie die folgende Zeile <userinput>id:3:initdefault:</userinput>. &Auml;ndern Sie dies in <userinput>id:5:initdefault:</userinput>. Am Ende der Datei, versehen Sie die folgende Zeile mit einem Kommentarzeichen, um sie unwirksam zu machen: <userinput>x:5:respawn:/usr/bin/X11/xdm -nodaemon</userinput> und ersetzen Sie diese durch: <userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm -nodaemon</userinput>. <note>Wo &kdm; in Ihrem System gespeichert ist, kann abweichend sein, passen Sie dies entsprechend an.</note></para>
-<para>Um die &Auml;nderungen sofort wirksam werden zu lassen geben Sie den folgenden Befehl ein: <command>init 5</command> (f&uuml;r &RedHat; Systeme) <caution>Das Aktivieren des Grafischen Anmeldens ohne vorherigen Test der Funktionsf&auml;higkeit birgt ein Risiko. Wenn es nicht richtig funktioniert, ist es schwierig, zu einer Befehlszeile zur&uuml;ck zu kommen.... Aktivieren Sie dieses also erst, wenn die grafische Benutzeroberfl&auml;che grunds&auml;tzlich funktioniert.</caution></para>
+<para>Erstens, Sie m&uuml;ssen in den "xdm runlevel" (Runlevel 5 in &RedHat; Systemen, 3 in S.u.S.E.) wechseln, dies erreichen Sie durch Editieren der Datei <filename>/etc/inittab</filename>. In dieser Datei finden Sie die folgende Zeile <userinput>id:3:initdefault:</userinput>. &Auml;ndern Sie dies in <userinput>id:5:initdefault:</userinput>. Am Ende der Datei, versehen Sie die folgende Zeile mit einem Kommentarzeichen, um sie unwirksam zu machen: <userinput>x:5:respawn:/usr/bin/X11/xdm -nodaemon</userinput> und ersetzen Sie diese durch: <userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm -nodaemon</userinput>. <note>Wo &kdm; in Ihrem System gespeichert ist, kann abweichend sein, passen Sie dies entsprechend an.</note> <note><para></para></note></para>
+<para> <caution><para>Um die &Auml;nderungen sofort wirksam werden zu lassen geben Sie den folgenden Befehl ein: <command>init 5</command> (f&uuml;r &RedHat; Systeme) <caution>Das Aktivieren des Grafischen Anmeldens ohne vorherigen Test der Funktionsf&auml;higkeit birgt ein Risiko. Wenn es nicht richtig funktioniert, ist es schwierig, zu einer Befehlszeile zur&uuml;ck zu kommen.... Aktivieren Sie dieses also erst, wenn die grafische Benutzeroberfl&auml;che grunds&auml;tzlich funktioniert.</caution></para></caution></para>
 </answer>
 </qandaentry>
 
@@ -1505,7 +1502,7 @@ Left=Menu
 keycode 115=F13
 keycode 117=F15
 </screen>
-<para>Danach f&uuml;hren sie den Befehl <command>xmodmap ~/.Xmodmap</command> aus. Dies veranlasst die <keycap>Start</keycap>-Taste, den Tastencode <keysym>F13</keysym> zu senden und die <keycap>Windows</keycap>-Taste den Tastencode <keysym>F15</keysym>. Als n&auml;chstes starten Sie das <application>&kde;-Kontrollzentrum</application> und w&auml;hlen Sie <menuchoice><guimenu>Tastenzuordnung</guimenu><guimenuitem>Allgemeine Tastenk&uuml;rzel</guimenuitem></menuchoice>. Setzen Sie <keysym>F13</keysym> f&uuml;r <guilabel>Aufklapp-Men&uuml;</guilabel> und <keysym>F15</keysym> f&uuml;r <guilabel>Fenster-Aktionen</guilabel>. Fertig. <note>Die Werte 115 und 117 k&ouml;nnen f&uuml;r unterschiedliche Tastaturen abweichend sein. Wenn Sie nicht sicher sind, k&ouml;nnen Sie dies mit dem Befehl <command>xev</command> &uuml;berpr&uuml;fen. Sie brauchen &kde; 1.1 und dar&uuml;ber, damit das oben Beschriebene funktioniert. Eine andere M&ouml;glichkeit ist die Benutzung von &kikbd;, aber dazu m&uuml;ssen Sie die Tastenpl&auml;ne (keymaps) editieren. Der Vorteil von &kikbd; ist, dass Sie entscheiden k&ouml;nnen, ob Sie diese Zuordnungen in einigen eigenen Zuordnungen verwenden wollen und dass Sie diese ohne Neustart umschalten k&ouml;nnen. Es w&auml;re sicher interessant, ein kleines Skript zu schreiben, das diese Ver&auml;nderungen in den Tastenpl&auml;nen (keymaps) automatisch vornimmt, wenn diese gebraucht werden. &kikbd; sollte in der Lage sein, nutzereigene Tastenpl&auml;ne (keymaps) zu lesen/verstehen.</note></para>
+<para>Danach f&uuml;hren sie den Befehl <command>xmodmap ~/.Xmodmap</command> aus. Dies veranlasst die <keycap>Start</keycap>-Taste, den Tastencode <keysym>F13</keysym> zu senden und die <keycap>Windows</keycap>-Taste den Tastencode <keysym>F15</keysym>. Als n&auml;chstes starten Sie das <application>&kde;-Kontrollzentrum</application> und w&auml;hlen Sie <menuchoice><guimenu>Tastenzuordnung</guimenu><guimenuitem>Allgemeine Tastenk&uuml;rzel</guimenuitem></menuchoice>. Setzen Sie <keysym>F13</keysym> f&uuml;r <guilabel>Aufklapp-Men&uuml;</guilabel> und <keysym>F15</keysym> f&uuml;r <guilabel>Fenster-Aktionen</guilabel>. Fertig. <note>Die Werte 115 und 117 k&ouml;nnen f&uuml;r unterschiedliche Tastaturen abweichend sein. Wenn Sie nicht sicher sind, k&ouml;nnen Sie dies mit dem Befehl <command>xev</command> &uuml;berpr&uuml;fen. Sie brauchen &kde; 1.1 und dar&uuml;ber, damit das oben Beschriebene funktioniert. Eine andere M&ouml;glichkeit ist die Benutzung von &kikbd;, aber dazu m&uuml;ssen Sie die Tastenpl&auml;ne (keymaps) editieren. Der Vorteil von &kikbd; ist, dass Sie entscheiden k&ouml;nnen, ob Sie diese Zuordnungen in einigen eigenen Zuordnungen verwenden wollen und dass Sie diese ohne Neustart umschalten k&ouml;nnen. Es w&auml;re sicher interessant, ein kleines Skript zu schreiben, das diese Ver&auml;nderungen in den Tastenpl&auml;nen (keymaps) automatisch vornimmt, wenn diese gebraucht werden. &kikbd; sollte in der Lage sein, nutzereigene Tastenpl&auml;ne (keymaps) zu lesen/verstehen.</note> <note><para></para> <para></para> <para></para></note></para>
 </answer>
 </qandaentry>
 
@@ -1721,7 +1718,7 @@ keycode 117=F15
 </varlistentry>
 <varlistentry>
 <term>Warum zeigt &Netscape; Bilder so seltsam an?</term>
-<listitem><para>Wenn Sie &Netscape; starten, probieren Sie den Schalter <option>-install</option>; <abbrev>z.B.</abbrev> <command>netscape <option>-install</option> &</command>. Dies zwingt &Netscape; eine eigene Farbpalette zu nutzen, was hoffentlich das Problem l&ouml;st;</para></listitem>
+<listitem><para>Wenn Sie &Netscape; starten, probieren Sie den Schalter <option>-install</option>; <abbrev>z.B.</abbrev> <command>netscape <option>-install</option> &amp;</command>. Dies zwingt &Netscape; eine eigene Farbpalette zu nutzen, was hoffentlich das Problem l&ouml;st;</para></listitem>
 </varlistentry>
 <varlistentry>
 <term>Wie stellen Sie &Netscape; als Browser f&uuml;r einen neuen WWWUrl kdelnk anstelle von &kfm; ein?</term>
@@ -1753,7 +1750,7 @@ keycode 117=F15
 <para>Schnelles Verschieben oder Ver&auml;ndern der Gr&ouml;&szlig;e von Fenstern</para>
 </question>
 <answer>
-<para>Um ein Fenster zu verschieben, k&ouml;nnen Sie die Tastenkombination <keycombo action="simul">&Alt;<mousebutton>linke</mousebutton></keycombo> Maustaste verwenden. <keycombo action="simul">&Alt;<mousebutton>rechte</mousebutton></keycombo> Maustaste ver&auml;ndert die Gr&ouml;&szlig;e des Fensters und <keycombo action="simul">&Alt;<mousebutton>mittlere</mousebutton></keycombo> Maustaste verschiebt das Fenster in den Hintergrund oder holt es wieder hervor. F&uuml;r weitere Information &uuml;ber die Mausfunktionen lesen Sie bitte im "The K Window Manager Handbook" nach. <note>&kde; 1.1 und dar&uuml;ber erlauben eine Einstellung dieser Funktionen nach Ihren W&uuml;nschen. </note></para>
+<para>Um ein Fenster zu verschieben, k&ouml;nnen Sie die Tastenkombination <keycombo action="simul">&Alt;<mousebutton>linke</mousebutton></keycombo> Maustaste verwenden. <keycombo action="simul">&Alt;<mousebutton>rechte</mousebutton></keycombo> Maustaste ver&auml;ndert die Gr&ouml;&szlig;e des Fensters und <keycombo action="simul">&Alt;<mousebutton>mittlere</mousebutton></keycombo> Maustaste verschiebt das Fenster in den Hintergrund oder holt es wieder hervor. F&uuml;r weitere Information &uuml;ber die Mausfunktionen lesen Sie bitte im "The K Window Manager Handbook" nach. <note>&kde; 1.1 und dar&uuml;ber erlauben eine Einstellung dieser Funktionen nach Ihren W&uuml;nschen. </note> <note><para></para></note></para>
 </answer>
 </qandaentry>
 
@@ -1896,7 +1893,7 @@ drwxr-xr-x  24 root     root         1024 Dec  1 21:00 ../
 <para>Wie verlassen Sie &kde;?</para>
 </question>
 <answer>
-<para>Klicken Sie einfach auf den <guibutton>K</guibutton>-Knopf und w&auml;hlen Sie <guimenu>Abmelden...</guimenu>. Sie k&ouml;nnen auch einfach mit der <mousebutton>rechten</mousebutton> Maustaste auf eine leere Stelle der Arbeitsfl&auml;che klicken, was ein Men&uuml; &ouml;ffnet, das Ihnen unter anderem den Punkt <guimenu>Abmelden...</guimenu> anbietet. <note>Die Tastenkombination <keycombo action="simul">&Strg;&Alt;&Backspace;</keycombo> beendet auch die Sitzung (durch gewaltsames Beenden des X-Servers), aber deren Benutzung verhindert das Sitzungsmanagement.</note></para>
+<para>Klicken Sie einfach auf den <guibutton>K</guibutton>-Knopf und w&auml;hlen Sie <guimenu>Abmelden...</guimenu>. Sie k&ouml;nnen auch einfach mit der <mousebutton>rechten</mousebutton> Maustaste auf eine leere Stelle der Arbeitsfl&auml;che klicken, was ein Men&uuml; &ouml;ffnet, das Ihnen unter anderem den Punkt <guimenu>Abmelden...</guimenu> anbietet. <note>Die Tastenkombination <keycombo action="simul">&Strg;&Alt;&Backspace;</keycombo> beendet auch die Sitzung (durch gewaltsames Beenden des X-Servers), aber deren Benutzung verhindert das Sitzungsmanagement.</note> <note><para></para></note></para>
 </answer>
 </qandaentry>
 
@@ -2025,7 +2022,7 @@ drwxr-xr-x  24 root     root         1024 Dec  1 21:00 ../
 <para>Wie schalten sie die Bildschirmaufl&ouml;sung um?</para>
 </question>
 <answer>
-<para>Die Tastenkombinationen <keycombo action="simul">&Strg;&Alt;<keycap>+</keycap></keycombo> und <keycombo action="simul">&Strg;&Alt;<keycap>-</keycap></keycombo> schalten zwischen den in <filename>XF86Config</filename> (eventuell im Verzeichnis <filename class="directory">/etc/X11</filename> definierten Aufl&ouml;sungen um. Sie k&ouml;nnen auch diese Datei direkt editieren. Wenn Sie die bevorzugte Aufl&ouml;sung als erste in der Datei anordnen (oder als einzige darin stehen lassen), startet &X; immer mit dieser Aufl&ouml;sung. <caution> Machen Sie immer eine Sicherheitskopie der Datei <filename>XF86Config</filename> <emphasis>bevor</emphasis> Sie diese editieren. Fehler in dieser Datei k&ouml;nnen Ihr &X; unbenutzbar machen. </caution> <note> Diese Anleitung gilt nur f&uuml;r die Version 3.3.x des XFree86 Servers. F&uuml;r XFree86 4.x sehen Sie bitte auf der: <ulink url="http://xfree.org">XFree86(TM): Homepage</ulink> nach.</note></para>
+<para>Die Tastenkombinationen <keycombo action="simul">&Strg;&Alt;<keycap>+</keycap></keycombo> und <keycombo action="simul">&Strg;&Alt;<keycap>-</keycap></keycombo> schalten zwischen den in <filename>XF86Config</filename> (eventuell im Verzeichnis <filename class="directory">/etc/X11</filename> definierten Aufl&ouml;sungen um. Sie k&ouml;nnen auch diese Datei direkt editieren. Wenn Sie die bevorzugte Aufl&ouml;sung als erste in der Datei anordnen (oder als einzige darin stehen lassen), startet &X; immer mit dieser Aufl&ouml;sung. <caution> Machen Sie immer eine Sicherheitskopie der Datei <filename>XF86Config</filename> <emphasis>bevor</emphasis> Sie diese editieren. Fehler in dieser Datei k&ouml;nnen Ihr &X; unbenutzbar machen. </caution> <note> Diese Anleitung gilt nur f&uuml;r die Version 3.3.x des XFree86 Servers. F&uuml;r XFree86 4.x sehen Sie bitte auf der: <ulink url="http://xfree.org">XFree86(TM): Homepage</ulink> nach.</note> <caution><para></para></caution> <note><para></para></note></para>
 </answer>
 </qandaentry>
 
@@ -2075,7 +2072,7 @@ xsetroot -cursor_name left_ptr
 <para>Wie entpacken/installieren Sie diff-Dateien?</para>
 </question>
 <answer>
-<para>Um eine diff-Datei, die f&uuml;r das "Patchen" von Quelltext-Dateien nutzbar ist, zu erzeugen, f&uuml;hren Sie den Befehl <command>diff <replaceable>old-file new-file</replaceable> > <replaceable>patchfile</replaceable></command> aus. Um diese &Auml;nderungen in eine andere Datei einzuspielen, (<abbrev>z.B.</abbrev> "patch the file"), f&uuml;hren Sie den Befehl <command>patch < <replaceable>patchfile</replaceable></command> aus.</para></answer>
+<para>Um eine diff-Datei, die f&uuml;r das "Patchen" von Quelltext-Dateien nutzbar ist, zu erzeugen, f&uuml;hren Sie den Befehl <command>diff <replaceable>old-file new-file</replaceable> > <replaceable>patchfile</replaceable></command> aus. Um diese &Auml;nderungen in eine andere Datei einzuspielen, (<abbrev>z.B.</abbrev> "patch the file"), f&uuml;hren Sie den Befehl <command>patch &lt; <replaceable>patchfile</replaceable></command> aus.</para></answer>
 </qandaentry>
 
 <qandaentry>

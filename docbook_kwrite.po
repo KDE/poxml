@@ -2,17 +2,17 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2001-02-28 12:29MET\n"
+"Last-Translator: Stephan Kulow <coolo@kde.org>\n"
+"Language-Team: german <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.8\n"
 
 #: index.docbook:12
 msgid "The &kwrite; Handbook"
@@ -20,7 +20,7 @@ msgstr "Das &kwrite;-Handbuch"
 
 #: index.docbook:22
 msgid "Principal Developer"
-msgstr "Entwicklung"
+msgstr "Haupt-Entwicklung"
 
 # index.docbook:28, index.docbook:33
 #: index.docbook:28
@@ -37,7 +37,7 @@ msgstr "Korrektor"
 
 #: index.docbook:64
 msgid "This handbook describes &kwrite; Version 2.0"
-msgstr "Dieses Handbuch beschreibt KWrite Version 2.0"
+msgstr "Dieses Handbuch beschreibt &kwrite; Version 2.0"
 
 #: index.docbook:65
 msgid "&kwrite; is a text editor for KDE 2.0"
@@ -139,6 +139,13 @@ msgstr ""
 "Der Benutzer kann Pfad und Dateinamen einer Datei angeben, die dann beim "
 "Starten ge&ouml;ffnet (oder erzeugt) wird. Hierzu ein Beispiel:"
 
+#: index.docbook:121
+msgid ""
+"<prompt>%</prompt> <userinput><command>kwrite</command> "
+"<option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></use"
+"rinput>"
+msgstr ""
+
 #: index.docbook:127
 msgid "Specify a file on the internet"
 msgstr "Angabe eines Dateinamens im Internet"
@@ -152,6 +159,13 @@ msgstr ""
 "Die oben genannte Methode kann auch benutzt werden, um Dateien im Internet "
 "zu &ouml;ffnen (wenn der Nutzer eine aktive Verbindung hat). Hierzu wieder "
 "ein Beispiel:"
+
+#: index.docbook:133
+msgid ""
+"<prompt>%</prompt> <userinput><command>kwrite</command> "
+"<option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></opt"
+"ion></userinput>"
+msgstr ""
 
 #: index.docbook:141
 msgid "Other Command Line Options"
@@ -377,7 +391,7 @@ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
 
 #: index.docbook:254
 msgid "Find"
-msgstr "Suchen..."
+msgstr "Suchen"
 
 #: index.docbook:257
 msgid "F3"
@@ -417,7 +431,7 @@ msgstr "<keycap>Strg</keycap><keycap>P</keycap>"
 
 #: index.docbook:274
 msgid "Print"
-msgstr "Drucken..."
+msgstr "Drucken"
 
 #: index.docbook:277
 msgid "<keycap>Ctrl</keycap><keycap>Q</keycap>"
@@ -434,7 +448,7 @@ msgstr "<keycap>Strg</keycap><keycap>R</keycap>"
 # index.docbook:282, index.docbook:689
 #: index.docbook:282
 msgid "Replace"
-msgstr "Ersetzen..."
+msgstr "Ersetzen"
 
 #: index.docbook:285
 msgid "<keycap>Ctrl</keycap><keycap>S</keycap>"
@@ -469,7 +483,7 @@ msgstr "<keycap>Strg</keycap><keycap>Z</keycap>"
 
 #: index.docbook:299
 msgid "Undo"
-msgstr "Letzten Schritt r&uuml;ckg&auml;ngig machen"
+msgstr "R&uuml;ckg&auml;ngig"
 
 #: index.docbook:302
 msgid "<keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Z</keycap>"
@@ -477,7 +491,7 @@ msgstr "<keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap>"
 
 #: index.docbook:303
 msgid "Redo"
-msgstr "Letzten Schritt wiederholen"
+msgstr "Wiederherstellen"
 
 #: index.docbook:312
 msgid "The Menu Entries"
@@ -2701,82 +2715,3 @@ msgstr ""
 "GUI-&Uuml;bersetzung</para></listitem><listitem><para>Matthias "
 "Schulz<email>matthschulz@linuxfreemail.com</email>, &Uuml;bersetzung der "
 "Dokumentation</para></listitem></itemizedlist>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Insert</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Left Arrow</keycap></keycombo>"
-#~ msgstr "<keycap>Umschalt</keycap><keycap>Pfeil links</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Right Arrow</keycap></keycombo>"
-#~ msgstr "<keycap>Umschalt</keycap><keycap>Pfeil rechts</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Up Arrow</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Down Arrow</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Page Up</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Page Down</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Backspace</keycap></keycombo>"
-#~ msgstr ""
-#~ "Wenn dieses Feld angekreuzt ist, kann die "
-#~ "<keycombo><keycap>R&uuml;cktaste</keycap></keycombo>-Taste zum "
-#~ "Ausr&uuml;cken benutzt werden."
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Home</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>End</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>Delete</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>F1</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><link linkend=\"find\"> Find</link>"
-#~ msgstr "Anzahl <link linkend=\"undo\">R&uuml;ckg&auml;ngig</link>"
-
-#, fuzzy
-#~ msgid "<para><keycombo><keycap>F3</keycap></keycombo>"
-#~ msgstr "<keycap>Strg</keycap><keycap>F</keycap>"
-
-#, fuzzy
-#~ msgid "<para><link linkend=\"find-again\"> Find again</link>"
-#~ msgstr "Anzahl <link linkend=\"undo\">R&uuml;ckg&auml;ngig</link>"
-
-#, fuzzy
-#~ msgid "<para><link linkend=\"print\">Print</link>"
-#~ msgstr "Anzahl <link linkend=\"undo\">R&uuml;ckg&auml;ngig</link>"
-
-#, fuzzy
-#~ msgid "<para><link linkend=\"replace\"> Replace</link>"
-#~ msgstr "<link linkend=\"new\">Neue</link> Datei"
-
-#, fuzzy
-#~ msgid "<para><link linkend=\"undo\">Undo</link>"
-#~ msgstr "Anzahl <link linkend=\"undo\">R&uuml;ckg&auml;ngig</link>"
-
-#, fuzzy
-#~ msgid "<para><link linkend=\"redo\">Redo</link>"
-#~ msgstr "Anzahl <link linkend=\"undo\">R&uuml;ckg&auml;ngig</link>"

@@ -1,0 +1,9 @@
+<book>
+<para><term> Start </term> <keycap>Schieber</keycap><keycap>Hilfe</keycap></para>
+
+<para><variablelist> <varlistentry> <term> Schrift 1 </term> <listitem> <para id="blah"> Schrift 2 <note> <para> Text 3 "alles" <footnote> <para> Text 4 \"noch mehr\" </para> </footnote> </para> </note> </para> </listitem> </varlistentry> </variablelist></para>
+
+<para>Ende</para>
+
+</book>
+

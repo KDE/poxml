@@ -1,4 +1,3 @@
-
 <book>
 <para>
   <term>
@@ -19,14 +18,14 @@
          Text 1
       </term>
       <listitem>
-         <para>
-           Text 2
+         <para id="blah">
+            Text 2
            <note>
              <para>
-               Text 3 
+               Text 3 "everything"
                <footnote>
                   <para>
-                     Text 4
+                     Text 4 \"even more\"
                   </para>
                </footnote>
              </para>
