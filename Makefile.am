@@ -27,10 +27,10 @@ SUFFIXES = .pot .po .xml .txml
 
 $(srcdir)/lauri.pot: xml2pot lauri.xml
 	./xml2pot $(srcdir)/lauri.xml > $(srcdir)/lauri.pot
-	msgmerge $(srcdir)/lauri.pot $(srcdir)/lauri.pot > d && mv d $(srcdir)/lauri.pot
+	msgmerge -o $(srcdir)/lauri.pot $(srcdir)/lauri.pot $(srcdir)/lauri.pot 
 
 $(srcdir)/lauri.po: $(srcdir)/lauri.pot
-	msgmerge $(srcdir)/lauri.po $(srcdir)/lauri.pot > d && mv d $(srcdir)/lauri.po
+	msgmerge -o $(srcdir)/lauri.po $(srcdir)/lauri.po $(srcdir)/lauri.pot 
 	msgfmt --statistics $(srcdir)/lauri.po -o /dev/null
 
 $(srcdir)/lauri_de.xml: po2xml $(srcdir)/lauri.po

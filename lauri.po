@@ -40,47 +40,51 @@ msgstr ""
 "url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
 "k>."
 
-#: index.docbook:29
+#: index.docbook:28
+msgid "GIVE_ME_CREDIT"
+msgstr "<para>Habe ich gemacht - toll ne?</para>"
+
+#: index.docbook:30
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:29
+#: index.docbook:30
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:63
+#: index.docbook:64
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:63
+#: index.docbook:64
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -110,7 +114,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:84
+#: index.docbook:85
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -148,7 +152,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:96
+#: index.docbook:97
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -216,10 +220,8 @@ msgstr ""
 "        /** das veraenderte flag of the current document */\n"
 "        bool modified;"
 
-#: index.docbook:0
-msgid "ROLES_OF_TRANSLATORS"
-msgstr "foo"
+#~ msgid "ROLES_OF_TRANSLATORS"
+#~ msgstr "foo"
 
-#: index.docbook:1
-msgid "CREDIT_FOR_TRANSLATORS"
-msgstr "bar"
+#~ msgid "CREDIT_FOR_TRANSLATORS"
+#~ msgstr "bar"

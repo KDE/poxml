@@ -53,10 +53,12 @@ public:
     void setDocumentLocator ( QXmlLocator * l ) { locator = l; }
     bool skippedEntity ( const QString & name );
     bool fatalError ( const QXmlParseException & );
+    bool comment ( const QString & );
     bool error(const QXmlParseException &e ) { return fatalError(e); }
     bool warning(const QXmlParseException &e ) { return fatalError(e); }
     MsgList getList() const { return list; }
     MsgList splitMessage(const MsgBlock &message);
+
 
     static bool closureTag(const QString& message, const QString &tag);
     static void descape(QString &message);
@@ -68,7 +70,6 @@ private:
     QString message;
     int inside, startline, startcol;
     int line;
-    QString comment;
     MsgList list;
 };
 

@@ -146,6 +146,8 @@ int main( int argc, char **argv )
     {
         BlockInfo bi = (*it).lines.first();
         int start_pos = line_offsets[bi.start_line - 1] + bi.start_col;
+        if (!bi.end_line)
+            continue;
         int end_pos = line_offsets[bi.end_line - 1] + bi.end_col - 1;
 
         (*it).start = start_pos;
@@ -171,6 +173,8 @@ int main( int argc, char **argv )
     {
         BlockInfo bi = (*it).lines.first();
         int start_pos = line_offsets[bi.start_line - 1] + bi.start_col;
+        if (!bi.end_line)
+            continue;
         int end_pos = line_offsets[bi.end_line - 1] + bi.end_col - 1;
 
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
@@ -222,16 +226,6 @@ int main( int argc, char **argv )
 
     index = 0;
 
-    if (!translations["ROLES_OF_TRANSLATORS"].isEmpty()) {
-        if (output.find("<!-- TRANS:ROLES_OF_TRANSLATORS") == -1)
-            qWarning("%s: missing ROLES_OF_TRANSLATORS, but having translation", argv[1]);
-    }
-
-    if (!translations["CREDIT_FOR_TRANSLATORS"].isEmpty()) {
-        if (output.find("<!-- TRANS:CREDIT_FOR_TRANSLATORS") == -1)
-            qWarning("%s: missing CREDIT_FOR_TRANSLATORS, but having translation", argv[1]);
-    }
-
     while (true) {
         index = output.find("<!-- TRANS:", index);
         if (index == -1)
@@ -246,8 +240,8 @@ int main( int argc, char **argv )
                           stripWhiteSpace();
         QString trans = translations[totrans];
         if (trans.isEmpty()) {
-            qWarning("no translation for %s found",
-                     totrans.local8Bit().data());
+            // qWarning("no translation for %s found",
+            // totrans.local8Bit().data());
         } else
             output.replace(index, endindex - index + 1, trans);
         index = endindex;

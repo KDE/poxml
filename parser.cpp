@@ -25,7 +25,7 @@ static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
-    cerr << "fatalError" << e.message().latin1() << " " << e.lineNumber() << " " << e.columnNumber() << endl;
+    cerr << "fatalError " << e.message().latin1() << " " << e.lineNumber() << " " << e.columnNumber() << endl;
     return false;
 }
 
@@ -502,6 +502,26 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
     return TRUE;
 }
 
+bool StructureParser::comment ( const QString &c )
+{
+    if (c.left(7) != " TRANS:")
+        return TRUE;
+    if (inside) {
+        qWarning("ERROR: to translated string in nested block. Ignoring %s!", c.stripWhiteSpace().utf8().data());
+        return TRUE;
+    }
+    QString string = c.mid(7).stripWhiteSpace();
+    MsgBlock m;
+    m.msgid = c.mid(7).stripWhiteSpace();
+    BlockInfo bi;
+    bi.start_line = locator->lineNumber();
+    bi.end_line = 0;
+    bi.start_col = bi.end_col = 0;
+    m.lines.append(bi);
+    list.append(m);
+    return TRUE;
+}
+
 bool StructureParser::characters(const QString &ch)
 {
     if (inside && !ch.isEmpty())
@@ -601,6 +621,9 @@ MsgList parseXML(const char *filename)
     QXmlSimpleReader reader;
     reader.setFeature( "http://trolltech.com/xml/features/report-start-end-entity", true);
     reader.setContentHandler( &handler );
+    reader.setLexicalHandler( &handler );
+    reader.setDTDHandler( &handler );
+    // reader.setErrorHandler( &handler );
     reader.parse( source );
     return handler.getList();
 }

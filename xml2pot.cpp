@@ -64,15 +64,5 @@ int main( int argc, char **argv )
         cout << "\n";
     }
 
-    cout << "#: index.docbook:0\n";
-    outputMsg("msgid", "ROLES_OF_TRANSLATORS");
-    outputMsg("msgstr", "");
-    cout << "\n";
-
-    cout << "#: index.docbook:1\n";
-    outputMsg("msgid", "CREDIT_FOR_TRANSLATORS");
-    outputMsg("msgstr", "");
-    cout << "\n";
-
     return 0;
 }

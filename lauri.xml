@@ -25,6 +25,7 @@ developer's mailing list is at <ulink
 url="http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2">lists.kde.org</ulink>.
   </para></tip>
 </para>
+<!-- TRANS:GIVE_ME_CREDIT -->
 
 <para>
   <variablelist>
@@ -102,7 +103,6 @@ Send             forgot
 Expect           granted
 Send             ppp
 </screen>
-
 
 <programlisting>
 -&gt;  #include &lt;qpixmap.h&gt;
