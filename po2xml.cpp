@@ -103,8 +103,22 @@ int main( int argc, char **argv )
     xml.open(IO_ReadOnly);
     QTextStream ds(&xml);
     QString xml_text = ds.read();
+    xml.close();
     QString output;
     QTextStream ts(&output, IO_WriteOnly);
+    if (xml_text.left(5) != "<?xml") {
+        FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(argv[1]).latin1(), "r");
+        xml.open(IO_ReadOnly, p);
+        char buffer[5001];
+        xml_text.truncate(0);
+        int len;
+        while ((len = xml.readBlock(buffer, 5000)) != 0) {
+            buffer[len] = 0;
+            xml_text += buffer;
+        }
+        xml.close();
+        pclose(p);
+    }
 
     QValueList<int> line_offsets;
     line_offsets.append(0);
