@@ -1,6 +1,7 @@
 #include "parser.h"
 #include <stdlib.h>
 #include <iostream.h>
+#include <qfileinfo.h>
 
 using namespace std;
 
@@ -47,6 +48,8 @@ int main( int argc, char **argv )
     cout << "\"Content-Type: application/x-xml2pot; charset=utf-8\\n\"\n";
     cout << "\"Content-Transfer-Encoding: ENCODING\\n\"\n\n";
 
+    QString fname = QFileInfo(argv[1]).fileName();
+      
     for (MsgList::ConstIterator it = english.begin();
          it != english.end(); ++it)
     {
@@ -55,7 +58,7 @@ int main( int argc, char **argv )
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
             if (it2 != (*it).lines.begin())
                 cout << " ";
-            cout << "index.docbook:" << (*it2).start_line;
+            cout << fname.utf8().data() << ":" << (*it2).start_line;
 
         }
         cout << "\n";
