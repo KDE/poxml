@@ -27,11 +27,26 @@ struct BlockInfo {
 
 class MsgBlock {
  public:
+    MsgBlock() { start = end = 0; }
+    MsgBlock(const MsgBlock &rhs ) {
+        *this = rhs;
+    }
     QValueList<BlockInfo> lines;
+    QString tag;
     QString comment;
     QString msgid;
     QString msgstr;
     int start, end;
+
+    void operator=(const MsgBlock& rhs) {
+        lines = rhs.lines;
+        tag = rhs.tag;
+        comment = rhs.comment;
+        msgid = rhs.msgid;
+        msgstr = rhs.msgstr;
+        start = rhs.start;
+        end = rhs.end;
+    }
 };
 
 class ParaCounter
@@ -82,6 +97,7 @@ public:
     static QString escapeLiterals( const QString &contents);
     static QString descapeLiterals( const QString &contents);
     static void cleanupTags( QString &contents );
+    static void stripWhiteSpace( QString &contents);
 
 private:
     bool formatMessage(MsgBlock &message) const;

@@ -30,12 +30,12 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
 				    "table", "part", "xi:fallback", "primary",
                                     "secondary", "chapter", "sect1", "sect2",
                                     "figure", "abstract", "sect3", "sect", "sect4",
-                                    "warning", "preface", "authorgroup", "keywordset", 
+                                    "warning", "preface", "authorgroup", "keywordset",
 				    "informaltable", "qandaentry", "question", "answer",
-				    "othercredit", "affiliation", "qandaset", 
+				    "othercredit", "affiliation", "qandaset",
 				    "cmdsynopsis", "funcsynopsis", "funcsynopsisinfo" ,
 				    "epigraph", "attribution", "glossary", "chapterinfo",
-				    "glossdiv", 0};
+				    "glossdiv", "blockingquote", 0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
@@ -230,7 +230,7 @@ void StructureParser::descape(QString &message)
     }
     index = 0;
 
-    message = message.stripWhiteSpace();
+    stripWhiteSpace( message );
 
     int inside = 0;
     bool lastws = false;
@@ -283,8 +283,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
     if (msg.msgid.isEmpty())
         return true;
 
-    for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
-    msg.msgid = msg.msgid.stripWhiteSpace();
+    for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++);
+    stripWhiteSpace( msg.msgid );
 
     // removing starting single tags
     for (int index = 0; singletags[index]; index++)
@@ -304,7 +304,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             changed = true;
             offset += strindex + 1;
             for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
-            msg.msgid = msg.msgid.stripWhiteSpace();
+            stripWhiteSpace( msg.msgid );
         }
     }
 
@@ -313,12 +313,13 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         int strindex = msg.msgid.length() - 2;
         while (msg.msgid.at(strindex) != '<')
             strindex--;
-        msg.msgid = msg.msgid.left(strindex).stripWhiteSpace(); // only removed space at the end
+        msg.msgid = msg.msgid.left(strindex);
+        stripWhiteSpace( msg.msgid ); // only removed space at the end
         changed = true;
     }
 
     for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
-    msg.msgid = msg.msgid.stripWhiteSpace();
+    stripWhiteSpace( msg.msgid );
 
     while (true) {
         if (msg.msgid.at(0) != '<')
@@ -354,7 +355,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             msg.msgid = msg.msgid.mid(strindex + 1);
             offset += strindex + 1;
             for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
-            msg.msgid = msg.msgid.stripWhiteSpace();
+            stripWhiteSpace( msg.msgid );
+            msg.tag = starttag;
 
             if (infos_reg.search(attr) >= 0) {
                 msg.lines.first().start_line = infos_reg.cap(1).toInt();
@@ -369,12 +371,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
                     msg.lines.first().end_col = infos_reg.cap(2).toInt() + 1;
                 }
             }
-            if (msg.msgid.length() < 4) {
-                msg.msgid = orig;
-                recurse = false;
-                break;
-            } else
-                changed = true;
+            changed = true;
         } else
             break;
     }
@@ -671,6 +668,7 @@ bool StructureParser::comment ( const QString &c )
     QString string = c.mid(7).stripWhiteSpace();
     MsgBlock m;
     m.msgid = c.mid(7).stripWhiteSpace();
+    m.tag = "TRANS comment";
     BlockInfo bi;
     bi.start_line = locator->lineNumber();
     bi.end_line = 0;
@@ -698,6 +696,31 @@ QString StructureParser::descapeLiterals( const QString &_contents) {
     contents.replace(QRegExp("&POXML_GT;"), ">");
     contents.replace(QRegExp("&POXML_SPACE;"), " ");
     return contents;
+}
+
+void StructureParser::stripWhiteSpace( QString &contents)
+{
+    contents = contents.stripWhiteSpace();
+    bool changed;
+    do {
+        changed = false;
+        if (contents.startsWith("&POXML_LINEFEED;")) {
+            contents = contents.mid(strlen("&POXML_LINEFEED;"), contents.length());
+            changed = true;
+        }
+        if (contents.startsWith("&POXML_SPACE;")) {
+            contents = contents.mid(strlen("&POXML_SPACE;"), contents.length());
+            changed = true;
+        }
+        if (contents.endsWith("&POXML_LINEFEED;")) {
+            contents = contents.left(contents.length() - strlen("&POXML_LINEFEED;"));
+            changed = true;
+        }
+        if (contents.endsWith("&POXML_SPACE;")) {
+            contents = contents.left( contents.length() - strlen("&POXML_SPACE;"));
+            changed = true;
+        }
+    } while (changed);
 }
 
 void StructureParser::cleanupTags( QString &contents )
@@ -905,6 +928,39 @@ MsgList parseXML(const char *filename)
     reader.setDTDHandler( &handler );
     // reader.setErrorHandler( &handler );
     reader.parse( source );
-    return handler.getList();
+    MsgList english = handler.getList();
+
+    bool changed = false;
+
+    do {
+        changed = false;
+        QMap<QString, QString> msgids;
+
+        for (MsgList::ConstIterator it = english.begin();
+             it != english.end(); it++)
+        {
+            QMap<QString,QString>::ConstIterator found = msgids.find((*it).msgid);
+            if (found != msgids.end()) {
+                if (found.data() != (*it).tag) {
+#ifdef POXML_DEBUG
+                    qDebug("same msgid for '%s' and '%s'", found.data().latin1(), (*it).tag.latin1());
+#endif
+                    changed = true;
+                    QString msgid = (*it).msgid;
+                    for (MsgList::Iterator it2 = english.begin();
+                         it2 != english.end(); it2++)
+                    {
+                        if ((*it2).msgid == msgid)
+                            (*it2).msgid = QString("<%1>").arg((*it2).tag) + msgid + QString("</%1>").arg((*it2).tag);
+                    }
+                    break;
+                }
+            } else {
+                msgids.insert((*it).msgid, (*it).tag);
+            }
+        }
+    } while (changed);
+
+    return english;
 }
 

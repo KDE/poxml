@@ -63,8 +63,9 @@ int main( int argc, char **argv )
         }
         cout << "\n";
 	cout << "#, no-c-format\n";
+        cout << "#. Tag: " << (*it).tag.utf8() << endl;
         outputMsg("msgid", StructureParser::descapeLiterals( (*it).msgid ));
-        outputMsg("msgstr", (*it).msgstr);
+        outputMsg("msgstr", (*it).msgstr );
         cout << "\n";
     }
 
