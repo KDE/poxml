@@ -1,8 +1,12 @@
 #include "parser.h"
 #include <iostream.h>
 #include <stdlib.h>
+#include <assert.h>
 
-static const char *singletags[] = {"imagedata", "colspec", "spanspec", "anchor", "xref", "area", "glossseealso", "footnoteref", "glosssee", 0};
+static const char *singletags[] = {"imagedata", "colspec", "spanspec", "anchor", "xref",
+                                   "area", "glossseealso", "footnoteref", "glosssee", 0};
+static const char *cuttingtags[] = {"para", "title", "term", "entry", "contrib", "keyword",
+                                    "note", "footnote", 0};
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
@@ -19,7 +23,13 @@ bool StructureParser::startDocument()
 
 bool StructureParser::isCuttingTag(const QString &qName) const
 {
-    return (qName == "para" || qName == "title" || qName == "term" || qName == "entry" || qName == "contrib" || qName == "keyword");
+    int index = 0;
+    while (cuttingtags[index]) {
+        if (cuttingtags[index] == qName)
+            return true;
+        index++;
+    }
+    return false;
 }
 
 bool StructureParser::isSingleTag(const QString &qName) const
@@ -71,6 +81,40 @@ bool StructureParser::startElement( const QString& , const QString& ,
     return TRUE;
 }
 
+bool StructureParser::closureTag(const QString& message, const QString &tag)
+{
+//    qDebug("closureTag %s %s", message.latin1(), tag.latin1());
+    int inside = 0;
+    uint index = 0;
+    while (true)
+    {
+        int nextclose = message.find(QString::fromLatin1("</%1>").arg(tag), index);
+        int nextstart = message.find(QRegExp(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
+//        qDebug("finding %d %d %d", nextstart, nextclose, index);
+        if (nextclose == -1) {
+            //           qDebug("ending on no close anymore %d %d %d", inside, index, message.length());
+            return !inside && index >= message.length();
+        }
+        if (nextstart == -1)
+            nextstart = message.length() + 1;
+
+        if (nextstart < nextclose) {
+            inside++;
+            index = nextstart + 1;
+            while (message.at(index) != '>')
+                index++;
+            index++;
+        } else {
+            inside--;
+            index = nextclose + 1;
+            while (message.at(index) != '>')
+                index++;
+            index++;
+
+        }
+    }
+}
+
 QString StructureParser::formatMessage(QString message) const
 {
     message = message.simplifyWhiteSpace();
@@ -110,10 +154,9 @@ QString StructureParser::formatMessage(QString message) const
         while (message.at(strindex) != ' ' && message.at(strindex) != '>') // simplifyWhiteSpace
             strindex++;
         if (message.mid(endindex + 2, strindex - (endindex + 2)) == starttag) {
-            if (message.find(QString::fromLatin1("</%1>").arg(starttag)) !=
-                endindex) {
+            if (!closureTag(message, starttag))
                 break;
-            }
+
             // removing start/end tags
             message = message.left(endindex);
             strindex = 0;
@@ -128,6 +171,72 @@ QString StructureParser::formatMessage(QString message) const
     return message;
 }
 
+QStringList StructureParser::splitMessage(const QString &message)
+{
+    // qDebug("splitMessage %s", message.latin1());
+
+    QStringList result;
+    int index = 0;
+    while (cuttingtags[index]) {
+        if (message.left( 1 + strlen(cuttingtags[index])) ==
+            QString::fromLatin1("<%1").arg(cuttingtags[index]))
+        {
+            // if the message starts with a cutting tag, this tag has to
+            // end in between. We split both messages and format them
+            int strindex = 1 + strlen(cuttingtags[index]);
+            while (message.at(strindex) != '>')
+                strindex++;
+            strindex = message.find(QString::fromLatin1("</%1>").arg(cuttingtags[index]),
+                                    strindex + 1);
+            while (message.at(strindex) != '>')
+                strindex++;
+
+            assert(strindex != -1);
+            int endtag =  message.find(QRegExp(QString::fromLatin1("<%1[\\s>]").
+                                               arg(cuttingtags[index])), 2);
+            if (endtag != -1 && strindex > endtag)
+            {
+                // qDebug("found another open tag before closing tag in %s", message.utf8().data());
+                goto error;
+            }
+            QString msg1 = message.left(strindex + 1);
+            QString msg2 = message.mid(strindex + 1);
+            // qDebug("split into %s - %s", msg1.latin1(), msg2.latin1());
+            result = splitMessage(formatMessage(msg1)) + splitMessage(formatMessage(msg2));
+            return result;
+        }
+
+        if (message.right( 3 + strlen(cuttingtags[index])) ==
+            QString::fromLatin1("</%1>").arg(cuttingtags[index]))
+        {
+            // if the message ends with a cutting tag, this tag has to
+            // end in between. We split both messages and format them
+            int strindex = message.length() - (3 + strlen(cuttingtags[index]));
+            strindex = message.findRev(QRegExp(QString::fromLatin1("<%1[\\s>]").
+                                               arg(cuttingtags[index])),
+                                       strindex) - 1;
+
+            assert(strindex != -1);
+            int endtag =  message.find(QString::fromLatin1("</%1>").
+                                       arg(cuttingtags[index]), strindex);
+            if (endtag != -1 && strindex > endtag)
+            {
+                // qDebug("found another closing tag before opening tag in %s", message.utf8().data());
+                goto error;
+            }
+            QString msg1 = message.left(strindex + 1);
+            QString msg2 = message.mid(strindex + 1);
+            // qDebug("split into %s - %s", msg1.latin1(), msg2.latin1());
+            result = splitMessage(formatMessage(msg1)) + splitMessage(formatMessage(msg2));
+            return result;
+        }
+        index++;
+    }
+error:
+    result.append(message);
+    return result;
+}
+
 bool StructureParser::endElement( const QString& , const QString&, const QString& qName)
 {
     QString tname = qName.lower();
@@ -135,15 +244,20 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
     if (isCuttingTag(tname)) {
         inside--;
         if (!inside) {
-            MsgBlock m;
-            m.msgid = formatMessage(message);
-            BlockInfo bi;
-            bi.start_line = startline;
-            bi.start_col = startcol;
-            bi.end_line = locator->lineNumber();
-            bi.end_col = locator->columnNumber();
-            m.lines.append(bi);
-            list.append(m);
+            QStringList messages = splitMessage(formatMessage(message));
+            for (QStringList::ConstIterator it = messages.begin();
+                 it != messages.end(); it++)
+            {
+                MsgBlock m;
+                m.msgid = *it;
+                BlockInfo bi;
+                bi.start_line = startline;
+                bi.start_col = startcol;
+                bi.end_line = locator->lineNumber();
+                bi.end_col = locator->columnNumber();
+                m.lines.append(bi);
+                list.append(m);
+            }
         }
     }
 

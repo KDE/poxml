@@ -51,6 +51,9 @@ public:
     bool error(const QXmlParseException &e ) { return fatalError(e); }
     bool warning(const QXmlParseException &e ) { return fatalError(e); }
     MsgList getList() const { return list; }
+    QStringList splitMessage(const QString &message);
+
+    static bool closureTag(const QString& message, const QString &tag);
 
 private:
     QString formatMessage(QString message) const;

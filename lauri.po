@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-02-09 01:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: index.docbook:2
+msgid "Text 1"
+msgstr "Schrift 1"
+
+#: index.docbook:2
+msgid "Text 2"
+msgstr "Schrift 2"
+
+#: index.docbook:2
+msgid "Text 3"
+msgstr "Schrift 3"
+
+#: index.docbook:2
+msgid "Text 4"
+msgstr "Schrift 4"
+
+#: index.docbook:0
+msgid "ROLES_OF_TRANSLATORS"
+msgstr ""
+
+#: index.docbook:1
+msgid "CREDIT_FOR_TRANSLATORS"
+msgstr ""
+
