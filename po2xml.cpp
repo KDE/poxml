@@ -13,17 +13,17 @@ using namespace std;
 
 QString translate(QString xml, QString orig, QString translation)
 {
-    if (translation.isEmpty()) {
-        // qWarning("no translation for %s found", orig.local8Bit().data());
-        return xml;
-    }
-
     int index = xml.find(orig);
     if (index == -1) {
         qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
         ASSERT(false);
     }
-    xml.replace(index, orig.length(), translation);
+    if (translation.isEmpty()) {
+        // qWarning("no translation for %s found", orig.local8Bit().data());
+        xml.replace(index, orig.length(),
+                    QString::fromLatin1(""));
+    } else
+        xml.replace(index, orig.length(), translation);
     return xml;
 }
 
@@ -103,6 +103,7 @@ int main( int argc, char **argv )
     QFile xml(argv[1]);
     xml.open(IO_ReadOnly);
     QTextStream ds(&xml);
+    ds.setEncoding(QTextStream::UnicodeUTF8);
     QString xml_text = ds.read();
     xml.close();
     QString output;
@@ -115,7 +116,7 @@ int main( int argc, char **argv )
         int len;
         while ((len = xml.readBlock(buffer, 5000)) != 0) {
             buffer[len] = 0;
-            xml_text += buffer;
+            xml_text += QString::fromUtf8(buffer);
         }
         xml.close();
         pclose(p);

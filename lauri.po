@@ -23,50 +23,54 @@ msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "&quot;Starttext&quot; f&uuml;r &lauri;"
 
 #: index.docbook:12
+msgid "we pretend her name was Höpfner"
+msgstr "sagen wir mal sie heisst Höpfner"
+
+#: index.docbook:12
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:24
+#: index.docbook:25
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:58
+#: index.docbook:59
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:58
+#: index.docbook:59
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -96,7 +100,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:79
+#: index.docbook:80
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -134,7 +138,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:91
+#: index.docbook:92
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -154,7 +158,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:102
+#: index.docbook:103
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
@@ -204,17 +208,9 @@ msgstr ""
 
 #: index.docbook:0
 msgid "ROLES_OF_TRANSLATORS"
-msgstr ""
+msgstr "foo"
 
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
-msgstr ""
+msgstr "bar"
 
-#~ msgid ""
-#~ "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
-#~ "\n"
-#~ "\t\thello \\"
-#~ msgstr ""
-#~ "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
-#~ "\n"
-#~ "\t\thallo \\"
