@@ -24,7 +24,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    bool is_desktop = QString( argv[1] ).right( 11 ) == "desktop.pot";
+    bool is_desktop = QString( argv[1] ).find( "desktop_") >= 0;
 
     cout << "msgid \"\"\n";
     cout << "msgstr \"\"\n";
