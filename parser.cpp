@@ -571,7 +571,7 @@ bool StructureParser::characters(const QString &ch)
 
 QString escape(QString message)
 {
-    message.replace(QRegExp("\\"), "\\\\");
+    message.replace(QRegExp("\\\\"), "\\\\");
     message.replace(QRegExp("\""), "\\\"");
     return message;
 }
@@ -602,6 +602,50 @@ void outputMsg(const char *prefix, const QString &message)
         }
     }
 }
+
+QString escapePO(QString msgid)
+{
+    int index = 0;
+    while (true) {
+        index = msgid.find("\\n", index);
+        if (index == -1)
+            break;
+        if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
+            msgid.replace(index - 1, 3, "\\n");
+            index += 3;
+        } else
+            msgid.replace(index, 2, "\n");
+    }
+    index = 0;
+    while (true) {
+        index = msgid.find("\\\"", index);
+        if (index == -1)
+            break;
+        if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\')
+            msgid.replace(index - 1, 3, "\\\"");
+        else
+            msgid.replace(index, 2, "\"");
+    }
+    index = 0;
+    while (true) {
+        index = msgid.find("\\t", index);
+        if (index == -1)
+            break;
+        if (msgid.at(index - 1) == '\\')
+            msgid.replace(index - 1, 3, "\\t");
+        else
+            msgid.replace(index, 2, "\t");
+    }
+    while (true) {
+        int index = msgid.find("\\\\");
+        if (index == -1)
+            break;
+        msgid.replace(index, 2, "\\");
+    }
+
+    return msgid;
+}
+
 
 MsgList parseXML(const char *filename)
 {

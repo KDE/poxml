@@ -22,12 +22,49 @@ int main(int argc, char **argv)
         return 1;
     }
 
+    bool is_desktop = QString( argv[1] ).right( 11 ) == "desktop.pot";
+
+    cout << "msgid \"\"\n";
+    cout << "msgstr \"\"\n";
+    cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
+    cout << "\n";
+
     for (MsgList::ConstIterator it = translated.begin();
          it != translated.end(); ++it)
     {
-        if ( !( *it ).msgstr.isEmpty() ) {
-            outputMsg("msgid", (*it).msgid);
-            outputMsg("msgstr", "xx");
+        QString msgid = ( *it ).msgid;
+        if ( !msgid.isEmpty() ) {
+            outputMsg("msgid", escapePO( msgid) );
+            QString msgstr = "xx";
+
+            if ( msgid.find( "Definition of PluralForm" ) != -1 ) {
+                outputMsg("msgstr", "NoPlural");
+                cout << "\n";
+                continue;
+            }
+
+            if ( is_desktop ) {
+                msgstr = msgid.left( msgid.find( '=' ) + 1);
+                msgstr += "xx";
+                outputMsg( "msgstr", msgstr );
+                cout << "\n";
+                continue;
+            }
+
+            while ( true ) {
+                int index = msgid.find( '%' );
+                if ( index == -1 )
+                    break;
+                msgstr += QString( " %%1 xx" ).arg( msgid.at( index + 1 ) );
+                msgid.at( index ) = ' ';
+                msgid.at( index + 1 ) = ' ';
+            }
+
+            if ( msgid.right( 2 ) == "\\n" )
+                msgstr += "\n";
+            if ( msgid.left( 2 ) == "\\n" )
+                msgstr.prepend( "\n" );
+            outputMsg("msgstr", msgstr);
             cout << "\n";
         }
     }

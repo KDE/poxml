@@ -79,5 +79,6 @@ private:
 
 void outputMsg(const char *prefix, const QString &message);
 MsgList parseXML(const char *filename);
+QString escapePO(QString msgid);
 
 #endif
