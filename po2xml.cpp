@@ -1,3 +1,5 @@
+// #undef NDEBUG
+
 #include "parser.h"
 #include <stdlib.h>
 #include <iostream>
@@ -9,8 +11,6 @@
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"
 #include "antlr/CommonAST.hpp"
-
-// #undef NDEBUG
 
 using namespace std;
 
@@ -156,10 +156,14 @@ int main( int argc, char **argv )
         StructureParser::descape(xml);
 
 #ifndef NDEBUG
-        qDebug("english \"%s\" \"%s\" %d(%d-%d) %d(%d-%d) %d %d \"%s\"", xml.latin1(), (*it).msgid.latin1(),
+        qDebug("english \"%s\" ORIG \"%s\" %d(%d-%d) %d(%d-%d) %d %d TRANS \"%s\" %d '%s'", xml.latin1(), (*it).msgid.latin1(),
                start_pos, bi.start_line, bi.start_col,
                end_pos, bi.end_line, bi.end_col,
-               (*it).lines.first().offset, (*it).end, xml.mid((*it).lines.first().offset, 15).latin1());
+               (*it).lines.first().offset,
+               (*it).end,
+               translations[(*it).msgid].latin1(), (*it).end,
+               translate(xml, (*it).msgid, translations[(*it).msgid]).latin1()
+            );
 #endif
         if ((*it).end) {
             if (!(*it).lines.first().offset && end_pos != old_pos) {
@@ -172,14 +176,13 @@ int main( int argc, char **argv )
             old_pos = end_pos;
         } else {
             if (start_pos != old_pos) {
-                assert(start_pos >= old_pos);
+                assert(start_pos > old_pos);
                 ts << xml_text.mid(old_pos, start_pos - old_pos);
             }
             old_pos = end_pos;
             ts << translate(xml,
                             (*it).msgid, translations[(*it).msgid]);
         }
-
     }
 
     ts << xml_text.mid(old_pos);

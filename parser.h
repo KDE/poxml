@@ -3,6 +3,7 @@
 
 #include <qxml.h>
 #include <qmap.h>
+#include <qregexp.h>
 
 struct BlockInfo {
     int start_line;
@@ -12,6 +13,16 @@ struct BlockInfo {
 
     // used to detect sub-messages
     int offset;
+
+    BlockInfo() {
+        start_line = 0;
+        start_col = 0;
+        end_line = 0;
+        end_col = 0;
+
+        // used to detect sub-messages
+        offset = 0;
+    }
 };
 
 class MsgBlock {
@@ -69,13 +80,14 @@ public:
     static void cleanupTags( QString &contents );
 
 private:
-    bool formatMessage(QString& message, int &offset) const;
+    bool formatMessage(MsgBlock &message) const;
 
     QXmlLocator *locator;
     QString message;
     int inside, startline, startcol;
     int line;
     MsgList list;
+    mutable QRegExp infos_reg;
 };
 
 void outputMsg(const char *prefix, const QString &message);
