@@ -1,8 +1,10 @@
 #include "parser.h"
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 #include <assert.h>
 #include <qregexp.h>
+
+using namespace std;
 
 // #undef NDEBUG
 
@@ -585,6 +587,23 @@ bool StructureParser::comment ( const QString &c )
     return true;
 }
 
+void StructureParser::explodeNonSingleTags( QString &contents )
+{
+    QRegExp singleent("<(\\w*)\\s([^><]*)/>");
+
+    int index = -1;
+    while (true) {
+        index = singleent.search(contents, index + 1);
+        if (index < 0)
+            break;
+        // qDebug("SINGLE %s - %s", singleent.cap(1).latin1(), singleent.cap(2).latin1());
+        QString tag = singleent.cap(1);
+        if (!StructureParser::isSingleTag(tag)) {
+            contents.replace(index, singleent.matchedLength(), QString("<%1 %2></%3>").arg(tag).arg(singleent.cap(2)).arg(tag));
+        }
+    }
+}
+
 bool StructureParser::characters(const QString &ch)
 {
     if (inside && !ch.isEmpty())
@@ -684,7 +703,6 @@ MsgList parseXML(const char *filename)
     QString contents = QString::fromUtf8( ccontents );
     StructureParser::escapeEntities( contents );
 
-
     while (true) {
         int index = contents.find("<!ENTITY");
         if (index < 0)
@@ -708,8 +726,10 @@ MsgList parseXML(const char *filename)
             endindex++;
         }
         endindex++;
-        contents.replace(index, endindex - index, replacement.latin1());
+        contents.replace(index, endindex - index, replacement);
     }
+
+    StructureParser::explodeNonSingleTags(contents);
 
     QTextStream ts(contents.utf8(), IO_ReadOnly);
     QXmlInputSource source( ts );

@@ -1,6 +1,6 @@
 #include "parser.h"
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 #include <qfileinfo.h>
 
 using namespace std;
@@ -49,7 +49,7 @@ int main( int argc, char **argv )
     cout << "\"Content-Transfer-Encoding: ENCODING\\n\"\n\n";
 
     QString fname = QFileInfo(argv[1]).fileName();
-      
+
     for (MsgList::ConstIterator it = english.begin();
          it != english.end(); ++it)
     {

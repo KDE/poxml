@@ -66,6 +66,7 @@ public:
     static bool closureTag(const QString& message, const QString &tag);
     static void descape(QString &message);
     static void escapeEntities( QString &contents );
+    static void explodeNonSingleTags( QString &contents );
 
 private:
     bool formatMessage(QString& message, int &offset) const;

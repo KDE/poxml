@@ -1,6 +1,6 @@
 #include "parser.h"
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 #include <assert.h>
 #include <qregexp.h>
 
@@ -9,6 +9,8 @@
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"
 #include "antlr/CommonAST.hpp"
+
+// #undef NDEBUG
 
 using namespace std;
 
@@ -39,33 +41,6 @@ QString translate(QString xml, QString orig, QString translation)
         xml.replace(index, orig.length(), translation);
     return prefix + xml;
 }
-
-static char * shell_quote(const char *s)
-{
-   char *result;
-   char *p;
-   p = result = (char *) malloc(strlen(s)*5+3);
-   *p++ = '\'';
-   while(*s)
-   {
-     if (*s == '\'')
-     {
-        *p++ = '\'';
-        *p++ = '"';
-        *p++ = *s++;
-        *p++ = '"';
-        *p++ = '\'';
-     }
-     else
-     {
-        *p++ = *s++;
-     }
-   }
-   *p++ = '\'';
-   *p = '\0';
-   return result;
-}
-
 
 int main( int argc, char **argv )
 {
@@ -105,28 +80,12 @@ int main( int argc, char **argv )
     xml.close();
     QString output;
     QTextStream ts(&output, IO_WriteOnly);
-    if (xml_text.left(5) != "<?xml") {
-        char *quoted_file = shell_quote(argv[1]);
-        QCString cmd = "xmlizer ";
-        cmd += quoted_file;
-        FILE *p = popen(cmd, "r");
-        free(quoted_file);
-        xml.open(IO_ReadOnly, p);
-        char buffer[5001];
-        xml_text.truncate(0);
-        int len;
-        while ((len = xml.readBlock(buffer, 5000)) != 0) {
-            buffer[len] = 0;
-            xml_text += QString::fromUtf8(buffer);
-        }
-        xml.close();
-        pclose(p);
-
-    }
     xml_text.replace(QRegExp("&amp;"), "!amp-internal!");
     xml_text.replace(QRegExp("&lt;"), "!lt-internal!");
     xml_text.replace(QRegExp("&gt;"), "!gt-internal!");
     xml_text.replace(QRegExp("&quot;"), "!quot-internal!");
+
+    StructureParser::explodeNonSingleTags(xml_text);
 
     QValueList<int> line_offsets;
     line_offsets.append(0);
