@@ -9,7 +9,7 @@ static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "footnoteref", "void", 
                                    "glosssee", "graphic", 0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
-                                    "contrib", "keyword",
+                                    "contrib", "keyword", "example",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
                                     "imageobject", "varlistentry", "thead",
