@@ -625,7 +625,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 
             MsgList messages = splitMessage(m);
             for (MsgList::Iterator it = messages.begin();
-                 it != messages.end(); it++)
+                 it != messages.end(); ++it)
             {
 #ifdef POXML_DEBUG
                 qDebug("parser '%s' %d '%s' %d:%d", (*it).msgid.latin1(), (*it).lines.first().offset, message.mid((*it).lines.first().offset, 15).latin1(), (*it).lines.first().start_line, (*it).lines.first().start_col);

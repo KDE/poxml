@@ -34,7 +34,7 @@ int main( int argc, char **argv )
     }
 
     if (report_mismatches && errors.count()) {
-        for (QMap<int, QString>::ConstIterator it = errors.begin(); it != errors.end(); it++)
+        for (QMap<int, QString>::ConstIterator it = errors.begin(); it != errors.end(); ++it)
         {
             if (translated.pc.anchors.contains(it.data()))
                 fprintf(stderr, "id=\"%s\" not in the same paragraphs (%d vs %d)\n", it.data().latin1(),
