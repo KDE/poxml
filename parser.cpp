@@ -11,7 +11,8 @@ using namespace std;
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
                                    "footnoteref", "void", "inlinegraphic",
-                                   "glosssee", "graphic", 0};
+                                   "glosssee", "graphic", "xi:include",
+                                   0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword", "example",
                                     "note", "footnote", "caution",
@@ -26,7 +27,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "simplelist", "member", "glossentry",
 				    "areaspec", "corpauthor", "indexterm",
                                     "calloutlist", "callout", "subtitle",
-				    "table",
+				    "table", "part", "xi:fallback", "primary",
+                                    "secondary", "chapter",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
