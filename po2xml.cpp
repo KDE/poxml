@@ -253,6 +253,8 @@ int main( int argc, char **argv )
         index = endindex;
     }
 
+    StructureParser::removeEmptyTags(output);
+
     index = 0;
     while (true) {
         index = output.find(QRegExp(">[^\n]"), index );
