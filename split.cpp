@@ -6,6 +6,8 @@ using namespace std;
 
 int main( int argc, char **argv )
 {
+    bool report_mismatches = qstrcmp(getenv("REPORT_MISMATCHES"), "no");
+
     if (argc != 3) {
         qWarning("usage: %s english-XML translated-XML", argv[0]);
         exit(1);
@@ -31,7 +33,7 @@ int main( int argc, char **argv )
         }
     }
 
-    if (errors.count()) {
+    if (report_mismatches && errors.count()) {
         for (QMap<int, QString>::ConstIterator it = errors.begin(); it != errors.end(); it++)
         {
             if (translated.pc.anchors.contains(it.data()))
