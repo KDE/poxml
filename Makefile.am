@@ -1,7 +1,9 @@
 
-bin_PROGRAMS = split checkXML xml2pot po2xml
+EXTRA_PROGRAMS = checkXML
+
+bin_PROGRAMS = split $(LIBXML_PROGRAMS) xml2pot po2xml
 bin_SCRIPTS = xmlizer fixsgml
-AM_CPPFLAGS = -DNDEBUG
+# AM_CPPFLAGS = -DNDEBUG
 
 INCLUDES = -I$(srcdir)/antlr $(all_includes)
 KDE_CXXFLAGS = $(USE_EXCEPTIONS) 

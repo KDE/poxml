@@ -155,13 +155,16 @@ void StructureParser::descape(QString &message, bool white)
     }
 }
 
-QString StructureParser::formatMessage(QString message, int &offset) const
+bool StructureParser::formatMessage(QString& message, int &offset) const
 {
+    qDebug("formatMessage %s", message.latin1());
+
     offset = 0;
     bool changed = false;
+    bool recurse = true;
 
     if (message.isEmpty())
-        return message;
+        return true;
 
     for (int index = 0; message.at(index) == ' '; index++, offset++) ;
     message = message.stripWhiteSpace();
@@ -208,6 +211,8 @@ QString StructureParser::formatMessage(QString message, int &offset) const
         strindex = endindex;
         while (message.at(strindex) != ' ' && message.at(strindex) != '>') // simplifyWhiteSpace
             strindex++;
+        QString orig = message;
+        int ooffset = offset;
         if (message.mid(endindex + 2, strindex - (endindex + 2)) == starttag) {
             if (!closureTag(message, starttag))
                 break;
@@ -221,18 +226,26 @@ QString StructureParser::formatMessage(QString message, int &offset) const
             offset += strindex + 1;
             for (int index = 0; message.at(index) == ' '; index++, offset++) ;
             message = message.stripWhiteSpace();
-            changed = true;
+            if (message.length() < 4) {
+                message = orig;
+                recurse = false;
+                offset = ooffset;
+                break;
+            } else
+                changed = true;
         } else
             break;
     }
 
-    if (changed) {
+    qDebug("charec %d %d %s", changed, recurse, message.latin1());
+
+    if (changed && recurse) {
         int to;
-        message = formatMessage(message, to);
+        formatMessage(message, to);
         offset += to;
     }
 
-    return message;
+    return !recurse; // indicates an abort
 }
 
 MsgList StructureParser::splitMessage(const MsgBlock &mb)
@@ -271,15 +284,22 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             }
 
             int offset;
-            msg1.msgid = formatMessage(message.left(strindex + 1), offset);
+            msg1.msgid = message.left(strindex + 1);
+            bool leave = formatMessage(msg1.msgid, offset);
             msg1.lines.first().offset += offset;
 
-            msg2.msgid = formatMessage(message.mid(strindex + 1), offset);
+            msg2.msgid = message.mid(strindex + 1);
+            leave = leave & formatMessage(msg2.msgid, offset);
             msg2.lines.first().offset += strindex + 1 + offset;
 
 #ifndef NDEBUG
-            qDebug("split into %s - %s", msg1.msgid.latin1(), msg2.msgid.latin1());
+            qDebug("split into %s - %s %d ", msg1.msgid.latin1(), msg2.msgid.latin1(), leave);
 #endif
+            if (leave) {
+                result.append(msg1);
+                result.append(msg2);
+                goto error;
+            }
             result = splitMessage(msg1);
             result += splitMessage(msg2);
             return result;
@@ -304,10 +324,12 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 goto error;
             }
             int offset;
-            msg1.msgid = formatMessage(message.left(strindex + 1), offset);
+            msg1.msgid = message.left(strindex + 1);
+            formatMessage(msg1.msgid, offset);
             msg1.lines.first().offset += offset;
 
-            msg2.msgid = formatMessage(message.mid(strindex + 1), offset);
+            msg2.msgid = message.mid(strindex + 1);
+            formatMessage(msg2.msgid, offset);
             msg2.lines.first().offset += strindex + 1 + offset;
 
 #ifndef NDEBUG
@@ -337,10 +359,10 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 
             descape(message, !literaltag);
 
+            m.msgid = message;
+
             if (!literaltag)
-                m.msgid = formatMessage(message, offset);
-            else
-                m.msgid = message;
+                formatMessage(m.msgid, offset);
 
             m.literal = literaltag;
 
@@ -422,10 +444,10 @@ MsgList parseXML(const char *filename)
     if (contents.left(5) != "<?xml") {
         FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(filename).latin1(), "r");
         xmlFile.open(IO_ReadOnly, p);
-        char buffer[4001];
+        char buffer[5001];
         contents.truncate(0);
         int len;
-        while ((len = xmlFile.readBlock(buffer, 4000)) != 0) {
+        while ((len = xmlFile.readBlock(buffer, 5000)) != 0) {
             buffer[len] = 0;
             contents += buffer;
         }

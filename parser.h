@@ -63,7 +63,7 @@ public:
     static void descape(QString &message, bool escapewhitespace);
 
 private:
-    QString formatMessage(QString message, int &offset) const;
+    bool formatMessage(QString& message, int &offset) const;
 
     QXmlLocator *locator;
     QString message;
