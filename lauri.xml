@@ -1,0 +1,13 @@
+
+<para>
+<variablelist>
+<varlistentry>
+<term>sometext</term>
+<listitem>
+<para>Text here <note><para>Text here <footnote><para>Text 
+here</para></footnote></para></note></para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
