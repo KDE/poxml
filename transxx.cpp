@@ -6,15 +6,29 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    if ( argc != 2 ) {
-        qWarning( "usage: %s potfile", argv[0] );
+    if ( argc != 2 && argc != 4 ) {
+        qWarning( "usage: %s [--text translation] potfile", argv[0] );
         return -1;
+    }
+    
+    QString translation = "xx";
+    QCString filename;
+    
+    if( argc == 4 ) {
+	if( argv[1]!=QString("--text") ) {
+    	    qWarning( "usage: %s [--text translation] potfile", argv[0] );
+    	    return -1;
+	}
+	translation = QString::fromLocal8Bit(argv[2]);
+	filename = argv[3];
+    } else {
+	filename = argv[1];
     }
 
     MsgList translated;
 
     try {
-        ifstream s(argv[1]);
+        ifstream s(filename);
         GettextLexer lexer(s);
         GettextParser parser(lexer);
         translated = parser.file();
@@ -37,7 +51,7 @@ int main(int argc, char **argv)
         QString msgid = ( *it ).msgid;
         if ( !msgid.isEmpty() ) {
             outputMsg("msgid", escapePO( msgid) );
-            QString msgstr = "xx";
+            QString msgstr = translation;
 
             if ( msgid.find( "Definition of PluralForm" ) != -1 ) {
                 outputMsg("msgstr", "NoPlural");
@@ -47,7 +61,7 @@ int main(int argc, char **argv)
 
             if ( is_desktop ) {
                 msgstr = msgid.left( msgid.find( '=' ) + 1);
-                msgstr += "xx";
+                msgstr += translation;
                 outputMsg( "msgstr", msgstr );
                 cout << "\n";
                 continue;
@@ -57,7 +71,7 @@ int main(int argc, char **argv)
                 int index = msgid.find( '%' );
                 if ( index == -1 )
                     break;
-                msgstr += QString( " %%1 xx" ).arg( msgid.at( index + 1 ) );
+                msgstr += QString( " %%1 "+translation ).arg( msgid.at( index + 1 ) );
                 msgid.at( index ) = ' ';
                 msgid.at( index + 1 ) = ' ';
             }
