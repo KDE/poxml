@@ -1,4 +1,4 @@
-// #undef NDEBUG
+// #define POXML_DEBUG
 
 #include "parser.h"
 #include <stdlib.h>
@@ -154,7 +154,7 @@ int main( int argc, char **argv )
         }
         StructureParser::descape(xml);
 
-#ifndef NDEBUG
+#ifdef POXML_DEBUG
         qDebug("english \"%s\" ORIG \"%s\" %d(%d-%d) %d(%d-%d) %d %d TRANS \"%s\" %d '%s'", xml.latin1(), (*it).msgid.latin1(),
                start_pos, bi.start_line, bi.start_col,
                end_pos, bi.end_line, bi.end_col,
