@@ -23,7 +23,7 @@ text = re.sub("<!DOCTYPE\s*book\s*PUBLIC\s*\"-//KDE//DTD DocBook V3.1-Based Vari
 			  text)
 text = re.sub("<!ENTITY([^>-]*)--", r"<!ENTITY\1> <!--", text)
 text = re.sub("<!ENTITY\s*%\s*ents\s*PUBLIC\s*\"-//KDE//ENTITIES Documentation V2.0//EN\"",
-			  "<!ENTITY % ents SYSTEM \"-//KDE//ENTITIES Documentation V2.0//EN\" \"entities/kde-prologue.entities\"", text)
+			  "<!ENTITY % ents PUBLIC \"-//KDE//ENTITIES Documentation V2.0//EN\" \"entities/kde-prologue.entities\"", text)
 text = re.sub("<!ENTITY\s*%\s*ents\s*PUBLIC\s*\"-//KDE//ENTITIES Documentation V1.0//EN\"",
 			  "<!ENTITY % ents PUBLIC \"-//KDE//ENTITIES Documentation V2.0//EN\" \"entities/kde-prologue.entities\"", text)
 text = re.sub("<!\[ %addindex; \[([^\]]*)\]\]>", r"<!-- should be removed ![ %addindex; [\1]] -->", text)
