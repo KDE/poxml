@@ -726,6 +726,7 @@ MsgList parseXML(const char *filename)
 
     QString contents = QString::fromUtf8( ccontents );
     StructureParser::escapeEntities( contents );
+    StructureParser::cleanupTags(contents);
 
     while (true) {
         int index = contents.find("<!ENTITY");
@@ -752,8 +753,6 @@ MsgList parseXML(const char *filename)
         endindex++;
         contents.replace(index, endindex - index, replacement);
     }
-
-    StructureParser::cleanupTags(contents);
 
     QTextStream ts(contents.utf8(), IO_ReadOnly);
     QXmlInputSource source( ts );
