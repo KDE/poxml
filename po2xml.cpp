@@ -88,7 +88,7 @@ int main( int argc, char **argv )
 
     } catch(exception& e) {
         cerr << "exception: " << e.what() << endl;
-        ::exit(1);
+        return 1;
     }
 
     QMap<QString, QString> translations;

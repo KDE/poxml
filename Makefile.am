@@ -45,7 +45,7 @@ $(srcdir)/docbook_kabalone.pot: xml2pot kabalone.xml
 	msgmerge -o $(srcdir)/docbook_kabalone.pot $(srcdir)/docbook_kabalone.pot $(srcdir)/docbook_kabalone.pot  
 
 $(srcdir)/docbook_kwrite.po: $(srcdir)/docbook_kwrite.pot
-	msgmerge $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.po 
+	msgmerge -i -o $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.pot 
 	msgfmt --statistics $(srcdir)/docbook_kwrite.po -o /dev/null
 $(srcdir)/docbook_faq.po: $(srcdir)/docbook_faq.pot
 	msgmerge $(srcdir)/docbook_faq.po $(srcdir)/docbook_faq.pot > d && mv d $(srcdir)/docbook_faq.po 

@@ -96,7 +96,7 @@ MSG_TAG : "msg" ( "id" { $setType(T_MSGID); }
         ;
 
 T_STRING 
-	:	('"'! (ESC|~'"')* ('"'! (' ' | 't')*! '\n'! { newline(); } ))+
+	:	('"'! (ESC|~'"')* ('"'! (' ' | 't')*! '\n'! { newline(); } (' '! | '\t'!)*))+
 	;
 
 // copied from example

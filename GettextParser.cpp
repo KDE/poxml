@@ -63,7 +63,7 @@ GettextParser::GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputSt
 #line 64 "GettextParser.cpp"
 #line 41 "gettext.g"
 	
-	std::string c, mi, ms;
+	string c, mi, ms;
 	MsgBlock mb;
 	MsgList ml2;
 	
@@ -141,14 +141,14 @@ GettextParser::GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputSt
 	return ml ;
 }
 
-std::string  GettextParser::comment() {
-#line 61 "gettext.g"
-	std::string s;
+string  GettextParser::comment() {
+#line 62 "gettext.g"
+	string s;
 #line 148 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  c = ANTLR_USE_NAMESPACE(antlr)nullToken;
-#line 61 "gettext.g"
+#line 62 "gettext.g"
 	
-	std::string r;
+	string r;
 	
 #line 154 "GettextParser.cpp"
 	
@@ -159,7 +159,7 @@ std::string  GettextParser::comment() {
 			match(T_COMMENT);
 			r=comment();
 			if ( inputState->guessing==0 ) {
-#line 65 "gettext.g"
+#line 66 "gettext.g"
 				s = c->getText() + r;
 #line 165 "GettextParser.cpp"
 			}
@@ -190,21 +190,22 @@ std::string  GettextParser::comment() {
 #line 191 "GettextParser.cpp"
 #line 51 "gettext.g"
 	
-	std::string mi, ms;
+	string c, mi, ms;
 	
 #line 196 "GettextParser.cpp"
 	
 	try {      // for error handling
-		comment();
+		c=comment();
 		mi=msgid();
 		ms=msgstr();
 		if ( inputState->guessing==0 ) {
 #line 55 "gettext.g"
 			
+				(void)c;
 				mb.msgid = QString::fromUtf8(mi.c_str());
 				mb.msgstr = QString::fromUtf8(ms.c_str());   
 			
-#line 208 "GettextParser.cpp"
+#line 209 "GettextParser.cpp"
 		}
 	}
 	catch (ANTLR_USE_NAMESPACE(antlr)RecognitionException& ex) {
@@ -219,10 +220,10 @@ std::string  GettextParser::comment() {
 	return mb ;
 }
 
-std::string  GettextParser::msgid() {
-#line 69 "gettext.g"
-	std::string s;
-#line 226 "GettextParser.cpp"
+string  GettextParser::msgid() {
+#line 70 "gettext.g"
+	string s;
+#line 227 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  t = ANTLR_USE_NAMESPACE(antlr)nullToken;
 	
 	try {      // for error handling
@@ -230,9 +231,9 @@ std::string  GettextParser::msgid() {
 		t = LT(1);
 		match(T_STRING);
 		if ( inputState->guessing==0 ) {
-#line 70 "gettext.g"
+#line 71 "gettext.g"
 			s = t->getText();
-#line 236 "GettextParser.cpp"
+#line 237 "GettextParser.cpp"
 		}
 	}
 	catch (ANTLR_USE_NAMESPACE(antlr)RecognitionException& ex) {
@@ -247,10 +248,10 @@ std::string  GettextParser::msgid() {
 	return s;
 }
 
-std::string  GettextParser::msgstr() {
-#line 73 "gettext.g"
-	std::string s;
-#line 254 "GettextParser.cpp"
+string  GettextParser::msgstr() {
+#line 74 "gettext.g"
+	string s;
+#line 255 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  t = ANTLR_USE_NAMESPACE(antlr)nullToken;
 	
 	try {      // for error handling
@@ -258,9 +259,9 @@ std::string  GettextParser::msgstr() {
 		t = LT(1);
 		match(T_STRING);
 		if ( inputState->guessing==0 ) {
-#line 74 "gettext.g"
+#line 75 "gettext.g"
 			s = t->getText();
-#line 264 "GettextParser.cpp"
+#line 265 "GettextParser.cpp"
 		}
 	}
 	catch (ANTLR_USE_NAMESPACE(antlr)RecognitionException& ex) {

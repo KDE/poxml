@@ -140,7 +140,7 @@ void GettextLexer::mWS(bool _createToken) {
 		}
 		}
 		}
-#line 85 "gettext.g"
+#line 86 "gettext.g"
 		newline();
 #line 146 "GettextLexer.cpp"
 		break;
@@ -151,7 +151,7 @@ void GettextLexer::mWS(bool _createToken) {
 	}
 	}
 	}
-#line 86 "gettext.g"
+#line 87 "gettext.g"
 	_ttype = ANTLR_USE_NAMESPACE(antlr)Token::SKIP;
 #line 157 "GettextLexer.cpp"
 	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
@@ -199,7 +199,7 @@ void GettextLexer::mMSG_TAG(bool _createToken) {
 	case static_cast<unsigned char>('i'):
 	{
 		match("id");
-#line 92 "gettext.g"
+#line 93 "gettext.g"
 		_ttype = T_MSGID;
 #line 205 "GettextLexer.cpp"
 		break;
@@ -207,7 +207,7 @@ void GettextLexer::mMSG_TAG(bool _createToken) {
 	case static_cast<unsigned char>('s'):
 	{
 		match("str");
-#line 93 "gettext.g"
+#line 94 "gettext.g"
 		_ttype = T_MSGSTR;
 #line 213 "GettextLexer.cpp"
 		break;
@@ -232,7 +232,7 @@ void GettextLexer::mT_STRING(bool _createToken) {
 	int _saveIndex;
 	
 	{
-	int _cnt27=0;
+	int _cnt29=0;
 	for (;;) {
 		if ((LA(1)==static_cast<unsigned char>('"'))) {
 			_saveIndex=text.length();
@@ -281,18 +281,43 @@ void GettextLexer::mT_STRING(bool _createToken) {
 			_saveIndex=text.length();
 			match(static_cast<unsigned char>('\n'));
 			text.erase(_saveIndex);
-#line 98 "gettext.g"
+#line 99 "gettext.g"
 			newline();
 #line 287 "GettextLexer.cpp"
+			{
+			for (;;) {
+				switch ( LA(1)) {
+				case static_cast<unsigned char>(' '):
+				{
+					_saveIndex=text.length();
+					match(static_cast<unsigned char>(' '));
+					text.erase(_saveIndex);
+					break;
+				}
+				case static_cast<unsigned char>('\t'):
+				{
+					_saveIndex=text.length();
+					match(static_cast<unsigned char>('\t'));
+					text.erase(_saveIndex);
+					break;
+				}
+				default:
+				{
+					goto _loop28;
+				}
+				}
+			}
+			_loop28:;
+			}
 			}
 		}
 		else {
-			if ( _cnt27>=1 ) { goto _loop27; } else {throw ANTLR_USE_NAMESPACE(antlr)NoViableAltForCharException(LA(1), getFilename(), getLine());}
+			if ( _cnt29>=1 ) { goto _loop29; } else {throw ANTLR_USE_NAMESPACE(antlr)NoViableAltForCharException(LA(1), getFilename(), getLine());}
 		}
 		
-		_cnt27++;
+		_cnt29++;
 	}
-	_loop27:;
+	_loop29:;
 	}
 	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
 	   _token = makeToken(_ttype);

@@ -27,10 +27,10 @@ public:
 	GettextParser(ANTLR_USE_NAMESPACE(antlr)TokenStream& lexer);
 	GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputState& state);
 	public:  MsgList  file();
-	public: std::string  comment();
+	public: string  comment();
 	public:  MsgBlock  file_block();
-	public: std::string  msgid();
-	public: std::string  msgstr();
+	public: string  msgid();
+	public: string  msgstr();
 private:
 	static const char* _tokenNames[];
 	
