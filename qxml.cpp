@@ -820,7 +820,7 @@ void QXmlInputSource::readInput( QByteArray& rawData )
 	    }
 	    delete stream;
 	    stream = new QTextStream( &buf );
-	    stream->setCodec( QTextCodec::codecForName( encoding ) );
+	    stream->setCodec( QTextCodec::codecForName( encoding.latin1() ) );
 	    buf.reset();
 	    input = "";
 	}
@@ -1948,7 +1948,7 @@ bool QXmlSimpleReader::feature( const QString& name, bool *ok ) const
     } else if ( name == "http://trolltech.com/xml/features/report-start-end-entity" ) {
 	return d->reportEntities;
     } else {
-	qWarning( "Unknown feature " + name );
+	qWarning( "Unknown feature %s", name.latin1() );
 	if ( ok != 0 )
 	    *ok = FALSE;
     }
@@ -1984,7 +1984,7 @@ void QXmlSimpleReader::setFeature( const QString& name, bool value )
     } else if ( name == "http://trolltech.com/xml/features/report-start-end-entity" ) {
 	d->reportEntities = value;
     } else {
-	qWarning( "Unknown feature " + name );
+	qWarning( "Unknown feature %s", name.latin1() );
     }
 }
 
