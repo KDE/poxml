@@ -1,8 +1,8 @@
 
 EXTRA_PROGRAMS = checkXML
 
-bin_PROGRAMS = split $(LIBXML_PROGRAMS) xml2pot po2xml
-bin_SCRIPTS = xmlizer fixsgml
+bin_PROGRAMS = split2po $(LIBXML_PROGRAMS) xml2pot po2xml
+bin_SCRIPTS = fixsgml
 AM_CPPFLAGS = -DNDEBUG
 
 INCLUDES = -I$(srcdir)/antlr $(all_includes) -I/usr/local/include
@@ -10,9 +10,9 @@ KDE_CXXFLAGS = $(USE_EXCEPTIONS)
 
 SUBDIRS = antlr
 
-split_SOURCES = qxml.cpp split.cpp parser.cpp
-split_LDFLAGS = $(all_libraries)
-split_LDADD = $(LIB_QT)
+split2po_SOURCES = qxml.cpp split.cpp parser.cpp
+split2po_LDFLAGS = $(all_libraries)
+split2po_LDADD = $(LIB_QT)
 
 checkXML_SOURCES = checkXML.c
 checkXML_LDFLAGS = -L/usr/local/lib
