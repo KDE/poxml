@@ -6,13 +6,13 @@
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
                                    "glossseealso", "footnoteref",
-                                   "glosssee", 0};
+                                   "glosssee", "graphic", 0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
                                     "imageobject", "varlistentry", "thead",
-                                    "tbody", "row",
+                                    "tbody", "row", "screenshot", "screeninfo",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
