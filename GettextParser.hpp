@@ -13,6 +13,9 @@
 #include "GettextParserTokenTypes.hpp"
 #include "antlr/LLkParser.hpp"
 
+#include <string>
+using namespace std;
+
 class GettextParser : public ANTLR_USE_NAMESPACE(antlr)LLkParser, public GettextParserTokenTypes
  {
 #line 1 "gettext.g"
@@ -26,9 +29,9 @@ protected:
 public:
 	GettextParser(ANTLR_USE_NAMESPACE(antlr)TokenStream& lexer);
 	GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputState& state);
-	public:  MsgList  file();
+	public: MsgList  file();
 	public: string  comment();
-	public:  MsgBlock  file_block();
+	public: MsgBlock  file_block();
 	public: string  msgid();
 	public: string  msgstr();
 private:

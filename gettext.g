@@ -8,7 +8,8 @@ options {
 }
 
 {
-#include <iostream.h>
+#include <iostream>
+#include <string>
 using namespace std;
 #include "GettextLexer.hpp"
 #include "GettextParser.hpp"
