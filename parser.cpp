@@ -154,10 +154,10 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
 void StructureParser::descape(QString &message)
 {
     uint index = 0;
-    message.replace(QRegExp("&amp-internal;"), "&amp;");
-    message.replace(QRegExp("&lt-internal;"), "&lt;");
-    message.replace(QRegExp("&gt-internal;"), "&gt;");
-    message.replace(QRegExp("&quot-internal;"), "&quot;");
+    message.replace(QRegExp("|amp-internal|"), "&amp;");
+    message.replace(QRegExp("|lt-internal|"), "&lt;");
+    message.replace(QRegExp("|gt-internal|"), "&gt;");
+    message.replace(QRegExp("|quot-internal|"), "&quot;");
 
     message = message.stripWhiteSpace();
 
@@ -565,10 +565,10 @@ MsgList parseXML(const char *filename)
         xmlFile.close();
         pclose(p);
     }
-    contents.replace(QRegExp("&amp;"), "&amp-internal;");
-    contents.replace(QRegExp("&lt;"), "&lt-internal;");
-    contents.replace(QRegExp("&gt;"), "&gt-internal;");
-    contents.replace(QRegExp("&quot;"), "&quot-internal;");
+    contents.replace(QRegExp("&amp;"), "|amp-internal|");
+    contents.replace(QRegExp("&lt;"), "|lt-internal|");
+    contents.replace(QRegExp("&gt;"), "|gt-internal|");
+    contents.replace(QRegExp("&quot;"), "|quot-internal|");
 
     while (true) {
         int index = contents.find("<!ENTITY");

@@ -30,47 +30,57 @@ msgstr "sagen wir mal sie heisst Höpfner"
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: index.docbook:25
+#: index.docbook:12
+msgid ""
+"an archive of the developer's mailing list is at <ulink "
+"url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
+"k>."
+msgstr ""
+"Es gibt ein Archiv <ulink "
+"url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
+"k>."
+
+#: index.docbook:29
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:25
+#: index.docbook:29
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:59
+#: index.docbook:63
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:59
+#: index.docbook:63
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -100,7 +110,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:80
+#: index.docbook:84
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -138,7 +148,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:92
+#: index.docbook:96
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -158,7 +168,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:103
+#: index.docbook:107
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
@@ -213,4 +223,3 @@ msgstr "foo"
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
 msgstr "bar"
-
