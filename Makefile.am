@@ -1,5 +1,5 @@
 
-bin_PROGRAMS = split2po xml2pot po2xml
+bin_PROGRAMS = split2po xml2pot po2xml swappo
 bin_SCRIPTS = fixsgml
 AM_CPPFLAGS = -DNDEBUG
 
@@ -19,6 +19,10 @@ xml2pot_LDADD = $(LIB_QT)
 po2xml_SOURCES = GettextLexer.cpp GettextParser.cpp qxml.cpp po2xml.cpp parser.cpp
 po2xml_LDFLAGS = $(all_libraries)
 po2xml_LDADD = antlr/src/libantlr.la $(LIB_QT)
+
+swappo_SOURCES = GettextLexer.cpp GettextParser.cpp swappo.cpp parser.cpp qxml.cpp
+swappo_LDFLAGS = $(all_libraries)
+swappo_LDADD = antlr/src/libantlr.la $(LIB_QT)
 
 parser:
 	cd $(srcdir) &&	java antlr.Tool gettext.g
