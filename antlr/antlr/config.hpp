@@ -148,12 +148,8 @@
 #define NO_STRCASECMP
 #endif
 
-#ifdef __IBMCPP__ // IBM VisualAge C++ ( which includes the Dinkumware C++ Library )
-
-// No strcasecmp in the C library (so use stricmp instead)
-// - Anyone know which is in which standard?
-#define NO_STRCASECMP
-
+#ifdef _AIX
+#include <strings.h>
 #endif
 
 //
