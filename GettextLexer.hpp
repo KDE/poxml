@@ -3,9 +3,11 @@
 
 #line 2 "gettext.g"
 
+#include <string>
+using namespace std;
 #include "parser.h"
 
-#line 9 "GettextLexer.hpp"
+#line 11 "GettextLexer.hpp"
 #include "antlr/config.hpp"
 /* $ANTLR 2.7.1: "gettext.g" -> "GettextLexer.hpp"$ */
 #include "antlr/CommonToken.hpp"
@@ -16,7 +18,7 @@
 class GettextLexer : public ANTLR_USE_NAMESPACE(antlr)CharScanner, public GettextParserTokenTypes
  {
 #line 1 "gettext.g"
-#line 20 "GettextLexer.hpp"
+#line 22 "GettextLexer.hpp"
 private:
 	void initLiterals();
 public:
@@ -27,6 +29,9 @@ public:
 	GettextLexer(const ANTLR_USE_NAMESPACE(antlr)LexerSharedInputState& state);
 	ANTLR_USE_NAMESPACE(antlr)RefToken nextToken();
 	public: void mWS(bool _createToken);
+	public: void mL_BRACKET(bool _createToken);
+	public: void mR_BRACKET(bool _createToken);
+	public: void mT_INT(bool _createToken);
 	public: void mT_COMMENT(bool _createToken);
 	public: void mMSG_TAG(bool _createToken);
 	public: void mT_STRING(bool _createToken);

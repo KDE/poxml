@@ -59,6 +59,33 @@ ANTLR_USE_NAMESPACE(antlr)RefToken GettextLexer::nextToken()
 					theRetToken=_returnToken;
 					break;
 				}
+				case static_cast<unsigned char>('['):
+				{
+					mL_BRACKET(true);
+					theRetToken=_returnToken;
+					break;
+				}
+				case static_cast<unsigned char>(']'):
+				{
+					mR_BRACKET(true);
+					theRetToken=_returnToken;
+					break;
+				}
+				case static_cast<unsigned char>('0'):
+				case static_cast<unsigned char>('1'):
+				case static_cast<unsigned char>('2'):
+				case static_cast<unsigned char>('3'):
+				case static_cast<unsigned char>('4'):
+				case static_cast<unsigned char>('5'):
+				case static_cast<unsigned char>('6'):
+				case static_cast<unsigned char>('7'):
+				case static_cast<unsigned char>('8'):
+				case static_cast<unsigned char>('9'):
+				{
+					mT_INT(true);
+					theRetToken=_returnToken;
+					break;
+				}
 				case static_cast<unsigned char>('#'):
 				{
 					mT_COMMENT(true);
@@ -140,9 +167,9 @@ void GettextLexer::mWS(bool _createToken) {
 		}
 		}
 		}
-#line 86 "gettext.g"
+#line 110 "gettext.g"
 		newline();
-#line 146 "GettextLexer.cpp"
+#line 173 "GettextLexer.cpp"
 		break;
 	}
 	default:
@@ -151,9 +178,64 @@ void GettextLexer::mWS(bool _createToken) {
 	}
 	}
 	}
-#line 87 "gettext.g"
+#line 111 "gettext.g"
 	_ttype = ANTLR_USE_NAMESPACE(antlr)Token::SKIP;
-#line 157 "GettextLexer.cpp"
+#line 184 "GettextLexer.cpp"
+	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
+	   _token = makeToken(_ttype);
+	   _token->setText(text.substr(_begin, text.length()-_begin));
+	}
+	_returnToken = _token;
+	_saveIndex=0;
+}
+
+void GettextLexer::mL_BRACKET(bool _createToken) {
+	int _ttype; ANTLR_USE_NAMESPACE(antlr)RefToken _token; int _begin=text.length();
+	_ttype = L_BRACKET;
+	int _saveIndex;
+	
+	match(static_cast<unsigned char>('['));
+	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
+	   _token = makeToken(_ttype);
+	   _token->setText(text.substr(_begin, text.length()-_begin));
+	}
+	_returnToken = _token;
+	_saveIndex=0;
+}
+
+void GettextLexer::mR_BRACKET(bool _createToken) {
+	int _ttype; ANTLR_USE_NAMESPACE(antlr)RefToken _token; int _begin=text.length();
+	_ttype = R_BRACKET;
+	int _saveIndex;
+	
+	match(static_cast<unsigned char>(']'));
+	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
+	   _token = makeToken(_ttype);
+	   _token->setText(text.substr(_begin, text.length()-_begin));
+	}
+	_returnToken = _token;
+	_saveIndex=0;
+}
+
+void GettextLexer::mT_INT(bool _createToken) {
+	int _ttype; ANTLR_USE_NAMESPACE(antlr)RefToken _token; int _begin=text.length();
+	_ttype = T_INT;
+	int _saveIndex;
+	
+	{
+	int _cnt26=0;
+	for (;;) {
+		if (((LA(1) >= static_cast<unsigned char>('0') && LA(1) <= static_cast<unsigned char>('9')))) {
+			matchRange(static_cast<unsigned char>('0'),static_cast<unsigned char>('9'));
+		}
+		else {
+			if ( _cnt26>=1 ) { goto _loop26; } else {throw ANTLR_USE_NAMESPACE(antlr)NoViableAltForCharException(LA(1), getFilename(), getLine());}
+		}
+		
+		_cnt26++;
+	}
+	_loop26:;
+	}
 	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
 	   _token = makeToken(_ttype);
 	   _token->setText(text.substr(_begin, text.length()-_begin));
@@ -174,11 +256,11 @@ void GettextLexer::mT_COMMENT(bool _createToken) {
 			matchNot(static_cast<unsigned char>('\n'));
 		}
 		else {
-			goto _loop17;
+			goto _loop29;
 		}
 		
 	}
-	_loop17:;
+	_loop29:;
 	}
 	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
 	   _token = makeToken(_ttype);
@@ -198,18 +280,32 @@ void GettextLexer::mMSG_TAG(bool _createToken) {
 	switch ( LA(1)) {
 	case static_cast<unsigned char>('i'):
 	{
+		{
 		match("id");
-#line 93 "gettext.g"
-		_ttype = T_MSGID;
-#line 205 "GettextLexer.cpp"
+		}
+		{
+		if ((LA(1)==static_cast<unsigned char>('_'))) {
+			match("_plural");
+#line 126 "gettext.g"
+			_ttype = T_MSGID_PLURAL;
+#line 292 "GettextLexer.cpp"
+		}
+		else {
+			match("");
+#line 125 "gettext.g"
+			_ttype = T_MSGID;
+#line 298 "GettextLexer.cpp"
+		}
+		
+		}
 		break;
 	}
 	case static_cast<unsigned char>('s'):
 	{
 		match("str");
-#line 94 "gettext.g"
+#line 128 "gettext.g"
 		_ttype = T_MSGSTR;
-#line 213 "GettextLexer.cpp"
+#line 309 "GettextLexer.cpp"
 		break;
 	}
 	default:
@@ -232,7 +328,7 @@ void GettextLexer::mT_STRING(bool _createToken) {
 	int _saveIndex;
 	
 	{
-	int _cnt29=0;
+	int _cnt43=0;
 	for (;;) {
 		if ((LA(1)==static_cast<unsigned char>('"'))) {
 			_saveIndex=text.length();
@@ -247,11 +343,11 @@ void GettextLexer::mT_STRING(bool _createToken) {
 					matchNot(static_cast<unsigned char>('"'));
 				}
 				else {
-					goto _loop23;
+					goto _loop37;
 				}
 				
 			}
-			_loop23:;
+			_loop37:;
 			}
 			{
 			_saveIndex=text.length();
@@ -272,18 +368,18 @@ void GettextLexer::mT_STRING(bool _createToken) {
 				}
 				default:
 				{
-					goto _loop26;
+					goto _loop40;
 				}
 				}
 			}
-			_loop26:;
+			_loop40:;
 			}
 			_saveIndex=text.length();
 			match(static_cast<unsigned char>('\n'));
 			text.erase(_saveIndex);
-#line 99 "gettext.g"
+#line 133 "gettext.g"
 			newline();
-#line 287 "GettextLexer.cpp"
+#line 383 "GettextLexer.cpp"
 			{
 			for (;;) {
 				switch ( LA(1)) {
@@ -303,21 +399,21 @@ void GettextLexer::mT_STRING(bool _createToken) {
 				}
 				default:
 				{
-					goto _loop28;
+					goto _loop42;
 				}
 				}
 			}
-			_loop28:;
+			_loop42:;
 			}
 			}
 		}
 		else {
-			if ( _cnt29>=1 ) { goto _loop29; } else {throw ANTLR_USE_NAMESPACE(antlr)NoViableAltForCharException(LA(1), getFilename(), getLine());}
+			if ( _cnt43>=1 ) { goto _loop43; } else {throw ANTLR_USE_NAMESPACE(antlr)NoViableAltForCharException(LA(1), getFilename(), getLine());}
 		}
 		
-		_cnt29++;
+		_cnt43++;
 	}
-	_loop29:;
+	_loop43:;
 	}
 	if ( _createToken && _token==ANTLR_USE_NAMESPACE(antlr)nullToken && _ttype!=ANTLR_USE_NAMESPACE(antlr)Token::SKIP ) {
 	   _token = makeToken(_ttype);

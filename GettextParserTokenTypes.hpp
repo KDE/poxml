@@ -8,10 +8,14 @@ struct GettextParserTokenTypes {
 		T_MSGID = 4,
 		T_COMMENT = 5,
 		T_STRING = 6,
-		T_MSGSTR = 7,
-		WS = 8,
-		MSG_TAG = 9,
-		ESC = 10,
+		T_MSGID_PLURAL = 7,
+		T_MSGSTR = 8,
+		L_BRACKET = 9,
+		T_INT = 10,
+		R_BRACKET = 11,
+		WS = 12,
+		MSG_TAG = 13,
+		ESC = 14,
 		NULL_TREE_LOOKAHEAD = 3
 	};
 };
