@@ -3,7 +3,7 @@ bin_PROGRAMS = split2po xml2pot po2xml swappo
 bin_SCRIPTS = fixsgml
 AM_CPPFLAGS = -DNDEBUG
 
-INCLUDES = -I$(srcdir)/antlr $(all_includes) -I/usr/local/include
+INCLUDES = -I$(srcdir)/antlr  -I/usr/local/include $(all_includes)
 KDE_CXXFLAGS = $(USE_EXCEPTIONS) 
 
 SUBDIRS = antlr
