@@ -6,7 +6,7 @@
 
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
-                                   "footnoteref", "void", 
+                                   "footnoteref", "void",
                                    "glosssee", "graphic", 0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword", "example",
@@ -19,8 +19,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "author", "itemizedlist", "orderedlist",
                                     "caption", "textobject", "mediaobject",
                                     "tip", "glossdef", "inlinemediaobject",
-                                    "simplelist", "member", "glossentry", 
-				    "areaspec", 
+                                    "simplelist", "member", "glossentry",
+				    "areaspec", "authorgroup",
                                     "calloutlist", "callout", "subtitle",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
@@ -75,7 +75,8 @@ bool StructureParser::isLiteralTag(const QString &qName)
     return false;
 }
 
-bool StructureParser::skippedEntity ( const QString & name ) {
+bool StructureParser::skippedEntity ( const QString & name )
+{
     if (inside)
         message += QString("&%1;").arg(name);
     return true;
@@ -664,7 +665,7 @@ MsgList parseXML(const char *filename)
     QString contents = QString::fromUtf8( ccontents );
     StructureParser::escapeEntities( contents );
 
-   
+
     while (true) {
         int index = contents.find("<!ENTITY");
         if (index < 0)
