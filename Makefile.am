@@ -27,11 +27,19 @@ parser:
 
 $(srcdir)/docbook_kwrite.pot: xml2pot kwrite.xml
 	./xml2pot $(srcdir)/kwrite.xml > $(srcdir)/docbook_kwrite.pot
+$(srcdir)/docbook_faq.pot: xml2pot faq.xml
+	./xml2pot $(srcdir)/faq.xml > $(srcdir)/docbook_faq.pot
 
 $(srcdir)/docbook_kwrite.po: $(srcdir)/docbook_kwrite.pot
 	msgmerge $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.po 
 	msgfmt --statistics $(srcdir)/docbook_kwrite.po -o /dev/null
+$(srcdir)/docbook_faq.po: $(srcdir)/docbook_faq.pot
+	msgmerge $(srcdir)/docbook_faq.po $(srcdir)/docbook_faq.pot > d && mv d $(srcdir)/docbook_faq.po 
+	msgfmt --statistics $(srcdir)/docbook_faq.po -o /dev/null
 
 $(srcdir)/kwrite_de.xml: po2xml $(srcdir)/docbook_kwrite.po
 	./po2xml $(srcdir)/kwrite.xml $(srcdir)/docbook_kwrite.po > $(srcdir)/kwrite_de.xml
+$(srcdir)/faq_de.xml: po2xml $(srcdir)/docbook_faq.po
+	./po2xml $(srcdir)/faq.xml $(srcdir)/docbook_faq.po > $(srcdir)/faq_de.xml
 
+test: $(srcdir)/kwrite_de.xml $(srcdir)/faq_de.xml

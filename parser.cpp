@@ -32,7 +32,6 @@ bool StructureParser::isSingleTag(const QString &qName) const
     }
     return false;
 }
-
 bool StructureParser::skippedEntity ( const QString & name ) {
     if (inside)
         message += QString("&%1;").arg(name);
@@ -44,16 +43,14 @@ bool StructureParser::startElement( const QString& , const QString& ,
                                     const QXmlAttributes & attr )
 {
     QString tname = qName.lower();
-    if (isCuttingTag(tname)) {
-        if (!inside) {
+    if (!inside) {
+        if (isCuttingTag(tname)) {
             message = QString::null;
             list.pc.increasePara();
             startline = locator->lineNumber();
             startcol = locator->columnNumber();
         }
-        inside++;
-
-    } else if (inside) {
+    } else {
         QString tmp = "<" + tname;
         for (int i = 0; i < attr.length(); i++) {
             tmp += QString(" %1=\"%2\"").arg(attr.qName(i)).arg(attr.value(i));
@@ -63,7 +60,11 @@ bool StructureParser::startElement( const QString& , const QString& ,
         else
             tmp += ">";
         message += tmp;
+
     }
+    if (isCuttingTag(tname))
+        inside++;
+
     if (tname == "anchor" || tname.left(4) == "sect" || tname == "chapter")
         list.pc.addAnchor(attr.value("id"));
 
@@ -74,10 +75,11 @@ QString StructureParser::formatMessage(QString message) const
 {
     message = message.simplifyWhiteSpace();
 
-    while (strchr("\n \t", message.at(message.length() - 1).latin1()))
-        message = message.left(message.length() - 1);
-
+    message.replace(QRegExp("\\"), "\\\\");
     message.replace(QRegExp("\""), "\\\"");
+    message.replace(QRegExp("&amp-internal;"), "&amp;");
+    message.replace(QRegExp("&lt-internal;"), "&lt;");
+    message.replace(QRegExp("&gt-internal;"), "&gt;");
 
     // removing starting single tags
     for (int index = 0; singletags[index]; index++)
@@ -143,7 +145,9 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             m.lines.append(bi);
             list.append(m);
         }
-    } else if (inside) {
+    }
+
+    if (inside) {
         if (!isSingleTag(qName))
             message += QString("</%1>").arg(tname);
     }
@@ -187,7 +191,15 @@ MsgList parseXML(const char *filename)
 {
     StructureParser handler;
     QFile xmlFile( filename );
-    QXmlInputSource source( xmlFile );
+    xmlFile.open(IO_ReadOnly);
+    QCString contents;
+    contents.assign(xmlFile.readAll());
+    xmlFile.close();
+    contents.replace(QRegExp("&amp;"), "&amp-internal;");
+    contents.replace(QRegExp("&lt;"), "&lt-internal;");
+    contents.replace(QRegExp("&gt;"), "&gt-internal;");
+    QTextStream ts(contents, IO_ReadOnly);
+    QXmlInputSource source( ts );
     QXmlSimpleReader reader;
     reader.setFeature( "http://trolltech.com/xml/features/report-start-end-entity", true);
     reader.setContentHandler( &handler );

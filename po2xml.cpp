@@ -15,9 +15,10 @@ QString translate(QString xml, QString orig, QString translation)
     xml = xml.simplifyWhiteSpace();
     orig.replace(QRegExp("\\\\\""), "\"");
     orig.replace(QRegExp("\\\\\n"), "\n");
+    orig.replace(QRegExp("\\\\\\"), "\\");
     int index = xml.find(orig);
     if (index == -1) {
-        qDebug("can't find %s in\n%s", orig.latin1(), xml.latin1());
+        qDebug("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
         ASSERT(false);
     }
     xml.replace(index, orig.length(), translation);
