@@ -6,7 +6,7 @@
 
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
-                                   "footnoteref", "void",
+                                   "footnoteref", "void", 
                                    "glosssee", "graphic", 0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword",
@@ -19,7 +19,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "author", "itemizedlist", "orderedlist",
                                     "caption", "textobject", "mediaobject",
                                     "tip", "glossdef", "inlinemediaobject",
-                                    "simplelist", "member", "glossentry", "areaspec",
+                                    "simplelist", "member", "glossentry", 
+				    "areaspec", 
                                     "calloutlist", "callout", "subtitle",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
@@ -85,6 +86,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
                                     const QXmlAttributes & attr )
 {
     QString tname = qName.lower();
+
     bool first = false;
 
     if (isCuttingTag(tname)) {
@@ -658,23 +660,11 @@ MsgList parseXML(const char *filename)
     QCString ccontents;
     ccontents.assign(xmlFile.readAll());
     xmlFile.close();
-    QString tmp;
-    if (ccontents.left(5) != "<?xml") {
-        FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(filename).latin1(), "r");
-        xmlFile.open(IO_ReadOnly, p);
-        char buffer[5001];
-        ccontents.truncate(0);
-        int len;
-        while ((len = xmlFile.readBlock(buffer, 5000)) != 0) {
-            buffer[len] = 0;
-            ccontents += buffer;
-        }
-        xmlFile.close();
-        pclose(p);
-    }
+
     QString contents = QString::fromUtf8( ccontents );
     StructureParser::escapeEntities( contents );
 
+   
     while (true) {
         int index = contents.find("<!ENTITY");
         if (index < 0)
