@@ -150,15 +150,17 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
     }
 }
 
-void StructureParser::descape(QString &message)
+int StructureParser::descape(QString &message)
 {
+    int orig_len = message.length();
+
+    int index = 0;
     message.replace(QRegExp("&amp-internal;"), "&amp;");
     message.replace(QRegExp("&lt-internal;"), "&lt;");
     message.replace(QRegExp("&gt-internal;"), "&gt;");
 
     message = message.stripWhiteSpace();
 
-    uint index = 0;
     int inside = 0;
     bool lastws = false;
 
@@ -195,6 +197,8 @@ void StructureParser::descape(QString &message)
         index++;
     }
     message.replace(QRegExp("\010"), "");
+    assert(orig_len >= message.length());
+    return orig_len - message.length();
 }
 
 bool StructureParser::formatMessage(QString& message, int &offset) const
@@ -470,7 +474,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             MsgBlock m;
             int offset = 0;
 
-            descape(message);
+            int ret = descape(message);
 
             m.msgid = message;
 
@@ -480,7 +484,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             bi.start_line = startline;
             bi.start_col = startcol;
             bi.end_line = locator->lineNumber();
-            bi.end_col = locator->columnNumber() + 1;
+            bi.end_col = locator->columnNumber() + 1 - ret;
             bi.offset = offset;
             m.lines.append(bi);
 

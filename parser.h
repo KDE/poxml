@@ -59,7 +59,7 @@ public:
     MsgList splitMessage(const MsgBlock &message);
 
     static bool closureTag(const QString& message, const QString &tag);
-    static void descape(QString &message);
+    static int descape(QString &message);
 
 private:
     bool formatMessage(QString& message, int &offset) const;
