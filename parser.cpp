@@ -30,7 +30,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
 				    "table", "part", "xi:fallback", "primary",
                                     "secondary", "chapter", "sect1", "sect2",
                                     "figure", "abstract", "sect3", "sect", "sect4",
-                                    "warning", 0};
+                                    "warning", "preface", 0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
@@ -415,10 +415,10 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             int inside = 1;
             while (true) {
 #ifdef POXML_DEBUG
-                qDebug("inside %s %d", message.mid(strindex, 15).latin1(), inside);
+                qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
 #endif
 
-                // the exception of poxml_* attributes is made in the closing tag
+                // the exception for poxml_* attributes is made in the closing tag
                 int closing_index = message.find(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
                                                  strindex);
                 int starting_index = message.find(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
@@ -447,7 +447,6 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                     closing_index++;
 
                 if (starting_index == -1) {
-                    assert(inside == 1);
                     strindex = closing_index;
 #ifdef POXML_DEBUG
                     qDebug("set strindex %d", strindex);
@@ -801,7 +800,7 @@ QString escapePO(QString msgid)
         index = msgid.find("\\n", index);
         if (index == -1)
             break;
-        if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
+        if (index >= 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
             msgid.replace(index - 1, 3, "\\n");
             index += 3;
         } else
@@ -827,11 +826,13 @@ QString escapePO(QString msgid)
         else
             msgid.replace(index, 2, "\t");
     }
+    index = 0;
     while (true) {
-        int index = msgid.find("\\\\");
+        index = msgid.find("\\\\", index);
         if (index == -1)
             break;
         msgid.replace(index, 2, "\\");
+        index += 1;
     }
 
     return msgid;
