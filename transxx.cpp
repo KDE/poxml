@@ -58,7 +58,7 @@ int main(int argc, char **argv)
         	outputMsg("msgid_plural", escapePO( msgid_plural ) );
 	    }
 
-            QString msgstr = translation + msgid + translation;
+            QString msgstr;
 
             if ( msgid.find( "Definition of PluralForm" ) != -1 ) {
                 outputMsg("msgstr", "NoPlural");
@@ -69,22 +69,31 @@ int main(int argc, char **argv)
             if ( is_desktop ) {
                 msgstr = msgid.left( msgid.find( '=' ) + 1);
                 msgstr += translation + msgid.mid( msgid.find( '=' ) + 1) + translation;
-                outputMsg( "msgstr", msgstr );
+                outputMsg( "msgstr", escapePO(msgstr) );
                 cout << "\n";
                 continue;
             }
 
-            if ( msgid.right( 2 ) == "\\n" )
+            if (msgid.startsWith("_n: ") || msgid.startsWith("_: ") ) { // KDE extentions
+                msgid = msgid.mid(msgid.find("\\n") + 2, msgid.length());
+            }
+
+            if (msgid.endsWith("%"))
+                msgstr = translation + msgid + " " + translation;
+            else
+                msgstr = translation + msgid + translation;
+
+            if ( msgid.endsWith("\\n" ) )
                 msgstr += "\n";
-            if ( msgid.left( 2 ) == "\\n" )
+            if ( msgid.startsWith( "\\n" ))
                 msgstr.prepend( "\n" );
 
 	    if ( msgid_plural.isEmpty() ) {
-        	outputMsg("msgstr", msgstr);
+        	outputMsg("msgstr", escapePO( msgstr) );
 	    }
 	    else
 	    {
-		outputMsg("msgstr[0]", msgstr);
+		outputMsg("msgstr[0]", escapePO( msgstr) );
 	    }
             cout << "\n";
         }
