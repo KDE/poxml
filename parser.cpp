@@ -24,7 +24,7 @@ static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
-    cerr << "fatalError" << e.message() << " " << e.lineNumber() << " " << e.columnNumber() << endl;
+    cerr << "fatalError" << e.message().latin1() << " " << e.lineNumber() << " " << e.columnNumber() << endl;
     return false;
 }
 
@@ -524,13 +524,13 @@ void outputMsg(const char *prefix, const QString &message)
         if (line.isEmpty())
             cout << prefix << " \"\"\n";
         else
-            cout << prefix << " \"" << escape(line) << "\"\n";
+            cout << prefix << " \"" << escape(line).utf8().data() << "\"\n";
     } else {
         cout << prefix << " \"\"\n";
         for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++) {
             line = *it;
             if (!line.isEmpty()) {
-                cout << "      \"" << escape(line);
+                cout << "      \"" << escape(line).utf8().data();
                 if (it == list.fromLast())
                     cout << "\"\n";
                 else
@@ -589,7 +589,7 @@ MsgList parseXML(const char *filename)
             endindex++;
         }
         endindex++;
-        contents.replace(index, endindex - index, replacement);
+        contents.replace(index, endindex - index, replacement.latin1());
     }
 
     QTextStream ts(contents, IO_ReadOnly);
