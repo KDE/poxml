@@ -1,4 +1,4 @@
-// #define POXML_DEBUG
+ // #define POXML_DEBUG
 
 #include "parser.h"
 #include <stdlib.h>
@@ -158,11 +158,9 @@ int main( int argc, char **argv )
         StructureParser::descape(xml);
 
         QString descaped = StructureParser::descapeLiterals((*it).msgid);
-        if (!translations.contains(descaped)) {
-            qDebug("translation not there, descaped='%s'", descaped.latin1());
-            abort();
-        }
-        descaped = translations[descaped];
+        if (translations.contains(descaped))
+            descaped = translations[descaped];
+
 #ifdef POXML_DEBUG
         // assert(!descaped.isEmpty());
 #endif
