@@ -157,7 +157,7 @@ int main( int argc, char **argv )
         xml.replace(QRegExp("\\s*<!--.*-->\\s*"), " ");
 
 #ifndef NDEBUG
-        qDebug("english %s %s %d %d %d %d", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end);
+        qDebug("english %s %s %d %d %d %d %s", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end, xml.mid((*it).lines.first().offset, 15).latin1());
 #endif
         if ((*it).end) {
             if (!(*it).lines.first().offset && end_pos != old_pos) {

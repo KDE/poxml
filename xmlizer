@@ -22,6 +22,8 @@ text = re.sub("<!DOCTYPE\s*book\s*PUBLIC\s*\"-//KDE//DTD DocBook V3.1-Based Vari
 			  "<?xml version='1.0' ?><!DOCTYPE book PUBLIC \"-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.0//EN\" \"dtd/kdex.dtd\"",
 			  text)
 text = re.sub("<!ENTITY([^>-]*)--", r"<!ENTITY\1> <!--", text)
+
+# first normalize it - before we remove it
 text = re.sub("<!ENTITY\s*%\s*ents\s*PUBLIC\s*\"-//KDE//ENTITIES Documentation V2.0//EN\"",
 			  "<!ENTITY % ents PUBLIC \"-//KDE//ENTITIES Documentation V2.0//EN\" \"entities/kde-prologue.entities\"", text)
 text = re.sub("<!ENTITY\s*%\s*ents\s*PUBLIC\s*\"-//KDE//ENTITIES Documentation V1.0//EN\"",
@@ -29,6 +31,10 @@ text = re.sub("<!ENTITY\s*%\s*ents\s*PUBLIC\s*\"-//KDE//ENTITIES Documentation V
 
 text = re.sub("<!ENTITY\s*%\s*ents\s*PUBLIC\s*\"-//KDE//ENTITIES Application-Variable Entities V.\\.0//EN\"",
 			  "<!ENTITY % ents PUBLIC \"-//KDE//ENTITIES Application-Variable Entities V2.0//EN\" \"entities/kde-prologue.entities\"", text)
+
+# remove it
+text = re.sub("<!ENTITY % ents PUBLIC \"-//KDE//ENTITIES Documentation V2.0//EN\" \"entities/kde-prologue.entities\"[^>]*>", "", text)
+text = re.sub("%ents;", "", text)
 
 text = re.sub("<!\[ %addindex; \[([^\]]*)\]\]>", r"<!-- should be removed ![ %addindex; [\1]] -->", text)
 

@@ -17,7 +17,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "step", "holder", "listitem", "important",
                                     "author", "itemizedlist", "orderedlist",
 				    "caption", "textobject", "mediaobject",
-				    "tip", "glossterm", "glossdef",
+				    "tip", "glossterm", "glossdef", "inlinemediaobject",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -489,7 +489,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                  it != messages.end(); it++)
             {
 #ifndef NDEBUG
-                qDebug("parser %s %d %s", (*it).msgid.latin1(), (*it).lines.first().offset, m.msgid.mid((*it).lines.first().offset, 15).latin1());
+                qDebug("parser %s %d %s", (*it).msgid.latin1(), (*it).lines.first().offset, message.mid((*it).lines.first().offset, 15).latin1());
 #endif
                 if (!(*it).msgid.isEmpty())
                     list.append(*it);

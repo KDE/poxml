@@ -51,10 +51,6 @@ if n:
 	sys.stderr.write("fixed %d pending ends\n" % n)
 
 text = re.sub('´', '\'', text)
-text = re.sub('ö', '&ouml;', text)
-text = re.sub('ü', '&uuml;', text)
-text = re.sub('ä', '&auml;', text)
-text = re.sub('ß', '&szlig;', text)
 
 text = re.sub("<graphic(\s[^>]*)>\s*</graphic>",
 			  "<mediaobject>\n"
