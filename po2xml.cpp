@@ -85,7 +85,7 @@ int main( int argc, char **argv )
     xml_text.replace(QRegExp("&gt;"), "!gt-internal!");
     xml_text.replace(QRegExp("&quot;"), "!quot-internal!");
 
-    StructureParser::explodeNonSingleTags(xml_text);
+    StructureParser::cleanupTags(xml_text);
 
     QValueList<int> line_offsets;
     line_offsets.append(0);

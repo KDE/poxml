@@ -587,19 +587,43 @@ bool StructureParser::comment ( const QString &c )
     return true;
 }
 
-void StructureParser::explodeNonSingleTags( QString &contents )
+void StructureParser::cleanupTags( QString &contents )
 {
-    QRegExp singleent("<(\\w*)\\s([^><]*)/>");
+    // qDebug("xml %s", contents.latin1());
 
+    QRegExp unclosed("</(\\w*)\\s\\s*>");
     int index = -1;
     while (true) {
-        index = singleent.search(contents, index + 1);
+        index = unclosed.search(contents, index + 1);
         if (index < 0)
             break;
-        // qDebug("SINGLE %s - %s", singleent.cap(1).latin1(), singleent.cap(2).latin1());
-        QString tag = singleent.cap(1);
+        QString tag = unclosed.cap(1);
+        contents.replace(index, unclosed.matchedLength(), QString("</%1>").arg(tag));
+    }
+
+    QRegExp start("<((\\s*[^<>\\s])*)\\s\\s*>");
+    start.setMinimal(true);
+
+    index = -1;
+    while (true) {
+        index = start.search(contents, index + 1);
+        if (index < 0)
+            break;
+        QString tag = start.cap(1);
+        // qDebug("UNCLO %s %d -%s-", start.cap(0).latin1(), index, tag.latin1());
+        contents.replace(index, start.matchedLength(), QString("<%1>").arg(tag));
+    }
+
+    QRegExp singletag("<(\\w*)\\s([^><]*)/>");
+
+    index = -1;
+    while (true) {
+        index = singletag.search(contents, index + 1);
+        if (index < 0)
+            break;
+        QString tag = singletag.cap(1);
         if (!StructureParser::isSingleTag(tag)) {
-            contents.replace(index, singleent.matchedLength(), QString("<%1 %2></%3>").arg(tag).arg(singleent.cap(2)).arg(tag));
+            contents.replace(index, singletag.matchedLength(), QString("<%1 %2></%3>").arg(tag).arg(singletag.cap(2)).arg(tag));
         }
     }
 }
@@ -729,7 +753,7 @@ MsgList parseXML(const char *filename)
         contents.replace(index, endindex - index, replacement);
     }
 
-    StructureParser::explodeNonSingleTags(contents);
+    StructureParser::cleanupTags(contents);
 
     QTextStream ts(contents.utf8(), IO_ReadOnly);
     QXmlInputSource source( ts );
