@@ -205,6 +205,39 @@ int main( int argc, char **argv )
 
     ts << xml_text.mid(old_pos);
 
+    index = 0;
+
+    if (!translations["ROLES_OF_TRANSLATORS"].isEmpty()) {
+        if (output.find("<!-- TRANS:ROLES_OF_TRANSLATORS") == -1)
+            qWarning("%s: missing ROLES_OF_TRANSLATORS, but having translation", argv[1]);
+    }
+
+    if (!translations["CREDIT_FOR_TRANSLATORS"].isEmpty()) {
+        if (output.find("<!-- TRANS:CREDIT_FOR_TRANSLATORS") == -1)
+            qWarning("%s: missing CREDIT_FOR_TRANSLATORS, but having translation", argv[1]);
+    }
+
+    while (true) {
+        index = output.find("<!-- TRANS:", index);
+        if (index == -1)
+            break;
+        int endindex = index + 11;
+        while (output.at(endindex) != '>')
+            endindex++;
+        assert(output.at(endindex-1) == '-');
+        assert(output.at(endindex-2) == '-');
+        QString totrans = output.mid(index + 11,
+                                     (endindex - 2) - (index + 11)).
+                          stripWhiteSpace();
+        QString trans = translations[totrans];
+        if (trans.isEmpty()) {
+            qWarning("no translation for %s found",
+                     totrans.local8Bit().data());
+        } else
+            output.replace(index, endindex - index + 1, trans);
+        index = endindex;
+    }
+
     cout << output.utf8().data();
     return 0;
 }

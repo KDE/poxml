@@ -1,6 +1,6 @@
 <?xml version="1.0" ?><!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
 <!ENTITY kappname "&kabalone;">
-<!ENTITY % English "INCLUDE">
+<!ENTITY % Danish "INCLUDE">
 <!ENTITY % addindex "IGNORE">
   
   
@@ -22,6 +22,8 @@
 </affiliation>
 <contrib>Tester</contrib>
 </othercredit>
+
+Dansk oversættelse ved
 
 </authorgroup>
 
@@ -199,6 +201,8 @@
 <para>Oprindelig dokumentation ved Robert Williams <email>rwilliams@kde.org</email> og Josef Weidendorfer</para>
 
 <para>Dokumentation opdateret for &kde; 2.0 ved Philip Rodrigues <email>philip.rodrigues@libertysurf.co.uk</email></para>
+
+Dansk oversættelse ved Erik Kjær Pedersen
 
 &underFDL;
 &underGPL;

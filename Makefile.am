@@ -1,7 +1,7 @@
 
 EXTRA_PROGRAMS = checkXML
 
-bin_PROGRAMS = split2po $(LIBXML_PROGRAMS) xml2pot po2xml
+bin_PROGRAMS = split2po $(LIBXML_PROGS) xml2pot po2xml
 bin_SCRIPTS = fixsgml
 AM_CPPFLAGS = -DNDEBUG
 

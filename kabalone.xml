@@ -32,6 +32,8 @@
 <contrib>Reviewer</contrib>
 </othercredit>
 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
 </authorgroup>
 
 <date>20/01/2001</date>
@@ -669,6 +671,8 @@ processes.</para>
 <email>rwilliams@kde.org</email> and Josef Weidendorfer</para>
 
 <para>Documentation updated for &kde; 2.0 by Philip Rodrigues <email>philip.rodrigues@libertysurf.co.uk</email></para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
 &underFDL;
 &underGPL;

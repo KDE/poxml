@@ -40,7 +40,7 @@
 <affiliation><address><email>vampyr@atconnex.net</email></address></affiliation>
 </othercredit>
 
-<!-- ROLES_OF_TRANSLATORS -->
+<othercredit role="translator"><firstname>Matthias</firstname><surname>Schulz</surname><affiliation><address><email>matthschulz@linuxfreemail.com</email></address></affiliation><contrib>&Uuml;bersetzer</contrib></othercredit>
 
 </authorgroup>
 
@@ -242,7 +242,7 @@
 <para>Diese Dokumentation wurde von Thad McGinnis <email>ctmcginnis@compuserve.com</email></para>  
 <itemizedlist> <listitem><para>Dieser Version des &kwrite;-Handbuchs liegt das Original von Cristian Tibirna <email>tibirna@kde.org</email> zugrunde.</para></listitem></itemizedlist>  
 <para>In das Docbook-Format &uuml;berf&uuml;hrt und Korrektur gelesen wurde dieses Handbuch von Lauri Watts <email>vampyr@atconnex.net</email></para>  
-<!-- CREDITS_FOR_TRANSLATORS -->
+<para>&Uuml;bersetzungen von:</para><itemizedlist><listitem><para>Thomas Diehl <email>thd@kde.org</email>, GUI-&Uuml;bersetzung</para></listitem><listitem><para>Matthias Schulz<email>matthschulz@linuxfreemail.com</email>, &Uuml;bersetzung der Dokumentation</para></listitem></itemizedlist>
  
 &underFDL;
 &underGPL;

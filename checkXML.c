@@ -498,6 +498,7 @@ void parseAndPrintFile(char *filename) {
     FILE *f;
     char cmd_buffer[300];
 
+#if 0
     if (!push) {
 	/*
 	 * Empty callbacks for checking
@@ -530,6 +531,8 @@ void parseAndPrintFile(char *filename) {
     } else {
 	fprintf(stderr, "Cannot read file %s\n", filename);
     }
+#endif
+
 /*	
  * Debug callback
  */
@@ -541,27 +544,27 @@ void parseAndPrintFile(char *filename) {
     } else
         f = popen(cmd_buffer, "r");
     
-if (f != NULL) {
-	    int res;
-	    char chars[10];
-	    xmlParserCtxtPtr ctxt;
-
-	    res = fread(chars, 1, 4, f);
-	    if (res > 0) {
-		ctxt = xmlCreatePushParserCtxt(debugSAXHandler, NULL,
-			    chars, res, filename);
-		while ((res = fread(chars, 1, 3, f)) > 0) {
-		    xmlParseChunk(ctxt, chars, res, 0);
-		}
-		res = xmlParseChunk(ctxt, chars, 0, 1);
-		xmlFreeParserCtxt(ctxt);
+    if (f != NULL) {
+	int res;
+	char chars[10];
+	xmlParserCtxtPtr ctxt;
+	
+	res = fread(chars, 1, 4, f);
+	if (res > 0) {
+	    ctxt = xmlCreatePushParserCtxt(debugSAXHandler, NULL,
+					   chars, res, filename);
+	    while ((res = fread(chars, 1, 3, f)) > 0) {
+		xmlParseChunk(ctxt, chars, res, 0);
 	    }
-            if (push)
-                pclose(f);
-            else
-                fclose(f);
-
+	    res = xmlParseChunk(ctxt, chars, 0, 1);
+	    xmlFreeParserCtxt(ctxt);
 	}
+	if (push)
+	    pclose(f);
+	else
+	    fclose(f);
+	
+    }
 }
 
 
