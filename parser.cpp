@@ -36,7 +36,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
 				    "cmdsynopsis", "funcsynopsis", "funcsynopsisinfo" ,
 				    "epigraph", "attribution", "glossary", "chapterinfo",
 				    "glossdiv", "blockingquote", "simplesect", "section",
-				    "qandadiv", "refsect1", "refmeta", "formalpara", 
+				    "qandadiv", "refsect1", "refmeta", "formalpara",
 				    "refentry", "refnamediv", 0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -694,7 +694,9 @@ QString StructureParser::escapeLiterals( const QString &_contents) {
     contents.replace(QRegExp("\n"), "&POXML_LINEFEED;");
     contents.replace(QRegExp("<"), "&POXML_LT;");
     contents.replace(QRegExp(">"), "&POXML_GT;");
+    contents.replace(QRegExp("\t"), "        ");
     contents.replace(QRegExp(" "), "&POXML_SPACE;");
+
     return contents;
 }
 
