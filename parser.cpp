@@ -30,7 +30,12 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
 				    "table", "part", "xi:fallback", "primary",
                                     "secondary", "chapter", "sect1", "sect2",
                                     "figure", "abstract", "sect3", "sect", "sect4",
-                                    "warning", "preface", 0};
+                                    "warning", "preface", "authorgroup", "keywordset", 
+				    "informaltable", "qandaentry", "question", "answer",
+				    "othercredit", "affiliation", "qandaset", 
+				    "cmdsynopsis", "funcsynopsis", "funcsynopsisinfo" ,
+				    "epigraph", "attribution", "glossary", "chapterinfo",
+				    "glossdiv", 0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
