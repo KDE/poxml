@@ -32,7 +32,7 @@ msgstr "Dies ist Schwachsinn"
 #: lauri.xml:20
 #, no-c-format
 msgid "<keyword>KDE</keyword>"
-msgstr "<keyword>KDE</keyword>"
+msgstr "<keyword>KDE.de</keyword>"
 
 #: lauri.xml:25
 #, no-c-format
@@ -66,6 +66,11 @@ msgstr ""
 #, no-c-format
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
+
+#: lauri.xml:41
+#, no-c-format
+msgid "<primary>kde</primary>"
+msgstr "<primary>kde.de</primary>"
 
 #: lauri.xml:42
 #, no-c-format

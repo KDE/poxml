@@ -38,7 +38,7 @@
   </keycap>
   <keycap>
     help
-  </keycap>
+  </keycap><indexterm><primary>kde</primary></indexterm>
   <tip><para>an archive of the
 developer's mailing list is at <ulink
 url="http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2">lists.kde.org</ulink>.
