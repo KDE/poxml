@@ -55,8 +55,8 @@ bool StructureParser::fatalError ( const QXmlParseException &e )
 
 bool StructureParser::startDocument()
 {
-    infos_reg = QString("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
-    do_not_split_reg = QString("\\s*condition=\"do-not-split\"");
+    infos_reg = QRegExp("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
+    do_not_split_reg = QRegExp("\\s*condition=\"do-not-split\"");
     message = "";
     inside = 0;
     return true;
