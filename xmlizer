@@ -1,0 +1,50 @@
+#! /usr/bin/python
+
+import re, sys, os, string
+
+replace_text = ""
+
+def addtag(matchobj):
+	str = matchobj.group(1)
+	if str[-2:] == '/>':
+		return str
+	return str[:-1] + '/>'
+
+def remove(matchobj):
+	str = replace_text
+	for i in range(0, string.count(matchobj.group(1), '\n')):
+		str = str + '\n'
+	return str
+
+docbookfile = open(sys.argv[1])
+text = docbookfile.read()
+
+# comments cause problems with some regexps and don't bring us anything
+# at this stage of development
+text = re.sub("(<\!--[^<>]*(?:<[^>]*>[^<>]*)*>)", remove, text)
+
+# this all we can't handle in XML - beside the comment
+text = re.sub("(<\!ENTITY[^<>]*(?:<[^>]*>[^<>]*)*>)", remove, text)
+text = re.sub("(<\!\[[^<>]*(?:<[^>]*>[^<>]*)*>)", remove, text)
+
+pat = re.compile("(<\!DOCTYPE[^<>]*(?:<[^>]*>[^<>]*)*>)", re.DOTALL)
+replace_text = "<?xml version='1.0' ?>"
+text = re.sub(pat, remove, text)
+replace_text = ""
+
+pat = re.compile("(<imagedata( [ ]?[^>]*)?>)", re.DOTALL)
+text = re.sub(pat, addtag, text)
+
+pat = re.compile("(<colspec( [^>]*)?>)", re.DOTALL)
+text = re.sub(pat, addtag, text)
+
+pat = re.compile("(<anchor( [^>]*)?>)", re.DOTALL)
+text = re.sub(pat, addtag, text)
+
+pat = re.compile("(<xref( [^>]*)?>)", re.DOTALL)
+text = re.sub(pat, addtag, text)
+
+pat = re.compile("(<area( [^>]*)?>)", re.DOTALL)
+text = re.sub(pat, addtag, text)
+
+print text
