@@ -2672,7 +2672,16 @@ msgstr ""
 #: index.docbook:0
 msgid "ROLES_OF_TRANSLATORS"
 msgstr ""
+"<othercredit "
+"role=\"translator\"><firstname>Matthias</firstname><surname>Schulz</surname><"
+"affiliation><address><email>matthschulz@linuxfreemail.com</email></address></"
+"affiliation><contrib>&Uuml;bersetzer</contrib></othercredit>"
 
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
 msgstr ""
+"<para>&Uuml;bersetzungen von:</para><itemizedlist><listitem><para>Thomas "
+"Diehl <email>thd@kde.org</email>, "
+"GUI-&Uuml;bersetzung</para></listitem><listitem><para>Matthias "
+"Schulz<email>matthschulz@linuxfreemail.com</email>, &Uuml;bersetzung der "
+"Dokumentation</para></listitem></itemizedlist>"
