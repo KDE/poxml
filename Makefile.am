@@ -32,6 +32,6 @@ $(srcdir)/docbook_kwrite.po: $(srcdir)/docbook_kwrite.pot
 	msgmerge $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.po 
 	msgfmt --statistics $(srcdir)/docbook_kwrite.po -o /dev/null
 
-update: po2xml $(srcdir)/docbook_kwrite.po
-	./po2xml $(srcdir)/kwrite.xml $(srcdir)/docbook_kwrite.po 
+$(srcdir)/kwrite_de.xml: po2xml $(srcdir)/docbook_kwrite.po
+	./po2xml $(srcdir)/kwrite.xml $(srcdir)/docbook_kwrite.po > $(srcdir)/kwrite_de.xml
 

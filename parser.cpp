@@ -108,6 +108,10 @@ QString StructureParser::formatMessage(QString message) const
         while (message.at(strindex) != ' ' && message.at(strindex) != '>') // simplifyWhiteSpace
             strindex++;
         if (message.mid(endindex + 2, strindex - (endindex + 2)) == starttag) {
+            if (message.find(QString::fromLatin1("</%1>").arg(starttag)) !=
+                endindex) {
+                break;
+            }
             // removing start/end tags
             message = message.left(endindex);
             strindex = 0;

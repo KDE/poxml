@@ -1,19 +1,18 @@
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V3.1-Based Variant V1.0//EN" [
- <!ENTITY kappname "&kwrite;" >
- <!ENTITY % addindex "IGNORE">
- <!ENTITY % German "INCLUDE">
- <!ENTITY % ents PUBLIC "-//KDE//ENTITIES Documentation V1.0//EN">
- %ents;
-]>
+<?xml version='1.0' ?>
 
-<book lang="&language;">
 
-<bookinfo>
-<title>Das &kwrite;-Handbuch</title>
 
-<authorgroup>
-<author>
-<firstname>Thad</firstname><surname>McGinnis</surname>
+
+
+  
+  
+<book lang="&language;">  
+  
+<bookinfo>  
+<title>Das &kwrite;-Handbuch</title>  
+<authorgroup>  
+<author>  
+<firstname>Thad</firstname><surname>McGinnis</surname>  
 <affiliation><address><email>ctmcginnis@compuserve.com</email></address>
 </affiliation>
 </author>
@@ -24,13 +23,11 @@
 <affiliation><address><email>digisnap@cs.tu-berlin.de</email></address>
 </affiliation>
 </othercredit>
-
 <othercredit role="developer">
 <firstname>Glen</firstname><surname>Parker</surname>
 <contrib>Weitere Entwicklung</contrib>
 <affiliation><address><email>glenebob@nwlink.com</email></address></affiliation>
 </othercredit>
-
 <othercredit role="developer">
 <firstname>Michael</firstname><surname>Koch</surname>
 <contrib>Weitere Entwicklung</contrib>
@@ -49,19 +46,24 @@
 <affiliation><address><email>vampyr@atconnex.net</email></address></affiliation>
 </othercredit>
 
+
+
 </authorgroup>
 
+
 <copyright>
-<year>2000</year>
+<year>2000</year><year>2001</year>
 <holder>Thad McGinnis</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>14/12/2000</date>
+<date>15/02/2001</date>
 <releaseinfo>2.00.00</releaseinfo>
+
 <abstract>
 <para>Dieses Handbuch beschreibt KWrite Version 2.0</para>
-<para>&kwrite; ist ein Texteditor f&uuml;r KDE 2.0</para> </abstract>
+<para>&kwrite; ist ein Texteditor f&uuml;r KDE 2.0</para>
+</abstract>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -75,65 +77,47 @@
 <chapter id="introduction">
 <title>Einleitung</title>
 
-<para>&kwrite; ist mehr als ein Texteditor f&uuml;r die KDE Oberfl&auml;che.
-Es ist als Programmiereditor gedacht und k&ouml;nnte mindestens als
-teilweise Alternative zu leistungsf&auml;higeren Editoren betrachtet werden.
-Es kann am besten in Verbindung mit &konqueror; f&uuml;r
-das Darstellen von Quelltext verschiedener Sprachen benutzt werden. &kwrite; ist auch sehr gut
-als einfacher Texteditor zu verwenden. Eine der Haupteigenschaften von &kwrite; ist
-die farbige Darstellung von Quelltext, angepasst f&uuml;r viele verschiedene
-Programmiersprachen wie: C/C++, &Java;, Python, Perl,
-Bash, Modula 2, <acronym>HTML</acronym> und Ada.</para>
+<para>&kwrite; ist mehr als ein Texteditor f&uuml;r die KDE Oberfl&auml;che. Es ist als Programmiereditor gedacht und k&ouml;nnte mindestens als teilweise Alternative zu leistungsf&auml;higeren Editoren betrachtet werden. Es kann am besten in Verbindung mit &konqueror; f&uuml;r das Darstellen von Quelltext verschiedener Sprachen benutzt werden. &kwrite; ist auch sehr gut als einfacher Texteditor zu verwenden. Eine der Haupteigenschaften von &kwrite; ist die farbige Darstellung von Quelltext, angepasst f&uuml;r viele verschiedene Programmiersprachen wie: C/C++, &Java;, Python, Perl, Bash, Modula 2, <acronym>HTML</acronym> und Ada.</para>
 
 </chapter>
 
-<chapter id="on-screen-fundamentals">
-<title>Grunds&auml;tzliches</title>
-
-<para>&kwrite; ist sehr einfach zu nutzen. Jeder, der schon einen Texteditor
-benutzt hat, sollte keine Probleme haben.</para>
-
-<sect1 id="drag-and-drop">
-<title>Drag and Drop (Ziehen und Ablegen)</title>
-
-<para>&kwrite; nutzt das Drag-and-Drop-Protokoll von KDE. Dateien k&ouml;nnen
-gezogen und auf &kwrite; abgelegt werden; von der Arbeitsoberfl&auml;che,
-&konqueror;, oder einer FTP-Seite, die in
-einem &konqueror;-Fenster ge&ouml;ffnet ist.</para>
-</sect1>
-
-<sect1 id="command-line-options">
-<title>Befehlszeilenargumente</title>
-
-<para>Auch wenn &kwrite; meistens vom K-Men&uuml; oder &uuml;ber ein Arbeitsfl&auml;chensymbol
-ge&ouml;ffnet wird, kann es von einer Befehlszeile in einem Terminalfenster
-gestartet werden. Es gibt hierbei einige n&uuml;tzliche Optionen.</para>
-
-<sect2 id="specify-a-file">
-<title>Angabe eines Dateinamens</title>
-
-<para>Der Benutzer kann Pfad und Dateinamen einer Datei angeben, die dann beim
-Starten ge&ouml;ffnet (oder erzeugt) wird. Hierzu ein Beispiel:</para>
+<chapter id="on-screen-fundamentals">  
+<title>Grunds&auml;tzliches</title>  
+  
+<para>&kwrite; ist sehr einfach zu nutzen. Jeder, der schon einen Texteditor benutzt hat, sollte keine Probleme haben.</para>
+  
+<sect1 id="drag-and-drop">  
+<title>Drag and Drop (Ziehen und Ablegen)</title>  
+  
+<para>&kwrite; nutzt das Drag-and-Drop-Protokoll von KDE. Dateien k&ouml;nnen gezogen und auf &kwrite; abgelegt werden; von der Arbeitsoberfl&auml;che, &konqueror;, oder einer FTP-Seite, die in einem &konqueror;-Fenster ge&ouml;ffnet ist.</para>  
+</sect1>  
+  
+<sect1 id="command-line-options">  
+<title>Befehlszeilenargumente</title>  
+  
+<para>Auch wenn &kwrite; meistens vom K-Men&uuml; oder &uuml;ber ein Arbeitsfl&auml;chensymbol ge&ouml;ffnet wird, kann es von einer Befehlszeile in einem Terminalfenster gestartet werden. Es gibt hierbei einige n&uuml;tzliche Optionen.</para>  
+  
+<sect2 id="specify-a-file">  
+<title>Angabe eines Dateinamens</title>  
+  
+<para>Der Benutzer kann Pfad und Dateinamen einer Datei angeben, die dann beim Starten ge&ouml;ffnet (oder erzeugt) wird. Hierzu ein Beispiel:</para>
 
 <informalexample><screen>
-<prompt>%</prompt> <userinput><command>kwrite</command> <option>
-<replaceable>/home/myhome/docs/myfile.txt</replaceable></option>
-</userinput> </screen> </informalexample>
+<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></userinput>
+</screen>
+</informalexample>
 </sect2>
 <sect2 id="editing-files-on-the-internet">
 <title>Angabe eines Dateinamens im Internet</title>
 
-<para>Die oben genannte Methode kann auch benutzt werden, um Dateien im Internet zu &ouml;ffnen
-(wenn der Nutzer eine aktive Verbindung hat). Hierzu wieder ein Beispiel:</para>
+<para>Die oben genannte Methode kann auch benutzt werden, um Dateien im Internet zu &ouml;ffnen (wenn der Nutzer eine aktive Verbindung hat). Hierzu wieder ein Beispiel:</para>
 
 <informalexample><screen>
-<prompt>%</prompt> <userinput><command>kwrite</command> <option>
-<replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></option></userinput>
+<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></option></userinput>
 </screen>
 </informalexample>
 
 </sect2>
-
 
 <sect2 id="other-command-line-options">
 <title>Andere Befehlszeilenargumente</title>
@@ -141,137 +125,129 @@ Starten ge&ouml;ffnet (oder erzeugt) wird. Hierzu ein Beispiel:</para>
 <para>Die folgenden Hilfe-M&ouml;glichkeiten sind &uuml;ber die Befehlszeile verf&uuml;gbar</para>
 
 <variablelist>
-<varlistentry>
+<varlistentry>  
 <term><userinput><command>kwrite</command> <option>--help</option></userinput></term>  
-<listitem><para>Zeigt die grunds&auml;tzlichsten M&ouml;glichkeiten f&uuml;r
-die Befehlszeile an.</para></listitem>
-</varlistentry>
-<varlistentry>
+<listitem><para>Zeigt die grunds&auml;tzlichsten M&ouml;glichkeiten f&uuml;r die Befehlszeile an.</para></listitem>  
+</varlistentry>  
+<varlistentry>  
 <term><userinput><command>kwrite</command> <option>--help-qt</option></userinput></term>
-<listitem><para>Zeigt die M&ouml;glichkeiten f&uuml;r die Einstellung der
-Zusammenarbeit von &kwrite; mit Qt an.</para></listitem>
-</varlistentry>
-<varlistentry>
+<listitem><para>Zeigt die M&ouml;glichkeiten f&uuml;r die Einstellung der Zusammenarbeit von &kwrite; mit Qt an.</para></listitem>  
+</varlistentry>  
+<varlistentry>  
 <term><userinput><command>kwrite</command> <option>--help-kde</option></userinput></term>
-<listitem><para>Zeigt die M&ouml;glichkeiten f&uuml;r die Einstellung der
-Zusammenarbeit von &kwrite; mit KDE an.</para></listitem>
-</varlistentry>
-<varlistentry>
+<listitem><para>Zeigt die M&ouml;glichkeiten f&uuml;r die Einstellung der Zusammenarbeit von &kwrite; mit KDE an.</para></listitem>  
+</varlistentry>  
+<varlistentry>  
 <term><userinput><command>kwrite</command> <option>--help-all</option></userinput></term>
-<listitem><para>Zeigt alle M&ouml;glichkeiten der Befehlszeile an.</para></listitem>
-</varlistentry>
-<varlistentry>
+<listitem><para>Zeigt alle M&ouml;glichkeiten der Befehlszeile an.</para></listitem>  
+</varlistentry>  
+<varlistentry>  
 <term><userinput><command>kwrite</command> <option>--author</option></userinput></term>
-<listitem><para>Zeigt die Autoren von &kwrite; im Terminalfenster an.</para></listitem>
-</varlistentry>
-<varlistentry>
+<listitem><para>Zeigt die Autoren von &kwrite; im Terminalfenster an.</para></listitem>  
+</varlistentry>  
+<varlistentry>  
 <term><userinput><command>kwrite</command> <option>--version</option></userinput></term>
-<listitem><para>Zeigt Versionsinformation f&uuml;r Qt, KDE und &kwrite; an. 
-Auch verf&uuml;gbar durch: 
-<userinput><command>kwrite</command> <option>-V</option></userinput> 
-</para></listitem> </varlistentry> </variablelist> </sect2>
-</sect1>
-
-<sect1 id="keybindings">
-<title>Tastenfunktionen</title>
-
-<para>Viele der Tastenfunktionen (Tastenk&uuml;rzel) sind einstellbar im
-<link linkend="settings">Einstellungen</link>-Men&uuml;.  In der Grundeinstellung
-hat &kwrite; die folgenden Tastenfunktionen.</para>
-
-<informaltable>
-<tgroup cols="2">
-<tbody>
-
-<row><entry><para><keycombo><keycap>Einf</keycap></keycombo></para></entry>
-<entry><para> Umschaltung zwischen Einf&uuml;ge- und &Uuml;beschreibemodus. Im Einf&uuml;gemodus
-werden alle Zeichen an der Cursorposition eingef&uuml;gt und alle Zeichen rechts vom Cursor nach
-rechts verschoben. Im &Uuml;berschreibemodus werden die Zeichen rechts vom Cursor sofort durch die
-neu geschriebenen Zeichen ersetzt.</para></entry>
+<listitem><para>Zeigt Versionsinformation f&uuml;r Qt, KDE und &kwrite; an. Auch verf&uuml;gbar durch: <userinput><command>kwrite</command> <option>-V</option></userinput></para></listitem>
+</varlistentry>  
+</variablelist>  
+</sect2>
+</sect1>  
+  
+<sect1 id="keybindings">  
+<title>Tastenfunktionen</title>  
+  
+<para>Viele der Tastenfunktionen (Tastenk&uuml;rzel) sind einstellbar im <link linkend="settings">Einstellungen</link>-Men&uuml;. In der Grundeinstellung hat &kwrite; die folgenden Tastenfunktionen.</para>  
+  
+<informaltable>  
+<tgroup cols="2">  
+<tbody>  
+  
+<row><entry><para><keycombo><keycap>Einf</keycap></keycombo></para></entry>  
+<entry><para> Umschaltung zwischen Einf&uuml;ge- und &Uuml;beschreibemodus. Im Einf&uuml;gemodus werden alle Zeichen an der Cursorposition eingef&uuml;gt und alle Zeichen rechts vom Cursor nach rechts verschoben. Im &Uuml;berschreibemodus werden die Zeichen rechts vom Cursor sofort durch die neu geschriebenen Zeichen ersetzt.</para></entry>
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Pfeil links</keycap></keycombo></para></entry>  
+<entry><para>Bewegt den Cursor ein Zeichen nach links </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Pfeil rechts</keycap></keycombo></para></entry>  
+<entry><para> Bewegt den Cursor ein Zeichen nach rechts </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Pfeil nach oben</keycap></keycombo></para></entry>  
+<entry><para> Bewegt den Cursor um eine Zeile nach oben </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Pfeil nach unten</keycap></keycombo></para></entry>  
+<entry><para> Bewegt den Cursor um eine Zeile nach unten </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Bild aufw&auml;rts</keycap></keycombo></para></entry>  
+<entry><para> Bewegt den Cursor um eine Seite nach oben </para></entry>  
 </row>
-<row>
-<entry><para><keycombo><keycap>Pfeil links</keycap></keycombo></para></entry>
-<entry><para>Bewegt den Cursor ein Zeichen nach links </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Pfeil rechts</keycap></keycombo></para></entry>
-<entry><para> Bewegt den Cursor ein Zeichen nach rechts </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Pfeil nach oben</keycap></keycombo></para></entry>
-<entry><para> Bewegt den Cursor um eine Zeile nach oben  </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Pfeil nach unten</keycap></keycombo></para></entry>
-<entry><para> Bewegt den Cursor um eine Zeile nach unten </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Bild aufw&auml;rts</keycap></keycombo></para></entry>
-<entry><para> Bewegt den Cursor um eine Seite nach oben  </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Bild abw&auml;rts</keycap></keycombo></para></entry>
-<entry><para> Bewegt den Cursor um eine Seite nach unten  </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>R&uuml;cktaste</keycap></keycombo></para></entry>
-<entry><para> L&ouml;scht das Zeichen links vom Cursor </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Pos1</keycap></keycombo></para></entry>
-<entry><para> Setzt den Cursor an den Zeilenanfang </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Ende</keycap></keycombo></para></entry>
-<entry><para> Setzt den Cursor an das Zeilenende </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Entf</keycap></keycombo></para></entry>
-<entry><para> L&ouml;scht das Zeichen rechts vom Cursor (oder den markierten Text)</para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Umschalt</keycap><keycap>Pfeil
-links</keycap></keycombo></para></entry> <entry><para> Markiert Text ein Zeichen
-nach links </para></entry> </row>
-<row>
-<entry><para><keycombo><keycap>Umschalt</keycap><keycap>Pfeil rechts</keycap></keycombo></para></entry>
-<entry><para> Markiert Text ein Zeichen nach rechts </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>F1</keycap></keycombo></para></entry>
-<entry><para> Hilfe</para></entry>
-</row>
-<row>
+<row>  
+<entry><para><keycombo><keycap>Bild abw&auml;rts</keycap></keycombo></para></entry>  
+<entry><para>Bewegt den Cursor um eine Seite nach unten </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>R&uuml;cktaste</keycap></keycombo></para></entry>  
+<entry><para> L&ouml;scht das Zeichen links vom Cursor </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Pos1</keycap></keycombo></para></entry>  
+<entry><para> Setzt den Cursor an den Zeilenanfang </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Ende</keycap></keycombo></para></entry>  
+<entry><para> Setzt den Cursor an das Zeilenende </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Entf</keycap></keycombo></para></entry>  
+<entry><para>L&ouml;scht das Zeichen rechts vom Cursor (oder den markierten Text)</para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Umschalt</keycap><keycap>Pfeil links</keycap></keycombo></para></entry>  
+<entry><para> Markiert Text ein Zeichen nach links </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Umschalt</keycap><keycap>Pfeil rechts</keycap></keycombo></para></entry>  
+<entry><para> Markiert Text ein Zeichen nach rechts </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>F1</keycap></keycombo></para></entry>  
+<entry><para> Hilfe</para></entry>  
+</row>  
+<row>  
 <entry><para><keycombo><keycap>Umschalt</keycap><keycap>F1</keycap></keycombo></para></entry>
-<entry><para><link linkend="whats-this">Was ist das?</link></para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>F</keycap></keycombo></para></entry>
-<entry><para><link linkend="find">Suchen...</link></para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>F3</keycap></keycombo></para></entry>
-<entry><para><link linkend="find-again">Weitersuchen</link></para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>C</keycap></keycombo></para></entry>
-<entry><para> Kopiert den markierten Text in die Zwischenablage. </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>M</keycap></keycombo></para></entry>
-<entry><para>Marker hinzuf&uuml;gen</para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>N</keycap></keycombo></para></entry>
-<entry><para> <link linkend="new">Neue</link> Datei</para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo></para></entry>
-<entry><para><link linkend="print">Drucken...</link> </para></entry>
-</row>
+<entry><para><link linkend="whats-this">Was ist das?</link></para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>F</keycap></keycombo></para></entry>  
+<entry><para><link linkend="find"> Suchen...</link></para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>F3</keycap></keycombo></para></entry>  
+<entry><para><link linkend="find-again"> Weitersuchen</link></para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>C</keycap></keycombo></para></entry>  
+<entry><para> Kopiert den markierten Text in die Zwischenablage. </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>M</keycap></keycombo></para></entry>  
+<entry><para>Marker hinzuf&uuml;gen</para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>N</keycap></keycombo></para></entry>  
+<entry><para> <link linkend="new">Neue</link> Datei</para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo></para></entry>  
+<entry><para><link linkend="print">Drucken...</link> </para></entry>  
+</row>  
 <row>
 <entry><para><keycombo><keycap>Strg</keycap><keycap>Q</keycap></keycombo></para></entry>
-<entry><para>Aktives Editorfenster schlie&szlig;en</para></entry>
+<entry><para>Aktives Editorfenster schlie&szlig;en </para></entry>
 </row>
 <row>
 <entry><para><keycombo><keycap>Strg</keycap><keycap>R</keycap></keycombo></para></entry>
@@ -279,556 +255,324 @@ nach links </para></entry> </row>
 </row>
 <row>
 <entry><para><keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo></para></entry>
-<entry><para>F&uuml;hrt den Befehl <link
-linkend="save"><guilabel>Sichern</guilabel></link> aus.</para></entry> 
+<entry><para>F&uuml;hrt den Befehl <link linkend="save"><guilabel>Sichern</guilabel></link> aus.</para></entry>
 </row>
 <row>
 <entry><para><keycombo><keycap>Strg</keycap><keycap>V</keycap></keycombo></para></entry>
-<entry><para>Inhalt der Zwischenablage einf&uuml;gen. </para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>X</keycap></keycombo></para></entry>
-<entry><para>Markierten Text l&ouml;schen und in die Zwischenablage kopieren</para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>Z</keycap></keycombo></para></entry>
-<entry><para><link linkend="undo">Letzten Schritt r&uuml;ckg&auml;ngig machen</link></para></entry>
-</row>
-<row>
-<entry><para><keycombo><keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap></keycombo></para></entry>
-<entry><para><link linkend="redo">Letzten Schritt wiederholen</link></para></entry>
-</row>
-</tbody>
-</tgroup>
-</informaltable>
-</sect1>
-</chapter>
+<entry><para> Inhalt der Zwischenablage einf&uuml;gen. </para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>X</keycap></keycombo></para></entry>  
+<entry><para>Markierten Text l&ouml;schen und in die Zwischenablage kopieren </para></entry>
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>Z</keycap></keycombo></para></entry>  
+<entry><para><link linkend="undo">Letzten Schritt r&uuml;ckg&auml;ngig machen</link></para></entry>  
+</row>  
+<row>  
+<entry><para><keycombo><keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap></keycombo></para></entry>  
+<entry><para><link linkend="redo">Letzten Schritt wiederholen</link></para></entry>  
+</row>  
+</tbody>  
+</tgroup>  
+</informaltable>  
+</sect1>  
+</chapter>  
+  
+<chapter id="the-menu-entries">  
+<title>Die Men&uuml;punkte</title>  
+  
+<sect1 id="file">  
+<title>Das <guimenu>Datei</guimenu>men&uuml;</title>  
+  
+<variablelist>  
+  
+<varlistentry>  
+<term><anchor id="new"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>N</keycap></keycombo></shortcut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu </guimenuitem></menuchoice></term>  
+<listitem><para>Erzeugt eine neue Datei. Wenn eine Datei mit ungesicherten &Auml;nderungen ge&ouml;ffnet ist, fragt das Programm, ob diese gespeichert werden soll.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="open"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>O</keycap></keycombo></shortcut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem> <accel>&Ouml;</accel>ffnen</guimenuitem></menuchoice></term>  
+<listitem><para>&Ouml;ffnen einer Datei. Es wird ein Dialogfenster ge&ouml;ffnet, das zum Navigieren im Dateisystem verwendet werden kann. Das Fenster arbeitet wie ein kleiner Dateimanager. Klicken auf Verzeichnisse im zentralen Fenster &ouml;ffnet das Verzeichnis und zeigt seinen Inhalt an. Es gibt au&szlig;erdem ein Eingabefeld, das zur direkten Eingabe von Dateinamen und Pfad benutzt werden kann. Sie k&ouml;nnen auch auf den Pfeil an der Seite klicken und dann aus den letzten bearbeiteten Dateien ausw&auml;hlen. Darunter ist ein Filter, der benutzt werden kann, um ausschlie&szlig;lich Dateien anzuzeigen, die den Filterregeln entsprechen. Zum Beispiel bewirkt die Filterregel '<literal role="extension">*.txt</literal>', dass nur Dateien mit der Endung .txt angezeigt werden. Unterhalb des Filters wird eine Statusleiste mit Information &uuml;ber die Anzahl der Dateien und Unterverzeichnisse im aktuellen Verzeichnis angezeigt.</para>
 
-<chapter id="the-menu-entries">
-<title>Die Men&uuml;punkte</title>
-
-<sect1 id="file">
-<title>Das <guimenu>Datei</guimenu>men&uuml;</title>
-
-<variablelist>
-
+<para>Auch hier gibt es die M&ouml;glichkeit, durch Klicken auf den Pfeil aus den zuletzt benutzten Filterregeln auszuw&auml;en. Die Werkzeugleiste - oben im Dialogfeld - hat Kn&ouml;pfe (nach rechts und nach links) f&uuml;r das Bl&auml;ttern durch vorher benutzte Verzeichnisse und ein Knopf (nach oben), um im Verzeichnisbaum eine Ebene h&ouml;her zu gehen. Der Knopf mit dem kleinen Haus bringt den Nutzer in sein pers&ouml;nliches Verzeichnis, w&auml;hrend die Fl&auml;che mit den zwei im Kreis zeigenden Pfeilen die Anzeige des aktuellen Verzeichnisses aktualisiert. Der Knopf mit der Fahne dient zum Setzen eines Lesezeichens oder zum Springen zu einem vorher gesetzten Lesezeichen. Es gibt au&szlig;erdem noch ein Knopf mit einem Schraubenschl&uuml;ssel zum &Auml;ndern einiger Einstellungen und ein Feld mit einer Liste h&auml;ufig benutzter Verzeichnisse.</para> </listitem>
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="open-recent"/><menuchoice> <guimenu><accel>D</accel>atei</guimenu><guimenuitem>Zu<accel>l</accel>etzt ge&ouml;ffnete Dateien</guimenuitem></menuchoice></term> 
+<listitem><para>Ist eine Abk&uuml;rzung f&uuml;r das &Ouml;ffnen der letzten bearbeiteten Dateien. Dieser Men&uuml;punkt &ouml;ffnet eine Liste mit einigen zuletzt bearbeiteten Dateien. Klicken auf eine der Dateien &ouml;ffnet diese in &kwrite; - wenn diese Datei noch am selben Ort gespeichert ist.</para></listitem>
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="save"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>S</keycap></keycombo></shortcut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem>S<accel>p</accel>eichern </guimenuitem></menuchoice></term>  
+<listitem><para>Speichert die aktuelle Datei. Wenn diese noch nicht gesichert war, wird der Speichern unter...-Dialog ge&ouml;ffnet, ansonsten wird ohne Nachfrage &uuml;berschrieben.</para>
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="save-as"/><menuchoice> <guimenu><accel>D</accel>atei</guimenu> <guimenuitem>Speichern <accel>u</accel>nter...</guimenuitem></menuchoice></term>  
+<listitem><para>Speichert die Datei unter einem neuen Dateinamen. Die Auswahl des Dateinamens erfolgt durch einen Dialog wie bei <link linkend="open">&Ouml;ffnen</link> beschrieben.</para> </listitem>
+</varlistentry>
+  
+<varlistentry>  
+<term><anchor id="print"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo></shortcut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>D</accel>rucken... </guimenuitem></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet ein einfaches Dialogfenster, in dem der Nutzer einstellen kann, was, wo und wie zu drucken ist.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="new-window"/><menuchoice> <guimenu><accel>D</accel>atei</guimenu> <guimenuitem>Neues <accel>F</accel>enster</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet ein neues leeres Fenster, ein neues &kwrite;. Das erlaubt dem Nutzer, an mehreren Dateien gleichzeitig zu arbeiten.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="new-view"/><menuchoice> <guimenu><accel>D</accel>atei</guimenu> <guimenuitem>Neue <accel>A</accel>nsicht</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet ein neues Fenster (ein neues &kwrite;) mit derselben Datei, die auch im aktuellen Fenster ge&ouml;ffnet ist. Die Datei im neuen Fenster ist exakt auf demselben Stand wie die Datei im alten Fenster, d.h. alle &Auml;nderungen, die seit &Ouml;ffnen der Datei im alten Fenster vorgenommen wurden, sind auch im neuen Fenster vorhanden.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="close"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>Q</keycap></keycombo></shortcut> <guimenu><accel>D</accel>atei</guimenu> <guimenuitem>B<accel>e</accel>enden</guimenuitem></menuchoice></term>
+<listitem><para>Schlie&szlig;t &kwrite;. Wenn Sie jedoch mehrere &kwrite;'s gestartet haben, z.B. durch <guimenuitem>Neue Ansicht</guimenuitem> oder <guimenuitem>Neues Fenster</guimenuitem> werden die anderen &kwrite;'s nicht geschlossen.</para></listitem>
+</varlistentry>  
+  
+</variablelist>  
+  
+</sect1>  
+  
+<sect1 id="edit">  
+<title>Das <guimenu>Bearbeiten</guimenu>men&uuml;</title>  
+  
+<variablelist>  
 <varlistentry>
-<term><anchor id="new"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>N</keycap></keycombo></shortcut>
-<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu
-</guimenuitem></menuchoice></term>
-<listitem><para>Erzeugt eine neue Datei. Wenn eine Datei mit ungesicherten
-&Auml;nderungen ge&ouml;ffnet ist, fragt das Programm, ob diese gespeichert werden
-soll.</para>
-</listitem>
+<term><anchor id="undo"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>Z</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>R</accel>&uuml;ckg&auml;ngig</guimenuitem></menuchoice></term>
+<listitem>  
+<para>Macht die letzte Ver&auml;nderung im aktuellen Editorfenster r&uuml;ckg&auml;ngig. Zum besseren Verst&auml;ndnis bitte im Teil <link linkend="group-undos">R&uuml;ckg&auml;ngig gruppieren</link> dieses Hilfetextes nachlesen.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="redo"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem>Wieder<accel>h</accel>erstellen</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Macht das letzte R&uuml;ckg&auml;ngig (wenn vorhanden) r&uuml;ckg&auml;ngig.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="undohistory"/><menuchoice> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>V</accel>erlauf R&uuml;ckg&auml;ngig/Wiederherstellen</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet ein Dialogfenster, das links die letzten Aktionen und rechts r&uuml;ckg&auml;ngig gemachte Aktionen anzeigt. Auf der rechten Seite gibt es drei Kn&ouml;pfe: <guibutton>R&uuml;ckg&auml;ngig</guibutton>, <guibutton>Wiederherstellen</guibutton> und <guibutton>Schlie&szlig;en</guibutton>. Klicken auf <guibutton>R&uuml;ckg&auml;ngig</guibutton> bewirkt, dass die erste Aktion in der Liste r&uuml;ckg&auml;ngig gemacht und an die Spitze der Wiederherstellen-Liste gesetzt wird. Genauso bewirkt klicken auf <guibutton>Wiederherstellen</guibutton> die Wiederausf&uuml;hrung der r&uuml;ckg&auml;ngig gemachten Aktion an der Spitze der Wiederherstellen-Liste und das Setzen dieser Aktion an die Spitze der R&uuml;ckg&auml;ngig-Liste. Wenn Sie auf eine weiter unten in einer der beiden Listen stehenden Aktion klicken, werden alle Aktionen von oben in der Liste bis einschlie&szlig;lich der angeklickten Aktion ausgew&auml;hlt. Ein anschlie&szlig;endes Klicken auf den zugeh&ouml;rigen Knopf bewirkt das R&uuml;ckg&auml;ngigmachen oder die erneute Ausf&uuml;hrung der ausgew&auml;hlten Aktionen. Mit dieser M&ouml;glichkeit k&ouml;nnen Sie direkt zu einem bekannten Punkt in der Bearbeitung zur&uuml;ck- oder vorw&auml;rtsgehen, ohne sich m&uuml;hselig durch einzelne Bearbeitungsschritte durchzuarbeiten.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="cut"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>X</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem>Auss<accel>c</accel>hneiden</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Schneidet den ausgew&auml;hlten Text aus und kopiert diesen in die Zwischenablage.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="copy"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>C</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>K</accel>opieren</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Kopiert den ausgew&auml;hlten Text in die Zwischenablage.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="paste"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>V</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem>Ein<accel>f</accel>&uuml;gen</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>F&uuml;gt den in der Zwischenablage gespeicherten Text an der Cursorposition ein.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="select-all"/><menuchoice> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>A</accel>lles ausw&auml;hlen</guimenuitem></menuchoice></term>
+<listitem>  
+<para>Die gesamte Datei wird ausgew&auml;hlt. Dies ist besonders zum Kopieren der gesamten Datei in eine andere Anwendung n&uuml;tzlich.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="invert-the-selection"/><menuchoice> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem>Auswahl <accel>u</accel>mkehren</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Invertiert die Auswahl von Text. Aller bisher unausgew&auml;hlter Text wird ausgew&auml;hlt und aller bisher ausgew&auml;hlter Text wird freigegeben.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="find"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>F</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>S</accel>uchen...</guimenuitem></menuchoice></term>
+<listitem>  
+<para>&Ouml;ffnet ein Dialogfenster, das zum Steuern der Suche in der Datei verwendet wird. Es gibt ein kleines Textfeld zum Eingeben von Text <guilabel>Gesuchter Text:</guilabel>, das auch als Auswahlfenster verwendet werden kann. Klicken auf den Pfeil macht fr&uuml;here Suchen verf&uuml;gbar. Andere Parameter k&ouml;nnen verwendet werden, um die Suche effizienter zu machen. Die Auswahl von <guilabel>Gro&szlig;/Kleinschreibung</guilabel> grenzt die Suche ein - nur wenn auch die Gro&szlig;- und Kleinschreibung mit der Suchphrase &uuml;bereinstimmt, wird die Textstelle als gefunden gewertet und angezeigt. <guilabel>R&uuml;ckw&auml;rts suchen</guilabel> veranla&szlig;t &kwrite; von unten nach oben zu suchen. Die Option <guilabel>Ausgew&auml;hlter Text</guilabel> limitiert die Suche auf den ausgew&auml;hlten Textbereich. Wenn die Option <guilabel>Nur ganze W&ouml;rter</guilabel> ausgew&auml;hlt ist, werden Textstellen, bei denen das gesuchte Wort in einem l&auml;ngeren Wort enthalten ist, nicht angezeigt. Die Option <guilabel>Ab Cursorposition</guilabel> veranlasst &kwrite;, von der aktuellen Cursorposition an zu suchen und nicht vom Beginn der Datei (oder vom Ende bei gleichzeitig verwendeter Option <guilabel>R&uuml;ckw&auml;rts suchen</guilabel>).</para>   
+</listitem>  
+</varlistentry>  
+
+<varlistentry>  
+<term><anchor id="find-again"/><menuchoice> <shortcut><keycombo><keycap>F3</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>W</accel>eitersuchen</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Wiederholt die zuletzt ausgef&uuml;hrte Suche, ohne dass erst das Dialogfenster ge&ouml;ffnet wird.</para> </listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="replace"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>R</keycap></keycombo></shortcut> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem><accel>E</accel>rsetzen...</guimenuitem></menuchoice></term>
+<listitem>  
+<para>&Ouml;ffnet das Ersetzen-Dialogfenster. Die Eingabe der Suchkriterien ist genauso wie bei dem oben erkl&auml;rten Suche-Dialogfenster. Hinzu kommt das Eingabefeld <guilabel>Ersetzen durch:</guilabel>. Hierin wird der Text eingegeben, der den zu suchenden Text ersetzen soll. Im Ankreuzfeld <guilabel>Vor Ersetzen nachfragen</guilabel> kann eingestellt werden, ob &kwrite; vor dem Ersetzen an jeder gefundenen Stelle nachfragt - oder das Ersetzen f&uuml;r die ganze Datei ohne nochmaliges Nachfragen ausf&uuml;hrt.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="open"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>O</keycap></keycombo></shortcut>
-<guimenu><accel>D</accel>atei</guimenu><guimenuitem>
-<accel>&Ouml;</accel>ffnen</guimenuitem></menuchoice></term>
-<listitem><para>&Ouml;ffnen einer Datei. Es wird ein Dialogfenster ge&ouml;ffnet,
-das zum Navigieren im Dateisystem verwendet werden kann. Das Fenster arbeitet
-wie ein kleiner Dateimanager. Klicken auf Verzeichnisse im zentralen
-Fenster &ouml;ffnet das Verzeichnis und zeigt seinen Inhalt an. Es gibt
-au&szlig;erdem ein Eingabefeld, das zur direkten Eingabe von Dateinamen und
-Pfad benutzt werden kann. Sie k&ouml;nnen auch auf den Pfeil an der Seite
-klicken und dann aus den letzten bearbeiteten Dateien ausw&auml;hlen. Darunter
-ist ein Filter, der benutzt werden kann, um ausschlie&szlig;lich Dateien
-anzuzeigen, die den Filterregeln entsprechen.
-Zum Beispiel bewirkt die
-Filterregel '<literal role="extension">*.txt</literal>', dass nur Dateien mit der Endung
-.txt angezeigt werden. Unterhalb des Filters wird eine Statusleiste mit
-Information &uuml;ber die Anzahl der Dateien und Unterverzeichnisse im
-aktuellen Verzeichnis angezeigt.</para>
-
-<para>Auch hier gibt es die M&ouml;glichkeit, durch Klicken auf
-den Pfeil aus den zuletzt benutzten Filterregeln auszuw&auml;en. Die
-Werkzeugleiste - oben im Dialogfeld - hat Kn&ouml;pfe (nach rechts und nach
-links) f&uuml;r das Bl&auml;ttern durch vorher benutzte Verzeichnisse und
-ein Knopf (nach oben), um im Verzeichnisbaum eine Ebene h&ouml;her zu
-gehen. Der Knopf mit dem kleinen Haus bringt den Nutzer in sein
-pers&ouml;nliches Verzeichnis, w&auml;hrend die Fl&auml;che mit den zwei
-im Kreis zeigenden Pfeilen die Anzeige des aktuellen Verzeichnisses
-aktualisiert. Der Knopf mit der Fahne dient zum Setzen eines Lesezeichens
-oder zum Springen zu einem vorher gesetzten Lesezeichen. Es gibt au&szlig;erdem
-noch ein Knopf mit einem Schraubenschl&uuml;ssel zum &Auml;ndern einiger
-Einstellungen und ein Feld mit einer Liste h&auml;ufig benutzter
-Verzeichnisse.</para> </listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="open-recent"/><menuchoice>
-<guimenu><accel>D</accel>atei</guimenu><guimenuitem>Zu<accel>l</accel>etzt
-ge&ouml;ffnete Dateien</guimenuitem> </menuchoice></term>
-<listitem><para>Ist eine Abk&uuml;rzung f&uuml;r das &Ouml;ffnen der letzten bearbeiteten Dateien.
-Dieser Men&uuml;punkt &ouml;ffnet eine Liste mit einigen zuletzt bearbeiteten
-Dateien. Klicken auf eine der Dateien &ouml;ffnet diese in &kwrite; - wenn diese
-Datei noch am selben Ort gespeichert ist. </para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="save"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>S</keycap></keycombo></shortcut>
-<guimenu><accel>D</accel>atei</guimenu><guimenuitem>S<accel>p</accel>eichern
-</guimenuitem></menuchoice></term>
-<listitem> <para>Speichert die aktuelle Datei.
-Wenn diese noch nicht gesichert war, wird der Speichern unter...-Dialog
-ge&ouml;ffnet, ansonsten wird ohne Nachfrage &uuml;berschrieben.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="save-as"/><menuchoice>
-<guimenu><accel>D</accel>atei</guimenu>
-<guimenuitem>Speichern <accel>u</accel>nter...</guimenuitem>
-</menuchoice></term>
-<listitem> <para>Speichert die Datei unter einem neuen Dateinamen. Die Auswahl
-des Dateinamens erfolgt durch einen Dialog wie bei <link
-linkend="open">&Ouml;ffnen</link> beschrieben.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="print"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo></shortcut>
-<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>D</accel>rucken...
-</guimenuitem> </menuchoice></term>
-<listitem> <para>&Ouml;ffnet ein einfaches Dialogfenster, in dem der Nutzer
-einstellen kann, was, wo und wie zu drucken ist.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="new-window"/><menuchoice>
-<guimenu><accel>D</accel>atei</guimenu>
-<guimenuitem>Neues <accel>F</accel>enster</guimenuitem></menuchoice></term>
+<term><anchor id="insertfile"/> <menuchoice> <guimenu><accel>B</accel>earbeiten</guimenu> <guimenuitem>Ein<accel>f</accel>&uuml;ge</guimenuitem></menuchoice></term>
 <listitem>
-<para>&Ouml;ffnet ein neues leeres Fenster, ein neues &kwrite;. Das erlaubt dem
-Nutzer, an mehreren Dateien gleichzeitig zu arbeiten.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="new-view"/><menuchoice>
-<guimenu><accel>D</accel>atei</guimenu>
-<guimenuitem>Neue <accel>A</accel>nsicht</guimenuitem>
-</menuchoice></term> <listitem>
-<para>&Ouml;ffnet ein neues Fenster (ein neues &kwrite;) mit derselben Datei, die
-auch im aktuellen Fenster ge&ouml;ffnet ist. Die Datei im neuen Fenster
-ist exakt auf demselben Stand wie die Datei im alten Fenster, d.h.
-alle &Auml;nderungen, die seit &Ouml;ffnen der Datei im alten Fenster
-vorgenommen wurden, sind auch im neuen Fenster vorhanden.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="close"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>Q</keycap></keycombo></shortcut>
-<guimenu><accel>D</accel>atei</guimenu>
-<guimenuitem>B<accel>e</accel>enden</guimenuitem></menuchoice></term>
-<listitem>
-<para>Schlie&szlig;t &kwrite;. Wenn Sie jedoch mehrere &kwrite;'s
-gestartet haben, z.B. durch <guimenuitem>Neue Ansicht</guimenuitem> oder
-<guimenuitem>Neues Fenster</guimenuitem> werden die anderen &kwrite;'s
-nicht geschlossen.</para></listitem> </varlistentry>
-</variablelist>
-
-</sect1>
-
-<sect1 id="edit">
-<title>Das <guimenu>Bearbeiten</guimenu>men&uuml;</title>
-
-<variablelist>
-<varlistentry>
-<term><anchor id="undo"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>Z</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>R</accel>&uuml;ckg&auml;ngig</guimenuitem></menuchoice></term>
-<listitem>
-<para>Macht die letzte Ver&auml;nderung im aktuellen Editorfenster
-r&uuml;ckg&auml;ngig. Zum besseren Verst&auml;ndnis bitte im Teil <link
-linkend="group-undos">R&uuml;ckg&auml;ngig gruppieren</link> dieses Hilfetextes nachlesen.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="redo"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem>Wieder<accel>h</accel>erstellen</guimenuitem></menuchoice></term>
-<listitem>
-<para>Macht das letzte R&uuml;ckg&auml;ngig (wenn vorhanden) r&uuml;ckg&auml;ngig.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="undohistory"/><menuchoice>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>V</accel>erlauf R&uuml;ckg&auml;ngig/Wiederherstellen</guimenuitem></menuchoice></term>
-<listitem>
-<para>&Ouml;ffnet ein Dialogfenster, das links die letzten Aktionen und rechts
-r&uuml;ckg&auml;ngig gemachte Aktionen anzeigt. Auf der rechten Seite gibt es drei
-Kn&ouml;pfe: <guibutton>R&uuml;ckg&auml;ngig</guibutton>,
-<guibutton>Wiederherstellen</guibutton> und
-<guibutton>Schlie&szlig;en</guibutton>. Klicken auf
-<guibutton>R&uuml;ckg&auml;ngig</guibutton> bewirkt, dass die erste Aktion in
-der Liste r&uuml;ckg&auml;ngig gemacht und an die Spitze
-der Wiederherstellen-Liste gesetzt wird. Genauso bewirkt klicken auf
-<guibutton>Wiederherstellen</guibutton> die Wiederausf&uuml;hrung der
-r&uuml;ckg&auml;ngig gemachten Aktion an der Spitze der Wiederherstellen-Liste
-und das Setzen dieser Aktion an die Spitze der R&uuml;ckg&auml;ngig-Liste. Wenn
-Sie auf eine weiter unten in einer der beiden Listen stehenden Aktion klicken,
-werden alle Aktionen von oben in der Liste bis einschlie&szlig;lich der
-angeklickten Aktion ausgew&auml;hlt. Ein anschlie&szlig;endes Klicken auf den
-zugeh&ouml;rigen Knopf bewirkt das R&uuml;ckg&auml;ngigmachen oder
-die erneute Ausf&uuml;hrung der ausgew&auml;hlten Aktionen. Mit dieser
-M&ouml;glichkeit k&ouml;nnen Sie direkt zu einem bekannten Punkt in der
-Bearbeitung zur&uuml;ck- oder vorw&auml;rtsgehen, ohne sich m&uuml;hselig durch
-einzelne Bearbeitungsschritte durchzuarbeiten.</para>
-
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="cut"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>X</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem>Auss<accel>c</accel>hneiden</guimenuitem></menuchoice></term>
-<listitem>
-<para>Schneidet den ausgew&auml;hlten Text aus und kopiert
-diesen in die Zwischenablage.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="copy"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>C</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>K</accel>opieren</guimenuitem></menuchoice></term>
-<listitem>
-<para>Kopiert den ausgew&auml;hlten Text in die
-Zwischenablage.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="paste"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>V</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem>Ein<accel>f</accel>&uuml;gen</guimenuitem></menuchoice></term>
-<listitem>
-<para>F&uuml;gt den in der Zwischenablage
-gespeicherten Text an der Cursorposition ein.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="select-all"/><menuchoice>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>A</accel>lles ausw&auml;hlen</guimenuitem></menuchoice></term>
-<listitem>
-<para>Die gesamte Datei wird ausgew&auml;hlt. Dies ist besonders zum Kopieren der
-gesamten Datei in eine andere Anwendung n&uuml;tzlich.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="invert-the-selection"/><menuchoice>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem>Auswahl <accel>u</accel>mkehren</guimenuitem></menuchoice></term>
-<listitem>
-<para>Invertiert die Auswahl von Text. Aller bisher unausgew&auml;hlter Text wird
-ausgew&auml;hlt und aller bisher ausgew&auml;hlter Text wird freigegeben.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="find"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>F</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>S</accel>uchen...</guimenuitem></menuchoice>
-</term>
-<listitem>
-<para>&Ouml;ffnet ein Dialogfenster, das zum Steuern der Suche in der Datei
-verwendet wird. Es gibt ein kleines Textfeld zum Eingeben von Text
-<guilabel>Gesuchter Text:</guilabel>, das auch als Auswahlfenster verwendet
-werden kann. Klicken auf den Pfeil macht fr&uuml;here Suchen verf&uuml;gbar.
-Andere Parameter k&ouml;nnen verwendet werden, um die Suche effizienter zu
-machen. Die Auswahl von <guilabel>Gro&szlig;/Kleinschreibung</guilabel> grenzt
-die Suche ein - nur wenn auch die Gro&szlig;- und Kleinschreibung mit der
-Suchphrase &uuml;bereinstimmt, wird die Textstelle als gefunden gewertet und
-angezeigt. <guilabel>R&uuml;ckw&auml;rts suchen</guilabel> veranla&szlig;t
-&kwrite; von unten nach oben zu suchen. Die Option <guilabel>Ausgew&auml;hlter
-Text</guilabel> limitiert die Suche auf den ausgew&auml;hlten Textbereich. Wenn
-die Option <guilabel>Nur ganze W&ouml;rter</guilabel> ausgew&auml;hlt ist,
-werden Textstellen, bei denen das gesuchte Wort in einem l&auml;ngeren Wort
-enthalten ist, nicht angezeigt. Die Option <guilabel>Ab
-Cursorposition</guilabel> veranlasst &kwrite;, von der aktuellen Cursorposition
-an zu suchen und nicht vom Beginn der Datei (oder vom Ende bei gleichzeitig
-verwendeter Option <guilabel>R&uuml;ckw&auml;rts suchen</guilabel>).</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="find-again"/><menuchoice>
-<shortcut><keycombo><keycap>F3</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>W</accel>eitersuchen</guimenuitem></menuchoice></term>
-<listitem> <para>Wiederholt die zuletzt ausgef&uuml;hrte Suche, ohne dass
-erst das Dialogfenster ge&ouml;ffnet wird.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="replace"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>R</keycap></keycombo></shortcut>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem><accel>E</accel>rsetzen...</guimenuitem></menuchoice></term>
-
-<listitem> <para>&Ouml;ffnet das Ersetzen-Dialogfenster. Die Eingabe der
-Suchkriterien ist genauso wie bei dem oben erkl&auml;rten Suche-Dialogfenster.
-Hinzu kommt das Eingabefeld <guilabel>Ersetzen durch:</guilabel>. Hierin wird der
-Text eingegeben, der den zu suchenden Text ersetzen soll. Im Ankreuzfeld
-<guilabel>Vor Ersetzen nachfragen</guilabel> kann eingestellt werden, ob &kwrite; vor dem
-Ersetzen an jeder gefundenen Stelle nachfragt - oder das Ersetzen f&uuml;r die ganze
-Datei ohne nochmaliges Nachfragen ausf&uuml;hrt.
-</para> </listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="insertfile"/>
-<menuchoice>
-<guimenu><accel>B</accel>earbeiten</guimenu>
-<guimenuitem>Ein<accel>f</accel>&uuml;ge</guimenuitem></menuchoice></term>
-<listitem>
-<para><action>&Ouml;ffnet</action> das <guimenu>Datei</guimenu>
-<link linkend="open"><guimenuitem>&Ouml;ffnen</guimenuitem></link>-
-Dialogfenster in dem Sie eine Datei ausw&auml;hlen k&ouml;nnen.
-An der aktuellen Cursorposition wird dann die gesamte Datei eingef&uuml;gt.
-</para></listitem>
+<para><action>&Ouml;ffnet</action> das <guimenu>Datei</guimenu> <link linkend="open"><guimenuitem>&Ouml;ffnen</guimenuitem></link>- Dialogfenster in dem Sie eine Datei ausw&auml;hlen k&ouml;nnen. An der aktuellen Cursorposition wird dann die gesamte Datei eingef&uuml;gt.</para></listitem>
 </varlistentry>
 </variablelist>
-</sect1>
 
-<sect1 id="go">
-<title>Das <guimenu>Gehe zu</guimenu> Men&uuml;</title>
+</sect1>  
+  
+<sect1 id="go">  
+<title>Das <guimenu>Gehe zu</guimenu> Men&uuml;</title>  
+<variablelist>  
+  
+<varlistentry>  
+<term><anchor id="go-to-line"/><menuchoice> <guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem>Gehe zu <accel>Z</accel>eile...</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet das Gehe zu-Dialogfenster, das zur Eingabe der Zeilennummer dient, an die der Cursor springen soll. Die Zeilennummer kann direkt eingegeben oder durch die Auf- und Abpfeile erh&ouml;ht oder verringert werden. Sie k&ouml;nnen auch den Regler an der Seite verschieben, um zu der gew&uuml;nschten Seite zu gelangen.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="add-marker"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>M</keycap></keycombo> </shortcut> <guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem><accel>M</accel>arker hinzuf&uuml;gen</guimenuitem></menuchoice></term>
+<listitem>  
+<para>Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im <guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann.</para>
+
+<para>Die Nummerierung der Marker wird (mit 1 beginnend) fortlaufend vergeben. Es k&ouml;nnen nicht mehr als 10 Marker gesetzt werden. Wenn Sie versuchen, mehr als 10 Marker zu setzen, so ignoriert &kwrite; diese Versuche ohne Warnung.</para>
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="set-bookmark"/><menuchoice> <guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem>Marker se<accel>t</accel>zen </guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im <guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann. &kwrite; &ouml;ffnet ein kleines Fenster, in dem die 10 verf&uuml;gbaren Marker mit ihrem derzeitigen Inhalt angezeigt werden. Sie k&ouml;nnen durch Klicken auf eine der 10 Zeilen die Markernummer gezielt vergeben und auch schon vorhandene, aber nicht mehr ben&ouml;tigte Marker neu vergeben - &uuml;berschreiben. Sie k&ouml;nnen die Zuweisung auch durch Dr&uuml;cken der Tasten 1 bis 0 vornehmen.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>
+<term><anchor id="clear-bookmarks"/><menuchoice> <guimenu><accel>G</accel>ehe zu</guimenu> <guimenuitem>Marker l<accel>&ouml;</accel>schen </guimenuitem></menuchoice></term>  
+<listitem>  
+<para>L&ouml;scht alle Marker aus der Datei sowie die Markerliste, die am unteren Ende dieses Men&uuml;s eingef&uuml;gt wird.</para>
+</listitem>  
+</varlistentry>  
+</variablelist>  
+  
+<para>Am unteren Ende diese Men&uuml;s wird ein Untermen&uuml; aktiv, wenn Marker in diesem Fenster vorhanden sind.</para>
+</sect1>  
+  
+<sect1 id="tools">  
+<title>Das <guimenu>Werkzeuge</guimenu> Men&uuml;</title>  
+  
 <variablelist>
 <varlistentry>
-<term><anchor id="go-to-line"/><menuchoice>
-<guimenu><accel>G</accel>ehe zu</guimenu>
-<guimenuitem>Gehe zu <accel>Z</accel>eile...</guimenuitem></menuchoice></term>
-<listitem>
-<para>&Ouml;ffnet das Gehe zu-Dialogfenster, das zur Eingabe der
-Zeilennummer dient, an die der Cursor springen soll. Die Zeilennummer kann
-direkt eingegeben oder durch die Auf- und Abpfeile erh&ouml;ht oder
-verringert werden. Sie k&ouml;nnen auch den Regler
-an der Seite verschieben, um zu der gew&uuml;nschten Seite zu gelangen.</para>
-</listitem>
-</varlistentry>
+<term><anchor id="Spelling..."/><menuchoice> <guimenu><accel>W</accel>erkzeuge</guimenu> <guimenuitem>Re<accel>c</accel>htschreibung...</guimenuitem></menuchoice></term>
 
-<varlistentry>
-<term><anchor id="add-marker"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>M</keycap></keycombo>
-</shortcut>
-<guimenu><accel>G</accel>ehe zu</guimenu>
-<guimenuitem><accel>M</accel>arker hinzuf&uuml;gen</guimenuitem>
-</menuchoice></term>
-<listitem>
-<para>Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im
-<guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann. 
-</para><para>
-Die Nummerierung
-der Marker wird (mit 1 beginnend) fortlaufend vergeben. Es k&ouml;nnen
-nicht mehr als 10 Marker gesetzt werden. Wenn Sie versuchen, mehr als 10
-Marker zu setzen, so ignoriert &kwrite; diese Versuche ohne Warnung.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="set-bookmark"/><menuchoice>
-<guimenu><accel>G</accel>ehe zu</guimenu>
-<guimenuitem>Marker se<accel>t</accel>zen
-</guimenuitem></menuchoice></term>
-<listitem>
-<para>Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im
-<guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann. &kwrite;
-&ouml;ffnet ein kleines Fenster, in dem die 10 verf&uuml;gbaren Marker mit ihrem
-derzeitigen Inhalt angezeigt werden. 
-Sie k&ouml;nnen durch Klicken auf eine der
-10 Zeilen die Markernummer gezielt vergeben und auch schon vorhandene, aber
-nicht mehr ben&ouml;tigte Marker neu vergeben - &uuml;berschreiben. Sie
-k&ouml;nnen die Zuweisung auch durch Dr&uuml;cken der Tasten 1 bis 0 vornehmen.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="clear-bookmarks"/><menuchoice>
-<guimenu><accel>G</accel>ehe zu</guimenu>
-<guimenuitem>Marker l<accel>&ouml;</accel>schen
-</guimenuitem></menuchoice></term>
-<listitem>
-<para>L&ouml;scht alle Marker aus der Datei sowie die Markerliste, die am
-unteren Ende dieses Men&uuml;s eingef&uuml;gt wird. </para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para>Am unteren Ende diese Men&uuml;s wird ein Untermen&uuml; aktiv, wenn
-Marker in diesem Fenster vorhanden sind.</para>
-
-</sect1>
-
-<sect1 id="tools">
-<title>Das <guimenu>Werkzeuge</guimenu> Men&uuml;</title>
-
-<variablelist>
-
-<varlistentry>
-<term><anchor id="Spelling..."/><menuchoice>
-<guimenu><accel>W</accel>erkzeuge</guimenu>
-<guimenuitem>Re<accel>c</accel>htschreibung...</guimenuitem></menuchoice></term>
-
-<listitem><para><action>Ruft die Rechtschreibpr&uuml;fung - ein Programm zum Finden und
-Korrigieren von Rechtschreibfehlern - auf.</action>
-Klicken auf diesen Men&uuml;eintrag startet das
-Rechtschreibpr&uuml;fungsprogramm und &ouml;ffnet dessen Dialogfenster, in dem
-Sie die Ausf&uuml;hrung der Rechtschreibpr&uuml;fung steuern k&ouml;nnen.
-Es gibt drei Textfelder in der Mitte des Dialogfensters mit deren
-zugeh&ouml;rigen Namen links daneben. Diese sind von oben nach unten:</para>
+<listitem><para><action>Ruft die Rechtschreibpr&uuml;fung - ein Programm zum Finden und Korrigieren von Rechtschreibfehlern - auf.</action> Klicken auf diesen Men&uuml;eintrag startet das Rechtschreibpr&uuml;fungsprogramm und &ouml;ffnet dessen Dialogfenster, in dem Sie die Ausf&uuml;hrung der Rechtschreibpr&uuml;fung steuern k&ouml;nnen. Es gibt drei Textfelder in der Mitte des Dialogfensters mit deren zugeh&ouml;rigen Namen links daneben. Diese sind von oben nach unten:</para>
 
 <variablelist>
 <varlistentry>
 <term><guilabel>Falsches Wort:</guilabel></term>
-<listitem><para>Hier zeigt das Rechtschreibpr&uuml;fungsprogramm das aktuell als
-falsch erkannte Wort an. Dieses Wort hat das Rechtschreibpr&uuml;fungsprogramm
-nicht in seinem W&ouml;rterbuch gefunden. Das W&ouml;rterbuch ist eine Datei,
-die eine Liste der korrekt geschriebenen W&ouml;rter enth&auml;lt, mit denen das
-Rechtschreibpr&uuml;fungsprogramm jedes einzelne Wort des zu pr&uuml;fenden
-Textes vergleicht.</para></listitem>
+<listitem><para>Hier zeigt das Rechtschreibpr&uuml;fungsprogramm das aktuell als falsch erkannte Wort an. Dieses Wort hat das Rechtschreibpr&uuml;fungsprogramm nicht in seinem W&ouml;rterbuch gefunden. Das W&ouml;rterbuch ist eine Datei, die eine Liste der korrekt geschriebenen W&ouml;rter enth&auml;lt, mit denen das Rechtschreibpr&uuml;fungsprogramm jedes einzelne Wort des zu pr&uuml;fenden Textes vergleicht.</para></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guilabel>Ersetzung:</guilabel></term>
-<listitem><para>Wenn das Rechtschreibpr&uuml;fungsprogramm &auml;hnliche
-W&ouml;rter im W&ouml;rterbuch findet, wird das erste hier angezeigt. Der Nutzer
-kann den Vorschlag akzeptieren, eine eigene Korrektur eingeben oder einen
-anderen Vorschlag aus dem n&auml;chsten Feld ausw&auml;hlen.</para></listitem>
+<listitem><para>Wenn das Rechtschreibpr&uuml;fungsprogramm &auml;hnliche W&ouml;rter im W&ouml;rterbuch findet, wird das erste hier angezeigt. Der Nutzer kann den Vorschlag akzeptieren, eine eigene Korrektur eingeben oder einen anderen Vorschlag aus dem n&auml;chsten Feld ausw&auml;hlen.</para></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guilabel>Vorschl&auml;ge:</guilabel></term>
-<listitem><para>Das Rechtschreibpr&uuml;fungsprogramm listet hier einige
-m&ouml;gliche Ersetzungen f&uuml;r das aktuelle Wort auf. Klicken auf eines
-dieser Worte tr&auml;gt dieses in das Feld <guilabel>Ersetzung:</guilabel> ein.
-</para></listitem>
+<listitem><para>Das Rechtschreibpr&uuml;fungsprogramm listet hier einige m&ouml;gliche Ersetzungen f&uuml;r das aktuelle Wort auf. Klicken auf eines dieser Worte tr&auml;gt dieses in das Feld <guilabel>Ersetzung:</guilabel> ein.</para></listitem>
 </varlistentry>
 </variablelist>
 
-<para>Auf der rechten Seite des Dialogfensters sind 6 Kn&ouml;pfe vorhanden, mit
-denen der Nutzer den Pr&uuml;fungsprozess steuern kann. Diese sind im Einzelnen:</para>
+<para>Auf der rechten Seite des Dialogfensters sind 6 Kn&ouml;pfe vorhanden, mit denen der Nutzer den Pr&uuml;fungsprozess steuern kann. Diese sind im Einzelnen:</para>
 
 <variablelist>
 <varlistentry>
-<term><guibutton>Ersetzen</guibutton></term>
-<listitem><para>Klicken auf diesen Knopf ersetzt das Wort im Feld
-<guilabel>Falsches Wort:</guilabel> mit dem Wort im Feld
-<guilabel>Ersetzung:</guilabel>.</para></listitem>
+<term><guibutton>Ersetzen...</guibutton></term>
+<listitem><para>Klicken auf diesen Knopf ersetzt das Wort im Feld <guilabel>Falsches Wort:</guilabel> mit dem Wort im Feld <guilabel>Ersetzung:</guilabel>.</para></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guibutton>Alle ersetzen</guibutton></term>
-<listitem><para>Klicken auf diesen Knopf bewirkt, dass alle Vorkommen des im
-Feld <guilabel>Falsches Wort:</guilabel> angezeigten Wortes im gesamten Text mit
-dem Wort im Feld <guilabel>Ersetzung:</guilabel> ersetzt werden.</para></listitem>
+<listitem><para>Klicken auf diesen Knopf bewirkt, dass alle Vorkommen des im Feld <guilabel>Falsches Wort:</guilabel> angezeigten Wortes im gesamten Text mit dem Wort im Feld <guilabel>Ersetzung:</guilabel> ersetzt werden.</para></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guibutton>Ignorieren</guibutton></term>
-<listitem><para>Die Rechtschreibpr&uuml;fung wird ohne &Auml;nderungen am
-aktuellen Wort fortgesetzt.</para></listitem>
+<listitem><para>Die Rechtschreibpr&uuml;fung wird ohne &Auml;nderungen am aktuellen Wort fortgesetzt.</para></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guibutton>Alle ignorieren</guibutton></term>
-<listitem><para>Klicken auf diesen Knopf setzt die Rechtschreibpr&uuml;fung ohne
-&Auml;nderungen am aktuellen Wort fort und ignoriert alle weiteren Vorkommen
-dieses Wortes im gesamten Dokument.</para>
-<note><para>Dies gilt nur f&uuml;r den aktuellen Lauf
-der Rechtschreibpr&uuml;fung, wenn sp&auml;ter noch einmal die Rechtschreibung
-gepr&uuml;ft wird, wird dasselbe Wort wieder als falsch erkannt.</para></note></listitem>
+<listitem><para>Klicken auf diesen Knopf setzt die Rechtschreibpr&uuml;fung ohne &Auml;nderungen am aktuellen Wort fort und ignoriert alle weiteren Vorkommen dieses Wortes im gesamten Dokument.</para> <note><para>Dies gilt nur f&uuml;r den aktuellen Lauf der Rechtschreibpr&uuml;fung, wenn sp&auml;ter noch einmal die Rechtschreibung gepr&uuml;ft wird, wird dasselbe Wort wieder als falsch erkannt.</para></note></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guibutton>Hinzuf&uuml;gen</guibutton></term>
-<listitem><para>Klicken auf diesen Knopf f&uuml;gt das Wort im Feld
-<guilabel>Falsches Wort:</guilabel> zum W&ouml;rtebuch hinzu. Dieses Wort
-wird dann in der Zukunft immer als richtig erkannt.</para></listitem> </varlistentry>
+<listitem><para>Klicken auf diesen Knopf f&uuml;gt das Wort im Feld <guilabel>Falsches Wort:</guilabel> zum W&ouml;rtebuch hinzu. Dieses Wort wird dann in der Zukunft immer als richtig erkannt.</para></listitem>
+</varlistentry>
 
 <varlistentry>
 <term><guibutton>Anhalten</guibutton></term>
-<listitem><para>Dieser Knopf stoppt die
-Rechtschreibpr&uuml;fung.</para></listitem> </varlistentry>
+<listitem><para>Dieser Knopf stoppt die Rechtschreibpr&uuml;fung.</para></listitem>
+</varlistentry>
 
 </variablelist>
 
-<para>Am unteren Ende des Dialogfeldes liegt ein Balken, der den Fortschritt der
-Rechtschreibpr&uuml;fung innerhalb der Datei anzeigt. Dieser Wert wird graphisch
-und durch Ziffern angezeigt.</para>
+<para>Am unteren Ende des Dialogfeldes liegt ein Balken, der den Fortschritt der Rechtschreibpr&uuml;fung innerhalb der Datei anzeigt. Dieser Wert wird graphisch und durch Ziffern angezeigt.</para>
 
-<note><para>Gleichzeitig wird der Fortschritt der Rechtschreibpr&uuml;fung in
-der Statusleiste des Editors angezeigt. Die <link
-linkend="show-statusbar">Statusleiste</link> ist der liegende Streifen am
-unteren Rand des Editorfensters unterhalb des Texteingabebereiches.</para></note>
+<note><para>Gleichzeitig wird der Fortschritt der Rechtschreibpr&uuml;fung in der Statusleiste des Editors angezeigt. Die <link linkend="show-statusbar">Statusleiste</link> ist der liegende Streifen am unteren Rand des Editorfensters unterhalb des Texteingabebereiches.</para></note>
 
-<para>Zwei weitere Kn&ouml;pfe befinden sich unter dem Anzeigebalken im
-Dialogfeld:</para>
+<para>Zwei weitere Kn&ouml;pfe befinden sich unter dem Anzeigebalken im Dialogfeld:</para>
 
 <variablelist>
 <varlistentry>
 <term><guibutton>Hilfe</guibutton></term>
-<listitem><para>Dieser Knopf ruft die Online-Hilfe zu &kwrite; auf (Dieses
-Dokument).</para></listitem>
+<listitem><para>Dieser Knopf ruft die Online-Hilfe zu &kwrite; auf (Dieses Dokument).</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guibutton>Cancel</guibutton></term>
-<listitem><para>Dieser Knopf bricht die
-Rechtschreibpr&uuml;fung ab.</para></listitem>
+<listitem><para>Dieser Knopf bricht die Rechtschreibpr&uuml;fung ab.</para></listitem>
 </varlistentry>
 
-<varlistentry>
-<term><anchor id="indent"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>I</keycap></keycombo></shortcut>
-<guimenu><accel>W</accel>erkzeuge</guimenu>
-<guimenuitem>Ein<accel>r</accel>&uuml;cken</guimenuitem></menuchoice></term>
-<listitem>
-<para>Erh&ouml;ht die Einr&uuml;ckung des Abschnittes um einen
-Schritt. Die Schrittgr&ouml;&szlig;e wird in <link linkend="pref-indent">
-Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt.</para>
-</listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="unindent"/><menuchoice>
-<shortcut><keycombo><keycap>Strg</keycap><keycap>U</keycap></keycombo></shortcut>
-<guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;cken
-r&uuml;ckg&auml;ngig</guimenuitem></menuchoice></term> <listitem>
-<para>Verringert die Einr&uuml;ckung des Abschnittes um einen
-Schritt. Die Schrittgr&ouml;&szlig;e wird in <link linkend="pref-indent">
-Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="cleanindent"/><menuchoice>
-<guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;ckungen l&ouml;schen</guimenuitem></menuchoice></term>
-<listitem>
+<varlistentry>  
+<term><anchor id="indent"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>I</keycap></keycombo></shortcut> <guimenu><accel>W</accel>erkzeuge</guimenu> <guimenuitem>Ein<accel>r</accel>&uuml;cken</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Erh&ouml;ht die Einr&uuml;ckung des Abschnittes um einen Schritt. Die Schrittgr&ouml;&szlig;e wird in <link linkend="pref-indent"> Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="unindent"/><menuchoice> <shortcut><keycombo><keycap>Strg</keycap><keycap>U</keycap></keycombo></shortcut> <guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;cken r&uuml;ckg&auml;ngig</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Verringert die Einr&uuml;ckung des Abschnittes um einen Schritt. Die Schrittgr&ouml;&szlig;e wird in <link linkend="pref-indent"> Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="cleanindent"/><menuchoice> <guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;ckungen l&ouml;schen</guimenuitem></menuchoice></term>  <listitem>  
 <para>Noch nicht verf&uuml;gbar.</para>
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><menuchoice> <guimenu>Werkzeuge</guimenu><guimenuitem><accel>K</accel>ommen tar</guimenuitem></menuchoice></term>
+<listitem><para>Dieser Befehl f&uuml;gt ein Leerzeichen am Zeilenanfang der aktuellen Zeile oder an den Zeilenanf&auml;ngen aller markierten Zeilen ein.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><menuchoice><guimenu>Werkzeuge</guimenu><guimenuitem><accel>K</accel>ommen
-tar</guimenuitem></menuchoice></term> <listitem><para>Dieser Befehl f&uuml;gt
-ein Leerzeichen am Zeilenanfang der aktuellen Zeile oder an den
-Zeilenanf&auml;ngen aller markierten Zeilen ein.</para></listitem>
+<term><menuchoice> <guimenu>Werkzeuge</guimenu> <guimenuitem>Kommentar ent<accel>f</accel>ernen</guimenuitem></menuchoice></term>
+<listitem><para>Dieser Befehl entfernt (wenn vorhanden) ein Leerzeichen vom Zeilenanfang der aktuellen Zeile oder von den Zeilenanf&auml;ngen der markierten Zeilen.</para></listitem>
 </varlistentry>
-
-<varlistentry>
-<term><menuchoice><guimenu>Werkzeuge</guimenu> <guimenuitem>Kommentar
-ent<accel>f</accel>ernen</guimenuitem></menuchoice></term>
-<listitem><para>Dieser Befehl entfernt (wenn vorhanden) ein Leerzeichen vom
-Zeilenanfang der aktuellen Zeile oder von den Zeilenanf&auml;ngen der markierten
-Zeilen.</para></listitem> </varlistentry>
 </variablelist>
 </listitem>
 </varlistentry>
@@ -840,518 +584,306 @@ Zeilen.</para></listitem> </varlistentry>
 
 <variablelist>
 <varlistentry>
-<term><anchor id="show-toolbar"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem>Werk<accel>z</accel>eugleiste anzeigen</guimenuitem></menuchoice></term>
-<listitem>
-<para>Schaltet die Anzeige der Werkzeugleiste mit oft benutzten Befehlen ein und aus.
-Diese kann auch verschoben werden.</para>
+<term><anchor id="show-toolbar"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem>Werk<accel>z</accel>eugleiste anzeigen</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Schaltet die Anzeige der Werkzeugleiste mit oft benutzten Befehlen ein und aus. Diese kann auch verschoben werden.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="show-statusbar"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem><accel>S</accel>tatuszeile anzeigen</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Schaltet die Anzeige der Statusleiste mit Informationen &uuml;ber den aktuellen Text am unteren Ende des &kwrite;-Fensters ein und aus.</para>     
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="show-path"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem><accel>P</accel>fad anzeigen</guimenuitem></menuchoice></term>
+<listitem>  
+<para>Schaltet die Anzeige des vollst&auml;ndigen Pfades der aktuellen Datei im Kopf des Fensters ein und aus.</para>
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="configure-keybindings"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem><accel>T</accel>astenzuordnungen vornehmen...</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet ein Dialogfenster zum Einstellen der <link linkend="keybindings">Tastenzuordnungen</link>. Ein Anzeigefenster oben im Dialogfenster zeigt die Liste der verf&uuml;gbaren Befehle. Darunter befinden sich drei Auswahltasten mit den Funktionen Keine Taste, Standardtaste und Benutzerdef. Tasten. Nur eine der drei Tasten kann gedr&uuml;ckt sein und die M&ouml;glichkeit "Standardtaste" ist nur f&uuml;r Befehle, die ein Standard-Tastenk&uuml;rzel haben, vorhanden. Wenn die M&ouml;glichkeit Benutzerdef. Tasten ausgew&auml;hlt ist, werden die drei Ankreuzfelder und das Tastensymbol unten in der Dialogbox aktiviert. Hier kann dann der gew&uuml;nschte Tastenkurzbefehl eigestellt werden. Beispiel: Im Anzeigefeld <guilabel>&Uuml;ber KWrite</guilabel> ausgew&auml;hlen <keycap>Strg</keycap> und <keycap>Alt</keycap> angekreuzen, das Tastensymbol anklicken und die Taste <keycap>K</keycap> auf der Tastatur dr&uuml;cken - erzeugt die Tastenkombination <keycap>Strg</keycap>+<keycap>Alt</keycap>+<keycap>K</keycap> als Kurzbefehl zum Anzeigen der <guilabel>&Uuml;ber KWrite</guilabel> Information.</para>   
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="configure-toolbars"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem>Wer<accel>k</accel>zeugleisten einrichten...</guimenuitem></menuchoice></term>  
+<listitem><para>&Ouml;ffnet eine Dialogbox zum Einstellen der Eigenschaften der Werkzeugleisten. Der Nutzer kann ausw&auml;hlen, welche Aktionen als Symbole in der Werkzeugleiste erscheinen sollen. Das Anzeigefenster links zeigt die Befehle, die in der Werkzeugleiste erscheinen k&ouml;nnen, das Fenster auf der rechten Seite zeigt die Befehle, die auf der Werkzeugleiste erscheinen werden. Die vier Pfeile zwischen den Anzeigefenstern dienen zum Verschieben des vorher durch einen Klick auf den Eintrag in einem der beiden Fenster auszuw&auml;hlenden Befehle. Rechts verschiebt den ausgew&auml;hlten Befehl von der linken in die rechte Liste; dieses wird also zu den anzuzeigenden Befehlen hinzugef&uuml;gt, Auf und Ab verschieben den ausgew&auml;hlten Befehl innerhalb der fertigen Werkzeugleiste. Ein in der rechten Liste ausgew&auml;hlter Befehl wird durch einen Klick auf Links aus der Werkzeugleiste entfernt.</para> </listitem>   
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="preferences"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem><accel>E</accel>instellungen...</guimenuitem></menuchoice></term><listitem>
+<para>&Ouml;ffnet ein Dialogfenster zur Auswahl von verschiedenen <link linkend="pref-dialog">Einstellungen</link>.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><menuchoice><guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem>Her<accel>v</accel>orhebungsmodus einrichten...</guimenuitem></menuchoice></term>  
+<listitem><para>&Ouml;ffnet ein Dialogfenster zum Einstellen der Hervorhebungen im Hervorhebungsmodus. Die Einstellung ist im <xref linkend="pref-highlighting"/> beschrieben.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>
+<term><anchor id="vertical-selection"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem><accel>V</accel>ertikale Auswahl</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Schaltet die Vertikalauswahl ein und aus. Die Vertikalauswahl erlaubt die Textauswahl nach Spalten, so dass nur rechteckige Bereiche ausgew&auml;hlt werden k&ouml;nnen.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="set-highlight"/><menuchoice> <guimenu><accel>E</accel>instellungen</guimenu> <guimenuitem><accel>H</accel>ervorhebungsmodus</guimenuitem></menuchoice></term>
+<listitem>  
+<para>&Ouml;ffnet ein Untermen&uuml; in dem viele h&auml;ufig verwendete Programmiersprachen aufgef&uuml;hrt sind, die &kwrite; mit einem Hervorhebungsmodus unterst&uuml;tzt. W&auml;hlen sie <guisubmenu>Normal</guisubmenu> f&uuml;r die Darstellung ohne Hervorhebungen oder die verwendete Sprache, um Hervorhebungen zu erhalten.</para>
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="end-of-line"/><menuchoice> <guimenu><accel>E</accel>instelllungen</guimenu> <guisubmenu>Zeilen<accel>e</accel>nde</guisubmenu></menuchoice></term>  
+<listitem>  
+<para>&Ouml;ffnet ein Untermen&uuml; in dem der Typ des <quote>Zeilenendezeichens</quote> das &kwrite; benutzen soll, ausgew&auml;ht werden kann. Zur Auswahl stehen: Unix, &Mac; oder MSDOS/&Windows;.</para>
+</listitem>  
+</varlistentry>  
+  
+</variablelist>  
+</sect1>  
+  
+<sect1 id="help">  
+<title>Das <guimenuitem>Hilfe</guimenuitem> Men&uuml;</title>  
+  
+<variablelist>  
+<varlistentry>  
+<term><anchor id="contents"/><menuchoice> <shortcut><keycombo><keycap>F1</keycap></keycombo></shortcut> <guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem><accel>I</accel>nhalt</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Dieser Knopf ruft die Online-Hilfe zu &kwrite; auf (Dieses Dokument).</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="whats-this"/><menuchoice> <shortcut><keycombo><keycap>Umschalt</keycap><keycap>F1</keycap></keycombo></shortcut> <guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem>Was ist <accel>d</accel>as?</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Schaltet den Cursor in eine Kombination aus Pfeil und Fragezeichen um. Klicken auf beliebige Bedienungselemente von &kwrite; &ouml;ffnet ein Hilfefenster mit Erkl&auml;rung zu diesem Element - wenn diese existiert.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>
+<term><anchor id="report-bug"/><menuchoice> <guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem>Be<accel>r</accel>ichten Sie Probleme oder W&uuml;nsche</guimenuitem></menuchoice></term>
+<listitem><para><action>Dies &ouml;ffnet ein Fenster Problembericht einschicken. Hier k&ouml;nnen Sie direkt eine E-Mail an die Entwickler von &kwrite; verfassen. W&auml;hlen Sie den Schweregrad und geben Sie (m&ouml;glichst auf Englisch) einen Problembericht ein. Auch Berichte &uuml;ber (bisher) unerf&uuml;llte W&uuml;nsche sind hier willkommen. Klicken Sie auf Senden, um Ihre E-Mail Ihrem System zur Weiterleitung zu &uuml;bergeben.</action></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="show-statusbar"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem><accel>S</accel>tatuszeile anzeigen</guimenuitem></menuchoice></term>
-<listitem>
-<para>Schaltet die Anzeige der Statusleiste mit Informationen &uuml;ber den aktuellen
-Text am unteren Ende des &kwrite;-Fensters ein und aus.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="show-path"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem><accel>P</accel>fad anzeigen</guimenuitem></menuchoice></term>
-<listitem>
-<para>Schaltet die Anzeige des vollst&auml;ndigen Pfades der aktuellen Datei im
-Kopf des Fensters ein und aus.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="configure-keybindings"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem><accel>T</accel>astenzuordnungen vornehmen...</guimenuitem></menuchoice></term>
-<listitem>
-<para>&Ouml;ffnet ein Dialogfenster zum Einstellen der <link linkend="keybindings">Tastenzuordnungen</link>.
-Ein Anzeigefenster oben im Dialogfenster zeigt die Liste der verf&uuml;gbaren Befehle. Darunter befinden
-sich drei Auswahltasten mit den Funktionen Keine Taste, Standardtaste und Benutzerdef. Tasten.
-Nur eine der drei Tasten kann gedr&uuml;ckt sein und die M&ouml;glichkeit "Standardtaste" ist nur
-f&uuml;r Befehle, die ein Standard-Tastenk&uuml;rzel haben, vorhanden. Wenn die M&ouml;glichkeit
-Benutzerdef. Tasten ausgew&auml;hlt ist, werden die drei Ankreuzfelder und das Tastensymbol
-unten in der Dialogbox aktiviert. Hier kann dann der gew&uuml;nschte Tastenkurzbefehl eigestellt werden.
-Beispiel: Im Anzeigefeld <guilabel>&Uuml;ber KWrite</guilabel> ausgew&auml;hlen
-<keycap>Strg</keycap> und <keycap>Alt</keycap> angekreuzen, das
-Tastensymbol anklicken und die Taste <keycap>K</keycap> auf der
-Tastatur dr&uuml;cken - erzeugt die Tastenkombination
-<keycap>Strg</keycap>+<keycap>Alt</keycap>+<keycap>K</keycap> als Kurzbefehl zum
-Anzeigen der <guilabel>&Uuml;ber KWrite</guilabel> Information. </para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="configure-toolbars"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem>Wer<accel>k</accel>zeugleisten einrichten...</guimenuitem></menuchoice></term>
-<listitem><para>
-&Ouml;ffnet eine Dialogbox zum Einstellen der Eigenschaften der Werkzeugleisten.
-Der Nutzer kann ausw&auml;hlen, welche Aktionen als Symbole in der
-Werkzeugleiste erscheinen sollen. Das Anzeigefenster links zeigt die Befehle, die in der
-Werkzeugleiste erscheinen k&ouml;nnen, das Fenster auf der rechten Seite zeigt
-die Befehle, die auf der Werkzeugleiste erscheinen werden. Die vier
-Pfeile zwischen den Anzeigefenstern dienen zum Verschieben des vorher durch
-einen Klick auf den Eintrag in einem der beiden Fenster auszuw&auml;hlenden
-Befehle. Rechts verschiebt den ausgew&auml;hlten Befehl von der linken in die
-rechte Liste; dieses wird also zu den anzuzeigenden Befehlen hinzugef&uuml;gt,
-Auf und Ab verschieben den
-ausgew&auml;hlten Befehl innerhalb der fertigen Werkzeugleiste. Ein in der
-rechten Liste ausgew&auml;hlter Befehl wird durch einen Klick auf
-Links aus der Werkzeugleiste entfernt.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="preferences"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem><accel>E</accel>instellungen...</guimenuitem>
-</menuchoice></term> <listitem>
-<para>&Ouml;ffnet ein Dialogfenster zur Auswahl von verschiedenen
-<link linkend="pref-dialog">Einstellungen</link>.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem>Her<accel>v</accel>orhebungsmodus einrichten...</guimenuitem></menuchoice></term>
-<listitem><para>&Ouml;ffnet ein Dialogfenster zum Einstellen der
-Hervorhebungen im Hervorhebungsmodus. Die Einstellung ist im <xref
-linkend="pref-highlighting"/> beschrieben.</para></listitem> </varlistentry>
-
-<varlistentry>
-<term><anchor id="vertical-selection"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem><accel>V</accel>ertikale Auswahl</guimenuitem></menuchoice></term> <listitem>
-<para>Schaltet die Vertikalauswahl ein und aus. Die Vertikalauswahl erlaubt die
-Textauswahl nach Spalten, so dass nur rechteckige Bereiche
-ausgew&auml;hlt werden k&ouml;nnen.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="set-highlight"/><menuchoice>
-<guimenu><accel>E</accel>instellungen</guimenu>
-<guimenuitem><accel>H</accel>ervorhebungsmodus</guimenuitem>
-</menuchoice></term> <listitem> <para>&Ouml;ffnet ein Untermen&uuml; in dem
-viele h&auml;ufig verwendete Programmiersprachen aufgef&uuml;hrt sind, die
-&kwrite; mit einem Hervorhebungsmodus unterst&uuml;tzt. W&auml;hlen sie
-<guisubmenu>Normal</guisubmenu> f&uuml;r die Darstellung ohne
-Hervorhebungen oder die verwendete Sprache, um Hervorhebungen zu
-erhalten.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="end-of-line"/><menuchoice>
-<guimenu><accel>E</accel>instelllungen</guimenu>
-<guisubmenu>Zeilen<accel>e</accel>nde</guisubmenu></menuchoice></term>
-<listitem>
-<para>&Ouml;ffnet ein Untermen&uuml; in dem der Typ des <quote>Zeilenendezeichens</quote>
-das &kwrite; benutzen soll, ausgew&auml;ht werden kann. Zur Auswahl stehen:
-Unix, &Mac; oder MSDOS/&Windows;.</para>
-</listitem>
-</varlistentry>
-
-</variablelist>
-</sect1>
-
-<sect1 id="help">
-<title>Das <guimenuitem>Hilfe</guimenuitem> Men&uuml;</title>
-
-<variablelist>
-<varlistentry>
-<term><anchor id="contents"/><menuchoice>
-<shortcut><keycombo><keycap>F1</keycap></keycombo></shortcut>
-<guimenu><accel>H</accel>ilfe</guimenu>
-<guimenuitem><accel>I</accel>nhalt</guimenuitem></menuchoice></term>
-<listitem>
-<para>Ruft das KDE Hilfesystem auf und zeigt die Startseite f&uuml;r &kwrite; an
-(dieses Dokument).</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="whats-this"/><menuchoice>
-<shortcut><keycombo><keycap>Umschalt</keycap><keycap>F1</keycap></keycombo></shortcut>
-<guimenu><accel>H</accel>ilfe</guimenu>
-<guimenuitem>Was ist <accel>d</accel>as?</guimenuitem></menuchoice></term> <listitem>
-<para>Schaltet den Cursor in eine Kombination aus Pfeil und Fragezeichen um.
-Klicken auf beliebige Bedienungselemente von &kwrite; &ouml;ffnet ein Hilfefenster mit Erkl&auml;rung zu
-diesem Element - wenn diese existiert.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="report-bug"/><menuchoice>
-<guimenu><accel>H</accel>ilfe</guimenu>
-<guimenuitem>Be<accel>r</accel>ichten Sie Probleme oder W&uuml;nsche</guimenuitem>
-</menuchoice></term>
-<listitem>
-<para><action>Dies &ouml;ffnet ein Fenster Problembericht einschicken. Hier
-k&ouml;nnen Sie direkt eine E-Mail an die Entwickler von &kwrite; verfassen.
-W&auml;hlen Sie den Schweregrad und geben Sie (m&ouml;glichst auf Englisch)
-einen Problembericht ein. Auch Berichte &uuml;ber (bisher)
-unerf&uuml;llte W&uuml;nsche sind hier willkommen. Klicken Sie auf Senden, um
-Ihre E-Mail Ihrem System zur Weiterleitung zu &uuml;bergeben.</action></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="about-kwrite"/><menuchoice>
-<guimenu><accel>H</accel>ilfe</guimenu>
-<guimenuitem>&Uuml;<accel>b</accel>er KWrite</guimenuitem></menuchoice></term>
-<listitem>
-<para>Zeigt Versionsinformation, Autor und Lizenzinformationen von &kwrite;
-an.</para> </listitem>
-</varlistentry>
-
-<varlistentry>
-<term><anchor id="about-kde"/><menuchoice>
-<guimenu><accel>H</accel>ilfe</guimenu>
-<guimenuitem>&Uuml;ber <accel>K</accel>DE</guimenuitem></menuchoice></term>
-<listitem>
-<para>Zeigt Versionsinformation und Grunds&auml;tzliches zu KDE an.</para>
-</listitem>
-</varlistentry>
-</variablelist>
-</sect1>
+<term><anchor id="about-kwrite"/><menuchoice> <guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem>&Uuml;<accel>b</accel>er KWrite</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Zeigt Versionsinformation, Autor und Lizenzinformationen von &kwrite; an.</para>
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><anchor id="about-kde"/><menuchoice> <guimenu><accel>H</accel>ilfe</guimenu> <guimenuitem>&Uuml;ber <accel>K</accel>DE</guimenuitem></menuchoice></term>  
+<listitem>  
+<para>Zeigt Versionsinformation und Grunds&auml;tzliches zu KDE an.</para>  
+</listitem>  
+</varlistentry>  
+</variablelist>  
+</sect1>  
 </chapter>
-
-<chapter id="pref-dialog">
+  
+<chapter id="pref-dialog">  
 <title>Einrichten von &kwrite;</title>
 
-<para>Die Auswahl von <menuchoice><guimenu>Einstellungen</guimenu>
-<guimenuitem>Pers&ouml;nliche Einstellungen</guimenuitem></menuchoice> im
-Men&uuml; &ouml;ffnet das Dialogfenster KWrite einrichten. In diesem
-Dialogfenster k&ouml;nnen eine ganze Reihe von Einstellungen vorgenommen werden.
-Die angezeigten Einstellungsm&ouml;glichkeiten h&auml;ngen von der Auswahl eines
-links in der Liste angezeigten Symbols ab. Die drei am unteren Rand des
-Dialogfeldes rufen die <guilabel>Hilfe</guilabel> auf, machen die
-aktuellen Einstellungen mit <guibutton>OK</guibutton> g&uuml;tig, oder
-brechen mit <guibutton>Abbrechen</guibutton> den Einstellungs-Prozess ab.
-Die zur Auswahl stehenden Kategorien -
-<guilabel>Farben</guilabel>,
- <guilabel>Einr&uuml;cken</guilabel>,
- <guilabel>Ausw&auml;hlen</guilabel>,
- <guilabel>Bearbeiten</guilabel> und
- <guilabel>Rechtschreibung</guilabel> sind nachfolgend erl&auml;utert.</para>
+<para>Die Auswahl von <menuchoice><guimenu>Einstellungen</guimenu> <guimenuitem>Pers&ouml;nliche Einstellungen</guimenuitem></menuchoice> im Men&uuml; &ouml;ffnet das Dialogfenster KWrite einrichten. In diesem Dialogfenster k&ouml;nnen eine ganze Reihe von Einstellungen vorgenommen werden. Die angezeigten Einstellungsm&ouml;glichkeiten h&auml;ngen von der Auswahl eines links in der Liste angezeigten Symbols ab. Die drei am unteren Rand des Dialogfeldes rufen die <guilabel>Hilfe</guilabel> auf, machen die aktuellen Einstellungen mit <guibutton>OK</guibutton> g&uuml;tig, oder brechen mit <guibutton>Abbrechen</guibutton> den Einstellungs-Prozess ab. Die zur Auswahl stehenden Kategorien - <guilabel>Farben</guilabel>, <guilabel>Einr&uuml;cken</guilabel>, <guilabel>Ausw&auml;hlen</guilabel>, <guilabel>Bearbeiten</guilabel> und <guilabel>Rechtschreibung</guilabel> sind nachfolgend erl&auml;utert.</para>
 
+  
 <sect1 id="prefcolors">
 <title>Farben</title>
+  
+<para>In diesem Abschnitt k&ouml;nnen f&uuml;nf verschiedene <link linkend="pref-color-settings">Farbeinstellungen</link> vorgenommen werden. Das Anklicken der speziellen gro&szlig;en Kn&ouml;pfe &ouml;ffnet jeweils ein Dialogfeld zum Einstellen der Farbe. Die Kn&ouml;pfe nehmen die jeweils eingestellte Farbe an.</para>  
+  
+<para>Im Dialogfeld Farben k&ouml;nen Sie einfach und bequem die gew&uuml;nschte Farbe ausw&auml;hlen. Das rechteckige Feld links oben zeigt ein Spektrum der verf&uuml;gbaren Farben an. Der Balken gleich rechts daneben zeigt die Helligkeit von der hellsten Einstellung oben bis zur dunkelsten Einstellung unten an. Sie k&ouml;nnen die gew&uuml;nschte Farbe durch Klicken auf den Farbton links ausw&auml;hlen und dann die Helligkeit durch Klicken auf den Balken einstellen. Die Werte f&uuml;r die Grundfarben Rot, Gr&uuml;n und Blau sowie Helligkeit und S&auml;ttigung werden in numerischer Form in den Feldern links unten angezeigt. Sie k&ouml;nnen auch die gew&uuml;nschten Werte direkt hier eingeben. Das kleinen Quadrat unten in der Mitte zeigt die aktuel eingestellte Farbe an. Das Feld unten rechts <guilabel>HTML</guilabel>: zeigt den Farbcode in <acronym>HTML</acronym> an, wie er f&uuml;r Webseiten verwendet wird.</para>  
+  
+<para>Die Pipette rechts dient zum Einfangen einer Farbe irgendwo auf dem Bildschirm. Wenn Sie diesen Knopf anklicken, dann &auml;ndert sich das Aussehen des Cursors in ein feines Kreuz. Wenn Sie mit diesem Kreuz dann irgendeinen Punkt auf dem Bildschirm anklicken, dann werden die Einstellungen f&uuml;r die Farbe dieses Punktes &uuml;bernommen.</para>  
+  
+<para>Weiterhin gibt es die M&ouml;glichkeit, mit dem Knopf "Zu eigenen Farben hinzuf&uuml;gen" eine eingestellte Farbe zu einer <quote>Pers&ouml;nlichen Palette</quote> hinzuzuf&uuml;gen. Diese Palette steht zur Verf&uuml;gung, wenn Sie Eigene Farben im Auswahlfeld rechts oben ausw&auml;hlen. Zus&auml;tzlich stehen noch einige vordefinierte Paletten bereit.</para>
+  
+<variablelist>  
+  
+<varlistentry id="pref-color-settings">  
+<term><guilabel>Hintergrund:</guilabel></term>  
+<listitem><para>Stellt die generelle Hintergrundfarbe ein.</para></listitem>   
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Texthintergrund:</guilabel></term>  
+<listitem><para>Stellt die Hintergrundfarbe ein, die zum Hinterlegen von Text verwendet wird.</para></listitem>  
+</varlistentry>   
+  
+<varlistentry>  
+<term><guilabel>Ausgew&auml;hlt:</guilabel></term>  
+<listitem><para>Stellt die Hintergrundfarbe ein, die zur Darstellung von ausgew&auml;hltem Text verwendet wird.</para></listitem> </varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Gefunden:</guilabel></term>  
+<listitem><para>Stellt die Hintergrundfarbe ein, die zur Darstellung von Text verwendet wird, der mit <link linkend="find">Suche</link> gefunden wurde.</para></listitem> </varlistentry>   
+  
+<varlistentry>  
+<term><guilabel>Ausgew&auml;hlt + Gefunden:</guilabel></term>  
+<listitem><para>Stellt die Hintergrundfarbe ein, die zur Darstellung von Text verwendet wird, der mit <link linkend="find">Suche</link> gefunden wurde und sich au&szlig;erdem in einem ausgew&auml;hlten Bereich befindet.</para></listitem>  
+</varlistentry>   
+  
+</variablelist>  
+</sect1>  
+  
+<sect1 id="pref-indent">  
+<title>Einr&uuml;cken</title>  
+<variablelist>  
+  
+<varlistentry>  
+<term><guilabel>Automatisch einr&uuml;cken</guilabel></term> <listitem><para>Ankreuzen dieser Option sorgt daf&uuml;r, dass neue Zeilen genauso einger&uuml;ckt werden wie die dar&uuml;berstehende Zeile.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Mit Leerzeichen einr&uuml;cken</guilabel></term> <listitem><para>Anstelle von Tabulatoren werden zum Einr&uuml;cken Leerzeichen verwendet. Die Anzahl der Leerzeichen wird im Feld Tabulator-Breite in der Sektion Bearbeiten der Einstellungen... vorgenommen.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>R&uuml;cktasten-Ausr&uuml;ckung</guilabel></term>  
+<listitem><para>Wenn dieses Feld angekreuzt ist, kann die <keycombo><keycap>R&uuml;cktaste</keycap></keycombo>-Taste zum Ausr&uuml;cken benutzt werden.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Tabulator-Einr&uuml;ckung</guilabel></term> <listitem><para>Wenn dieses Feld angekreuzt ist, kann die <keycombo><keycap>Tab</keycap></keycombo>-Taste zum Einr&uuml;cken benutzt werden.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Einr&uuml;ckung und Profil speichern</guilabel></term> <listitem><para>Wenn dieses Feld angekreuzt ist, werden die Einstellungen f&uuml;r das Einr&uuml;cken gespeichert und automatisch f&uuml;r beim Neustart von &kwrite; wieder verwendet.</para>  
+</listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Zus&auml;tzliche Leerzeichen beibehalten</guilabel></term>  
+<listitem><para>Einr&uuml;ckungen von mehr als der voreingestellten Anzahl von Leerzeichen werden nicht gek&uuml;rzt.</para></listitem>  
+</varlistentry>  
+  
+</variablelist>  
+</sect1>  
+  
+<sect1 id="pref-select">  
+<title>Ausw&auml;hlen</title>  
+<variablelist>  
+  
+<varlistentry>  
+<term><guilabel>Durchgehende Auswahl</guilabel></term>  
+<listitem><para>Diese Einstellung verhindert, dass beim Bewegen des Cursors mit den Pfeiltasten Textauswahl ausgelassen wird.</para><note><para>(Beachten Sie: Wenn die Option Auswahl &uuml;berschreiben aktiv ist, dann ersetzt jedes eingegebene Zeichen oder Einf&uuml;geoperation den ausgew&auml;hlten Text.)</para></note></listitem> </varlistentry>  
+  
+<varlistentry> <term><guilabel>Auswahl &uuml;berschreiben</guilabel></term>  
+<listitem><para>Jedes eingegebene Zeichen oder Einf&uuml;geoperation ersetzt(&uuml;berschreibt) den ausgew&auml;hlten Text.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Automatisch mit Maus kopieren</guilabel></term> <listitem><para>Text, der mit der Maus ausgew&auml;hlt wird, wird automatisch in die Zwischenablage kopiert.</para></listitem>  
+</varlistentry>  
 
-<para>In diesem Abschnitt k&ouml;nnen f&uuml;nf verschiedene
-<link linkend="pref-color-settings">Farbeinstellungen</link> vorgenommen
-werden. Das Anklicken der speziellen gro&szlig;en Kn&ouml;pfe &ouml;ffnet
-jeweils ein Dialogfeld zum Einstellen der Farbe. Die Kn&ouml;pfe nehmen
-die jeweils eingestellte Farbe an.</para>
-
-<para>Im Dialogfeld Farben k&ouml;nen Sie einfach und bequem die
-gew&uuml;nschte Farbe ausw&auml;hlen. Das rechteckige Feld links oben
-zeigt ein Spektrum der verf&uuml;gbaren Farben an. Der Balken gleich
-rechts daneben zeigt die Helligkeit von der hellsten Einstellung oben
-bis zur dunkelsten Einstellung unten an. Sie k&ouml;nnen die gew&uuml;nschte
-Farbe durch Klicken auf den Farbton links ausw&auml;hlen und dann
-die Helligkeit durch Klicken auf den Balken einstellen. Die Werte f&uuml;r
-die Grundfarben Rot, Gr&uuml;n und Blau sowie Helligkeit und S&auml;ttigung
-werden in numerischer Form in den Feldern links unten angezeigt. Sie
-k&ouml;nnen auch die gew&uuml;nschten Werte direkt hier eingeben. Das
-kleinen Quadrat unten in der Mitte zeigt die aktuel eingestellte Farbe an.
-Das Feld unten rechts <guilabel>HTML</guilabel>: zeigt den Farbcode in
-<acronym>HTML</acronym> an, wie er f&uuml;r Webseiten verwendet wird.</para>
-
-<para>Die Pipette rechts dient zum Einfangen einer Farbe irgendwo auf dem
-Bildschirm. Wenn Sie diesen Knopf anklicken, dann &auml;ndert sich
-das Aussehen des Cursors in ein feines Kreuz. Wenn Sie mit diesem Kreuz dann
-irgendeinen Punkt auf dem Bildschirm anklicken, dann werden die Einstellungen
-f&uuml;r die Farbe dieses Punktes &uuml;bernommen.</para>
-
-<para>Weiterhin gibt es die M&ouml;glichkeit, mit dem Knopf "Zu
-eigenen Farben hinzuf&uuml;gen" eine eingestellte Farbe zu einer
-<quote>Pers&ouml;nlichen Palette</quote> hinzuzuf&uuml;gen. Diese Palette steht
-zur Verf&uuml;gung, wenn Sie Eigene Farben im Auswahlfeld rechts oben
-ausw&auml;hlen. Zus&auml;tzlich stehen noch einige vordefinierte Paletten
-bereit.</para>
-
-<variablelist>
-
-<varlistentry id="pref-color-settings">
-<term><guilabel>Hintergrund:</guilabel></term>
-<listitem><para>Stellt die generelle Hintergrundfarbe ein.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Texthintergrund:</guilabel></term>
-<listitem><para>Stellt die Hintergrundfarbe ein, die zum Hinterlegen von Text
-verwendet wird.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Ausgew&auml;hlt:</guilabel></term>
-<listitem><para>Stellt die Hintergrundfarbe ein, die zur Darstellung von
-ausgew&auml;hltem Text verwendet wird.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Gefunden:</guilabel></term>
-<listitem><para>Stellt die Hintergrundfarbe ein, die zur Darstellung von
-Text verwendet wird, der mit <link linkend="find">Suche</link> gefunden
-wurde.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Ausgew&auml;hlt + Gefunden:</guilabel></term>
-<listitem><para>Stellt die Hintergrundfarbe ein, die zur Darstellung von
-Text verwendet wird, der mit <link linkend="find">Suche</link> gefunden
-wurde und sich au&szlig;erdem in einem ausgew&auml;hlten Bereich
-befindet.</para></listitem>
-</varlistentry>
-
-</variablelist>
-</sect1>
-
-<sect1 id="pref-indent">
-<title>Einr&uuml;cken</title>
-<variablelist>
-
-<varlistentry>
-<term><guilabel>Automatisch einr&uuml;cken</guilabel></term>
-<listitem><para>Ankreuzen dieser Option sorgt daf&uuml;r, dass neue Zeilen
-genauso einger&uuml;ckt werden wie die dar&uuml;berstehende Zeile.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Mit Leerzeichen einr&uuml;cken</guilabel></term>
-<listitem><para>Anstelle von Tabulatoren werden zum Einr&uuml;cken Leerzeichen
-verwendet. Die Anzahl der Leerzeichen wird im Feld Tabulator-Breite in der
-Sektion Bearbeiten der Einstellungen... vorgenommen.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>R&uuml;cktasten-Ausr&uuml;ckung</guilabel></term>
-<listitem><para>Wenn dieses Feld angekreuzt ist, kann die
-<keycombo><keycap>R&uuml;cktaste</keycap></keycombo>-Taste zum Ausr&uuml;cken benutzt werden.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Tabulator-Einr&uuml;ckung</guilabel></term> <listitem><para>Wenn
-dieses Feld angekreuzt ist, kann die <keycombo><keycap>Tab</keycap></keycombo>-Taste zum
-Einr&uuml;cken benutzt werden.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Einr&uuml;ckung und Profil speichern</guilabel></term> <listitem><para>Wenn
-dieses Feld angekreuzt ist, werden die Einstellungen f&uuml;r das Einr&uuml;cken gespeichert
-und automatisch f&uuml;r beim Neustart von &kwrite; wieder verwendet.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Zus&auml;tzliche Leerzeichen beibehalten</guilabel></term>
-<listitem><para>Einr&uuml;ckungen von mehr als der voreingestellten Anzahl von
-Leerzeichen werden nicht gek&uuml;rzt.</para></listitem>
-</varlistentry>
-</variablelist>
-</sect1>
-
-<sect1 id="pref-select">
-<title>Ausw&auml;hlen</title>
-
-<variablelist>
-<varlistentry>
-<term><guilabel>Durchgehende Auswahl</guilabel></term>
-<listitem><para>Diese Einstellung verhindert, dass beim Bewegen des Cursors mit den
-Pfeiltasten Textauswahl ausgelassen wird. </para><note><para>(Beachten Sie: Wenn die Option
-Auswahl &uuml;berschreiben aktiv ist, dann ersetzt jedes eingegebene Zeichen oder
-Einf&uuml;geoperation den ausgew&auml;hlten Text.)</para></note></listitem> </varlistentry>
-
-<varlistentry> <term><guilabel>Auswahl &uuml;berschreiben</guilabel></term>
-<listitem><para>Jedes eingegebene Zeichen oder
-Einf&uuml;geoperation ersetzt(&uuml;berschreibt) den ausgew&auml;hlten Text. </para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Automatisch mit Maus kopieren</guilabel></term> <listitem><para>Text, der mit der
-Maus ausgew&auml;hlt wird, wird automatisch in die Zwischenablage kopiert.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Einfache Auswahl nach dem X11-Standard</guilabel></term>
-<listitem><para>Diese Einstellung wird noch nicht verwendet.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Vertikale Auswahl</guilabel></term> <listitem><para>Wenn diese Option
-aktiviert ist, erfolgt die Auswahl in Rechteckform und nicht in ganzen Zeilen,
-sobald der Cursor vertikal bewegt wird.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term>Alt Ein/Aus</term> <listitem><para>Diese Einstellung wird noch nicht verwendet.</para></listitem>
-</varlistentry>
-
-</variablelist>
-</sect1>
-
-<sect1 id="pref-edit">
-<title>Bearbeiten</title>
-<variablelist>
-<varlistentry>
-<term id="pref-word-wrap"><guilabel>Zeilenumbruch</guilabel></term>
-<listitem>
-<para>Zeilenumbruch ist eine Funktion, die bewirkt, dass der Editor automatisch
-eine neue Texteile beginnt und den Cursor an den Anfang dieser neuen Zeile
-verschiebt. Wenn diese Option aktiv ist, beginnt &kwrite; automatisch eine neue
-Zeile, sobald die aktuelle Zeile die L&auml;nge erreicht, die im Feld
-<link linkend="pref-wrap-words-at">Zeilenumbruch bei:</link> angegeben ist.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term id="pref-wrap-words-at">
-<guilabel>Zeilenumbruch bei:</guilabel></term>
-<listitem><para>Wenn die <link linkend="pref-word-wrap">Zeilenumbruch</link>
-Option aktiv ist, bestimmt dieses Feld, beim Erreichen welcher Position &kwrite; eine
-neue Zeile beginnt.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term id="pref-replace-tabs-by-spaces">
-<guilabel>Tabs durch Leerzeichen ersetzen</guilabel></term>
-<listitem><para>Wenn diese Option aktiv ist, ersetzt &kwrite; eingegebene Tabulatoren
-durch die im Feld <link linkend="pref-tab-width">Tabulator-Breite:</link>
-eingestellte Anzahl Leerzeichen.
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term id="pref-tab-width">Tabulator-Breite:</term>
-<listitem><para>Wenn die Option <link linkend="pref-word-wrap">
-<guilabel>Tabs durch Leerzeichen ersetzen</guilabel></link>
-aktiv ist, gibt dieses Feld die Anzahl der Leerzeichen an, die an
-Stelle eines Tabs treten.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Leerzeichen am Zeilenende entfernen</guilabel></term>
-<listitem><para>Wenn diese Option aktiv ist, entfernt &kwrite;
-automatisch alle zus&auml;tzlichen Leerzeichen an Zeilenenden.
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Automatische Klammern</guilabel></term>
-<listitem><para>Wenn dies Option aktiv ist, setzt &kwrite; beim Eingeben einer
-linken Klammer  automatisch eine rechte Klammer des
-gleichen Typs rechts vom Cursor. Diese braucht dann zum Schlie&szlig;en der Klammer
-nur noch &uuml;bersprungen zu werden.</para></listitem>
+<varlistentry>  
+<term><guilabel>Einfache Auswahl nach dem X11-Standard</guilabel></term>  
+<listitem><para>Diese Einstellung wird noch nicht verwendet.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Vertikale Auswahl</guilabel></term> <listitem><para>Wenn diese Option aktiviert ist, erfolgt die Auswahl in Rechteckform und nicht in ganzen Zeilen, sobald der Cursor vertikal bewegt wird.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term>Alt Ein/Aus</term> <listitem><para>Noch nicht verf&uuml;gbar.</para></listitem>  
+</varlistentry>  
+  
+</variablelist>  
+</sect1>  
+  
+<sect1 id="pref-edit">  
+<title>Bearbeiten</title>  
+<variablelist>  
+<varlistentry>  
+<term id="pref-word-wrap"><guilabel>Zeilenumbruch</guilabel></term>  
+<listitem><para>Zeilenumbruch ist eine Funktion, die bewirkt, dass der Editor automatisch eine neue Texteile beginnt und den Cursor an den Anfang dieser neuen Zeile verschiebt. Wenn diese Option aktiv ist, beginnt &kwrite; automatisch eine neue Zeile, sobald die aktuelle Zeile die L&auml;nge erreicht, die im Feld <link linkend="pref-wrap-words-at">Zeilenumbruch bei:</link> angegeben ist.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term id="pref-wrap-words-at"><guilabel>Zeilenumbruch bei:</guilabel></term><listitem><para>Wenn die <link linkend="pref-word-wrap">Zeilenumbruch</link> Option aktiv ist, bestimmt dieses Feld, beim Erreichen welcher Position &kwrite; eine neue Zeile beginnt.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term id="pref-replace-tabs-by-spaces"><guilabel>Tabs durch Leerzeichen ersetzen</guilabel></term> <listitem><para>Wenn diese Option aktiv ist, ersetzt &kwrite; eingegebene Tabulatoren durch die im Feld <link linkend="pref-tab-width">Tabulator-Breite:</link> eingestellte Anzahl Leerzeichen.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term id="pref-tab-width">Tabulator-Breite:</term> <listitem><para>Wenn die Option <link linkend="pref-word-wrap"> <guilabel>Tabs durch Leerzeichen ersetzen</guilabel></link> aktiv ist, gibt dieses Feld die Anzahl der Leerzeichen an, die an Stelle eines Tabs treten.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Leerzeichen am Zeilenende entfernen</guilabel></term>  
+<listitem><para>Wenn diese Option aktiv ist, entfernt &kwrite; automatisch alle zus&auml;tzlichen Leerzeichen an Zeilenenden.</para></listitem> </varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Automatische Klammern</guilabel></term> <listitem><para>Wenn dies Option aktiv ist, setzt &kwrite; beim Eingeben einer linken Klammer automatisch eine rechte Klammer des gleichen Typs rechts vom Cursor. Diese braucht dann zum Schlie&szlig;en der Klammer nur noch &uuml;bersprungen zu werden.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term id="group-undos"><guilabel>R&uuml;ckg&auml;ngig gruppieren</guilabel></term>
-<listitem><para>Wenn diese Option aktiv ist, werden von &kwrite; Folgen von
-gleichartigen Aktionen als ein <link linkend="undo">R&uuml;ckg&auml;ngig</link>-Schritt
-angesehen. Wenn Sie Text eingeben, ohne dass die Eingabe durch die R&uuml;cktaste
-oder Cursorbewegungen unterbrochen wurde, enfernt &kwrite; bei R&uuml;ckg&auml;ngig
-alle seit der letzten Unterbrechnung eingegebenen Zeichen auf einmal.
-</para><para>
-Wenn diese Option nicht aktiv ist, betrachtet &kwrite; jeden Tastendruck als
-einen Schritt. Zum Entfernen des letzten eingegebenen Wortes w&auml;ren dann
-mehrere R&uuml;ckg&auml;ngig-Schritte notwendig.</para></listitem>
-</varlistentry>
-
-<varlistentry> <term><guilabel>Tabulatoren anzeigen</guilabel></term>
-<listitem><para>Wenn diese Option aktiv ist, zeigt &kwrite; ein Symbol
-an, wo ein Tabulator vorhanden ist.</para></listitem>
-</varlistentry>
+<listitem><para>Wenn diese Option aktiv ist, werden von &kwrite; Folgen von gleichartigen Aktionen als ein <link linkend="undo">R&uuml;ckg&auml;ngig</link>-Schritt angesehen. Wenn Sie Text eingeben, ohne dass die Eingabe durch die R&uuml;cktaste oder Cursorbewegungen unterbrochen wurde, enfernt &kwrite; bei R&uuml;ckg&auml;ngig alle seit der letzten Unterbrechnung eingegebenen Zeichen auf einmal.</para>
+<para>Wenn diese Option nicht aktiv ist, betrachtet &kwrite; jeden Tastendruck als einen Schritt. Zum Entfernen des letzten eingegebenen Wortes w&auml;ren dann mehrere R&uuml;ckg&auml;ngig-Schritte notwendig.</para></listitem>  
+</varlistentry>  
+  
+<varlistentry> <term><guilabel>Tabulatoren anzeigen</guilabel></term>  
+<listitem><para>Wenn diese Option aktiv ist, zeigt &kwrite; ein Symbol an, wo ein Tabulator vorhanden ist.</para></listitem>  
+</varlistentry>  
 
 <varlistentry>
 <term><guilabel>Intelligente Pos1-Taste</guilabel></term>
-<listitem><para>Diese Funktion ist noch nicht vorhanden.</para></listitem>
+<listitem><para>Noch nicht verf&uuml;gbar.</para></listitem>
 </varlistentry>
-
 <varlistentry>
 <term><guilabel>Bild Auf/Ab bewegt Cursor</guilabel></term>
-<listitem><para>Diese Option ver&auml;ndert das Verhalten des Cursors, wenn die
-<keycap>Bild auf</keycap>- oder <keycap>Bild ab</keycap>-Taste gedr&uuml;ckt
-wird. Wenn diese Option ausgeschaltet ist, dann bleibt der Cursor beim
-Bet&auml;tigen einer dieser Tasten an seiner Position innerhalb des Fensters.
-Wenn der Cursor in der Mitte des Fensters ist, dann bleibt dieser auch dort
-(au&szlig;er beim Erreichen von Anfang oder Ende der Datei). Bei eingeschalteter
-Funktion bewirkt der erste Tastendruck auf eine dieser Tasten, dass der Cursor
-an den Anfang oder das Ende des sichtbaren Textes bewegt wird.</para></listitem>
+<listitem><para>Diese Option ver&auml;ndert das Verhalten des Cursors, wenn die <keycap>Bild auf</keycap>- oder <keycap>Bild ab</keycap>-Taste gedr&uuml;ckt wird. Wenn diese Option ausgeschaltet ist, dann bleibt der Cursor beim Bet&auml;tigen einer dieser Tasten an seiner Position innerhalb des Fensters. Wenn der Cursor in der Mitte des Fensters ist, dann bleibt dieser auch dort (au&szlig;er beim Erreichen von Anfang oder Ende der Datei). Bei eingeschalteter Funktion bewirkt der erste Tastendruck auf eine dieser Tasten, dass der Cursor an den Anfang oder das Ende des sichtbaren Textes bewegt wird.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Zeilenumbruch am Cursor</term>
-<listitem><para>Wenn diese Option aktiv ist, springt der Cursor an den Anfang
-der n&auml;chsten Zeile, sobald dieser mit der Cursortaste &uuml;ber den rechten
-Rand der Zeile hinaus bewegt wird. Wenn versucht wird, den Cursor nach links
-&uuml;ber den Zeilenanfang hinaus zu bewegen, springt dieser an das Ende der
-vorhergehenden Zeile.
-Wenn diese Option nicht aktiv ist, springt der Cursor am Zeilenende auf der
-selben Zeile weiter nach rechts und tut nichts, wenn am Zeilenanfang versucht
-wird, weiter nach links zu gehen.</para></listitem>
+<term>Zeilenumbruch am Cursor</term> <listitem><para>Wenn diese Option aktiv ist, springt der Cursor an den Anfang der n&auml;chsten Zeile, sobald dieser mit der Cursortaste &uuml;ber den rechten Rand der Zeile hinaus bewegt wird. Wenn versucht wird, den Cursor nach links &uuml;ber den Zeilenanfang hinaus zu bewegen, springt dieser an das Ende der vorhergehenden Zeile. Wenn diese Option nicht aktiv ist, springt der Cursor am Zeilenende auf der selben Zeile weiter nach rechts und tut nichts, wenn am Zeilenanfang versucht wird, weiter nach links zu gehen.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Anzahl <link linkend="undo">R&uuml;ckg&auml;ngig</link></term>
-<listitem><para>Dieses Feld gibt die Anzahl der Schritte an, die im
-im Speicher f&uuml;r R&uuml;ckg&auml;ngig gespeichert werden. Wenn hier 10
-steht, hei&szlig;t das, dass Sie die letzten 10 Schritte mit R&uuml;ckg&auml;ngig
-ungeschehen machen k&ouml;nnen.</para></listitem>
-</varlistentry>
+<term>Anzahl <link linkend="undo">R&uuml;ckg&auml;ngig</link></term> <listitem><para>Dieses Feld gibt die Anzahl der Schritte an, die im im Speicher f&uuml;r R&uuml;ckg&auml;ngig gespeichert werden. Wenn hier 10 steht, hei&szlig;t das, dass Sie die letzten 10 Schritte mit R&uuml;ckg&auml;ngig ungeschehen machen k&ouml;nnen.</para></listitem> </varlistentry>
 
 </variablelist>
 </sect1>
 
 <sect1 id="prefspellchecker">
-<title>Rechtschreibung...</title> <para>Die Rechtschreibpr&uuml;fung ist ein
-Programm zum Finden und Berichtigen von Schreibfehlern. In diesem Abschnitt
-werden die wichtigen Einstellungen hierzu vorgenommen.</para>
+<title>Rechtschreibung...</title> <para>Die Rechtschreibpr&uuml;fung ist ein Programm zum Finden und Berichtigen von Schreibfehlern. In diesem Abschnitt werden die wichtigen Einstellungen hierzu vorgenommen.</para>
 <variablelist>
 
 <varlistentry>
-<term><guilabel>Kombinationen aus Wortstamm+Zus&auml;tzen erstellen, die nicht
-im W&ouml;rterbuch stehen</guilabel></term>
-<listitem><para>Bei Auswahl dieser Funktion werden
-Wortst&auml;mme mit Vor- oder Nachsilben als richtig erkannt, auch wenn diese
-Schreibung nicht im W&ouml;rterbuch enthalten ist.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Zusammengezogene W&ouml;rter als Rechtschreibfehler
-betrachten</guilabel></term>
-<listitem><para>Bei Auswahl dieser Funktion werden
-zwei korrekt geschriebene W&ouml;rter als Fehler erkannt, wenn sie
-zusammengeschrieben sind.</para></listitem>
+<term><guilabel>Kombinationen aus Wortstamm+Zus&auml;tzen erstellen, die nicht im W&ouml;rterbuch stehen</guilabel></term> <listitem><para>Bei Auswahl dieser Funktion werden Wortst&auml;mme mit Vor- oder Nachsilben als richtig erkannt, auch wenn diese Schreibung nicht im W&ouml;rterbuch enthalten ist.</para></listitem>
 
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>W&ouml;rterbuch:</guilabel></term>
-<listitem><para>Abh&auml;ngig von der spezifischen Installation k&ouml;nnen
-mehrere W&ouml;rterb&uuml;cher vorhanden sein. Diese DROPDOWNBOX erm&ouml;glicht
-die Einstellung des von der Rechtschreibpr&uuml;fung zu benutzenden
-W&ouml;rterbuches.</para></listitem>
+<term><guilabel>Zusammengezogene W&ouml;rter als Rechtschreibfehler betrachten</guilabel></term> <listitem><para>Bei Auswahl dieser Funktion werden zwei korrekt geschriebene W&ouml;rter als Fehler erkannt, wenn sie zusammengeschrieben sind.</para></listitem>
 
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Kodierung:</guilabel></term> <listitem><para>Hier erfolgt die
-Auswahl des benutzten Codesystems und des Zeichensatzes, so dass die
-Rechtschreibpr&uuml;fung korrekt arbeiten kann.</para></listitem> </varlistentry>
+<term><guilabel>W&ouml;rterbuch:</guilabel></term> <listitem><para>Abh&auml;ngig von der spezifischen Installation k&ouml;nnen mehrere W&ouml;rterb&uuml;cher vorhanden sein. Diese DROPDOWNBOX erm&ouml;glicht die Einstellung des von der Rechtschreibpr&uuml;fung zu benutzenden W&ouml;rterbuches.</para></listitem>
+  
+</varlistentry>  
+  
+<varlistentry>  
+<term><guilabel>Kodierung:</guilabel></term> <listitem><para>Hier erfolgt die Auswahl des benutzten Codesystems und des Zeichensatzes, so dass die Rechtschreibpr&uuml;fung korrekt arbeiten kann.</para></listitem> </varlistentry>
 
 <varlistentry>
-<term><guilabel>Programm:</guilabel></term> <listitem><para>Weil &kwrite; keine
-eigene Rechtschreibpr&uuml;fung enth&auml;lt, muss hier eine externe
-Rechtschreibpr&uuml;fung ausgew&auml;hlt werden.</para></listitem> </varlistentry>
+<term><guilabel>Programm:</guilabel></term> <listitem><para>Weil &kwrite; keine eigene Rechtschreibpr&uuml;fung enth&auml;lt, muss hier eine externe Rechtschreibpr&uuml;fung ausgew&auml;hlt werden.</para></listitem> </varlistentry>
 
 </variablelist>
 </sect1>
@@ -1360,210 +892,138 @@ Rechtschreibpr&uuml;fung ausgew&auml;hlt werden.</para></listitem> </varlistentr
 <chapter id="pref-highlighting">
 <title>Hervorhebungsmodus einrichten...</title>
 
-<para>Der Dialog <guilabel>Hervorhebungsmodus einrichten...</guilabel>
-besteht aus zwei Seiten: <guilabel>Standards</guilabel> und
-<guilabel>Hervorhebungsmodi</guilabel>. Der Nutzer kann die gew&uuml;nschte
-Seite durch Klicken auf die entsprechende Karteikarte oben im Dialogfenster
-aufrufen.</para>
+<para>Der Dialog <guilabel>Hervorhebungsmodus einrichten...</guilabel> besteht aus zwei Seiten: <guilabel>Standards</guilabel> und <guilabel>Hervorhebungsmodi</guilabel>. Der Nutzer kann die gew&uuml;nschte Seite durch Klicken auf die entsprechende Karteikarte oben im Dialogfenster aufrufen.</para>
 
-<para>Auf der Seite <guilabel>Standars</guilabel> sind folgende
-Einstellungsm&ouml;glichkeiten vorhanden:</para>
+<para>Auf der Seite <guilabel>Standars</guilabel> sind folgende Einstellungsm&ouml;glichkeiten vorhanden:</para>
 
 <variablelist>
 <varlistentry>
 <term><guilabel>Standard-Elementstile</guilabel></term>
-<listitem><para>Hier k&ouml;nnen Sie das Standardaussehen f&uuml;r bestimmte
-Elemente einstellen. Das erleichtert das Erkennen verschiedener (Typen) von
-Elementen in Quelltext.</para>
+<listitem><para>Hier k&ouml;nnen Sie das Standardaussehen f&uuml;r bestimmte Elemente einstellen. Das erleichtert das Erkennen verschiedener (Typen) von Elementen in Quelltext.</para>
 
 <variablelist>
 <varlistentry>
 <term><guilabel>Element:</guilabel></term>
-<listitem><para>Dieses Auswahlfeld stellt eine Reihe von Elementen bereit, die
-der Nutzer eventuell hervorgehoben angezeigt bekommen m&ouml;chten.
-<guilabel>Normal</guilabel> f&uuml;r Elemente die nicht in eine der
-anderen Katergorien passen,
-<guilabel>Kommentar</guilabel>, <guilabel>Zeichenkette</guilabel>,
-<guilabel>Stichwort</guilabel> und einige andere sind enthalten. Nicht alle
-diese Elemente m&uuml;ssen f&uuml;r jede Programmiersprache eingerichtet
-werden, so dass der Nutzer nur die Elemente, die er braucht,
-ausw&auml;hlen muss. Die Einstellungen, die in diesem Abschnitt
-beschrieben werden, werden auf das in diesem Auswahlfeld ausgew&auml;hlte
-Element angewendet.</para></listitem> </varlistentry>
+<listitem><para>Dieses Auswahlfeld stellt eine Reihe von Elementen bereit, die der Nutzer eventuell hervorgehoben angezeigt bekommen m&ouml;chten. <guilabel>Normal</guilabel> f&uuml;r Elemente die nicht in eine der anderen Katergorien passen, <guilabel>Kommentar</guilabel>, <guilabel>Zeichenkette</guilabel>, <guilabel>Stichwort</guilabel> und einige andere sind enthalten. Nicht alle diese Elemente m&uuml;ssen f&uuml;r jede Programmiersprache eingerichtet werden, so dass der Nutzer nur die Elemente, die er braucht, ausw&auml;hlen muss. Die Einstellungen, die in diesem Abschnitt beschrieben werden, werden auf das in diesem Auswahlfeld ausgew&auml;hlte Element angewendet.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Normal</guilabel></term>
+<listitem><para>Hier w&auml;hlt der Nutzer die Farbe f&uuml;r die Normalelemente aus. Dies erfolgt durch ein Farbauswahldialogfenster. Weitere Informationen zu diesem Dialogfenster finden Sie im Abschnitt <link linkend="prefcolors">Farben</link> im Kapitel <link linkend="pref-dialog">Einrichten von &kwrite;</link>.</para>
 
-<varlistentry> <term><guilabel>Normal</guilabel></term>
-<listitem><para>Hier w&auml;hlt der Nutzer die Farbe f&uuml;r die Normalelemente
-aus. Dies erfolgt durch ein Farbauswahldialogfenster. Weitere Informationen zu
-diesem Dialogfenster finden Sie im Abschnitt <link
-linkend="prefcolors">Farben</link> im Kapitel <link
-linkend="pref-dialog">Einrichten von &kwrite;</link>.</para></listitem>
+</listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Fett</guilabel></term>
-<listitem><para>Aktivieren Sie diese Option, wenn das Element fettgedruckt
-angezeigt werden soll.</para></listitem> </varlistentry>
-
+<listitem><para>Aktivieren Sie diese Option, wenn das Element fettgedruckt angezeigt werden soll.</para></listitem>
+</varlistentry>
 <varlistentry>
 <term><guilabel>Kursiv</guilabel></term>
-<listitem><para>Aktivieren Sie diese Option, wenn das Element in
-Kursivschrift angezeigt werden soll.</para></listitem>
+<listitem><para>Aktivieren Sie diese Option, wenn das Element in Kursivschrift angezeigt werden soll.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Ausgew&auml;hlt</guilabel></term>
-<listitem><para>Farbe, die das Element haben
-soll, wenn es ausgew&auml;hlt (markiert) ist. Dies erfolgt durch ein
-Farbauswahldialogfenster. Weitere Informationen zu diesem Dialogfenster finden
-Sie im Abschnitt <link linkend="prefcolors">Farben</link> im Kapitel <link
-linkend="pref-dialog">Einrichten von &kwrite;</link>.
-</para></listitem></varlistentry>
-</variablelist> </listitem> </varlistentry>
+<term><guilabel>Ausgew&auml;hlt:</guilabel></term>
+<listitem><para>Farbe, die das Element haben soll, wenn es ausgew&auml;hlt (markiert) ist. Dies erfolgt durch ein Farbauswahldialogfenster. Weitere Informationen zu diesem Dialogfenster finden Sie im Abschnitt <link linkend="prefcolors">Farben</link> im Kapitel <link linkend="pref-dialog">Einrichten von &kwrite;</link>.</para>
 
-<varlistentry>
-<term><guilabel>Standardschrift</guilabel></term>
-<listitem><para>Hier kann der Nutzer die f&uuml;r den gesamten Text
-verwendete Schrift einstellen.</para>
-<variablelist>
-
-<varlistentry>
-<term><guilabel>Familie</guilabel></term>
-<listitem><para>Hier wird die Schriftfamilie eingestellt. Standard
-ist "fixed". F&uuml;r die meisten Programmiersprachen ist eine Schrift mit
-gleich breiten Buchstaben die beste Wahl.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Gr&ouml;&szlig;e</guilabel></term>
-<listitem><para>Hier wird die Schriftgr&ouml;&szlig;e eingestellt. Standard ist
-12 Points.</para></listitem> </varlistentry>
-
-<varlistentry>
-<term><guilabel>Zeichensatz</guilabel></term>
-<listitem><para>Hier kann der Nutzer den gew&uuml;nschten
-Zeichensatz ausw&auml;hlen. </para></listitem>
+</listitem>
 </varlistentry>
 </variablelist>
 </listitem>
 </varlistentry>
-</variablelist>
 
-<para>Die Einstellungselemente auf der
-<guilabel>Hervorhebungsmodi</guilabel>seite erlauben weitreichende
-Einstellungen, abh&auml;ngig von der ausgew&auml;hlten
-Programmiersprache.</para>
-<para>Der Nutzer muss nicht alle vorhandenen Optionen einstellen,
-Elemente die nicht eingestellt sind, behalten die Standardeinstellung, wie in
-der <guilabel>Standards</guilabel>seite.</para>
-
-<variablelist>
 <varlistentry>
-<term><guilabel>Auswahl einrichten</guilabel></term>
-<listitem><para>In diesem Feld w&auml;hlen Sie den Elementetyp und die
-Programmiersprache aus, deren Einstellungen Sie ver&auml;ndern wollen. Alle
-anderen Einstellungen werden auf die hier ausgew&auml;hlte Sprache
-angewendet.</para>
+<term><guilabel>Standardschrift</guilabel></term>
+<listitem><para>Hier kann der Nutzer die f&uuml;r den gesamten Text verwendete Schrift einstellen.</para>
+<variablelist>
+
+<varlistentry>
+<term><guilabel>Familie</guilabel></term>
+<listitem><para>Hier wird die Schriftfamilie eingestellt. Standard ist "fixed". F&uuml;r die meisten Programmiersprachen ist eine Schrift mit gleich breiten Buchstaben die beste Wahl.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Gr&ouml;&szlig;e</guilabel></term>
+<listitem><para>Hier wird die Schriftgr&ouml;&szlig;e eingestellt. Standard ist 12 Points.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Zeichensatz</guilabel></term>
+<listitem><para>Hier kann der Nutzer den gew&uuml;nschten Zeichensatz ausw&auml;hlen.</para></listitem>
+</varlistentry>
+</variablelist>  
+</listitem>  
+</varlistentry>  
+</variablelist>  
+  
+<para>Die Einstellungselemente auf der <guilabel>Hervorhebungsmodi</guilabel>seite erlauben weitreichende Einstellungen, abh&auml;ngig von der ausgew&auml;hlten Programmiersprache.</para>
+  
+<para>Der Nutzer muss nicht alle vorhandenen Optionen einstellen, Elemente die nicht eingestellt sind, behalten die Standardeinstellung, wie in der <guilabel>Standards</guilabel>seite.</para>  
+  
+<variablelist>  
+<varlistentry>  
+<term><guilabel>Auswahl einrichten</guilabel></term>  
+<listitem><para>In diesem Feld w&auml;hlen Sie den Elementetyp und die Programmiersprache aus, deren Einstellungen Sie ver&auml;ndern wollen. Alle anderen Einstellungen werden auf die hier ausgew&auml;hlte Sprache angewendet.</para>
 
 <variablelist>
 <varlistentry>
 <term><guilabel>Hervorhebung</guilabel></term>
-<listitem><para>Hier wird die einzurichtende Programmierspracheausgew&auml;hlt.
-</para></listitem> </varlistentry>
-
-<varlistentry>
-<term><guilabel>Element</guilabel></term>
-<listitem><para>Hier wird das einzurichtende Element ausgew&auml;hlt.
-Beachten Sie, dass sich die
-Einstellung nur auf <emphasis>dieses</emphasis> Element in <emphasis>dieser</emphasis>
-Programmiersprache bezieht.</para></listitem> </varlistentry> </variablelist>
-
-<para>Beispiel: Wenn der Nutzer ver&auml;ndern will, wie Kommentare in C++
-angezeigt werden, dann w&auml;hlt er C++ im Feld
-<guilabel>Hervorhebung</guilabel> und Kommentar im Feld
-<guilabel>Element</guilabel>. Wenn Kommentare in allen
-Programmiersprachen anders angezeigt werden sollen , dann wird dies auf
-der <guilabel>Standards</guilabel>seite im Auswahlfeld
-<guilabel>Element</guilabel> Kommentar eingestellt. Dabei bleibt die
-Einstellung f&uuml;r Kommentare f&uuml;r alle Programmiersprachen auf der Seite
-<guilabel>Hervorhebungsmodi</guilabel> unver&auml;ndert.</para> </listitem>
+<listitem><para>Hier wird die einzurichtende Programmierspracheausgew&auml;hlt.</para></listitem>  
 </varlistentry>
+<varlistentry>  
+<term><guilabel>Element:</guilabel></term>  
+<listitem><para>Hier wird das einzurichtende Element ausgew&auml;hlt. Beachten Sie, dass sich die Einstellung nur auf <emphasis>dieses</emphasis> Element in <emphasis>dieser</emphasis> Programmiersprache bezieht.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>Beispiel: Wenn der Nutzer ver&auml;ndern will, wie Kommentare in C++ angezeigt werden, dann w&auml;hlt er C++ im Feld <guilabel>Hervorhebung</guilabel> und Kommentar im Feld <guilabel>Element</guilabel>. Wenn Kommentare in allen Programmiersprachen anders angezeigt werden sollen , dann wird dies auf der <guilabel>Standards</guilabel>seite im Auswahlfeld <guilabel>Element</guilabel> Kommentar eingestellt. Dabei bleibt die Einstellung f&uuml;r Kommentare f&uuml;r alle Programmiersprachen auf der Seite <guilabel>Hervorhebungsmodi</guilabel> unver&auml;ndert.</para> </listitem> </varlistentry>
 
 <varlistentry>
 <term><guilabel>Element-Stil</guilabel></term>
-<listitem><para>Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten
-Elementes ein. Er kann entweder das Ankreuzfeld
-<guilabel>Standard</guilabel> aktivieren, das die Einstellungen aus der Seite
-<guilabel>Standards</guilabel> &uuml;bernimmt, oder das
-Aussehen direkt hier einstellen. Die Einstellungsm&ouml;glichkeiten sind
-dieselben, wie f&uuml;r die <guilabel>Standards</guilabel>seite beschrieben:
-<guilabel>Normal</guilabel>,
-<guilabel>Ausgew&auml;hlt</guilabel>, <guilabel>Fett</guilabel> und
-<guilabel>Kursiv</guilabel> stehen zur Verf&uuml;gung.
-</para></listitem>
-</varlistentry>
+<listitem><para>Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten Elementes ein. Er kann entweder das Ankreuzfeld <guilabel>Standard</guilabel> aktivieren, das die Einstellungen aus der Seite <guilabel>Standards</guilabel> &uuml;bernimmt, oder das Aussehen direkt hier einstellen. Die Einstellungsm&ouml;glichkeiten sind dieselben, wie f&uuml;r die <guilabel>Standards</guilabel>seite beschrieben: <guilabel>Normal</guilabel>, <guilabel>Ausgew&auml;hlt</guilabel>, <guilabel>Fett</guilabel> und <guilabel>Kursiv</guilabel> stehen zur Verf&uuml;gung.</para></listitem> </varlistentry>
 
 <varlistentry>
-<term><guilabel>Automatische Hervorhebungen</guilabel></term>
-<listitem><para>&kwrite; kann automatisch einstellen, f&uuml;r welche
-Hervorhebungen f&uuml;r das ge&ouml;ffnete Dokument angewendet werden sollen.
-Dies geschieht anhand der Dateinamenserweiterung oder anhand des MIME-Typs der
-Datei. Wenn h&auml;ufig mit nicht standardgem&auml;&szlig; bezeichneten
-Dateien gearbeitet wird, kann hier der MIME-Typ oder die Dateinamenserweiterung
-hinzugef&uuml;gt werden. Jokerzeichen sind im Feld
-<guilabel>Dateierweiterungen</guilabel> erlaubt. Z.B. der Standardeintrag
-f&uuml;r C++ ist <userinput>*.cpp;*.cc;*.C;*.h</userinput>. Wenn eine Datei
-<filename>foo.h</filename> ge&ouml;ffnet wird, wendet &kwrite; automatisch die
-Hervorhebungen f&uuml;r die C++ Programmiersprache an.
-</para></listitem>
+<term><guilabel>Automatische Hervorhebungen</guilabel></term>  
+<listitem><para>&kwrite; kann automatisch einstellen, f&uuml;r welche Hervorhebungen f&uuml;r das ge&ouml;ffnete Dokument angewendet werden sollen. Dies geschieht anhand der Dateinamenserweiterung oder anhand des MIME-Typs der Datei. Wenn h&auml;ufig mit nicht standardgem&auml;&szlig; bezeichneten Dateien gearbeitet wird, kann hier der MIME-Typ oder die Dateinamenserweiterung hinzugef&uuml;gt werden. Jokerzeichen sind im Feld <guilabel>Dateierweiterungen</guilabel> erlaubt. Z.B. der Standardeintrag f&uuml;r C++ ist <userinput>*.cpp;*.cc;*.C;*.h</userinput>. Wenn eine Datei <filename>foo.h</filename> ge&ouml;ffnet wird, wendet &kwrite; automatisch die Hervorhebungen f&uuml;r die C++ Programmiersprache an.</para></listitem>
 </varlistentry>
-
-<varlistentry> <term><guilabel>Element-Schrift</guilabel></term>
-<listitem><para>Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten
-Elementes ein.</para><para>Es kann entweder das Ankreuzfeld
-<guilabel>Standard</guilabel> aktiviert werden, das die Einstellungen aus der
-Seite <guilabel>Standards</guilabel> &uuml;bernimmt, oder es kann das Aussehen
-direkt hier eingestellt werden. Die Einstellungsm&ouml;glichkeiten sind
-dieselben, wie f&uuml;r die <guilabel>Standards</guilabel>seite
-beschrieben.</para></listitem> </varlistentry> </variablelist>
-
-</chapter>
-
-<chapter id="credits">
-<title>Mitwirkende und Lizenz</title>
-
-<para>&kwrite; Copyright 2000 by Jochen Wilhelmy
-<email>digisnap@cs.tu-berlin.de</email></para>
-<para>Mitarbeit:</para>
+<varlistentry>
+<term><guilabel>Element-Schrift</guilabel></term>
+<listitem><para>Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten Elementes ein.</para>
+<para>Es kann entweder das Ankreuzfeld <guilabel>Standard</guilabel> aktiviert werden, das die Einstellungen aus der Seite <guilabel>Standards</guilabel> &uuml;bernimmt, oder es kann das Aussehen direkt hier eingestellt werden. Die Einstellungsm&ouml;glichkeiten sind dieselben, wie f&uuml;r die <guilabel>Standards</guilabel>seite beschrieben.</para></listitem>
+</varlistentry>
+</variablelist>
+</chapter>  
+  
+<chapter id="credits">  
+<title>Mitwirkende und Lizenz</title>  
+  
+<para>&kwrite; Copyright 2000 by Jochen Wilhelmy <email>digisnap@cs.tu-berlin.de</email></para>  
+<para>Mitarbeit:</para>  
 <itemizedlist>
-<listitem><para>Weitere Mitarbeit durch Glen Parker
-<email>glenebob@nwlink.com</email></para></listitem> <listitem><para>Michael
-Koch <email>koch@kde.org</email></para></listitem></itemizedlist>
-<para>Diese Dokumentation wurde von Thad McGinnis
-<email>ctmcginnis@compuserve.com</email></para> <itemizedlist>
-<listitem><para>Dieser Version des &kwrite;-Handbuchs liegt das Original
-von Cristian Tibirna <email>tibirna@kde.org</email>
-zugrunde.</para></listitem></itemizedlist>
-<para>In das Docbook-Format &uuml;berf&uuml;hrt und Korrektur gelesen wurde dieses
-Handbuch von Lauri Watts <email>vampyr@atconnex.net</email></para>
+<listitem><para>Weitere Mitarbeit durch Glen Parker <email>glenebob@nwlink.com</email></para></listitem>  
+<listitem><para>Michael Koch <email>koch@kde.org</email></para></listitem></itemizedlist>  
+<para>Diese Dokumentation wurde von Thad McGinnis <email>ctmcginnis@compuserve.com</email></para>  
+<itemizedlist>
+<listitem><para>Dieser Version des &kwrite;-Handbuchs liegt das Original von Cristian Tibirna <email>tibirna@kde.org</email> zugrunde.</para></listitem></itemizedlist>  
+<para>In das Docbook-Format &uuml;berf&uuml;hrt und Korrektur gelesen wurde dieses Handbuch von Lauri Watts <email>vampyr@atconnex.net</email></para>  
 
+ 
 &underFDL;
 &underGPL;
-</chapter>
+</chapter> 
 
 <appendix id="installation">
 <title>Installation</title>
 
-<para>&kwrite; ist im kdebase Paket enthalten. Weitere
-Information &uuml;ber Installation und Kompilierung von KDE finden Sie unter:
-<ulink url="http://www.kde.org">
-www.kde.org</ulink>.</para>
+<para>&kwrite; ist im kdebase Paket enthalten. Weitere Information &uuml;ber Installation und Kompilierung von KDE finden Sie unter: <ulink url="http://www.kde.org"> www.kde.org</ulink>.</para>
 
-</appendix>
+</appendix>  
+  
+  
 
-
-</book>
-
-
+  
+  
+</book>  
 
 
 
@@ -1572,4 +1032,6 @@ www.kde.org</ulink>.</para>
 
 
 
+
+  
 

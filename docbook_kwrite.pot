@@ -259,7 +259,7 @@ msgid "Delete the character to the right of the cursor (or any selected text)"
 msgstr ""
 
 #: index.docbook:237
-msgid "Shift</keycap><keycap>Left Arrow"
+msgid "<keycap>Shift</keycap><keycap>Left Arrow</keycap>"
 msgstr ""
 
 #: index.docbook:238
@@ -267,7 +267,7 @@ msgid "Mark text one character to the left"
 msgstr ""
 
 #: index.docbook:241
-msgid "Shift</keycap><keycap>Right Arrow"
+msgid "<keycap>Shift</keycap><keycap>Right Arrow</keycap>"
 msgstr ""
 
 #: index.docbook:242
@@ -283,7 +283,7 @@ msgid "Help"
 msgstr ""
 
 #: index.docbook:249
-msgid "Shift</keycap><keycap>F1"
+msgid "<keycap>Shift</keycap><keycap>F1</keycap>"
 msgstr ""
 
 #: index.docbook:250
@@ -291,7 +291,7 @@ msgid "What's this?"
 msgstr ""
 
 #: index.docbook:253
-msgid "Ctrl</keycap><keycap>F"
+msgid "<keycap>Ctrl</keycap><keycap>F</keycap>"
 msgstr ""
 
 #: index.docbook:254
@@ -307,7 +307,7 @@ msgid "Find again"
 msgstr ""
 
 #: index.docbook:261
-msgid "Ctrl</keycap><keycap>C"
+msgid "<keycap>Ctrl</keycap><keycap>C</keycap>"
 msgstr ""
 
 #: index.docbook:262
@@ -315,7 +315,7 @@ msgid "Copy the marked text to the clipboard."
 msgstr ""
 
 #: index.docbook:265
-msgid "Ctrl</keycap><keycap>M"
+msgid "<keycap>Ctrl</keycap><keycap>M</keycap>"
 msgstr ""
 
 #: index.docbook:266
@@ -323,7 +323,7 @@ msgid "Set a Bookmark"
 msgstr ""
 
 #: index.docbook:269
-msgid "Ctrl</keycap><keycap>N"
+msgid "<keycap>Ctrl</keycap><keycap>N</keycap>"
 msgstr ""
 
 #: index.docbook:270
@@ -331,7 +331,7 @@ msgid "<link linkend=\"new\">New</link> document"
 msgstr ""
 
 #: index.docbook:273
-msgid "Ctrl</keycap><keycap>P"
+msgid "<keycap>Ctrl</keycap><keycap>P</keycap>"
 msgstr ""
 
 #: index.docbook:274
@@ -339,7 +339,7 @@ msgid "Print"
 msgstr ""
 
 #: index.docbook:277
-msgid "Ctrl</keycap><keycap>Q"
+msgid "<keycap>Ctrl</keycap><keycap>Q</keycap>"
 msgstr ""
 
 #: index.docbook:278
@@ -347,7 +347,7 @@ msgid "Quit - close active copy of editor"
 msgstr ""
 
 #: index.docbook:281
-msgid "Ctrl</keycap><keycap>R"
+msgid "<keycap>Ctrl</keycap><keycap>R</keycap>"
 msgstr ""
 
 #: index.docbook:282, index.docbook:689
@@ -355,7 +355,7 @@ msgid "Replace"
 msgstr ""
 
 #: index.docbook:285
-msgid "Ctrl</keycap><keycap>S"
+msgid "<keycap>Ctrl</keycap><keycap>S</keycap>"
 msgstr ""
 
 #: index.docbook:286
@@ -363,7 +363,7 @@ msgid "Invokes the <link linkend=\"save\"><guilabel>Save</guilabel></link> comma
 msgstr ""
 
 #: index.docbook:290
-msgid "Ctrl</keycap><keycap>V"
+msgid "<keycap>Ctrl</keycap><keycap>V</keycap>"
 msgstr ""
 
 #: index.docbook:291
@@ -371,7 +371,7 @@ msgid "Paste the clipboard text into line edit."
 msgstr ""
 
 #: index.docbook:294
-msgid "Ctrl</keycap><keycap>X"
+msgid "<keycap>Ctrl</keycap><keycap>X</keycap>"
 msgstr ""
 
 #: index.docbook:295
@@ -379,7 +379,7 @@ msgid "Delete the marked text and copy it to the clipboard."
 msgstr ""
 
 #: index.docbook:298
-msgid "Ctrl</keycap><keycap>Z"
+msgid "<keycap>Ctrl</keycap><keycap>Z</keycap>"
 msgstr ""
 
 #: index.docbook:299
@@ -387,7 +387,7 @@ msgid "Undo"
 msgstr ""
 
 #: index.docbook:302
-msgid "Ctrl</keycap><keycap>Shift</keycap><keycap>Z"
+msgid "<keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Z</keycap>"
 msgstr ""
 
 #: index.docbook:303
