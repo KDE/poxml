@@ -111,8 +111,8 @@ int main( int argc, char **argv )
 
         }
         cout << "\n";
-        outputMsg("msgid", (*it).msgid);
-        outputMsg("msgstr", (*it).msgstr);
+        outputMsg("msgid", StructureParser::descapeLiterals( (*it).msgid ));
+        outputMsg("msgstr", StructureParser::descapeLiterals( (*it).msgstr ));
         cout << "\n";
     }
 
