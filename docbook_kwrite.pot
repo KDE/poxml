@@ -29,8 +29,7 @@ msgstr ""
 msgid "Principal Developer"
 msgstr ""
 
-# index.docbook:28, index.docbook:33
-#: index.docbook:28
+#: index.docbook:28 index.docbook:33
 msgid "Additional Development"
 msgstr ""
 
@@ -340,8 +339,7 @@ msgstr ""
 msgid "<keycap>F1</keycap>"
 msgstr ""
 
-# index.docbook:186, index.docbook:648
-#: index.docbook:186
+#: index.docbook:186 index.docbook:648
 msgid "Help"
 msgstr ""
 
@@ -413,8 +411,7 @@ msgstr ""
 msgid "<keycap>Ctrl</keycap><keycap>R</keycap>"
 msgstr ""
 
-# index.docbook:186, index.docbook:648
-#: index.docbook:186
+#: index.docbook:186 index.docbook:648
 msgid "Replace"
 msgstr ""
 
@@ -1036,8 +1033,7 @@ msgstr ""
 msgid "Two more buttons are located below the progress bar. They are:"
 msgstr ""
 
-# index.docbook:648, index.docbook:930
-#: index.docbook:648
+#: index.docbook:648 index.docbook:930
 msgid ""
 "This invokes the KDE help system starting at the &kwrite; help pages (this "
 "document)."
@@ -1075,8 +1071,7 @@ msgstr ""
 msgid "<guimenu>Tools</guimenu><guimenuitem>Clean Indentation</guimenuitem>"
 msgstr ""
 
-# index.docbook:648, index.docbook:1124, index.docbook:1165
-#: index.docbook:648
+#: index.docbook:648 index.docbook:1124 index.docbook:1165
 msgid "Not yet implemented"
 msgstr ""
 
@@ -1410,8 +1405,7 @@ msgid ""
 "areas of the document containing text."
 msgstr ""
 
-# index.docbook:1043, index.docbook:1338
-#: index.docbook:1043
+#: index.docbook:1043 index.docbook:1338
 msgid "Selected"
 msgstr ""
 
@@ -1816,8 +1810,7 @@ msgid ""
 "entries) in his or her code."
 msgstr ""
 
-# index.docbook:1338, index.docbook:1433
-#: index.docbook:1338
+#: index.docbook:1338 index.docbook:1433
 msgid "Item"
 msgstr ""
 
@@ -2019,12 +2012,12 @@ msgstr ""
 msgid "Contributions:"
 msgstr ""
 
-#: index.docbook:1503
+#: index.docbook:1502
 msgid ""
 "Additional contributions by Glen Parker <email>glenebob@nwlink.com</email>"
 msgstr ""
 
-#: index.docbook:1504
+#: index.docbook:1502
 msgid "Michael Koch <email>koch@kde.org</email>"
 msgstr ""
 
@@ -2032,7 +2025,7 @@ msgstr ""
 msgid "Documentation by Thad McGinnis <email>ctmcginnis@compuserve.com</email>"
 msgstr ""
 
-#: index.docbook:1507
+#: index.docbook:1506
 msgid ""
 "This version of the &kwrite; Handbook is based on the original by Cristian "
 "Tibirna <email>tibirna@kde.org</email>"

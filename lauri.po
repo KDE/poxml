@@ -59,20 +59,14 @@ msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
 #: index.docbook:24
-msgid ""
-"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
-"\n"
-"\t\thello \\"
-msgstr ""
-"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
-"\n"
-"\t\thallo \\"
+msgid "Text 4 \\\"even less\\\""
+msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:56
+#: index.docbook:58
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:56
+#: index.docbook:58
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -102,7 +96,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:77
+#: index.docbook:79
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -140,7 +134,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:89
+#: index.docbook:91
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -160,7 +154,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:100
+#: index.docbook:102
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
@@ -215,3 +209,12 @@ msgstr "foo"
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
 msgstr "bar"
+
+#~ msgid ""
+#~ "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
+#~ "\n"
+#~ "\t\thello \\"
+#~ msgstr ""
+#~ "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
+#~ "\n"
+#~ "\t\thallo \\"

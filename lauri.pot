@@ -59,17 +59,14 @@ msgid "Text 4 \\\"even more\\\""
 msgstr ""
 
 #: index.docbook:24
-msgid ""
-"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
-"\n"
-"\t\thello \\"
+msgid "Text 4 \\\"even less\\\""
 msgstr ""
 
-#: index.docbook:56
+#: index.docbook:58
 msgid "Ending Text:"
 msgstr ""
 
-#: index.docbook:56
+#: index.docbook:58
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -87,7 +84,7 @@ msgid ""
 "whereever"
 msgstr ""
 
-#: index.docbook:77
+#: index.docbook:79
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -108,7 +105,7 @@ msgid ""
 "pppd</lineannotation>"
 msgstr ""
 
-#: index.docbook:89
+#: index.docbook:91
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -120,7 +117,7 @@ msgid ""
 "Send             ppp"
 msgstr ""
 
-#: index.docbook:100
+#: index.docbook:102
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"

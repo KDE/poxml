@@ -240,12 +240,9 @@
   
 <para>&kwrite; Copyright 2000 by Jochen Wilhelmy <email>digisnap@cs.tu-berlin.de</email></para>  
 <para>Mitarbeit:</para>  
-<itemizedlist>
-<listitem><para>Weitere Mitarbeit durch Glen Parker <email>glenebob@nwlink.com</email></para></listitem>  
-<listitem><para>Michael Koch <email>koch@kde.org</email></para></listitem></itemizedlist>  
+<itemizedlist> <listitem><para>Weitere Mitarbeit durch Glen Parker <email>glenebob@nwlink.com</email></para></listitem> <listitem><para>Michael Koch <email>koch@kde.org</email></para></listitem></itemizedlist>  
 <para>Diese Dokumentation wurde von Thad McGinnis <email>ctmcginnis@compuserve.com</email></para>  
-<itemizedlist>
-<listitem><para>Dieser Version des &kwrite;-Handbuchs liegt das Original von Cristian Tibirna <email>tibirna@kde.org</email> zugrunde.</para></listitem></itemizedlist>  
+<itemizedlist> <listitem><para>Dieser Version des &kwrite;-Handbuchs liegt das Original von Cristian Tibirna <email>tibirna@kde.org</email> zugrunde.</para></listitem></itemizedlist>  
 <para>In das Docbook-Format &uuml;berf&uuml;hrt und Korrektur gelesen wurde dieses Handbuch von Lauri Watts <email>vampyr@atconnex.net</email></para>  
 <!-- CREDITS_FOR_TRANSLATORS -->
  

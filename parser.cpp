@@ -15,7 +15,9 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "tbody", "row", "screenshot", "screeninfo",
                                     "variablelist", "step", "procedure",
                                     "step", "holder", "listitem", "important",
-                                    "author",
+                                    "author", "itemizedlist", "orderedlist",
+				    "caption", "textobject", "mediaobject",
+				    "tip",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -173,7 +175,7 @@ void StructureParser::descape(QString &message)
                 lastws = true;
                 break;
             case '<': {
-                int endindex = index+1;
+                uint endindex = index+1;
                 while (endindex < message.length() && !message.at(endindex).isSpace() &&
                        message.at(endindex) != '>')
                     endindex++;
@@ -394,32 +396,53 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
         if (isCuttingTag(tag))
         {
             // if the message ends with a cutting tag, this tag has to
-            // end in between. We split both messages and format them
+            // start in between. We split both messages and format them
             int strindex = endindex;
-            strindex = message.findRev(QRegExp(QString::fromLatin1("<%1[\\s>]").
-                                               arg(tag)),
-                                       strindex) - 1;
 
-            assert(strindex != -1);
-            int endtag =  message.find(QString::fromLatin1("</%1>").
-                                       arg(tag), strindex);
-            if (endtag != -1 && strindex > endtag)
-            {
-                // qDebug("found another closing tag before opening tag in %s", message.utf8().data());
-                goto error;
+            int inside = 1;
+            while (true) {
+                // qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
+
+                int closing_index = message.findRev(QString::fromLatin1("</%1>").arg(tag),
+                                                    strindex - 1);
+                int starting_index = message.findRev(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
+                                                     strindex - 1);
+
+                // qDebug("index1 %d %d %d", closing_index, starting_index, strindex);
+
+                if (starting_index == -1) {
+                    assert(inside == 1);
+                    break;
+                }
+
+                if (closing_index > starting_index)
+                {
+                    strindex = closing_index;
+                    inside++;
+                } else {
+                    strindex = starting_index;
+                    inside--;
+                }
+
+                if (!inside)
+                    break;
             }
+
+
+#ifndef NDEBUG
+            qDebug("split2 into \"%s\" -AAAAAANNNNNNNNNDDDDDDDDDDD- \"%s\"", message.left(strindex).latin1(), message.mid(strindex).latin1());
+#endif
+
             int offset;
-            msg1.msgid = message.left(strindex + 1);
+            msg1.msgid = message.left(strindex);
             formatMessage(msg1.msgid, offset);
             msg1.lines.first().offset += offset;
 
-            msg2.msgid = message.mid(strindex + 1);
+            msg2.msgid = message.mid(strindex);
             formatMessage(msg2.msgid, offset);
-            msg2.lines.first().offset += strindex + 1 + offset;
+            msg2.lines.first().offset += strindex + offset;
 
-#ifndef NDEBUG
-            qDebug("split2 into %s - %s", msg1.msgid.latin1(), msg2.msgid.latin1());
-#endif
+
             result = splitMessage(msg1);
             result += splitMessage(msg2);
 

@@ -18,7 +18,7 @@ msgstr ""
 msgid "&kde; Frequently Asked Questions"
 msgstr "&kde;: Die meistgestellten Fragen (FAQ)"
 
-#: index.docbook:16
+#: index.docbook:16 index.docbook:26
 msgid "The KDE Team"
 msgstr "Das KDE Team"
 
@@ -186,31 +186,31 @@ msgstr ""
 msgid "Some of systems on which &kde; is running are:"
 msgstr "Einige der Systeme, auf denen &kde; l&auml;uft, sind:"
 
-#: index.docbook:136
+#: index.docbook:135
 msgid "&Linux;"
 msgstr "&Linux;"
 
-#: index.docbook:137
+#: index.docbook:135
 msgid "&Solaris;"
 msgstr "&Solaris;"
 
-#: index.docbook:138
+#: index.docbook:135
 msgid "FreeBSD"
 msgstr "FreeBSD"
 
-#: index.docbook:139
+#: index.docbook:135
 msgid "&IRIX;"
 msgstr "&IRIX;"
 
-#: index.docbook:140
+#: index.docbook:135
 msgid "&HP-UX;"
 msgstr "&HP-UX;"
 
-#: index.docbook:141
+#: index.docbook:135
 msgid "MKLinux"
 msgstr "MKLinux"
 
-#: index.docbook:142
+#: index.docbook:135
 msgid "&LinuxPPC;"
 msgstr "&LinuxPPC;"
 
@@ -522,23 +522,23 @@ msgstr ""
 "folgenden Links k&ouml;nnen Ihnen bei der Entscheidung und Installation "
 "eventuell von Nutzen sein:"
 
-#: index.docbook:335
+#: index.docbook:334
 msgid "Control-Escape: Alternative Software, &Linux; Help"
 msgstr "Control-Escape: Alternative Software, &Linux;-Hilfe"
 
-#: index.docbook:338
+#: index.docbook:334
 msgid "&Linux; Documentation Project"
 msgstr "&Linux; Dokumentations Projekt"
 
-#: index.docbook:340
+#: index.docbook:334
 msgid "&Linux; Frequently Asked Questions with Answers"
 msgstr "&Linux; meist gestellte Fragen mit Antworten"
 
-#: index.docbook:342
+#: index.docbook:334
 msgid "The &Linux; Home Page at &Linux; Online"
 msgstr "Die &Linux; Homepage bei &Linux; Online"
 
-#: index.docbook:344
+#: index.docbook:334
 msgid "Usenet newsgroups like comp.os.linux.*"
 msgstr "Usenet Newsgroups wie comp.os.linux.*"
 
@@ -552,15 +552,15 @@ msgstr ""
 "einrichten. &X; ist der de facto Standard f&uuml;r &GUI; auf "
 "&UNIX;-Systemen. Folgende Links sind m&ouml;glicherweise hierbei hilfreich:"
 
-#: index.docbook:351
+#: index.docbook:350
 msgid "X.org"
 msgstr "X.org"
 
-#: index.docbook:353
+#: index.docbook:350
 msgid "XFree86(TM): Home Page"
 msgstr "XFree86(TM): Home Page"
 
-#: index.docbook:355
+#: index.docbook:350
 msgid "Usenet newsgroups like comp.os.linux.x and comp.windows.x.*."
 msgstr "Usenet Newsgroups wie comp.os.linux.x und comp.windows.x.*."
 
@@ -2102,11 +2102,11 @@ msgstr ""
 "&kde; zum Laufen zu bringen. Zus&auml;tzlich k&ouml;nnen folgende Links "
 "hilfreich sein:"
 
-#: index.docbook:1154
+#: index.docbook:1153
 msgid "http://www.cs.utexas.edu/users/kharker/linux-laptop/"
 msgstr "http://www.cs.utexas.edu/users/kharker/linux-laptop/"
 
-#: index.docbook:1157
+#: index.docbook:1153
 msgid "http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html"
 msgstr "http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html"
 
@@ -2440,7 +2440,7 @@ msgstr ""
 "Kontrollleiste zu &auml;ndern?"
 
 # index.docbook:1381, index.docbook:1663, index.docbook:2283
-#: index.docbook:1380
+#: index.docbook:1380 index.docbook:1662 index.docbook:2282
 msgid "&kde; 1.x"
 msgstr "&kde; 1.x"
 
@@ -2462,7 +2462,7 @@ msgstr ""
 "Verzeichnisse wenn diese nicht existieren. Starten Sie &kpanel; neu."
 
 # index.docbook:1389, index.docbook:1685, index.docbook:2293
-#: index.docbook:1380
+#: index.docbook:1380 index.docbook:1662 index.docbook:2282
 msgid "&kde; 2"
 msgstr "&kde; 2"
 
@@ -3090,7 +3090,7 @@ msgstr ""
 msgid "There are a few ways to access \"disappeared\" windows:"
 msgstr "Es gibt mehrere Wege, um auf ein verstecktes Fenster zuzugreifen:"
 
-#: index.docbook:1756
+#: index.docbook:1755
 msgid ""
 "If you are running the taskbar part of &kpanel; (or &kicker;), you can "
 "choose to have a list of tasks displayed on your desktop. Iconified tasks "
@@ -3101,7 +3101,7 @@ msgstr ""
 "Ihrer Arbeitsfl&auml;che angezeigt wird. Die Namen von versteckten "
 "Programmen werden in Klammern angezeigt."
 
-#: index.docbook:1761
+#: index.docbook:1755
 msgid ""
 "If you click the &MMB; on the root window (<abbrev>i.e.</abbrev> the "
 "background of the desktop), &kwm; (or &kwin;) will give you a list of all "
@@ -4308,7 +4308,7 @@ msgstr ""
 "sich jedoch dar&uuml;ber beschweren, &uuml;berpr&uuml;fen Sie bitte "
 "folgendes:"
 
-#: index.docbook:2454
+#: index.docbook:2453
 msgid ""
 "Can you dialup to your <acronym>ISP</acronym> without using &kppp;? If you "
 "cannot, then perhaps &kppp; is not the culprit after all."
@@ -4316,7 +4316,7 @@ msgstr ""
 "K&ouml;nnen Sie ohne &kppp; zu Ihrem <acronym>ISP</acronym> w&auml;hlen? "
 "Wenn nicht, dann ist das Problem wahrscheinlich nicht in &kppp; zu suchen."
 
-#: index.docbook:2457
+#: index.docbook:2453
 msgid ""
 "Have you gone through the &kppp; documentation at least three times and "
 "follow its instructions and trouble-shooting suggestions?"
@@ -5759,7 +5759,7 @@ msgstr ""
 msgid "Other possible alternatives:"
 msgstr "Andere m&ouml;gliche Alternativen:"
 
-#: index.docbook:3314
+#: index.docbook:3313
 msgid ""
 "<application>xkeycaps</application>: <mousebutton>right</mousebutton> "
 "clicking should allow edits. May have to do this as root."
@@ -5769,12 +5769,12 @@ msgstr ""
 "erlauben. Es kann sein, dass dies nur mit Systemverwalterrechten "
 "m&ouml;glich ist."
 
-#: index.docbook:3317
+#: index.docbook:3313
 msgid "<command>man XF86Config</command> and look under section Keyboard."
 msgstr ""
 "<command>man XF86Config</command> und sehen Sie unter Sektion Keyboard nach."
 
-#: index.docbook:3319
+#: index.docbook:3313
 msgid ""
 "Install <application>NumLockX</application> which is available from <ulink "
 "url=\"http://dforce.sh.cvut.cz/~seli/en/numlockx\">http://dforce.sh.cvut.cz/~"
@@ -5989,32 +5989,32 @@ msgid "To subscribe"
 msgstr "Zum Abonnieren:"
 
 # index.docbook:3450, index.docbook:3465
-#: index.docbook:3448
+#: index.docbook:3448 index.docbook:3463
 msgid "Send an email to list-request, that is:"
 msgstr "Senden Sie eine E-Mmail an list-request, das ist im Einzelnen:"
 
 # index.docbook:3452, index.docbook:3467
-#: index.docbook:3450
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-request@kde.org"
 msgstr "kde-request@kde.org"
 
 # index.docbook:3454, index.docbook:3468
-#: index.docbook:3452
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-announce-request@kde.org"
 msgstr "kde-announce-request@kde.org"
 
 # index.docbook:3455, index.docbook:3469
-#: index.docbook:3453
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-user-request@kde.org"
 msgstr "kde-user-request@kde.org"
 
 # index.docbook:3457, index.docbook:3470
-#: index.docbook:3455
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-look-request@kde.org"
 msgstr "kde-look-request@kde.org"
 
 # index.docbook:3458, index.docbook:3471
-#: index.docbook:3456
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-licensing-request@kde.org"
 msgstr "kde-licensing-request@kde.org"
 
@@ -6123,19 +6123,19 @@ msgstr "Gibt es andere &kde;-bezogene <acronym>FAQ</acronym>'s?"
 msgid "Yes. Here is a list of them:"
 msgstr "Ja. Hier ist eine - wahrscheinlich unvollst&auml;ndige Liste:"
 
-#: index.docbook:3523
+#: index.docbook:3522
 msgid "&kde; 2.0 <acronym>FAQ</acronym>"
 msgstr "&kde; 2.0 <acronym>FAQ</acronym>"
 
-#: index.docbook:3526
+#: index.docbook:3522
 msgid "&konqueror; <acronym>FAQ</acronym>"
 msgstr "&konqueror; <acronym>FAQ</acronym>"
 
-#: index.docbook:3529
+#: index.docbook:3522
 msgid "aRts sound server <acronym>FAQ</acronym>"
 msgstr "aRts Sound Server <acronym>FAQ</acronym>"
 
-#: index.docbook:3532
+#: index.docbook:3522
 msgid "&kmail; <acronym>FAQ</acronym>"
 msgstr "&kmail; <acronym>FAQ</acronym>"
 
@@ -6159,11 +6159,11 @@ msgstr ""
 "sind willkommen. Es gibt jede Menge andere Wege, um mitzuhelfen, &kde; zu "
 "verbessern:"
 
-#: index.docbook:3556
+#: index.docbook:3555
 msgid "Test the software."
 msgstr "Testen Sie die Software."
 
-#: index.docbook:3557
+#: index.docbook:3555
 msgid ""
 "Send in bug reports. For more information on this, see <link "
 "linkend=\"bug-report\">How do I commit a bug report?</link>."
@@ -6172,7 +6172,7 @@ msgstr ""
 "unter <link linkend=\"bug-report\">Wie verfassen Sie einen "
 "Fehlerbericht?</link> nach."
 
-#: index.docbook:3560
+#: index.docbook:3555
 msgid ""
 "Write documentation or help files. You can get some information by visiting "
 "the <ulink url=\"http://i18n.kde.org/teams/en/index.html\">&kde; Editorial "
@@ -6183,7 +6183,7 @@ msgstr ""
 "url=\"http://i18n.kde.org/teams/en/index.html\">&kde; Editorial Team Home "
 "Page</ulink>."
 
-#: index.docbook:3564
+#: index.docbook:3555
 msgid ""
 "Translate programs, documentation, and help files. For more information on "
 "this, you should visit <ulink url=\"http://i18n.kde.org\">The &kde; "
@@ -6195,7 +6195,7 @@ msgstr ""
 "unter <ulink url=\"http://i18n.kde.org/teams/de\">KDE "
 "&Uuml;bersetzungsprojekt: Deutsch</ulink>."
 
-#: index.docbook:3568
+#: index.docbook:3555
 msgid ""
 "Draw nice icons or compose sound effects. You can visit the <ulink "
 "url=\"http://www.kde.org/artist/index.html\">&kde; artists page</ulink> to "
@@ -6206,7 +6206,7 @@ msgstr ""
 "url=\"http://www.kde.org/artist/index.html\">&kde; "
 "K&uuml;nstlerseite</ulink> besuchen, um mehr dar&uuml;ber herauszufinden."
 
-#: index.docbook:3571
+#: index.docbook:3555
 msgid ""
 "Write articles and books about &kde;. If you want to help spread the word "
 "about &kde;, simply send an email to <email>kde-pr@kde.org</email>. This "
@@ -6217,7 +6217,7 @@ msgstr ""
 "<email>kde-pr@kde.org</email>. Die Freiwilligen Helfer f&uuml;r "
 "&Ouml;ffentlichkeitsarbeit werden sich dann um Sie k&uuml;mmern."
 
-#: index.docbook:3575
+#: index.docbook:3555
 msgid ""
 "Program new &kde; applications. Please refer to <xref "
 "linkend=\"programming\"/> for more information."
@@ -6225,7 +6225,7 @@ msgstr ""
 "Programmieren Sie neue &kde; Anwendungen. Bitte sehen Sie unter <xref "
 "linkend=\"programming\"/> f&uuml;r weitere Informationen nach."
 
-#: index.docbook:3577
+#: index.docbook:3555
 msgid "Of course, sponsors are also welcome. :-)"
 msgstr "Sponsoren sind nat&uuml;rlich auch sehr willkommen. :-)"
 
@@ -6492,11 +6492,11 @@ msgstr "Mitwirkende und Lizenz"
 msgid "The current <acronym>FAQ</acronym> maintainers are:"
 msgstr "Die aktuellen <acronym>FAQ</acronym>-Betreuer sind:"
 
-#: index.docbook:3728
+#: index.docbook:3727
 msgid "Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email>"
 msgstr "Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email>"
 
-#: index.docbook:3730
+#: index.docbook:3727
 msgid "Michael Demers <email>mdemers@nitemaster.yi.org</email>"
 msgstr "Michael Demers <email>mdemers@nitemaster.yi.org</email>"
 

@@ -39,11 +39,13 @@
                   <para>
                      Text 4 \"even more\"
                   </para>
-		  <screen>
-		print "$b4 /path/to/KDE/libs/libpng.a $af\n"; \
-
-		hello \
-		 </screen>
+		  <para>
+		    <note>
+			<para>
+                           Text 4 \"even less\"
+		        </para>
+ 		    </note>
+                  </para>
                </footnote>
              </para>
            </note>

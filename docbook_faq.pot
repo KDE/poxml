@@ -18,8 +18,7 @@ msgstr ""
 msgid "&kde; Frequently Asked Questions"
 msgstr ""
 
-# index.docbook:16, index.docbook:26
-#: index.docbook:16
+#: index.docbook:16 index.docbook:26
 msgid "The KDE Team"
 msgstr ""
 
@@ -150,31 +149,31 @@ msgstr ""
 msgid "Some of systems on which &kde; is running are:"
 msgstr ""
 
-#: index.docbook:136
+#: index.docbook:135
 msgid "&Linux;"
 msgstr ""
 
-#: index.docbook:137
+#: index.docbook:135
 msgid "&Solaris;"
 msgstr ""
 
-#: index.docbook:138
+#: index.docbook:135
 msgid "FreeBSD"
 msgstr ""
 
-#: index.docbook:139
+#: index.docbook:135
 msgid "&IRIX;"
 msgstr ""
 
-#: index.docbook:140
+#: index.docbook:135
 msgid "&HP-UX;"
 msgstr ""
 
-#: index.docbook:141
+#: index.docbook:135
 msgid "MKLinux"
 msgstr ""
 
-#: index.docbook:142
+#: index.docbook:135
 msgid "&LinuxPPC;"
 msgstr ""
 
@@ -390,23 +389,23 @@ msgid ""
 "your choice. You might find the following resources useful:"
 msgstr ""
 
-#: index.docbook:335
+#: index.docbook:334
 msgid "Control-Escape: Alternative Software, &Linux; Help"
 msgstr ""
 
-#: index.docbook:338
+#: index.docbook:334
 msgid "&Linux; Documentation Project"
 msgstr ""
 
-#: index.docbook:340
+#: index.docbook:334
 msgid "&Linux; Frequently Asked Questions with Answers"
 msgstr ""
 
-#: index.docbook:342
+#: index.docbook:334
 msgid "The &Linux; Home Page at &Linux; Online"
 msgstr ""
 
-#: index.docbook:344
+#: index.docbook:334
 msgid "Usenet newsgroups like comp.os.linux.*"
 msgstr ""
 
@@ -417,15 +416,15 @@ msgid ""
 "the following resources:"
 msgstr ""
 
-#: index.docbook:351
+#: index.docbook:350
 msgid "X.org"
 msgstr ""
 
-#: index.docbook:353
+#: index.docbook:350
 msgid "XFree86(TM): Home Page"
 msgstr ""
 
-#: index.docbook:355
+#: index.docbook:350
 msgid "Usenet newsgroups like comp.os.linux.x and comp.windows.x.*."
 msgstr ""
 
@@ -539,7 +538,6 @@ msgstr ""
 msgid "kdelibs"
 msgstr ""
 
-# index.docbook:430, index.docbook:430
 #: index.docbook:430
 msgid "Required"
 msgstr ""
@@ -565,7 +563,6 @@ msgstr ""
 msgid "kdegames"
 msgstr ""
 
-# index.docbook:430, index.docbook:430, index.docbook:430, index.docbook:430, index.docbook:430, index.docbook:430, index.docbook:430, index.docbook:430
 #: index.docbook:430
 msgid "Optional"
 msgstr ""
@@ -662,7 +659,6 @@ msgid ""
 "Standard)."
 msgstr ""
 
-# index.docbook:538, index.docbook:538, index.docbook:538, index.docbook:538
 #: index.docbook:538
 msgid "become superuser"
 msgstr ""
@@ -1040,7 +1036,6 @@ msgstr ""
 msgid "<para> Do:</para>"
 msgstr ""
 
-# index.docbook:708, index.docbook:708, index.docbook:708
 #: index.docbook:708
 msgid ""
 "<command>gmake</command>\n"
@@ -1109,7 +1104,6 @@ msgstr ""
 msgid "Unpack kdebase and enter its directory. Do:"
 msgstr ""
 
-# index.docbook:708, index.docbook:708
 #: index.docbook:708
 msgid ""
 "<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 "
@@ -1497,11 +1491,11 @@ msgid ""
 "to run on it. In addition, you might find the following links helpful:"
 msgstr ""
 
-#: index.docbook:1154
+#: index.docbook:1153
 msgid "http://www.cs.utexas.edu/users/kharker/linux-laptop/"
 msgstr ""
 
-#: index.docbook:1157
+#: index.docbook:1153
 msgid "http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html"
 msgstr ""
 
@@ -1734,8 +1728,7 @@ msgid ""
 "another picture?"
 msgstr ""
 
-# index.docbook:1380, index.docbook:1662, index.docbook:2282
-#: index.docbook:1380
+#: index.docbook:1380 index.docbook:1662 index.docbook:2282
 msgid "&kde; 1.x"
 msgstr ""
 
@@ -1750,8 +1743,7 @@ msgid ""
 "not already exist. Then restart &kpanel;."
 msgstr ""
 
-# index.docbook:1380, index.docbook:1662, index.docbook:2282
-#: index.docbook:1380
+#: index.docbook:1380 index.docbook:1662 index.docbook:2282
 msgid "&kde; 2"
 msgstr ""
 
@@ -2168,14 +2160,14 @@ msgstr ""
 msgid "There are a few ways to access \"disappeared\" windows:"
 msgstr ""
 
-#: index.docbook:1756
+#: index.docbook:1755
 msgid ""
 "If you are running the taskbar part of &kpanel; (or &kicker;), you can "
 "choose to have a list of tasks displayed on your desktop. Iconified tasks "
 "will have their names surrounded by parentheses."
 msgstr ""
 
-#: index.docbook:1761
+#: index.docbook:1755
 msgid ""
 "If you click the &MMB; on the root window (<abbrev>i.e.</abbrev> the "
 "background of the desktop), &kwm; (or &kwin;) will give you a list of all "
@@ -2986,13 +2978,13 @@ msgid ""
 "&kppp;, make sure you have already checked the following:"
 msgstr ""
 
-#: index.docbook:2454
+#: index.docbook:2453
 msgid ""
 "Can you dialup to your <acronym>ISP</acronym> without using &kppp;? If you "
 "cannot, then perhaps &kppp; is not the culprit after all."
 msgstr ""
 
-#: index.docbook:2457
+#: index.docbook:2453
 msgid ""
 "Have you gone through the &kppp; documentation at least three times and "
 "follow its instructions and trouble-shooting suggestions?"
@@ -3969,17 +3961,17 @@ msgstr ""
 msgid "Other possible alternatives:"
 msgstr ""
 
-#: index.docbook:3314
+#: index.docbook:3313
 msgid ""
 "<application>xkeycaps</application>: <mousebutton>right</mousebutton> "
 "clicking should allow edits. May have to do this as root."
 msgstr ""
 
-#: index.docbook:3317
+#: index.docbook:3313
 msgid "<command>man XF86Config</command> and look under section Keyboard."
 msgstr ""
 
-#: index.docbook:3319
+#: index.docbook:3313
 msgid ""
 "Install <application>NumLockX</application> which is available from <ulink "
 "url=\"http://dforce.sh.cvut.cz/~seli/en/numlockx\">http://dforce.sh.cvut.cz/~"
@@ -4138,33 +4130,27 @@ msgstr ""
 msgid "To subscribe"
 msgstr ""
 
-# index.docbook:3448, index.docbook:3463
-#: index.docbook:3448
+#: index.docbook:3448 index.docbook:3463
 msgid "Send an email to list-request, that is:"
 msgstr ""
 
-# index.docbook:3450, index.docbook:3465
-#: index.docbook:3450
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-request@kde.org"
 msgstr ""
 
-# index.docbook:3452, index.docbook:3466
-#: index.docbook:3452
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-announce-request@kde.org"
 msgstr ""
 
-# index.docbook:3453, index.docbook:3467
-#: index.docbook:3453
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-user-request@kde.org"
 msgstr ""
 
-# index.docbook:3455, index.docbook:3468
-#: index.docbook:3455
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-look-request@kde.org"
 msgstr ""
 
-# index.docbook:3456, index.docbook:3469
-#: index.docbook:3456
+#: index.docbook:3449 index.docbook:3464
 msgid "kde-licensing-request@kde.org"
 msgstr ""
 
@@ -4242,19 +4228,19 @@ msgstr ""
 msgid "Yes. Here is a list of them:"
 msgstr ""
 
-#: index.docbook:3523
+#: index.docbook:3522
 msgid "&kde; 2.0 <acronym>FAQ</acronym>"
 msgstr ""
 
-#: index.docbook:3526
+#: index.docbook:3522
 msgid "&konqueror; <acronym>FAQ</acronym>"
 msgstr ""
 
-#: index.docbook:3529
+#: index.docbook:3522
 msgid "aRts sound server <acronym>FAQ</acronym>"
 msgstr ""
 
-#: index.docbook:3532
+#: index.docbook:3522
 msgid "&kmail; <acronym>FAQ</acronym>"
 msgstr ""
 
@@ -4273,51 +4259,51 @@ msgid ""
 "welcome. There are lots of ways in which you can help to improve &kde;:"
 msgstr ""
 
-#: index.docbook:3556
+#: index.docbook:3555
 msgid "Test the software."
 msgstr ""
 
-#: index.docbook:3557
+#: index.docbook:3555
 msgid ""
 "Send in bug reports. For more information on this, see <link "
 "linkend=\"bug-report\">How do I commit a bug report?</link>."
 msgstr ""
 
-#: index.docbook:3560
+#: index.docbook:3555
 msgid ""
 "Write documentation or help files. You can get some information by visiting "
 "the <ulink url=\"http://i18n.kde.org/teams/en/index.html\">&kde; Editorial "
 "Team Home Page</ulink>."
 msgstr ""
 
-#: index.docbook:3564
+#: index.docbook:3555
 msgid ""
 "Translate programs, documentation, and help files. For more information on "
 "this, you should visit <ulink url=\"http://i18n.kde.org\">The &kde; "
 "Translators' and Documenters' Web Site</ulink>."
 msgstr ""
 
-#: index.docbook:3568
+#: index.docbook:3555
 msgid ""
 "Draw nice icons or compose sound effects. You can visit the <ulink "
 "url=\"http://www.kde.org/artist/index.html\">&kde; artists page</ulink> to "
 "find out more."
 msgstr ""
 
-#: index.docbook:3571
+#: index.docbook:3555
 msgid ""
 "Write articles and books about &kde;. If you want to help spread the word "
 "about &kde;, simply send an email to <email>kde-pr@kde.org</email>. This "
 "will get you in touch with the &kde; public relations volunteers."
 msgstr ""
 
-#: index.docbook:3575
+#: index.docbook:3555
 msgid ""
 "Program new &kde; applications. Please refer to <xref "
 "linkend=\"programming\"/> for more information."
 msgstr ""
 
-#: index.docbook:3577
+#: index.docbook:3555
 msgid "Of course, sponsors are also welcome. :-)"
 msgstr ""
 
@@ -4491,11 +4477,11 @@ msgstr ""
 msgid "The current <acronym>FAQ</acronym> maintainers are:"
 msgstr ""
 
-#: index.docbook:3728
+#: index.docbook:3727
 msgid "Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email>"
 msgstr ""
 
-#: index.docbook:3730
+#: index.docbook:3727
 msgid "Michael Demers <email>mdemers@nitemaster.yi.org</email>"
 msgstr ""
 

@@ -99,15 +99,7 @@
 <answer>
 <para>&kde; ist die Arbeitsfl&auml;che f&uuml;r alle &UNIX;. Es ist wahr, die meisten &kde;-Entwickler nutzen &Linux;, aber &kde; l&auml;uft sehr gut auf vielen Systemen. Es ist m&ouml;glich, dass Sie die Programmquellen ein wenig &auml;ndern m&uuml;ssen, um &kde; auf einer wenig verbreiteten Variante von &UNIX; zu kompilieren, oder wenn Sie nicht die &GNU;-Entwicklungsumgebung benutzen, besonders den &gcc;-Kompiler.</para>
 <para>Einige der Systeme, auf denen &kde; l&auml;uft, sind:</para>
-<itemizedlist>
-<listitem><para>&Linux;</para></listitem>
-<listitem><para>&Solaris;</para></listitem>
-<listitem><para>FreeBSD</para></listitem>
-<listitem><para>&IRIX;</para></listitem>
-<listitem><para>&HP-UX;</para></listitem>
-<listitem><para>MKLinux</para></listitem>
-<listitem><para>&LinuxPPC;</para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para>&Linux;</para></listitem> <listitem><para>&Solaris;</para></listitem> <listitem><para>FreeBSD</para></listitem> <listitem><para>&IRIX;</para></listitem> <listitem><para>&HP-UX;</para></listitem> <listitem><para>MKLinux</para></listitem> <listitem><para>&LinuxPPC;</para></listitem> </itemizedlist>
 </answer>
 </qandaentry>
 
@@ -226,19 +218,9 @@
 <para>Sie haben die Ger&uuml;chte geh&ouml;rt. Oder Sie haben die Bildschirmfotos gesehen. Und Sie sind ungeduldig &kde; auszuprobieren. Aber Sie wissen fast nichts &uuml;ber das <quote>alternative OS</quote>-Gesch&auml;ft. Macht nichts, Sie werden einiges lesen m&uuml;ssen, das ist Alles!</para>
 <para>&kde; l&auml;uft nicht unter &Windows; 95/98/NT oder OS/2 (noch nicht). Sie m&uuml;ssen ein &UNIX;-System haben, um &kde; laufen zu lassen. Weitere Informationen hierzu finden Sie unter <xref linkend="platform"/>.</para>
 <para>Nehmen wir an, Sie h&auml;tten sich entschlossen &Linux; zu installieren. Sie k&ouml;nnen es entweder aus dem Internet herunterladen oder einen Satz &CD-ROM;s kaufen, der die Distribution Ihrer Wahl enth&auml;lt. Die folgenden Links k&ouml;nnen Ihnen bei der Entscheidung und Installation eventuell von Nutzen sein:</para>
-<itemizedlist>
-<listitem><para><ulink url="http://www.control-escape.com/">Control-Escape: Alternative Software, &Linux;-Hilfe</ulink></para></listitem>
-<listitem><para><ulink url="http://www.linuxdoc.org/">&Linux; Dokumentations Projekt</ulink></para></listitem>
-<listitem><para><ulink url="http://www.mainmatter.com/">&Linux; meist gestellte Fragen mit Antworten</ulink></para></listitem>
-<listitem><para><ulink url="http://www.linux.org/index.html">Die &Linux; Homepage bei &Linux; Online</ulink></para></listitem>
-<listitem><para>Usenet Newsgroups wie comp.os.linux.*</para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para><ulink url="http://www.control-escape.com/">Control-Escape: Alternative Software, &Linux;-Hilfe</ulink></para></listitem> <listitem><para><ulink url="http://www.linuxdoc.org/">&Linux; Dokumentations Projekt</ulink></para></listitem> <listitem><para><ulink url="http://www.mainmatter.com/">&Linux; meist gestellte Fragen mit Antworten</ulink></para></listitem> <listitem><para><ulink url="http://www.linux.org/index.html">Die &Linux; Homepage bei &Linux; Online</ulink></para></listitem> <listitem><para>Usenet Newsgroups wie comp.os.linux.*</para></listitem> </itemizedlist>
 <para>Um &kde; unter &Linux; zu betreiben, m&uuml;ssen Sie das &X; zuerst einrichten. &X; ist der de facto Standard f&uuml;r &GUI; auf &UNIX;-Systemen. Folgende Links sind m&ouml;glicherweise hierbei hilfreich:</para>
-<itemizedlist>
-<listitem><para><ulink url="http://www.x.org/">X.org</ulink></para></listitem>
-<listitem><para><ulink url="http://www.xfree86.org/">XFree86(TM): Home Page</ulink></para></listitem>
-<listitem><para>Usenet Newsgroups wie comp.os.linux.x und comp.windows.x.*.</para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para><ulink url="http://www.x.org/">X.org</ulink></para></listitem> <listitem><para><ulink url="http://www.xfree86.org/">XFree86(TM): Home Page</ulink></para></listitem> <listitem><para>Usenet Newsgroups wie comp.os.linux.x und comp.windows.x.*.</para></listitem> </itemizedlist>
 <para>Endlich, Sie sind bereit, mit der &kde;-Installation zu beginnen. Fangen Sie mit dem Lesen des n&auml;chsten Abschnittes an. Um &kde; zu bekommen, sehen Sie unter <xref linkend="where-to-get-KDE"/> nach. Wenn Sie irgendwelche Probleme bei der &kde;-Installation haben, z&ouml;gern Sie nicht, sich an eine der &kde; <link linkend="mailing-lists">Mailinglisten</link> oder <link linkend="newsgroups">Newsgroups</link> zu wenden. Aber bedenken Sie: keine Frage ist zu dumm, gefragt zu werden, aber manche Fragen sind zu dumm zum Beantworten; besonders wenn die Antwort in dieser <acronym>FAQ</acronym> steht.</para>
 <para>Viel Gl&uuml;ck und viel Spa&szlig;!</para>
 </answer>
@@ -525,10 +507,7 @@ export KDEDIR PATH LD_LIBRARY_PATH LIBRARY_PATH
 </question>
 <answer>
 <para>Wenn Sie &X; zum Laufen bekommen, sollten Sie keine Probleme haben, auch &kde; zum Laufen zu bringen. Zus&auml;tzlich k&ouml;nnen folgende Links hilfreich sein:</para>
-<itemizedlist>
-<listitem> <para><ulink url="http://www.cs.utexas.edu/users/kharker/linux-laptop/">http://www.cs.utexas.edu/users/kharker/linux-laptop/</ulink></para> </listitem>
-<listitem> <para><ulink url="http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html">http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html</ulink></para> </listitem>
-</itemizedlist>
+<itemizedlist> <listitem> <para><ulink url="http://www.cs.utexas.edu/users/kharker/linux-laptop/">http://www.cs.utexas.edu/users/kharker/linux-laptop/</ulink></para> </listitem> <listitem> <para><ulink url="http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html">http://www.yy.cs.keio.ac.jp/~sanpei/how2800x600.html</ulink></para> </listitem> </itemizedlist>
 <para>F&uuml;r Laptops mit exotischer Aufl&ouml;sung wie 1024x600, versuchen Sie, die <filename>XF86Config</filename> Datei (in <filename class="directory">/etc/X11</filename> wenn Sie &RedHat; nutzen) zu editieren. Wenn Sie ein wenig Erfahrung mit dieser Datei haben, wissen Sie, dass verschiedene "Modeline"-Zeilen darin sind. Sie m&uuml;ssen nur eine Zeile f&uuml;r Ihre Aufl&ouml;sung hinzuf&uuml;gen. Leider ist das Format der Modelines ziemlich esoterisch, so dass Sie eine Menge zu lesen haben, um es zu verstehen. Eine Informationsquelle ist die <ulink url="http://sunsite.unc.edu/LDP/HOWTO/XFree86-Video-Timings-HOWTO.html">XFree86 Video Timings HOWTO</ulink>.</para>
 </answer>
 </qandaentry>
@@ -860,10 +839,7 @@ Autostart=/home/me/Autostart/
 <answer>
 <para>In vielen &X;-&GUI;'s wird die Funktion Minimieren durch L&ouml;schen des Fensters, in dem das Programm l&auml;uft und Erstellen eines Icons an dessen Stelle realisiert. Nicht so bei &kde;. Hier wird das Fenster einfach versteckt und das Programm l&auml;uft noch.</para>
 <para>Es gibt mehrere Wege, um auf ein verstecktes Fenster zuzugreifen:</para>
-<itemizedlist>
-<listitem> <para>Wenn Sie die Programmleiste von &kpanel; (oder &kicker;) benutzen, k&ouml;nnen Sie einstellen, dass eine Liste der laufenden Programme auf Ihrer Arbeitsfl&auml;che angezeigt wird. Die Namen von versteckten Programmen werden in Klammern angezeigt.</para> </listitem>
-<listitem> <para>Klicken mit der mittleren Maustaste auf den Hintergrund der Arbeitsfl&auml;che erzeugt eine Liste der laufenden Programme und auch hier werden die Namen der versteckten Programme in Klammern angezeigt.</para> </listitem>
-</itemizedlist>
+<itemizedlist> <listitem> <para>Wenn Sie die Programmleiste von &kpanel; (oder &kicker;) benutzen, k&ouml;nnen Sie einstellen, dass eine Liste der laufenden Programme auf Ihrer Arbeitsfl&auml;che angezeigt wird. Die Namen von versteckten Programmen werden in Klammern angezeigt.</para> </listitem> <listitem> <para>Klicken mit der mittleren Maustaste auf den Hintergrund der Arbeitsfl&auml;che erzeugt eine Liste der laufenden Programme und auch hier werden die Namen der versteckten Programme in Klammern angezeigt.</para> </listitem> </itemizedlist>
 </answer>
 </qandaentry>
 
@@ -1224,10 +1200,7 @@ keycode 117=F15
 </question>
 <answer>
 <para>Viele &kde;-Nutzer berichten &uuml;ber Probleme mit &kppp;. Bevor auch Sie sich jedoch dar&uuml;ber beschweren, &uuml;berpr&uuml;fen Sie bitte folgendes:</para>
-<itemizedlist>
-<listitem><para>K&ouml;nnen Sie ohne &kppp; zu Ihrem <acronym>ISP</acronym> w&auml;hlen? Wenn nicht, dann ist das Problem wahrscheinlich nicht in &kppp; zu suchen.</para></listitem>
-<listitem><para>Sind Sie die &kppp;-Dokumentation mindestens drei Mal durchgegangen und haben Sie deren Anweisungen und Fehlersuchevorschl&auml;ge befolgt?</para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para>K&ouml;nnen Sie ohne &kppp; zu Ihrem <acronym>ISP</acronym> w&auml;hlen? Wenn nicht, dann ist das Problem wahrscheinlich nicht in &kppp; zu suchen.</para></listitem> <listitem><para>Sind Sie die &kppp;-Dokumentation mindestens drei Mal durchgegangen und haben Sie deren Anweisungen und Fehlersuchevorschl&auml;ge befolgt?</para></listitem> </itemizedlist>
 <para>Die &kppp;-Dokumentation finden Sie im <application>&kde;-Hilfezentrum</application> oder Sie k&ouml;nnen auch direkt in das Dokumentationsverzeichnis gehen, dies ist normalerweise <filename class="directory">$<envar>KDEDIR</envar>/share/doc/HTML/default/kppp</filename>. Zus&auml;tzlich gibt eine Webseite "How to set up kppp with ISPs in the UK" unter <ulink url="http://www.kppp-archive.freeserve.co.uk/">http://www.kppp-archive.freeserve .co.uk/</ulink>. Zu guter letzt finden Sie die &kppp;-Homepage unter <ulink url="http://devel-home.kde.org/~kppp/">http://devel-home.kde.org/~kppp/</ulink>.</para>
 <para>Wenn Sie jetzt immer noch Probleme haben, hier noch einige Hinweise:</para>
 <variablelist> <varlistentry><term>Wie &auml;ndern Sie die &MTU;-Einstellung in &kppp;?</term> <listitem><para>&Ouml;ffen Sie das &kppp;-Dialogfenster und w&auml;hlen Sie <guibutton>Einstellungen</guibutton>. W&auml;hlen Sie einen vorhandenen Zugang und klicken Sie dann auf <guibutton>Bearbeiten...</guibutton> oder klicken Sie gleich auf <guibutton>Neu</guibutton>, um einen neuen Zugang zu erstellen. W&auml;hlen Sie die Karteikarte f&uuml;r <guilabel>W&auml;hlen</guilabel> und klicken Sie auf <guibutton>pppd-Argumente bearbeiten...</guibutton>. Geben Sie im Feld <guilabel>Argument</guilabel> das Gew&uuml;nschte ein (<abbrev>z.B.</abbrev> <userinput>mtu 296</userinput>) und klicken Sie auf <guibutton>Hinzuf&uuml;gen</guibutton>. &Uuml;berpr&uuml;fen Sie alle Eingaben im gro&szlig;en Textfeld und klicken Sie auf <guibutton>OK</guibutton>.</para> <para>Zum &Uuml;berpr&uuml;fen, ob Ihre Optionen auch wirksam geworden sind, k&ouml;nnen Sie Verschiedenes tun:</para> <itemizedlist> <listitem><para>F&uuml;hren Sie den Befehl <command>/sbin/ifconfig ppp0</command> in einem Terminal-Fenster aus und sehen Sie nach, ob die &MTU; in der Ausgabe mit dem von Ihnen eingestellten Wert &uuml;bereinstimmt.</para></listitem> <listitem><para>Add <option>debug</option> and <option>kdebug</option> (each on a separate line) to your <filename>/etc/ppp/options</filename> file and restart your &PPP; session. You will find debugging messages in <filename>/var/log/messages</filename>, including &MRU; and &MTU; settings.</para></listitem> </itemizedlist> <para>Wenn Sie wollen, k&ouml;nnen Sie auch die Werte f&uuml;r &MRU; und &MTU; zur Datei <filename>options</filename> hinzuf&uuml;gen. Sie m&uuml;ssen f&uuml;r jede Option eine neue Zeile verwenden, Anf&uuml;hrungszeichen und Trennstriche sind hier verboten.</para></listitem> </varlistentry> <varlistentry> <term>&kppp; verbindet nur mit niedrigen Geschwindigkeiten.</term> <listitem><para>Eventuell hilft folgendes:</para> <itemizedlist> <listitem><para>F&uuml;hren Sie den Befehl <command>setserial spd_hi</command> auf einer Befehlszeile aus.</para></listitem> <listitem><para>Der Standardwert f&uuml;r &MTU; ist 1500. Dies kann f&uuml;r eine Verbindung &uuml;ber das Telefonnetz zu gro&szlig; sein. Versuchen Sie kleinere Werte wie <userinput>296</userinput> oder <userinput>576</userinput>.</para></listitem> <listitem><para>&Uuml;berpr&uuml;fen Sie in Ihrem Verzeichnis <filename class="directory">$<envar>HOME</envar>/.kde/share/config</filename> die Datei <filename>kppprc</filename>. Stellen Sie sicher, dass dort die richtige Modemgeschwindigkeit (Geschwindigkeit der Verbindung zwischen Modem und Rechner) eingestellt ist.</para></listitem> </itemizedlist></listitem> </varlistentry> </variablelist>
@@ -1690,11 +1663,7 @@ keycode 86 = plus
 keycode 77 =            
 </screen>
 <para>Andere m&ouml;gliche Alternativen:</para>
-<itemizedlist>
-<listitem><para>Das Programm <application>xkeycaps</application>: Klicken mit der <mousebutton>rechten Maustaste</mousebutton> darauf sollte Einstellungen erlauben. Es kann sein, dass dies nur mit Systemverwalterrechten m&ouml;glich ist.</para></listitem>
-<listitem><para><command>man XF86Config</command> und sehen Sie unter Sektion Keyboard nach.</para></listitem>
-<listitem><para>Installieren Sie <application>NumLockX</application>, das Sie auf der Seite <ulink url="http://dforce.sh.cvut.cz/~seli/en/numlockx">http://dforce.sh.cvut.cz/~seli/ en/numlockx</ulink> finden.</para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para>Das Programm <application>xkeycaps</application>: Klicken mit der <mousebutton>rechten Maustaste</mousebutton> darauf sollte Einstellungen erlauben. Es kann sein, dass dies nur mit Systemverwalterrechten m&ouml;glich ist.</para></listitem> <listitem><para><command>man XF86Config</command> und sehen Sie unter Sektion Keyboard nach.</para></listitem> <listitem><para>Installieren Sie <application>NumLockX</application>, das Sie auf der Seite <ulink url="http://dforce.sh.cvut.cz/~seli/en/numlockx">http://dforce.sh.cvut.cz/~seli/ en/numlockx</ulink> finden.</para></listitem> </itemizedlist>
 </answer>
 </qandaentry>
 
@@ -1783,23 +1752,11 @@ YMMV: your mileage may vary
 <para>Alle Listen sind &uuml;ber die Universit&auml;t von T&uuml;bingen erreichbar.</para>
 <para>Zum Abonnieren:</para>
 <para>Senden Sie eine E-Mmail an list-request, das ist im Einzelnen:</para>
-<itemizedlist>
-<listitem><para><ulink url="mailto:kde-request@kde.org">kde-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-announce-request@kde.org">kde-announce-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-user-request@kde.org">kde-user-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-look-request@kde.org">kde-look-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-licensing-request@kde.org">kde-licensing-request@kde.org</ulink></para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para><ulink url="mailto:kde-request@kde.org">kde-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-announce-request@kde.org">kde-announce-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-user-request@kde.org">kde-user-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-look-request@kde.org">kde-look-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-licensing-request@kde.org">kde-licensing-request@kde.org</ulink></para></listitem> </itemizedlist>
 <para>Die E-Mail muss enthalten: <userinput>subscribe <replaceable>Ihre_E-Mail_Adresse</replaceable></userinput> in der Betreff-Zeile.</para>
 <para>Zum Abbestellen:</para>
 <para>Senden Sie eine E-Mmail an list-request, das ist im Einzelnen:</para>
-<itemizedlist>
-<listitem><para><ulink url="mailto:kde-request@kde.org">kde-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-announce-request@kde.org">kde-announce-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-user-request@kde.org">kde-user-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-look-request@kde.org">kde-look-request@kde.org</ulink></para></listitem>
-<listitem><para><ulink url="mailto:kde-licensing-request@kde.org">kde-licensing-request@kde.org</ulink></para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para><ulink url="mailto:kde-request@kde.org">kde-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-announce-request@kde.org">kde-announce-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-user-request@kde.org">kde-user-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-look-request@kde.org">kde-look-request@kde.org</ulink></para></listitem> <listitem><para><ulink url="mailto:kde-licensing-request@kde.org">kde-licensing-request@kde.org</ulink></para></listitem> </itemizedlist>
 <para>The email must contain <userinput>unsubscribe <replaceable>your_email_address</replaceable></userinput> in the subject. <important><para>Never send subscribe/unsubscribe request to the mailing lists directly! Use the list-request instead.</para></important></para>
 <para>Es gibt au&szlig;erdem eine komplette Liste aller &kde;-bezogenen Mailing Listen sowie ein WWW-basiertes Interface zum Abonnieren/Abbestellen unter: <ulink url="http://master.kde.org/mailman/listinfo">http://master.kde.org/mailman/listinfo </ulink>.</para>
 </answer>
@@ -1830,12 +1787,7 @@ YMMV: your mileage may vary
 </question>
 <answer>
 <para>Ja. Hier ist eine - wahrscheinlich unvollst&auml;ndige Liste:</para>
-<itemizedlist>
-<listitem><para><ulink url="http://www.kde.org/info/faq.html">&kde; 2.0 <acronym>FAQ</acronym></ulink></para></listitem>
-<listitem><para><ulink url="http://www.konqueror.org/faq.html">&konqueror; <acronym>FAQ</acronym></ulink></para></listitem>
-<listitem><para><ulink url="http://space.twc.de/~stefan/kde/arts-mcop-doc/artsd-faq.html">aRts Sound Server <acronym>FAQ</acronym></ulink></para></listitem>
-<listitem><para><ulink url="http://kmail.kde.org/manual/faq.html">&kmail; <acronym>FAQ</acronym></ulink></para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para><ulink url="http://www.kde.org/info/faq.html">&kde; 2.0 <acronym>FAQ</acronym></ulink></para></listitem> <listitem><para><ulink url="http://www.konqueror.org/faq.html">&konqueror; <acronym>FAQ</acronym></ulink></para></listitem> <listitem><para><ulink url="http://space.twc.de/~stefan/kde/arts-mcop-doc/artsd-faq.html">aRts Sound Server <acronym>FAQ</acronym></ulink></para></listitem> <listitem><para><ulink url="http://kmail.kde.org/manual/faq.html">&kmail; <acronym>FAQ</acronym></ulink></para></listitem> </itemizedlist>
 </answer>
 </qandaentry>
 
@@ -1852,16 +1804,7 @@ YMMV: your mileage may vary
 </question>
 <answer>
 <para>&kde; ist ein Software Projekt, das - da das Endprodukt frei ist - von freiwilligen Spenden lebt. Diese k&ouml;nnen in vielen Formen helfen. Jeder ist willkommen, zum Erfolg von &kde; beizutragen. Nicht nur Programmierer sind willkommen. Es gibt jede Menge andere Wege, um mitzuhelfen, &kde; zu verbessern:</para>
-<itemizedlist>
-<listitem><para>Testen Sie die Software.</para></listitem>
-<listitem><para>Schicken Sie Fehlerberichte. F&uuml;r weitere Informationen hierzu sehen Sie unter <link linkend="bug-report">Wie verfassen Sie einen Fehlerbericht?</link> nach.</para></listitem>
-<listitem><para>Schreiben Sie Dokumentation oder Hilfedateien. Weitere Informationen hierzu finden Sie unter <ulink url="http://i18n.kde.org/teams/en/index.html">&kde; Editorial Team Home Page</ulink>.</para></listitem>
-<listitem><para>&Uuml;bersetzen Sie Programme, Dokumentation und Hilfedateien. Weitere Informationen hierzu finden Sie unter <ulink url="http://i18n.kde.org">The &kde; Translators' and Documenters' Web Site</ulink> oder gleich in Deutsch unter <ulink url="http://i18n.kde.org/teams/de">KDE &Uuml;bersetzungsprojekt: Deutsch</ulink>.</para></listitem>
-<listitem><para>Zeichnen oder malen Sie h&uuml;bsche Symbole oder komponieren Sie Soundeffekte. Sie sollten die <ulink url="http://www.kde.org/artist/index.html">&kde; K&uuml;nstlerseite</ulink> besuchen, um mehr dar&uuml;ber herauszufinden.</para></listitem>
-<listitem><para>Schreiben Sie Artikel und B&uuml;cher &uuml;ber &kde;. Wenn Sie helfen wollen, &kde; bekannt zu machen, schicken Sie einfach eine E-Mail an: <email>kde-pr@kde.org</email>. Die Freiwilligen Helfer f&uuml;r &Ouml;ffentlichkeitsarbeit werden sich dann um Sie k&uuml;mmern.</para></listitem>
-<listitem><para>Programmieren Sie neue &kde; Anwendungen. Bitte sehen Sie unter <xref linkend="programming"/> f&uuml;r weitere Informationen nach.</para></listitem>
-<listitem><para> Sponsoren sind nat&uuml;rlich auch sehr willkommen. :-)</para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para>Testen Sie die Software.</para></listitem> <listitem><para>Schicken Sie Fehlerberichte. F&uuml;r weitere Informationen hierzu sehen Sie unter <link linkend="bug-report">Wie verfassen Sie einen Fehlerbericht?</link> nach.</para></listitem> <listitem><para>Schreiben Sie Dokumentation oder Hilfedateien. Weitere Informationen hierzu finden Sie unter <ulink url="http://i18n.kde.org/teams/en/index.html">&kde; Editorial Team Home Page</ulink>.</para></listitem> <listitem><para>&Uuml;bersetzen Sie Programme, Dokumentation und Hilfedateien. Weitere Informationen hierzu finden Sie unter <ulink url="http://i18n.kde.org">The &kde; Translators' and Documenters' Web Site</ulink> oder gleich in Deutsch unter <ulink url="http://i18n.kde.org/teams/de">KDE &Uuml;bersetzungsprojekt: Deutsch</ulink>.</para></listitem> <listitem><para>Zeichnen oder malen Sie h&uuml;bsche Symbole oder komponieren Sie Soundeffekte. Sie sollten die <ulink url="http://www.kde.org/artist/index.html">&kde; K&uuml;nstlerseite</ulink> besuchen, um mehr dar&uuml;ber herauszufinden.</para></listitem> <listitem><para>Schreiben Sie Artikel und B&uuml;cher &uuml;ber &kde;. Wenn Sie helfen wollen, &kde; bekannt zu machen, schicken Sie einfach eine E-Mail an: <email>kde-pr@kde.org</email>. Die Freiwilligen Helfer f&uuml;r &Ouml;ffentlichkeitsarbeit werden sich dann um Sie k&uuml;mmern.</para></listitem> <listitem><para>Programmieren Sie neue &kde; Anwendungen. Bitte sehen Sie unter <xref linkend="programming"/> f&uuml;r weitere Informationen nach.</para></listitem> <listitem><para> Sponsoren sind nat&uuml;rlich auch sehr willkommen. :-)</para></listitem> </itemizedlist>
 <para>Es gibt einige Stellen, wo Sie nachsehen k&ouml;nnen, wenn Sie sich beteiligen wollen. Der erste Schritt ist das Abonnieren von einigen der Mailing Listen. Dort werden Sie sicher bald etwas sehen, was verbessert werden k&ouml;nnte oder auch noch ganz fehlt.</para>
 </answer>
 </qandaentry>
@@ -1938,10 +1881,7 @@ YMMV: your mileage may vary
 <!--still has a lot to write-->
 <para>Die aktuellen <acronym>FAQ</acronym>-Betreuer sind:</para>
 
-<itemizedlist>
-<listitem><para>Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email></para></listitem>
-<listitem><para>Michael Demers <email>mdemers@nitemaster.yi.org</email></para></listitem>
-</itemizedlist>
+<itemizedlist> <listitem><para>Lee Wee Tiong <email>t29v1051@ip.media.kyoto-u.ac.jp</email></para></listitem> <listitem><para>Michael Demers <email>mdemers@nitemaster.yi.org</email></para></listitem> </itemizedlist>
 
 <para>Viele der Antworten in dieser <acronym>FAQ</acronym> stammen aus den verschiedenen &kde; Mailing Listen und Newsgroups. Hiermit ein <emphasis>gro&szlig;es</emphasis> Dankesch&ouml;n an alle, die mit Antworten beigetragen haben, die schlie&szlig;lich in dieser <acronym>FAQ</acronym> erschienen.</para>
 

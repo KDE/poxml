@@ -54,7 +54,7 @@ int main( int argc, char **argv )
         for (QValueList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
             if (it2 != (*it).lines.begin())
-                cout << ", ";
+                cout << " ";
             cout << "index.docbook:" << (*it2).start_line;
 
         }
