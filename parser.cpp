@@ -41,7 +41,8 @@ static const char *cuttingtags[] = {"trans_comment", "para", "title", "term",
                                     "refmiscinfo", "refsect2", "refsect3", "refsect1info",
                                     "refsect2info", "refsect3info", "refsection", "refsectioninfo",
                                     "refsynopsisdiv", "refsysnopsisdivinfo", "remark",
-                                    "revdescription", "glossentry",
+                                    "revdescription", "glossentry", "partinfo", 
+				    "segmentedlist", "segtitle", "seg", "seglistitem", "screenco",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
