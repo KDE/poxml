@@ -27,7 +27,7 @@ struct BlockInfo {
 
 class MsgBlock {
  public:
-    MsgBlock() { start = end = 0; }
+    MsgBlock() { start = end = 0; do_not_split = false; }
     MsgBlock(const MsgBlock &rhs ) {
         *this = rhs;
     }
@@ -37,6 +37,7 @@ class MsgBlock {
     QString msgid;
     QString msgstr;
     int start, end;
+    bool do_not_split;
 
     void operator=(const MsgBlock& rhs) {
         lines = rhs.lines;
@@ -46,6 +47,7 @@ class MsgBlock {
         msgstr = rhs.msgstr;
         start = rhs.start;
         end = rhs.end;
+        do_not_split = rhs.do_not_split;
     }
 };
 
@@ -109,6 +111,7 @@ private:
     int line;
     MsgList list;
     mutable QRegExp infos_reg;
+    mutable QRegExp do_not_split_reg;
 };
 
 void outputMsg(const char *prefix, const QString &message);

@@ -51,6 +51,7 @@ bool StructureParser::fatalError ( const QXmlParseException &e )
 bool StructureParser::startDocument()
 {
     infos_reg = QString("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
+    do_not_split_reg = QString("\\s*condition=\"do-not-split\"");
     message = "";
     inside = 0;
     return true;
@@ -371,6 +372,11 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
                     msg.lines.first().end_col = infos_reg.cap(2).toInt() + 1;
                 }
             }
+            if (do_not_split_reg.search(attr) >= 0) {
+                msg.do_not_split = true;
+                break;
+            }
+
             changed = true;
         } else
             break;
@@ -381,6 +387,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
 #endif
 
     msg.lines.first().offset += offset;
+    if (msg.do_not_split)
+        recurse = false;
 
     if (changed && recurse)
         formatMessage(msg);
