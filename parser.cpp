@@ -2,6 +2,7 @@
 #include <iostream.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <qregexp.h>
 
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",

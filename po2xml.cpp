@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <iostream.h>
 #include <assert.h>
+#include <qregexp.h>
 
 #include <fstream>
 #include "GettextLexer.hpp"

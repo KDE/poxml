@@ -2,6 +2,7 @@
 #define PARSER_H
 
 #include <qxml.h>
+#include <qmap.h>
 
 struct BlockInfo {
     int start_line;

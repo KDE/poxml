@@ -8,19 +8,19 @@ KDE_CXXFLAGS = $(USE_EXCEPTIONS)
 
 SUBDIRS = antlr
 
-split2po_SOURCES = qxml.cpp split.cpp parser.cpp
+split2po_SOURCES = split.cpp parser.cpp
 split2po_LDFLAGS = $(all_libraries)
 split2po_LDADD = $(LIB_QT)
 
-xml2pot_SOURCES = qxml.cpp xml2pot.cpp parser.cpp
+xml2pot_SOURCES = xml2pot.cpp parser.cpp
 xml2pot_LDFLAGS = $(all_libraries)
 xml2pot_LDADD = $(LIB_QT)
 
-po2xml_SOURCES = GettextLexer.cpp GettextParser.cpp qxml.cpp po2xml.cpp parser.cpp
+po2xml_SOURCES = GettextLexer.cpp GettextParser.cpp po2xml.cpp parser.cpp
 po2xml_LDFLAGS = $(all_libraries)
 po2xml_LDADD = antlr/src/libantlr.la $(LIB_QT)
 
-swappo_SOURCES = GettextLexer.cpp GettextParser.cpp swappo.cpp parser.cpp qxml.cpp
+swappo_SOURCES = GettextLexer.cpp GettextParser.cpp swappo.cpp parser.cpp
 swappo_LDFLAGS = $(all_libraries)
 swappo_LDADD = antlr/src/libantlr.la $(LIB_QT)
 
