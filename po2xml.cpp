@@ -179,6 +179,13 @@ int main( int argc, char **argv )
                 index++;
             QString omsgid = (*it).msgid;
             (*it).msgid = (*it).msgid.mid(index);
+
+            index = (*it).msgid.length() - 1;
+            while ((*it).msgid.at(index) != '<')
+                index--;
+
+            (*it).msgid = (*it).msgid.left(index);
+
             if (!descaped.isEmpty()) {
                 if (descaped.at(0) != '<') {
                     qWarning("the translation of '%s' doesn't start with a tag.", omsgid.latin1());
@@ -191,6 +198,12 @@ int main( int argc, char **argv )
                 while (descaped.at(index) == ' ')
                     index++;
                 descaped = descaped.mid(index);
+
+                index = descaped.length() - 1;
+                while (descaped.at(index) != '<')
+                    index--;
+
+                descaped = descaped.left(index);
             }
         }
 
