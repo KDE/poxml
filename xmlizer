@@ -25,7 +25,7 @@ text = docbookfile.read()
 
 # comments cause problems with some regexps and don't bring us anything
 # at this stage of development
-text = re.sub("(<\!--[^<>]*(?:<[^>]*>[^<>]*)*>)", remove, text)
+# text = re.sub("(<\!--[^<>]*(?:<[^>]*>[^<>]*)*>)", remove, text)
 
 # this all we can't handle in XML - beside the comment
 text = re.sub("(<\!ENTITY[^<>]*(?:<[^>]*>[^<>]*)*>)", remove, text)

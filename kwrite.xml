@@ -1,6 +1,10 @@
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V3.1-Based Variant V1.0//EN" "dummy.dtd" [
- <!ENTITY kappname "&kwrite;">  
-]>  
+<?xml version='1.0' ?>
+
+
+
+
+
+  
   
 <book lang="&language;">  
   
@@ -42,17 +46,19 @@
 <affiliation><address><email>vampyr@atconnex.net</email></address></affiliation>
 </othercredit>
 
+<!-- ROLES_OF_TRANSLATORS -->
+
 </authorgroup>
 
 
 <copyright>
-<year>2000</year>
+<year>2000</year><year>2001</year>
 <holder>Thad McGinnis</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>14/12/2000</date>
-<releaseinfo>2.0</releaseinfo>
+<date>15/02/2001</date>
+<releaseinfo>2.00.00</releaseinfo>
 
 <abstract>
 <para>This handbook describes &kwrite; Version 2.0</para>
@@ -311,7 +317,7 @@ linkend="save"><guilabel>Save</guilabel></link> command.</para></entry>
 <variablelist>  
   
 <varlistentry>  
-<term><anchor id="new"></anchor><menuchoice>  
+<term><anchor id="new"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></shortcut>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>N</accel>ew</guimenuitem></menuchoice></term>  
 <listitem><para>This starts a new Document in the editor. If there is a current  
@@ -320,7 +326,7 @@ document with unsaved changes the user is given a chance to save it.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="open"></anchor><menuchoice>  
+<term><anchor id="open"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>0</accel>pen</guimenuitem></menuchoice></term>  
 <listitem><para>This command opens a file.  It does this by means of a dialog box  
@@ -344,14 +350,15 @@ directories as well as an up arrow button for moving up the directory tree. The
 button with the little house takes the user to his or her home directory and the one
 with the two arrows curved in on each other updates the view of the current
 directory. The flag button lets the user set a new bookmark at the current directory
-or go to  one that was previously set. The button with the wrench (spanner) icon even
-permits the user to change a few basic settings for the dialog box. Finally  there is
-dropdown box on the toolbar with a list of some commonly frequented
-directories.</para> </listitem>
+or go to  one that was previously set. <!-- The button with the wrench (spanner) -->
+<!-- icon even permits the user to change a few basic settings for the dialog -->
+<!-- box.  --> The last button on the toolbar allows you to create a new
+directory, and finally  there is dropdown box with a list of some commonly
+frequented directories.</para> </listitem>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="open-recent"></anchor><menuchoice>  
+<term><anchor id="open-recent"/><menuchoice>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem>Open  
 <accel>R</accel>ecent</guimenuitem></menuchoice></term> 
 <listitem><para>This is a shortcut to open recently saved documents. Clicking on
@@ -361,7 +368,7 @@ still resides at the same location. </para></listitem>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="save"></anchor><menuchoice>  
+<term><anchor id="save"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo></shortcut>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>S</accel>ave</guimenuitem></menuchoice></term>  
 <listitem><para>This saves the current document.  If there has already been a
@@ -372,7 +379,7 @@ save as dialog (described below) will be invoked.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="save-as"></anchor><menuchoice>
+<term><anchor id="save-as"/><menuchoice>
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem>Save
 <accel>A</accel>s</guimenuitem></menuchoice></term>  
 <listitem><para>This allows a document to be saved with a new file name. This is
@@ -381,7 +388,7 @@ linkend="open">Open</link> section of this help file.</para> </listitem>
 </varlistentry>
   
 <varlistentry>  
-<term><anchor id="print"></anchor><menuchoice>  
+<term><anchor id="print"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo></shortcut>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>P</accel>rint</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -390,7 +397,7 @@ linkend="open">Open</link> section of this help file.</para> </listitem>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="new-window"></anchor><menuchoice>  
+<term><anchor id="new-window"/><menuchoice>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem>New <accel>W</accel>indow</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This creates a new window, &ie; a new instance of &kwrite;. In this way the user can easily work  
@@ -399,7 +406,7 @@ on more than one file at a time with &kwrite;.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="new-view"></anchor><menuchoice>  
+<term><anchor id="new-view"/><menuchoice>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem>New <accel>V</accel>iew</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This creates a new view of the current document, &ie;, a new instance of
@@ -408,7 +415,7 @@ document.</para></listitem>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="close"></anchor><menuchoice>  
+<term><anchor id="close"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo></shortcut>  
 <guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>Q</accel>uit</guimenuitem></menuchoice></term>
 <listitem><para>This will close the editor window, if you have more than one
@@ -426,7 +433,7 @@ closed.</para></listitem>
   
 <variablelist>  
 <varlistentry>
-<term><anchor id="undo"></anchor><menuchoice>  
+<term><anchor id="undo"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Und<accel>o</accel></guimenuitem></menuchoice></term>
 <listitem>  
@@ -436,7 +443,7 @@ constitutes such an action may be better understood by referring to the <link li
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="redo"></anchor><menuchoice>  
+<term><anchor id="redo"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>Z</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Re<accel>d</accel>o</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -445,7 +452,7 @@ constitutes such an action may be better understood by referring to the <link li
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="undohistory"></anchor><menuchoice>  
+<term><anchor id="undohistory"/><menuchoice>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Undo/Redo <accel>H</accel>istory</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This will call a display box showing a list of the most recent actions on  
@@ -467,7 +474,7 @@ actions.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="cut"></anchor><menuchoice>  
+<term><anchor id="cut"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>C<accel>u</accel>t</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -478,7 +485,7 @@ applications.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="copy"></anchor><menuchoice>  
+<term><anchor id="copy"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>C</accel>opy</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -489,7 +496,7 @@ provide a way to transfer data between applications.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="paste"></anchor><menuchoice>  
+<term><anchor id="paste"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>P</accel>aste</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -500,7 +507,7 @@ data between applications.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="select-all"></anchor><menuchoice>  
+<term><anchor id="select-all"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo></shortcut>
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Select <accel>A</accel>ll</guimenuitem></menuchoice></term>
 <listitem>  
@@ -510,7 +517,7 @@ copying the entire file to another application.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="invert-the-selection"></anchor><menuchoice>  
+<term><anchor id="invert-the-selection"/><menuchoice>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Invert <accel>S</accel>election</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This selects any unselected text while unselecting any selected text -  
@@ -519,7 +526,7 @@ effectively reversing the current state of selection.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="find"></anchor><menuchoice>  
+<term><anchor id="find"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></shortcut>
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>F</accel>ind</guimenuitem></menuchoice></term>
 <listitem>  
@@ -541,7 +548,7 @@ than from the beginning.</para>
 </varlistentry>  
 
 <varlistentry>  
-<term><anchor id="find-again"></anchor><menuchoice>  
+<term><anchor id="find-again"/><menuchoice>  
 <shortcut><keycombo><keycap>F3</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem>Find <accel>N</accel>ext</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -550,7 +557,7 @@ dialog box.</para> </listitem>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="replace"></anchor><menuchoice>  
+<term><anchor id="replace"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo></shortcut>  
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>R</accel>eplace</guimenuitem></menuchoice></term>
 <listitem>  
@@ -564,7 +571,7 @@ confirmation before each replacement.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="insertfile"></anchor>
+<term><anchor id="insertfile"/>
 <menuchoice>
 <guimenu><accel>E</accel>dit</guimenu><guimenuitem><accel>I</accel>nsert File</guimenuitem></menuchoice></term>
 <listitem>
@@ -583,21 +590,21 @@ cursor.</para></listitem>
 <variablelist>  
   
 <varlistentry>  
-<term><anchor id="go-to-line"></anchor><menuchoice>  
+<term><anchor id="go-to-line"/><menuchoice>  
 <guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>G</accel>o to line</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This opens the goto line dialog box which is used to have the cursor jump  
 to a particular line (specified by number) in the document.  The line number may  
 be entered directly into the text box or graphically by clicking on the up or  
 down arrow spin controls at the side of the text box. The little up arrow will  
-decrease the line number and the down arrow increase it.  There is also a slide  
+increase the line number and the down arrow decrease it.  There is also a slide  
 control to the right of the text box which allows the user to move the goto  
 point in the document in an analog manner.</para>  
 </listitem>  
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="add-marker"></anchor><menuchoice>  
+<term><anchor id="add-marker"/><menuchoice>  
 <shortcut><keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo></shortcut>  
 <guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>A</accel>dd Marker</guimenuitem></menuchoice></term>
 <listitem>  
@@ -612,7 +619,7 @@ point (s)he may by way of this feature instruct &kwrite; to remember it. </para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="set-bookmark"></anchor><menuchoice>  
+<term><anchor id="set-bookmark"/><menuchoice>  
 <guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>S</accel>et Marker</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This creates a marker in the document at the line where the cursor is  
@@ -622,7 +629,7 @@ which is appended at the bottom of this menu item.</para>
 </varlistentry>  
   
 <varlistentry>
-<term><anchor id="clear-bookmarks"></anchor><menuchoice>  
+<term><anchor id="clear-bookmarks"/><menuchoice>  
 <guimenu><accel>G</accel>o</guimenu><guimenuitem><accel>C</accel>lear Markers</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This command will remove all the markers from the docucument as well as the
@@ -631,7 +638,7 @@ list of markers which is appended at the  bottom of this menu item.</para>
 </varlistentry>  
 </variablelist>  
   
-<para>At the bottom of this menu, a submenu of markers becomes active, if any  
+<para>At the bottom of this menu, a list of markers appears if any  
 markers are available for this window.</para>
 </sect1>  
   
@@ -640,7 +647,7 @@ markers are available for this window.</para>
   
 <variablelist>
 <varlistentry>
-<term><anchor id="Spelling..."></anchor><menuchoice>
+<term><anchor id="Spelling..."/><menuchoice>
 <guimenu><accel>T</accel>ools</guimenu><guimenuitem><accel>S</accel>pelling...</guimenuitem></menuchoice></term>
 
 <listitem><para><action>This initiates the spell checking program - a program
@@ -735,7 +742,7 @@ of the editor just outside of the text entry area.</para></note>
 <variablelist>
 <varlistentry>
 <term><guibutton>Help</guibutton></term>
-<listitem><para> This invokes the KDE help system starting at the &kedit; help
+<listitem><para> This invokes the KDE help system starting at the &kwrite; help
 pages (this document).</para></listitem>
 </varlistentry>
 
@@ -745,7 +752,7 @@ pages (this document).</para></listitem>
 </varlistentry>
 
 <varlistentry>  
-<term><anchor id="indent"></anchor><menuchoice>  
+<term><anchor id="indent"/><menuchoice>  
 <guimenu>Tools</guimenu><guimenuitem>Indent</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This increases the paragraph's indentation by one step. The size of the
@@ -755,7 +762,7 @@ settings</link>.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="unindent"></anchor><menuchoice>  
+<term><anchor id="unindent"/><menuchoice>  
 <guimenu>Tools</guimenu><guimenuitem>Unindent</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This reduces the paragraph's indentation by one step. The size of the step  
@@ -764,7 +771,7 @@ depends on the <link linkend="pref-indent"> indentation settings</link>.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="cleanindent"></anchor><menuchoice>
+<term><anchor id="cleanindent"/><menuchoice>
 <guimenu>Tools</guimenu><guimenuitem>Clean
 Indentation</guimenuitem></menuchoice></term>  <listitem>  
 <para>Not yet implemented</para>
@@ -798,7 +805,7 @@ selected lines.</para></listitem>
 
 <variablelist>
 <varlistentry>
-<term><anchor id="show-toolbar"></anchor><menuchoice>  
+<term><anchor id="show-toolbar"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Show <accel>T</accel>oolbar</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>When checked, this displays a movable toolbar containing buttons used to  
@@ -807,7 +814,7 @@ initiate frequently used commands. When unchecked the toolbar is hidden.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="show-statusbar"></anchor><menuchoice>  
+<term><anchor id="show-statusbar"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Show <accel>S</accel>tatusbar</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>When checked, this displays a small bar at the bottom of the editor  
@@ -817,7 +824,7 @@ the statusbar is hidden.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="show-path"></anchor><menuchoice>  
+<term><anchor id="show-path"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Sho<accel>w</accel> Path</guimenuitem></menuchoice></term>
 <listitem>  
 <para>When selected, this displays in the title bar the path (its location in the
@@ -826,7 +833,7 @@ file system) of the current document.  When unchecked the path is hidden.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="configure-keybindings"></anchor><menuchoice>  
+<term><anchor id="configure-keybindings"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure <accel>K</accel>ey Bindings</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This command opens a dialog box whereby the <link  
@@ -850,7 +857,7 @@ would mean that anytime he or she held down the <keycap>Ctrl</keycap> and
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="configure-toolbars"></anchor><menuchoice>  
+<term><anchor id="configure-toolbars"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem>Configure Tool<accel>b</accel>ars</guimenuitem></menuchoice></term>  
 <listitem><para>This will open the dialog whereby the toolbar configuration may
 be changed.   The user can choose which shortcut buttons should appear on the  
@@ -866,7 +873,7 @@ in the toolbar.</para> </listitem>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="preferences"></anchor><menuchoice>  
+<term><anchor id="preferences"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>P</accel>references</guimenuitem></menuchoice></term><listitem>
 <para>This menu item opens a dialog whereby several different <link
 linkend="pref-dialog">settings</link> may be adjusted.</para>  
@@ -878,11 +885,11 @@ linkend="pref-dialog">settings</link> may be adjusted.</para>
 Highlighti<accel>n</accel>g</guimenuitem></menuchoice></term>  
 <listitem><para>Opens a dialog box allowing configuration of the syntax  
 highlighting.  The dialog is described in <xref  
-linkend="pref-highlighting"></xref>.</para></listitem>  
+linkend="pref-highlighting"/>.</para></listitem>  
 </varlistentry>  
   
 <varlistentry>
-<term><anchor id="vertical-selection"></anchor><menuchoice>  
+<term><anchor id="vertical-selection"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>V</accel>ertical  
 Selection</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -895,7 +902,7 @@ rectangular area of text anywhere in the document.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="set-highlight"></anchor><menuchoice>  
+<term><anchor id="set-highlight"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guimenuitem><accel>H</accel>ighlight Mode</guimenuitem></menuchoice></term>
 <listitem>  
 <para>This allows the user to choose the style of color highlighting which the  
@@ -905,7 +912,7 @@ language. The font/color information is not stored with the document.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="end-of-line"></anchor><menuchoice>  
+<term><anchor id="end-of-line"/><menuchoice>  
 <guimenu><accel>S</accel>ettings</guimenu><guisubmenu><accel>E</accel>nd of Line</guisubmenu></menuchoice></term>  
 <listitem>  
 <para>This opens a sub-menu from which the user can select the type of <quote>end of  
@@ -922,7 +929,7 @@ used by Unix, &Mac; or MSDOS/&Windows; systems.</para>
   
 <variablelist>  
 <varlistentry>  
-<term><anchor id="contents"></anchor><menuchoice>  
+<term><anchor id="contents"/><menuchoice>  
 <shortcut><keycombo><keycap>F1</keycap></keycombo></shortcut>  
 <guimenu><accel>H</accel>elp</guimenu><guimenuitem><accel>C</accel>ontents</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -931,7 +938,7 @@ used by Unix, &Mac; or MSDOS/&Windows; systems.</para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="whats-this"></anchor><menuchoice>  
+<term><anchor id="whats-this"/><menuchoice>  
 <shortcut><keycombo><keycap>Shift</keycap><keycap>F1</keycap></keycombo></shortcut>  
 <guimenu><accel>H</accel>elp</guimenu><guimenuitem>What's <accel>T</accel>his?</guimenuitem></menuchoice></term>  
 <listitem>  
@@ -942,7 +949,7 @@ one exists for the particular item) explaining the item's function.</para>
 </varlistentry>  
   
 <varlistentry>
-<term><anchor id="report-bug"></anchor><menuchoice>
+<term><anchor id="report-bug"/><menuchoice>
 <guimenu><accel>H</accel>elp</guimenu><guimenuitem><accel>R</accel>eport Bug</guimenuitem></menuchoice></term>
 <listitem><para><action>This calls a dialog box to help
 the user help the KDE team to track down and solve any
@@ -952,7 +959,7 @@ means of email using the information given by the user.</action></para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="about-kwrite"></anchor><menuchoice>  
+<term><anchor id="about-kwrite"/><menuchoice>  
 <guimenu><accel>H</accel>elp</guimenu><guimenuitem><accel>A</accel>bout KWrite</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This will display version and author information</para>
@@ -960,7 +967,7 @@ means of email using the information given by the user.</action></para>
 </varlistentry>  
   
 <varlistentry>  
-<term><anchor id="about-kde"></anchor><menuchoice>  
+<term><anchor id="about-kde"/><menuchoice>  
 <guimenu><accel>H</accel>elp</guimenu><guimenuitem>About <accel>K</accel>DE</guimenuitem></menuchoice></term>  
 <listitem>  
 <para>This displays the KDE version and other basic information.</para>  
@@ -1195,8 +1202,8 @@ ends of lines of text.</para></listitem> </varlistentry>
   
 <varlistentry>  
 <term><guilabel>Auto Brackets</guilabel></term> <listitem><para>When the
-user types a left bracket &kwrite; automatically
-enters the right bracket to the right of the
+user types a left bracket  &kwrite; automatically
+enters the right bracket  to the right of the
 cursor.</para></listitem>
 </varlistentry>
 
@@ -1499,10 +1506,11 @@ the <guilabel>Defaults</guilabel> tab.</para></listitem>
 <itemizedlist>
 <listitem><para>This version of the &kwrite; Handbook is based on the original by Cristian Tibirna <email>tibirna@kde.org</email></para></listitem></itemizedlist>  
 <para>Converted to docbook/proofreading by Lauri Watts <email>vampyr@atconnex.net</email></para>  
-  
+<!-- CREDITS_FOR_TRANSLATORS -->
+ 
 &underFDL;
-&underGPL;      
-</chapter>  
+&underGPL;
+</chapter> 
 
 <appendix id="installation">
 <title>Installation</title>
@@ -1516,7 +1524,7 @@ www.kde.org</ulink>.</para>
   
 
   
-
+  
 </book>  
 <!--  
 Local Variables:  
@@ -1528,3 +1536,4 @@ sgml-minimize-attributes: nil
 sgml-omittag: nil  
 End:  
 -->  
+

@@ -1,32 +1,36 @@
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook V3.1-Based Variant V1.0//EN" "dummy.dtd" [
- <!ENTITY kappname "&write;" >
- <!ENTITY % addindex "IGNORE">
- <!ENTITY % German "INCLUDE" -- change language only here -->
- <!ENTITY % ents PUBLIC "-//KDE//ENTITIES Documentation V1.0//EN">
- %ents;
-]>
+<?xml version='1.0' ?>
 
-<book id="kwrite" lang="&language;">
+
+
+
+
+
+
+<book lang="&language;">
 
 <bookinfo>
 <title>Das &kwrite;-Handbuch</title>
+
 <authorgroup>
 <author>
 <firstname>Thad</firstname><surname>McGinnis</surname>
 <affiliation><address><email>ctmcginnis@compuserve.com</email></address>
 </affiliation>
 </author>
+
 <othercredit role="developer">
 <firstname>Jochen</firstname><surname>Wilhelmy</surname>
 <contrib>Entwicklung</contrib>
 <affiliation><address><email>digisnap@cs.tu-berlin.de</email></address>
 </affiliation>
 </othercredit>
+
 <othercredit role="developer">
 <firstname>Glen</firstname><surname>Parker</surname>
 <contrib>Weitere Entwicklung</contrib>
 <affiliation><address><email>glenebob@nwlink.com</email></address></affiliation>
 </othercredit>
+
 <othercredit role="developer">
 <firstname>Michael</firstname><surname>Koch</surname>
 <contrib>Weitere Entwicklung</contrib>
@@ -45,14 +49,6 @@
 <affiliation><address><email>vampyr@atconnex.net</email></address></affiliation>
 </othercredit>
 
-<othercredit role="translator">
-<firstname>Matthias</firstname>
-<surname>Schulz</surname>
-<affiliation><address><email>matthschulz@linuxfreemail.com</email>
-</address></affiliation>
-<contrib>&Uuml;bersetzer</contrib>
-</othercredit>
-
 </authorgroup>
 
 <copyright>
@@ -62,7 +58,7 @@
 <legalnotice>&FDLNotice;</legalnotice>
 
 <date>14/12/2000</date>
-<releaseinfo>2.0</releaseinfo>
+<releaseinfo>2.00.00</releaseinfo>
 <abstract>
 <para>Dieses Handbuch beschreibt KWrite Version 2.0</para>
 <para>&kwrite; ist ein Texteditor f&uuml;r KDE 2.0</para> </abstract>
@@ -84,7 +80,7 @@ Es ist als Programmiereditor gedacht und k&ouml;nnte mindestens als
 teilweise Alternative zu leistungsf&auml;higeren Editoren betrachtet werden.
 Es kann am besten in Verbindung mit &konqueror; f&uuml;r
 das Darstellen von Quelltext verschiedener Sprachen benutzt werden. &kwrite; ist auch sehr gut
-als einfacher Texteditor zu verwenden. Eine der Haupteigenschaften von &kwrite ist
+als einfacher Texteditor zu verwenden. Eine der Haupteigenschaften von &kwrite; ist
 die farbige Darstellung von Quelltext, angepasst f&uuml;r viele verschiedene
 Programmiersprachen wie: C/C++, &Java;, Python, Perl,
 Bash, Modula 2, <acronym>HTML</acronym> und Ada.</para>
@@ -101,15 +97,15 @@ benutzt hat, sollte keine Probleme haben.</para>
 <title>Drag and Drop (Ziehen und Ablegen)</title>
 
 <para>&kwrite; nutzt das Drag-and-Drop-Protokoll von KDE. Dateien k&ouml;nnen
-gezogen und auf &kwrite abgelegt werden; von der Arbeitsoberfl&auml;che,
-&konqueror, oder einer FTP-Seite, die in
+gezogen und auf &kwrite; abgelegt werden; von der Arbeitsoberfl&auml;che,
+&konqueror;, oder einer FTP-Seite, die in
 einem &konqueror;-Fenster ge&ouml;ffnet ist.</para>
 </sect1>
 
 <sect1 id="command-line-options">
 <title>Befehlszeilenargumente</title>
 
-<para>Auch wenn &kwrite meistens vom K-Men&uuml; oder &uuml;ber ein Arbeitsfl&auml;chensymbol
+<para>Auch wenn &kwrite; meistens vom K-Men&uuml; oder &uuml;ber ein Arbeitsfl&auml;chensymbol
 ge&ouml;ffnet wird, kann es von einer Befehlszeile in einem Terminalfenster
 gestartet werden. Es gibt hierbei einige n&uuml;tzliche Optionen.</para>
 
@@ -317,7 +313,7 @@ linkend="save"><guilabel>Sichern</guilabel></link> aus.</para></entry>
 <variablelist>
 
 <varlistentry>
-<term><anchor id="new"><menuchoice>
+<term><anchor id="new"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>N</keycap></keycombo></shortcut>
 <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu
 </guimenuitem></menuchoice></term>
@@ -328,7 +324,7 @@ soll.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="open"><menuchoice>
+<term><anchor id="open"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>O</keycap></keycombo></shortcut>
 <guimenu><accel>D</accel>atei</guimenu><guimenuitem>
 <accel>&Ouml;</accel>ffnen</guimenuitem></menuchoice></term>
@@ -362,7 +358,7 @@ Einstellungen und ein Feld mit einer Liste h&auml;ufig benutzter
 Verzeichnisse.</para> </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="open-recent"><menuchoice>
+<term><anchor id="open-recent"/><menuchoice>
 <guimenu><accel>D</accel>atei</guimenu><guimenuitem>Zu<accel>l</accel>etzt
 ge&ouml;ffnete Dateien</guimenuitem> </menuchoice></term>
 <listitem><para>Ist eine Abk&uuml;rzung f&uuml;r das &Ouml;ffnen der letzten bearbeiteten Dateien.
@@ -373,7 +369,7 @@ Datei noch am selben Ort gespeichert ist. </para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="save"><menuchoice>
+<term><anchor id="save"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>S</keycap></keycombo></shortcut>
 <guimenu><accel>D</accel>atei</guimenu><guimenuitem>S<accel>p</accel>eichern
 </guimenuitem></menuchoice></term>
@@ -383,7 +379,7 @@ ge&ouml;ffnet, ansonsten wird ohne Nachfrage &uuml;berschrieben.</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="save-as"><menuchoice>
+<term><anchor id="save-as"/><menuchoice>
 <guimenu><accel>D</accel>atei</guimenu>
 <guimenuitem>Speichern <accel>u</accel>nter...</guimenuitem>
 </menuchoice></term>
@@ -393,7 +389,7 @@ linkend="open">&Ouml;ffnen</link> beschrieben.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="print"><menuchoice>
+<term><anchor id="print"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo></shortcut>
 <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>D</accel>rucken...
 </guimenuitem> </menuchoice></term>
@@ -402,7 +398,7 @@ einstellen kann, was, wo und wie zu drucken ist.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="new-window"><menuchoice>
+<term><anchor id="new-window"/><menuchoice>
 <guimenu><accel>D</accel>atei</guimenu>
 <guimenuitem>Neues <accel>F</accel>enster</guimenuitem></menuchoice></term>
 <listitem>
@@ -412,7 +408,7 @@ Nutzer, an mehreren Dateien gleichzeitig zu arbeiten.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="new-view"><menuchoice>
+<term><anchor id="new-view"/><menuchoice>
 <guimenu><accel>D</accel>atei</guimenu>
 <guimenuitem>Neue <accel>A</accel>nsicht</guimenuitem>
 </menuchoice></term> <listitem>
@@ -424,7 +420,7 @@ vorgenommen wurden, sind auch im neuen Fenster vorhanden.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="close"><menuchoice>
+<term><anchor id="close"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>Q</keycap></keycombo></shortcut>
 <guimenu><accel>D</accel>atei</guimenu>
 <guimenuitem>B<accel>e</accel>enden</guimenuitem></menuchoice></term>
@@ -442,7 +438,7 @@ nicht geschlossen.</para></listitem> </varlistentry>
 
 <variablelist>
 <varlistentry>
-<term><anchor id="undo"><menuchoice>
+<term><anchor id="undo"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>Z</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>R</accel>&uuml;ckg&auml;ngig</guimenuitem></menuchoice></term>
@@ -453,7 +449,7 @@ linkend="group-undos">R&uuml;ckg&auml;ngig gruppieren</link> dieses Hilfetextes 
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="redo"><menuchoice>
+<term><anchor id="redo"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>Umschalt</keycap><keycap>Z</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem>Wieder<accel>h</accel>erstellen</guimenuitem></menuchoice></term>
@@ -462,7 +458,7 @@ linkend="group-undos">R&uuml;ckg&auml;ngig gruppieren</link> dieses Hilfetextes 
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="undohistory"><menuchoice>
+<term><anchor id="undohistory"/><menuchoice>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>V</accel>erlauf R&uuml;ckg&auml;ngig/Wiederherstellen</guimenuitem></menuchoice></term>
 <listitem>
@@ -490,7 +486,7 @@ einzelne Bearbeitungsschritte durchzuarbeiten.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="cut"><menuchoice>
+<term><anchor id="cut"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>X</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem>Auss<accel>c</accel>hneiden</guimenuitem></menuchoice></term>
@@ -501,7 +497,7 @@ diesen in die Zwischenablage.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="copy"><menuchoice>
+<term><anchor id="copy"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>C</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>K</accel>opieren</guimenuitem></menuchoice></term>
@@ -511,7 +507,7 @@ Zwischenablage.</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="paste"><menuchoice>
+<term><anchor id="paste"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>V</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem>Ein<accel>f</accel>&uuml;gen</guimenuitem></menuchoice></term>
@@ -521,7 +517,7 @@ gespeicherten Text an der Cursorposition ein.</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="select-all"><menuchoice>
+<term><anchor id="select-all"/><menuchoice>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>A</accel>lles ausw&auml;hlen</guimenuitem></menuchoice></term>
 <listitem>
@@ -531,7 +527,7 @@ gesamten Datei in eine andere Anwendung n&uuml;tzlich.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="invert-the-selection"><menuchoice>
+<term><anchor id="invert-the-selection"/><menuchoice>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem>Auswahl <accel>u</accel>mkehren</guimenuitem></menuchoice></term>
 <listitem>
@@ -541,7 +537,7 @@ ausgew&auml;hlt und aller bisher ausgew&auml;hlter Text wird freigegeben.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="find"><menuchoice>
+<term><anchor id="find"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>F</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>S</accel>uchen...</guimenuitem></menuchoice>
@@ -567,7 +563,7 @@ verwendeter Option <guilabel>R&uuml;ckw&auml;rts suchen</guilabel>).</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="find-again"><menuchoice>
+<term><anchor id="find-again"/><menuchoice>
 <shortcut><keycombo><keycap>F3</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>W</accel>eitersuchen</guimenuitem></menuchoice></term>
@@ -576,7 +572,7 @@ erst das Dialogfenster ge&ouml;ffnet wird.</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="replace"><menuchoice>
+<term><anchor id="replace"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>R</keycap></keycombo></shortcut>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem><accel>E</accel>rsetzen...</guimenuitem></menuchoice></term>
@@ -591,7 +587,7 @@ Datei ohne nochmaliges Nachfragen ausf&uuml;hrt.
 </para> </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="insertfile">
+<term><anchor id="insertfile"/>
 <menuchoice>
 <guimenu><accel>B</accel>earbeiten</guimenu>
 <guimenuitem>Ein<accel>f</accel>&uuml;ge</guimenuitem></menuchoice></term>
@@ -609,7 +605,7 @@ An der aktuellen Cursorposition wird dann die gesamte Datei eingef&uuml;gt.
 <title>Das <guimenu>Gehe zu</guimenu> Men&uuml;</title>
 <variablelist>
 <varlistentry>
-<term><anchor id="go-to-line"><menuchoice>
+<term><anchor id="go-to-line"/><menuchoice>
 <guimenu><accel>G</accel>ehe zu</guimenu>
 <guimenuitem>Gehe zu <accel>Z</accel>eile...</guimenuitem></menuchoice></term>
 <listitem>
@@ -622,7 +618,7 @@ an der Seite verschieben, um zu der gew&uuml;nschten Seite zu gelangen.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="add-bookmark"><menuchoice>
+<term><anchor id="add-marker"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>M</keycap></keycombo>
 </shortcut>
 <guimenu><accel>G</accel>ehe zu</guimenu>
@@ -630,14 +626,16 @@ an der Seite verschieben, um zu der gew&uuml;nschten Seite zu gelangen.</para>
 </menuchoice></term>
 <listitem>
 <para>Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im
-<guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann. Die Nummerierung
+<guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann. 
+</para><para>
+Die Nummerierung
 der Marker wird (mit 1 beginnend) fortlaufend vergeben. Es k&ouml;nnen
 nicht mehr als 10 Marker gesetzt werden. Wenn Sie versuchen, mehr als 10
 Marker zu setzen, so ignoriert &kwrite; diese Versuche ohne Warnung.</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="set-bookmark"><menuchoice>
+<term><anchor id="set-bookmark"/><menuchoice>
 <guimenu><accel>G</accel>ehe zu</guimenu>
 <guimenuitem>Marker se<accel>t</accel>zen
 </guimenuitem></menuchoice></term>
@@ -645,7 +643,8 @@ Marker zu setzen, so ignoriert &kwrite; diese Versuche ohne Warnung.</para>
 <para>Erzeugt einen Marker, der sp&auml;ter als Men&uuml;punkt im
 <guimenu>Gehe zu</guimenu> Men&uuml; aufgerufen werden kann. &kwrite;
 &ouml;ffnet ein kleines Fenster, in dem die 10 verf&uuml;gbaren Marker mit ihrem
-derzeitigen Inhalt angezeigt werden. Sie k&ouml;nnen durch Klicken auf eine der
+derzeitigen Inhalt angezeigt werden. 
+Sie k&ouml;nnen durch Klicken auf eine der
 10 Zeilen die Markernummer gezielt vergeben und auch schon vorhandene, aber
 nicht mehr ben&ouml;tigte Marker neu vergeben - &uuml;berschreiben. Sie
 k&ouml;nnen die Zuweisung auch durch Dr&uuml;cken der Tasten 1 bis 0 vornehmen.
@@ -654,7 +653,7 @@ k&ouml;nnen die Zuweisung auch durch Dr&uuml;cken der Tasten 1 bis 0 vornehmen.
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="clear-bookmark"><menuchoice>
+<term><anchor id="clear-bookmarks"/><menuchoice>
 <guimenu><accel>G</accel>ehe zu</guimenu>
 <guimenuitem>Marker l<accel>&ouml;</accel>schen
 </guimenuitem></menuchoice></term>
@@ -675,7 +674,7 @@ Marker in diesem Fenster vorhanden sind.</para>
 <variablelist>
 
 <varlistentry>
-<term><anchor id="Spelling..."><menuchoice>
+<term><anchor id="Spelling..."/><menuchoice>
 <guimenu><accel>W</accel>erkzeuge</guimenu>
 <guimenuitem>Re<accel>c</accel>htschreibung...</guimenuitem></menuchoice></term>
 
@@ -788,7 +787,7 @@ Rechtschreibpr&uuml;fung ab.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="indent"><menuchoice>
+<term><anchor id="indent"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>I</keycap></keycombo></shortcut>
 <guimenu><accel>W</accel>erkzeuge</guimenu>
 <guimenuitem>Ein<accel>r</accel>&uuml;cken</guimenuitem></menuchoice></term>
@@ -799,7 +798,7 @@ Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt.</para>
 </listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="unindent"><menuchoice>
+<term><anchor id="unindent"/><menuchoice>
 <shortcut><keycombo><keycap>Strg</keycap><keycap>U</keycap></keycombo></shortcut>
 <guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;cken
 r&uuml;ckg&auml;ngig</guimenuitem></menuchoice></term> <listitem>
@@ -810,7 +809,7 @@ Pers&ouml;nliche Einstellungen -> Einr&uuml;cken</link> festgelegt.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="cleanindent"><menuchoice>
+<term><anchor id="cleanindent"/><menuchoice>
 <guimenu>Werkzeuge</guimenu><guimenuitem>Einr&uuml;ckungen l&ouml;schen</guimenuitem></menuchoice></term>
 <listitem>
 <para>Noch nicht verf&uuml;gbar.</para>
@@ -841,7 +840,7 @@ Zeilen.</para></listitem> </varlistentry>
 
 <variablelist>
 <varlistentry>
-<term><anchor id="show-toolbar"><menuchoice>
+<term><anchor id="show-toolbar"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem>Werk<accel>z</accel>eugleiste anzeigen</guimenuitem></menuchoice></term>
 <listitem>
@@ -851,7 +850,7 @@ Diese kann auch verschoben werden.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="show-statusbar"><menuchoice>
+<term><anchor id="show-statusbar"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem><accel>S</accel>tatuszeile anzeigen</guimenuitem></menuchoice></term>
 <listitem>
@@ -861,7 +860,7 @@ Text am unteren Ende des &kwrite;-Fensters ein und aus.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="show-path"><menuchoice>
+<term><anchor id="show-path"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem><accel>P</accel>fad anzeigen</guimenuitem></menuchoice></term>
 <listitem>
@@ -871,7 +870,7 @@ Kopf des Fensters ein und aus.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="configure-keybindings"><menuchoice>
+<term><anchor id="configure-keybindings"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem><accel>T</accel>astenzuordnungen vornehmen...</guimenuitem></menuchoice></term>
 <listitem>
@@ -892,7 +891,7 @@ Anzeigen der <guilabel>&Uuml;ber KWrite</guilabel> Information. </para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="configure-toolbars"><menuchoice>
+<term><anchor id="configure-toolbars"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem>Wer<accel>k</accel>zeugleisten einrichten...</guimenuitem></menuchoice></term>
 <listitem><para>
@@ -912,7 +911,7 @@ Links aus der Werkzeugleiste entfernt.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="preferences"><menuchoice>
+<term><anchor id="preferences"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem><accel>E</accel>instellungen...</guimenuitem>
 </menuchoice></term> <listitem>
@@ -927,10 +926,10 @@ Links aus der Werkzeugleiste entfernt.</para> </listitem>
 <guimenuitem>Her<accel>v</accel>orhebungsmodus einrichten...</guimenuitem></menuchoice></term>
 <listitem><para>&Ouml;ffnet ein Dialogfenster zum Einstellen der
 Hervorhebungen im Hervorhebungsmodus. Die Einstellung ist im <xref
-linkend="pref-highlighting"> beschrieben.</para></listitem> </varlistentry>
+linkend="pref-highlighting"/> beschrieben.</para></listitem> </varlistentry>
 
 <varlistentry>
-<term><anchor id="vertical-selection"><menuchoice>
+<term><anchor id="vertical-selection"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem><accel>V</accel>ertikale Auswahl</guimenuitem></menuchoice></term> <listitem>
 <para>Schaltet die Vertikalauswahl ein und aus. Die Vertikalauswahl erlaubt die
@@ -940,7 +939,7 @@ ausgew&auml;hlt werden k&ouml;nnen.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="set-highlight"><menuchoice>
+<term><anchor id="set-highlight"/><menuchoice>
 <guimenu><accel>E</accel>instellungen</guimenu>
 <guimenuitem><accel>H</accel>ervorhebungsmodus</guimenuitem>
 </menuchoice></term> <listitem> <para>&Ouml;ffnet ein Untermen&uuml; in dem
@@ -952,7 +951,7 @@ erhalten.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="end-of-line"><menuchoice>
+<term><anchor id="end-of-line"/><menuchoice>
 <guimenu><accel>E</accel>instelllungen</guimenu>
 <guisubmenu>Zeilen<accel>e</accel>nde</guisubmenu></menuchoice></term>
 <listitem>
@@ -970,7 +969,7 @@ Unix, &Mac; oder MSDOS/&Windows;.</para>
 
 <variablelist>
 <varlistentry>
-<term><anchor id="contents"><menuchoice>
+<term><anchor id="contents"/><menuchoice>
 <shortcut><keycombo><keycap>F1</keycap></keycombo></shortcut>
 <guimenu><accel>H</accel>ilfe</guimenu>
 <guimenuitem><accel>I</accel>nhalt</guimenuitem></menuchoice></term>
@@ -980,7 +979,7 @@ Unix, &Mac; oder MSDOS/&Windows;.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="whats-this"><menuchoice>
+<term><anchor id="whats-this"/><menuchoice>
 <shortcut><keycombo><keycap>Umschalt</keycap><keycap>F1</keycap></keycombo></shortcut>
 <guimenu><accel>H</accel>ilfe</guimenu>
 <guimenuitem>Was ist <accel>d</accel>as?</guimenuitem></menuchoice></term> <listitem>
@@ -991,7 +990,7 @@ diesem Element - wenn diese existiert.</para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="report-bug"><menuchoice>
+<term><anchor id="report-bug"/><menuchoice>
 <guimenu><accel>H</accel>ilfe</guimenu>
 <guimenuitem>Be<accel>r</accel>ichten Sie Probleme oder W&uuml;nsche</guimenuitem>
 </menuchoice></term>
@@ -1006,7 +1005,7 @@ Ihre E-Mail Ihrem System zur Weiterleitung zu &uuml;bergeben.</action></para>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="about-kwrite"><menuchoice>
+<term><anchor id="about-kwrite"/><menuchoice>
 <guimenu><accel>H</accel>ilfe</guimenu>
 <guimenuitem>&Uuml;<accel>b</accel>er KWrite</guimenuitem></menuchoice></term>
 <listitem>
@@ -1015,7 +1014,7 @@ an.</para> </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><anchor id="about-kde"><menuchoice>
+<term><anchor id="about-kde"/><menuchoice>
 <guimenu><accel>H</accel>ilfe</guimenu>
 <guimenuitem>&Uuml;ber <accel>K</accel>DE</guimenuitem></menuchoice></term>
 <listitem>
@@ -1249,7 +1248,7 @@ automatisch alle zus&auml;tzlichen Leerzeichen an Zeilenenden.
 <varlistentry>
 <term><guilabel>Automatische Klammern</guilabel></term>
 <listitem><para>Wenn dies Option aktiv ist, setzt &kwrite; beim Eingeben einer
-linken Klammer <![ CDATA [([,(, or {)]]> automatisch eine rechte Klammer des
+linken Klammer  automatisch eine rechte Klammer des
 gleichen Typs rechts vom Cursor. Diese braucht dann zum Schlie&szlig;en der Klammer
 nur noch &uuml;bersprungen zu werden.</para></listitem>
 </varlistentry>
@@ -1261,6 +1260,7 @@ gleichartigen Aktionen als ein <link linkend="undo">R&uuml;ckg&auml;ngig</link>-
 angesehen. Wenn Sie Text eingeben, ohne dass die Eingabe durch die R&uuml;cktaste
 oder Cursorbewegungen unterbrochen wurde, enfernt &kwrite; bei R&uuml;ckg&auml;ngig
 alle seit der letzten Unterbrechnung eingegebenen Zeichen auf einmal.
+</para><para>
 Wenn diese Option nicht aktiv ist, betrachtet &kwrite; jeden Tastendruck als
 einen Schritt. Zum Entfernen des letzten eingegebenen Wortes w&auml;ren dann
 mehrere R&uuml;ckg&auml;ngig-Schritte notwendig.</para></listitem>
@@ -1519,7 +1519,7 @@ Hervorhebungen f&uuml;r die C++ Programmiersprache an.
 
 <varlistentry> <term><guilabel>Element-Schrift</guilabel></term>
 <listitem><para>Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten
-Elementes ein. Es kann entweder das Ankreuzfeld
+Elementes ein.</para><para>Es kann entweder das Ankreuzfeld
 <guilabel>Standard</guilabel> aktiviert werden, das die Einstellungen aus der
 Seite <guilabel>Standards</guilabel> &uuml;bernimmt, oder es kann das Aussehen
 direkt hier eingestellt werden. Die Einstellungsm&ouml;glichkeiten sind
@@ -1546,14 +1546,6 @@ zugrunde.</para></listitem></itemizedlist>
 <para>In das Docbook-Format &uuml;berf&uuml;hrt und Korrektur gelesen wurde dieses
 Handbuch von Lauri Watts <email>vampyr@atconnex.net</email></para>
 
-<para>&Uuml;bersetzungen von:</para>
-<itemizedlist>
-<listitem><para>Thomas Diehl <email>thd@kde.org</email>,
-GUI-&Uuml;bersetzung</para></listitem>
-<listitem><para>Matthias Schulz<email>matthschulz@linuxfreemail.com</email>,
-&Uuml;bersetzung der Dokumentation</para></listitem>
-</itemizedlist>
-
 &underFDL;
 &underGPL;
 </chapter>
@@ -1568,15 +1560,16 @@ www.kde.org</ulink>.</para>
 
 </appendix>
 
-<![ %addindex; [ &kdedocindex; ]]>
+
 </book>
-<!--
-Local Variables:
-mode: sgml
-sgml-namecase-general: t
-sgml-namecase-entity: nil
-sgml-general-insert-case: lower
-sgml-minimize-attributes: nil
-sgml-omittag: nil
-End:
--->
+
+
+
+
+
+
+
+
+
+
+
