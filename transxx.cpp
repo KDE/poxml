@@ -10,10 +10,10 @@ int main(int argc, char **argv)
         qWarning( "usage: %s [--text translation] potfile", argv[0] );
         return -1;
     }
-    
+
     QString translation = "xx";
     QCString filename;
-    
+
     if( argc == 4 ) {
 	if( argv[1]!=QString("--text") ) {
     	    qWarning( "usage: %s [--text translation] potfile", argv[0] );
@@ -53,12 +53,12 @@ int main(int argc, char **argv)
 	QString msgid_plural = ( *it ).msgid_plural;
         if ( !msgid.isEmpty() ) {
             outputMsg("msgid", escapePO( msgid) );
-	    
+
 	    if ( ! msgid_plural.isEmpty() ) {
         	outputMsg("msgid_plural", escapePO( msgid_plural ) );
 	    }
-	    
-            QString msgstr = translation;
+
+            QString msgstr = translation + msgid + translation;
 
             if ( msgid.find( "Definition of PluralForm" ) != -1 ) {
                 outputMsg("msgstr", "NoPlural");
@@ -68,27 +68,18 @@ int main(int argc, char **argv)
 
             if ( is_desktop ) {
                 msgstr = msgid.left( msgid.find( '=' ) + 1);
-                msgstr += translation;
+                msgstr += translation + msgid.mid( msgid.find( '=' ) + 1) + translation;
                 outputMsg( "msgstr", msgstr );
                 cout << "\n";
                 continue;
-            }
-
-            while ( true ) {
-                int index = msgid.find( '%' );
-                if ( index == -1 )
-                    break;
-                msgstr += QString( " %%1 "+translation ).arg( msgid.at( index + 1 ) );
-                msgid.at( index ) = ' ';
-                msgid.at( index + 1 ) = ' ';
             }
 
             if ( msgid.right( 2 ) == "\\n" )
                 msgstr += "\n";
             if ( msgid.left( 2 ) == "\\n" )
                 msgstr.prepend( "\n" );
-		
-	    if ( msgid_plural.isEmpty() ) {    
+
+	    if ( msgid_plural.isEmpty() ) {
         	outputMsg("msgstr", msgstr);
 	    }
 	    else
