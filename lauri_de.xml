@@ -9,7 +9,7 @@
 
 <chapter id="hello">
 
-<para> <note><para> Starttext f&uuml;r &lauri; </para></note> <keycap> Schieber </keycap> <keycap> Hilfe </keycap> </para>
+<para> <note><para> &quot;Starttext&quot; f&uuml;r &lauri; </para></note> <keycap> Schieber </keycap> <keycap> Hilfe </keycap> </para>
 
 <para> <variablelist> <varlistentry> <term> Schrift 1 </term> <listitem> <para id="blah"> Schrift 2 <note> <para> Text 3 "alles" <variablelist><varlistentry><term>Alles</term><listitem>Ist klar</listitem></varlistentry></variablelist> <variablelist><varlistentry><term>Nichts</term><listitem>ist falsch</listitem></varlistentry></variablelist> <footnote> <para> Text 4 \"noch mehr\" </para> <para> <note> <para> Text 4 \"noch weniger\" </para> </note> </para> </footnote> </para> </note> </para> </listitem> </varlistentry> </variablelist> </para>
 
