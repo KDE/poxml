@@ -59,6 +59,8 @@ public:
     MsgList getList() const { return list; }
     MsgList splitMessage(const MsgBlock &message);
 
+    virtual bool startCDATA();
+    virtual bool endCDATA();
 
     static bool closureTag(const QString& message, const QString &tag);
     static void descape(QString &message);

@@ -6,13 +6,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
-"PO-Revision-Date: 2001-03-01 11:07MET\n"
+"PO-Revision-Date: 2001-05-03 13:11MET\n"
 "Last-Translator: Stephan Kulow <coolo@kde.org>\n"
 "Language-Team: german <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.8\n"
+"X-Generator: KBabel 0.9beta2\n"
 
 #: index.docbook:8
 msgid "test document"
@@ -80,11 +80,98 @@ msgstr "Text 4 \\\"noch mehr\\\""
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:64
+#: index.docbook:65
+msgid "What XML looks like"
+msgstr "Wie XML aussieht"
+
+#: index.docbook:67
+msgid ""
+"Here is an example of an XML file used by <application>Columbo</application> "
+"to describe a search site on the Internet:"
+msgstr "Dies ist <application>Columbo</application>:"
+
+#: index.docbook:72
+msgid ""
+"<![CDATA[<!DOCTYPE search>\n"
+"<search \n"
+"   name=\"Altavista\" \n"
+"   channel=\"web\"\n"
+"   method=\"get\"\n"
+"   action=\"http://www.altavista.com/cgi-bin/query\"\n"
+">\n"
+"\n"
+"   <input name=\"pg\" value=\"q\"/>\n"
+"   <input name=\"sc\" value=\"on\"/>\n"
+"   <input name=\"hl\" value=\"on\"/>\n"
+"   <input name=\"kl\" value=\"XX\"/>\n"
+"   <input name=\"stype\" value=\"stext\"/>\n"
+"   <input name=\"q\" user=\"true\"/>\n"
+"\n"
+"   <interpret\n"
+"      resultListStart=\"&lt;dl&gt;\"\n"
+"      resultItemStart=\"&lt;dt&gt;\"\n"
+"      relevanceStart=\"\"\n"
+"      resultListEnd=\"&lt;/td&gt;\"\n"
+"      resultItemEnd=\"&lt;/dl&gt;\"\n"
+"      relevanceEnd=\"\"\n"
+"   />\n"
+"</search>]]>"
+msgstr ""
+"<![CDATA[<!DOCTYPE search>\n"
+"<search \n"
+"   name=\"Altavista\" \n"
+"   channel=\"web\"\n"
+"   method=\"get\"\n"
+"   action=\"http://www.altavista.com/cgi-bin/query\"\n"
+">\n"
+"\n"
+"   <input name=\"pg\" value=\"q\"/>\n"
+"   <input name=\"sc\" value=\"on\"/>\n"
+"   <input name=\"hl\" value=\"on\"/>\n"
+"   <input name=\"kl\" value=\"XX\"/>\n"
+"   <input name=\"stype\" value=\"stext\"/>\n"
+"   <input name=\"q\" user=\"true\"/>\n"
+"\n"
+"   <interpret\n"
+"      resultListStart=\"&lt;dl&gt;\"\n"
+"      resultItemStart=\"&lt;dt&gt;\"\n"
+"      relevanceStart=\"\"\n"
+"      resultListEnd=\"&lt;/td&gt;\"\n"
+"      resultItemEnd=\"&lt;/dl&gt;\"\n"
+"      relevanceEnd=\"\"\n"
+"   />\n"
+"</search>]]>"
+
+#: index.docbook:72
+msgid ""
+"This instruction is normally used to declare the DTD of the document. Here "
+"no DTD is used, and only the name of the root element "
+"(<varname>search</varname>) appears."
+msgstr "Das ist normalerweise DTD"
+
+#: index.docbook:72
+msgid ""
+"<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
+"it extends to the end of the document (<sgmltag "
+"class=\"endtag\">search</sgmltag>)."
+msgstr ""
+"<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
+"it extends to the end of the document (<sgmltag "
+"class=\"endtag\">search</sgmltag>)."
+
+#: index.docbook:72
+msgid ""
+"This is an example of an empty element. Empty elements do not need a closing "
+"tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
+msgstr ""
+"This is an example of an empty element. Empty elements do not need a closing "
+"tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
+
+#: index.docbook:133
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:64
+#: index.docbook:133
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -114,7 +201,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:85
+#: index.docbook:154
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -152,7 +239,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:97
+#: index.docbook:166
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -172,7 +259,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:107
+#: index.docbook:176
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
@@ -219,9 +306,3 @@ msgstr ""
 "-&gt;      QPen pen;\n"
 "        /** das veraenderte flag of the current document */\n"
 "        bool modified;"
-
-#~ msgid "ROLES_OF_TRANSLATORS"
-#~ msgstr "foo"
-
-#~ msgid "CREDIT_FOR_TRANSLATORS"
-#~ msgstr "bar"

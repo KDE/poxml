@@ -18,7 +18,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "author", "itemizedlist", "orderedlist",
 				    "caption", "textobject", "mediaobject",
 				    "tip", "glossdef", "inlinemediaobject",
-				    "simplelist", "member", "glossentry",
+				    "simplelist", "member", "glossentry", "areaspec",
+                                    "calloutlist", "callout",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -111,7 +112,21 @@ bool StructureParser::startElement( const QString& , const QString& ,
     if (tname == "anchor" || tname.left(4) == "sect" || tname == "chapter")
         if (!attr.value("id").isEmpty()) list.pc.addAnchor(attr.value("id"));
 
-    return TRUE;
+    return true;
+}
+
+bool StructureParser::startCDATA()
+{
+    if ( inside )
+        message += "<![CDATA[";
+    return true;
+}
+
+bool StructureParser::endCDATA()
+{
+    if ( inside )
+        message += "]]>";
+    return true;
 }
 
 bool StructureParser::closureTag(const QString& message, const QString &tag)
@@ -218,7 +233,13 @@ bool StructureParser::formatMessage(QString& message, int &offset) const
     // removing starting single tags
     for (int index = 0; singletags[index]; index++)
     {
-        if (message.left(strlen(singletags[index]) + 1) == QString::fromLatin1("<%1").arg(singletags[index])) {
+        int slen = strlen(singletags[index]);
+        if (message.left(slen + 1) == QString::fromLatin1("<%1").arg(singletags[index]) &&
+            !message.at( slen + 2 ).isLetterOrNumber() )
+        {
+#ifndef NDEBUG
+            qDebug("removing single tag %s", singletags[index]);
+#endif
             int strindex = strlen(singletags[index]) + 1;
             while (message.at(strindex) != '>')
                 strindex++;

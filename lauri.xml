@@ -61,6 +61,75 @@ url="http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2">lists.kde.org</ulink>.
   </variablelist>
 </para>
 
+         <sect2 id="xml-format">
+	 <title>What XML looks like</title>
+
+         <para>
+            Here is an example of an XML file used
+            by <application>Columbo</application> to describe a search site on the
+            Internet:
+         </para>
+         <para>
+            <programlistingco>
+               <areaspec>
+                  <area id="xml.doctype" coords="1"/>
+                  <area id="xml.rootel" coords="2"/>
+                  <area id="xml.nestedel" coords="9"/>
+               </areaspec>
+               <programlisting>
+<![CDATA[<!DOCTYPE search>
+<search 
+   name="Altavista" 
+   channel="web"
+   method="get"
+   action="http://www.altavista.com/cgi-bin/query"
+>
+
+   <input name="pg" value="q"/>
+   <input name="sc" value="on"/>
+   <input name="hl" value="on"/>
+   <input name="kl" value="XX"/>
+   <input name="stype" value="stext"/>
+   <input name="q" user="true"/>
+
+   <interpret
+      resultListStart="&lt;dl&gt;"
+      resultItemStart="&lt;dt&gt;"
+      relevanceStart=""
+      resultListEnd="&lt;/td&gt;"
+      resultItemEnd="&lt;/dl&gt;"
+      relevanceEnd=""
+   />
+</search>]]>
+               </programlisting>
+               <calloutlist>
+                  <callout arearefs="xml.doctype">
+                     <para>
+                        This instruction is normally used to declare the DTD of the
+                        document. Here no DTD is used, and only the name of the root
+                        element (<varname>search</varname>) appears.
+                     </para>
+                  </callout>
+                  <callout arearefs="xml.rootel">
+                     <para>
+                        <sgmltag class="starttag">search</sgmltag> begins the root
+                        element. Here, it extends to the end of the document
+                        (<sgmltag class="endtag">search</sgmltag>).
+                     </para>
+                  </callout>
+                  <callout arearefs="xml.nestedel">
+                     <para>
+                        This is an example of an empty element. Empty elements do not
+                        need a closing tag (which would be
+                        <varname>&lt;/input&gt;</varname> in this case).
+                     </para>
+                  </callout>
+               </calloutlist>
+            </programlistingco>
+         </para>
+         
+         </sect2>
+
 <para>
   Ending Text:
 
