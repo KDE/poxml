@@ -1,6 +1,7 @@
 #include "parser.h"
 #include <stdlib.h>
 #include <iostream>
+#include <assert.h>
 
 #include <fstream>
 #include "GettextLexer.hpp"
