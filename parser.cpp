@@ -6,7 +6,7 @@
 
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
-                                   "footnoteref", "void", 
+                                   "footnoteref", "void",
                                    "glosssee", "graphic", 0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword", "example",
@@ -19,8 +19,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "author", "itemizedlist", "orderedlist",
                                     "caption", "textobject", "mediaobject",
                                     "tip", "glossdef", "inlinemediaobject",
-                                    "simplelist", "member", "glossentry", 
-				    "areaspec", 
+                                    "simplelist", "member", "glossentry",
+				    "areaspec", "corpauthor", "indexterm",
                                     "calloutlist", "callout", "subtitle",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
@@ -75,7 +75,8 @@ bool StructureParser::isLiteralTag(const QString &qName)
     return false;
 }
 
-bool StructureParser::skippedEntity ( const QString & name ) {
+bool StructureParser::skippedEntity ( const QString & name )
+{
     if (inside)
         message += QString("&%1;").arg(name);
     return true;
@@ -340,6 +341,7 @@ bool StructureParser::formatMessage(QString& message, int &offset) const
 
 MsgList StructureParser::splitMessage(const MsgBlock &mb)
 {
+
     MsgList result;
 
     MsgBlock msg1 = mb;
@@ -369,15 +371,21 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
             int inside = 1;
             while (true) {
-                // qDebug("inside %s %d", message.mid(strindex, 15).latin1(), inside);
+#ifndef NDEBUG
+                qDebug("inside %s %d", message.mid(strindex, 15).latin1(), inside);
+#endif
 
                 int closing_index = message.find(QString::fromLatin1("</%1>").arg(tag),
                                                  strindex);
                 int starting_index = message.find(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
                                                   strindex);
 
-                // qDebug("index1 %d %d %d", closing_index, starting_index, strindex);
+#ifndef NDEBUG
+                qDebug("index1 %d %d %d", closing_index, starting_index, strindex);
+#endif
 
+                // when a new start was found, we set the start_index after the next match
+                // (and set strindex to it later - increasing inside)
                 if (starting_index != -1) {
                     starting_index += tag.length() + 1;
                     while (message.at(starting_index) != '>')
@@ -385,7 +393,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                     starting_index++;
                 }
 
-                // qDebug("index %d %d %d", closing_index, starting_index, strindex);
+#ifndef NDEBUG
+                qDebug("index %d %d %d", closing_index, starting_index, strindex);
+#endif
 
                 assert(closing_index != -1);
                 closing_index += 3 + tag.length();
@@ -393,7 +403,13 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 if (starting_index == -1) {
                     assert(inside == 1);
                     strindex = closing_index;
-                    break;
+#ifndef NDEBUG
+                    qDebug("set strindex %d", strindex);
+#endif
+                    inside--;
+                    if (!inside)
+                        break;
+                    continue;
                 }
                 if (closing_index < starting_index)
                 {
@@ -658,13 +674,14 @@ MsgList parseXML(const char *filename)
     xmlFile.open(IO_ReadOnly);
 
     QCString ccontents;
-    ccontents.assign(xmlFile.readAll());
+    ccontents.fill(0, xmlFile.size() + 1);
+    memcpy(ccontents.data(), xmlFile.readAll().data(), xmlFile.size());
     xmlFile.close();
 
     QString contents = QString::fromUtf8( ccontents );
     StructureParser::escapeEntities( contents );
 
-   
+
     while (true) {
         int index = contents.find("<!ENTITY");
         if (index < 0)

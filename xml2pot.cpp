@@ -44,7 +44,7 @@ int main( int argc, char **argv )
     cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
     cout << "\"Language-Team: LANGUAGE <LL@li.org>\\n\"\n";
     cout << "\"MIME-Version: 1.0\\n\"\n";
-    cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
+    cout << "\"Content-Type: application/x-xml2pot; charset=utf-8\\n\"\n";
     cout << "\"Content-Transfer-Encoding: ENCODING\\n\"\n\n";
 
     for (MsgList::ConstIterator it = english.begin();

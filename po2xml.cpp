@@ -14,6 +14,18 @@ using namespace std;
 
 QString translate(QString xml, QString orig, QString translation)
 {
+    QString prefix;
+    while (xml.at(0) == '<' && orig.at(0) != '<') {
+        // a XML tag as prefix
+        int index = xml.find('>');
+        assert(index != -1);
+        index++;
+        while (xml.at(index) == ' ')
+            index++;
+        prefix = prefix + xml.left(index);
+        xml = xml.mid(index, xml.length());
+    }
+
     int index = xml.find(orig);
     if (index == -1) {
         qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
@@ -25,7 +37,7 @@ QString translate(QString xml, QString orig, QString translation)
                     QString::fromLatin1(""));
     } else
         xml.replace(index, orig.length(), translation);
-    return xml;
+    return prefix + xml;
 }
 
 
