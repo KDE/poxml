@@ -480,6 +480,12 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             msg2.lines.first().offset += strindex;
             leave = leave & formatMessage(msg2);
 
+#ifndef NDEBUG
+            qDebug("splited %d-%d(%s) and %d-%d(%s)", msg1.lines.first().end_line,msg1.lines.first().end_col,
+                   msg1.msgid.latin1(),
+                   msg2.lines.first().start_line,msg2.lines.first().start_col, msg2.msgid.latin1());
+#endif
+
             if (leave) {
                 result.append(msg1);
                 result.append(msg2);
@@ -551,6 +557,20 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             msg2.msgid = message.mid(strindex);
             msg2.lines.first().offset += strindex;
             formatMessage(msg2);
+
+            if (msg1.lines.first().end_line > msg2.lines.first().start_line ||
+                (msg1.lines.first().end_line == msg2.lines.first().start_line &&
+                 msg1.lines.first().end_col > msg2.lines.first().start_col)
+            {
+                msg1.lines.first().end_line = msg2.lines.first().start_line;
+                msg1.lines.first().end_col = msg2.lines.first().start_col - 1;
+            }
+
+#ifndef NDEBUG
+            qDebug("splited %d-%d(%s) and %d-%d(%s)", msg1.lines.first().end_line,msg1.lines.first().end_col,
+                   msg1.msgid.latin1(),
+                   msg2.lines.first().start_line,msg2.lines.first().start_col, msg2.msgid.latin1());
+#endif
 
             result = splitMessage(msg1);
             result += splitMessage(msg2);
