@@ -8,7 +8,7 @@ options {
 }
 
 {
-#include <iostream>
+#include <iostream.h>
 #include "GettextLexer.hpp"
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"

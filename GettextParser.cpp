@@ -4,7 +4,7 @@
 #include "antlr/SemanticException.hpp"
 #line 10 "gettext.g"
 
-#include <iostream>
+#include <iostream.h>
 #include "GettextLexer.hpp"
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"
@@ -63,7 +63,7 @@ GettextParser::GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputSt
 #line 64 "GettextParser.cpp"
 #line 41 "gettext.g"
 	
-	string c, mi, ms;
+	std::string c, mi, ms;
 	MsgBlock mb;
 	MsgList ml2;
 	
@@ -141,14 +141,14 @@ GettextParser::GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputSt
 	return ml ;
 }
 
-string  GettextParser::comment() {
+std::string  GettextParser::comment() {
 #line 61 "gettext.g"
-	string s;
+	std::string s;
 #line 148 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  c = ANTLR_USE_NAMESPACE(antlr)nullToken;
 #line 61 "gettext.g"
 	
-	string r;
+	std::string r;
 	
 #line 154 "GettextParser.cpp"
 	
@@ -190,7 +190,7 @@ string  GettextParser::comment() {
 #line 191 "GettextParser.cpp"
 #line 51 "gettext.g"
 	
-	string mi, ms;
+	std::string mi, ms;
 	
 #line 196 "GettextParser.cpp"
 	
@@ -219,9 +219,9 @@ string  GettextParser::comment() {
 	return mb ;
 }
 
-string  GettextParser::msgid() {
+std::string  GettextParser::msgid() {
 #line 69 "gettext.g"
-	string s;
+	std::string s;
 #line 226 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  t = ANTLR_USE_NAMESPACE(antlr)nullToken;
 	
@@ -247,9 +247,9 @@ string  GettextParser::msgid() {
 	return s;
 }
 
-string  GettextParser::msgstr() {
+std::string  GettextParser::msgstr() {
 #line 73 "gettext.g"
-	string s;
+	std::string s;
 #line 254 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  t = ANTLR_USE_NAMESPACE(antlr)nullToken;
 	

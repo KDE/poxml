@@ -1,6 +1,6 @@
 #include "parser.h"
 #include <stdlib.h>
-#include <iostream>
+#include <iostream.h>
 
 using namespace std;
 
