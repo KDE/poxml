@@ -626,6 +626,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                  it != messages.end(); it++)
             {
                 (*it).msgid.replace(infos_reg, QString::null);
+
 #ifndef NDEBUG
                 qDebug("parser %s %d %s %d", (*it).msgid.latin1(), (*it).lines.first().offset, message.mid((*it).lines.first().offset, 15).latin1(), (*it).lines.first().start_col);
 #endif
@@ -658,8 +659,48 @@ bool StructureParser::comment ( const QString &c )
     return true;
 }
 
+QString StructureParser::escapeLiterals( const QString &_contents) {
+    QString contents = _contents;
+
+    contents.replace(QRegExp("\n"), "&POXML_LINEFEED;");
+    contents.replace(QRegExp("<"), "&POXML_LT;");
+    contents.replace(QRegExp(">"), "&POXML_GT;");
+    contents.replace(QRegExp(" "), "&POXML_SPACE;");
+    return contents;
+}
+
+QString StructureParser::descapeLiterals( const QString &_contents) {
+    QString contents = _contents;
+
+    contents.replace(QRegExp("&POXML_LINEFEED;"), "\n");
+    contents.replace(QRegExp("&POXML_LT;"), "<");
+    contents.replace(QRegExp("&POXML_GT;"), ">");
+    contents.replace(QRegExp("&POXML_SPACE;"), " ");
+    return contents;
+}
+
 void StructureParser::cleanupTags( QString &contents )
 {
+    for (int index = 0; literaltags[index]; index++) {
+        QRegExp start(QString("<%1[\\s>]").arg(literaltags[index]));
+        QRegExp end(QString("</%1[\\s>]").arg(literaltags[index]));
+        int strindex = 0;
+        while (true) {
+            strindex = contents.find(start, strindex);
+            if (strindex < 0)
+                break;
+            while (contents.at(strindex) != '>')
+                strindex++;
+            strindex++; // one more
+            int endindex = contents.find(end, strindex);
+            QString part = contents.mid(strindex, endindex - strindex);
+            QString newpart = escapeLiterals(part);
+            contents.replace(strindex, part.length(), newpart);
+            // this assumes that literal tags to not overlap
+            strindex = strindex + newpart.length();
+        }
+    }
+
     QRegExp unclosed("</(\\w*)\\s\\s*>");
     int index = -1;
     while (true) {
@@ -697,7 +738,7 @@ void StructureParser::cleanupTags( QString &contents )
     }
 
 #ifndef NDEBUG
-    // qDebug("final  %s", contents.latin1());
+    qDebug("final  %s", contents.latin1());
 #endif
 
 }
@@ -737,8 +778,12 @@ void outputMsg(const char *prefix, const QString &message)
                     cout << "\"\n";
                 else
                     cout << "\\n\"\n";
-            } else
-                cout << "      \"\\n\"\n";
+            } else {
+                cout << "      \"";
+                if (it != list.fromLast())
+                    cout << "\\n";
+                cout << "\"\n";
+            }
         }
     }
 }

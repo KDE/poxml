@@ -34,9 +34,8 @@ QString translate(QString xml, QString orig, QString translation)
         exit(1);
     }
     if (translation.isEmpty()) {
-        // qWarning("no translation for %s found", orig.local8Bit().data());
-        xml.replace(index, orig.length(),
-                    QString::fromLatin1(""));
+        qWarning("no translation for '%s' found", StructureParser::descapeLiterals(orig).latin1());
+        abort();
     } else
         xml.replace(index, orig.length(), translation);
     return prefix + xml;
@@ -172,7 +171,7 @@ int main( int argc, char **argv )
             }
             assert((*it).end >= bi.offset);
             ts << translate(xml.mid(bi.offset, (*it).end - bi.offset),
-                                    (*it).msgid, translations[(*it).msgid]);
+                                    (*it).msgid, translations[StructureParser::descapeLiterals((*it).msgid)]);
             old_pos = end_pos;
         } else {
             if (start_pos != old_pos) {
@@ -180,8 +179,9 @@ int main( int argc, char **argv )
                 ts << xml_text.mid(old_pos, start_pos - old_pos);
             }
             old_pos = end_pos;
+            QString descaped = StructureParser::descapeLiterals((*it).msgid);
             ts << translate(xml,
-                            (*it).msgid, translations[(*it).msgid]);
+                            (*it).msgid, translations[descaped]);
         }
     }
 
@@ -223,6 +223,7 @@ int main( int argc, char **argv )
             index = index + 2;
         }
     }
+    output = StructureParser::descapeLiterals(output);
 
     cout << output.utf8().data();
     return 0;

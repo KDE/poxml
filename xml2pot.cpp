@@ -63,7 +63,7 @@ int main( int argc, char **argv )
         }
         cout << "\n";
 	cout << "#, no-c-format\n";
-        outputMsg("msgid", (*it).msgid);
+        outputMsg("msgid", StructureParser::descapeLiterals( (*it).msgid ));
         outputMsg("msgstr", (*it).msgstr);
         cout << "\n";
     }
