@@ -16,7 +16,7 @@ QString translate(QString xml, QString orig, QString translation)
     int index = xml.find(orig);
     if (index == -1) {
         qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
-        ASSERT(false);
+        exit(1);
     }
     if (translation.isEmpty()) {
         // qWarning("no translation for %s found", orig.local8Bit().data());
