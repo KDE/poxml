@@ -148,6 +148,16 @@ bool StructureParser::endCDATA()
     return true;
 }
 
+bool StructureParser::isClosure(const QString &message)
+{
+    assert(message.at(0) == '<');
+    int endindex = 1;
+    while (!message.at(endindex).isSpace() && message.at(endindex) != '>')
+        endindex++;
+    QString tag = message.mid(1, endindex - 1);
+    return closureTag(message, tag);
+}
+
 bool StructureParser::closureTag(const QString& message, const QString &tag)
 {
 #ifdef POXML_DEBUG
@@ -627,7 +637,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 #endif
                 // if the remaining text still starts with a tag, the poxml_ info
                 // is most probably more correct
-                if ((*it).msgid.at(0) == '<') {
+                if ((*it).msgid.at(0) == '<' && isClosure((*it).msgid)) {
                     if (infos_reg.search((*it).msgid) >= 0) {
                         (*it).lines.first().start_line = infos_reg.cap(1).toInt();
                         (*it).lines.first().start_col =  infos_reg.cap(2).toInt();;

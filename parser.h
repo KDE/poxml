@@ -76,6 +76,7 @@ public:
     virtual bool endCDATA();
 
     static bool closureTag(const QString& message, const QString &tag);
+    static bool isClosure(const QString &message);
     static void descape(QString &message);
     static void escapeEntities( QString &contents );
     static QString escapeLiterals( const QString &contents);

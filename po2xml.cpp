@@ -164,10 +164,10 @@ int main( int argc, char **argv )
         }
         descaped = translations[descaped];
 #ifdef POXML_DEBUG
-        assert(!descaped.isEmpty());
+        // assert(!descaped.isEmpty());
 #endif
 
-        if ((*it).msgid.at(0) == '<') {
+        if ((*it).msgid.at(0) == '<' &&  StructureParser::isClosure((*it).msgid)) {
             // if the id starts with a tag, then we remembered the
             // correct line information and need to strip the target
             // now, so it fits
@@ -177,7 +177,21 @@ int main( int argc, char **argv )
             index++;
             while ((*it).msgid.at(index) == ' ')
                 index++;
+            QString omsgid = (*it).msgid;
             (*it).msgid = (*it).msgid.mid(index);
+            if (!descaped.isEmpty()) {
+                if (descaped.at(0) != '<') {
+                    qWarning("the translation of '%s' doesn't start with a tag.", omsgid.latin1());
+                    exit(1);
+                }
+                index = 0;
+                while (descaped.at(index) != '>')
+                    index++;
+                index++;
+                while (descaped.at(index) == ' ')
+                    index++;
+                descaped = descaped.mid(index);
+            }
         }
 
 #ifdef POXML_DEBUG
