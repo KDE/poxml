@@ -82,11 +82,6 @@ int main( int argc, char **argv )
     xml.close();
     QString output;
     QTextStream ts(&output, IO_WriteOnly);
-    xml_text.replace(QRegExp("&amp;"), "!amp-internal!");
-    xml_text.replace(QRegExp("&lt;"), "!lt-internal!");
-    xml_text.replace(QRegExp("&gt;"), "!gt-internal!");
-    xml_text.replace(QRegExp("&quot;"), "!quot-internal!");
-
     StructureParser::cleanupTags(xml_text);
 
     QValueList<int> line_offsets;

@@ -46,8 +46,6 @@ static const char *cuttingtags[] = {"trans_comment", "para", "title", "term",
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
-static const char *entities[] = {"amp", "quot", "lt", "gt", "QTDOCDIR", 0};
-
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
     cerr << "fatalError " << e.message().latin1() << " " << e.lineNumber() << " "
@@ -215,16 +213,9 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
     }
 }
 
-void StructureParser::escapeEntities( QString &contents )
-{
-    contents.replace(QRegExp("&"), "!internal!");
-}
-
 void StructureParser::descape(QString &message)
 {
     uint index = 0;
-
-    message.replace(QString("!internal!"), "&");
     stripWhiteSpace( message );
 
     int inside = 0;
@@ -687,6 +678,7 @@ QString StructureParser::descapeLiterals( const QString &_contents) {
     contents.replace(QRegExp("&POXML_LT;"), "<");
     contents.replace(QRegExp("&POXML_GT;"), ">");
     contents.replace(QRegExp("&POXML_SPACE;"), " ");
+    contents.replace(QRegExp("!POXML_AMP!"), "&");
     return contents;
 }
 
@@ -717,6 +709,8 @@ void StructureParser::stripWhiteSpace( QString &contents)
 
 void StructureParser::cleanupTags( QString &contents )
 {
+    contents.replace(QRegExp("&"), "!POXML_AMP!");
+
     for (int index = 0; literaltags[index]; index++) {
         QRegExp start(QString("<%1[\\s>]").arg(literaltags[index]));
         QRegExp end(QString("</%1[\\s>]").arg(literaltags[index]));
@@ -932,7 +926,6 @@ MsgList parseXML(const char *filename)
     xmlFile.close();
 
     QString contents = QString::fromUtf8( ccontents );
-    StructureParser::escapeEntities( contents );
     StructureParser::cleanupTags(contents);
 
     while (true) {

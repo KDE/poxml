@@ -99,7 +99,6 @@ public:
     static bool closureTag(const QString& message, const QString &tag);
     static bool isClosure(const QString &message);
     static void descape(QString &message);
-    static void escapeEntities( QString &contents );
     static QString escapeLiterals( const QString &contents);
     static QString descapeLiterals( const QString &contents);
     static void cleanupTags( QString &contents );
