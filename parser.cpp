@@ -13,8 +13,8 @@ static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "footnoteref", "void", "inlinegraphic",
                                    "glosssee", "graphic", "xi:include",
                                    0};
-static const char *cuttingtags[] = {"para", "title", "term", "entry",
-                                    "contrib", "keyword", "example",
+static const char *cuttingtags[] = {"trans_comment", "para", "title", "term",
+                                    "entry", "contrib", "keyword", "example",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
                                     "imageobject", "varlistentry", "thead",
@@ -41,7 +41,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "refmiscinfo", "refsect2", "refsect3", "refsect1info",
                                     "refsect2info", "refsect3info", "refsection", "refsectioninfo",
                                     "refsynopsisdiv", "refsysnopsisdivinfo", "remark",
-                                    "revdescription", 0};
+                                    "revdescription",
+                                    0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
@@ -675,20 +676,8 @@ bool StructureParser::comment ( const QString &c )
 {
     if (c.left(7) != " TRANS:")
         return true;
-/*    if (inside) {
-        qWarning("ERROR: to translated string in nested block. Ignoring %s!", c.stripWhiteSpace().utf8().data());
-        return true;
-        } */
-    QString string = c.mid(7).stripWhiteSpace();
-    MsgBlock m;
-    m.msgid = c.mid(7).stripWhiteSpace();
-    m.tag = "TRANS comment";
-    BlockInfo bi;
-    bi.start_line = locator->lineNumber();
-    bi.end_line = 0;
-    bi.start_col = bi.end_col = 0;
-    m.lines.append(bi);
-    list.append(m);
+
+    assert(false);
     return true;
 }
 
@@ -795,6 +784,16 @@ void StructureParser::cleanupTags( QString &contents )
         if (!StructureParser::isSingleTag(tag)) {
             contents.replace(index, singletag.matchedLength(), QString("<%1 %2></%3>").arg(tag).arg(singletag.cap(2)).arg(tag));
         }
+    }
+
+    QRegExp trans_comment("<!-- TRANS:([^<>]*)-->");
+    index = -1;
+    while (true) {
+        index = trans_comment.search(contents, index + 1);
+        if (index < 0)
+            break;
+        QString msgid = trans_comment.cap(1);
+        contents.replace(index, trans_comment.matchedLength(), QString("<trans_comment>%1</trans_comment>").arg(msgid));
     }
 
 #ifdef POXML_DEBUG

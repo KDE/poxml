@@ -243,28 +243,8 @@ int main( int argc, char **argv )
 
     ts << xml_text.mid(old_pos);
 
-    index = 0;
-
-    while (true) {
-        index = output.find("<!-- TRANS:", index);
-        if (index == -1)
-            break;
-        int endindex = index + 11;
-        while (output.at(endindex) != '>')
-            endindex++;
-        assert(output.at(endindex-1) == '-');
-        assert(output.at(endindex-2) == '-');
-        QString totrans = output.mid(index + 11,
-                                     (endindex - 2) - (index + 11)).
-                          stripWhiteSpace();
-        QString trans = translations[totrans];
-        if (trans.isEmpty()) {
-            // qWarning("no translation for %s found",
-            // totrans.local8Bit().data());
-        } else
-            output.replace(index, endindex - index + 1, trans);
-        index = endindex;
-    }
+    output.replace(QRegExp("<trans_comment\\s*>"), "");
+    output.replace(QRegExp("</trans_comment\\s*>"), "");
 
     StructureParser::removeEmptyTags(output);
 
