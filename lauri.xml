@@ -2,10 +2,10 @@
 <para>
 <variablelist>
 <varlistentry>
-<term>sometext</term>
+<term>Text 1</term>
 <listitem>
-<para>Text here <note><para>Text here <footnote><para>Text 
-here</para></footnote></para></note></para>
+<para>Text 2<note><para>Text 3 <footnote>
+<para>Text 4</para></footnote></para></note></para>
 </listitem>
 </varlistentry>
 </variablelist>
