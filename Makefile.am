@@ -30,10 +30,13 @@ parser:
 
 $(srcdir)/docbook_kwrite.pot: xml2pot kwrite.xml
 	./xml2pot $(srcdir)/kwrite.xml > $(srcdir)/docbook_kwrite.pot
+	msgmerge $(srcdir)/docbook_kwrite.pot $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.pot
 $(srcdir)/docbook_faq.pot: xml2pot faq.xml
 	./xml2pot $(srcdir)/faq.xml > $(srcdir)/docbook_faq.pot
+	msgmerge $(srcdir)/docbook_faq.pot $(srcdir)/docbook_faq.pot > d && mv d $(srcdir)/docbook_faq.pot
 $(srcdir)/lauri.pot: xml2pot lauri.xml
 	./xml2pot $(srcdir)/lauri.xml > $(srcdir)/lauri.pot
+	msgmerge $(srcdir)/lauri.pot $(srcdir)/lauri.pot > d && mv d $(srcdir)/lauri.pot
 
 $(srcdir)/docbook_kwrite.po: $(srcdir)/docbook_kwrite.pot
 	msgmerge $(srcdir)/docbook_kwrite.po $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.po 
