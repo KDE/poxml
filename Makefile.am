@@ -33,18 +33,18 @@ parser:
 
 SUFFIXES = .pot .po .xml .txml
 
-$(srcdir)/lauri.pot: xml2pot lauri.xml
+lauri.pot: xml2pot lauri.xml
 	checkXML $(srcdir)/lauri.xml
-	./xml2pot $(srcdir)/lauri.xml > $(srcdir)/lauri.pot
-	msgmerge -o $(srcdir)/lauri.pot $(srcdir)/lauri.pot $(srcdir)/lauri.pot 
+	./xml2pot $(srcdir)/lauri.xml > lauri.pot
+	msgmerge -o lauri.pot lauri.pot lauri.pot 
 
-$(srcdir)/lauri.po: $(srcdir)/lauri.pot
-	msgmerge -o $(srcdir)/lauri.po $(srcdir)/lauri.po $(srcdir)/lauri.pot 
+$(srcdir)/lauri.po: lauri.pot
+	msgmerge -o $(srcdir)/lauri.po $(srcdir)/lauri.po lauri.pot 
 	msgfmt --statistics $(srcdir)/lauri.po -o /dev/null
 
-$(srcdir)/lauri_de.xml: po2xml $(srcdir)/lauri.po
+lauri_de.xml: po2xml $(srcdir)/lauri.po $(srcdir)/lauri.xml
 	./po2xml $(srcdir)/lauri.xml $(srcdir)/lauri.po | \
-	sed -e "s,<!ENTITY % English,<!ENTITY % German," > $(srcdir)/lauri_de.xml
+	sed -e "s,<!ENTITY % English,<!ENTITY % German," > lauri_de.xml
 
-test: $(srcdir)/lauri_de.xml
-	checkXML $(srcdir)/lauri_de.xml
+test: lauri_de.xml
+	checkXML lauri_de.xml
