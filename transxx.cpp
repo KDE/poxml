@@ -43,14 +43,21 @@ int main(int argc, char **argv)
     cout << "msgid \"\"\n";
     cout << "msgstr \"\"\n";
     cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
+    cout << "\"Plural-Forms: nplurals=1; plural=0;\\n\"\n";
     cout << "\n";
 
     for (MsgList::ConstIterator it = translated.begin();
          it != translated.end(); ++it)
     {
         QString msgid = ( *it ).msgid;
+	QString msgid_plural = ( *it ).msgid_plural;
         if ( !msgid.isEmpty() ) {
             outputMsg("msgid", escapePO( msgid) );
+	    
+	    if ( ! msgid_plural.isEmpty() ) {
+        	outputMsg("msgid_plural", escapePO( msgid_plural ) );
+	    }
+	    
             QString msgstr = translation;
 
             if ( msgid.find( "Definition of PluralForm" ) != -1 ) {
@@ -80,7 +87,14 @@ int main(int argc, char **argv)
                 msgstr += "\n";
             if ( msgid.left( 2 ) == "\\n" )
                 msgstr.prepend( "\n" );
-            outputMsg("msgstr", msgstr);
+		
+	    if ( msgid_plural.isEmpty() ) {    
+        	outputMsg("msgstr", msgstr);
+	    }
+	    else
+	    {
+		outputMsg("msgstr[0]", msgstr);
+	    }
             cout << "\n";
         }
     }

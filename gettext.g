@@ -1,5 +1,7 @@
 
 header "pre_include_hpp" {
+#include <string>
+using namespace std;
 #include "parser.h"
 }
 
@@ -9,8 +11,6 @@ options {
 
 {
 #include <iostream>
-#include <string>
-using namespace std;
 #include "GettextLexer.hpp"
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"
@@ -52,13 +52,25 @@ MsgList ml2;
 
 file_block returns [ MsgBlock mb ]
 {
-string c, mi, ms;
+string c, mi, mip, ms;
 }
-  : c=comment mi=msgid ms=msgstr {
+  : c=comment mi=msgid
+  (
+   ( ms=msgstr {
 	mb.comment = QString::fromUtf8(c.c_str());
 	mb.msgid = QString::fromUtf8(mi.c_str());
 	mb.msgstr = QString::fromUtf8(ms.c_str());   
-  }
+     }
+   )
+   |
+   ( mip=msgid_plural ms=msgstr_plural {
+	mb.comment = QString::fromUtf8(c.c_str());
+	mb.msgid = QString::fromUtf8(mi.c_str());
+	mb.msgid_plural = QString::fromUtf8(mip.c_str());
+	mb.msgstr = QString::fromUtf8(ms.c_str());   
+     }
+   )
+  )
   ;
 
 comment returns [string s]
@@ -73,8 +85,18 @@ msgid returns [string s]
  : T_MSGID t:T_STRING { s = t->getText(); }
  ;
 
+msgid_plural returns [string s]
+ : T_MSGID_PLURAL t:T_STRING { s = t->getText(); }
+ ;
+
 msgstr returns [string s]
  : T_MSGSTR t:T_STRING { s = t->getText(); }
+ ;
+
+msgstr_plural returns [string s]
+ : (
+    T_MSGSTR L_BRACKET n:T_INT R_BRACKET t:T_STRING { s = t->getText(); }
+   )+
  ;
 
 class GettextLexer extends Lexer;
@@ -88,11 +110,21 @@ WS
   | ('\n' | "\r\n") { newline(); }
   ) { $setType(ANTLR_USE_NAMESPACE(antlr)Token::SKIP); }
   ;
+  
+L_BRACKET: '[' ;
 
+R_BRACKET: ']' ;
+
+T_INT : ( '0'..'9' )+
+      ;
+  
 T_COMMENT : '#' (~'\n')*  
           ;
 
-MSG_TAG : "msg" ( "id" { $setType(T_MSGID); }
+MSG_TAG : "msg" ( ("id") (
+		    "" { $setType(T_MSGID); } 
+		    | "_plural" { $setType(T_MSGID_PLURAL); }
+		)
                 | "str" { $setType(T_MSGSTR); }
                 )
         ;

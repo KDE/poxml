@@ -35,7 +35,9 @@ class MsgBlock {
     QString tag;
     QString comment;
     QString msgid;
+    QString msgid_plural;
     QString msgstr;
+    QStringList msgstr_plurals;
     int start, end;
     bool do_not_split;
 
@@ -44,7 +46,9 @@ class MsgBlock {
         tag = rhs.tag;
         comment = rhs.comment;
         msgid = rhs.msgid;
+	msgid_plural = rhs.msgid_plural;
         msgstr = rhs.msgstr;
+	msgstr_plurals = rhs.msgstr_plurals;
         start = rhs.start;
         end = rhs.end;
         do_not_split = rhs.do_not_split;
