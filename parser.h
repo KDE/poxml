@@ -28,6 +28,7 @@ struct BlockInfo {
 class MsgBlock {
  public:
     QValueList<BlockInfo> lines;
+    QString comment;
     QString msgid;
     QString msgstr;
     int start, end;

@@ -12,7 +12,7 @@ using namespace std;
 #include "antlr/AST.hpp"
 #include "antlr/CommonAST.hpp"
 
-/* 
+/*
 int main()
 {
 	ANTLR_USING_NAMESPACE(std)
@@ -64,13 +64,13 @@ GettextParser::GettextParser(const ANTLR_USE_NAMESPACE(antlr)ParserSharedInputSt
 	 MsgList ml ;
 #line 64 "GettextParser.cpp"
 #line 41 "gettext.g"
-	
+
 	string c, mi, ms;
 	MsgBlock mb;
 	MsgList ml2;
-	
+
 #line 71 "GettextParser.cpp"
-	
+
 	try {      // for error handling
 		bool synPredMatched3 = false;
 		if (((LA(1)==T_MSGID||LA(1)==T_COMMENT))) {
@@ -149,11 +149,11 @@ string  GettextParser::comment() {
 #line 148 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  c = ANTLR_USE_NAMESPACE(antlr)nullToken;
 #line 62 "gettext.g"
-	
+
 	string r;
-	
+
 #line 154 "GettextParser.cpp"
-	
+
 	try {      // for error handling
 		if ((LA(1)==T_COMMENT)) {
 			{
@@ -172,7 +172,7 @@ string  GettextParser::comment() {
 		else {
 			throw ANTLR_USE_NAMESPACE(antlr)NoViableAltException(LT(1), getFilename());
 		}
-		
+
 	}
 	catch (ANTLR_USE_NAMESPACE(antlr)RecognitionException& ex) {
 		if( inputState->guessing == 0 ) {
@@ -191,22 +191,22 @@ string  GettextParser::comment() {
 	 MsgBlock mb ;
 #line 191 "GettextParser.cpp"
 #line 51 "gettext.g"
-	
+
 	string c, mi, ms;
-	
+
 #line 196 "GettextParser.cpp"
-	
+
 	try {      // for error handling
 		c=comment();
 		mi=msgid();
 		ms=msgstr();
 		if ( inputState->guessing==0 ) {
 #line 55 "gettext.g"
-			
-				(void)c;
+
+                                mb.comment = QString::fromUtf8(c.c_str());
 				mb.msgid = QString::fromUtf8(mi.c_str());
-				mb.msgstr = QString::fromUtf8(ms.c_str());   
-			
+				mb.msgstr = QString::fromUtf8(ms.c_str());
+
 #line 209 "GettextParser.cpp"
 		}
 	}
@@ -227,7 +227,7 @@ string  GettextParser::msgid() {
 	string s;
 #line 227 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  t = ANTLR_USE_NAMESPACE(antlr)nullToken;
-	
+
 	try {      // for error handling
 		match(T_MSGID);
 		t = LT(1);
@@ -255,7 +255,7 @@ string  GettextParser::msgstr() {
 	string s;
 #line 255 "GettextParser.cpp"
 	ANTLR_USE_NAMESPACE(antlr)RefToken  t = ANTLR_USE_NAMESPACE(antlr)nullToken;
-	
+
 	try {      // for error handling
 		match(T_MSGSTR);
 		t = LT(1);
@@ -294,16 +294,16 @@ const char* GettextParser::_tokenNames[] = {
 };
 
 const unsigned long GettextParser::_tokenSet_0_data_[] = { 2UL, 0UL, 0UL, 0UL };
-// EOF 
+// EOF
 const ANTLR_USE_NAMESPACE(antlr)BitSet GettextParser::_tokenSet_0(_tokenSet_0_data_,4);
 const unsigned long GettextParser::_tokenSet_1_data_[] = { 18UL, 0UL, 0UL, 0UL };
-// EOF T_MSGID 
+// EOF T_MSGID
 const ANTLR_USE_NAMESPACE(antlr)BitSet GettextParser::_tokenSet_1(_tokenSet_1_data_,4);
 const unsigned long GettextParser::_tokenSet_2_data_[] = { 50UL, 0UL, 0UL, 0UL };
-// EOF T_MSGID T_COMMENT 
+// EOF T_MSGID T_COMMENT
 const ANTLR_USE_NAMESPACE(antlr)BitSet GettextParser::_tokenSet_2(_tokenSet_2_data_,4);
 const unsigned long GettextParser::_tokenSet_3_data_[] = { 128UL, 0UL, 0UL, 0UL };
-// T_MSGSTR 
+// T_MSGSTR
 const ANTLR_USE_NAMESPACE(antlr)BitSet GettextParser::_tokenSet_3(_tokenSet_3_data_,4);
 
 

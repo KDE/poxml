@@ -55,7 +55,7 @@ file_block returns [ MsgBlock mb ]
 string c, mi, ms;
 }
   : c=comment mi=msgid ms=msgstr {
-	(void)c;
+	mb.comment = QString::fromUtf8(c.c_str());
 	mb.msgid = QString::fromUtf8(mi.c_str());
 	mb.msgstr = QString::fromUtf8(ms.c_str());   
   }
