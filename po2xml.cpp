@@ -40,6 +40,32 @@ QString translate(QString xml, QString orig, QString translation)
     return prefix + xml;
 }
 
+static char * shell_quote(const char *s)
+{
+   char *result;
+   char *p;
+   p = result = (char *) malloc(strlen(s)*5+3);
+   *p++ = '\'';
+   while(*s)
+   {
+     if (*s == '\'')
+     {
+        *p++ = '\'';
+        *p++ = '"';
+        *p++ = *s++;
+        *p++ = '"';
+        *p++ = '\'';
+     }
+     else
+     {
+        *p++ = *s++;
+     }
+   }
+   *p++ = '\'';
+   *p = '\0';
+   return result;
+}
+
 
 int main( int argc, char **argv )
 {
@@ -80,7 +106,11 @@ int main( int argc, char **argv )
     QString output;
     QTextStream ts(&output, IO_WriteOnly);
     if (xml_text.left(5) != "<?xml") {
-        FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(argv[1]).latin1(), "r");
+        char *quoted_file = shell_quote(argv[1]);
+        QCString cmd = "xmlizer ";
+        cmd += quoted_file;
+        FILE *p = popen(cmd, "r");
+        free(quoted_file);
         xml.open(IO_ReadOnly, p);
         char buffer[5001];
         xml_text.truncate(0);
