@@ -1,6 +1,5 @@
 
 bin_PROGRAMS = split2po xml2pot po2xml swappo transxx
-bin_SCRIPTS = fixsgml
 
 INCLUDES = -I$(srcdir)/antlr $(all_includes)
 KDE_CXXFLAGS = $(USE_EXCEPTIONS) 
