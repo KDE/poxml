@@ -124,6 +124,7 @@ int main( int argc, char **argv )
     xml_text.replace(QRegExp("&amp;"), "&amp-internal;");
     xml_text.replace(QRegExp("&lt;"), "&lt-internal;");
     xml_text.replace(QRegExp("&gt;"), "&gt-internal;");
+    xml_text.replace(QRegExp("&quot;"), "&quot-internal;");
 
     QValueList<int> line_offsets;
     line_offsets.append(0);

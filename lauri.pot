@@ -19,7 +19,7 @@ msgid "test document"
 msgstr ""
 
 #: index.docbook:12
-msgid "Leading Text for &lauri;"
+msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr ""
 
 #: index.docbook:12

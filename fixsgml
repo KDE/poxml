@@ -18,6 +18,9 @@ def fixEndTag(matchobj):
 def fixPendingEnd(match):
 	return '<' + match.group(1) + match.group(2) + "</%s>" % match.group(1)
 
+def lowertag(matchobj):
+	return matchobj.group(1) + string.lower(matchobj.group(2))
+
 docbookfile = open(sys.argv[1])
 text = docbookfile.read()
 docbookfile.close()
@@ -48,6 +51,18 @@ n = n2 + n3
 if n:
 	sys.stderr.write("fixed %d wrong amps\n" % n)
 
+pat = re.compile("(<\w*)([A-Z])")
+while 1:
+	text, n = re.subn(pat, lowertag, text)
+	if not n:
+		break
+	
+pat = re.compile("(</\w*)([A-Z])")
+while 1:
+	text, n = re.subn(pat, lowertag, text)
+	if not n:
+		break
+	
 text, n = re.subn('<([^> \t\n\r]+)([^>]*>[^<]+)</>', fixPendingEnd, text)
 if n:
 	sys.stderr.write("fixed %d pending ends\n" % n)

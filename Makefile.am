@@ -29,6 +29,8 @@ po2xml_LDADD = antlr/src/libantlr.la $(LIB_QT)
 parser:
 	cd $(srcdir) &&	java antlr.Tool gettext.g
 
+SUFFIXES = .pot .po .xml .txml
+
 $(srcdir)/docbook_kwrite.pot: xml2pot kwrite.xml
 	./xml2pot $(srcdir)/kwrite.xml > $(srcdir)/docbook_kwrite.pot
 	msgmerge $(srcdir)/docbook_kwrite.pot $(srcdir)/docbook_kwrite.pot > d && mv d $(srcdir)/docbook_kwrite.pot

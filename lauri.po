@@ -19,7 +19,8 @@ msgid "test document"
 msgstr "Testtext"
 
 #: index.docbook:12
-msgid "Leading Text for &lauri;"
+#, fuzzy
+msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "Starttext f&uuml;r &lauri;"
 
 #: index.docbook:12
