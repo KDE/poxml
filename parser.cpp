@@ -606,11 +606,8 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
         inside--;
         if (!inside) {
             MsgBlock m;
-
             descape(message);
-
             m.msgid = message;
-
 
             BlockInfo bi;
             bi.start_line = startline;
@@ -625,11 +622,20 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             for (MsgList::Iterator it = messages.begin();
                  it != messages.end(); it++)
             {
+#ifdef POXML_DEBUG
+                qDebug("parser '%s' %d '%s' %d:%d", (*it).msgid.latin1(), (*it).lines.first().offset, message.mid((*it).lines.first().offset, 15).latin1(), (*it).lines.first().start_line, (*it).lines.first().start_col);
+#endif
+                // if the remaining text still starts with a tag, the poxml_ info
+                // is most probably more correct
+                if ((*it).msgid.at(0) == '<') {
+                    if (infos_reg.search((*it).msgid) >= 0) {
+                        (*it).lines.first().start_line = infos_reg.cap(1).toInt();
+                        (*it).lines.first().start_col = 0;
+                        (*it).lines.first().offset = 0;
+                    }
+                }
                 (*it).msgid.replace(infos_reg, QString::null);
 
-#ifdef POXML_DEBUG
-                qDebug("parser %s %d %s %d", (*it).msgid.latin1(), (*it).lines.first().offset, message.mid((*it).lines.first().offset, 15).latin1(), (*it).lines.first().start_col);
-#endif
                 if (!(*it).msgid.isEmpty())
                     list.append(*it);
             }
