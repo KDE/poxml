@@ -9,6 +9,7 @@ options {
 
 {
 #include <iostream.h>
+using namespace std;
 #include "GettextLexer.hpp"
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"
