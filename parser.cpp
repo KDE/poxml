@@ -877,7 +877,7 @@ QString escapePO(QString msgid)
         if (index == -1)
             break;
         if (index >= 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
-            msgid.replace(index - 1, 3, "\\n");
+            msgid.replace(index - 1, 3, "&POXML_LITERALLINEFEED;");
             index += 3;
         } else
             msgid.replace(index, 2, "\n");
@@ -888,7 +888,7 @@ QString escapePO(QString msgid)
         if (index == -1)
             break;
         if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\')
-            msgid.replace(index - 1, 3, "\\\"");
+            msgid.replace(index - 1, 3, "&POXML_LITERALQUOTE;");
         else
             msgid.replace(index, 2, "\"");
     }
@@ -911,6 +911,8 @@ QString escapePO(QString msgid)
         index += 1;
     }
 
+    msgid.replace("&POXML_LITERALLINEFEED;", "\\n");
+    msgid.replace("&POXML_LITERALQUOTE;", "\\");
     return msgid;
 }
 
