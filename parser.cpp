@@ -17,7 +17,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "step", "holder", "listitem", "important",
                                     "author", "itemizedlist", "orderedlist",
 				    "caption", "textobject", "mediaobject",
-				    "tip", "glossterm", "glossdef", "inlinemediaobject",
+				    "tip", "glossdef", "inlinemediaobject",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -108,7 +108,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
     }
 
     if (tname == "anchor" || tname.left(4) == "sect" || tname == "chapter")
-        list.pc.addAnchor(attr.value("id"));
+        if (!attr.value("id").isEmpty()) list.pc.addAnchor(attr.value("id"));
 
     return TRUE;
 }

@@ -21,6 +21,8 @@ def fixPendingEnd(match):
 docbookfile = open(sys.argv[1])
 text = docbookfile.read()
 docbookfile.close()
+orig_text = text
+
 pat = re.compile(r'(<[^>]*\s[^> \t\n]+)=([^ \t\n\r\f\v">]+)([\s>])', re.DOTALL)
 
 while 1:
@@ -66,7 +68,10 @@ text = re.sub("<inlinegraphic(\s[^>]*)>\s*</inlinegraphic>",
 			  "</inlinemediaobject>", text)
 
 text = re.sub("<imagedata(\\s.*)format=\"png\"", "<imagedata\\1format=\"PNG\"", text)
+text = re.sub("&kdedocindex;", "&documentation.index;", text)
 
-docbookfile = open(sys.argv[1], 'w')
-docbookfile.write(text)
-docbookfile.close()
+if not text == orig_text:
+	docbookfile = open(sys.argv[1], 'w')
+	docbookfile.write(text)
+	docbookfile.close()
+
