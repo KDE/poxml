@@ -18,7 +18,7 @@ static const char *cuttingtags[] = {"trans_comment", "para", "title", "term",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
                                     "imageobject", "varlistentry", "thead",
-                                    "tbody", "row", "screenshot", "screeninfo",
+                                    "tbody", "tgroup", "row", "screenshot", "screeninfo",
                                     "variablelist", "step", "procedure",
                                     "step", "holder", "listitem", "important",
                                     "author", "itemizedlist", "orderedlist",
@@ -927,8 +927,8 @@ QString escapePO(QString msgid)
         index += 1;
     }
 
-    msgid.replace("&POXML_LITERALLINEFEED;", "\\n");
-    msgid.replace("&POXML_LITERALQUOTE;", "\\");
+    msgid.replace(QRegExp("&POXML_LITERALLINEFEED;"), "\\n");
+    msgid.replace(QRegExp("&POXML_LITERALQUOTE;"), "\\");
     return msgid;
 }
 
