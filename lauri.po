@@ -40,57 +40,57 @@ msgstr ""
 "url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
 "k>."
 
-#: index.docbook:28
+#: index.docbook:29
 msgid "GIVE_ME_CREDIT"
 msgstr "<para>Habe ich gemacht - toll ne?</para>"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:30
+#: index.docbook:31
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:65
+#: index.docbook:66
 msgid "What XML looks like"
 msgstr "Wie XML aussieht"
 
-#: index.docbook:67
+#: index.docbook:68
 msgid ""
 "Here is an example of an XML file used by <application>Columbo</application> "
 "to describe a search site on the Internet:"
 msgstr "Dies ist <application>Columbo</application>:"
 
-#: index.docbook:72
+#: index.docbook:73
 msgid ""
 "<![CDATA[<!DOCTYPE search>\n"
 "<search \n"
@@ -142,14 +142,14 @@ msgstr ""
 "   />\n"
 "</search>]]>"
 
-#: index.docbook:72
+#: index.docbook:73
 msgid ""
 "This instruction is normally used to declare the DTD of the document. Here "
 "no DTD is used, and only the name of the root element "
 "(<varname>search</varname>) appears."
 msgstr "Das ist normalerweise DTD"
 
-#: index.docbook:72
+#: index.docbook:73
 msgid ""
 "<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
 "it extends to the end of the document (<sgmltag "
@@ -159,7 +159,7 @@ msgstr ""
 "it extends to the end of the document (<sgmltag "
 "class=\"endtag\">search</sgmltag>)."
 
-#: index.docbook:72
+#: index.docbook:73
 msgid ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
@@ -167,11 +167,11 @@ msgstr ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
 
-#: index.docbook:133
+#: index.docbook:134
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:133
+#: index.docbook:134
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -201,7 +201,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:154
+#: index.docbook:155
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -239,7 +239,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:166
+#: index.docbook:167
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -259,7 +259,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:176
+#: index.docbook:177
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"

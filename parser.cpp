@@ -250,9 +250,11 @@ bool StructureParser::formatMessage(QString& message, int &offset) const
     for (int index = 0; singletags[index]; index++)
     {
         int slen = strlen(singletags[index]);
+
         if (message.left(slen + 1) == QString::fromLatin1("<%1").arg(singletags[index]) &&
-            !message.at( slen + 2 ).isLetterOrNumber() )
+            !message.at( slen + 1 ).isLetterOrNumber() )
         {
+
 #ifndef NDEBUG
             qDebug("removing single tag %s", singletags[index]);
 #endif

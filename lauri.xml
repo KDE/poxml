@@ -10,6 +10,7 @@
 <chapter id="hello">
 
 <para>
+  <anchor id="try"/>
   <note><para>
     Leading &quot;Text&quot; for &lauri;
   </para></note>
