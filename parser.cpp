@@ -4,9 +4,11 @@
 #include <assert.h>
 #include <qregexp.h>
 
+// #undef NDEBUG
+
 static const char *singletags[] = {"imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
-                                   "footnoteref", "void",
+                                   "footnoteref", "void", "inlinegraphic",
                                    "glosssee", "graphic", 0};
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword", "example",
@@ -22,6 +24,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "simplelist", "member", "glossentry",
 				    "areaspec", "corpauthor", "indexterm",
                                     "calloutlist", "callout", "subtitle",
+				    "table",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -451,7 +454,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
     if (message.at(message.length() - 1 ) == '>')
     {
         int endindex = message.length() - 1;
-        while (message.at(endindex) != '<' || message.at(endindex + 1) != '/')
+        while (endindex >= 0 && (message.at(endindex) != '<' || message.at(endindex + 1) != '/'))
             endindex--;
         QString tag = message.mid(endindex + 2, message.length() - endindex - 3);
 
