@@ -14,127 +14,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.2\n"
 
-#: index.docbook:16
+#: lauri.xml:16
+#, no-c-format
 msgid "test document"
 msgstr "Testtext"
 
-#: index.docbook:17
+#: lauri.xml:17
+#, no-c-format
 msgid "<firstname>Stephan</firstname><surname>Kulow</surname>"
 msgstr "<firstname>Stephan</firstname><surname>Kulow</surname>"
 
-#: index.docbook:19
+#: lauri.xml:19
+#, no-c-format
 msgid "This is nonsense"
 msgstr "Dies ist Schwachsinn"
 
-#: index.docbook:20
+#: lauri.xml:20
+#, no-c-format
 msgid "<keyword>KDE</keyword>"
 msgstr "<keyword>KDE</keyword>"
 
-#: index.docbook:25
+#: lauri.xml:25
+#, no-c-format
 msgid "&quot;Text&quot; for &lauri;"
 msgstr "&quot;Text&quot; für &lauri;"
 
-#: index.docbook:27
+#: lauri.xml:27
+#, no-c-format
 msgid "Section 1"
 msgstr "Abschnitt 1"
 
-#: index.docbook:29
+#: lauri.xml:29
+#, no-c-format
 msgid "Section 1.1"
 msgstr "Abschnitt 1.1"
 
-#: index.docbook:30
+#: lauri.xml:32
+#, no-c-format
 msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "&quot;Starttext&quot; f&uuml;r &lauri;"
 
-#: index.docbook:30
+#: lauri.xml:35
+#, no-c-format
 msgid ""
 "we pretend her name was Höpfner, but that <anchor id=\"help\"/> is a good "
 "name too"
 msgstr ""
 "sagen wir mal sie heisst Höpfner, aber <anchor id=\"help\"/> ist auch gut"
 
-#: index.docbook:30
+#: lauri.xml:36
+#, no-c-format
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: index.docbook:30
+#: lauri.xml:42
+#, no-c-format
 msgid ""
-"an archive of the developer's mailing list is at <ulink "
-"url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
-"k>."
+"an archive of the developer's mailing list is at <ulink url=\"http://lists."
+"kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulink>."
 msgstr ""
-"Es gibt ein Archiv <ulink "
-"url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
-"k>."
+"Es gibt ein Archiv <ulink url=\"http://lists.kde.org/?l=kde-kmail&amp;"
+"r=1&amp;w=2\">lists.kde.org</ulink>."
 
-#: index.docbook:47
-msgid "GIVE_ME_CREDIT"
-msgstr "<para>Habe ich gemacht - toll ne?</para>"
-
-#: index.docbook:49
+#: lauri.xml:52
+#, no-c-format
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:49
+#: lauri.xml:56
+#, no-c-format
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:49
+#: lauri.xml:59
+#, no-c-format
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:49
+#: lauri.xml:61
+#, no-c-format
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:49
+#: lauri.xml:61
+#, no-c-format
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:49
+#: lauri.xml:62
+#, no-c-format
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:49
+#: lauri.xml:62
+#, no-c-format
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:49
+#: lauri.xml:64
+#, no-c-format
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:49
+#: lauri.xml:69
+#, no-c-format
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:49
+#: lauri.xml:82
+#, no-c-format
 msgid ""
-"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
-"cut> "
-"<guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>N</accel>ew</guimen"
-"uitem>"
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></"
+"shortcut> <guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>N</"
+"accel>ew</guimenuitem>"
 msgstr ""
-"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
-"cut> "
-"<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu</guime"
-"nuitem>"
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></"
+"shortcut> <guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</"
+"accel>eu</guimenuitem>"
 
-#: index.docbook:49
+#: lauri.xml:84
+#, no-c-format
 msgid "This starts a new Document in a new instance of the editor."
 msgstr "Dies macht alles neu."
 
-#: index.docbook:92
+#: lauri.xml:92
+#, no-c-format
 msgid "What XML looks like"
 msgstr "Wie XML aussieht"
 
-#: index.docbook:94
+#: lauri.xml:94
+#, no-c-format
 msgid ""
 "Here is an example of an XML file used by <application>Columbo</application> "
 "to describe a search site on the Internet:"
 msgstr "Dies ist <application>Columbo</application>:"
 
-#: index.docbook:99
+#: lauri.xml:106
+#, no-c-format
 msgid ""
+"\n"
 "<![CDATA[<!DOCTYPE search>\n"
 "<search \n"
 "   name=\"Altavista\" \n"
@@ -158,14 +176,16 @@ msgid ""
 "      resultItemEnd=\"&lt;/dl&gt;\"\n"
 "      relevanceEnd=\"\"\n"
 "   />\n"
-"</search>]]>"
+"</search>]]>\n"
+"               "
 msgstr ""
+"\n"
 "<![CDATA[<!DOCTYPE search>\n"
 "<search \n"
-"   name=\"Altavista\" \n"
-"   channel=\"web\"\n"
-"   method=\"get\"\n"
-"   action=\"http://www.altavista.com/cgi-bin/query\"\n"
+"   name=\"Altawista\" \n"
+"   channel=\"Netz\"\n"
+"   method=\"krieg\"\n"
+"   action=\"http://www.altawista.com/cgi-bin/query\"\n"
 ">\n"
 "\n"
 "   <input name=\"pg\" value=\"q\"/>\n"
@@ -173,36 +193,40 @@ msgstr ""
 "   <input name=\"hl\" value=\"on\"/>\n"
 "   <input name=\"kl\" value=\"XX\"/>\n"
 "   <input name=\"stype\" value=\"stext\"/>\n"
-"   <input name=\"q\" user=\"true\"/>\n"
+"   <input name=\"q\" user=\"wahr\"/>\n"
 "\n"
 "   <interpret\n"
-"      resultListStart=\"&lt;dl&gt;\"\n"
-"      resultItemStart=\"&lt;dt&gt;\"\n"
-"      relevanceStart=\"\"\n"
-"      resultListEnd=\"&lt;/td&gt;\"\n"
+"      resultListAnfang=\"&lt;dl&gt;\"\n"
+"      resultItemAnfang=\"&lt;dt&gt;\"\n"
+"      relevanceAnfang=\"\"\n"
+"      resultListEnde=\"&lt;/td&gt;\"\n"
 "      resultItemEnd=\"&lt;/dl&gt;\"\n"
 "      relevanceEnd=\"\"\n"
 "   />\n"
-"</search>]]>"
+"</search>]]>\n"
+"               "
 
-#: index.docbook:99
+#: lauri.xml:109
+#, no-c-format
 msgid ""
 "This instruction is normally used to declare the DTD of the document. Here "
-"no DTD is used, and only the name of the root element "
-"(<varname>search</varname>) appears."
+"no DTD is used, and only the name of the root element (<varname>search</"
+"varname>) appears."
 msgstr "Das ist normalerweise DTD"
 
-#: index.docbook:99
+#: lauri.xml:117
+#, no-c-format
 msgid ""
 "<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
-"it extends to the end of the document (<sgmltag "
-"class=\"endtag\">search</sgmltag>)."
+"it extends to the end of the document (<sgmltag class=\"endtag\">search</"
+"sgmltag>)."
 msgstr ""
 "<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
-"it extends to the end of the document (<sgmltag "
-"class=\"endtag\">search</sgmltag>)."
+"it extends to the end of the document (<sgmltag class=\"endtag\">search</"
+"sgmltag>)."
 
-#: index.docbook:99
+#: lauri.xml:123
+#, no-c-format
 msgid ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
@@ -210,16 +234,20 @@ msgstr ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
 
-#: index.docbook:160
+#: lauri.xml:135
+#, no-c-format
 msgid "The ugly part"
 msgstr "Der schlimme Teil"
 
-#: index.docbook:161
+#: lauri.xml:136
+#, no-c-format
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:161
+#: lauri.xml:139
+#, no-c-format
 msgid ""
+"\n"
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
 "Account-Nr. 2798296\n"
@@ -233,23 +261,20 @@ msgid ""
 "\n"
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\"; \\\n"
 "you see it here\n"
-"whereever"
+"whereever\n"
 msgstr ""
+"\n"
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
 "Account-Nr. 2798296\n"
 "\n"
-"Staedtische Sparkasse Wuerzburg\n"
-"Hofstrasse 9\n"
-"97070 Wuerzburg\n"
-"Germany\n"
-"BLZ 790 500 00\n"
-"SWIFT-Address: BYLA DE 77\n"
-"print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
-"hello"
+"FrankenSWIFT-Address: BYLA DE 77\n"
+"hallo Du\n"
 
-#: index.docbook:181
+#: lauri.xml:142
+#, no-c-format
 msgid ""
+"\n"
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
 "ID           \"\"              <lineannotation># kppp sends the id you "
@@ -261,13 +286,14 @@ msgid ""
 "Expect       ogin:           <lineannotation># The callback process is now "
 "running, a new connection, and so a new login.</lineannotation>\n"
 "ID\n"
-"Expect       assword:        <lineannotation># Now send your "
-"password</lineannotation>\n"
+"Expect       assword:        <lineannotation># Now send your password</"
+"lineannotation>\n"
 "Expect       &gt;               <lineannotation># Wait for the command "
 "prompt (the prompt may vary)</lineannotation>\n"
-"Send         start_ppp       <lineannotation># this command starts the "
-"pppd</lineannotation>"
+"Send         start_ppp       <lineannotation># this command starts the pppd</"
+"lineannotation>\n"
 msgstr ""
+"\n"
 "Expect       ogin:           <lineannotation># Dies ist alles nicht so "
 "schlimm!</lineannotation>\n"
 "ID           \"\"              <lineannotation># kppp sends the id you "
@@ -279,35 +305,40 @@ msgstr ""
 "Expect       ogin:           <lineannotation># The callback process is now "
 "running, a new connection, and so a new login.</lineannotation>\n"
 "ID\n"
-"Expect       assword:        <lineannotation># Now send your "
-"password</lineannotation>\n"
+"Expect       assword:        <lineannotation># Now send your password</"
+"lineannotation>\n"
 "Expect       &gt;               <lineannotation># Wait for the command "
 "prompt (the prompt may vary)</lineannotation>\n"
-"Send         start_ppp       <lineannotation># this command starts the "
-"pppd</lineannotation>"
+"Send         start_ppp       <lineannotation># this command starts the pppd</"
+"lineannotation>\n"
 
-#: index.docbook:195
+#: lauri.xml:146
+#, no-c-format
 msgid ""
-"Send                         <lineannotation># send an empty "
-"string</lineannotation>\n"
+"\n"
+"Send                         <lineannotation># send an empty string</"
+"lineannotation>\n"
 "Expect           ID:\n"
 "Send             itsme\n"
 "Expect           word:\n"
 "Send             forgot\n"
 "Expect           granted\n"
-"Send             ppp"
+"Send             ppp\n"
 msgstr ""
-"Send                         <lineannotation># send einen "
-"leerenstring</lineannotation>\n"
+"\n"
+"Send                         <lineannotation># send einen leerenstring</"
+"lineannotation>\n"
 "Expect           ID:\n"
-"Send             itsme\n"
+"Send             ichbins\n"
 "Expect           word:\n"
 "Send             forgot\n"
 "Expect           granted\n"
-"Send             ppp"
+"Send             ppp\n"
 
-#: index.docbook:195
+#: lauri.xml:148
+#, no-c-format
 msgid ""
+"\n"
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
 "\n"
@@ -331,8 +362,9 @@ msgid ""
 "      private:\n"
 "-&gt;      QPen pen;\n"
 "        /** the modified flag of the current document */\n"
-"        bool modified;"
+"        bool modified;\n"
 msgstr ""
+"\n"
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
 "     class KScribbleDoc\n"
@@ -352,4 +384,7 @@ msgstr ""
 "      private:\n"
 "-&gt;      QPen pen;\n"
 "        /** das veraenderte flag of the current document */\n"
-"        bool modified;"
+"        bool modified;\n"
+
+#~ msgid "GIVE_ME_CREDIT"
+#~ msgstr "<para>Habe ich gemacht - toll ne?</para>"
