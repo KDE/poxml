@@ -12,6 +12,11 @@ using namespace std;
 
 QString translate(QString xml, QString orig, QString translation)
 {
+    if (translation.isEmpty()) {
+        qWarning("no translation for %s found", orig.local8Bit().data());
+        return xml;
+    }
+
     orig.replace(QRegExp("\\\\\n"), "\n");
     translation.replace(QRegExp("\\\\\n"), "\n");
     int index = xml.find(orig);
@@ -48,7 +53,11 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = translated.begin();
          it != translated.end(); ++it)
     {
-        translations.insert((*it).msgid, (*it).msgstr);
+        QString msgid = (*it).msgid;
+        msgid.replace(QRegExp("\\\\n"), "\n");
+        QString msgstr = (*it).msgstr;
+        msgstr.replace(QRegExp("\\\\n"), "\n");
+        translations.insert(msgid, msgstr);
     }
 
     QFile xml(argv[1]);
@@ -107,8 +116,7 @@ int main( int argc, char **argv )
             end_pos--;
 
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
-        xml = xml.simplifyWhiteSpace();
-        StructureParser::descape(xml);
+        StructureParser::descape(xml, !(*it).literal);
 
 #ifndef NDEBUG
         qDebug("english %s %s %d %d %d %d %d", xml.latin1(), (*it).msgid.latin1(), start_pos, end_pos, (*it).lines.first().offset, (*it).end, xml.find("The location"));

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
-"PO-Revision-Date: 2001-02-28 11:05MET\n"
+"PO-Revision-Date: 2001-03-01 11:47MET\n"
 "Last-Translator: Stephan Kulow <coolo@kde.org>\n"
 "Language-Team: german <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -54,8 +54,7 @@ msgstr "&Uuml;ber diese <acronym>FAQ</acronym>"
 
 #: index.docbook:57
 msgid "What can I do to help out with this <acronym>FAQ</acronym>?"
-msgstr ""
-"Was k&ouml;nnen Sie tun, um bei dieser <acronym>FAQ</acronym> zu helfen?"
+msgstr "Was k&ouml;nnen Sie tun, um bei dieser <acronym>FAQ</acronym> zu helfen?"
 
 #: index.docbook:60
 msgid ""
@@ -783,10 +782,8 @@ msgid "kdeutils"
 msgstr "kdeutils"
 
 #: index.docbook:480
-msgid ""
-"Various desktop tools like a calculator, an editor and other nifty stuff."
-msgstr ""
-"Verschiedene Schreibtischutensilien wie Taschenrechner, Editor und anderes."
+msgid "Various desktop tools like a calculator, an editor and other nifty stuff."
+msgstr "Verschiedene Schreibtischutensilien wie Taschenrechner, Editor und anderes."
 
 #: index.docbook:485
 msgid "kdemultimedia"
@@ -931,10 +928,8 @@ msgstr ""
 "welche Architektur Sie nutzen)"
 
 #: index.docbook:573
-msgid ""
-"rpm <option>-ivh <replaceable>packagename.i386.rpm</replaceable></option>"
-msgstr ""
-"rpm <option>-ivh <replaceable>packagename.i386.rpm</replaceable> </option>"
+msgid "rpm <option>-ivh <replaceable>packagename.i386.rpm</replaceable></option>"
+msgstr "rpm <option>-ivh <replaceable>packagename.i386.rpm</replaceable> </option>"
 
 #: index.docbook:578
 msgid "Installation of the source <filename>.tar.gz</filename> files"
@@ -1017,8 +1012,7 @@ msgstr "cd /"
 
 #: index.docbook:610
 msgid "tar <option>xvzf <replaceable>packagename.tar.gz</replaceable></option>"
-msgstr ""
-"tar <option>xvzf <replaceable>packagename.tar.gz</replaceable></option>"
+msgstr "tar <option>xvzf <replaceable>packagename.tar.gz</replaceable></option>"
 
 #: index.docbook:620
 msgid "Post-installation procedures"
@@ -1086,7 +1080,6 @@ msgstr ""
 "installiert wird und damit in Ihrem Pfad vorhanden ist."
 
 #: index.docbook:652
-#, fuzzy
 msgid ""
 "Edit the file <filename>.xinitrc</filename> in your home directory (make a "
 "backup copy first!), remove everything that looks like calling a window "
@@ -1106,9 +1099,7 @@ msgstr ""
 "editieren. Wenn Sie kein <filename>.xinitrc</filename> oder "
 "<filename>.xsession</filename> in Ihrem Pers&ouml;nlichen Verzeichnis haben, "
 "dann erzeugen Sie einfach eine neue Datei, die nur eine Zeile "
-"\"<command>startkde</command>\" enth&auml;lt. <note>Manche Systeme (vor "
-"allem &RedHat; &Linux;) nutzen statt dessen <filename>.Xclients</filename>. "
-"</note>"
+"\"<command>startkde</command>\" enth&auml;lt."
 
 #: index.docbook:652
 msgid ""
@@ -1135,8 +1126,7 @@ msgstr ""
 
 #: index.docbook:675
 msgid "Micro-HOWTO: Compiling &kde; 1.1.1 on &SGI; &IRIX; 6.x"
-msgstr ""
-"Da diese Frage nicht mehr aktuell ist, wurde sie noch nicht uebersetzt."
+msgstr "Da diese Frage nicht mehr aktuell ist, wurde sie noch nicht uebersetzt."
 
 #: index.docbook:679
 msgid ""
@@ -1262,6 +1252,12 @@ msgstr ""
 "only (if you have another &gcc; installed somewhere). When I do a "
 "<command>g++ <option>-v</option></command> I get:"
 
+#: index.docbook:727
+msgid ""
+"<computeroutput>gcc version egcs-2.91.60 19981201 (egcs-1.1.1 "
+"release)</computeroutput>"
+msgstr ""
+
 #: index.docbook:731
 msgid ""
 "Do a <command>setenv <option>LDFLAGS \" \"</option></command> because the "
@@ -1282,6 +1278,13 @@ msgstr ""
 "Unpack \"kdesupport\" and enter its directory. Run its configure with "
 "<option>--prefix</option> if you need to:"
 
+#: index.docbook:739
+msgid ""
+"./configure --prefix=$KDEDIR --x-includes=/usr/include/X11 \\\n"
+"--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+"--with-qt-libs=/opt/kde-1.1.1 --enable-shared"
+msgstr ""
+
 #: index.docbook:744
 msgid ""
 "Modify this to reflect your reality. In my case, I have &Qt; stuck in the "
@@ -1301,6 +1304,12 @@ msgstr ""
 #: index.docbook:752
 msgid "Run the script (which I'll include below) as follows:"
 msgstr "Run the script (which I'll include below) as follows:"
+
+#: index.docbook:754
+msgid ""
+"<command>find <option>. -name Makefile -exec ../FixMakesSq {} "
+"\\;</option></command>"
+msgstr ""
 
 #: index.docbook:756
 msgid ""
@@ -1326,17 +1335,74 @@ msgstr ""
 msgid "Here's the FixMakesSq script:"
 msgstr "Here's the FixMakesSq script:"
 
+#: index.docbook:766
+msgid ""
+"#!/bin/perl -ni.bak\n"
+" \n"
+"if ((/-lpng/) || (/-ljpeg/))\n"
+"{\n"
+"    if (/^(.*)-lpng(.*)$/)\n"
+"    {\n"
+"        $b4 = $1;\n"
+"        $af = $2;\n"
+"        print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\n"
+"    }\n"
+"    if (/^(.*)-ljpeg(.*)$/)\n"
+"    {\n"
+"        $b4 = $1;\n"
+"        $af = $2;\n"
+"        print \"$b4 /path/to/KDE/libs/libjpeg.a $af\\n\";\n"
+"    }\n"
+"}\n"
+"        \n"
+"#NOTE!! Uncomment this section if you want to add\n"
+"#-D_LANGUAGE_C_PLUS_PLUS to all \n"
+"#makefiles.  I personally have not tried this, but it should not break \n"
+"#anything.\n"
+"# Alternately, add the flag in the places noted below.\n"
+"\n"
+"#elsif (/cxxflags\\s*=(.*)$/i)\n"
+"#{\n"
+"#    print \"CXXFLAGS =  -D_LANGUAGE_C_PLUS_PLUS $1\\n\";\n"
+"#}\n"
+"else\n"
+"{\n"
+"    print;\n"
+"}"
+msgstr ""
+
 #: index.docbook:800
 msgid "Do:"
 msgstr "Do:"
+
+# index.docbook:801, index.docbook:844, index.docbook:904
+#: index.docbook:801
+msgid ""
+"<command>gmake</command>\n"
+"<command>gmake <option>install</option></command>"
+msgstr ""
 
 #: index.docbook:806
 msgid "Go to the <filename>libz</filename> source directory, do:"
 msgstr "Go to the <filename>libz</filename> source directory, do:"
 
+#: index.docbook:807
+msgid ""
+"<command>./configure <option>--prefix=$KDEDIR</option></command>\n"
+"<command>gmake</command>\n"
+"<command>gmake install</command>"
+msgstr ""
+
 #: index.docbook:814
 msgid "Go to the <filename>libpng</filename> source directory, do:"
 msgstr "Go to the <filename>libpng</filename> source directory, do:"
+
+#: index.docbook:815
+msgid ""
+"<command>./configure <option>--prefix=$KDEDIR</option></command>\n"
+"<command>gmake</command>\n"
+"<command>gmake <option>install</option></command>"
+msgstr ""
 
 #: index.docbook:822
 msgid ""
@@ -1349,6 +1415,17 @@ msgstr ""
 "<option>--enable-new-stuff</option> argument to "
 "<command>./configure</command> (this might not be needed, but nothing "
 "complains if you use it):"
+
+#: index.docbook:826
+msgid ""
+"<command>./configure <option>--prefix=$KDEDIR --x-includes=/usr/include/X11 "
+"\\\n"
+"--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+"--with-qt-libs=/opt/kde-1.1.1 --enable-shared "
+"--enable-new-stuff</option></command>\n"
+"<command>find <option>. -name Makefile -exec ../FixMakesSq {} "
+"\\;</option></command>"
+msgstr ""
 
 #: index.docbook:833
 msgid ""
@@ -1380,6 +1457,17 @@ msgstr ""
 msgid "Unpack kdebase and enter its directory. Do:"
 msgstr "Unpack kdebase and enter its directory. Do:"
 
+# index.docbook:850, index.docbook:910
+#: index.docbook:850
+msgid ""
+"<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 "
+"\\\n"
+"--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+"--with-qt-libs=/opt/kde-1.1.1 --enable-shared </option></command>\n"
+"<command>find <option>. -name Makefile -exec ../FixMakesSq {} "
+"\\;</option></command>"
+msgstr ""
+
 #: index.docbook:857
 msgid ""
 "Fix <filename>memory_sgi.cpp</filename> (do a find from "
@@ -1404,6 +1492,44 @@ msgstr ""
 "operation for getting a pty for the new &konsole;. Alas, it was not written "
 "with &IRIX; in mind, and needs to be patched with the diff included below:"
 
+#: index.docbook:868
+msgid ""
+"*** TEShell.C   Mon Apr 12 00:12:37 1999\n"
+"--- /users/dor/aspg/ber/data/kdedown/kdebase-1.1.1/konsole/src/TEShell.C\n"
+"Wed Jul 14 15:15:35 1999\n"
+"***************\n"
+"*** 169,174 ****\n"
+"--- 169,177 ----\n"
+"    pid_t pid = waitpid(-1,&amp;status,WNOHANG);\n"
+"    Shell* sh = shells.find(pid);\n"
+"    if (sh) { shells.remove(pid); sh-&gt;doneShell(status); }\n"
+"+ #if defined(sgi)\n"
+"+   signal(SIGCHLD,catchChild);\n"
+"+ #endif\n"
+"  }\n"
+"  \n"
+"  void Shell::doneShell(int status)\n"
+"***************\n"
+"*** 234,239 ****\n"
+"--- 237,252 ----\n"
+"        }\n"
+"      }\n"
+"    }\n"
+"+ #endif\n"
+"+ \n"
+"+ #if defined(sgi) /* Irix */\n"
+"+  \n"
+"+   needGrantPty = FALSE;\n"
+"+   char* line;\n"
+"+   line = _getpty(&amp;ptyfd, O_RDWR|O_NDELAY, 0600, 0);\n"
+"+   strcpy(ptynam,\"/dev/ptc\");\n"
+"+   strcpy(ttynam,line);\n"
+"+  \n"
+"  #endif\n"
+"  \n"
+"    if (ptyfd &lt; 0) // Linux, FIXME: Trouble on other systems?"
+msgstr ""
+
 #: index.docbook:903
 msgid "Then:"
 msgstr "Then:"
@@ -1422,6 +1548,12 @@ msgstr ""
 "<filename>Makefile</filename> like you did for "
 "<filename>kprocctrl.cpp</filename> above."
 
+#: index.docbook:921
+msgid ""
+"gmake\n"
+"gmake install"
+msgstr ""
+
 #: index.docbook:926
 msgid ""
 "Unpack kdegames, kdegraphics, and kdetoys and for each one, enter its "
@@ -1429,6 +1561,18 @@ msgid ""
 msgstr ""
 "Unpack kdegames, kdegraphics, and kdetoys and for each one, enter its "
 "directory and do:"
+
+#: index.docbook:928
+msgid ""
+"<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 "
+"\\\n"
+"--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+"--with-qt-libs=/opt/kde-1.1.1 --enable-shared</option></command>\n"
+"<command>find <option>. -name Makefile -exec ../FixMakesSq "
+"{}</option></command>\n"
+"<command>gmake</command>\n"
+"<command>gmake <option>install</option></command>"
+msgstr ""
 
 #: index.docbook:937
 msgid ""
@@ -1464,8 +1608,7 @@ msgstr "And that's it. You should now be able to run &kde;."
 
 #: index.docbook:956
 msgid "Should I remove old version xyz before installing a new one?"
-msgstr ""
-"Sollen Sie die alte Version xyz entfernen, bevor Sie eine neue installieren?"
+msgstr "Sollen Sie die alte Version xyz entfernen, bevor Sie eine neue installieren?"
 
 #: index.docbook:960
 msgid ""
@@ -1539,7 +1682,6 @@ msgstr ""
 "\"Schattenpassw&ouml;rter\". Warum?"
 
 #: index.docbook:999
-#, fuzzy
 msgid ""
 "When your system uses shadow passwords, the screensaver can only run "
 "properly if the suid bit is set. This bit gives the screensavers root "
@@ -1548,9 +1690,7 @@ msgstr ""
 "Wenn Ihr System Schattenpassw&ouml;rter verwendet, kann der "
 "Bildschirmschoner nur dann richtig arbeiten, wenn das suid Bit gesetzt ist. "
 "Dieses gibt dem Bildschirmschoner Systemverwalterrechte, die er braucht, um "
-"auf die Schattenpassw&ouml;rter zuzugreifen <caution>Die Bildschirmschoner "
-"k&ouml;nnen eingerichtet werden, das System zu sichern, bis das Passwort "
-"eingegeben ist.</caution>"
+"auf die Schattenpassw&ouml;rter zuzugreifen."
 
 #: index.docbook:999
 msgid ""
@@ -1631,9 +1771,33 @@ msgstr ""
 msgid "For csh or tcsh:"
 msgstr "F&uuml;r csh oder tcsh:"
 
+#: index.docbook:1036
+msgid ""
+"setenv KDEDIR /users/myhome/kde\n"
+"\n"
+"if ( $?LD_LIBRARY_PATH ) then\n"
+"   setenv LD_LIBRARY_PATH $KDEDIR/lib:$LD_LIBRARY_PATH\n"
+"else\n"
+"   setenv LD_LIBRARY_PATH $KDEDIR/lib\n"
+"endif\n"
+"\n"
+"if ( ! $?LIBRARY_PATH ) then\n"
+"   setenv LIBRARY_PATH $LD_LIBRARY_PATH\n"
+"endif"
+msgstr ""
+
 #: index.docbook:1049
 msgid "For <application>bash</application>:"
 msgstr "F&uuml;r die <application>bash</application>:"
+
+#: index.docbook:1050
+msgid ""
+"KDEDIR=/users/myhome/kde\n"
+"PATH=$KDEDIR/bin:$PATH\n"
+"LD_LIBRARY_PATH=$KDEDIR/lib:$LD_LIBRARY_PATH\n"
+"LIBRARY_PATH=$LD_LIBRARY_PATH\n"
+"export KDEDIR PATH LD_LIBRARY_PATH LIBRARY_PATH"
+msgstr ""
 
 #: index.docbook:1058
 msgid "<acronym>RPM</acronym> packages"
@@ -1655,7 +1819,6 @@ msgstr ""
 "Verzeichnis <filename class=\"directory\">/users/myhome/kde</filename>."
 
 #: index.docbook:1067
-#, fuzzy
 msgid ""
 "Although &kde; will run from a user directory, there are some problems with "
 "programs that require suid root, <abbrev>e.g.</abbrev> the programs in the "
@@ -1666,10 +1829,7 @@ msgstr ""
 "Probleme mit Programmen, die Systemverwalterrechte ben&ouml;tigen; "
 "<abbrev>z.B.</abbrev> die Programme im kdeadmin Paket. Aber weil diese "
 "normalerweise nicht von Nutzern benutzt werden, ist dies eigentlich kein "
-"Problem. Trotzdem m&uuml;ssen in Systemen mit Schattenpassw&ouml;rtern die "
-"Bildschirmschoner Systemverwalterrechte haben, d.h. das suid Bit muss "
-"gesetzt werden. Ist dieses nicht m&ouml;glich, wird das Entsperren des "
-"Bildschirms nicht funktionieren."
+"Problem."
 
 #: index.docbook:1067
 msgid ""
@@ -1768,8 +1928,7 @@ msgstr ""
 
 #: index.docbook:1133
 msgid "Or you might try the following (as root):"
-msgstr ""
-">Sie k&ouml;nnen auch folgendes probieren (mit Systemverwalterrechten):"
+msgstr ">Sie k&ouml;nnen auch folgendes probieren (mit Systemverwalterrechten):"
 
 #: index.docbook:1135
 msgid "cd /usr/lib"
@@ -2268,6 +2427,10 @@ msgstr ""
 "z.B. zum (un)Mounten des Diskettenlaufwerkes sollte Ihre Datei "
 "<filename>/etc/fstab</filename> folgende Zeile enthalten:"
 
+#: index.docbook:1454
+msgid "/dev/fd0   /floppy   msdos   noauto,user,sync 0 0"
+msgstr ""
+
 #: index.docbook:1459
 msgid ""
 "Create a <filename>.desktop</filename> file for the filesystem. An example "
@@ -2275,6 +2438,20 @@ msgid ""
 msgstr ""
 "Erstellen Sie eine <filename>.desktop</filename>-Datei f&uuml;r das "
 "Dateisystem. Ein Beispiel hierf&uuml;r ist:"
+
+#: index.docbook:1461
+msgid ""
+"# KDE Config File\n"
+"[KDE Desktop Entry]\n"
+"UnmountIcon=3floppy_unmount.xpm\n"
+"MountPoint=/floppy\n"
+"Icon=3floppy_mount.xpm\n"
+"Dev=/dev/fd0\n"
+"ReadOnly=0\n"
+"FSType=default\n"
+"Type=FSDevice\n"
+"Comment=Floppy Disc"
+msgstr ""
 
 #: index.docbook:1480
 msgid "How do I use a screensaver as background?"
@@ -2473,6 +2650,17 @@ msgstr ""
 "k&ouml;nnen dieses in einer <filename>.kdelnk</filename>-Datei "
 "(<filename>.desktop</filename> f&uuml;r &kde; 2) wie dieser verwenden:"
 
+#: index.docbook:1587
+msgid ""
+"Name=Netscape\n"
+"Exec=kstart \"netscape\" -window \".*Netscape.*\" -desktop 2 -maximize\n"
+"BinaryPattern=netscape;\n"
+"Icon=netscape.xpm\n"
+"Path=\n"
+"Type=Application\n"
+"Terminal=0"
+msgstr ""
+
 #: index.docbook:1596
 msgid ""
 "Or just run the following: <command>kstart <option>\"netscape\" -desktop 2 "
@@ -2486,11 +2674,16 @@ msgid "&kde; 1.0 and below"
 msgstr "&kde; 1.0 und darunter"
 
 #: index.docbook:1602
-msgid ""
-"Use a shell script to do it. The script should look something like this:"
+msgid "Use a shell script to do it. The script should look something like this:"
 msgstr ""
 "Benutzen Sie ein Shellskript. Das folgende Skript sollte diese Aufgabe "
 "erf&uuml;llen:"
+
+#: index.docbook:1604
+msgid ""
+"kwmcom desktop2 <lineannotation>(or desktop3, desktop4, "
+"whatever)</lineannotation> netscape"
+msgstr ""
 
 #: index.docbook:1607
 msgid ""
@@ -2537,8 +2730,7 @@ msgstr ""
 "Schritt-f&uuml;r-Schrittanleitung dazu:"
 
 #: index.docbook:1632
-msgid ""
-"Open <filename>/etc/Xll/XF86Config</filename> using your favorite editor."
+msgid "Open <filename>/etc/Xll/XF86Config</filename> using your favorite editor."
 msgstr ""
 "&Ouml;ffnen Sie <filename>/etc/Xll/XF86Config</filename> in Ihrem "
 "bevorzugten Editor."
@@ -2598,6 +2790,15 @@ msgstr ""
 "Zeilen zur Datei "
 "<filename>$<envar>HOME</envar>/.kde/share/config/kfmrc</filename> hinzu:"
 
+#: index.docbook:1669
+msgid ""
+"[Paths]\n"
+"Trash=/home/me/Trash/\n"
+"Desktop=/home/me/Desktop\n"
+"Templates=/home/me/Templates/\n"
+"Autostart=/home/me/Autostart/"
+msgstr ""
+
 #: index.docbook:1676
 msgid ""
 "The effect is to take Trash, Templates, and Autostart and put them into your "
@@ -2636,8 +2837,7 @@ msgstr ""
 "an den neuen Speicherort."
 
 #: index.docbook:1699
-msgid ""
-"Where do I save my files if I want them to appear directly on the desktop?"
+msgid "Where do I save my files if I want them to appear directly on the desktop?"
 msgstr ""
 "Wo m&uuml;ssen Sie Dateien speichern, wenn Sie wollen, dass diese auf der "
 "Arbeitsfl&auml;che erscheinen?"
@@ -2779,6 +2979,16 @@ msgid ""
 msgstr ""
 "In &kde; 1.0 m&uuml;ssen Sie die folgenden Zeilen in die Konfigurationsdatei "
 "<filename>kwmrc</filename> schreiben:"
+
+#: index.docbook:1785
+msgid ""
+"[Sticky]\n"
+"stickyClasses=xosview,\n"
+"[Focus]\n"
+"noFocusClasses=xosview,\n"
+"[Decoration]\n"
+"noDecorationClasses=xosview,"
+msgstr ""
 
 #: index.docbook:1798
 msgid "How do I kill &kwmpager;?"
@@ -2923,8 +3133,7 @@ msgstr ""
 "speichern</guimenuitem> sichern, damit diese dauerhaft sind."
 
 #: index.docbook:1890
-msgid ""
-"How can I change the appearance of a directory in &kfm; and &konqueror;?"
+msgid "How can I change the appearance of a directory in &kfm; and &konqueror;?"
 msgstr ""
 "Wie k&ouml;nnen Sie das Erscheinungsbild eines Verzeichnisses in &kfm; und "
 "&konqueror; einstellen?"
@@ -2943,6 +3152,18 @@ msgstr ""
 "Datei auch selbst erstellen, um die Anzeige des Verzeichnisses zu "
 "ver&auml;ndern. Die Datei ist einfach eine kdelnk- (oder "
 "<filename>desktop</filename>- f&uuml;r &kde; 2) Datei. Zum Beispiel:"
+
+#: index.docbook:1899
+msgid ""
+"# KDE Config File\n"
+"[KDE Desktop Entry]\n"
+"Name=Settings\n"
+"Name[de]=Einstellungen\n"
+"Name[pl]=Ustawienia\n"
+"MiniIcon=kcontrol.xpm\n"
+"SortOrder=Desktop,Input_Devices,KWM,Network,Information,Sound\n"
+"Icon=kcontrol.xpm"
+msgstr ""
 
 #: index.docbook:1909
 msgid ""
@@ -3015,9 +3236,19 @@ msgstr ""
 "Pr&uuml;fen Sie, ob <command>ping localhost</command> die folgende Ausgabe "
 "zur&uuml;ckgibt:"
 
-#: index.docbook:1955
+#: index.docbook:1948
 msgid ""
-"If it does not, your loopback interface or route is not properly configured."
+"<computeroutput>\n"
+"PING localhost (127.0.0.1): 56 data bytes\n"
+"64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.3 ms\n"
+"64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.2 ms\n"
+"64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.2 ms \n"
+"...\n"
+"</computeroutput>"
+msgstr ""
+
+#: index.docbook:1955
+msgid "If it does not, your loopback interface or route is not properly configured."
 msgstr ""
 "Wenn nicht, dann ist Ihr Loopbackinterface oder dessen Route nicht richtig "
 "konfiguriert."
@@ -3029,6 +3260,15 @@ msgid ""
 msgstr ""
 "Die Ausgabe des Befehls <command>/sbin/route</command> sollte folgende "
 "Zeilen enthalten:"
+
+#: index.docbook:1959
+msgid ""
+"<computeroutput>\n"
+"Destination     Gateway         Genmask         Flags MSS    Window Use "
+"Ifac\n"
+"loopback        *               255.0.0.0       U     3584   0       13 lo\n"
+"</computeroutput>"
+msgstr ""
 
 #: index.docbook:1963
 msgid ""
@@ -3048,16 +3288,28 @@ msgstr ""
 "Die Ausgabe des Befehls <command>/sbin/ifconfig</command> sollte die "
 "folgenden Zeilen enthalten:"
 
+#: index.docbook:1968
+msgid ""
+"<computeroutput>\n"
+"lo        Link encap:Local Loopback\n"
+"          inet addr:127.0.0.1  Bcast:127.255.255.255  Mask:255.0.0.0\n"
+"          UP BROADCAST LOOPBACK RUNNING  MTU:3584  Metric:1\n"
+"</computeroutput>"
+msgstr ""
+
 #: index.docbook:1973
 msgid "This indicates that the loopback interface is up and running."
 msgstr "Dies sagt, dass das Loopbackinterface arbeitet."
 
 #: index.docbook:1974
-msgid ""
-"Your <filename>/etc/hosts</filename> file should contain the following line:"
+msgid "Your <filename>/etc/hosts</filename> file should contain the following line:"
 msgstr ""
 "Die Datei <filename>/etc/hosts</filename> in Ihrem System sollte die "
 "folgende Zeile enthalten:"
+
+#: index.docbook:1976
+msgid "127.0.0.1       localhost"
+msgstr ""
 
 #: index.docbook:1979
 msgid ""
@@ -3103,8 +3355,7 @@ msgstr ""
 "&uuml;berpr&uuml;ft haben."
 
 #: index.docbook:2007
-msgid ""
-"What are <option>%i</option> and <option>%m</option> in the Execute line?"
+msgid "What are <option>%i</option> and <option>%m</option> in the Execute line?"
 msgstr ""
 "Was sind <option>%i</option> und <option>%m</option> in der Zeile "
 "Ausf&uuml;hren?"
@@ -3263,8 +3514,7 @@ msgstr ""
 
 #: index.docbook:2103
 msgid "How do I configure &konqueror; to run &Java; applets?"
-msgstr ""
-"Wie konfigurieren Sie &konqueror; f&uuml;r das Anzeigen von &Java; Applets?"
+msgstr "Wie konfigurieren Sie &konqueror; f&uuml;r das Anzeigen von &Java; Applets?"
 
 #: index.docbook:2107
 msgid ""
@@ -3318,8 +3568,7 @@ msgstr "Wie stellen Sie die Sprache, die von &kde; benutzt wird, ein?"
 msgid ""
 "There are two ways to set the language &kde; uses in the messages it will "
 "display:"
-msgstr ""
-"Es gibt zwei Wege, um die Sprache f&uuml;r die &kde;-Ausgaben einzustellen:"
+msgstr "Es gibt zwei Wege, um die Sprache f&uuml;r die &kde;-Ausgaben einzustellen:"
 
 #: index.docbook:2151
 msgid "Using the <application>&kde; Control Center</application>"
@@ -3389,7 +3638,6 @@ msgstr ""
 "Login Bildschirm ersetzen?"
 
 #: index.docbook:2190
-#, fuzzy
 msgid ""
 "First, you need to change to the \"xdm runlevel\" (runlevel 5 on &RedHat; "
 "systems, 3 on S.u.S.E.) by editing your <filename>/etc/inittab</filename> "
@@ -3410,8 +3658,7 @@ msgstr ""
 "zu machen: <userinput>x:5:respawn:/usr/bin/X11/xdm -nodaemon</userinput> und "
 "ersetzen Sie diese durch: "
 "<userinput>x:5:respawn:<replaceable>/opt/kde/</replaceable>bin/kdm "
-"-nodaemon</userinput>. <note>Wo &kdm; in Ihrem System gespeichert ist, kann "
-"abweichend sein, passen Sie dies entsprechend an.</note>"
+"-nodaemon</userinput>."
 
 #: index.docbook:2190
 msgid "The location of &kdm; may differ on your system."
@@ -3424,19 +3671,16 @@ msgid ""
 msgstr ""
 
 #: index.docbook:2202
-#, fuzzy
 msgid ""
 "It is risky to initiate a graphical login without checking beforehand "
 "whether it works. If it fails to work, you would be in for a hard time "
 "getting back...."
 msgstr ""
-"Um die &Auml;nderungen sofort wirksam werden zu lassen geben Sie den "
-"folgenden Befehl ein: <command>init 5</command> (f&uuml;r &RedHat; Systeme) "
-"<caution>Das Aktivieren des Grafischen Anmeldens ohne vorherigen Test der "
+"Das Aktivieren des Grafischen Anmeldens ohne vorherigen Test der "
 "Funktionsf&auml;higkeit birgt ein Risiko. Wenn es nicht richtig "
 "funktioniert, ist es schwierig, zu einer Befehlszeile zur&uuml;ck zu "
 "kommen.... Aktivieren Sie dieses also erst, wenn die grafische "
-"Benutzeroberfl&auml;che grunds&auml;tzlich funktioniert.</caution>"
+"Benutzeroberfl&auml;che grunds&auml;tzlich funktioniert."
 
 #: index.docbook:2212
 msgid ""
@@ -3589,6 +3833,12 @@ msgstr ""
 "<filename>$<envar>HOME</envar>/.kde/share/config/krootwmrc</filename> und "
 "f&uuml;gen Sie die folgenden zwei Zeilen hinzu:"
 
+#: index.docbook:2287
+msgid ""
+"[MouseButtons]\n"
+"Left=Menu"
+msgstr ""
+
 #: index.docbook:2291
 msgid "Then restart &kde;."
 msgstr "Starten Sie &kde; neu."
@@ -3638,8 +3888,13 @@ msgstr ""
 "<filename>$<envar>HOME</envar>/.Xmodmap</filename> erzeugen, die die "
 "folgenden Eintr&auml;ge enth&auml;lt:"
 
+#: index.docbook:2318
+msgid ""
+"keycode 115=F13\n"
+"keycode 117=F15"
+msgstr ""
+
 #: index.docbook:2322
-#, fuzzy
 msgid ""
 "Then run <command>xmodmap ~/.Xmodmap</command>. This sets the "
 "<keycap>Start</keycap> key to emit <keysym>F13</keysym> and the "
@@ -3658,19 +3913,7 @@ msgstr ""
 "<menuchoice><guimenu>Tastenzuordnung</guimenu><guimenuitem>Allgemeine "
 "Tastenk&uuml;rzel</guimenuitem></menuchoice>. Setzen Sie "
 "<keysym>F13</keysym> f&uuml;r <guilabel>Aufklapp-Men&uuml;</guilabel> und "
-"<keysym>F15</keysym> f&uuml;r <guilabel>Fenster-Aktionen</guilabel>. Fertig. "
-"<note>Die Werte 115 und 117 k&ouml;nnen f&uuml;r unterschiedliche Tastaturen "
-"abweichend sein. Wenn Sie nicht sicher sind, k&ouml;nnen Sie dies mit dem "
-"Befehl <command>xev</command> &uuml;berpr&uuml;fen. Sie brauchen &kde; 1.1 "
-"und dar&uuml;ber, damit das oben Beschriebene funktioniert. Eine andere "
-"M&ouml;glichkeit ist die Benutzung von &kikbd;, aber dazu m&uuml;ssen Sie "
-"die Tastenpl&auml;ne (keymaps) editieren. Der Vorteil von &kikbd; ist, dass "
-"Sie entscheiden k&ouml;nnen, ob Sie diese Zuordnungen in einigen eigenen "
-"Zuordnungen verwenden wollen und dass Sie diese ohne Neustart umschalten "
-"k&ouml;nnen. Es w&auml;re sicher interessant, ein kleines Skript zu "
-"schreiben, das diese Ver&auml;nderungen in den Tastenpl&auml;nen (keymaps) "
-"automatisch vornimmt, wenn diese gebraucht werden. &kikbd; sollte in der "
-"Lage sein, nutzereigene Tastenpl&auml;ne (keymaps) zu lesen/verstehen.</note>"
+"<keysym>F15</keysym> f&uuml;r <guilabel>Fenster-Aktionen</guilabel>. Fertig."
 
 #: index.docbook:2322
 msgid ""
@@ -3695,8 +3938,7 @@ msgstr ""
 
 #: index.docbook:2344
 msgid "After installing &kde;, the &RedHat; start menu disappears!"
-msgstr ""
-"Nach der Installation von &kde; verschwindet das &RedHat; Startmen&uuml;!"
+msgstr "Nach der Installation von &kde; verschwindet das &RedHat; Startmen&uuml;!"
 
 #: index.docbook:2347
 msgid ""
@@ -3720,8 +3962,7 @@ msgid "Where do I find information regarding &kde; themes?"
 msgstr "Wo finden Sie Informationen zu &kde;-Designs (themes)?"
 
 #: index.docbook:2362
-msgid ""
-"Go see <ulink url=\"http://kde.themes.org/\">http://kde.themes.org/</ulink>."
+msgid "Go see <ulink url=\"http://kde.themes.org/\">http://kde.themes.org/</ulink>."
 msgstr ""
 "Gehen Sie nach: <ulink "
 "url=\"http://kde.themes.org/\">http://kde.themes.org/</ulink>."
@@ -3913,8 +4154,7 @@ msgstr ""
 "ink>."
 
 #: index.docbook:2472
-msgid ""
-"Now, if you still encounter problems, here's what might help you solve them:"
+msgid "Now, if you still encounter problems, here's what might help you solve them:"
 msgstr "Wenn Sie jetzt immer noch Probleme haben, hier noch einige Hinweise:"
 
 #: index.docbook:2475
@@ -4040,8 +4280,7 @@ msgstr ""
 "Ab</keycap></keycombo> oder die Bildlaufleiste am rechten Fensterrand."
 
 #: index.docbook:2536
-msgid ""
-"How do I toggle the behaviour of &Backspace; and <keycap>Delete</keycap>?"
+msgid "How do I toggle the behaviour of &Backspace; and <keycap>Delete</keycap>?"
 msgstr ""
 "Wie schalten Sie das Verhalten der Tasten &Backspace; und "
 "<keycap>Delete</keycap> um?"
@@ -4057,10 +4296,8 @@ msgstr ""
 "nuchoice> of your console window."
 
 #: index.docbook:2543
-msgid ""
-"How do I perform a simple \"cut\" from &kvt; (or &konsole;) to anything else?"
-msgstr ""
-"Wie kopieren Sie Text von &kvt; (oder &konsole;) zu einer anderen Anwendung?"
+msgid "How do I perform a simple \"cut\" from &kvt; (or &konsole;) to anything else?"
+msgstr "Wie kopieren Sie Text von &kvt; (oder &konsole;) zu einer anderen Anwendung?"
 
 #: index.docbook:2545
 msgid ""
@@ -4332,8 +4569,7 @@ msgstr ""
 
 #: index.docbook:2697
 msgid "Why does &Netscape; crash when I visit certain websites?"
-msgstr ""
-"Warum st&uuml;rzt &Netscape; ab, wenn Sie bestimmte Webseiten aufrufen?"
+msgstr "Warum st&uuml;rzt &Netscape; ab, wenn Sie bestimmte Webseiten aufrufen?"
 
 #: index.docbook:2698
 msgid ""
@@ -4445,11 +4681,9 @@ msgstr ""
 
 #: index.docbook:2761
 msgid "Move or resize windows quickly"
-msgstr ""
-"Schnelles Verschieben oder Ver&auml;ndern der Gr&ouml;&szlig;e von Fenstern"
+msgstr "Schnelles Verschieben oder Ver&auml;ndern der Gr&ouml;&szlig;e von Fenstern"
 
 #: index.docbook:2764
-#, fuzzy
 msgid ""
 "To move a window, use <keycombo "
 "action=\"simul\">&Alt;<mousebutton>left</mousebutton></keycombo> mouse "
@@ -4468,9 +4702,7 @@ msgstr ""
 "action=\"simul\">&Alt;<mousebutton>mittlere</mousebutton></keycombo> "
 "Maustaste verschiebt das Fenster in den Hintergrund oder holt es wieder "
 "hervor. F&uuml;r weitere Information &uuml;ber die Mausfunktionen lesen Sie "
-"bitte im \"The K Window Manager Handbook\" nach. <note>&kde; 1.1 und "
-"dar&uuml;ber erlauben eine Einstellung dieser Funktionen nach Ihren "
-"W&uuml;nschen. </note>"
+"bitte im \"The K Window Manager Handbook\" nach."
 
 #: index.docbook:2764
 msgid "&kde; 1.1 and above allows you to change these mouse bindings."
@@ -4586,6 +4818,10 @@ msgstr ""
 "Sie (mit Systemverwalterrechten) als erstes die folgende Zeile zur Datei "
 "<filename>/etc/fstab</filename> hinzuf&uuml;gen:"
 
+#: index.docbook:2853
+msgid "/dev/cdrom     /cdrom     iso9660  ro,user,noauto,unhide"
+msgstr ""
+
 #: index.docbook:2856
 msgid ""
 "Please make sure that you have a soft link from <filename "
@@ -4601,6 +4837,10 @@ msgstr ""
 "Laufwerk</hardware>). Sie sollten auf den Befehl <command>ls -l "
 "/dev/cdrom</command> ungef&auml;hr folgende Antwort erhalten:"
 
+#: index.docbook:2861
+msgid "lrwxrwxrwx   1 root     root            8 Jul 28 22:21 /dev/cdrom -> /dev/hdb"
+msgstr ""
+
 #: index.docbook:2864
 msgid ""
 "The above would be done with <command>ln -s /dev/hdb /dev/cdrom</command> "
@@ -4612,6 +4852,14 @@ msgstr ""
 "Systemverwalter). Sie brauchen au&szlig;erdem einen g&uuml;ltigen "
 "Mountpunkt, um das <hardware>CD-ROM Laufwerk</hardware> in das Dateisystem "
 "einzubinden, z.B.:"
+
+#: index.docbook:2867
+msgid ""
+"% ls -la /cdrom\n"
+"total 2\n"
+"drwxrwsr-x   2 root     cdrom        1024 Sep 14  1995 ./\n"
+"drwxr-xr-x  24 root     root         1024 Dec  1 21:00 ../"
+msgstr ""
 
 #: index.docbook:2873
 msgid ""
@@ -4690,8 +4938,7 @@ msgstr ""
 
 #: index.docbook:2921
 msgid "How can I get &Backspace; to work correctly under &kde;?"
-msgstr ""
-"Wie stellen Sie die korrekte Funktion der &Backspace;-Taste unter &kde; ein?"
+msgstr "Wie stellen Sie die korrekte Funktion der &Backspace;-Taste unter &kde; ein?"
 
 #: index.docbook:2924
 msgid ""
@@ -4714,15 +4961,20 @@ msgstr ""
 
 #: index.docbook:2929
 msgid ""
-"Also, concerning the &Backspace;-Bug (Bug number: kb704): the bug is fixed "
-"somehow by putting the following line into "
-"<filename>$<envar>HOME</envar>/.xinitrc</filename>: <screen> xmodmap - "
-"\"keysym Delete = BackSpace\" </screen>"
+"<note><para>Also, concerning the &Backspace;-Bug (Bug number:\n"
+"kb704): the bug is fixed somehow by putting the following line into\n"
+"<filename>$<envar>HOME</envar>/.xinitrc</filename>:\n"
+"<screen>\n"
+"xmodmap -  \"keysym Delete = BackSpace\"\n"
+"</screen>\n"
+"</para></note>"
 msgstr ""
-"Au&szlig;erdem folgende Bemerkung zum &Backspace;-Fehler (Bug Nummer: "
-"kb704): Der Fehler ist behoben, wenn Sie folgende Zeile in die Datei "
-"<filename>$<envar>HOME</envar>/.xinitrc</filename> einf&uuml;gen: <screen> "
-"xmodmap - \"keysym Delete = BackSpace\" </screen>"
+"<note><para>Dies ist doch alter Kaffee.\n"
+"<filename>$<envar>HOME</envar>/.xinitrc</filename>:\n"
+"<screen>\n"
+"xmodmap -  \"keysym Delete = BackSpace\"\n"
+"</screen>\n"
+"</para></note>"
 
 #: index.docbook:2941
 msgid ""
@@ -4761,8 +5013,7 @@ msgstr ""
 msgid ""
 "What about &kde; programs that do not have icons? How do I get them into the "
 "menu?"
-msgstr ""
-"Wie bekommen Sie &kde;-Programme, die keine Symbole haben, in das Men&uuml;?"
+msgstr "Wie bekommen Sie &kde;-Programme, die keine Symbole haben, in das Men&uuml;?"
 
 #: index.docbook:2965
 msgid "Use &kmenuedit;."
@@ -4799,7 +5050,6 @@ msgid "How do I exit &kde;?"
 msgstr "Wie verlassen Sie &kde;?"
 
 #: index.docbook:2990
-#, fuzzy
 msgid ""
 "Simply click on the <guibutton>K</guibutton> button and select "
 "<guimenu>Logout</guimenu>. In addition, if you "
@@ -4810,11 +5060,7 @@ msgstr ""
 "Sie <guimenu>Abmelden...</guimenu>. Sie k&ouml;nnen auch einfach mit der "
 "<mousebutton>rechten</mousebutton> Maustaste auf eine leere Stelle der "
 "Arbeitsfl&auml;che klicken, was ein Men&uuml; &ouml;ffnet, das Ihnen unter "
-"anderem den Punkt <guimenu>Abmelden...</guimenu> anbietet. <note>Die "
-"Tastenkombination <keycombo "
-"action=\"simul\">&Strg;&Alt;&Backspace;</keycombo> beendet auch die Sitzung "
-"(durch gewaltsames Beenden des X-Servers), aber deren Benutzung verhindert "
-"das Sitzungsmanagement.</note>"
+"anderem den Punkt <guimenu>Abmelden...</guimenu> anbietet."
 
 #: index.docbook:2990
 msgid ""
@@ -5012,8 +5258,7 @@ msgid "How do I go about creating themes and icons?"
 msgstr "Wie erzeugen Sie neue Designs und Symbole?"
 
 #: index.docbook:3130
-msgid ""
-"Go see <ulink url=\"http://artist.kde.org\">http://artist.kde.org</ulink>."
+msgid "Go see <ulink url=\"http://artist.kde.org\">http://artist.kde.org</ulink>."
 msgstr ""
 "Sehen Sie sich <ulink "
 "url=\"http://artist.kde.org\">http://artist.kde.org</ulink> an."
@@ -5059,7 +5304,6 @@ msgid "How do I change the screen resolution?"
 msgstr "Wie schalten sie die Bildschirmaufl&ouml;sung um?"
 
 #: index.docbook:3171
-#, fuzzy
 msgid ""
 "Use <keycombo action=\"simul\">&Ctrl;&Alt;<keycap>+</keycap></keycombo> and "
 "<keycombo action=\"simul\">&Ctrl;&Alt;<keycap>-</keycap></keycombo> to cycle "
@@ -5076,13 +5320,7 @@ msgstr ""
 "class=\"directory\">/etc/X11</filename> definierten Aufl&ouml;sungen um. Sie "
 "k&ouml;nnen auch diese Datei direkt editieren. Wenn Sie die bevorzugte "
 "Aufl&ouml;sung als erste in der Datei anordnen (oder als einzige darin "
-"stehen lassen), startet &X; immer mit dieser Aufl&ouml;sung. <caution> "
-"Machen Sie immer eine Sicherheitskopie der Datei "
-"<filename>XF86Config</filename> <emphasis>bevor</emphasis> Sie diese "
-"editieren. Fehler in dieser Datei k&ouml;nnen Ihr &X; unbenutzbar machen. "
-"</caution> <note> Diese Anleitung gilt nur f&uuml;r die Version 3.3.x des "
-"XFree86 Servers. F&uuml;r XFree86 4.x sehen Sie bitte auf der: <ulink "
-"url=\"http://xfree.org\">XFree86(TM): Homepage</ulink> nach.</note>"
+"stehen lassen), startet &X; immer mit dieser Aufl&ouml;sung."
 
 #: index.docbook:3171
 msgid ""
@@ -5191,6 +5429,10 @@ msgstr ""
 "ausf&uuml;hren. Zum Beispiel steht in meiner Datei "
 "<filename>.Xclients</filename>:"
 
+#: index.docbook:3249
+msgid "xsetroot -cursor_name left_ptr"
+msgstr ""
+
 #: index.docbook:3252
 msgid ""
 "This will create the common left-angled pointer. To see other alternatives, "
@@ -5254,6 +5496,29 @@ msgstr ""
 "<filename>$<envar>HOME</envar>/.Xmodmap</filename> editieren und die "
 "folgenden Zeilen darin einf&uuml;gen:"
 
+#: index.docbook:3293
+msgid ""
+"! redefines numeric keypad to be used without NumLock\n"
+"keycode 79 = 7\n"
+"keycode 80 = 8\n"
+"keycode 81 = 9\n"
+"\n"
+"keycode 83 = 4\n"
+"keycode 84 = 5\n"
+"keycode 85 = 6\n"
+"\n"
+"keycode 87 = 1\n"
+"keycode 88 = 2\n"
+"keycode 89 = 3\n"
+"\n"
+"keycode 90 = 0\n"
+"keycode 91 = comma\n"
+"keycode 86 = plus\n"
+"\n"
+"! deactivates NumLock key\n"
+"keycode 77 ="
+msgstr ""
+
 #: index.docbook:3314
 msgid "Other possible alternatives:"
 msgstr "Andere m&ouml;gliche Alternativen:"
@@ -5270,8 +5535,7 @@ msgstr ""
 
 #: index.docbook:3319
 msgid "<command>man XF86Config</command> and look under section Keyboard."
-msgstr ""
-"<command>man XF86Config</command> und sehen Sie unter Sektion Keyboard nach."
+msgstr "<command>man XF86Config</command> und sehen Sie unter Sektion Keyboard nach."
 
 #: index.docbook:3321
 msgid ""
@@ -5321,17 +5585,36 @@ msgstr "Was bedeuten alle diese Abk&uuml;rzungen wie AFAIK?"
 
 #: index.docbook:3358
 msgid ""
-"AAMOF: as a matter of fact AFAIK: as far as I know AISE: as I see it BFN: "
-"bye for now BION: believe it or not BRB: be right back BTW: by the way "
-"CMIIW: correct me if I am wrong FUD: fear, uncertainty, and doubt FWIW: for "
-"what it's worth FYI: for your information HTH: hope this helps IIRC: if I "
-"recall correctly IMHO: in my humble opinion LOL: laughing out loud MYOB: "
-"mind your own business PITA: pain in the ass ROTFL: rolling on the floor "
-"laughing RTFM: read the fine manual SOP: standard operating procedure TIA: "
-"thanks in advance YMMV: your mileage may vary"
+"<screen>\n"
+"AAMOF: as a matter of fact\n"
+"AFAIK: as far as I know\n"
+"AISE: as I see it\n"
+"BFN: bye for now\n"
+"BION: believe it or not\n"
+"BRB: be right back\n"
+"BTW: by the way\n"
+"CMIIW: correct me if I am wrong\n"
+"FUD: fear, uncertainty, and doubt\n"
+"FWIW: for what it's worth\n"
+"FYI: for your information\n"
+"HTH: hope this helps\n"
+"IIRC: if I recall correctly\n"
+"IMHO: in my humble opinion\n"
+"LOL: laughing out loud\n"
+"MYOB: mind your own business\n"
+"PITA: pain in the ass\n"
+"ROTFL: rolling on the floor laughing\n"
+"RTFM: read the fine manual\n"
+"SOP: standard operating procedure\n"
+"TIA: thanks in advance\n"
+"YMMV: your mileage may vary\n"
+"</screen>"
 msgstr ""
-"AAMOF: as a matter of fact es ist eine Tatsache AFAIK: as far as I know "
-"soweit ich wei&szlig; AISE: as I see it wie ich es sehe BFN: bye for now "
+"<screen>\n"
+"AAMOF: as a matter of fact es ist eine Tatsache\n"
+"AFAIK: as far as I know soweit ich wei&szlig;\n"
+"AISE: as I see it wie ich es sehe\n"
+"BFN: bye for now"
 "Tsch&uuml;ss erst mal BION: believe it or not glaube es oder nicht BRB: be "
 "right back bin gleich wieder da BTW: by the way was ich noch sagen wollte "
 "CMIIW: correct me if I am wrong verbesser mich, wenn ich falsch bin FUD: "
@@ -5345,7 +5628,8 @@ msgstr ""
 "laughing Steigerungsform von LOL RTFM: read the fine manual lies das "
 "Handbuch SOP: standard operating procedure ganz normale Bedienerhandlung "
 "TIA: thanks in advance Danke im Voraus YMMV: your mileage may vary es kann "
-"unterschiedlichen Erfolg haben"
+"unterschiedlichen Erfolg habe"
+"</screen>"
 
 #: index.docbook:3388
 msgid "Getting more information"
@@ -5430,8 +5714,7 @@ msgid "kde-licensing"
 msgstr "kde-licensing"
 
 #: index.docbook:3431
-msgid ""
-"This list is devoted to discussions about the &kde; and &Qt; license issues."
+msgid "This list is devoted to discussions about the &kde; and &Qt; license issues."
 msgstr "Diese Liste ist Fragen der Lizensierung von &kde; und &Qt; gewidmet."
 
 #: index.docbook:3435
@@ -5459,8 +5742,7 @@ msgstr "Wie abonnieren Sie Mailing Listen / bestellen Sie diese wieder ab?"
 
 #: index.docbook:3448
 msgid "All lists are available via the university of T&uuml;bingen."
-msgstr ""
-"Alle Listen sind &uuml;ber die Universit&auml;t von T&uuml;bingen erreichbar."
+msgstr "Alle Listen sind &uuml;ber die Universit&auml;t von T&uuml;bingen erreichbar."
 
 #: index.docbook:3449
 msgid "To subscribe"
@@ -5879,8 +6161,7 @@ msgstr ""
 "kostet jedoch nichts!"
 
 #: index.docbook:3674
-msgid ""
-"I am just curious. Can I have read-only access to the <acronym>CVS</acronym>?"
+msgid "I am just curious. Can I have read-only access to the <acronym>CVS</acronym>?"
 msgstr ""
 "Aus reiner Neugierde; k&ouml;nnen Sie Nur-Lese-Zugriff auf den "
 "<acronym>CVS</acronym>-Server erhalten?"
@@ -5925,11 +6206,18 @@ msgstr ""
 "html</ulink> nach, welche Spiegelserver es gibt"
 
 #: index.docbook:3697
+#, fuzzy
 msgid ""
 "Once you have selected a new <application>cvsup</application> server, simply "
-"replace <screen> *default host=cvs.kde.org </screen> with <screen> *default "
-"host=cvsup.your.new.host </screen> in your <application>cvsup</application> "
-"script."
+"replace \n"
+"<screen> \n"
+"*default host=cvs.kde.org\n"
+"</screen>\n"
+"with\n"
+"<screen> \n"
+"*default host=cvsup.your.new.host\n"
+"</screen>\n"
+"in your <application>cvsup</application> script."
 msgstr ""
 "Wenn Sie Ihren neuen <application>cvsup</application>-Spiegelserver "
 "ausgew&auml;hlt haben, ersetzen Sie einfach <screen> *default "
@@ -5938,8 +6226,7 @@ msgstr ""
 
 #: index.docbook:3711
 msgid "How do I go about translating &kde; programs into my native language?"
-msgstr ""
-"Wie starten Sie mit der &Uuml;bersetzung von &kde; in Ihre Heimatsprache?"
+msgstr "Wie starten Sie mit der &Uuml;bersetzung von &kde; in Ihre Heimatsprache?"
 
 #: index.docbook:3715
 msgid ""
@@ -5990,3 +6277,4 @@ msgstr "aa"
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
 msgstr "bb"
+

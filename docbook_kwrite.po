@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
-"PO-Revision-Date: 2001-02-28 12:29MET\n"
+"PO-Revision-Date: 2001-03-01 11:41MET\n"
 "Last-Translator: Stephan Kulow <coolo@kde.org>\n"
 "Language-Team: german <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -141,10 +141,17 @@ msgstr ""
 
 #: index.docbook:121
 msgid ""
+"<screen>\n"
 "<prompt>%</prompt> <userinput><command>kwrite</command> "
 "<option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></use"
-"rinput>"
+"rinput>\n"
+"</screen>"
 msgstr ""
+"<screen>\n"
+"<prompt>%</prompt> <userinput><command>kwrite</command> "
+"<option><replaceable>/home/jochen/docs/meintext.xt</replaceable></option></use"
+"rinput>\n"
+"</screen>"
 
 #: index.docbook:127
 msgid "Specify a file on the internet"
@@ -162,10 +169,17 @@ msgstr ""
 
 #: index.docbook:133
 msgid ""
+"<screen>\n"
 "<prompt>%</prompt> <userinput><command>kwrite</command> "
 "<option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></opt"
-"ion></userinput>"
+"ion></userinput>\n"
+"</screen>"
 msgstr ""
+"<screen>\n"
+"<prompt>%</prompt> <userinput><command>kwrite</command> "
+"<option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></opt"
+"ion></userinput>\n"
+"</screen>"
 
 #: index.docbook:141
 msgid "Other Command Line Options"
@@ -455,8 +469,7 @@ msgid "<keycap>Ctrl</keycap><keycap>S</keycap>"
 msgstr "<keycap>Ctrl</keycap><keycap>S</keycap>"
 
 #: index.docbook:286
-msgid ""
-"Invokes the <link linkend=\"save\"><guilabel>Save</guilabel></link> command."
+msgid "Invokes the <link linkend=\"save\"><guilabel>Save</guilabel></link> command."
 msgstr ""
 "F&uuml;hrt den Befehl <link "
 "linkend=\"save\"><guilabel>Sichern</guilabel></link> aus."
@@ -767,8 +780,7 @@ msgstr ""
 
 #: index.docbook:450
 msgid "This will reverse the most recent change (if any) made using Undo"
-msgstr ""
-"Macht das letzte R&uuml;ckg&auml;ngig (wenn vorhanden) r&uuml;ckg&auml;ngig."
+msgstr "Macht das letzte R&uuml;ckg&auml;ngig (wenn vorhanden) r&uuml;ckg&auml;ngig."
 
 #: index.docbook:455
 msgid ""
@@ -1319,8 +1331,7 @@ msgstr ""
 
 #: index.docbook:740
 msgid "Two more buttons are located below the progress bar. They are:"
-msgstr ""
-"Zwei weitere Kn&ouml;pfe befinden sich unter dem Anzeigebalken im Dialogfeld:"
+msgstr "Zwei weitere Kn&ouml;pfe befinden sich unter dem Anzeigebalken im Dialogfeld:"
 
 # index.docbook:745, index.docbook:936
 #: index.docbook:745
@@ -1700,8 +1711,7 @@ msgstr ""
 
 #: index.docbook:965
 msgid "This will display version and author information"
-msgstr ""
-"Zeigt Versionsinformation, Autor und Lizenzinformationen von &kwrite; an."
+msgstr "Zeigt Versionsinformation, Autor und Lizenzinformationen von &kwrite; an."
 
 #: index.docbook:970
 msgid ""
@@ -1839,8 +1849,7 @@ msgid "Background"
 msgstr "Hintergrund:"
 
 #: index.docbook:1047
-msgid ""
-"Here the user can specify a color for the general background of &kwrite;."
+msgid "Here the user can specify a color for the general background of &kwrite;."
 msgstr "Stellt die generelle Hintergrundfarbe ein."
 
 #: index.docbook:1052
@@ -1851,8 +1860,7 @@ msgstr "Texthintergrund:"
 msgid ""
 "This is used to set a particular color to display in the background of those "
 "areas of the document containing text."
-msgstr ""
-"Stellt die Hintergrundfarbe ein, die zum Hinterlegen von Text verwendet wird."
+msgstr "Stellt die Hintergrundfarbe ein, die zum Hinterlegen von Text verwendet wird."
 
 # index.docbook:1058, index.docbook:1381
 #: index.docbook:1058
@@ -2001,8 +2009,7 @@ msgid "Overwrite Selections"
 msgstr "Auswahl &uuml;berschreiben"
 
 #: index.docbook:1135
-msgid ""
-"Any keyed character input or paste operation will replace the selected text."
+msgid "Any keyed character input or paste operation will replace the selected text."
 msgstr ""
 "Jedes eingegebene Zeichen oder Einf&uuml;geoperation "
 "ersetzt(&uuml;berschreibt) den ausgew&auml;hlten Text."
@@ -2353,8 +2360,7 @@ msgstr ""
 "aufrufen."
 
 #: index.docbook:1335
-msgid ""
-"Items available on the <guilabel>Defaults</guilabel> page are as follows:"
+msgid "Items available on the <guilabel>Defaults</guilabel> page are as follows:"
 msgstr ""
 "Auf der Seite <guilabel>Standars</guilabel> sind folgende "
 "Einstellungsm&ouml;glichkeiten vorhanden:"
@@ -2483,8 +2489,7 @@ msgstr "Gr&ouml;&szlig;e"
 
 #: index.docbook:1409
 msgid "The font size can be changed here. The default is 12 points."
-msgstr ""
-"Hier wird die Schriftgr&ouml;&szlig;e eingestellt. Standard ist 12 Points."
+msgstr "Hier wird die Schriftgr&ouml;&szlig;e eingestellt. Standard ist 12 Points."
 
 #: index.docbook:1414
 msgid "Charset"
@@ -2621,8 +2626,7 @@ msgstr "Element-Schrift"
 
 #: index.docbook:1486
 msgid "Here the user can choose the font for the selected item."
-msgstr ""
-"Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten Elementes ein."
+msgstr "Hier stellt der Nutzer das Aussehen des ausgew&auml;hlten Elementes ein."
 
 #: index.docbook:1487
 msgid ""
@@ -2655,8 +2659,7 @@ msgid "Contributions:"
 msgstr "Mitarbeit:"
 
 #: index.docbook:1503
-msgid ""
-"Additional contributions by Glen Parker <email>glenebob@nwlink.com</email>"
+msgid "Additional contributions by Glen Parker <email>glenebob@nwlink.com</email>"
 msgstr "Weitere Mitarbeit durch Glen Parker <email>glenebob@nwlink.com</email>"
 
 #: index.docbook:1504
@@ -2715,3 +2718,4 @@ msgstr ""
 "GUI-&Uuml;bersetzung</para></listitem><listitem><para>Matthias "
 "Schulz<email>matthschulz@linuxfreemail.com</email>, &Uuml;bersetzung der "
 "Dokumentation</para></listitem></itemizedlist>"
+

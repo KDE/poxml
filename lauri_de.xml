@@ -1,9 +1,63 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML CALS Table Model V4.1//EN" "dummy.dtd">
+
 <book>
-<para><term> Start </term> <keycap>Schieber</keycap><keycap>Hilfe</keycap></para>
+<para><term> Start </term> <keycap> Schieber </keycap> <keycap> Hilfe </keycap></para>
 
 <para><variablelist> <varlistentry> <term> Schrift 1 </term> <listitem> <para id="blah"> Schrift 2 <note> <para> Text 3 "alles" <footnote> <para> Text 4 \"noch mehr\" </para> </footnote> </para> </note> </para> </listitem> </varlistentry> </variablelist></para>
 
 <para>Ende</para>
+
+<literallayout>Matthias Hoelzer
+KDE-Verein i.G.
+Account-Nr. 2798296
+
+Staedtische Sparkasse Wuerzburg
+Hofstrasse 9
+97070 Wuerzburg
+Germany
+BLZ 790 500 00
+SWIFT-Address: BYLA DE 77</literallayout>
+
+<screen>Expect       ogin:           <lineannotation># Dies ist alles nicht so schlimm!</lineannotation>
+ID           ""              <lineannotation># kppp sends the id you configured in the main dialog</lineannotation>
+Expect       for userxyz:    <lineannotation># a list of available numbers is shown, the user should choose one</lineannotation> 
+Send         userxyz-home    <lineannotation># the user wants to be called back on their home number</lineannotation>
+Expect       ogin:           <lineannotation># The callback process is now running, a new connection, and so a new login.</lineannotation>
+ID
+Expect       assword:        <lineannotation># Now send your password</lineannotation>
+Expect       &gt;               <lineannotation># Wait for the command prompt (the prompt may vary)</lineannotation>
+Send         start_ppp       <lineannotation># this command starts the pppd</lineannotation></screen>
+
+<screen>Send                         <lineannotation># send einen leerenstring</lineannotation>
+Expect           ID:
+Send             itsme
+Expect           word:
+Send             forgot
+Expect           granted
+Send             ppp</screen>
+
+
+<programlisting>-&gt;  #include &lt;qpixmap.h&gt;
+-&gt;  #include &lt;qpen.h&gt;
+     class KScribbleDoc
+     {
+-&gt;   protected:
+-&gt;       QPen currentPen(){ return pen;};   
+                
+-&gt;       int penWidth()
+-&gt;          { return pen.width(); }
+      public slots:
+         void updateAllViews(KScribbleView *sender);
+        
+      protected:
+        
+-&gt;      QPixmap buffer;
+        
+      private:
+-&gt;      QPen pen;
+        /** das veraenderte flag of the current document */
+        bool modified;</programlisting>
 
 </book>
 

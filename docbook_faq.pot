@@ -634,6 +634,10 @@ msgstr ""
 msgid "Get <application>egcs</application> 1.1.1 or later and compile it with <option>-fsquangle</option> support on. This is because &SGI;'s assembler can't handle the huge object names produced by normal <application>g++</application>, and <application>gas</application> doesn't evidently work yet for &SGI;s. You'll have to build &gcc;'s libraries using this binary as well. Make sure your <envar>PATH</envar> gets this compiler only (if you have another &gcc; installed somewhere). When I do a <command>g++ <option>-v</option></command> I get:"
 msgstr ""
 
+#: index.docbook:727
+msgid "<computeroutput>gcc version egcs-2.91.60 19981201 (egcs-1.1.1 release)</computeroutput>"
+msgstr ""
+
 #: index.docbook:731
 msgid "Do a <command>setenv <option>LDFLAGS \" \"</option></command> because the configure scripts insist on trying <command>g++ <option>-s</option></command> when compiling a test program, which always fails on the &SGI;s."
 msgstr ""
@@ -642,12 +646,23 @@ msgstr ""
 msgid "Unpack \"kdesupport\" and enter its directory. Run its configure with <option>--prefix</option> if you need to:"
 msgstr ""
 
+#: index.docbook:739
+msgid ""
+      "./configure --prefix=$KDEDIR --x-includes=/usr/include/X11 \\\n"
+      "--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+      "--with-qt-libs=/opt/kde-1.1.1 --enable-shared"
+msgstr ""
+
 #: index.docbook:744
 msgid "Modify this to reflect your reality. In my case, I have &Qt; stuck in the same dir as &kde;, so I had to explicitly name the includes and libs dir. Sometimes the configure will still not see the &Qt; includes dir. Source your <filename>.login</filename> file to correct this (You did set up your <filename>.login</filename> file as the instructions in the &Qt; installation asked?)."
 msgstr ""
 
 #: index.docbook:752
 msgid "Run the script (which I'll include below) as follows:"
+msgstr ""
+
+#: index.docbook:754
+msgid "<command>find <option>. -name Makefile -exec ../FixMakesSq {} \\;</option></command>"
 msgstr ""
 
 #: index.docbook:756
@@ -662,20 +677,84 @@ msgstr ""
 msgid "Here's the FixMakesSq script:"
 msgstr ""
 
+#: index.docbook:766
+msgid ""
+      "#!/bin/perl -ni.bak\n"
+      " \n"
+      "if ((/-lpng/) || (/-ljpeg/))\n"
+      "{\n"
+      "    if (/^(.*)-lpng(.*)$/)\n"
+      "    {\n"
+      "        $b4 = $1;\n"
+      "        $af = $2;\n"
+      "        print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\n"
+      "    }\n"
+      "    if (/^(.*)-ljpeg(.*)$/)\n"
+      "    {\n"
+      "        $b4 = $1;\n"
+      "        $af = $2;\n"
+      "        print \"$b4 /path/to/KDE/libs/libjpeg.a $af\\n\";\n"
+      "    }\n"
+      "}\n"
+      "        \n"
+      "#NOTE!! Uncomment this section if you want to add\n"
+      "#-D_LANGUAGE_C_PLUS_PLUS to all \n"
+      "#makefiles.  I personally have not tried this, but it should not break \n"
+      "#anything.\n"
+      "# Alternately, add the flag in the places noted below.\n"
+      "\n"
+      "#elsif (/cxxflags\\s*=(.*)$/i)\n"
+      "#{\n"
+      "#    print \"CXXFLAGS =  -D_LANGUAGE_C_PLUS_PLUS $1\\n\";\n"
+      "#}\n"
+      "else\n"
+      "{\n"
+      "    print;\n"
+      "}"
+msgstr ""
+
 #: index.docbook:800
 msgid "Do:"
+msgstr ""
+
+#: index.docbook:801, index.docbook:844, index.docbook:904
+msgid ""
+      "<command>gmake</command>\n"
+      "<command>gmake <option>install</option></command>"
 msgstr ""
 
 #: index.docbook:806
 msgid "Go to the <filename>libz</filename> source directory, do:"
 msgstr ""
 
+#: index.docbook:807
+msgid ""
+      "<command>./configure <option>--prefix=$KDEDIR</option></command>\n"
+      "<command>gmake</command>\n"
+      "<command>gmake install</command>"
+msgstr ""
+
 #: index.docbook:814
 msgid "Go to the <filename>libpng</filename> source directory, do:"
 msgstr ""
 
+#: index.docbook:815
+msgid ""
+      "<command>./configure <option>--prefix=$KDEDIR</option></command>\n"
+      "<command>gmake</command>\n"
+      "<command>gmake <option>install</option></command>"
+msgstr ""
+
 #: index.docbook:822
 msgid "Unpack kdelibs and enter its directory. Note the <option>--enable-new-stuff</option> argument to <command>./configure</command> (this might not be needed, but nothing complains if you use it):"
+msgstr ""
+
+#: index.docbook:826
+msgid ""
+      "<command>./configure <option>--prefix=$KDEDIR --x-includes=/usr/include/X11 \\\n"
+      "--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+      "--with-qt-libs=/opt/kde-1.1.1 --enable-shared --enable-new-stuff</option></command>\n"
+      "<command>find <option>. -name Makefile -exec ../FixMakesSq {} \\;</option></command>"
 msgstr ""
 
 #: index.docbook:833
@@ -690,12 +769,58 @@ msgstr ""
 msgid "Unpack kdebase and enter its directory. Do:"
 msgstr ""
 
+#: index.docbook:850, index.docbook:910
+msgid ""
+      "<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 \\\n"
+      "--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+      "--with-qt-libs=/opt/kde-1.1.1 --enable-shared </option></command>\n"
+      "<command>find <option>. -name Makefile -exec ../FixMakesSq {} \\;</option></command>"
+msgstr ""
+
 #: index.docbook:857
 msgid "Fix <filename>memory_sgi.cpp</filename> (do a find from <filename>kdebase</filename> directory). I just #ifdef'd out the contents of the whole function... it doesn't compile on my machine, and I never open that part of &kpanel; anyway :-)."
 msgstr ""
 
 #: index.docbook:863
 msgid "Fix <filename>TEShell.C</filename> (in <filename>kdebase-1.1.1/konsole/src/</filename> directory). It is the operation for getting a pty for the new &konsole;. Alas, it was not written with &IRIX; in mind, and needs to be patched with the diff included below:"
+msgstr ""
+
+#: index.docbook:868
+msgid ""
+      "*** TEShell.C   Mon Apr 12 00:12:37 1999\n"
+      "--- /users/dor/aspg/ber/data/kdedown/kdebase-1.1.1/konsole/src/TEShell.C\n"
+      "Wed Jul 14 15:15:35 1999\n"
+      "***************\n"
+      "*** 169,174 ****\n"
+      "--- 169,177 ----\n"
+      "    pid_t pid = waitpid(-1,&amp;status,WNOHANG);\n"
+      "    Shell* sh = shells.find(pid);\n"
+      "    if (sh) { shells.remove(pid); sh-&gt;doneShell(status); }\n"
+      "+ #if defined(sgi)\n"
+      "+   signal(SIGCHLD,catchChild);\n"
+      "+ #endif\n"
+      "  }\n"
+      "  \n"
+      "  void Shell::doneShell(int status)\n"
+      "***************\n"
+      "*** 234,239 ****\n"
+      "--- 237,252 ----\n"
+      "        }\n"
+      "      }\n"
+      "    }\n"
+      "+ #endif\n"
+      "+ \n"
+      "+ #if defined(sgi) /* Irix */\n"
+      "+  \n"
+      "+   needGrantPty = FALSE;\n"
+      "+   char* line;\n"
+      "+   line = _getpty(&amp;ptyfd, O_RDWR|O_NDELAY, 0600, 0);\n"
+      "+   strcpy(ptynam,\"/dev/ptc\");\n"
+      "+   strcpy(ttynam,line);\n"
+      "+  \n"
+      "  #endif\n"
+      "  \n"
+      "    if (ptyfd &lt; 0) // Linux, FIXME: Trouble on other systems?"
 msgstr ""
 
 #: index.docbook:903
@@ -710,8 +835,24 @@ msgstr ""
 msgid "Find <filename>kcalc_core.cpp</filename> and fix its <filename>Makefile</filename> like you did for <filename>kprocctrl.cpp</filename> above."
 msgstr ""
 
+#: index.docbook:921
+msgid ""
+      "gmake\n"
+      "gmake install"
+msgstr ""
+
 #: index.docbook:926
 msgid "Unpack kdegames, kdegraphics, and kdetoys and for each one, enter its directory and do:"
+msgstr ""
+
+#: index.docbook:928
+msgid ""
+      "<command>./configure <option>--prefix=$KDEDIR  --x-includes=/usr/include/X11 \\\n"
+      "--x-libraries=/usr/lib32 --with-qt-includes=/opt/kde-1.1.1 \\\n"
+      "--with-qt-libs=/opt/kde-1.1.1 --enable-shared</option></command>\n"
+      "<command>find <option>. -name Makefile -exec ../FixMakesSq {}</option></command>\n"
+      "<command>gmake</command>\n"
+      "<command>gmake <option>install</option></command>"
 msgstr ""
 
 #: index.docbook:937
@@ -802,8 +943,32 @@ msgstr ""
 msgid "For csh or tcsh:"
 msgstr ""
 
+#: index.docbook:1036
+msgid ""
+      "setenv KDEDIR /users/myhome/kde\n"
+      "\n"
+      "if ( $?LD_LIBRARY_PATH ) then\n"
+      "   setenv LD_LIBRARY_PATH $KDEDIR/lib:$LD_LIBRARY_PATH\n"
+      "else\n"
+      "   setenv LD_LIBRARY_PATH $KDEDIR/lib\n"
+      "endif\n"
+      "\n"
+      "if ( ! $?LIBRARY_PATH ) then\n"
+      "   setenv LIBRARY_PATH $LD_LIBRARY_PATH\n"
+      "endif"
+msgstr ""
+
 #: index.docbook:1049
 msgid "For <application>bash</application>:"
+msgstr ""
+
+#: index.docbook:1050
+msgid ""
+      "KDEDIR=/users/myhome/kde\n"
+      "PATH=$KDEDIR/bin:$PATH\n"
+      "LD_LIBRARY_PATH=$KDEDIR/lib:$LD_LIBRARY_PATH\n"
+      "LIBRARY_PATH=$LD_LIBRARY_PATH\n"
+      "export KDEDIR PATH LD_LIBRARY_PATH LIBRARY_PATH"
 msgstr ""
 
 #: index.docbook:1058
@@ -1086,8 +1251,26 @@ msgstr ""
 msgid "For example, to mount the floppy, your <filename>/etc/fstab</filename> should include:"
 msgstr ""
 
+#: index.docbook:1454
+msgid "/dev/fd0   /floppy   msdos   noauto,user,sync 0 0"
+msgstr ""
+
 #: index.docbook:1459
 msgid "Create a <filename>.desktop</filename> file for the filesystem. An example for a device <filename>.desktop</filename> file is:"
+msgstr ""
+
+#: index.docbook:1461
+msgid ""
+      "# KDE Config File\n"
+      "[KDE Desktop Entry]\n"
+      "UnmountIcon=3floppy_unmount.xpm\n"
+      "MountPoint=/floppy\n"
+      "Icon=3floppy_mount.xpm\n"
+      "Dev=/dev/fd0\n"
+      "ReadOnly=0\n"
+      "FSType=default\n"
+      "Type=FSDevice\n"
+      "Comment=Floppy Disc"
 msgstr ""
 
 #: index.docbook:1480
@@ -1158,6 +1341,17 @@ msgstr ""
 msgid "&kde; pre-1.1 and above comes with a program called &kstart;. You can use it in a <filename>.kdelnk</filename> (<filename>.desktop</filename> for &kde; 2) file like this:"
 msgstr ""
 
+#: index.docbook:1587
+msgid ""
+      "Name=Netscape\n"
+      "Exec=kstart \"netscape\" -window \".*Netscape.*\" -desktop 2 -maximize\n"
+      "BinaryPattern=netscape;\n"
+      "Icon=netscape.xpm\n"
+      "Path=\n"
+      "Type=Application\n"
+      "Terminal=0"
+msgstr ""
+
 #: index.docbook:1596
 msgid "Or just run the following: <command>kstart <option>\"netscape\" -desktop 2 -activate</option></command>."
 msgstr ""
@@ -1168,6 +1362,10 @@ msgstr ""
 
 #: index.docbook:1602
 msgid "Use a shell script to do it. The script should look something like this:"
+msgstr ""
+
+#: index.docbook:1604
+msgid "kwmcom desktop2 <lineannotation>(or desktop3, desktop4, whatever)</lineannotation> netscape"
 msgstr ""
 
 #: index.docbook:1607
@@ -1208,6 +1406,15 @@ msgstr ""
 
 #: index.docbook:1664
 msgid "Yes. Simply edit <filename>$<envar>KDEDIR</envar>/bin/startkde</filename> and replace <command>kfm</command> with <command>kfm -w</command>. If that does not work, here is another way. Add the following lines to <filename>$<envar>HOME</envar>/.kde/share/config/kfmrc</filename>:"
+msgstr ""
+
+#: index.docbook:1669
+msgid ""
+      "[Paths]\n"
+      "Trash=/home/me/Trash/\n"
+      "Desktop=/home/me/Desktop\n"
+      "Templates=/home/me/Templates/\n"
+      "Autostart=/home/me/Autostart/"
 msgstr ""
 
 #: index.docbook:1676
@@ -1282,6 +1489,16 @@ msgstr ""
 msgid "In &kde; 1.0 you would need to write something like this in <filename>kwmrc</filename>:"
 msgstr ""
 
+#: index.docbook:1785
+msgid ""
+      "[Sticky]\n"
+      "stickyClasses=xosview,\n"
+      "[Focus]\n"
+      "noFocusClasses=xosview,\n"
+      "[Decoration]\n"
+      "noDecorationClasses=xosview,"
+msgstr ""
+
 #: index.docbook:1798
 msgid "How do I kill &kwmpager;?"
 msgstr ""
@@ -1346,6 +1563,18 @@ msgstr ""
 msgid "When displaying a directory, both &kfm; and &konqueror; look for a hidden file called <filename>.directory</filename> inside the directory. You can create such a file yourself to modify the way in which the directory is displayed. The file is simply a kdelnk (or <filename>.desktop</filename> for &kde; 2) file. For example:"
 msgstr ""
 
+#: index.docbook:1899
+msgid ""
+      "# KDE Config File\n"
+      "[KDE Desktop Entry]\n"
+      "Name=Settings\n"
+      "Name[de]=Einstellungen\n"
+      "Name[pl]=Ustawienia\n"
+      "MiniIcon=kcontrol.xpm\n"
+      "SortOrder=Desktop,Input_Devices,KWM,Network,Information,Sound\n"
+      "Icon=kcontrol.xpm"
+msgstr ""
+
 #: index.docbook:1909
 msgid "This is the file used to describe the Settings directory. It changes the icon used to display the directory, sets the (displayed) name of the directory according to the national language, and fixes the order in which the subdirectories are displayed."
 msgstr ""
@@ -1378,12 +1607,31 @@ msgstr ""
 msgid "Check if <command>ping localhost</command> returns similar output:"
 msgstr ""
 
+#: index.docbook:1948
+msgid ""
+      "<computeroutput>\n"
+      "PING localhost (127.0.0.1): 56 data bytes\n"
+      "64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.3 ms\n"
+      "64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.2 ms\n"
+      "64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.2 ms \n"
+      "...\n"
+      "</computeroutput>"
+msgstr ""
+
 #: index.docbook:1955
 msgid "If it does not, your loopback interface or route is not properly configured."
 msgstr ""
 
 #: index.docbook:1957
 msgid "The output of the <command>/sbin/route</command> command should contain lines like the following:"
+msgstr ""
+
+#: index.docbook:1959
+msgid ""
+      "<computeroutput>\n"
+      "Destination     Gateway         Genmask         Flags MSS    Window Use Ifac\n"
+      "loopback        *               255.0.0.0       U     3584   0       13 lo\n"
+      "</computeroutput>"
 msgstr ""
 
 #: index.docbook:1963
@@ -1394,12 +1642,25 @@ msgstr ""
 msgid "The output of the <command>/sbin/ifconfig</command> command should contain the following lines:"
 msgstr ""
 
+#: index.docbook:1968
+msgid ""
+      "<computeroutput>\n"
+      "lo        Link encap:Local Loopback\n"
+      "          inet addr:127.0.0.1  Bcast:127.255.255.255  Mask:255.0.0.0\n"
+      "          UP BROADCAST LOOPBACK RUNNING  MTU:3584  Metric:1\n"
+      "</computeroutput>"
+msgstr ""
+
 #: index.docbook:1973
 msgid "This indicates that the loopback interface is up and running."
 msgstr ""
 
 #: index.docbook:1974
 msgid "Your <filename>/etc/hosts</filename> file should contain the following line:"
+msgstr ""
+
+#: index.docbook:1976
+msgid "127.0.0.1       localhost"
 msgstr ""
 
 #: index.docbook:1979
@@ -1598,6 +1859,12 @@ msgstr ""
 msgid "First, edit <filename>$<envar>HOME</envar>/.kde/share/config/krootwmrc</filename> and add the following two lines:"
 msgstr ""
 
+#: index.docbook:2287
+msgid ""
+      "[MouseButtons]\n"
+      "Left=Menu"
+msgstr ""
+
 #: index.docbook:2291
 msgid "Then restart &kde;."
 msgstr ""
@@ -1616,6 +1883,12 @@ msgstr ""
 
 #: index.docbook:2316
 msgid "First, create a file <filename>$<envar>HOME</envar>/.Xmodmap</filename> containing the entries:"
+msgstr ""
+
+#: index.docbook:2318
+msgid ""
+      "keycode 115=F13\n"
+      "keycode 117=F15"
 msgstr ""
 
 #: index.docbook:2322
@@ -2014,12 +2287,28 @@ msgstr ""
 msgid "To mount your <hardware>CD-ROM drive</hardware>, first, you (as root) need to add the following line to <filename>/etc/fstab</filename>:"
 msgstr ""
 
+#: index.docbook:2853
+msgid "/dev/cdrom     /cdrom     iso9660  ro,user,noauto,unhide"
+msgstr ""
+
 #: index.docbook:2856
 msgid "Please make sure that you have a soft link from <filename class=\"symlink\">/dev/cdrom</filename> to whatever /dev/hd? your <hardware>CD-ROM drive</hardware> is (assuming you are using an &ATAPI; <hardware>CD-ROM drive</hardware>). You should see something like this when you <command>ls -l /dev/cdrom</command>:"
 msgstr ""
 
+#: index.docbook:2861
+msgid "lrwxrwxrwx   1 root     root            8 Jul 28 22:21 /dev/cdrom -> /dev/hdb"
+msgstr ""
+
 #: index.docbook:2864
 msgid "The above would be done with <command>ln -s /dev/hdb /dev/cdrom</command> (as root). Last but not least, make sure a valid mount point exists for the <hardware>CD-ROM drive</hardware> to be mounted on, for example:"
+msgstr ""
+
+#: index.docbook:2867
+msgid ""
+      "% ls -la /cdrom\n"
+      "total 2\n"
+      "drwxrwsr-x   2 root     cdrom        1024 Sep 14  1995 ./\n"
+      "drwxr-xr-x  24 root     root         1024 Dec  1 21:00 ../"
 msgstr ""
 
 #: index.docbook:2873
@@ -2059,7 +2348,14 @@ msgid "Or simply upgrade to XFree86-3.3.3.1-1 and above."
 msgstr ""
 
 #: index.docbook:2929
-msgid "Also, concerning the &Backspace;-Bug (Bug number: kb704): the bug is fixed somehow by putting the following line into <filename>$<envar>HOME</envar>/.xinitrc</filename>: <screen> xmodmap - \"keysym Delete = BackSpace\" </screen>"
+msgid ""
+      "<note><para>Also, concerning the &Backspace;-Bug (Bug number:\n"
+      "kb704): the bug is fixed somehow by putting the following line into\n"
+      "<filename>$<envar>HOME</envar>/.xinitrc</filename>:\n"
+      "<screen>\n"
+      "xmodmap -  \"keysym Delete = BackSpace\"\n"
+      "</screen>\n"
+      "</para></note>"
 msgstr ""
 
 #: index.docbook:2941
@@ -2270,6 +2566,10 @@ msgstr ""
 msgid "The various types of cursor available in X are defined in <filename class=\"headerfile\">X11/cursorfont.h</filename>. You can change it using <command>xsetroot -cursor_name <replaceable>name_of_cursor</replaceable></command>. For example, I have the following in my <filename>.Xclients</filename>:"
 msgstr ""
 
+#: index.docbook:3249
+msgid "xsetroot -cursor_name left_ptr"
+msgstr ""
+
 #: index.docbook:3252
 msgid "This will create the common left-angled pointer. To see other alternatives, type <command>xfd -fn cursor</command>. And of course, do not forget that <command>man xsetroot</command> is your friend."
 msgstr ""
@@ -2296,6 +2596,29 @@ msgstr ""
 
 #: index.docbook:3289
 msgid "Have you tried <command>man setleds</command>? In addition, you might want to edit your <filename>$<envar>HOME</envar>/.Xmodmap</filename> and put the following lines in:"
+msgstr ""
+
+#: index.docbook:3293
+msgid ""
+      "! redefines numeric keypad to be used without NumLock\n"
+      "keycode 79 = 7\n"
+      "keycode 80 = 8\n"
+      "keycode 81 = 9\n"
+      "\n"
+      "keycode 83 = 4\n"
+      "keycode 84 = 5\n"
+      "keycode 85 = 6\n"
+      "\n"
+      "keycode 87 = 1\n"
+      "keycode 88 = 2\n"
+      "keycode 89 = 3\n"
+      "\n"
+      "keycode 90 = 0\n"
+      "keycode 91 = comma\n"
+      "keycode 86 = plus\n"
+      "\n"
+      "! deactivates NumLock key\n"
+      "keycode 77 ="
 msgstr ""
 
 #: index.docbook:3314
@@ -2335,7 +2658,31 @@ msgid "What do all those acronyms like AFAIK mean?"
 msgstr ""
 
 #: index.docbook:3358
-msgid "AAMOF: as a matter of fact AFAIK: as far as I know AISE: as I see it BFN: bye for now BION: believe it or not BRB: be right back BTW: by the way CMIIW: correct me if I am wrong FUD: fear, uncertainty, and doubt FWIW: for what it's worth FYI: for your information HTH: hope this helps IIRC: if I recall correctly IMHO: in my humble opinion LOL: laughing out loud MYOB: mind your own business PITA: pain in the ass ROTFL: rolling on the floor laughing RTFM: read the fine manual SOP: standard operating procedure TIA: thanks in advance YMMV: your mileage may vary"
+msgid ""
+      "<screen>\n"
+      "AAMOF: as a matter of fact\n"
+      "AFAIK: as far as I know\n"
+      "AISE: as I see it\n"
+      "BFN: bye for now\n"
+      "BION: believe it or not\n"
+      "BRB: be right back\n"
+      "BTW: by the way\n"
+      "CMIIW: correct me if I am wrong\n"
+      "FUD: fear, uncertainty, and doubt\n"
+      "FWIW: for what it's worth\n"
+      "FYI: for your information\n"
+      "HTH: hope this helps\n"
+      "IIRC: if I recall correctly\n"
+      "IMHO: in my humble opinion\n"
+      "LOL: laughing out loud\n"
+      "MYOB: mind your own business\n"
+      "PITA: pain in the ass\n"
+      "ROTFL: rolling on the floor laughing\n"
+      "RTFM: read the fine manual\n"
+      "SOP: standard operating procedure\n"
+      "TIA: thanks in advance\n"
+      "YMMV: your mileage may vary\n"
+      "</screen>"
 msgstr ""
 
 #: index.docbook:3388
@@ -2615,7 +2962,16 @@ msgid "Yes. The main &kde; server is normally very busy and unresponsive. Please
 msgstr ""
 
 #: index.docbook:3697
-msgid "Once you have selected a new <application>cvsup</application> server, simply replace <screen> *default host=cvs.kde.org </screen> with <screen> *default host=cvsup.your.new.host </screen> in your <application>cvsup</application> script."
+msgid ""
+      "Once you have selected a new <application>cvsup</application> server, simply replace \n"
+      "<screen> \n"
+      "*default host=cvs.kde.org\n"
+      "</screen>\n"
+      "with\n"
+      "<screen> \n"
+      "*default host=cvsup.your.new.host\n"
+      "</screen>\n"
+      "in your <application>cvsup</application> script."
 msgstr ""
 
 #: index.docbook:3711

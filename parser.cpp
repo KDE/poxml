@@ -12,6 +12,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
                                     0};
+static const char *literaltags[] = {"literallayout", "synopsis", "screen",
+				    "programlisting", 0};
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
@@ -34,7 +36,7 @@ bool StructureParser::isCuttingTag(const QString &qName) const
             return true;
         index++;
     }
-    return false;
+    return isLiteralTag(qName);
 }
 
 bool StructureParser::isSingleTag(const QString &qName) const
@@ -47,6 +49,18 @@ bool StructureParser::isSingleTag(const QString &qName) const
     }
     return false;
 }
+
+bool StructureParser::isLiteralTag(const QString &qName) const
+{
+    int index = 0;
+    while (literaltags[index]) {
+        if (literaltags[index] == qName)
+            return true;
+        index++;
+    }
+    return false;
+}
+
 bool StructureParser::skippedEntity ( const QString & name ) {
     if (inside)
         message += QString("&%1;").arg(name);
@@ -61,6 +75,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
     if (!inside) {
         if (isCuttingTag(tname)) {
             message = QString::null;
+            literaltag = false;
             list.pc.increasePara();
             startline = locator->lineNumber();
             startcol = locator->columnNumber();
@@ -79,6 +94,8 @@ bool StructureParser::startElement( const QString& , const QString& ,
     }
     if (isCuttingTag(tname))
         inside++;
+    if (isLiteralTag(tname)) // every literal tag is cutting tag too
+        literaltag = true;
 
     if (tname == "anchor" || tname.left(4) == "sect" || tname == "chapter")
         list.pc.addAnchor(attr.value("id"));
@@ -121,7 +138,7 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
     }
 }
 
-void StructureParser::descape(QString &message)
+void StructureParser::descape(QString &message, bool white)
 {
     message.replace(QRegExp("\\"), "\\\\");
     message.replace(QRegExp("\""), "\\\"");
@@ -129,7 +146,11 @@ void StructureParser::descape(QString &message)
     message.replace(QRegExp("&lt-internal;"), "&lt;");
     message.replace(QRegExp("&gt-internal;"), "&gt;");
 
-    message = message.simplifyWhiteSpace();
+    if (white)
+        message = message.simplifyWhiteSpace();
+    else {
+        message = message.stripWhiteSpace();
+    }
 }
 
 QString StructureParser::formatMessage(QString message, int &offset) const
@@ -284,9 +305,17 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
         inside--;
         if (!inside) {
             MsgBlock m;
-            descape(message);
-            int offset;
-            m.msgid = formatMessage(message, offset);
+            int offset = 0;
+
+            descape(message, !literaltag);
+
+            if (!literaltag)
+                m.msgid = formatMessage(message, offset);
+            else
+                m.msgid = message;
+
+            m.literal = literaltag;
+
             BlockInfo bi;
             bi.start_line = startline;
             bi.start_col = startcol;
@@ -295,14 +324,18 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             bi.offset = offset;
             m.lines.append(bi);
 
-            MsgList messages = splitMessage(m);
-            for (MsgList::ConstIterator it = messages.begin();
-                 it != messages.end(); it++)
-            {
+            if (!literaltag) {
+                MsgList messages = splitMessage(m);
+                for (MsgList::ConstIterator it = messages.begin();
+                     it != messages.end(); it++)
+                {
 #ifndef NDEBUG
-                qDebug("parser %s %d %s", (*it).msgid.latin1(), (*it).lines.first().offset, m.msgid.mid((*it).lines.first().offset, 15).latin1());
+                    qDebug("parser %s %d %s", (*it).msgid.latin1(), (*it).lines.first().offset, m.msgid.mid((*it).lines.first().offset, 15).latin1());
 #endif
-                list.append(*it);
+                    list.append(*it);
+                }
+            } else {
+                list.append(m);
             }
         }
     }
@@ -342,7 +375,8 @@ void outputMsg(const char *prefix, const QString &message)
                     cout << "\"\n";
                 else
                     cout << "\\n\"\n";
-            }
+            } else
+                cout << "      \"\\n\"\n";
         }
     }
 }

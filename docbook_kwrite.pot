@@ -99,7 +99,10 @@ msgid "By specifying the path and name of a particular file the user can have &k
 msgstr ""
 
 #: index.docbook:121
-msgid "<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></userinput>"
+msgid ""
+      "<screen>\n"
+      "<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>/home/myhome/docs/myfile.txt</replaceable></option></userinput>\n"
+      "</screen>"
 msgstr ""
 
 #: index.docbook:127
@@ -111,7 +114,10 @@ msgid "The above-mentioned method could even be used to open files on the intern
 msgstr ""
 
 #: index.docbook:133
-msgid "<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></option></userinput>"
+msgid ""
+      "<screen>\n"
+      "<prompt>%</prompt> <userinput><command>kwrite</command> <option><replaceable>ftp://ftp.kde.org/pub/kde/Welcome.msg</replaceable></option></userinput>\n"
+      "</screen>"
 msgstr ""
 
 #: index.docbook:141

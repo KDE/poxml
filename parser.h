@@ -19,6 +19,7 @@ class MsgBlock {
     QString msgid;
     QString msgstr;
     int start, end;
+    bool literal;
 };
 
 class ParaCounter
@@ -49,6 +50,7 @@ public:
     bool characters( const QString &ch);
     bool isCuttingTag(const QString &tag) const;
     bool isSingleTag(const QString &qName) const;
+    bool isLiteralTag(const QString &qName) const;
     void setDocumentLocator ( QXmlLocator * l ) { locator = l; }
     bool skippedEntity ( const QString & name );
     bool fatalError ( const QXmlParseException & );
@@ -58,7 +60,7 @@ public:
     MsgList splitMessage(const MsgBlock &message);
 
     static bool closureTag(const QString& message, const QString &tag);
-    static void descape(QString &message);
+    static void descape(QString &message, bool escapewhitespace);
 
 private:
     QString formatMessage(QString message, int &offset) const;
@@ -69,6 +71,7 @@ private:
     int line;
     QString comment;
     MsgList list;
+    bool literaltag;
 };
 
 void outputMsg(const char *prefix, const QString &message);

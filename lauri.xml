@@ -1,3 +1,6 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML CALS Table Model V4.1//EN" "dummy.dtd">
+
 <book>
 <para>
   <term>
@@ -53,36 +56,21 @@ BLZ 790 500 00
 SWIFT-Address: BYLA DE 77
 </literallayout>
 
->From kdenetwork/doc/kppp/index.docbook
-
-<screen> 
-Expect       ogin:           <lineannotation># remember, we do ordinary 
-terminal login</lineannotation>
-ID           ""              <lineannotation># kppp sends the id you 
-configured in
-the main dialog</lineannotation>
-Expect       for userxyz:    <lineannotation># a list of available numbers is
-shown, the user should choose one</lineannotation> 
-Send         userxyz-home    <lineannotation># the user wants to be called 
-back
-on their home number</lineannotation>
-Expect       ogin:           <lineannotation># The callback process is now
-running, a new connection, and so a new login.</lineannotation>
+<screen>
+Expect       ogin:           <lineannotation># remember, we do ordinary terminal login</lineannotation>
+ID           ""              <lineannotation># kppp sends the id you configured in the main dialog</lineannotation>
+Expect       for userxyz:    <lineannotation># a list of available numbers is shown, the user should choose one</lineannotation> 
+Send         userxyz-home    <lineannotation># the user wants to be called back on their home number</lineannotation>
+Expect       ogin:           <lineannotation># The callback process is now running, a new connection, and so a new login.</lineannotation>
 ID
-Expect       assword:        <lineannotation># Now send your 
-password</lineannotation>
-Expect       &gt;            <lineannotation># Wait for the command prompt 
-(the
-prompt may vary)</lineannotation>
-Send         start_ppp       <lineannotation># this command starts the 
-pppd</lineannotation>
+Expect       assword:        <lineannotation># Now send your password</lineannotation>
+Expect       &gt;               <lineannotation># Wait for the command prompt (the prompt may vary)</lineannotation>
+Send         start_ppp       <lineannotation># this command starts the pppd</lineannotation>
 </screen>
 
-and same document:
-
 <screen>
-Send                            # send an empty string
-Expect           ID:            
+Send                         <lineannotation># send an empty string</lineannotation>
+Expect           ID:
 Send             itsme
 Expect           word:
 Send             forgot
@@ -90,32 +78,30 @@ Expect           granted
 Send             ppp
 </screen>
 
-and from kdevelop/doc/tutorial/index.docbook
-
 
 <programlisting>
 -&gt;  #include &lt;qpixmap.h&gt;
 -&gt;  #include &lt;qpen.h&gt;
 
-    class KScribbleDoc
-    {
+     class KScribbleDoc
+     {
 
--&gt;           protected:
+-&gt;   protected:
 
--&gt;        QPen currentPen(){ return pen;};   
+-&gt;       QPen currentPen(){ return pen;};   
                 
--&gt;                   int penWidth()
--&gt;                           { return pen.width(); }
+-&gt;       int penWidth()
+-&gt;          { return pen.width(); }
 
       public slots:
-        void updateAllViews(KScribbleView *sender);
+         void updateAllViews(KScribbleView *sender);
         
-        protected:
+      protected:
         
--&gt;                   QPixmap buffer;
+-&gt;      QPixmap buffer;
         
       private:
--&gt;                   QPen pen;
+-&gt;      QPen pen;
         /** the modified flag of the current document */
         bool modified;
 </programlisting>
