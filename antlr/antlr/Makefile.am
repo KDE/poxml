@@ -1,5 +1,3 @@
-includedir = $(prefix)/include/antlr
-
 noinst_HEADERS = \
 	ANTLRException.hpp \
 	AST.hpp \
