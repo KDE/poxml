@@ -23,8 +23,8 @@ msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "&quot;Starttext&quot; f&uuml;r &lauri;"
 
 #: index.docbook:12
-msgid "we pretend her name was Höpfner"
-msgstr "sagen wir mal sie heisst Höpfner"
+msgid "we pretend her name was Höpfner, but that <void/> is a good name too"
+msgstr "sagen wir mal sie heisst Höpfner, aber <void/> ist auch gut"
 
 #: index.docbook:12
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
