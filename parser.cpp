@@ -519,14 +519,18 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
             int inside = 1;
             while (true) {
-                // qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
+#ifndef NDEBUG
+                qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
+#endif
 
-                int closing_index = message.findRev(QString::fromLatin1("</%1>").arg(tag),
+                int closing_index = message.findRev(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
                                                     strindex - 1);
                 int starting_index = message.findRev(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
                                                      strindex - 1);
 
-                // qDebug("index1 %d %d %d", closing_index, starting_index, strindex);
+#ifndef NDEBUG
+                qDebug("index1 %d %d %d", closing_index, starting_index, strindex);
+#endif
 
                 if (starting_index == -1) {
                     assert(inside == 1);
