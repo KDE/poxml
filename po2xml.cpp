@@ -192,7 +192,7 @@ int main( int argc, char **argv )
                     exit(1);
                 }
                 index = 0;
-                while (descaped.at(index) != '>')
+                while (index <= (int)descaped.length() && descaped.at(index) != '>')
                     index++;
                 index++;
                 while (descaped.at(index) == ' ')
@@ -200,7 +200,7 @@ int main( int argc, char **argv )
                 descaped = descaped.mid(index);
 
                 index = descaped.length() - 1;
-                while (descaped.at(index) != '<')
+                while (index >= 0 && descaped.at(index) != '<')
                     index--;
 
                 descaped = descaped.left(index);
