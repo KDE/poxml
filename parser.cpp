@@ -217,27 +217,14 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
 
 void StructureParser::escapeEntities( QString &contents )
 {
-    int index = 0;
-    while ( entities[index] ) {
-        contents.replace(QRegExp(QString( "&%1;" ).arg( entities[index]) ),
-                         QString( "!%1-internal!" ).
-                         arg( entities[index] ) );
-        index++;
-    }
+    contents.replace(QRegExp("&"), "!internal!");
 }
 
 void StructureParser::descape(QString &message)
 {
     uint index = 0;
 
-    while ( entities[index] ) {
-        message.replace(QRegExp(QString( "!%1-internal!" ).
-                                arg( entities[index] )),
-                        QString( "&%1;" ).arg( entities[index]) );
-        index++;
-    }
-    index = 0;
-
+    message.replace(QString("!internal!"), "&");
     stripWhiteSpace( message );
 
     int inside = 0;
