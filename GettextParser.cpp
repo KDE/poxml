@@ -4,7 +4,9 @@
 #include "antlr/SemanticException.hpp"
 #line 10 "gettext.g"
 
-#include <iostream.h>
+#include <iostream>
+#include <string>
+using namespace std;
 #include "GettextLexer.hpp"
 #include "GettextParser.hpp"
 #include "antlr/AST.hpp"

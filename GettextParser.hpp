@@ -13,6 +13,9 @@
 #include "GettextParserTokenTypes.hpp"
 #include "antlr/LLkParser.hpp"
 
+#include <string>
+using namespace std;
+
 class GettextParser : public ANTLR_USE_NAMESPACE(antlr)LLkParser, public GettextParserTokenTypes
  {
 #line 1 "gettext.g"
