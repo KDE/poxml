@@ -33,7 +33,7 @@ QString translate(QString xml, QString orig, QString translation)
         qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
         exit(1);
     }
-    if (!translation.isEmpty()) 
+    if (!translation.isEmpty())
         xml.replace(index, orig.length(), translation);
     return prefix + xml;
 }
@@ -63,8 +63,14 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = translated.begin();
          it != translated.end(); ++it)
     {
+        QString msgstr;
         QString msgid = escapePO((*it).msgid);
-        QString msgstr = escapePO((*it).msgstr);
+        if ((*it).comment.find("fuzzy") < 0)
+            msgstr = escapePO((*it).msgstr);
+
+#ifdef POXML_DEBUG
+        qDebug("inserting translations '%s' -> '%s'", msgid.latin1(),msgstr.latin1());
+#endif
         translations.insert(msgid, msgstr);
     }
 
@@ -152,11 +158,27 @@ int main( int argc, char **argv )
         StructureParser::descape(xml);
 
         QString descaped = StructureParser::descapeLiterals((*it).msgid);
-        assert(translations.contains(descaped));
+        if (!translations.contains(descaped)) {
+            qDebug("translation not there, descaped='%s'", descaped.latin1());
+            abort();
+        }
         descaped = translations[descaped];
 #ifdef POXML_DEBUG
         assert(!descaped.isEmpty());
 #endif
+
+        if ((*it).msgid.at(0) == '<') {
+            // if the id starts with a tag, then we remembered the
+            // correct line information and need to strip the target
+            // now, so it fits
+            int index = 0;
+            while ((*it).msgid.at(index) != '>')
+                index++;
+            index++;
+            while ((*it).msgid.at(index) == ' ')
+                index++;
+            (*it).msgid = (*it).msgid.mid(index);
+        }
 
 #ifdef POXML_DEBUG
         qDebug("english \"%s\" ORIG \"%s\" %d(%d-%d) %d(%d-%d) %d %d TRANS \"%s\" %d '%s'", xml.latin1(), (*it).msgid.latin1(),

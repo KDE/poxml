@@ -322,7 +322,6 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
 #endif
         strindex = endindex;
         QString orig = msg.msgid;
-        int ooffset = offset;
 
         QString endtag = msg.msgid.mid(endindex + 2, msg.msgid.length() - (endindex + 2) - 1);
         QString endtag_attr = endtag.mid(endtag.find(' '), endtag.length());
@@ -358,12 +357,6 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             if (msg.msgid.length() < 4) {
                 msg.msgid = orig;
                 recurse = false;
-                if (offset) // if already set to the current tag, then it's the better info
-                    offset = ooffset;
-                else {
-                    // msg.lines.first().start_line--; // this is really dirty
-                    msg.lines.first().start_col = 0;
-                    }
                 break;
             } else
                 changed = true;
@@ -629,7 +622,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                 if ((*it).msgid.at(0) == '<') {
                     if (infos_reg.search((*it).msgid) >= 0) {
                         (*it).lines.first().start_line = infos_reg.cap(1).toInt();
-                        (*it).lines.first().start_col = 0;
+                        (*it).lines.first().start_col =  infos_reg.cap(2).toInt();;
                         (*it).lines.first().offset = 0;
                     }
                 }
