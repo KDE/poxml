@@ -24,6 +24,8 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
+static const char *entities[] = {"amp", "quot", "lt", "gt", "QTDOCDIR", 0};
+
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
     cerr << "fatalError " << e.message().latin1() << " " << e.lineNumber() << " " << e.columnNumber() << endl;
@@ -166,13 +168,27 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
     }
 }
 
+void StructureParser::escapeEntities( QString &contents )
+{
+    int index = 0;
+    while ( entities[index] ) {
+        contents.replace(QRegExp(QString( "&%1;" ).arg( entities[index]) ),
+                         QString( "|%1-internal|" ).
+                         arg( entities[index] ) );
+        index++;
+    }
+}
+
 void StructureParser::descape(QString &message)
 {
     uint index = 0;
-    message.replace(QRegExp("|amp-internal|"), "&amp;");
-    message.replace(QRegExp("|lt-internal|"), "&lt;");
-    message.replace(QRegExp("|gt-internal|"), "&gt;");
-    message.replace(QRegExp("|quot-internal|"), "&quot;");
+    while ( entities[index] ) {
+        message.replace(QRegExp(QString( "|%1-internal|" ).
+                                arg( entities[index] )),
+                        QString( "&%1;" ).arg( entities[index]) );
+        index++;
+    }
+    index = 0;
 
     message = message.stripWhiteSpace();
 
@@ -589,27 +605,26 @@ MsgList parseXML(const char *filename)
     StructureParser handler;
     QFile xmlFile( filename );
     xmlFile.open(IO_ReadOnly);
-    QCString contents;
-    contents.assign(xmlFile.readAll());
+
+    QCString ccontents;
+    ccontents.assign(xmlFile.readAll());
     xmlFile.close();
     QString tmp;
-    if (contents.left(5) != "<?xml") {
+    if (ccontents.left(5) != "<?xml") {
         FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(filename).latin1(), "r");
         xmlFile.open(IO_ReadOnly, p);
         char buffer[5001];
-        contents.truncate(0);
+        ccontents.truncate(0);
         int len;
         while ((len = xmlFile.readBlock(buffer, 5000)) != 0) {
             buffer[len] = 0;
-            contents += buffer;
+            ccontents += buffer;
         }
         xmlFile.close();
         pclose(p);
     }
-    contents.replace(QRegExp("&amp;"), "|amp-internal|");
-    contents.replace(QRegExp("&lt;"), "|lt-internal|");
-    contents.replace(QRegExp("&gt;"), "|gt-internal|");
-    contents.replace(QRegExp("&quot;"), "|quot-internal|");
+    QString contents = ccontents;
+    StructureParser::escapeEntities( contents );
 
     while (true) {
         int index = contents.find("<!ENTITY");
@@ -620,7 +635,7 @@ MsgList parseXML(const char *filename)
         QString replacement = "";
         while (contents.at(endindex) != '>' || inside)
         {
-            switch (contents.at(endindex)) {
+            switch (contents.at(endindex).latin1()) {
                 case '<':
                     inside++; break;
                 case '>':
@@ -637,7 +652,7 @@ MsgList parseXML(const char *filename)
         contents.replace(index, endindex - index, replacement.latin1());
     }
 
-    QTextStream ts(contents, IO_ReadOnly);
+    QTextStream ts(contents.utf8(), IO_ReadOnly);
     QXmlInputSource source( ts );
     QXmlSimpleReader reader;
     reader.setFeature( "http://trolltech.com/xml/features/report-start-end-entity", true);
