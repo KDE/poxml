@@ -20,7 +20,7 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "caption", "textobject", "mediaobject",
                                     "tip", "glossdef", "inlinemediaobject",
                                     "simplelist", "member", "glossentry",
-				    "areaspec", "authorgroup",
+				    "areaspec", "corpauthor",
                                     "calloutlist", "callout", "subtitle",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
