@@ -29,7 +29,8 @@ static const char *entities[] = {"amp", "quot", "lt", "gt", "QTDOCDIR", 0};
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
-    cerr << "fatalError " << e.message().latin1() << " " << e.lineNumber() << " " << e.columnNumber() << endl;
+    cerr << "fatalError " << e.message().latin1() << " " << e.lineNumber() << " "
+         << e.columnNumber() << endl;
     return false;
 }
 
@@ -37,7 +38,7 @@ bool StructureParser::startDocument()
 {
     message = "";
     inside = 0;
-    return TRUE;
+    return true;
 }
 
 bool StructureParser::isCuttingTag(const QString &qName)
@@ -76,7 +77,7 @@ bool StructureParser::isLiteralTag(const QString &qName)
 bool StructureParser::skippedEntity ( const QString & name ) {
     if (inside)
         message += QString("&%1;").arg(name);
-    return TRUE;
+    return true;
 }
 
 bool StructureParser::startElement( const QString& , const QString& ,
@@ -174,7 +175,7 @@ void StructureParser::escapeEntities( QString &contents )
     int index = 0;
     while ( entities[index] ) {
         contents.replace(QRegExp(QString( "&%1;" ).arg( entities[index]) ),
-                         QString( "|%1-internal|" ).
+                         QString( "!%1-internal!" ).
                          arg( entities[index] ) );
         index++;
     }
@@ -183,8 +184,9 @@ void StructureParser::escapeEntities( QString &contents )
 void StructureParser::descape(QString &message)
 {
     uint index = 0;
+
     while ( entities[index] ) {
-        message.replace(QRegExp(QString( "|%1-internal|" ).
+        message.replace(QRegExp(QString( "!%1-internal!" ).
                                 arg( entities[index] )),
                         QString( "&%1;" ).arg( entities[index]) );
         index++;
@@ -539,16 +541,16 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
         }
     }
 
-    return TRUE;
+    return true;
 }
 
 bool StructureParser::comment ( const QString &c )
 {
     if (c.left(7) != " TRANS:")
-        return TRUE;
+        return true;
     if (inside) {
         qWarning("ERROR: to translated string in nested block. Ignoring %s!", c.stripWhiteSpace().utf8().data());
-        return TRUE;
+        return true;
     }
     QString string = c.mid(7).stripWhiteSpace();
     MsgBlock m;
@@ -559,14 +561,14 @@ bool StructureParser::comment ( const QString &c )
     bi.start_col = bi.end_col = 0;
     m.lines.append(bi);
     list.append(m);
-    return TRUE;
+    return true;
 }
 
 bool StructureParser::characters(const QString &ch)
 {
     if (inside && !ch.isEmpty())
         message += ch;
-    return TRUE;
+    return true;
 }
 
 QString escape(QString message)
