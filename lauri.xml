@@ -1,20 +1,36 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
   <!ENTITY % English "INCLUDE" > <!-- change language only here -->
-  <!ENTITY lauri "<emphasis>Lauri</emphasis>">
+  <!ENTITY lauri "<emphasis>Lauri</emphasis>" >
 ]>
 
 <book>
+
+
+<bookinfo>
+<date>06/08/2000</date>
+<releaseinfo>0.05.00</releaseinfo>
+
 <title>test document</title>
+<author><firstname>Stephan</firstname><surname>Kulow</surname></author>
+
+<abstract><para>This is nonsense</para></abstract>
+<keywordset><keyword>KDE</keyword></keywordset>
+
+</bookinfo>
 
 <chapter id="hello">
-
+<title>&quot;Text&quot; for &lauri;</title>
+<sect1>
+<title>Section 1</title>
+<sect2>
+<title>Section 1.1</title>
 <para>
   <anchor id="try"/>
   <note><para>
     Leading &quot;Text&quot; for &lauri;
   </para></note>
-  <caution>we pretend her name was Höpfner, but that <void/> is a good name too</caution>
+  <caution><para>we pretend her name was Höpfner, but that <anchor id="help"/> is a good name too</para></caution>
   <keycap>
     Shift
   </keycap>
@@ -40,8 +56,8 @@ url="http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2">lists.kde.org</ulink>.
            <note>
              <para>
                Text 3 "everything"
-		<variablelist><varlistentry><term>Everything</term><listitem>Is correct</listitem></varlistentry></variablelist>
-		<variablelist><varlistentry><term>Nothing</term><listitem>Is wrong</listitem></varlistentry></variablelist>
+		<variablelist><varlistentry><term>Everything</term><listitem><para>Is correct</para></listitem></varlistentry></variablelist>
+		<variablelist><varlistentry><term>Nothing</term><listitem><para>Is wrong</para></listitem></varlistentry></variablelist>
 		<footnote>
                   <para>
                      Text 4 \"even more\"
@@ -59,9 +75,17 @@ url="http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2">lists.kde.org</ulink>.
          </para>
       </listitem>
     </varlistentry>
+    <varlistentry>
+    <term><anchor id="new"/><menuchoice>
+<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></shortcut>
+<guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>N</accel>ew</guimenuitem></menuchoice></term>
+    <listitem><para><action>This starts a new Document in a new instance of the
+editor.</action></para>
+</listitem>
+   </varlistentry>
   </variablelist>
 </para>
-
+</sect2>
          <sect2 id="xml-format">
 	 <title>What XML looks like</title>
 
@@ -130,7 +154,8 @@ url="http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2">lists.kde.org</ulink>.
          </para>
          
          </sect2>
-
+<sect2>
+<title>The ugly part</title>
 <para>
   Ending Text:
 
@@ -151,7 +176,7 @@ you see it here
 whereever
 </literallayout>
 </para>
-
+<para>
 <screen>
 Expect       ogin:           <lineannotation># remember, we do ordinary terminal login</lineannotation>
 ID           ""              <lineannotation># kppp sends the id you configured in the main dialog</lineannotation>
@@ -163,7 +188,9 @@ Expect       assword:        <lineannotation># Now send your password</lineannot
 Expect       &gt;               <lineannotation># Wait for the command prompt (the prompt may vary)</lineannotation>
 Send         start_ppp       <lineannotation># this command starts the pppd</lineannotation>
 </screen>
+</para>
 
+<para>
 <screen>
 Send                         <lineannotation># send an empty string</lineannotation>
 Expect           ID:
@@ -200,7 +227,9 @@ Send             ppp
         /** the modified flag of the current document */
         bool modified;
 </programlisting>
-
+</para>
+</sect2>
+</sect1>
 </chapter>
 </book>
 

@@ -30,6 +30,7 @@ parser:
 SUFFIXES = .pot .po .xml .txml
 
 $(srcdir)/lauri.pot: xml2pot lauri.xml
+	checkXML $(srcdir)/lauri.xml
 	./xml2pot $(srcdir)/lauri.xml > $(srcdir)/lauri.pot
 	msgmerge -o $(srcdir)/lauri.pot $(srcdir)/lauri.pot $(srcdir)/lauri.pot 
 

@@ -6,31 +6,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2001-02-09 01:25+0100\n"
-"PO-Revision-Date: 2001-05-03 13:11MET\n"
+"PO-Revision-Date: 2001-07-02 20:31MET\n"
 "Last-Translator: Stephan Kulow <coolo@kde.org>\n"
 "Language-Team: german <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9beta2\n"
+"X-Generator: KBabel 0.9.2\n"
 
-#: index.docbook:8
+#: index.docbook:14
 msgid "test document"
 msgstr "Testtext"
 
-#: index.docbook:12
+#: index.docbook:15
+msgid "<firstname>Stephan</firstname><surname>Kulow</surname>"
+msgstr "<firstname>Stephan</firstname><surname>Kulow</surname>"
+
+#: index.docbook:17
+msgid "This is nonsense"
+msgstr "Dies ist Schwachsinn"
+
+#: index.docbook:18
+msgid "<keyword>KDE</keyword>"
+msgstr "<keyword>KDE</keyword>"
+
+#: index.docbook:23
+msgid "&quot;Text&quot; for &lauri;"
+msgstr "&quot;Text&quot; für &lauri;"
+
+#: index.docbook:25
+msgid "Section 1"
+msgstr "Abschnitt 1"
+
+#: index.docbook:27
+msgid "Section 1.1"
+msgstr "Abschnitt 1.1"
+
+#: index.docbook:28
 msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "&quot;Starttext&quot; f&uuml;r &lauri;"
 
-#: index.docbook:12
-msgid "we pretend her name was Höpfner, but that <void/> is a good name too"
-msgstr "sagen wir mal sie heisst Höpfner, aber <void/> ist auch gut"
+#: index.docbook:28
+msgid ""
+"we pretend her name was Höpfner, but that <anchor id=\"help\"/> is a good "
+"name too"
+msgstr "sagen wir mal sie heisst Höpfner, aber <anchor id=\"help\"/> ist auch gut"
 
-#: index.docbook:12
+#: index.docbook:28
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: index.docbook:12
+#: index.docbook:28
 msgid ""
 "an archive of the developer's mailing list is at <ulink "
 "url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
@@ -40,57 +66,73 @@ msgstr ""
 "url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
 "k>."
 
-#: index.docbook:29
+#: index.docbook:45
 msgid "GIVE_ME_CREDIT"
 msgstr "<para>Habe ich gemacht - toll ne?</para>"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:31
+#: index.docbook:47
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:66
+#: index.docbook:47
+msgid ""
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
+"cut> "
+"<guimenu><accel>F</accel>ile</guimenu><guimenuitem><accel>N</accel>ew</guimen"
+"uitem>"
+msgstr ""
+"<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
+"cut> "
+"<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu</guimen"
+"uitem>"
+
+#: index.docbook:47
+msgid "This starts a new Document in a new instance of the editor."
+msgstr "Dies macht alles neu."
+
+#: index.docbook:90
 msgid "What XML looks like"
 msgstr "Wie XML aussieht"
 
-#: index.docbook:68
+#: index.docbook:92
 msgid ""
 "Here is an example of an XML file used by <application>Columbo</application> "
 "to describe a search site on the Internet:"
 msgstr "Dies ist <application>Columbo</application>:"
 
-#: index.docbook:73
+#: index.docbook:97
 msgid ""
 "<![CDATA[<!DOCTYPE search>\n"
 "<search \n"
@@ -142,14 +184,14 @@ msgstr ""
 "   />\n"
 "</search>]]>"
 
-#: index.docbook:73
+#: index.docbook:97
 msgid ""
 "This instruction is normally used to declare the DTD of the document. Here "
 "no DTD is used, and only the name of the root element "
 "(<varname>search</varname>) appears."
 msgstr "Das ist normalerweise DTD"
 
-#: index.docbook:73
+#: index.docbook:97
 msgid ""
 "<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
 "it extends to the end of the document (<sgmltag "
@@ -159,7 +201,7 @@ msgstr ""
 "it extends to the end of the document (<sgmltag "
 "class=\"endtag\">search</sgmltag>)."
 
-#: index.docbook:73
+#: index.docbook:97
 msgid ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
@@ -167,11 +209,15 @@ msgstr ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
 
-#: index.docbook:134
+#: index.docbook:158
+msgid "The ugly part"
+msgstr "Der schlimme Teil"
+
+#: index.docbook:159
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:134
+#: index.docbook:159
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -201,7 +247,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:155
+#: index.docbook:179
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -239,7 +285,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:167
+#: index.docbook:193
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -259,7 +305,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:177
+#: index.docbook:193
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
@@ -306,3 +352,4 @@ msgstr ""
 "-&gt;      QPen pen;\n"
 "        /** das veraenderte flag of the current document */\n"
 "        bool modified;"
+
