@@ -35,8 +35,9 @@ static const char *cuttingtags[] = {"para", "title", "term", "entry",
 				    "othercredit", "affiliation", "qandaset",
 				    "cmdsynopsis", "funcsynopsis", "funcsynopsisinfo" ,
 				    "epigraph", "attribution", "glossary", "chapterinfo",
-				    "glossdiv", "blockingquote", "simplesect", "section", 
-				    0};
+				    "glossdiv", "blockingquote", "simplesect", "section",
+				    "qandadiv", "refsect1", "refmeta", "formalpara", 
+				    "refentry", "refnamediv", 0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
