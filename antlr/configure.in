@@ -1,0 +1,22 @@
+AC_INIT(src/Parser.cpp)
+
+PACKAGE=libantlr
+VERSION="2.7.1"
+LIBANTLR_SO_VERSION=0:0:0
+
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+
+AM_DISABLE_SHARED
+AM_PROG_LIBTOOL
+AC_PROG_CXX
+AC_PROG_CXXCPP
+AC_PROG_RANLIB
+
+test "$ac_cv_prog_gxx" = 'yes' && CXXFLAGS="$CXXFLAGS -W -Wall -pipe"
+
+AC_SUBST(LIBANTLR_SO_VERSION)
+AC_SUBST(LIBTOOL_DEPS)
+
+AC_OUTPUT(Makefile \
+          src/Makefile \
+          antlr/Makefile)
