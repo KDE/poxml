@@ -10,7 +10,7 @@ static const char *singletags[] = {"imagedata", "colspec", "spanspec",
 static const char *cuttingtags[] = {"para", "title", "term", "entry",
                                     "contrib", "keyword",
                                     "note", "footnote", "caution",
-                                    "informalexample",
+                                    "informalexample", "remark", "comment",
                                     0};
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
