@@ -26,7 +26,7 @@ int main(int argc, char **argv)
          it != translated.end(); ++it)
     {
         if ( !( *it ).msgstr.isEmpty() ) {
-            outputMsg("msgid", (*it).msgit);
+            outputMsg("msgid", (*it).msgid);
             outputMsg("msgstr", "xx");
             cout << "\n";
         }
