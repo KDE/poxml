@@ -14,21 +14,33 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: index.docbook:2
+#: index.docbook:3
+msgid "Leading Text"
+msgstr "Start"
+
+#: index.docbook:3
+msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
+msgstr "<keycap>Schieber</keycap><keycap>Hilfe</keycap>"
+
+#: index.docbook:15
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:2
+#: index.docbook:15
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:2
+#: index.docbook:15
 msgid "Text 3"
 msgstr "Schrift 3"
 
-#: index.docbook:2
+#: index.docbook:15
 msgid "Text 4"
 msgstr "Schrift 4"
+
+#: index.docbook:40
+msgid "Ending Text"
+msgstr "Ende"
 
 #: index.docbook:0
 msgid "ROLES_OF_TRANSLATORS"
@@ -37,4 +49,3 @@ msgstr ""
 #: index.docbook:1
 msgid "CREDIT_FOR_TRANSLATORS"
 msgstr ""
-

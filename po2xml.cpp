@@ -12,7 +12,6 @@ using namespace std;
 
 QString translate(QString xml, QString orig, QString translation)
 {
-    xml = xml.simplifyWhiteSpace();
     orig.replace(QRegExp("\\\\\""), "\"");
     orig.replace(QRegExp("\\\\\n"), "\n");
     orig.replace(QRegExp("\\\\\\"), "\\");
@@ -70,9 +69,36 @@ int main( int argc, char **argv )
         line_offsets.append(index);
     }
 
+    int old_start_line = -1, old_start_col = -1;
+    QString old_text;
+    MsgList::Iterator old_it = english.end();
+
+    for (MsgList::Iterator it = english.begin();
+         it != english.end(); ++it)
+    {
+        BlockInfo bi = (*it).lines.first();
+        int start_pos = line_offsets[bi.start_line - 1] + bi.start_col;
+        int end_pos = line_offsets[bi.end_line - 1] + bi.end_col - 1;
+
+        (*it).start = start_pos;
+        if (old_start_line == bi.start_line &&
+            old_start_col == bi.start_col)
+        {
+            (*old_it).end = bi.offset;
+            (*it).end = end_pos;
+        } else {
+            (*it).lines.first().offset = 0;
+            (*it).end = 0;
+        }
+
+        old_start_line = bi.start_line;
+        old_start_col = bi.start_col;
+        old_it = it;
+    }
+
     int old_pos = 0;
 
-    for (MsgList::ConstIterator it = english.begin();
+    for (MsgList::Iterator it = english.begin();
          it != english.end(); ++it)
     {
         BlockInfo bi = (*it).lines.first();
@@ -81,12 +107,25 @@ int main( int argc, char **argv )
         while (xml_text.at(end_pos) != '<')
             end_pos--;
 
-        if (start_pos != old_pos)
-            ts << xml_text.mid(old_pos, start_pos - old_pos);
+        QString xml = xml_text.mid(start_pos, end_pos - start_pos);
+        xml = xml.simplifyWhiteSpace();
 
-        ts << translate(xml_text.mid(start_pos, end_pos - start_pos),
-                        (*it).msgid, translations[(*it).msgid]);
-        old_pos = end_pos;
+        if ((*it).end) {
+            if (!(*it).lines.first().offset && start_pos != old_pos) {
+                ts << xml_text.mid(old_pos, start_pos - old_pos);
+            }
+            ts << translate(xml.mid(bi.offset, (*it).end - bi.offset),
+                                    (*it).msgid, translations[(*it).msgid]);
+            old_pos = end_pos;
+        } else {
+            if (start_pos != old_pos) {
+                ts << xml_text.mid(old_pos, start_pos - old_pos);
+            }
+            old_pos = end_pos;
+            ts << translate(xml,
+                            (*it).msgid, translations[(*it).msgid]);
+        }
+
     }
 
     ts << xml_text.mid(old_pos);

@@ -83,16 +83,16 @@ bool StructureParser::startElement( const QString& , const QString& ,
 
 bool StructureParser::closureTag(const QString& message, const QString &tag)
 {
-//    qDebug("closureTag %s %s", message.latin1(), tag.latin1());
+    qDebug("closureTag %s %s", message.latin1(), tag.latin1());
     int inside = 0;
     uint index = 0;
     while (true)
     {
         int nextclose = message.find(QString::fromLatin1("</%1>").arg(tag), index);
         int nextstart = message.find(QRegExp(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
-//        qDebug("finding %d %d %d", nextstart, nextclose, index);
+        qDebug("finding %d %d %d %d", nextstart, nextclose, index, inside);
         if (nextclose == -1) {
-            //           qDebug("ending on no close anymore %d %d %d", inside, index, message.length());
+            qDebug("ending on no close anymore %d %d %d", inside, index, message.length());
             return !inside && index >= message.length();
         }
         if (nextstart == -1)
@@ -110,20 +110,26 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
             while (message.at(index) != '>')
                 index++;
             index++;
-
+            if (!inside)
+                return index >= message.length();
         }
     }
 }
 
-QString StructureParser::formatMessage(QString message) const
+void StructureParser::descape(QString &message)
 {
-    message = message.simplifyWhiteSpace();
-
     message.replace(QRegExp("\\"), "\\\\");
     message.replace(QRegExp("\""), "\\\"");
     message.replace(QRegExp("&amp-internal;"), "&amp;");
     message.replace(QRegExp("&lt-internal;"), "&lt;");
     message.replace(QRegExp("&gt-internal;"), "&gt;");
+
+    message = message.simplifyWhiteSpace();
+}
+
+QString StructureParser::formatMessage(QString message, int &offset) const
+{
+    offset = 0;
 
     // removing starting single tags
     for (int index = 0; singletags[index]; index++)
@@ -133,9 +139,11 @@ QString StructureParser::formatMessage(QString message) const
             while (message.at(strindex) != '>')
                 strindex++;
             message = message.mid(strindex + 1);
+            offset += strindex + 1;
         }
     }
 
+    for (int index = 0; message.at(index) == ' '; index++, offset++) ;
     message = message.stripWhiteSpace();
 
     while (true) {
@@ -163,6 +171,8 @@ QString StructureParser::formatMessage(QString message) const
             while (message.at(strindex) != '>')
                 strindex++;
             message = message.mid(strindex + 1);
+            offset += strindex + 1;
+            for (int index = 0; message.at(index) == ' '; index++, offset++) ;
             message = message.stripWhiteSpace();
         } else
             break;
@@ -171,13 +181,17 @@ QString StructureParser::formatMessage(QString message) const
     return message;
 }
 
-QStringList StructureParser::splitMessage(const QString &message)
+MsgList StructureParser::splitMessage(const MsgBlock &mb)
 {
     // qDebug("splitMessage %s", message.latin1());
 
-    QStringList result;
+    MsgList result;
+    MsgBlock msg1 = mb;
+    MsgBlock msg2 = mb;
+
     int index = 0;
     while (cuttingtags[index]) {
+        QString message = mb.msgid;
         if (message.left( 1 + strlen(cuttingtags[index])) ==
             QString::fromLatin1("<%1").arg(cuttingtags[index]))
         {
@@ -199,10 +213,17 @@ QStringList StructureParser::splitMessage(const QString &message)
                 // qDebug("found another open tag before closing tag in %s", message.utf8().data());
                 goto error;
             }
-            QString msg1 = message.left(strindex + 1);
-            QString msg2 = message.mid(strindex + 1);
+
+            int offset;
+            msg1.msgid = formatMessage(message.left(strindex + 1), offset);
+            msg1.lines.first().offset += offset;
+
+            msg2.msgid = formatMessage(message.mid(strindex + 1), offset);
+            msg2.lines.first().offset += strindex + 1 + offset;
+
             // qDebug("split into %s - %s", msg1.latin1(), msg2.latin1());
-            result = splitMessage(formatMessage(msg1)) + splitMessage(formatMessage(msg2));
+            result = splitMessage(msg1);
+            result += splitMessage(msg2);
             return result;
         }
 
@@ -224,16 +245,23 @@ QStringList StructureParser::splitMessage(const QString &message)
                 // qDebug("found another closing tag before opening tag in %s", message.utf8().data());
                 goto error;
             }
-            QString msg1 = message.left(strindex + 1);
-            QString msg2 = message.mid(strindex + 1);
+            int offset;
+            msg1.msgid = formatMessage(message.left(strindex + 1), offset);
+            msg1.lines.first().offset += offset;
+
+            msg2.msgid = formatMessage(message.mid(strindex + 1), offset);
+            msg2.lines.first().offset += strindex + 1 + offset;
+
             // qDebug("split into %s - %s", msg1.latin1(), msg2.latin1());
-            result = splitMessage(formatMessage(msg1)) + splitMessage(formatMessage(msg2));
+            result = splitMessage(msg1);
+            result += splitMessage(msg2);
+
             return result;
         }
         index++;
     }
 error:
-    result.append(message);
+    result.append(mb);
     return result;
 }
 
@@ -244,19 +272,23 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
     if (isCuttingTag(tname)) {
         inside--;
         if (!inside) {
-            QStringList messages = splitMessage(formatMessage(message));
-            for (QStringList::ConstIterator it = messages.begin();
+            MsgBlock m;
+            descape(message);
+            int offset;
+            m.msgid = formatMessage(message, offset);
+            BlockInfo bi;
+            bi.start_line = startline;
+            bi.start_col = startcol;
+            bi.end_line = locator->lineNumber();
+            bi.end_col = locator->columnNumber();
+            bi.offset = offset;
+            m.lines.append(bi);
+
+            MsgList messages = splitMessage(m);
+            for (MsgList::ConstIterator it = messages.begin();
                  it != messages.end(); it++)
             {
-                MsgBlock m;
-                m.msgid = *it;
-                BlockInfo bi;
-                bi.start_line = startline;
-                bi.start_col = startcol;
-                bi.end_line = locator->lineNumber();
-                bi.end_col = locator->columnNumber();
-                m.lines.append(bi);
-                list.append(m);
+                list.append(*it);
             }
         }
     }

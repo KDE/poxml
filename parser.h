@@ -8,6 +8,9 @@ struct BlockInfo {
     int start_col;
     int end_line;
     int end_col;
+
+    // used to detect sub-messages
+    int offset;
 };
 
 class MsgBlock {
@@ -15,6 +18,7 @@ class MsgBlock {
     QValueList<BlockInfo> lines;
     QString msgid;
     QString msgstr;
+    int start, end;
 };
 
 class ParaCounter
@@ -51,12 +55,13 @@ public:
     bool error(const QXmlParseException &e ) { return fatalError(e); }
     bool warning(const QXmlParseException &e ) { return fatalError(e); }
     MsgList getList() const { return list; }
-    QStringList splitMessage(const QString &message);
+    MsgList splitMessage(const MsgBlock &message);
 
     static bool closureTag(const QString& message, const QString &tag);
+    static void descape(QString &message);
 
 private:
-    QString formatMessage(QString message) const;
+    QString formatMessage(QString message, int &offset) const;
 
     QXmlLocator *locator;
     QString message;

@@ -1,13 +1,45 @@
 
+<book>
 <para>
-<variablelist>
-<varlistentry>
-<term>Text 1</term>
-<listitem>
-<para>Text 2<note><para>Text 3 <footnote>
-<para>Text 4</para></footnote></para></note></para>
-</listitem>
-</varlistentry>
-</variablelist>
+  <term>
+    Leading Text
+  </term>
+  <keycap>
+    Shift
+  </keycap>
+  <keycap>
+    help
+  </keycap>
 </para>
+
+<para>
+  <variablelist>
+    <varlistentry>
+      <term>
+         Text 1
+      </term>
+      <listitem>
+         <para>
+           Text 2
+           <note>
+             <para>
+               Text 3 
+               <footnote>
+                  <para>
+                     Text 4
+                  </para>
+               </footnote>
+             </para>
+           </note>
+         </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</para>
+
+<para>
+  Ending Text
+</para>
+
+</book>
 
