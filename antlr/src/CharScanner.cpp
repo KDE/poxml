@@ -315,7 +315,7 @@ void CharScanner::reportError(const RecognitionException& ex)
 /** Parser error-reporting function can be overridden in subclass */
 void CharScanner::reportError(const ANTLR_USE_NAMESPACE(std)string& s)
 {
-	if (getFilename().isEmpty())
+	if (getFilename() == "")
 		ANTLR_USE_NAMESPACE(std)cerr << "error: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
 	else
 		ANTLR_USE_NAMESPACE(std)cerr << getFilename().c_str() << ": error: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
@@ -324,7 +324,7 @@ void CharScanner::reportError(const ANTLR_USE_NAMESPACE(std)string& s)
 /** Parser warning-reporting function can be overridden in subclass */
 void CharScanner::reportWarning(const ANTLR_USE_NAMESPACE(std)string& s)
 {
-	if (getFilename().isEmpty())
+	if (getFilename() == "")
 		ANTLR_USE_NAMESPACE(std)cerr << "warning: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
 	else
 		ANTLR_USE_NAMESPACE(std)cerr << getFilename().c_str() << ": warning: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
