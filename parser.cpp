@@ -41,7 +41,7 @@ static const char *cuttingtags[] = {"trans_comment", "para", "title", "term",
                                     "refmiscinfo", "refsect2", "refsect3", "refsect1info",
                                     "refsect2info", "refsect3info", "refsection", "refsectioninfo",
                                     "refsynopsisdiv", "refsysnopsisdivinfo", "remark",
-                                    "revdescription", "glossterm", "glossentry",
+                                    "revdescription", "glossentry",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
@@ -802,6 +802,24 @@ void StructureParser::cleanupTags( QString &contents )
 
 }
 
+static bool removeEmptyTag( QString &contents, const QString & tag)
+{
+//    qDebug("cont %s %s", contents.latin1(), tag.latin1());
+
+    QRegExp empty(QString("<%1[^>]*>[\\s\n][\\s\n]*</%2\\s*>").arg(tag).arg(tag));
+    int strindex = 0;
+    while (true) {
+        strindex = contents.find(empty, strindex);
+        if (strindex < 0)
+            break;
+        qDebug("found empty tag %s", tag.latin1());
+        contents.replace(strindex, empty.matchedLength(), " ");
+        strindex++;
+        return true;
+    }
+    return false;
+}
+
 void StructureParser::removeEmptyTags( QString &contents )
 {
     bool removed;
@@ -809,18 +827,16 @@ void StructureParser::removeEmptyTags( QString &contents )
         removed = false;
 
         for (int index = 0; cuttingtags[index]; index++) {
-            QRegExp empty(QString("<%1[^>]*>\\s*</%2\\s*>").arg(cuttingtags[index]).arg(cuttingtags[index]));
-            int strindex = 0;
-            while (true) {
-                strindex = contents.find(empty, strindex);
-                if (strindex < 0)
-                    break;
-                qDebug("found empty tag %s", cuttingtags[index]);
-                contents.replace(strindex, empty.matchedLength(), "");
-                strindex++;
+            if (removeEmptyTag(contents, cuttingtags[index])) {
                 removed = true;
+                break;
             }
         }
+        // as glossterm has two different semantics, it's likely
+        // to break something when it's cuttingtag
+        if (removeEmptyTag(contents, "glossterm"))
+            removed = true;
+
     } while (removed);
 }
 
