@@ -230,7 +230,7 @@ void Parser::reportError(const RecognitionException& ex)
 /** Parser error-reporting function can be overridden in subclass */
 void Parser::reportError(const ANTLR_USE_NAMESPACE(std)string& s)
 {
-	if ( getFilename()=="" )
+	if ( getFilename().empty() )
 		ANTLR_USE_NAMESPACE(std)cerr << "error: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
 	else
 		ANTLR_USE_NAMESPACE(std)cerr << getFilename().c_str() << ": error: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
@@ -239,7 +239,7 @@ void Parser::reportError(const ANTLR_USE_NAMESPACE(std)string& s)
 /** Parser warning-reporting function can be overridden in subclass */
 void Parser::reportWarning(const ANTLR_USE_NAMESPACE(std)string& s)
 {
-	if ( getFilename()=="" )
+	if ( getFilename().empty() )
 		ANTLR_USE_NAMESPACE(std)cerr << "warning: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
 	else
 		ANTLR_USE_NAMESPACE(std)cerr << getFilename().c_str() << ": warning: " << s.c_str() << ANTLR_USE_NAMESPACE(std)endl;
