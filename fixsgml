@@ -21,7 +21,7 @@ def fixPendingEnd(match):
 docbookfile = open(sys.argv[1])
 text = docbookfile.read()
 docbookfile.close()
-pat = re.compile(r'(<[^>]*\s\S+)=([^ \t\n\r\f\v">]+)([\s>])', re.DOTALL)
+pat = re.compile(r'(<[^>]*\s[^> \t\n]+)=([^ \t\n\r\f\v">]+)([\s>])', re.DOTALL)
 
 while 1:
 	text, n = re.subn(pat, addquotes, text)
@@ -32,11 +32,13 @@ while 1:
 	
 # fixing broken endtag
 for tag in "email", "para":
-	text, n = re.subn("(</%s\s*[^>])" % tag, fixEndTag, text)
+	text, n = re.subn("(</%s\s+[^>])" % tag, fixEndTag, text)
 	if n:
 		sys.stderr.write("fixed %d wrong end tags\n" % n)
 
-text, n = re.subn('&[\s]', '&amp; ', text)
+text, n = re.subn('&\s', '&amp; ', text)
+text, n2 = re.subn('&&\s', '&amp;&amp; ', text)
+n = n + n2
 if n:
 	sys.stderr.write("fixed %d wrong amps\n" % n)
 
@@ -44,17 +46,10 @@ text, n = re.subn('<([^> \t\n\r]+)([^>]*>[^<]+)</>', fixPendingEnd, text)
 if n:
 	sys.stderr.write("fixed %d pending ends\n" % n)
 
-text, n = re.subn('´', '\'', text)
-if n:
-	sys.stderr.write("fixed %d not UTF-8\n" % n)
-
-n = 0
-for tag in 'amp', 'konqueror', 'kde', 'kcontrol':
-	text, n2 = re.subn('&%s([^;\-a-zA-Z])' % tag, r'&%s;\1' % tag, text)
-	n = n + n2
-	
-if n:
-	sys.stderr.write("fixed %d pending entities\n" % n)
+text = re.sub('´', '\'', text)
+text = re.sub('ö', '&ouml;', text)
+text = re.sub('ü', '&uuml;', text)
+text = re.sub('ä', '&auml;', text)
 
 docbookfile = open(sys.argv[1], 'w')
 docbookfile.write(text)
