@@ -116,13 +116,15 @@ int main( int argc, char **argv )
         cout << "\n";
     }
 
-    outputMsg("msgid", "ROLES_OF_TRANSLATORS");
-    outputMsg("msgstr", "");
-    cout << "\n";
+    if ( !getenv( "NO_CREDITS" ) ) {
+        outputMsg("msgid", "ROLES_OF_TRANSLATORS");
+        outputMsg("msgstr", "");
+        cout << "\n";
 
-    outputMsg("msgid", "CREDIT_FOR_TRANSLATORS");
-    outputMsg("msgstr", "");
-    cout << "\n";
+        outputMsg("msgid", "CREDIT_FOR_TRANSLATORS");
+        outputMsg("msgstr", "");
+        cout << "\n";
+    }
 
     return 0;
 }
