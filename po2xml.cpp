@@ -247,6 +247,20 @@ int main( int argc, char **argv )
         index = endindex;
     }
 
+    index = 0;
+    while (true) {
+        index = output.find(QRegExp(">[^\n]"), index );
+        if ( index == -1 )
+            break;
+        if ( output.at( index - 1 ) == '/' || output.at( index - 1 ) == '-' ||
+             output.at( index - 1 ) == ']' || output.at( index - 1 ) == '?' )
+            index = index + 1;
+        else {
+            output.replace( index, 1, "\n>" );
+            index = index + 2;
+        }
+    }
+
     cout << output.utf8().data();
     return 0;
 }

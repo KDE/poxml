@@ -14,49 +14,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.2\n"
 
-#: index.docbook:14
+#: index.docbook:16
 msgid "test document"
 msgstr "Testtext"
 
-#: index.docbook:15
+#: index.docbook:17
 msgid "<firstname>Stephan</firstname><surname>Kulow</surname>"
 msgstr "<firstname>Stephan</firstname><surname>Kulow</surname>"
 
-#: index.docbook:17
+#: index.docbook:19
 msgid "This is nonsense"
 msgstr "Dies ist Schwachsinn"
 
-#: index.docbook:18
+#: index.docbook:20
 msgid "<keyword>KDE</keyword>"
 msgstr "<keyword>KDE</keyword>"
 
-#: index.docbook:23
+#: index.docbook:25
 msgid "&quot;Text&quot; for &lauri;"
 msgstr "&quot;Text&quot; für &lauri;"
 
-#: index.docbook:25
+#: index.docbook:27
 msgid "Section 1"
 msgstr "Abschnitt 1"
 
-#: index.docbook:27
+#: index.docbook:29
 msgid "Section 1.1"
 msgstr "Abschnitt 1.1"
 
-#: index.docbook:28
+#: index.docbook:30
 msgid "Leading &quot;Text&quot; for &lauri;"
 msgstr "&quot;Starttext&quot; f&uuml;r &lauri;"
 
-#: index.docbook:28
+#: index.docbook:30
 msgid ""
 "we pretend her name was Höpfner, but that <anchor id=\"help\"/> is a good "
 "name too"
-msgstr "sagen wir mal sie heisst Höpfner, aber <anchor id=\"help\"/> ist auch gut"
+msgstr ""
+"sagen wir mal sie heisst Höpfner, aber <anchor id=\"help\"/> ist auch gut"
 
-#: index.docbook:28
+#: index.docbook:30
 msgid "<keycap> Shift </keycap> <keycap> help </keycap>"
 msgstr "<keycap> Schieber </keycap> <keycap> Hilfe </keycap>"
 
-#: index.docbook:28
+#: index.docbook:30
 msgid ""
 "an archive of the developer's mailing list is at <ulink "
 "url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
@@ -66,47 +67,47 @@ msgstr ""
 "url=\"http://lists.kde.org/?l=kde-kmail&amp;r=1&amp;w=2\">lists.kde.org</ulin"
 "k>."
 
-#: index.docbook:45
+#: index.docbook:47
 msgid "GIVE_ME_CREDIT"
 msgstr "<para>Habe ich gemacht - toll ne?</para>"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Text 1"
 msgstr "Schrift 1"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Text 2"
 msgstr "Schrift 2"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Text 3 \"everything\""
 msgstr "Text 3 \"alles\""
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Everything"
 msgstr "Alles"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Is correct"
 msgstr "Ist klar"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Nothing"
 msgstr "Nichts"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Is wrong"
 msgstr "ist falsch"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Text 4 \\\"even more\\\""
 msgstr "Text 4 \\\"noch mehr\\\""
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "Text 4 \\\"even less\\\""
 msgstr "Text 4 \\\"noch weniger\\\""
 
-#: index.docbook:47
+#: index.docbook:49
 msgid ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
 "cut> "
@@ -115,24 +116,24 @@ msgid ""
 msgstr ""
 "<shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></short"
 "cut> "
-"<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu</guimen"
-"uitem>"
+"<guimenu><accel>D</accel>atei</guimenu><guimenuitem><accel>N</accel>eu</guime"
+"nuitem>"
 
-#: index.docbook:47
+#: index.docbook:49
 msgid "This starts a new Document in a new instance of the editor."
 msgstr "Dies macht alles neu."
 
-#: index.docbook:90
+#: index.docbook:92
 msgid "What XML looks like"
 msgstr "Wie XML aussieht"
 
-#: index.docbook:92
+#: index.docbook:94
 msgid ""
 "Here is an example of an XML file used by <application>Columbo</application> "
 "to describe a search site on the Internet:"
 msgstr "Dies ist <application>Columbo</application>:"
 
-#: index.docbook:97
+#: index.docbook:99
 msgid ""
 "<![CDATA[<!DOCTYPE search>\n"
 "<search \n"
@@ -184,14 +185,14 @@ msgstr ""
 "   />\n"
 "</search>]]>"
 
-#: index.docbook:97
+#: index.docbook:99
 msgid ""
 "This instruction is normally used to declare the DTD of the document. Here "
 "no DTD is used, and only the name of the root element "
 "(<varname>search</varname>) appears."
 msgstr "Das ist normalerweise DTD"
 
-#: index.docbook:97
+#: index.docbook:99
 msgid ""
 "<sgmltag class=\"starttag\">search</sgmltag> begins the root element. Here, "
 "it extends to the end of the document (<sgmltag "
@@ -201,7 +202,7 @@ msgstr ""
 "it extends to the end of the document (<sgmltag "
 "class=\"endtag\">search</sgmltag>)."
 
-#: index.docbook:97
+#: index.docbook:99
 msgid ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
@@ -209,15 +210,15 @@ msgstr ""
 "This is an example of an empty element. Empty elements do not need a closing "
 "tag (which would be <varname>&lt;/input&gt;</varname> in this case)."
 
-#: index.docbook:158
+#: index.docbook:160
 msgid "The ugly part"
 msgstr "Der schlimme Teil"
 
-#: index.docbook:159
+#: index.docbook:161
 msgid "Ending Text:"
 msgstr "Ende:"
 
-#: index.docbook:159
+#: index.docbook:161
 msgid ""
 "Matthias Hoelzer\n"
 "KDE-Verein i.G.\n"
@@ -247,7 +248,7 @@ msgstr ""
 "print \"$b4 /path/to/KDE/libs/libpng.a $af\\n\";\\\n"
 "hello"
 
-#: index.docbook:179
+#: index.docbook:181
 msgid ""
 "Expect       ogin:           <lineannotation># remember, we do ordinary "
 "terminal login</lineannotation>\n"
@@ -285,7 +286,7 @@ msgstr ""
 "Send         start_ppp       <lineannotation># this command starts the "
 "pppd</lineannotation>"
 
-#: index.docbook:193
+#: index.docbook:195
 msgid ""
 "Send                         <lineannotation># send an empty "
 "string</lineannotation>\n"
@@ -305,7 +306,7 @@ msgstr ""
 "Expect           granted\n"
 "Send             ppp"
 
-#: index.docbook:193
+#: index.docbook:195
 msgid ""
 "-&gt;  #include &lt;qpixmap.h&gt;\n"
 "-&gt;  #include &lt;qpen.h&gt;\n"
@@ -352,4 +353,3 @@ msgstr ""
 "-&gt;      QPen pen;\n"
 "        /** das veraenderte flag of the current document */\n"
 "        bool modified;"
-
