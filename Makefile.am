@@ -1,7 +1,5 @@
 
-EXTRA_PROGRAMS = checkXML
-
-bin_PROGRAMS = split2po $(LIBXML_PROGS) xml2pot po2xml
+bin_PROGRAMS = split2po xml2pot po2xml
 bin_SCRIPTS = fixsgml
 AM_CPPFLAGS = -DNDEBUG
 
@@ -13,10 +11,6 @@ SUBDIRS = antlr
 split2po_SOURCES = qxml.cpp split.cpp parser.cpp
 split2po_LDFLAGS = $(all_libraries)
 split2po_LDADD = $(LIB_QT)
-
-checkXML_SOURCES = checkXML.c
-checkXML_LDFLAGS = -L/usr/local/lib
-checkXML_LDADD = -lxml2
 
 xml2pot_SOURCES = qxml.cpp xml2pot.cpp parser.cpp
 xml2pot_LDFLAGS = $(all_libraries)

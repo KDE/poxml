@@ -14,7 +14,7 @@ using namespace std;
 QString translate(QString xml, QString orig, QString translation)
 {
     if (translation.isEmpty()) {
-        qWarning("no translation for %s found", orig.local8Bit().data());
+        // qWarning("no translation for %s found", orig.local8Bit().data());
         return xml;
     }
 
