@@ -174,8 +174,22 @@ int main( int argc, char **argv )
         int end_pos = line_offsets[bi.end_line - 1] + bi.end_col - 1;
 
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
+        int index = 0;
+        while (true) {
+            index = xml.find("<!--");
+            if (index == -1)
+                break;
+            int end_index = index + 4;
+            while (xml.at(end_index) != '>' ||
+                   xml.at(end_index-1) != '-' ||
+                   xml.at(end_index-2) != '-')
+            {
+                end_index++;
+            }
+            xml.replace(index, end_index + 1 - index, " ");
+            index = end_index;
+        }
         StructureParser::descape(xml);
-        xml.replace(QRegExp("\\s*<!--.*-->\\s*"), " ");
 
 #ifndef NDEBUG
         qDebug("english \"%s\" \"%s\" %d(%d-%d) %d(%d-%d) %d %d \"%s\"", xml.latin1(), (*it).msgid.latin1(),
