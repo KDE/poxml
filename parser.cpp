@@ -623,7 +623,7 @@ MsgList parseXML(const char *filename)
         xmlFile.close();
         pclose(p);
     }
-    QString contents = ccontents;
+    QString contents = QString::fromUtf8( ccontents );
     StructureParser::escapeEntities( contents );
 
     while (true) {
