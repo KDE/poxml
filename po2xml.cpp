@@ -33,10 +33,7 @@ QString translate(QString xml, QString orig, QString translation)
         qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
         exit(1);
     }
-    if (translation.isEmpty()) {
-        qWarning("no translation for '%s' found", StructureParser::descapeLiterals(orig).latin1());
-        abort();
-    } else
+    if (!translation.isEmpty()) 
         xml.replace(index, orig.length(), translation);
     return prefix + xml;
 }
@@ -156,9 +153,10 @@ int main( int argc, char **argv )
 
         QString descaped = StructureParser::descapeLiterals((*it).msgid);
         assert(translations.contains(descaped));
-        assert(!translations[descaped].isEmpty());
         descaped = translations[descaped];
+#ifdef POXML_DEBUG
         assert(!descaped.isEmpty());
+#endif
 
 #ifdef POXML_DEBUG
         qDebug("english \"%s\" ORIG \"%s\" %d(%d-%d) %d(%d-%d) %d %d TRANS \"%s\" %d '%s'", xml.latin1(), (*it).msgid.latin1(),
