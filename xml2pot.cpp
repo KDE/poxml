@@ -57,6 +57,7 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = english.begin();
          it != english.end(); ++it)
     {
+        cout << "#. Tag: " << (*it).tag.utf8() << endl;
         cout << "#: ";
         for (QValueList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
@@ -66,8 +67,7 @@ int main( int argc, char **argv )
 
         }
         cout << "\n";
-	cout << "#, no-c-format\n";
-        cout << "#. Tag: " << (*it).tag.utf8() << endl;
+        cout << "#, no-c-format\n";
         outputMsg("msgid", StructureParser::descapeLiterals( (*it).msgid ));
         outputMsg("msgstr", (*it).msgstr );
         cout << "\n";
