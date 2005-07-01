@@ -1,4 +1,6 @@
 #include <iostream>
+//Added by qt3to4:
+#include <Q3CString>
 using namespace std;
 #include "GettextParser.hpp"
 #include <fstream>
@@ -12,7 +14,7 @@ int main(int argc, char **argv)
     }
 
     QString translation = "xx";
-    QCString filename;
+    Q3CString filename;
 
     if( argc == 4 ) {
 	if( argv[1]!=QString("--text") ) {

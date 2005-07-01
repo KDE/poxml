@@ -4,6 +4,8 @@
 #include <qxml.h>
 #include <qmap.h>
 #include <qregexp.h>
+//Added by qt3to4:
+#include <Q3ValueList>
 
 struct BlockInfo {
     int start_line;
@@ -31,7 +33,7 @@ class MsgBlock {
     MsgBlock(const MsgBlock &rhs ) {
         *this = rhs;
     }
-    QValueList<BlockInfo> lines;
+    Q3ValueList<BlockInfo> lines;
     QString tag;
     QString comment;
     QString msgid;
@@ -66,7 +68,7 @@ public:
     int current;
 };
 
-class MsgList : public QValueList<MsgBlock>
+class MsgList : public Q3ValueList<MsgBlock>
 {
 public:
     MsgList() {}

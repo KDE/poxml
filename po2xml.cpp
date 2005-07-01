@@ -5,6 +5,9 @@
 #include <iostream>
 #include <assert.h>
 #include <qregexp.h>
+//Added by qt3to4:
+#include <Q3ValueList>
+#include <QTextStream>
 
 #include <fstream>
 #include "GettextLexer.hpp"
@@ -75,16 +78,16 @@ int main( int argc, char **argv )
     }
 
     QFile xml(argv[1]);
-    xml.open(IO_ReadOnly);
+    xml.open(QIODevice::ReadOnly);
     QTextStream ds(&xml);
     ds.setEncoding(QTextStream::UnicodeUTF8);
     QString xml_text = ds.read();
     xml.close();
     QString output;
-    QTextStream ts(&output, IO_WriteOnly);
+    QTextStream ts(&output, QIODevice::WriteOnly);
     StructureParser::cleanupTags(xml_text);
 
-    QValueList<int> line_offsets;
+    Q3ValueList<int> line_offsets;
     line_offsets.append(0);
     int index = 0;
     while (true) {

@@ -1,6 +1,8 @@
 #include "parser.h"
 #include <stdlib.h>
 #include <iostream>
+//Added by qt3to4:
+#include <Q3ValueList>
 
 using namespace std;
 
@@ -103,7 +105,7 @@ int main( int argc, char **argv )
          it != english.end(); ++it)
     {
         cout << "#: ";
-        for (QValueList<BlockInfo>::ConstIterator it2 =
+        for (Q3ValueList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
             if (it2 != (*it).lines.begin())
                 cout << ", ";

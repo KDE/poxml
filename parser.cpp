@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <qregexp.h>
+//Added by qt3to4:
+#include <QTextStream>
+#include <Q3CString>
 
 using namespace std;
 
@@ -919,9 +922,9 @@ MsgList parseXML(const char *filename)
 {
     StructureParser handler;
     QFile xmlFile( filename );
-    xmlFile.open(IO_ReadOnly);
+    xmlFile.open(QIODevice::ReadOnly);
 
-    QCString ccontents;
+    Q3CString ccontents;
     ccontents.fill(0, xmlFile.size() + 1);
     memcpy(ccontents.data(), xmlFile.readAll().data(), xmlFile.size());
     xmlFile.close();
@@ -955,7 +958,7 @@ MsgList parseXML(const char *filename)
         contents.replace(index, endindex - index, replacement);
     }
 
-    QTextStream ts(contents.utf8(), IO_ReadOnly);
+    QTextStream ts(contents.utf8(), QIODevice::ReadOnly);
     QXmlInputSource source( ts );
     QXmlSimpleReader reader;
     reader.setFeature( "http://trolltech.com/xml/features/report-start-end-entity", true);
