@@ -83,9 +83,9 @@ int main(int argc, char **argv)
             else
                 msgstr = translation + msgid + translation;
 
-            if ( msgid.endsWith("\\n" ) )
+            if ( msgid.endsWith("\n" ) )
                 msgstr += "\n";
-            if ( msgid.startsWith( "\\n" ))
+            if ( msgid.startsWith( "\n" ))
                 msgstr.prepend( "\n" );
 
 	    if ( msgid_plural.isEmpty() ) {
