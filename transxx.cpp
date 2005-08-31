@@ -3,6 +3,8 @@ using namespace std;
 #include "GettextParser.hpp"
 #include <fstream>
 #include "GettextLexer.hpp"
+#include <qregexp.h>
+#include <qdatetime.h>
 
 int main(int argc, char **argv)
 {
@@ -38,12 +40,30 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    bool is_desktop = filename.find( "desktop_") >= 0;
+    const bool is_desktop = filename.find( "desktop_") >= 0;
 
-    cout << "msgid \"\"\n";
-    cout << "msgstr \"\"\n";
-    cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
-    cout << "\"Plural-Forms: nplurals=1; plural=0;\\n\"\n";
+    // The header is the last item (due too the sorting)
+    MsgList::const_iterator header = --translated.end();
+    if ( ( header == translated.end() ) || ( ! ( *header ).msgid.isEmpty() ) )
+    {
+        cerr << "Cannot find correct header msgid\n";
+        cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
+        cout << "\"Plural-Forms: nplurals=1; plural=0;\\n\"\n";
+    }
+    else
+    {
+        QStringList headerLines = QStringList::split( "\\n", ( *header ).msgstr, false );
+        headerLines.gres( QRegExp( "^Project-Id-Version:.*" ), "Project-Id-Version: test language (no version)" );
+        headerLines.gres( QRegExp( "^Last-Translator:.*" ), "Last-Translator: transxx program <null@kde.org>" );
+        headerLines.gres( QRegExp( "^Language-Team:.*" ), "Language-Team: Test Language <null@kde.org>" );
+        QString revisionDate ( "PO-Revision-Date: " );
+        const QDateTime dt = QDateTime::currentDateTime( Qt::UTC );
+        revisionDate += dt.toString( "yyyy-MM-dd hh:mm+0000" );
+        headerLines.gres( QRegExp( "^PO-Revision-Date:.*" ), revisionDate );
+        headerLines << "Plural-Forms: nplurals=1; plural=0;";
+        outputMsg ( "msgid", "" );
+        outputMsg ( "msgstr", escapePO( headerLines.join("\\n") + "\\n" ) );
+    }
     cout << "\n";
 
     for (MsgList::ConstIterator it = translated.begin();
