@@ -85,11 +85,9 @@ int main(int argc, char **argv)
             else
                 msgstr = translation + msgid + translation;
 
-            // We need to keep a \n (real Line Feed)
-            //  at start or end or msgfmt will complain
-            if ( msgid.endsWith( "\n" ) ) // do not escape \n
+            if ( msgid.endsWith( "\\n" ) )
                 msgstr += "\n"; // do not escape \n
-            if ( msgid.startsWith( "\n" ) ) // do not escape \n
+            if ( msgid.startsWith( "\\n" ) )
                 msgstr.prepend( "\n" ); // do not escape \n
 
 	    if ( msgid_plural.isEmpty() ) {
