@@ -103,9 +103,11 @@ int main(int argc, char **argv)
             else
                 msgstr = translation + msgid + translation;
 
-            if ( msgid.endsWith( "\\n" ) )
+            // Note: msgid has been modified, so we need to go back to the original version by the help of the iterator
+            // (Gettext is not aware of the KDE-specific handling, so it really wants a \n at start and at end in the msgstr if they were in the msgid )
+            if ( ( *it ).msgid.endsWith( "\\n" ) && ! ( *it ).msgid.endsWith( "\\\\n" ))
                 msgstr += "\n";
-            if ( msgid.startsWith( "\\n" ) )
+            if ( ( *it ).msgid.startsWith( "\\n" ) )
                 msgstr.prepend( "\n" );
 
 	    if ( msgid_plural.isEmpty() ) {
