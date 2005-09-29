@@ -3,8 +3,10 @@ using namespace std;
 #include "GettextParser.hpp"
 #include <fstream>
 #include "GettextLexer.hpp"
+
 #include <qregexp.h>
 #include <qdatetime.h>
+#include <qfileinfo.h>
 
 int main(int argc, char **argv)
 {
@@ -53,9 +55,12 @@ int main(int argc, char **argv)
     else
     {
         QStringList headerLines = QStringList::split( "\\n", ( *header ).msgstr, false );
-        headerLines.gres( QRegExp( "^Project-Id-Version:.*" ), "Project-Id-Version: test language (no version)" );
+        QFileInfo fi( QString::fromLocal8Bit( filename ) );
+        QString projectId( "Project-Id-Version: " ); 
+        projectId += fi.baseName( false );
+        headerLines.gres( QRegExp( "^Project-Id-Version:.*" ), projectId );
         headerLines.gres( QRegExp( "^Last-Translator:.*" ), "Last-Translator: transxx program <null@kde.org>" );
-        headerLines.gres( QRegExp( "^Language-Team:.*" ), "Language-Team: Test Language <null@kde.org>" );
+        headerLines.gres( QRegExp( "^Language-Team:.*" ), "Language-Team: Test Language <kde-i18n-doc@kde.org>" );
         QString revisionDate ( "PO-Revision-Date: " );
         const QDateTime dt = QDateTime::currentDateTime( Qt::UTC );
         revisionDate += dt.toString( "yyyy-MM-dd hh:mm+0000" );
