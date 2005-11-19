@@ -55,12 +55,39 @@ int main( int argc, char **argv )
         (*it).msgstr = (*tit).msgid;
     }
 
+    bool have_roles_of_translators = false;
+    bool have_credit_for_translators = false;
+
     QMap<QString, int> msgids;
     int index = 0;
 
     for (MsgList::Iterator it = english.begin();
          it != english.end(); )
     {
+	if ((*it).msgid == "ROLES_OF_TRANSLATORS") {
+            if ((*it).msgstr.length() && !(*it).msgstr.contains("ROLES_OF_TRANSLATORS")) {
+	        have_roles_of_translators = true; 
+            }
+            else {
+                MsgList::Iterator tmp = it;
+	        ++it;
+	        english.remove(tmp);
+            }
+            continue;
+	}
+
+        if ((*it).msgid == "CREDIT_FOR_TRANSLATORS") {
+            if ((*it).msgstr.length() && !(*it).msgstr.contains("CREDIT_FOR_TRANSLATORS")) {
+	        have_credit_for_translators = true; 
+            }
+            else {
+                MsgList::Iterator tmp = it;
+	        ++it;
+	        english.remove(tmp);
+            }
+            continue;
+	}
+
         if (msgids.contains((*it).msgid)) {
             english[msgids[(*it).msgid]].lines += (*it).lines;
             if (english[msgids[(*it).msgid]].msgstr != (*it).msgstr) {
@@ -117,13 +144,18 @@ int main( int argc, char **argv )
     }
 
     if ( !getenv( "NO_CREDITS" ) ) {
-        outputMsg("msgid", "ROLES_OF_TRANSLATORS");
-        outputMsg("msgstr", "");
-        cout << "\n";
 
-        outputMsg("msgid", "CREDIT_FOR_TRANSLATORS");
-        outputMsg("msgstr", "");
-        cout << "\n";
+        if ( !have_roles_of_translators ) {
+            outputMsg("msgid", "ROLES_OF_TRANSLATORS");
+            outputMsg("msgstr", "<!--TRANS:ROLES_OF_TRANSLATORS-->");
+            cout << "\n";
+        }
+
+	if ( !have_credit_for_translators) {
+           outputMsg("msgid", "CREDIT_FOR_TRANSLATORS");
+           outputMsg("msgstr", "<!--TRANS:CREDIT_FOR_TRANSLATORS-->");
+           cout << "\n";
+        }
     }
 
     return 0;
