@@ -59,7 +59,7 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = english.begin();
          it != english.end(); ++it)
     {
-        cout << "#. Tag: " << (*it).tag.utf8() << endl;
+        cout << "#. Tag: " << (*it).tag.utf8().data() << endl;
         cout << "#: ";
         for (Q3ValueList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
