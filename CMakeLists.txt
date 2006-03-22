@@ -13,7 +13,7 @@ kde4_automoc(${split2po_SRCS})
 
 kde4_add_executable(split2po ${split2po_SRCS})
 
-target_link_libraries(split2po  ${QT_AND_KDECORE_LIBS} )
+target_link_libraries(split2po  ${KDE4_KDECORE_LIBS} )
 
 install_targets(/bin split2po )
 
@@ -26,7 +26,7 @@ kde4_automoc(${xml2pot_SRCS})
 
 kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
-target_link_libraries(xml2pot  ${QT_AND_KDECORE_LIBS} )
+target_link_libraries(xml2pot  ${KDE4_KDECORE_LIBS} )
 
 install_targets(/bin xml2pot )
 
@@ -43,7 +43,7 @@ kde4_automoc(${po2xml_SRCS})
 
 kde4_add_executable(po2xml ${po2xml_SRCS})
 
-target_link_libraries(po2xml  ${QT_AND_KDECORE_LIBS} antlr )
+target_link_libraries(po2xml  ${KDE4_KDECORE_LIBS} antlr )
 
 install_targets(/bin po2xml )
 
@@ -60,7 +60,7 @@ kde4_automoc(${swappo_SRCS})
 
 kde4_add_executable(swappo ${swappo_SRCS})
 
-target_link_libraries(swappo  ${QT_AND_KDECORE_LIBS} antlr )
+target_link_libraries(swappo  ${KDE4_KDECORE_LIBS} antlr )
 
 install_targets(/bin swappo )
 
@@ -77,7 +77,7 @@ kde4_automoc(${transxx_SRCS})
 
 kde4_add_executable(transxx ${transxx_SRCS})
 
-target_link_libraries(transxx  ${QT_AND_KDECORE_LIBS} antlr )
+target_link_libraries(transxx  ${KDE4_KDECORE_LIBS} antlr )
 
 install_targets(/bin transxx )
 
