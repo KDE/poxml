@@ -11,12 +11,12 @@
 
 using namespace std;
 
-static const char *singletags[] = {"imagedata", "colspec", "spanspec",
+static const char *singletags[] = {"beginpage","imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
                                    "footnoteref", "void", "inlinegraphic",
                                    "glosssee", "graphic", "xi:include",
                                    0};
-static const char *cuttingtags[] = {"trans_comment", "para", "title", "term",
+static const char *cuttingtags[] = {"bridgehead", "appendix", "trans_comment", "para", "title", "term",
                                     "entry", "contrib", "keyword", "example",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
