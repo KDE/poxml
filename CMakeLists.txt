@@ -2,7 +2,7 @@ kde4_header()
 
 add_subdirectory( antlr ) 
 
-include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
+include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/antlr )
 
 
 ########### next target ###############
@@ -30,6 +30,8 @@ target_link_libraries(xml2pot  ${KDE4_KDECORE_LIBS} )
 
 install_targets(/bin xml2pot )
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  ${KDE4_ENABLE_EXCEPTIONS}")
+
 
 ########### next target ###############
 
@@ -43,7 +45,7 @@ kde4_automoc(${po2xml_SRCS})
 
 kde4_add_executable(po2xml ${po2xml_SRCS})
 
-target_link_libraries(po2xml  ${KDE4_KDECORE_LIBS} antlr )
+target_link_libraries(po2xml ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.la )
 
 install_targets(/bin po2xml )
 
@@ -60,7 +62,7 @@ kde4_automoc(${swappo_SRCS})
 
 kde4_add_executable(swappo ${swappo_SRCS})
 
-target_link_libraries(swappo  ${KDE4_KDECORE_LIBS} antlr )
+target_link_libraries(swappo  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.a )
 
 install_targets(/bin swappo )
 
@@ -77,7 +79,7 @@ kde4_automoc(${transxx_SRCS})
 
 kde4_add_executable(transxx ${transxx_SRCS})
 
-target_link_libraries(transxx  ${KDE4_KDECORE_LIBS} antlr )
+target_link_libraries(transxx  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.a )
 
 install_targets(/bin transxx )
 
