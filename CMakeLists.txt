@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( antlr ) 
 
@@ -87,7 +86,6 @@ install_targets(/bin transxx )
 ########### install files ###############
 
 
-kde4_footer()
 
 
 
