@@ -13,7 +13,7 @@ static const char *singletags[] = {"beginpage","imagedata", "colspec", "spanspec
                                    "footnoteref", "void", "inlinegraphic",
                                    "glosssee", "graphic", "xi:include",
                                    0};
-static const char *cuttingtags[] = {"bridgehead", "appendix", "trans_comment", "para", "title", "term",
+static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "title", "term",
                                     "entry", "contrib", "keyword", "example",
                                     "note", "footnote", "caution",
                                     "informalexample", "remark", "comment",
