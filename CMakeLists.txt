@@ -14,7 +14,7 @@ kde4_add_executable(split2po ${split2po_SRCS})
 
 target_link_libraries(split2po  ${KDE4_KDECORE_LIBS} )
 
-install_targets(/bin split2po )
+install(TARGETS split2po  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### next target ###############
@@ -27,7 +27,7 @@ kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
 target_link_libraries(xml2pot  ${KDE4_KDECORE_LIBS} )
 
-install_targets(/bin xml2pot )
+install(TARGETS xml2pot  DESTINATION ${BIN_INSTALL_DIR} )
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  ${KDE4_ENABLE_EXCEPTIONS}")
 
@@ -46,7 +46,7 @@ kde4_add_executable(po2xml ${po2xml_SRCS})
 
 target_link_libraries(po2xml ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.la )
 
-install_targets(/bin po2xml )
+install(TARGETS po2xml  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### next target ###############
@@ -63,7 +63,7 @@ kde4_add_executable(swappo ${swappo_SRCS})
 
 target_link_libraries(swappo  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.a )
 
-install_targets(/bin swappo )
+install(TARGETS swappo  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### next target ###############
@@ -80,7 +80,7 @@ kde4_add_executable(transxx ${transxx_SRCS})
 
 target_link_libraries(transxx  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.a )
 
-install_targets(/bin transxx )
+install(TARGETS transxx  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
