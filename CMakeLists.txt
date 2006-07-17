@@ -1,3 +1,4 @@
+project(kcachegrind)
 
 add_subdirectory( antlr ) 
 
