@@ -67,33 +67,16 @@ target_link_libraries(swappo  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/a
 install(TARGETS swappo  DESTINATION ${BIN_INSTALL_DIR} )
 
 
-########### next target ###############
-
-set(transxx_SRCS 
-   GettextLexer.cpp 
-   GettextParser.cpp 
-   transxx.cpp 
-   parser.cpp )
-
-kde4_automoc(${transxx_SRCS})
-
-kde4_add_executable(transxx ${transxx_SRCS})
-
-target_link_libraries(transxx  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.a )
-
-install(TARGETS transxx  DESTINATION ${BIN_INSTALL_DIR} )
-
-
 ########### install files ###############
 
 
 
 
 
-#original Makefile.am contents follow:
+#original (but modified) Makefile.am contents follow:
 
 #
-#bin_PROGRAMS = split2po xml2pot po2xml swappo transxx
+#bin_PROGRAMS = split2po xml2pot po2xml swappo
 #
 #INCLUDES = -I$(srcdir)/antlr $(all_includes)
 #KDE_CXXFLAGS = $(USE_EXCEPTIONS) 
@@ -116,9 +99,6 @@ install(TARGETS transxx  DESTINATION ${BIN_INSTALL_DIR} )
 #swappo_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 #swappo_LDADD = antlr/src/libantlr.la $(LIB_QTXML)
 #
-#transxx_SOURCES = GettextLexer.cpp GettextParser.cpp transxx.cpp parser.cpp
-#transxx_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-#transxx_LDADD = antlr/src/libantlr.la $(LIB_QTXML)
 #
 #parser:
 #	cd $(srcdir) &&	java antlr.Tool gettext.g
