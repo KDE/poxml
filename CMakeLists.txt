@@ -1,4 +1,4 @@
-project(kcachegrind)
+project(poxml)
 
 add_subdirectory( antlr ) 
 
