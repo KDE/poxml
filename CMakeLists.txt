@@ -9,7 +9,7 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/antlr )
 
 set(split2po_SRCS split.cpp parser.cpp )
 
-kde4_automoc(${split2po_SRCS})
+kde4_automoc(split2po ${split2po_SRCS})
 
 kde4_add_executable(split2po ${split2po_SRCS})
 
@@ -22,7 +22,7 @@ install(TARGETS split2po  DESTINATION ${BIN_INSTALL_DIR} )
 
 set(xml2pot_SRCS xml2pot.cpp parser.cpp )
 
-kde4_automoc(${xml2pot_SRCS})
+kde4_automoc(xml2pot ${xml2pot_SRCS})
 
 kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
@@ -41,7 +41,7 @@ set(po2xml_SRCS
    po2xml.cpp 
    parser.cpp )
 
-kde4_automoc(${po2xml_SRCS})
+kde4_automoc(po2xml ${po2xml_SRCS})
 
 kde4_add_executable(po2xml ${po2xml_SRCS})
 
@@ -58,7 +58,7 @@ set(swappo_SRCS
    swappo.cpp 
    parser.cpp )
 
-kde4_automoc(${swappo_SRCS})
+kde4_automoc(swappo ${swappo_SRCS})
 
 kde4_add_executable(swappo ${swappo_SRCS})
 
