@@ -33,6 +33,7 @@
 #include "antlr/ASTNULLType.hpp"
 #include "antlr/MismatchedTokenException.hpp"
 #include <iostream>
+#include <stdlib.h>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 ANTLR_C_USING(exit)

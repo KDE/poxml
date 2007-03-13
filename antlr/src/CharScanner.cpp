@@ -48,6 +48,7 @@
 #else
 #include <cstring>
 #endif
+#include <stdlib.h>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 ANTLR_C_USING(exit)
