@@ -643,7 +643,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                         (*it).lines.first().offset = 0;
                     }
                 }
-                (*it).msgid.replace(infos_reg, QString::null);	//krazy:exclude=nullstrassign for old broken gcc
+                (*it).msgid.replace(infos_reg, QString());
 
                 if (!(*it).msgid.isEmpty())
                     list.append(*it);
