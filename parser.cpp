@@ -116,7 +116,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
 
     if (isCuttingTag(tname)) {
         if (!inside) {
-            message = QString::null;
+            message = QString();
             list.pc.increasePara();
             startline = locator->lineNumber();
             startcol = locator->columnNumber();
@@ -643,7 +643,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                         (*it).lines.first().offset = 0;
                     }
                 }
-                (*it).msgid.replace(infos_reg, QString::null);
+                (*it).msgid.replace(infos_reg, QString::null);	//krazy:exclude=nullstrassign for old broken gcc
 
                 if (!(*it).msgid.isEmpty())
                     list.append(*it);
