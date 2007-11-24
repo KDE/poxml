@@ -1,32 +1,31 @@
 project(poxml)
 
-add_subdirectory( antlr ) 
+add_subdirectory(antlr) 
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/antlr )
-
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/antlr)
 
 ########### next target ###############
 
-set(split2po_SRCS split.cpp parser.cpp )
+set(split2po_SRCS split.cpp parser.cpp)
 
 
 kde4_add_executable(split2po ${split2po_SRCS})
 
-target_link_libraries(split2po  ${KDE4_KDECORE_LIBS} )
+target_link_libraries(split2po  ${KDE4_KDECORE_LIBS})
 
-install(TARGETS split2po  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS split2po  DESTINATION ${BIN_INSTALL_DIR})
 
 
 ########### next target ###############
 
-set(xml2pot_SRCS xml2pot.cpp parser.cpp )
+set(xml2pot_SRCS xml2pot.cpp parser.cpp)
 
 
 kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
-target_link_libraries(xml2pot  ${KDE4_KDECORE_LIBS} )
+target_link_libraries(xml2pot  ${KDE4_KDECORE_LIBS})
 
-install(TARGETS xml2pot  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS xml2pot  DESTINATION ${BIN_INSTALL_DIR})
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  ${KDE4_ENABLE_EXCEPTIONS}")
 
@@ -37,14 +36,15 @@ set(po2xml_SRCS
    GettextLexer.cpp 
    GettextParser.cpp 
    po2xml.cpp 
-   parser.cpp )
+   parser.cpp)
 
 
 kde4_add_executable(po2xml ${po2xml_SRCS})
+add_dependencies(po2xml antlr)
 
-target_link_libraries(po2xml ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.la )
+target_link_libraries(po2xml antlr ${KDE4_KDECORE_LIBS} ${QT_QTXML_LIBRARY})
 
-install(TARGETS po2xml  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS po2xml  DESTINATION ${BIN_INSTALL_DIR})
 
 
 ########### next target ###############
@@ -53,14 +53,15 @@ set(swappo_SRCS
    GettextLexer.cpp 
    GettextParser.cpp 
    swappo.cpp 
-   parser.cpp )
+   parser.cpp)
 
 
 kde4_add_executable(swappo ${swappo_SRCS})
+add_dependencies(swappo antlr)
 
-target_link_libraries(swappo  ${KDE4_KDECORE_LIBS} ${CMAKE_CURRENT_BINARY_DIR}/antlr/src/libantlr.a )
+target_link_libraries(swappo  antlr ${KDE4_KDECORE_LIBS} ${QT_QTXML_LIBRARY})
 
-install(TARGETS swappo  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS swappo  DESTINATION ${BIN_INSTALL_DIR})
 
 
 ########### install files ###############

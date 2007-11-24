@@ -46,13 +46,14 @@
  * @see antlr.CharQueue
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/InputBuffer.hpp"
 #include <iostream>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
-class CharBuffer : public InputBuffer {
+class ANTLR_EXPORT CharBuffer : public InputBuffer {
 private:
 	// char source
 	ANTLR_USE_NAMESPACE(std)istream& input;

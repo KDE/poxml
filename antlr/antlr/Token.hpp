@@ -33,6 +33,7 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/RefCount.hpp"
 #include <string>
@@ -46,7 +47,7 @@ ANTLR_BEGIN_NAMESPACE(antlr)
 class Token;
 typedef RefCount<Token> RefToken;
 
-class Token {
+class ANTLR_EXPORT Token {
 public:
 	// constants
 #ifndef NO_STATIC_CONSTS
@@ -99,7 +100,7 @@ private:
 inline operator<(RefToken l,RefToken r); //{return true;}
 #endif
 
-extern RefToken nullToken;
+extern ANTLR_EXPORT RefToken nullToken;
 
 ANTLR_END_NAMESPACE
 

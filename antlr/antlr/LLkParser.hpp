@@ -33,6 +33,7 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/Parser.hpp"
 
@@ -44,7 +45,7 @@ ANTLR_BEGIN_NAMESPACE(antlr)
  * @see antlr.TokenBuffer
  * @see antlr.LL1Parser
  */
-class LLkParser : public Parser {
+class ANTLR_EXPORT LLkParser : public Parser {
 protected:
 	int k;
 

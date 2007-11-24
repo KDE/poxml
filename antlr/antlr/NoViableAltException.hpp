@@ -33,6 +33,7 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/RecognitionException.hpp"
 #include "antlr/Token.hpp"
@@ -40,11 +41,11 @@
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
-class NoViableAltException : public RecognitionException {
+class ANTLR_EXPORT NoViableAltException : public RecognitionException {
 public:
 	const RefToken token;
 	const RefAST node; // handles parsing and treeparsing
-	
+
 	NoViableAltException(RefAST t);
 
 	NoViableAltException(RefToken t,const ANTLR_USE_NAMESPACE(std)string& fileName_);

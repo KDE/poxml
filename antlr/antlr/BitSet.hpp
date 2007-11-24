@@ -1,6 +1,7 @@
 #ifndef INC_BitSet_hpp__
 #define INC_BitSet_hpp__
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include <vector>
 #include <stdexcept>
@@ -29,7 +30,7 @@ ANTLR_BEGIN_NAMESPACE(antlr)
  * @author Terence Parr, MageLang Institute
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
-class BitSet {
+class ANTLR_EXPORT BitSet {
 private:
 	ANTLR_USE_NAMESPACE(std)vector<bool> storage;
 

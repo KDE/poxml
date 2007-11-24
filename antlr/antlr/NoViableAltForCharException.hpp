@@ -33,13 +33,14 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/RecognitionException.hpp"
 #include "antlr/CharScanner.hpp"
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
-class NoViableAltForCharException : public RecognitionException {
+class ANTLR_EXPORT NoViableAltForCharException : public RecognitionException {
 public:
 	int foundChar;
 

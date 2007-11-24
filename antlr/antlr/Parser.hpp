@@ -33,6 +33,7 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/BitSet.hpp"
 #include "antlr/TokenBuffer.hpp"
@@ -78,7 +79,7 @@ ANTLR_BEGIN_NAMESPACE(antlr)
 
 extern bool DEBUG_PARSER;
 
-class Parser {
+class ANTLR_EXPORT Parser {
 protected:
 	ParserSharedInputState inputState;
 

@@ -33,13 +33,14 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
-# include "antlr/config.hpp"
+#include "antlr/antlr_export.h"
+#include "antlr/config.hpp"
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
 	class AST;
 
-struct ASTRef
+struct ANTLR_EXPORT ASTRef
 {
 	AST* const ptr;
 	unsigned int count;
@@ -62,7 +63,7 @@ private:
 	ASTRef* ref;
 
 public:
-	ASTRefCount(const AST* p=0) 
+	ASTRefCount(const AST* p=0)
 		: ref(p ? ASTRef::getRef(p) : 0)
 	{
 	}

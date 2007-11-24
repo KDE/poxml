@@ -35,6 +35,7 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/TokenStream.hpp"
 #include "antlr/RecognitionException.hpp"
@@ -61,7 +62,7 @@ private:
 //	CharScannerLiteralsLess& operator=(const CharScannerLiteralsLess&);
 };
 
-class CharScanner : public TokenStream {
+class ANTLR_EXPORT CharScanner : public TokenStream {
 private:
 #ifndef NO_STATIC_CONSTS
 	static const int NO_CHAR = 0;
@@ -100,7 +101,7 @@ protected:
 	 *  A subsequent scan error will report an error as usual if acceptPath=true;
 	 */
 	bool commitToPath;
-	
+
 public:
 	CharScanner();
 

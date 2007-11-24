@@ -33,12 +33,13 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include "antlr/ANTLRException.hpp"
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
-class RecognitionException : public ANTLRException {
+class ANTLR_EXPORT RecognitionException : public ANTLRException {
 public:
 	ANTLR_USE_NAMESPACE(std)string fileName; // not used by treeparsers
 	int line;    // not used by treeparsers

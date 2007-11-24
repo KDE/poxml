@@ -33,13 +33,14 @@
  * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
  */
 
+#include "antlr/antlr_export.h"
 #include "antlr/config.hpp"
 #include <exception>
 #include <string>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
-class ANTLRException : public ANTLR_USE_NAMESPACE(std)exception {
+class ANTLR_EXPORT ANTLRException : public ANTLR_USE_NAMESPACE(std)exception {
 private:
 	ANTLR_USE_NAMESPACE(std)string text;
 
