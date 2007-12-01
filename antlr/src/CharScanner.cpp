@@ -42,6 +42,7 @@
 #endif
 
 #include <iostream>
+#include <stdlib.h>
 
 #ifdef HAS_NOT_CSTRING_H
 #include <string>
