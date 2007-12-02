@@ -37,6 +37,7 @@
 #include "antlr/MismatchedTokenException.hpp"
 //#include "antlr/ASTFactory.hpp"
 #include <cstdlib>
+#include <iostream>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 ANTLR_C_USING(exit)
