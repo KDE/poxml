@@ -47,12 +47,13 @@
  */
 
 #include "antlr/config.hpp"
+#include "antlr/antlr_export.h"
 #include "antlr/CircularQueue.hpp"
 #include <string>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
-class InputBuffer {
+class ANTLR_EXPORT InputBuffer {
 protected:
 	// char source
 	// leave to subclasses

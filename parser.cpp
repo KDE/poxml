@@ -924,9 +924,7 @@ MsgList parseXML(const char *filename)
     QFile xmlFile( filename );
     xmlFile.open(QIODevice::ReadOnly);
 
-    Q3CString ccontents;
-    ccontents.fill(0, xmlFile.size() + 1);
-    memcpy(ccontents.data(), xmlFile.readAll().data(), xmlFile.size());
+    QByteArray ccontents = xmlFile.readAll();
     xmlFile.close();
 
     QString contents = QString::fromUtf8( ccontents );

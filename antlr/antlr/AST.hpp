@@ -100,7 +100,7 @@ extern RefAST nullAST;
 extern AST* const nullASTptr;
 
 #ifdef NEEDS_OPERATOR_LESS_THAN
-inline operator<(RefAST l,RefAST r); // {return true;}
+inline bool operator<(RefAST l,RefAST r); // {return true;}
 #endif
 
 ANTLR_END_NAMESPACE
