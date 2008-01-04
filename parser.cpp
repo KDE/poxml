@@ -180,7 +180,7 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
 #endif
 
     int inside = 0;
-    uint index = 0;
+    int index = 0;
     while (true)
     {
         int nextclose = message.find(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)), index);
@@ -219,7 +219,7 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
 
 void StructureParser::descape(QString &message)
 {
-    uint index = 0;
+    int index = 0;
     stripWhiteSpace( message );
 
     int inside = 0;
@@ -238,7 +238,7 @@ void StructureParser::descape(QString &message)
                 lastws = true;
                 break;
             case '<': {
-                uint endindex = index+1;
+                int endindex = index+1;
                 while (endindex < message.length() && !message.at(endindex).isSpace() &&
                        message.at(endindex) != '>')
                     endindex++;
@@ -293,7 +293,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             msg.msgid = msg.msgid.mid(strindex + 1);
             changed = true;
             offset += strindex + 1;
-            for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
+            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++) ;
             stripWhiteSpace( msg.msgid );
         }
     }
@@ -308,11 +308,11 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         changed = true;
     }
 
-    for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
+    for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++) ;
     stripWhiteSpace( msg.msgid );
 
     while (true) {
-        if (msg.msgid.at(0) != '<')
+        if (msg.msgid.isEmpty() || msg.msgid.at(0) != '<')
             break;
         if (msg.msgid.at(msg.msgid.length() - 1) != '>')
             break;
@@ -344,7 +344,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             QString attr = msg.msgid.left(strindex);
             msg.msgid = msg.msgid.mid(strindex + 1);
             offset += strindex + 1;
-            for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++) ;
+            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++) ;
             stripWhiteSpace( msg.msgid );
             msg.tag = starttag;
 
@@ -398,7 +398,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
     qDebug("splitMessage %s", message.latin1());
 #endif
 
-    if (message.at(0) == '<') {
+    if (!message.isEmpty() && message.at(0) == '<') {
         int endindex = 1;
         while (!message.at(endindex).isSpace() && message.at(endindex) != '>')
             endindex++;
@@ -507,7 +507,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
     }
 
-    if (message.at(message.length() - 1 ) == '>')
+    if (!message.isEmpty() && message.at(message.length() - 1 ) == '>')
     {
         int endindex = message.length() - 1;
         while (endindex >= 0 && (message.at(endindex) != '<' || message.at(endindex + 1) != '/'))
@@ -623,7 +623,8 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             bi.start_col = startcol;
             bi.end_line = locator->lineNumber();
             bi.end_col = locator->columnNumber() + 1;
-            bi.offset = m.lines.first().offset;
+            if (m.lines.isEmpty()) bi.offset = 0;
+            else bi.offset = m.lines.first().offset;
             m.lines.append(bi);
             formatMessage(m);
 
@@ -636,7 +637,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 #endif
                 // if the remaining text still starts with a tag, the poxml_ info
                 // is most probably more correct
-                if ((*it).msgid.at(0) == '<' && isClosure((*it).msgid)) {
+                if (!(*it).msgid.isEmpty() && (*it).msgid.at(0) == '<' && isClosure((*it).msgid)) {
                     if (infos_reg.search((*it).msgid) >= 0) {
                         (*it).lines.first().start_line = infos_reg.cap(1).toInt();
                         (*it).lines.first().start_col =  infos_reg.cap(2).toInt();;
@@ -898,7 +899,7 @@ QString escapePO(QString msgid)
         index = msgid.find("\\t", index);
         if (index == -1)
             break;
-        if (msgid.at(index - 1) == '\\')
+        if (index > 0 && msgid.at(index - 1) == '\\')
             msgid.replace(index - 1, 3, "\\t");
         else
             msgid.replace(index, 2, "\t");
