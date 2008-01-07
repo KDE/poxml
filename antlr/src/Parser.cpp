@@ -38,6 +38,7 @@
 //#include "antlr/ASTFactory.hpp"
 #include <cstdlib>
 #include <iostream>
+#include <cstdlib>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 ANTLR_C_USING(exit)
