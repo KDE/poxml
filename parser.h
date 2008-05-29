@@ -64,6 +64,12 @@ public:
     void addAnchor(QString anchor) { anchors.insert(anchor, current); }
     void increasePara() { current++; }
 
+    ParaCounter & operator+=( const ParaCounter & other ) {
+        current += other.current;
+        anchors.unite( other.anchors );
+        return *this;
+    }
+
     QMap<QString, int> anchors;
     int current;
 };
@@ -73,6 +79,12 @@ class MsgList : public Q3ValueList<MsgBlock>
 public:
     MsgList() {}
     ParaCounter pc;
+
+    MsgList & operator+=( const MsgList & other ) {
+        Q3ValueList<MsgBlock>::operator+=( other );
+        pc += other.pc;
+        return *this;
+    }
 };
 
 class StructureParser : public QXmlDefaultHandler

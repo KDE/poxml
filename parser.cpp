@@ -11,6 +11,17 @@
 
 using namespace std;
 
+static int countRev( const QString & str, QChar ch, int idx ) {
+    if ( idx < 0 )
+        idx += str.length();
+    if ( idx >= str.length() )
+        idx = str.length();
+    int count = 0;
+    for ( int i = 0 ; i <= idx ; ++i )
+        count += ( str[i] == ch );
+    return count;
+}
+
 static const char *singletags[] = {"beginpage","imagedata", "colspec", "spanspec",
                                    "anchor", "xref", "area",
                                    "footnoteref", "void", "inlinegraphic",
@@ -44,7 +55,7 @@ static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "titl
                                     "refmiscinfo", "refsect2", "refsect3", "refsect1info",
                                     "refsect2info", "refsect3info", "refsection", "refsectioninfo",
                                     "refsynopsisdiv", "refsysnopsisdivinfo", "remark",
-                                    "revdescription", "glossentry", "partinfo", 
+                                    "revdescription", "glossentry", "partinfo",
 				    "segmentedlist", "segtitle", "seg", "seglistitem", "screenco",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
@@ -931,6 +942,38 @@ MsgList parseXML(const char *filename)
     QString contents = QString::fromUtf8( ccontents );
     StructureParser::cleanupTags(contents);
 
+    MsgList english;
+    {
+        // find internal entities that start with "i18n-", and extract
+        // their replacement texts:
+        QRegExp rx( "<!ENTITY\\s+([^\\s]+)\\s+([\"'])" );
+        for ( int index = rx.indexIn( contents, 0 ) ; index >= 0 ; index = rx.indexIn( contents, index ) ) {
+            const QString name = rx.cap( 1 );
+            const QChar delim = rx.cap( 2 ).at( 0 );
+            const int start = index;
+            index = contents.indexOf( delim, index + rx.matchedLength() );
+            index = contents.indexOf( '>', index );
+            if ( !name.startsWith( "i18n-" ) )
+                continue;
+            const QString entity = contents.mid( start, index - start + 1 );
+            MsgBlock block;
+            block.tag = "!ENTITY";
+            BlockInfo bi;
+            bi.start_line = countRev( contents, '\n', index ) + 1;
+            bi.start_col  = start - contents.lastIndexOf( '\n', start ) - 1;
+            bi.end_line   = bi.start_line + entity.count( '\n' );
+            bi.end_col    = index - contents.lastIndexOf( '\n', index ) + 1;
+#ifdef POXML_DEBUG
+            qDebug( "ENTITY %s @ i:%d l:%d c:%d->l:%d c:%d", qPrintable( name ),
+                    index, bi.start_line, bi.start_col, bi.end_line, bi.end_col );
+#endif
+            block.lines.push_back( bi );
+            block.msgid = entity;
+            english.push_back( block );
+        }
+    }
+
+    // Remove all entity definitions now:
     while (true) {
         int index = contents.find("<!ENTITY");
         if (index < 0)
@@ -966,7 +1009,7 @@ MsgList parseXML(const char *filename)
     reader.setDTDHandler( &handler );
     // reader.setErrorHandler( &handler );
     reader.parse( source );
-    MsgList english = handler.getList();
+    english += handler.getList();
 
     bool changed = false;
 
