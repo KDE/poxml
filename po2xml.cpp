@@ -239,8 +239,8 @@ int main( int argc, char **argv )
 
     ts << xml_text.mid(old_pos);
 
-    output.replace(QRegExp("<trans_comment\\s*>"), "");
-    output.replace(QRegExp("</trans_comment\\s*>"), "");
+    output.remove(QRegExp("<trans_comment\\s*>"));
+    output.remove(QRegExp("</trans_comment\\s*>"));
 
     StructureParser::removeEmptyTags(output);
 

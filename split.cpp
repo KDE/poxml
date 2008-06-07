@@ -1,8 +1,6 @@
 #include "parser.h"
 #include <stdlib.h>
 #include <iostream>
-//Added by qt3to4:
-#include <Q3ValueList>
 
 using namespace std;
 
@@ -42,7 +40,7 @@ int main( int argc, char **argv )
                 fprintf(stderr, "id=\"%s\" not in the same paragraphs (%d vs %d)\n", it.data().latin1(),
                         english.pc.anchors[it.data()], translated.pc.anchors[it.data()]);
             else {
-                fprintf(stderr, "id=\"%s\" not in the translated paragraphs (it's in paragraph %d in english)\n",
+                fprintf(stderr, "id=\"%s\" not in the translated paragraphs (it is in paragraph %d in english)\n",
                         it.data().latin1(), english.pc.anchors[it.data()]);
             }
         }

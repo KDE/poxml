@@ -138,7 +138,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
 
     if (inside)
     {
-        QString tmp = "<" + tname;
+        QString tmp = '<' + tname;
         for (int i = 0; i < attr.length(); i++) {
             tmp += QString(" %1=\"%2\"").arg(attr.qName(i)).arg(attr.value(i));
         }
@@ -148,7 +148,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
         if (isSingleTag(qName))
             tmp += "/>";
         else
-            tmp += ">";
+            tmp += '>';
         message += tmp;
         if (first)
             startcol -= message.length();
@@ -268,7 +268,7 @@ void StructureParser::descape(QString &message)
 
         index++;
     }
-    message.replace(QRegExp("\010"), "");
+    message.remove(QRegExp("\010"));
 }
 
 bool StructureParser::formatMessage(MsgBlock &msg) const
@@ -342,7 +342,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
 
         QString endtag = msg.msgid.mid(endindex + 2, msg.msgid.length() - (endindex + 2) - 1);
         QString endtag_attr = endtag.mid(endtag.find(' '), endtag.length());
-        endtag.replace(infos_reg, "");
+        endtag.remove(infos_reg);
         if (endtag == starttag) {
             if (!closureTag(msg.msgid, starttag))
                 break;
@@ -618,7 +618,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             message += QString("</%1").arg(tname);
             message += QString(" poxml_line=\"%1\"").arg(locator->lineNumber());
             message += QString(" poxml_col=\"%1\"").arg(locator->columnNumber());
-            message += ">";
+            message += '>';
         }
     }
 
