@@ -11,7 +11,7 @@ set(split2po_SRCS split.cpp parser.cpp)
 
 kde4_add_executable(split2po ${split2po_SRCS})
 
-target_link_libraries(split2po  ${KDE4_KDECORE_LIBS})
+target_link_libraries(split2po ${QT_QTXML_LIBRARY} ${KDE4_KDECORE_LIBS})
 
 install(TARGETS split2po  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -23,7 +23,7 @@ set(xml2pot_SRCS xml2pot.cpp parser.cpp)
 
 kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
-target_link_libraries(xml2pot  ${KDE4_KDECORE_LIBS})
+target_link_libraries(xml2pot ${QT_QTXML_LIBRARY} ${KDE4_KDECORE_LIBS})
 
 install(TARGETS xml2pot  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
