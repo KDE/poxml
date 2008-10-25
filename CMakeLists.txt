@@ -11,7 +11,7 @@ set(split2po_SRCS split.cpp parser.cpp)
 
 kde4_add_executable(split2po ${split2po_SRCS})
 
-target_link_libraries(split2po ${QT_QTXML_LIBRARY})
+target_link_libraries(split2po ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS split2po  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -23,7 +23,7 @@ set(xml2pot_SRCS xml2pot.cpp parser.cpp)
 
 kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
-target_link_libraries(xml2pot ${QT_QTXML_LIBRARY})
+target_link_libraries(xml2pot ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS xml2pot  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -42,7 +42,7 @@ set(po2xml_SRCS
 kde4_add_executable(po2xml ${po2xml_SRCS})
 add_dependencies(po2xml antlr)
 
-target_link_libraries(po2xml antlr ${QT_QTXML_LIBRARY})
+target_link_libraries(po2xml antlr ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS po2xml  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -59,7 +59,7 @@ set(swappo_SRCS
 kde4_add_executable(swappo ${swappo_SRCS})
 add_dependencies(swappo antlr)
 
-target_link_libraries(swappo  antlr ${QT_QTXML_LIBRARY})
+target_link_libraries(swappo  antlr ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS swappo  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
