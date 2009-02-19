@@ -43,6 +43,7 @@
 #include "antlr/BitSet.hpp"
 #include "antlr/LexerSharedInputState.hpp"
 #include <map>
+#include <cstdio>
 
 ANTLR_BEGIN_NAMESPACE(antlr)
 
