@@ -16,11 +16,11 @@ int main( int argc, char **argv )
     MsgList english = parseXML(argv[1]);
     MsgList translated = parseXML(argv[2]);
 
-    QMap<QString, int>::ConstIterator eit2 = english.pc.anchors.begin();
+    QMap<QString, int>::ConstIterator eit2 = english.pc.anchors.constBegin();
 
     QMap<int, QString> errors;
 
-    while (eit2 != english.pc.anchors.end())
+    while (eit2 != english.pc.anchors.constEnd())
     {
         if (eit2.data() == translated.pc.anchors[eit2.key()]) {
             QString key = eit2.key();
@@ -34,7 +34,7 @@ int main( int argc, char **argv )
     }
 
     if (report_mismatches && errors.count()) {
-        for (QMap<int, QString>::ConstIterator it = errors.begin(); it != errors.end(); ++it)
+        for (QMap<int, QString>::ConstIterator it = errors.constBegin(); it != errors.constEnd(); ++it)
         {
             if (translated.pc.anchors.contains(it.data()))
                 fprintf(stderr, "id=\"%s\" not in the same paragraphs (%d vs %d)\n", it.data().latin1(),
@@ -66,7 +66,7 @@ int main( int argc, char **argv )
     {
 	if ((*it).msgid == "ROLES_OF_TRANSLATORS") {
             if ((*it).msgstr.length() && !(*it).msgstr.contains("ROLES_OF_TRANSLATORS")) {
-	        have_roles_of_translators = true; 
+	        have_roles_of_translators = true;
             }
             else {
                 MsgList::Iterator tmp = it;
@@ -78,7 +78,7 @@ int main( int argc, char **argv )
 
         if ((*it).msgid == "CREDIT_FOR_TRANSLATORS") {
             if ((*it).msgstr.length() && !(*it).msgstr.contains("CREDIT_FOR_TRANSLATORS")) {
-	        have_credit_for_translators = true; 
+	        have_credit_for_translators = true;
             }
             else {
                 MsgList::Iterator tmp = it;

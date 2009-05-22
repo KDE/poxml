@@ -284,7 +284,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
     if (msg.msgid.isEmpty())
         return true;
 
-    for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++);
+    for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++)
+        ;
     stripWhiteSpace( msg.msgid );
 
     // removing starting single tags
@@ -304,7 +305,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             msg.msgid = msg.msgid.mid(strindex + 1);
             changed = true;
             offset += strindex + 1;
-            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++) ;
+            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
+                ;
             stripWhiteSpace( msg.msgid );
         }
     }
@@ -319,7 +321,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         changed = true;
     }
 
-    for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++) ;
+    for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
+        ;
     stripWhiteSpace( msg.msgid );
 
     while (true) {
@@ -355,7 +358,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             QString attr = msg.msgid.left(strindex);
             msg.msgid = msg.msgid.mid(strindex + 1);
             offset += strindex + 1;
-            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++) ;
+            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
+                ;
             stripWhiteSpace( msg.msgid );
             msg.tag = starttag;
 
@@ -864,17 +868,20 @@ void outputMsg(const char *prefix, const QString &message)
             cout << prefix << " \"" << escape(line).utf8().data() << "\"\n";
     } else {
         cout << prefix << " \"\"\n";
-        for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++) {
+        QStringList::ConstIterator last = list.constEnd();
+        if (!list.isEmpty())
+            --last;
+        for (QStringList::ConstIterator it = list.constBegin(); it != list.constEnd(); it++) {
             line = *it;
             if (!line.isEmpty()) {
                 cout << "      \"" << escape(line).utf8().data();
-                if (it == list.fromLast())
+                if (it == last)
                     cout << "\"\n";
                 else
                     cout << "\\n\"\n";
             } else {
                 cout << "      \"";
-                if (it != list.fromLast())
+                if (it != last)
                     cout << "\\n";
                 cout << "\"\n";
             }
