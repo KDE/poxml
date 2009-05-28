@@ -49,7 +49,7 @@ static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "titl
 				    "othercredit", "affiliation", "qandaset",
 				    "cmdsynopsis", "funcsynopsis", "funcsynopsisinfo" ,
 				    "epigraph", "attribution", "glossary", "chapterinfo",
-				    "glossdiv", "blockingquote", "simplesect", "section",
+				    "glossdiv", "blockquote", "simplesect", "section",
 				    "qandadiv", "refsect1", "refmeta", "formalpara",
 				    "refentry", "refnamediv", "refpurpose", "refentrytitle",
                                     "refmiscinfo", "refsect2", "refsect3", "refsect1info",
