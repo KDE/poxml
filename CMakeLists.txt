@@ -1,5 +1,8 @@
 project(poxml)
 
+# TODO port away from QT3_SUPPORT
+add_definitions(-DQT3_SUPPORT)
+
 add_subdirectory(antlr) 
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/antlr)
