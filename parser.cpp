@@ -63,7 +63,7 @@ static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 
 bool StructureParser::fatalError ( const QXmlParseException &e )
 {
-    cerr << "fatalError " << e.message().latin1() << " " << e.lineNumber() << " "
+    cerr << "fatalError " << qPrintable(e.message()) << " " << e.lineNumber() << " "
          << e.columnNumber() << endl;
     return false;
 }
@@ -121,7 +121,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
                                     const QString& qName,
                                     const QXmlAttributes & attr )
 {
-    QString tname = qName.lower();
+    QString tname = qName.toLower();
 
     bool first = false;
 
@@ -194,8 +194,8 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
     int index = 0;
     while (true)
     {
-        int nextclose = message.find(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)), index);
-        int nextstart = message.find(QRegExp(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
+        int nextclose = message.indexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)), index);
+        int nextstart = message.indexOf(QRegExp(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
         //  qDebug("finding %d %d %d %d", nextstart, nextclose, index, inside);
         if (nextclose == -1) {
 #ifdef POXML_DEBUG
@@ -436,9 +436,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 #endif
 
                 // the exception for poxml_* attributes is made in the closing tag
-                int closing_index = message.find(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
+                int closing_index = message.indexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
                                                  strindex);
-                int starting_index = message.find(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
+                int starting_index = message.indexOf(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
                                                   strindex);
 
 #ifdef POXML_DEBUG
@@ -547,9 +547,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
 #endif
 
-                int closing_index = message.findRev(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
+                int closing_index = message.lastIndexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
                                                     strindex - 1);
-                int starting_index = message.findRev(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
+                int starting_index = message.lastIndexOf(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
                                                      strindex - 1);
 
 #ifdef POXML_DEBUG
@@ -613,7 +613,7 @@ error:
 
 bool StructureParser::endElement( const QString& , const QString&, const QString& qName)
 {
-    QString tname = qName.lower();
+    QString tname = qName.toLower();
 
     // qDebug("endElement %s - %s %d", tname.latin1(), message.latin1(), inside);
 
@@ -704,7 +704,7 @@ QString StructureParser::descapeLiterals( const QString &_contents) {
 
 void StructureParser::stripWhiteSpace( QString &contents)
 {
-    contents = contents.stripWhiteSpace();
+    contents = contents.trimmed();
     bool changed;
     do {
         changed = false;
@@ -736,13 +736,13 @@ void StructureParser::cleanupTags( QString &contents )
         QRegExp end(QString("</%1[\\s>]").arg(literaltags[index]));
         int strindex = 0;
         while (true) {
-            strindex = contents.find(start, strindex);
+            strindex = contents.indexOf(start, strindex);
             if (strindex < 0)
                 break;
             while (contents.at(strindex) != '>')
                 strindex++;
             strindex++; // one more
-            int endindex = contents.find(end, strindex);
+            int endindex = contents.indexOf(end, strindex);
             QString part = contents.mid(strindex, endindex - strindex);
             QString newpart = escapeLiterals(part);
             contents.replace(strindex, part.length(), newpart);
@@ -810,10 +810,10 @@ static bool removeEmptyTag( QString &contents, const QString & tag)
     QRegExp empty(QString("<%1[^>]*>[\\s\n][\\s\n]*</%2\\s*>").arg(tag).arg(tag));
     int strindex = 0;
     while (true) {
-        strindex = contents.find(empty, strindex);
+        strindex = contents.indexOf(empty, strindex);
         if (strindex < 0)
             break;
-        qDebug("found empty tag %s", tag.latin1());
+        qDebug("found empty tag %s", qPrintable(tag));
         contents.replace(strindex, empty.matchedLength(), " ");
         strindex++;
         return true;
@@ -1035,7 +1035,7 @@ MsgList parseXML(const char *filename)
                 break;
             }
             if (found != msgids.end()) {
-                if (found.data() != (*it).tag) {
+                if (found.value() != (*it).tag) {
 #ifdef POXML_DEBUG
                     qDebug("same msgid for '%s' and '%s'", found.data().latin1(), (*it).tag.latin1());
 #endif

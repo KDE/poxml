@@ -22,13 +22,13 @@ int main( int argc, char **argv )
 
     while (eit2 != english.pc.anchors.constEnd())
     {
-        if (eit2.data() == translated.pc.anchors[eit2.key()]) {
+        if (eit2.value() == translated.pc.anchors[eit2.key()]) {
             QString key = eit2.key();
             eit2++;
             translated.pc.anchors.remove(key);
             english.pc.anchors.remove(key);
         } else {
-            errors[eit2.data()] = eit2.key();
+            errors[eit2.value()] = eit2.key();
             eit2++;
         }
     }
@@ -36,12 +36,12 @@ int main( int argc, char **argv )
     if (report_mismatches && errors.count()) {
         for (QMap<int, QString>::ConstIterator it = errors.constBegin(); it != errors.constEnd(); ++it)
         {
-            if (translated.pc.anchors.contains(it.data()))
-                fprintf(stderr, "id=\"%s\" not in the same paragraphs (%d vs %d)\n", it.data().latin1(),
-                        english.pc.anchors[it.data()], translated.pc.anchors[it.data()]);
+            if (translated.pc.anchors.contains(it.value()))
+                fprintf(stderr, "id=\"%s\" not in the same paragraphs (%d vs %d)\n", qPrintable(it.value()),
+                        english.pc.anchors[it.value()], translated.pc.anchors[it.value()]);
             else {
                 fprintf(stderr, "id=\"%s\" not in the translated paragraphs (it is in paragraph %d in english)\n",
-                        it.data().latin1(), english.pc.anchors[it.data()]);
+                        qPrintable(it.value()), english.pc.anchors[it.value()]);
             }
         }
         ::exit(1);
@@ -92,7 +92,7 @@ int main( int argc, char **argv )
             english[msgids[(*it).msgid]].lines += (*it).lines;
             if (english[msgids[(*it).msgid]].msgstr != (*it).msgstr) {
                 fprintf(stderr, "two different translations for \"%s\" (\"%s\" and \"%s\") - choosing first one\n",
-                        (*it).msgid.latin1(),
+                        qPrintable((*it).msgid),
                         english[msgids[(*it).msgid]].msgstr.local8Bit().data(),
                         (*it).msgstr.local8Bit().data());
 

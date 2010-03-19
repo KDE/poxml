@@ -33,7 +33,7 @@ QString translate(QString xml, QString orig, QString translation)
 
     int index = xml.find(orig);
     if (index == -1) {
-        qWarning("can't find\n%s\nin\n%s", orig.latin1(), xml.latin1());
+        qWarning("can't find\n%s\nin\n%s", qPrintable(orig), qPrintable(xml));
         exit(1);
     }
     if (!translation.isEmpty())
@@ -184,7 +184,7 @@ int main( int argc, char **argv )
 
             if (!descaped.isEmpty()) {
                 if (descaped.at(0) != '<') {
-                    qWarning("the translation of '%s' doesn't start with a tag.", omsgid.latin1());
+                    qWarning("the translation of '%s' doesn't start with a tag.", qPrintable(omsgid));
                     exit(1);
                 }
                 index = 0;
@@ -226,7 +226,7 @@ int main( int argc, char **argv )
         } else {
             if (start_pos != old_pos) {
 		if (start_pos < old_pos) {
-			qDebug("so far: '%s'", output.latin1());
+			qDebug("so far: '%s'", qPrintable(output));
 		}
                 assert(start_pos > old_pos);
                 ts << xml_text.mid(old_pos, start_pos - old_pos);
@@ -246,7 +246,7 @@ int main( int argc, char **argv )
 
     index = 0;
     while (true) {
-        index = output.find(QRegExp(">[^\n]"), index );
+        index = output.indexOf(QRegExp(">[^\n]"), index );
         if ( index == -1 )
             break;
         if ( output.at( index - 1 ) == '/' || output.at( index - 1 ) == '-' ||
