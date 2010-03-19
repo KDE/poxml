@@ -1,11 +1,15 @@
 project(poxml)
 
+set(HAVE_ANTLR FALSE)
+
+find_package(Antlr2)
+if (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
+  set(HAVE_ANTLR TRUE)
+endif (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
+macro_log_feature(HAVE_ANTLR "Antlr" "Language tool for constructing recognizers, compilers, etc" "http://www.antlr2.org/" FALSE "2.x" "Used for the po2xml and swappo tools.")
+
 # TODO port away from QT3_SUPPORT
 add_definitions(-DQT3_SUPPORT)
-
-add_subdirectory(antlr) 
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/antlr)
 
 ########### next target ###############
 
@@ -35,17 +39,29 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  ${KDE4_ENABLE_EXCEPTIONS}")
 
 ########### next target ###############
 
+if (HAVE_ANTLR)
+
+add_custom_command(
+   OUTPUT GettextLexer.cpp GettextLexer.hpp
+          GettextParser.cpp GettextParser.hpp
+          GettextParserTokenTypes.hpp GettextParserTokenTypes.txt
+   COMMAND ${ANTLR2_EXECUTABLE}
+   ARGS -o ${CMAKE_CURRENT_BINARY_DIR} gettext.g
+   DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/gettext.g
+   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+
 set(po2xml_SRCS 
-   GettextLexer.cpp 
-   GettextParser.cpp 
+   ${CMAKE_CURRENT_BINARY_DIR}/GettextLexer.cpp
+   ${CMAKE_CURRENT_BINARY_DIR}/GettextParser.cpp
    po2xml.cpp 
    parser.cpp)
 
 
 kde4_add_executable(po2xml ${po2xml_SRCS})
-add_dependencies(po2xml antlr)
 
-target_link_libraries(po2xml antlr ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
+target_link_libraries(po2xml ${ANTLR2_LIBRARIES} ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS po2xml  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -53,19 +69,19 @@ install(TARGETS po2xml  ${INSTALL_TARGETS_DEFAULT_ARGS})
 ########### next target ###############
 
 set(swappo_SRCS 
-   GettextLexer.cpp 
-   GettextParser.cpp 
+   ${CMAKE_CURRENT_BINARY_DIR}/GettextLexer.cpp
+   ${CMAKE_CURRENT_BINARY_DIR}/GettextParser.cpp
    swappo.cpp 
    parser.cpp)
 
 
 kde4_add_executable(swappo ${swappo_SRCS})
-add_dependencies(swappo antlr)
 
-target_link_libraries(swappo  antlr ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
+target_link_libraries(swappo ${ANTLR2_LIBRARIES} ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS swappo  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
+endif (HAVE_ANTLR)
 
 ########### install files ###############
 
