@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <iostream>
 
+#include <QList>
+
 using namespace std;
 
 int main( int argc, char **argv )
@@ -69,9 +71,7 @@ int main( int argc, char **argv )
 	        have_roles_of_translators = true;
             }
             else {
-                MsgList::Iterator tmp = it;
-	        ++it;
-	        english.remove(tmp);
+	        it = english.erase(it);
             }
             continue;
 	}
@@ -81,9 +81,7 @@ int main( int argc, char **argv )
 	        have_credit_for_translators = true;
             }
             else {
-                MsgList::Iterator tmp = it;
-	        ++it;
-	        english.remove(tmp);
+	        it = english.erase(it);
             }
             continue;
 	}
@@ -93,13 +91,11 @@ int main( int argc, char **argv )
             if (english[msgids[(*it).msgid]].msgstr != (*it).msgstr) {
                 fprintf(stderr, "two different translations for \"%s\" (\"%s\" and \"%s\") - choosing first one\n",
                         qPrintable((*it).msgid),
-                        english[msgids[(*it).msgid]].msgstr.local8Bit().data(),
-                        (*it).msgstr.local8Bit().data());
+                        english[msgids[(*it).msgid]].msgstr.toLocal8Bit().data(),
+                        (*it).msgstr.toLocal8Bit().data());
 
             }
-            MsgList::Iterator tmp = it;
-            it++;
-            english.remove(tmp);
+            it = english.erase(it);
         } else {
             msgids.insert((*it).msgid, index);
             index++;
@@ -130,7 +126,7 @@ int main( int argc, char **argv )
          it != english.end(); ++it)
     {
         cout << "#: ";
-        for (Q3ValueList<BlockInfo>::ConstIterator it2 =
+        for (QList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
             if (it2 != (*it).lines.begin())
                 cout << ", ";

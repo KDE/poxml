@@ -3,8 +3,8 @@
 #include <iostream>
 #include <qfileinfo.h>
 #include <qdatetime.h>
-//Added by qt3to4:
-#include <Q3ValueList>
+
+#include <QList>
 
 using namespace std;
 
@@ -25,9 +25,7 @@ int main( int argc, char **argv )
     {
         if (msgids.contains((*it).msgid)) {
             english[msgids[(*it).msgid]].lines += (*it).lines;
-            MsgList::Iterator tmp = it;
-            it++;
-            english.remove(tmp);
+            it = english.erase(it);
         } else {
             msgids.insert((*it).msgid, index);
             index++;
@@ -35,7 +33,7 @@ int main( int argc, char **argv )
         }
     }
 
-    const QDateTime now = QDateTime::currentDateTime( Qt::UTC );
+    const QDateTime now = QDateTime::currentDateTime().toUTC();
     
     cout << "# SOME DESCRIPTIVE TITLE.\n";
     cout << "# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n";
@@ -45,7 +43,7 @@ int main( int argc, char **argv )
     cout << "msgstr \"\"\n";
     cout << "\"Project-Id-Version: PACKAGE VERSION\\n\"\n";
     cout << "\"Report-Msgid-Bugs-To: http://bugs.kde.org\\n\"\n";
-    cout << "\"POT-Creation-Date: " << now.toString("yyyy-MM-dd hh:mm").utf8().data() << "+0000\\n\"\n";
+    cout << "\"POT-Creation-Date: " << now.toString("yyyy-MM-dd hh:mm").toUtf8().data() << "+0000\\n\"\n";
     cout << "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
     cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
     cout << "\"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\\n\"\n";
@@ -59,13 +57,13 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = english.begin();
          it != english.end(); ++it)
     {
-        cout << "#. Tag: " << (*it).tag.utf8().data() << endl;
+        cout << "#. Tag: " << (*it).tag.toUtf8().data() << endl;
         cout << "#: ";
-        for (Q3ValueList<BlockInfo>::ConstIterator it2 =
+        for (QList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
             if (it2 != (*it).lines.begin())
                 cout << " ";
-            cout << fname.utf8().data() << ":" << (*it2).start_line;
+            cout << fname.toUtf8().data() << ":" << (*it2).start_line;
 
         }
         cout << "\n";

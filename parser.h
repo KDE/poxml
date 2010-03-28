@@ -4,8 +4,8 @@
 #include <qxml.h>
 #include <qmap.h>
 #include <qregexp.h>
-//Added by qt3to4:
-#include <Q3ValueList>
+
+#include <QList>
 
 struct BlockInfo {
     int start_line;
@@ -33,7 +33,7 @@ class MsgBlock {
     MsgBlock(const MsgBlock &rhs ) {
         *this = rhs;
     }
-    Q3ValueList<BlockInfo> lines;
+    QList<BlockInfo> lines;
     QString tag;
     QString comment;
     QString msgid;
@@ -74,14 +74,14 @@ public:
     int current;
 };
 
-class MsgList : public Q3ValueList<MsgBlock>
+class MsgList : public QList<MsgBlock>
 {
 public:
     MsgList() {}
     ParaCounter pc;
 
     MsgList & operator+=( const MsgList & other ) {
-        Q3ValueList<MsgBlock>::operator+=( other );
+        QList<MsgBlock>::operator+=( other );
         pc += other.pc;
         return *this;
     }

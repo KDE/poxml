@@ -7,7 +7,6 @@
 #include <qregexp.h>
 //Added by qt3to4:
 #include <QTextStream>
-#include <Q3CString>
 
 using namespace std;
 
@@ -237,7 +236,7 @@ void StructureParser::descape(QString &message)
     bool lastws = false;
 
     while (index < message.length()) {
-        switch (message.at(index).latin1()) {
+        switch (message.at(index).toLatin1()) {
             case '\n':
             case '\t':
             case '\r':
@@ -344,7 +343,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         QString orig = msg.msgid;
 
         QString endtag = msg.msgid.mid(endindex + 2, msg.msgid.length() - (endindex + 2) - 1);
-        QString endtag_attr = endtag.mid(endtag.find(' '), endtag.length());
+        QString endtag_attr = endtag.mid(endtag.indexOf(' '), endtag.length());
         endtag.remove(infos_reg);
         if (endtag == starttag) {
             if (!closureTag(msg.msgid, starttag))
@@ -363,7 +362,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             stripWhiteSpace( msg.msgid );
             msg.tag = starttag;
 
-            if (infos_reg.search(attr) >= 0) {
+            if (infos_reg.indexIn(attr) >= 0) {
                 msg.lines.first().start_line = infos_reg.cap(1).toInt();
                 msg.lines.first().start_col = infos_reg.cap(2).toInt();
 #ifdef POXML_DEBUG
@@ -371,12 +370,12 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
 #endif
                 offset = 0;
 
-                if (infos_reg.search(endtag_attr) >= 0) {
+                if (infos_reg.indexIn(endtag_attr) >= 0) {
                     msg.lines.first().end_line = infos_reg.cap(1).toInt();
                     msg.lines.first().end_col = infos_reg.cap(2).toInt() + 1;
                 }
             }
-            if (do_not_split_reg.search(attr) >= 0) {
+            if (do_not_split_reg.indexIn(attr) >= 0) {
                 msg.do_not_split = true;
                 break;
             }
@@ -516,7 +515,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 return result;
             }
             result = splitMessage(msg1);
-            result += splitMessage(msg2);
+            result.append(splitMessage(msg2));
             return result;
         }
 
@@ -528,8 +527,8 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
         while (endindex >= 0 && (message.at(endindex) != '<' || message.at(endindex + 1) != '/'))
             endindex--;
         QString tag = message.mid(endindex + 2, message.length() - endindex - 3);
-        if (tag.find(' ') > 0 ) {
-            tag = tag.left(tag.find(' '));
+        if (tag.indexOf(' ') > 0 ) {
+            tag = tag.left(tag.indexOf(' '));
         }
 #ifdef POXML_DEBUG
         qDebug("behind tag %s", tag.latin1());
@@ -601,7 +600,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 #endif
 
             result = splitMessage(msg1);
-            result += splitMessage(msg2);
+            result.append(splitMessage(msg2));
 
             return result;
         }
@@ -653,7 +652,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                 // if the remaining text still starts with a tag, the poxml_ info
                 // is most probably more correct
                 if (!(*it).msgid.isEmpty() && (*it).msgid.at(0) == '<' && isClosure((*it).msgid)) {
-                    if (infos_reg.search((*it).msgid) >= 0) {
+                    if (infos_reg.indexIn((*it).msgid) >= 0) {
                         (*it).lines.first().start_line = infos_reg.cap(1).toInt();
                         (*it).lines.first().start_col =  infos_reg.cap(2).toInt();;
                         (*it).lines.first().offset = 0;
@@ -754,7 +753,7 @@ void StructureParser::cleanupTags( QString &contents )
     QRegExp unclosed("</(\\w*)\\s\\s*>");
     int index = -1;
     while (true) {
-        index = unclosed.search(contents, index + 1);
+        index = unclosed.indexIn(contents, index + 1);
         if (index < 0)
             break;
         QString tag = unclosed.cap(1);
@@ -766,7 +765,7 @@ void StructureParser::cleanupTags( QString &contents )
 
     index = -1;
     while (true) {
-        index = start.search(contents, index + 1);
+        index = start.indexIn(contents, index + 1);
         if (index < 0)
             break;
         QString tag = start.cap(1);
@@ -778,7 +777,7 @@ void StructureParser::cleanupTags( QString &contents )
 
     index = -1;
     while (true) {
-        index = singletag.search(contents, index + 1);
+        index = singletag.indexIn(contents, index + 1);
         if (index < 0)
             break;
         QString tag = singletag.cap(1);
@@ -790,7 +789,7 @@ void StructureParser::cleanupTags( QString &contents )
     QRegExp trans_comment("<!-- TRANS:([^<>]*)-->");
     index = -1;
     while (true) {
-        index = trans_comment.search(contents, index + 1);
+        index = trans_comment.indexIn(contents, index + 1);
         if (index < 0)
             break;
         QString msgid = trans_comment.cap(1);
@@ -857,7 +856,7 @@ QString escape(QString message)
 
 void outputMsg(const char *prefix, const QString &message)
 {
-    QStringList list = QStringList::split('\n', message, true);
+    QStringList list = message.split('\n');
     QString line;
 
     if (list.count() == 1) {
@@ -865,7 +864,7 @@ void outputMsg(const char *prefix, const QString &message)
         if (line.isEmpty())
             cout << prefix << " \"\"\n";
         else
-            cout << prefix << " \"" << escape(line).utf8().data() << "\"\n";
+            cout << prefix << " \"" << escape(line).toUtf8().data() << "\"\n";
     } else {
         cout << prefix << " \"\"\n";
         QStringList::ConstIterator last = list.constEnd();
@@ -874,7 +873,7 @@ void outputMsg(const char *prefix, const QString &message)
         for (QStringList::ConstIterator it = list.constBegin(); it != list.constEnd(); it++) {
             line = *it;
             if (!line.isEmpty()) {
-                cout << "      \"" << escape(line).utf8().data();
+                cout << "      \"" << escape(line).toUtf8().data();
                 if (it == last)
                     cout << "\"\n";
                 else
@@ -893,7 +892,7 @@ QString escapePO(QString msgid)
 {
     int index = 0;
     while (true) {
-        index = msgid.find("\\n", index);
+        index = msgid.indexOf("\\n", index);
         if (index == -1)
             break;
         if (index >= 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
@@ -904,7 +903,7 @@ QString escapePO(QString msgid)
     }
     index = 0;
     while (true) {
-        index = msgid.find("\\\"", index);
+        index = msgid.indexOf("\\\"", index);
         if (index == -1)
             break;
         if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\')
@@ -914,7 +913,7 @@ QString escapePO(QString msgid)
     }
     index = 0;
     while (true) {
-        index = msgid.find("\\t", index);
+        index = msgid.indexOf("\\t", index);
         if (index == -1)
             break;
         if (index > 0 && msgid.at(index - 1) == '\\')
@@ -924,7 +923,7 @@ QString escapePO(QString msgid)
     }
     index = 0;
     while (true) {
-        index = msgid.find("\\\\", index);
+        index = msgid.indexOf("\\\\", index);
         if (index == -1)
             break;
         msgid.replace(index, 2, "\\");
@@ -982,7 +981,7 @@ MsgList parseXML(const char *filename)
 
     // Remove all entity definitions now:
     while (true) {
-        int index = contents.find("<!ENTITY");
+        int index = contents.indexOf("<!ENTITY");
         if (index < 0)
             break;
         int inside = 0;
@@ -990,7 +989,7 @@ MsgList parseXML(const char *filename)
         QString replacement = "";
         while (contents.at(endindex) != '>' || inside)
         {
-            switch (contents.at(endindex).latin1()) {
+            switch (contents.at(endindex).toLatin1()) {
                 case '<':
                     inside++; break;
                 case '>':
@@ -1007,8 +1006,8 @@ MsgList parseXML(const char *filename)
         contents.replace(index, endindex - index, replacement);
     }
 
-    QTextStream ts(contents.utf8(), QIODevice::ReadOnly);
-    QXmlInputSource source( ts );
+    QTextStream ts(contents.toUtf8(), QIODevice::ReadOnly);
+    QXmlInputSource source( ts.device() );
     QXmlSimpleReader reader;
     reader.setFeature( "http://trolltech.com/xml/features/report-start-end-entity", true);
     reader.setContentHandler( &handler );

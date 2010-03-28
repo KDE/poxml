@@ -8,9 +8,6 @@ if (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
 endif (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
 macro_log_feature(HAVE_ANTLR "Antlr" "Language tool for constructing recognizers, compilers, etc" "http://www.antlr2.org/" FALSE "2.x" "Used for the po2xml and swappo tools.")
 
-# TODO port away from QT3_SUPPORT
-add_definitions(-DQT3_SUPPORT)
-
 ########### next target ###############
 
 set(split2po_SRCS split.cpp parser.cpp)

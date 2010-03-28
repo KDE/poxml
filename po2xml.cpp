@@ -5,8 +5,8 @@
 #include <iostream>
 #include <assert.h>
 #include <qregexp.h>
-//Added by qt3to4:
-#include <Q3ValueList>
+
+#include <QList>
 #include <QTextStream>
 
 #include <fstream>
@@ -22,7 +22,7 @@ QString translate(QString xml, QString orig, QString translation)
     QString prefix;
     while (xml.at(0) == '<' && orig.at(0) != '<') {
         // a XML tag as prefix
-        int index = xml.find('>');
+        int index = xml.indexOf('>');
         assert(index != -1);
         index++;
         while (xml.at(index) == ' ')
@@ -31,7 +31,7 @@ QString translate(QString xml, QString orig, QString translation)
         xml = xml.mid(index, xml.length());
     }
 
-    int index = xml.find(orig);
+    int index = xml.indexOf(orig);
     if (index == -1) {
         qWarning("can't find\n%s\nin\n%s", qPrintable(orig), qPrintable(xml));
         exit(1);
@@ -68,7 +68,7 @@ int main( int argc, char **argv )
     {
         QString msgstr;
         QString msgid = escapePO((*it).msgid);
-        if ((*it).comment.find("fuzzy") < 0)
+        if ((*it).comment.indexOf("fuzzy") < 0)
             msgstr = escapePO((*it).msgstr);
 
 #ifdef POXML_DEBUG
@@ -80,18 +80,18 @@ int main( int argc, char **argv )
     QFile xml(argv[1]);
     xml.open(QIODevice::ReadOnly);
     QTextStream ds(&xml);
-    ds.setEncoding(QTextStream::UnicodeUTF8);
-    QString xml_text = ds.read();
+    ds.setCodec("UTF-8");
+    QString xml_text = ds.readAll();
     xml.close();
     QString output;
     QTextStream ts(&output, QIODevice::WriteOnly);
     StructureParser::cleanupTags(xml_text);
 
-    Q3ValueList<int> line_offsets;
+    QList<int> line_offsets;
     line_offsets.append(0);
     int index = 0;
     while (true) {
-        index = xml_text.find('\n', index) + 1;
+        index = xml_text.indexOf('\n', index) + 1;
         if (index <= 0)
             break;
         line_offsets.append(index);
@@ -140,7 +140,7 @@ int main( int argc, char **argv )
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
         int index = 0;
         while (true) {
-            index = xml.find("<!--");
+            index = xml.indexOf("<!--");
             if (index == -1)
                 break;
             int end_index = index + 4;
@@ -259,6 +259,6 @@ int main( int argc, char **argv )
     }
     output = StructureParser::descapeLiterals(output);
 
-    cout << output.utf8().data();
+    cout << output.toUtf8().data();
     return 0;
 }
