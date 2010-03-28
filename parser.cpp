@@ -515,7 +515,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 return result;
             }
             result = splitMessage(msg1);
-            result.append(splitMessage(msg2));
+            result += splitMessage(msg2);
             return result;
         }
 
@@ -600,7 +600,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 #endif
 
             result = splitMessage(msg1);
-            result.append(splitMessage(msg2));
+            result += splitMessage(msg2);
 
             return result;
         }
