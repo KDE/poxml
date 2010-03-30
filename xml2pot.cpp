@@ -54,8 +54,8 @@ int main( int argc, char **argv )
 
     const QString fname = QFileInfo(argv[1]).fileName();
 
-    for (MsgList::ConstIterator it = english.begin();
-         it != english.end(); ++it)
+    for (MsgList::ConstIterator it = english.constBegin();
+         it != english.constEnd(); ++it)
     {
         cout << "#. Tag: " << (*it).tag.toUtf8().data() << endl;
         cout << "#: ";

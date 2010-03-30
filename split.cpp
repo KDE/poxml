@@ -49,9 +49,9 @@ int main( int argc, char **argv )
         ::exit(1);
     }
 
-    MsgList::ConstIterator tit = translated.begin();
+    MsgList::ConstIterator tit = translated.constBegin();
     for (MsgList::Iterator it = english.begin();
-         it != english.end() && tit != translated.end();
+         it != english.end() && tit != translated.constEnd();
          ++tit, ++it)
     {
         (*it).msgstr = (*tit).msgid;
@@ -105,7 +105,7 @@ int main( int argc, char **argv )
 
     int counter = 1;
 
-    while (tit != translated.end())
+    while (tit != translated.constEnd())
     {
         MsgBlock mb;
         mb.msgid = QString::fromLatin1("appended paragraph %1").arg(counter++);
@@ -122,8 +122,8 @@ int main( int argc, char **argv )
     cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
     cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
 
-    for (MsgList::ConstIterator it = english.begin();
-         it != english.end(); ++it)
+    for (MsgList::ConstIterator it = english.constBegin();
+         it != english.constEnd(); ++it)
     {
         cout << "#: ";
         for (QList<BlockInfo>::ConstIterator it2 =
