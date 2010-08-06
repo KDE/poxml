@@ -2,7 +2,7 @@ project(poxml)
 
 set(HAVE_ANTLR FALSE)
 
-find_package(Antlr2)
+macro_optional_find_package(Antlr2)
 if (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
   set(HAVE_ANTLR TRUE)
 endif (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
@@ -49,10 +49,10 @@ add_custom_command(
 )
 
 
-set(po2xml_SRCS 
+set(po2xml_SRCS
    ${CMAKE_CURRENT_BINARY_DIR}/GettextLexer.cpp
    ${CMAKE_CURRENT_BINARY_DIR}/GettextParser.cpp
-   po2xml.cpp 
+   po2xml.cpp
    parser.cpp)
 
 
@@ -65,10 +65,10 @@ install(TARGETS po2xml  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
-set(swappo_SRCS 
+set(swappo_SRCS
    ${CMAKE_CURRENT_BINARY_DIR}/GettextLexer.cpp
    ${CMAKE_CURRENT_BINARY_DIR}/GettextParser.cpp
-   swappo.cpp 
+   swappo.cpp
    parser.cpp)
 
 
@@ -92,7 +92,7 @@ endif (HAVE_ANTLR)
 #bin_PROGRAMS = split2po xml2pot po2xml swappo
 #
 #INCLUDES = -I$(srcdir)/antlr $(all_includes)
-#KDE_CXXFLAGS = $(USE_EXCEPTIONS) 
+#KDE_CXXFLAGS = $(USE_EXCEPTIONS)
 #
 #SUBDIRS = antlr
 #
@@ -121,10 +121,10 @@ endif (HAVE_ANTLR)
 #lauri.pot: xml2pot lauri.xml
 #	checkXML $(srcdir)/lauri.xml
 #	./xml2pot $(srcdir)/lauri.xml > lauri.pot
-#	msgmerge -o lauri.pot lauri.pot lauri.pot 
+#	msgmerge -o lauri.pot lauri.pot lauri.pot
 #
 #$(srcdir)/lauri.po: lauri.pot
-#	msgmerge -o $(srcdir)/lauri.po $(srcdir)/lauri.po lauri.pot 
+#	msgmerge -o $(srcdir)/lauri.po $(srcdir)/lauri.po lauri.pot
 #	msgfmt --statistics $(srcdir)/lauri.po -o /dev/null
 #
 #lauri_de.xml: po2xml $(srcdir)/lauri.po $(srcdir)/lauri.xml
