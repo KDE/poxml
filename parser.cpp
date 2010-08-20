@@ -56,6 +56,7 @@ static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "titl
                                     "refsynopsisdiv", "refsysnopsisdivinfo", "remark",
                                     "revdescription", "glossentry", "partinfo",
 				    "segmentedlist", "segtitle", "seg", "seglistitem", "screenco",
+				    "titleabbrev", "date", "authorinitials", "holder", "releaseinfo",
                                     0};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
