@@ -24,8 +24,8 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    for (MsgList::ConstIterator it = translated.begin();
-         it != translated.end(); ++it)
+    for (MsgList::ConstIterator it = translated.constBegin();
+         it != translated.constEnd(); ++it)
     {
         if ( !( *it ).msgstr.isEmpty() ) {
             outputMsg("msgid", (*it).msgstr);

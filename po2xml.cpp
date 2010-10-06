@@ -63,8 +63,8 @@ int main( int argc, char **argv )
     }
 
     QMap<QString, QString> translations;
-    for (MsgList::ConstIterator it = translated.begin();
-         it != translated.end(); ++it)
+    for (MsgList::ConstIterator it = translated.constBegin();
+         it != translated.constEnd(); ++it)
     {
         QString msgstr;
         QString msgid = escapePO((*it).msgid);
