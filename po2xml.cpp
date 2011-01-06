@@ -17,7 +17,7 @@
 
 using namespace std;
 
-QString translate(QString xml, QString orig, QString translation)
+QString translate(QString xml, const QString &orig, const QString &translation)
 {
     QString prefix;
     while (xml.at(0) == '<' && orig.at(0) != '<') {
@@ -67,7 +67,7 @@ int main( int argc, char **argv )
          it != translated.constEnd(); ++it)
     {
         QString msgstr;
-        QString msgid = escapePO((*it).msgid);
+        const QString msgid = escapePO((*it).msgid);
         if ((*it).comment.indexOf("fuzzy") < 0)
             msgstr = escapePO((*it).msgstr);
 
