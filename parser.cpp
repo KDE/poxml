@@ -1055,6 +1055,29 @@ MsgList parseXML(const char *filename)
         }
     } while (changed);
 
+    // Remove any single word command block since
+    // it does not make sense to translate a command line command
+    {
+        MsgList::Iterator it = english.begin();
+        while (it != english.end())
+        {
+            if ((*it).tag == QLatin1String("command"))
+            {
+                bool hasSpaces = false;
+                for (int i = 0; !hasSpaces && i < (*it).msgid.length(); ++i)
+                    hasSpaces = (*it).msgid[i].isSpace();
+                if (!hasSpaces)
+                    it = english.erase(it);
+                else
+                    ++it;
+            }
+            else
+            {
+                ++it;
+            }
+        }
+    }
+
     return english;
 }
 
