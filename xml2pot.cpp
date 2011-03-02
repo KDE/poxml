@@ -48,7 +48,7 @@ int main( int argc, char **argv )
     cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
     cout << "\"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\\n\"\n";
     cout << "\"MIME-Version: 1.0\\n\"\n";
-    cout << "\"Content-Type: application/x-xml2pot; charset=UTF-8\\n\"\n";
+    cout << "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
     cout << "\"Content-Transfer-Encoding: 8bit\\n\"\n";
     cout << "\n";
 
