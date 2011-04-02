@@ -42,7 +42,7 @@ static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "titl
                                     "calloutlist", "callout", "subtitle",
 				    "table", "part", "xi:fallback", "primary",
                                     "secondary", "chapter", "sect1", "sect2",
-                                    "figure", "abstract", "sect3", "sect", "sect4",
+                                    "figure", "informalfigure", "abstract", "sect3", "sect", "sect4",
                                     "warning", "preface", "authorgroup", "keywordset",
 				    "informaltable", "qandaentry", "question", "answer",
 				    "othercredit", "affiliation", "qandaset",
