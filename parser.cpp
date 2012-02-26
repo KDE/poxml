@@ -311,7 +311,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         }
     }
 
-    while (msg.msgid.right(2) == "/>")
+    while (msg.msgid.right(2) == "/>" && msg.msgid.startsWith('<'))
     {
         int strindex = msg.msgid.length() - 2;
         while (msg.msgid.at(strindex) != '<')
@@ -356,7 +356,13 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             while (msg.msgid.at(strindex) != '>')
                 strindex++;
             QString attr = msg.msgid.left(strindex);
+            QString real_attr = attr.mid(starttag.length() + 1);
+            const int real_attr_infos_reg_pos = infos_reg.indexIn(real_attr);
+            if (real_attr_infos_reg_pos >= 0) {
+                real_attr = real_attr.left(real_attr_infos_reg_pos);
+            }
             msg.msgid = msg.msgid.mid(strindex + 1);
+            msg.attrs = real_attr;
             offset += strindex + 1;
             for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
                 ;
@@ -1045,7 +1051,7 @@ MsgList parseXML(const char *filename)
                          it2 != english.end(); it2++)
                     {
                         if ((*it2).msgid == msgid)
-                            (*it2).msgid = QString("<%1>").arg((*it2).tag) + msgid + QString("</%1>").arg((*it2).tag);
+                            (*it2).msgid = QString("<%1%2>").arg((*it2).tag).arg((*it2).attrs) + msgid + QString("</%1>").arg((*it2).tag);
                     }
                     break;
                 }
