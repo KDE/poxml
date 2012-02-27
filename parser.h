@@ -35,6 +35,7 @@ class MsgBlock {
     }
     QList<BlockInfo> lines;
     QString tag;
+    QString attrs;
     QString comment;
     QString msgid;
     QString msgid_plural;
@@ -46,6 +47,7 @@ class MsgBlock {
     void operator=(const MsgBlock& rhs) {
         lines = rhs.lines;
         tag = rhs.tag;
+        attrs = rhs.attrs;
         comment = rhs.comment;
         msgid = rhs.msgid;
 	msgid_plural = rhs.msgid_plural;
