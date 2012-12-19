@@ -1,5 +1,13 @@
 project(poxml)
 
+# search packages used by KDE
+find_package(KDE4 REQUIRED)
+include(KDE4Defaults)
+add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} ${KDEPIMLIBS_INCLUDE_DIR})
+
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules )
+
 set(HAVE_ANTLR FALSE)
 
 macro_optional_find_package(Antlr2)
@@ -8,6 +16,7 @@ if (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
 endif (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
 macro_log_feature(HAVE_ANTLR "Antlr" "Language tool for constructing recognizers, compilers, etc" "http://www.antlr2.org/" FALSE "2.x" "Used for the po2xml and swappo tools.")
 
+add_subdirectory( doc )
 ########### next target ###############
 
 set(split2po_SRCS split.cpp parser.cpp)
