@@ -89,6 +89,11 @@ target_link_libraries(swappo ${ANTLR2_LIBRARIES} ${QT_QTXML_LIBRARY} ${QT_QTCORE
 
 install(TARGETS swappo  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
+
+add_custom_target(parser
+  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/GettextParser.cpp
+)
+
 endif (HAVE_ANTLR)
 
 
