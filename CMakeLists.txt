@@ -16,6 +16,8 @@ if (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
 endif (ANTLR2_FOUND AND ANTLR2_EXECUTABLE)
 macro_log_feature(HAVE_ANTLR "Antlr" "Language tool for constructing recognizers, compilers, etc" "http://www.antlr2.org/" FALSE "2.x" "Used for the po2xml and swappo tools.")
 
+macro_optional_find_package(Gettext)
+
 add_subdirectory( doc )
 ########### next target ###############
 
@@ -88,6 +90,9 @@ target_link_libraries(swappo ${ANTLR2_LIBRARIES} ${QT_QTXML_LIBRARY} ${QT_QTCORE
 install(TARGETS swappo  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 endif (HAVE_ANTLR)
+
+
+add_subdirectory(tests)
 
 ########### install files ###############
 
