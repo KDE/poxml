@@ -4,7 +4,7 @@
   <!ENTITY lauri "<emphasis>Lauri</emphasis>" > <!ENTITY i18n-file-quit "<menuchoice><shortcut><keycombo action='simul'>&Ctrl;<keycap>Q</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice>">
 ]>
 
-<book>
+<book lang="&language;">
 
 
 <bookinfo>
