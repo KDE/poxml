@@ -896,54 +896,6 @@ void outputMsg(const char *prefix, const QString &message)
     }
 }
 
-QString escapePO(QString msgid)
-{
-    int index = 0;
-    while (true) {
-        index = msgid.indexOf("\\n", index);
-        if (index == -1)
-            break;
-        if (index >= 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\') {
-            msgid.replace(index - 1, 3, "&POXML_LITERALLINEFEED;");
-            index += 3;
-        } else
-            msgid.replace(index, 2, "\n");
-    }
-    index = 0;
-    while (true) {
-        index = msgid.indexOf("\\\"", index);
-        if (index == -1)
-            break;
-        if (index > 1 && msgid.at(index - 1) == '\\' && msgid.at(index - 2) != '\\')
-            msgid.replace(index - 1, 3, "&POXML_LITERALQUOTE;");
-        else
-            msgid.replace(index, 2, "\"");
-    }
-    index = 0;
-    while (true) {
-        index = msgid.indexOf("\\t", index);
-        if (index == -1)
-            break;
-        if (index > 0 && msgid.at(index - 1) == '\\')
-            msgid.replace(index - 1, 3, "\\t");
-        else
-            msgid.replace(index, 2, "\t");
-    }
-    index = 0;
-    while (true) {
-        index = msgid.indexOf("\\\\", index);
-        if (index == -1)
-            break;
-        msgid.replace(index, 2, "\\");
-        index += 1;
-    }
-
-    msgid.replace(QRegExp("&POXML_LITERALLINEFEED;"), "\\n");
-    msgid.replace(QRegExp("&POXML_LITERALQUOTE;"), "\\");
-    return msgid;
-}
-
-
 MsgList parseXML(const char *filename)
 {
     StructureParser handler;
