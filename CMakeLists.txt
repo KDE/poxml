@@ -37,8 +37,6 @@ target_link_libraries(xml2pot ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS xml2pot  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  ${KDE4_ENABLE_EXCEPTIONS}")
-
 
 ########### next target ###############
 
