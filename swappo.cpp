@@ -1,6 +1,5 @@
 #include <iostream>
 #include <gettext-po.h>
-#include <QDebug>
 using namespace std;
 
 static void gettext_xerror(int severity,
@@ -39,7 +38,7 @@ static void gettext_xerror2_null(int,
 int main(int argc, char **argv)
 {
     if ( argc != 2 ) {
-        qWarning( "usage: %s pofile", argv[0] );
+        cerr << "usage: " << argv[0] << " pofile" << endl;
         return -1;
     }
 

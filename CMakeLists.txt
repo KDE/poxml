@@ -65,7 +65,7 @@ set(swappo_SRCS
 
 kde4_add_executable(swappo ${swappo_SRCS})
 
-target_link_libraries(swappo ${GETTEXTPO_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
+target_link_libraries(swappo ${GETTEXTPO_LIBRARY})
 
 install(TARGETS swappo  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
