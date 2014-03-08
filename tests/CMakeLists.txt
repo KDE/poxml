@@ -42,4 +42,10 @@ add_test(
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+add_test(
+  NAME split2po
+  COMMAND split2po ${lauri_xml} lauri_de.xml
+  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 endif ()
