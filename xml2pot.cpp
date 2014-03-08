@@ -64,7 +64,7 @@ int main( int argc, char **argv )
         return 1;
     }
 
-    const QString fname = QFileInfo(argv[1]).fileName();
+    const QByteArray fname = QFileInfo(argv[1]).fileName().toUtf8();
 
     for (MsgList::ConstIterator it = english.constBegin();
          it != english.constEnd(); ++it)
@@ -83,7 +83,7 @@ int main( int argc, char **argv )
         po_message_set_extracted_comments(msg, tagstring.constData());
         for (QList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
-            po_message_add_filepos(msg, fname.toUtf8().constData(), (*it2).start_line);
+            po_message_add_filepos(msg, fname.constData(), (*it2).start_line);
         }
         po_message_set_format(msg, "c-format", 0);
         po_message_set_msgid(msg, StructureParser::descapeLiterals((*it).msgid).toUtf8().constData());
