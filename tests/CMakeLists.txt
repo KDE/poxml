@@ -9,6 +9,7 @@ add_custom_command(
   COMMAND xml2pot ${lauri_xml} > lauri.pot
   COMMAND msgmerge -o lauri.pot lauri.pot lauri.pot
   DEPENDS ${lauri_xml}
+          xml2pot
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
@@ -26,6 +27,7 @@ add_custom_command(
   COMMAND po2xml ${lauri_xml} lauri.po | sed -e "s,<!ENTITY % English,<!ENTITY % German," > lauri_de.xml
   DEPENDS ${lauri_xml}
           ${CMAKE_CURRENT_BINARY_DIR}/lauri.po
+          po2xml
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
   VERBATIM
 )
