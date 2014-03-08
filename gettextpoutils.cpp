@@ -87,6 +87,7 @@ bool createPOWithHeader(const struct poheader *headers, const char *comments,
     }
     po_message_set_fuzzy(msg, 1);
     po_message_set_msgid(msg, "");
+    po_message_set_msgstr(msg, "");
     po_message_insert(it, msg);
 
 #ifdef POXML_DEBUG
