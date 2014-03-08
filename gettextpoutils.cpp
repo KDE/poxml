@@ -89,7 +89,9 @@ bool createPOWithHeader(const struct poheader *headers, const char *comments,
     for (const struct poheader *h = headers; h->name; ++h) {
         char *oldheader = newheader;
         newheader = po_header_set_field(newheader, h->name, h->value);
-        free(oldheader);
+        if (oldheader != header) {
+            free(oldheader);
+        }
         if (!newheader) {
             po_message_iterator_free(it);
             po_file_free(po);
