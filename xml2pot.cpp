@@ -1,3 +1,5 @@
+#define POXML_DEBUG
+
 #include "parser.h"
 #include "gettextpoutils.h"
 #include <stdlib.h>
@@ -55,6 +57,9 @@ int main( int argc, char **argv )
     const char headercomment[] = "SOME DESCRIPTIVE TITLE.\n"
                                   "FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n"
                                   "\n";
+#ifdef POXML_DEBUG
+    qDebug("creating PO header");
+#endif
     if (!createPOWithHeader(headers, headercomment, &po, &out_it)) {
         return 1;
     }
@@ -64,6 +69,9 @@ int main( int argc, char **argv )
     for (MsgList::ConstIterator it = english.constBegin();
          it != english.constEnd(); ++it)
     {
+#ifdef POXML_DEBUG
+        qDebug("adding message: %s", qPrintable((*it).msgid));
+#endif
         po_message_t msg = po_message_create();
         if (!msg) {
             po_message_iterator_free(out_it);
@@ -85,6 +93,9 @@ int main( int argc, char **argv )
     }
 
     po_message_iterator_free(out_it);
+#ifdef POXML_DEBUG
+    qDebug("outputting PO file");
+#endif
     po_file_write(po, "/dev/stdout", &po_msg_handler_cerr);
     po_file_free(po);
 
