@@ -1,6 +1,7 @@
  // #define POXML_DEBUG
 
 #include "parser.h"
+#include "gettextpoutils.h"
 #include <stdlib.h>
 #include <iostream>
 #include <assert.h>
@@ -9,64 +10,23 @@
 #include <QList>
 #include <QTextStream>
 
-#include <gettext-po.h>
-
 using namespace std;
 
-static void gettext_xerror(int severity,
-                           po_message_t /*message*/,
-                           const char *filename, size_t /*lineno*/, size_t /*column*/,
-                           int /*multiline_p*/, const char *message_text)
+static bool readBlock(po_message_t msg, void *data)
 {
-    std::cerr << severity << " " << filename << " " << message_text;
-}
-
-static void gettext_xerror2(int severity,
-                            po_message_t /*message1*/,
-                            const char *filename1, size_t /*lineno1*/, size_t /*column1*/,
-                            int /*multiline_p1*/, const char *message_text1,
-                            po_message_t /*message2*/,
-                            const char *filename2, size_t /*lineno2*/, size_t /*column2*/,
-                            int /*multiline_p2*/, const char *message_text2)
-{
-    std::cerr << severity << " " << filename1 << " " << message_text1 << " " << filename2 << " " << message_text2;
-}
-
-bool readPO(const char *file, MsgList *messages)
-{
-    messages->clear();
-
-    const po_xerror_handler handler = { gettext_xerror, gettext_xerror2 };
-    po_file_t po = po_file_read(file, &handler);
-    if (!po) {
-        return false;
+    if (po_message_is_obsolete(msg)) {
+        return true;
     }
 
-    po_message_iterator_t it = po_message_iterator(po, NULL);
-    po_message_t msg = po_next_message(it);
-    if (!msg || po_message_msgid(msg)[0] != '\0') {
-        po_message_iterator_free(it);
-        po_file_free(po);
-        return false;
-    }
+    MsgList *messages = (MsgList *)data;
+    MsgBlock block;
 
-    while ((msg = po_next_message(it))) {
-        if (po_message_is_obsolete(msg)) {
-            continue;
-        }
+    block.msgid = QString::fromUtf8(po_message_msgid(msg));
+    block.msgid_plural = QString::fromUtf8(po_message_msgid_plural(msg));
+    block.msgstr = QString::fromUtf8(po_message_msgstr(msg));
+    block.comment = QString::fromUtf8(po_message_comments(msg));
 
-        MsgBlock block;
-
-        block.msgid = QString::fromUtf8(po_message_msgid(msg));
-        block.msgid_plural = QString::fromUtf8(po_message_msgid_plural(msg));
-        block.msgstr = QString::fromUtf8(po_message_msgstr(msg));
-        block.comment = QString::fromUtf8(po_message_comments(msg));
-
-        messages->push_front(block);
-    }
-
-    po_message_iterator_free(it);
-    po_file_free(po);
+    messages->push_front(block);
 
     return true;
 }
@@ -105,8 +65,10 @@ int main( int argc, char **argv )
     MsgList english = parseXML(argv[1]);
     MsgList translated;
 
-    if (!readPO(argv[2], &translated))
+    if (!readAndIteratePO(argv[2], &po_msg_handler_cerr,
+                          true, readBlock, &translated)) {
         return 1;
+    }
 
     QMap<QString, QString> translations;
     for (MsgList::ConstIterator it = translated.constBegin();

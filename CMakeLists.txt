@@ -45,6 +45,7 @@ install(TARGETS xml2pot  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 set(po2xml_SRCS
    po2xml.cpp
+   gettextpoutils.cpp
    parser.cpp)
 
 
