@@ -1,4 +1,4 @@
-#define POXML_DEBUG
+// #define POXML_DEBUG
 
 #include "parser.h"
 #include "gettextpoutils.h"
