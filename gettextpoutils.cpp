@@ -17,6 +17,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#define POXML_DEBUG
+
 #include "gettextpoutils.h"
 
 #include <iostream>
@@ -61,6 +63,9 @@ po_xerror_handler po_msg_handler_null = { gettext_xerror_null, gettext_xerror2_n
 bool createPOWithHeader(const struct poheader *headers, const char *comments,
                         po_file_t *out_po, po_message_iterator_t *out_it)
 {
+#ifdef POXML_DEBUG
+    std::cerr << "createPOWithHeader " << headers << ", " << comments << std::endl;
+#endif
     po_file_t po = po_file_create();
     if (!po) {
         return false;
@@ -84,9 +89,15 @@ bool createPOWithHeader(const struct poheader *headers, const char *comments,
     po_message_set_msgid(msg, "");
     po_message_insert(it, msg);
 
+#ifdef POXML_DEBUG
+    std::cerr << "start filling the header" << std::endl;
+#endif
     const char *header = po_file_domain_header(po, NULL);
     char *newheader = (char *)header;
     for (const struct poheader *h = headers; h->name; ++h) {
+#ifdef POXML_DEBUG
+    std::cerr << "\theader, " << (void*)newheader << ", " << newheader << ", " << h->name << std::endl;
+#endif
         char *oldheader = newheader;
         newheader = po_header_set_field(newheader, h->name, h->value);
         if (oldheader != header) {
@@ -98,6 +109,9 @@ bool createPOWithHeader(const struct poheader *headers, const char *comments,
             return false;
         }
     }
+#ifdef POXML_DEBUG
+    std::cerr << "done with the new header, setting it" << std::endl;
+#endif
     po_message_set_msgstr(msg, newheader);
     free(newheader);
 
