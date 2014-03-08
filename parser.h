@@ -133,7 +133,6 @@ private:
     mutable QRegExp do_not_split_reg;
 };
 
-void outputMsg(const char *prefix, const QString &message);
 MsgList parseXML(const char *filename);
 
 #endif

@@ -855,47 +855,6 @@ bool StructureParser::characters(const QString &ch)
     return true;
 }
 
-QString escape(QString message)
-{
-    message.replace(QRegExp("\\\\"), "\\\\");
-    message.replace(QRegExp("\""), "\\\"");
-    return message;
-}
-
-void outputMsg(const char *prefix, const QString &message)
-{
-    QStringList list = message.split('\n');
-    QString line;
-
-    if (list.count() == 1) {
-        line = list.first();
-        if (line.isEmpty())
-            cout << prefix << " \"\"\n";
-        else
-            cout << prefix << " \"" << escape(line).toUtf8().data() << "\"\n";
-    } else {
-        cout << prefix << " \"\"\n";
-        QStringList::ConstIterator last = list.constEnd();
-        if (!list.isEmpty())
-            --last;
-        for (QStringList::ConstIterator it = list.constBegin(); it != list.constEnd(); it++) {
-            line = *it;
-            if (!line.isEmpty()) {
-                cout << "      \"" << escape(line).toUtf8().data();
-                if (it == last)
-                    cout << "\"\n";
-                else
-                    cout << "\\n\"\n";
-            } else {
-                cout << "      \"";
-                if (it != last)
-                    cout << "\\n";
-                cout << "\"\n";
-            }
-        }
-    }
-}
-
 MsgList parseXML(const char *filename)
 {
     StructureParser handler;
