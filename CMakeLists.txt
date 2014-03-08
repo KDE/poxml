@@ -19,12 +19,12 @@ include_directories(${GETTEXTPO_INCLUDE_DIR})
 
 ########### next target ###############
 
-set(split2po_SRCS split.cpp parser.cpp)
+set(split2po_SRCS split.cpp parser.cpp gettextpoutils.cpp)
 
 
 kde4_add_executable(split2po ${split2po_SRCS})
 
-target_link_libraries(split2po ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
+target_link_libraries(split2po ${GETTEXTPO_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS split2po  ${INSTALL_TARGETS_DEFAULT_ARGS})
 

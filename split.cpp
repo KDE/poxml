@@ -1,10 +1,24 @@
 #include "parser.h"
+#include "gettextpoutils.h"
 #include <stdlib.h>
 #include <iostream>
 
 #include <QList>
 
 using namespace std;
+
+static bool insertSimpleMessage(po_message_iterator_t it, const char *msgid,
+                                const char *msgstr)
+{
+    po_message_t msg = po_message_create();
+    if (!msg) {
+        return false;
+    }
+    po_message_set_msgid(msg, msgid);
+    po_message_set_msgstr(msg, msgstr);
+    po_message_insert(it, msg);
+    return true;
+}
 
 int main( int argc, char **argv )
 {
@@ -115,44 +129,63 @@ int main( int argc, char **argv )
         tit++;
     }
 
-    cout << "#, fuzzy\n";
-    cout << "msgid \"\"\n";
-    cout << "msgstr \"\"\n";
-    cout << "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
-    cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
-    cout << "\"Content-Type: text/plain; charset=utf-8\\n\"\n";
+    po_file_t po = NULL;
+    po_message_iterator_t out_it = NULL;
+
+    const struct poheader headers[] = {
+        { "PO-Revision-Date", "YEAR-MO-DA HO:MI+ZONE" },
+        { "Last-Translator", "FULL NAME <EMAIL@ADDRESS>" },
+        { "Content-Type", "text/plain; charset=utf-8" },
+        { 0, 0 }
+    };
+    if (!createPOWithHeader(headers, NULL, &po, &out_it)) {
+        return 1;
+    }
 
     for (MsgList::ConstIterator it = english.constBegin();
          it != english.constEnd(); ++it)
     {
-        cout << "#: ";
+        po_message_t msg = po_message_create();
+        if (!msg) {
+            po_message_iterator_free(out_it);
+            po_file_free(po);
+            return 1;
+        }
+
         for (QList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
-            if (it2 != (*it).lines.begin())
-                cout << ", ";
-            cout << "index.docbook:" << (*it2).start_line;
-
+            po_message_add_filepos(msg, "index.docbook", (*it2).start_line);
         }
-        cout << "\n";
-        outputMsg("msgid", StructureParser::descapeLiterals( (*it).msgid ));
-        outputMsg("msgstr", StructureParser::descapeLiterals( (*it).msgstr ));
-        cout << "\n";
+        po_message_set_msgid(msg, StructureParser::descapeLiterals((*it).msgid).toUtf8().constData());
+        po_message_set_msgstr(msg, StructureParser::descapeLiterals((*it).msgstr).toUtf8().constData());
+
+        po_message_insert(out_it, msg);
     }
 
     if ( !getenv( "NO_CREDITS" ) ) {
 
         if ( !have_roles_of_translators ) {
-            outputMsg("msgid", "ROLES_OF_TRANSLATORS");
-            outputMsg("msgstr", "<!--TRANS:ROLES_OF_TRANSLATORS-->");
-            cout << "\n";
+            if (!insertSimpleMessage(out_it, "ROLES_OF_TRANSLATORS",
+                                     "<!--TRANS:ROLES_OF_TRANSLATORS-->")) {
+                po_message_iterator_free(out_it);
+                po_file_free(po);
+                return 1;
+            }
         }
 
 	if ( !have_credit_for_translators) {
-           outputMsg("msgid", "CREDIT_FOR_TRANSLATORS");
-           outputMsg("msgstr", "<!--TRANS:CREDIT_FOR_TRANSLATORS-->");
-           cout << "\n";
+            if (!insertSimpleMessage(out_it, "CREDIT_FOR_TRANSLATORS",
+                                     "<!--TRANS:CREDIT_FOR_TRANSLATORS-->")) {
+                po_message_iterator_free(out_it);
+                po_file_free(po);
+                return 1;
+            }
         }
     }
+
+    po_message_iterator_free(out_it);
+    po_file_write(po, "/dev/stdout", &po_msg_handler_cerr);
+    po_file_free(po);
 
     return 0;
 }
