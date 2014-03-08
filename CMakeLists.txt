@@ -58,7 +58,8 @@ install(TARGETS po2xml  ${INSTALL_TARGETS_DEFAULT_ARGS})
 ########### next target ###############
 
 set(swappo_SRCS
-   swappo.cpp)
+   swappo.cpp
+   gettextpoutils.cpp)
 
 
 kde4_add_executable(swappo ${swappo_SRCS})
