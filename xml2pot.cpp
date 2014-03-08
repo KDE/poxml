@@ -1,4 +1,5 @@
 #include "parser.h"
+#include "gettextpoutils.h"
 #include <stdlib.h>
 #include <iostream>
 #include <qfileinfo.h>
@@ -34,44 +35,58 @@ int main( int argc, char **argv )
     }
 
     const QDateTime now = QDateTime::currentDateTime().toUTC();
-    
-    cout << "# SOME DESCRIPTIVE TITLE.\n";
-    cout << "# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n";
-    cout << "#\n";
-    cout << "#, fuzzy\n";
-    cout << "msgid \"\"\n";
-    cout << "msgstr \"\"\n";
-    cout << "\"Project-Id-Version: PACKAGE VERSION\\n\"\n";
-    cout << "\"Report-Msgid-Bugs-To: http://bugs.kde.org\\n\"\n";
-    cout << "\"POT-Creation-Date: " << now.toString("yyyy-MM-dd hh:mm").toUtf8().data() << "+0000\\n\"\n";
-    cout << "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
-    cout << "\"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n\"\n";
-    cout << "\"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\\n\"\n";
-    cout << "\"MIME-Version: 1.0\\n\"\n";
-    cout << "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
-    cout << "\"Content-Transfer-Encoding: 8bit\\n\"\n";
-    cout << "\n";
+    const QByteArray datestring = now.toString("yyyy-MM-dd hh:mm").toUtf8() + "+0000";
+
+    po_file_t po = NULL;
+    po_message_iterator_t out_it = NULL;
+
+    const struct poheader headers[] = {
+        { "Project-Id-Version", "PACKAGE VERSION" },
+        { "Report-Msgid-Bugs-To", "http://bugs.kde.org" },
+        { "POT-Creation-Date", datestring.constData() },
+        { "PO-Revision-Date", "YEAR-MO-DA HO:MI+ZONE" },
+        { "Last-Translator", "FULL NAME <EMAIL@ADDRESS>" },
+        { "Language-Team", "LANGUAGE <kde-i18n-doc@kde.org>" },
+        { "MIME-Version", "1.0" },
+        { "Content-Type", "text/plain; charset=UTF-8" },
+        { "Content-Transfer-Encoding", "8bit" },
+        { 0, 0 }
+    };
+    const char headercomment[] = "SOME DESCRIPTIVE TITLE.\n"
+                                  "FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n"
+                                  "\n";
+    if (!createPOWithHeader(headers, headercomment, &po, &out_it)) {
+        return 1;
+    }
 
     const QString fname = QFileInfo(argv[1]).fileName();
 
     for (MsgList::ConstIterator it = english.constBegin();
          it != english.constEnd(); ++it)
     {
-        cout << "#. Tag: " << (*it).tag.toUtf8().data() << endl;
-        cout << "#: ";
+        po_message_t msg = po_message_create();
+        if (!msg) {
+            po_message_iterator_free(out_it);
+            po_file_free(po);
+            return 1;
+        }
+
+        const QByteArray tagstring = "Tag: " + (*it).tag.toUtf8();
+        po_message_set_extracted_comments(msg, tagstring.constData());
         for (QList<BlockInfo>::ConstIterator it2 =
                  (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
-            if (it2 != (*it).lines.begin())
-                cout << " ";
-            cout << fname.toUtf8().data() << ":" << (*it2).start_line;
-
+            po_message_add_filepos(msg, fname.toUtf8().constData(), (*it2).start_line);
         }
-        cout << "\n";
-        cout << "#, no-c-format\n";
-        outputMsg("msgid", StructureParser::descapeLiterals( (*it).msgid ));
-        outputMsg("msgstr", (*it).msgstr );
-        cout << "\n";
+        po_message_set_format(msg, "c-format", 0);
+        po_message_set_msgid(msg, StructureParser::descapeLiterals((*it).msgid).toUtf8().constData());
+        po_message_set_msgstr(msg, (*it).msgstr.toUtf8().constData());
+
+        po_message_insert(out_it, msg);
     }
+
+    po_message_iterator_free(out_it);
+    po_file_write(po, "/dev/stdout", &po_msg_handler_cerr);
+    po_file_free(po);
 
     return 0;
 }

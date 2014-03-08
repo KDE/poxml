@@ -31,12 +31,12 @@ install(TARGETS split2po  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
-set(xml2pot_SRCS xml2pot.cpp parser.cpp)
+set(xml2pot_SRCS xml2pot.cpp parser.cpp gettextpoutils.cpp)
 
 
 kde4_add_executable(xml2pot ${xml2pot_SRCS})
 
-target_link_libraries(xml2pot ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
+target_link_libraries(xml2pot ${GETTEXTPO_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTCORE_LIBRARY})
 
 install(TARGETS xml2pot  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
