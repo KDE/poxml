@@ -8,12 +8,15 @@ include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} ${
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules )
 
-macro_optional_find_package(GettextPO)
-macro_log_feature(GETTEXTPO_FOUND "gettext-po" "A library for processing PO files" "http://www.gnu.org/software/gettext" FALSE "" "Required to build the po2xml and swappo tools.")
+find_package(GettextPO REQUIRED)
+macro_log_feature(GETTEXTPO_FOUND "gettext-po" "A library for processing PO files" "http://www.gnu.org/software/gettext" TRUE "" "Required to build the poxml tools.")
 
 macro_optional_find_package(Gettext)
 
 add_subdirectory( doc )
+
+include_directories(${GETTEXTPO_INCLUDE_DIR})
+
 ########### next target ###############
 
 set(split2po_SRCS split.cpp parser.cpp)
@@ -40,11 +43,6 @@ install(TARGETS xml2pot  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
-if (GETTEXTPO_FOUND)
-
-include_directories(${GETTEXTPO_INCLUDE_DIR})
-
-
 set(po2xml_SRCS
    po2xml.cpp
    parser.cpp)
@@ -69,8 +67,6 @@ target_link_libraries(swappo ${GETTEXTPO_LIBRARY})
 
 install(TARGETS swappo  ${INSTALL_TARGETS_DEFAULT_ARGS})
 
-
-endif ()
 
 
 add_subdirectory(tests)

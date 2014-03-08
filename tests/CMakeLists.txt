@@ -1,7 +1,7 @@
 
 set(lauri_xml "${CMAKE_CURRENT_SOURCE_DIR}/lauri.xml")
 
-if (GETTEXTPO_FOUND AND GETTEXT_FOUND)
+if (GETTEXT_FOUND)
 
 add_custom_command(
   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/lauri.pot
