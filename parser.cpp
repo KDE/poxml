@@ -188,7 +188,7 @@ bool StructureParser::isClosure(const QString &message)
 bool StructureParser::closureTag(const QString& message, const QString &tag)
 {
 #ifdef POXML_DEBUG
-    qDebug("closureTag %s %s", message.latin1(), tag.latin1());
+    qDebug("closureTag %s %s", qPrintable(message), qPrintable(tag));
 #endif
 
     int inside = 0;
@@ -275,7 +275,7 @@ void StructureParser::descape(QString &message)
 bool StructureParser::formatMessage(MsgBlock &msg) const
 {
 #ifdef POXML_DEBUG
-    qDebug("formatMessage %s", msg.msgid.latin1());
+    qDebug("formatMessage %s", qPrintable(msg.msgid));
 #endif
 
     int offset = 0;
@@ -374,7 +374,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
                 msg.lines.first().start_line = infos_reg.cap(1).toInt();
                 msg.lines.first().start_col = infos_reg.cap(2).toInt();
 #ifdef POXML_DEBUG
-                qDebug("col %s %s %d", attr.latin1(), msg.msgid.latin1(), msg.lines.first().start_col);
+                qDebug("col %s %s %d", qPrintable(attr), qPrintable(msg.msgid), msg.lines.first().start_col);
 #endif
                 offset = 0;
 
@@ -394,7 +394,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
     }
 
 #ifdef POXML_DEBUG
-    qDebug("formatMessage result %s %d %d", msg.msgid.latin1(), changed && recurse, msg.lines.first().start_col);
+    qDebug("formatMessage result %s %d %d", qPrintable(msg.msgid), changed && recurse, msg.lines.first().start_col);
 #endif
 
     msg.lines.first().offset += offset;
@@ -417,7 +417,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
     QString message = mb.msgid;
 
 #ifdef POXML_DEBUG
-    qDebug("splitMessage %s", message.latin1());
+    qDebug("splitMessage %s", qPrintable(message));
 #endif
 
     if (!message.isEmpty() && message.at(0) == '<') {
@@ -439,7 +439,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             int inside = 1;
             while (true) {
 #ifdef POXML_DEBUG
-                qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
+                qDebug("inside %s %d", qPrintable(message.mid(strindex, 35)), inside);
 #endif
 
                 // the exception for poxml_* attributes is made in the closing tag
@@ -494,7 +494,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             }
 
 #ifdef POXML_DEBUG
-            qDebug("split into %s -AAAAAANNNNNNDDDDDD- %s", message.left(strindex).latin1(), message.mid(strindex).latin1());
+            qDebug("split into %s -AAAAAANNNNNNDDDDDD- %s", qPrintable(message.left(strindex)), qPrintable(message.mid(strindex)));
 #endif
             msg1.msgid = message.left(strindex);
             bool leave = formatMessage(msg1);
@@ -513,8 +513,8 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
 #ifdef POXML_DEBUG
             qDebug("splited %d-%d(%s) and %d-%d(%s)", msg1.lines.first().end_line,msg1.lines.first().end_col,
-                   msg1.msgid.latin1(),
-                   msg2.lines.first().start_line,msg2.lines.first().start_col, msg2.msgid.latin1());
+                   qPrintable(msg1.msgid),
+                   msg2.lines.first().start_line,msg2.lines.first().start_col, qPrintable(msg2.msgid));
 #endif
 
             if (leave) {
@@ -539,7 +539,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             tag = tag.left(tag.indexOf(' '));
         }
 #ifdef POXML_DEBUG
-        qDebug("behind tag %s", tag.latin1());
+        qDebug("behind tag %s", qPrintable(tag));
 #endif
 
         if (isCuttingTag(tag))
@@ -551,7 +551,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
             int inside = 1;
             while (true) {
 #ifdef POXML_DEBUG
-                qDebug("inside %s %d", message.mid(strindex, 35).latin1(), inside);
+                qDebug("inside %s %d", qPrintable(message.mid(strindex, 35)), inside);
 #endif
 
                 int closing_index = message.lastIndexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
@@ -583,7 +583,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
 
 #ifdef POXML_DEBUG
-            qDebug("split2 into \"%s\" -AAAAAANNNNNNNNNDDDDDDDDDDD- \"%s\"", message.left(strindex).latin1(), message.mid(strindex).latin1());
+            qDebug("split2 into \"%s\" -AAAAAANNNNNNNNNDDDDDDDDDDD- \"%s\"", qPrintable(message.left(strindex)), qPrintable(message.mid(strindex)));
 #endif
 
             msg1.msgid = message.left(strindex);
@@ -603,8 +603,8 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
 #ifdef POXML_DEBUG
             qDebug("splited %d-%d(%s) and %d-%d(%s)", msg1.lines.first().end_line,msg1.lines.first().end_col,
-                   msg1.msgid.latin1(),
-                   msg2.lines.first().start_line,msg2.lines.first().start_col, msg2.msgid.latin1());
+                   qPrintable(msg1.msgid),
+                   msg2.lines.first().start_line,msg2.lines.first().start_col, qPrintable(msg2.msgid));
 #endif
 
             result = splitMessage(msg1);
@@ -622,7 +622,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 {
     QString tname = qName.toLower();
 
-    // qDebug("endElement %s - %s %d", tname.latin1(), message.latin1(), inside);
+    // qDebug("endElement %s - %s %d", qPrintable(tname), qPrintable(message), inside);
 
     if (inside) {
         if (!isSingleTag(qName)) {
@@ -655,7 +655,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                  it != messages.end(); ++it)
             {
 #ifdef POXML_DEBUG
-                qDebug("parser '%s' %d '%s' %d:%d", (*it).msgid.latin1(), (*it).lines.first().offset, message.mid((*it).lines.first().offset, 15).latin1(), (*it).lines.first().start_line, (*it).lines.first().start_col);
+                qDebug("parser '%s' %d '%s' %d:%d", qPrintable((*it).msgid), (*it).lines.first().offset, qPrintable(message.mid((*it).lines.first().offset, 15)), (*it).lines.first().start_line, (*it).lines.first().start_col);
 #endif
                 // if the remaining text still starts with a tag, the poxml_ info
                 // is most probably more correct
@@ -778,7 +778,7 @@ void StructureParser::cleanupTags( QString &contents )
             break;
         QString tag = start.cap(1);
 	QString cut = start.capturedTexts().last();
-        // qDebug("UNCLO %s %d -%s- -%s-", start.cap(0).latin1(), index, tag.latin1(), cut.latin1());
+        // qDebug("UNCLO %s %d -%s- -%s-", qPrintable(start.cap(0)), index, qPrintable(tag), qPrintable(cut));
         contents.replace(index, start.matchedLength(), QString("<%1%2>").arg(tag).arg(cut));
     }
     QRegExp singletag("<(\\w*)\\s([^><]*)/>");
@@ -805,14 +805,14 @@ void StructureParser::cleanupTags( QString &contents )
     }
 
 #ifdef POXML_DEBUG
-    qDebug("final  %s", contents.latin1());
+    qDebug("final  %s", qPrintable(contents));
 #endif
 
 }
 
 static bool removeEmptyTag( QString &contents, const QString & tag)
 {
-//    qDebug("cont %s %s", contents.latin1(), tag.latin1());
+//    qDebug("cont %s %s", qPrintable(contents), qPrintable(tag));
 
     QRegExp empty(QString("<%1[^>]*>[\\s\n][\\s\n]*</%2\\s*>").arg(tag).arg(tag));
     int strindex = 0;
@@ -955,7 +955,7 @@ MsgList parseXML(const char *filename)
             if (found != msgids.end()) {
                 if (found.value() != (*it).tag) {
 #ifdef POXML_DEBUG
-                    qDebug("same msgid for '%s' and '%s'", found.data().latin1(), (*it).tag.latin1());
+                    qDebug("same msgid for '%s' and '%s'", qPrintable(found.value()), qPrintable((*it).tag));
 #endif
                     changed = true;
                     QString msgid = (*it).msgid;

@@ -80,7 +80,7 @@ int main( int argc, char **argv )
             msgstr = (*it).msgstr;
 
 #ifdef POXML_DEBUG
-        qDebug("inserting translations '%s' -> '%s'", msgid.latin1(),msgstr.latin1());
+        qDebug("inserting translations '%s' -> '%s'", qPrintable(msgid), qPrintable(msgstr));
 #endif
         translations.insert(msgid, msgstr);
     }
@@ -212,13 +212,13 @@ int main( int argc, char **argv )
         }
 
 #ifdef POXML_DEBUG
-        qDebug("english \"%s\" ORIG \"%s\" %d(%d-%d) %d(%d-%d) %d %d TRANS \"%s\" %d '%s'", xml.latin1(), (*it).msgid.latin1(),
+        qDebug("english \"%s\" ORIG \"%s\" %d(%d-%d) %d(%d-%d) %d %d TRANS \"%s\" %d '%s'", qPrintable(xml), qPrintable((*it).msgid),
                start_pos, bi.start_line, bi.start_col,
                end_pos, bi.end_line, bi.end_col,
                (*it).lines.first().offset,
                (*it).end,
-               translations[(*it).msgid].latin1(), (*it).end,
-               descaped.latin1()
+               qPrintable(translations[(*it).msgid]), (*it).end,
+               qPrintable(descaped)
             );
 #endif
 
