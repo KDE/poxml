@@ -173,8 +173,7 @@ int main( int argc, char **argv )
         return 1;
     }
 
-    for (MsgList::ConstIterator it = english.constBegin();
-         it != english.constEnd(); ++it)
+    foreach (const MsgBlock &block, english)
     {
         po_message_t msg = po_message_create();
         if (!msg) {
@@ -183,15 +182,14 @@ int main( int argc, char **argv )
             return 1;
         }
 
-        for (QList<BlockInfo>::ConstIterator it2 =
-                 (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
-            po_message_add_filepos(msg, "index.docbook", (*it2).start_line);
+        foreach (const BlockInfo &bi, block.lines) {
+            po_message_add_filepos(msg, "index.docbook", bi.start_line);
         }
-        po_message_set_msgid(msg, StructureParser::descapeLiterals((*it).msgid).toUtf8().constData());
-        po_message_set_msgstr(msg, StructureParser::descapeLiterals((*it).msgstr).toUtf8().constData());
+        po_message_set_msgid(msg, StructureParser::descapeLiterals(block.msgid).toUtf8().constData());
+        po_message_set_msgstr(msg, StructureParser::descapeLiterals(block.msgstr).toUtf8().constData());
 
         // if necessary, mark the message as dubious
-        if (fuzzies.contains((*it).msgid)) {
+        if (fuzzies.contains(block.msgid)) {
             po_message_set_fuzzy(msg, 1);
         }
 

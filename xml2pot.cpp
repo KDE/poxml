@@ -66,11 +66,10 @@ int main( int argc, char **argv )
 
     const QByteArray fname = QFileInfo(QFile::decodeName(argv[1])).fileName().toUtf8();
 
-    for (MsgList::ConstIterator it = english.constBegin();
-         it != english.constEnd(); ++it)
+    foreach (const MsgBlock &block, english)
     {
 #ifdef POXML_DEBUG
-        qDebug("adding message: %s", qPrintable((*it).msgid));
+        qDebug("adding message: %s", qPrintable(block.msgid));
 #endif
         po_message_t msg = po_message_create();
         if (!msg) {
@@ -79,15 +78,14 @@ int main( int argc, char **argv )
             return 1;
         }
 
-        const QByteArray tagstring = "Tag: " + (*it).tag.toUtf8();
+        const QByteArray tagstring = "Tag: " + block.tag.toUtf8();
         po_message_set_extracted_comments(msg, tagstring.constData());
-        for (QList<BlockInfo>::ConstIterator it2 =
-                 (*it).lines.begin(); it2 != (*it).lines.end(); it2++) {
-            po_message_add_filepos(msg, fname.constData(), (*it2).start_line);
+        foreach (const BlockInfo &bi, block.lines) {
+            po_message_add_filepos(msg, fname.constData(), bi.start_line);
         }
         po_message_set_format(msg, "c-format", 0);
-        po_message_set_msgid(msg, StructureParser::descapeLiterals((*it).msgid).toUtf8().constData());
-        po_message_set_msgstr(msg, (*it).msgstr.toUtf8().constData());
+        po_message_set_msgid(msg, StructureParser::descapeLiterals(block.msgid).toUtf8().constData());
+        po_message_set_msgstr(msg, block.msgstr.toUtf8().constData());
 
         po_message_insert(out_it, msg);
     }

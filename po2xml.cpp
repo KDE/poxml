@@ -71,13 +71,12 @@ int main( int argc, char **argv )
     }
 
     QMap<QString, QString> translations;
-    for (MsgList::ConstIterator it = translated.constBegin();
-         it != translated.constEnd(); ++it)
+    foreach (const MsgBlock &block, translated)
     {
         QString msgstr;
-        const QString msgid = (*it).msgid;
-        if ((*it).comment.indexOf("fuzzy") < 0)
-            msgstr = (*it).msgstr;
+        const QString msgid = block.msgid;
+        if (block.comment.indexOf("fuzzy") < 0)
+            msgstr = block.msgstr;
 
 #ifdef POXML_DEBUG
         qDebug("inserting translations '%s' -> '%s'", qPrintable(msgid), qPrintable(msgstr));
