@@ -64,7 +64,7 @@ int main( int argc, char **argv )
         return 1;
     }
 
-    const QByteArray fname = QFileInfo(argv[1]).fileName().toUtf8();
+    const QByteArray fname = QFileInfo(QFile::decodeName(argv[1])).fileName().toUtf8();
 
     for (MsgList::ConstIterator it = english.constBegin();
          it != english.constEnd(); ++it)

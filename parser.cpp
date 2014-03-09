@@ -851,7 +851,7 @@ bool StructureParser::characters(const QString &ch)
 MsgList parseXML(const char *filename)
 {
     StructureParser handler;
-    QFile xmlFile( filename );
+    QFile xmlFile(QFile::decodeName(filename));
     xmlFile.open(QIODevice::ReadOnly);
 
     QByteArray ccontents = xmlFile.readAll();

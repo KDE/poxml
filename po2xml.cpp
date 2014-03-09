@@ -85,7 +85,7 @@ int main( int argc, char **argv )
         translations.insert(msgid, msgstr);
     }
 
-    QFile xml(argv[1]);
+    QFile xml(QFile::decodeName(argv[1]));
     xml.open(QIODevice::ReadOnly);
     QTextStream ds(&xml);
     ds.setCodec("UTF-8");
