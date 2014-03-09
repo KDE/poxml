@@ -11,10 +11,11 @@
 using namespace std;
 
 static int countRev( const QString & str, QChar ch, int idx ) {
+    const int strLength = str.length();
     if ( idx < 0 )
-        idx += str.length();
-    if ( idx >= str.length() )
-        idx = str.length();
+        idx += strLength;
+    else if ( idx >= strLength )
+        idx = strLength;
     int count = 0;
     for ( int i = 0 ; i <= idx ; ++i )
         count += ( str[i] == ch );
@@ -82,7 +83,7 @@ bool StructureParser::isCuttingTag(const QString &qName)
 {
     int index = 0;
     while (cuttingtags[index]) {
-        if (cuttingtags[index] == qName)
+        if (QLatin1String(cuttingtags[index]) == qName)
             return true;
         index++;
     }
@@ -93,7 +94,7 @@ bool StructureParser::isSingleTag(const QString &qName)
 {
     int index = 0;
     while (singletags[index]) {
-        if (singletags[index] == qName)
+        if (QLatin1String(singletags[index]) == qName)
             return true;
         index++;
     }
@@ -104,7 +105,7 @@ bool StructureParser::isLiteralTag(const QString &qName)
 {
     int index = 0;
     while (literaltags[index]) {
-        if (literaltags[index] == qName)
+        if (QLatin1String(literaltags[index]) == qName)
             return true;
         index++;
     }
@@ -114,7 +115,7 @@ bool StructureParser::isLiteralTag(const QString &qName)
 bool StructureParser::skippedEntity ( const QString & name )
 {
     if (inside)
-        message += QString("&%1;").arg(name);
+        message += QString::fromLatin1("&%1;").arg(name);
     return true;
 }
 
@@ -141,13 +142,13 @@ bool StructureParser::startElement( const QString& , const QString& ,
     {
         QString tmp = '<' + tname;
         for (int i = 0; i < attr.length(); i++) {
-            tmp += QString(" %1=\"%2\"").arg(attr.qName(i)).arg(attr.value(i));
+            tmp += QString::fromLatin1(" %1=\"%2\"").arg(attr.qName(i), attr.value(i));
         }
-        tmp += QString(" poxml_line=\"%1\"").arg(locator->lineNumber());
-        tmp += QString(" poxml_col=\"%1\"").arg(locator->columnNumber());
+        tmp += QString::fromLatin1(" poxml_line=\"%1\"").arg(locator->lineNumber());
+        tmp += QString::fromLatin1(" poxml_col=\"%1\"").arg(locator->columnNumber());
 
         if (isSingleTag(qName))
-            tmp += "/>";
+            tmp += QString::fromLatin1("/>");
         else
             tmp += '>';
         message += tmp;
@@ -155,7 +156,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
             startcol -= message.length();
     }
 
-    if (tname == "anchor" || tname.left(4) == "sect" || tname == "chapter")
+    if (tname == QLatin1String("anchor") || tname.leftRef(4) == QLatin1String("sect") || tname == QLatin1String("chapter"))
         if (!attr.value("id").isEmpty()) list.pc.addAnchor(attr.value("id"));
 
     return true;
@@ -164,14 +165,14 @@ bool StructureParser::startElement( const QString& , const QString& ,
 bool StructureParser::startCDATA()
 {
     if ( inside )
-        message += "<![CDATA[";
+        message += QLatin1String("<![CDATA[");
     return true;
 }
 
 bool StructureParser::endCDATA()
 {
     if ( inside )
-        message += "]]>";
+        message += QLatin1String("]]>");
     return true;
 }
 
@@ -179,7 +180,7 @@ bool StructureParser::isClosure(const QString &message)
 {
     assert(message.at(0) == '<');
     int endindex = 1;
-    while (!message.at(endindex).isSpace() && message.at(endindex) != '>')
+    while (!message.at(endindex).isSpace() && message.at(endindex) != QLatin1Char('>'))
         endindex++;
     QString tag = message.mid(1, endindex - 1);
     return closureTag(message, tag);
@@ -193,6 +194,7 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
 
     int inside = 0;
     int index = 0;
+    const int messageLength = message.length();
     while (true)
     {
         int nextclose = message.indexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)), index);
@@ -200,30 +202,28 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
         //  qDebug("finding %d %d %d %d", nextstart, nextclose, index, inside);
         if (nextclose == -1) {
 #ifdef POXML_DEBUG
-            qDebug("ending on no close anymore %d %d %d %d", (!inside && index >= message.length()), inside, index, message.length());
+            qDebug("ending on no close anymore %d %d %d %d", (!inside && index >= messageLength), inside, index, messageLength);
 #endif
-            return !inside && index >= message.length();
+            return !inside && index >= messageLength;
         }
         if (nextstart == -1)
-            nextstart = message.length() + 1;
+            nextstart = messageLength + 1;
 
         if (nextstart < nextclose) {
             inside++;
             index = nextstart + 1;
-            while (message.at(index) != '>')
-                index++;
+            index = message.indexOf(QLatin1Char('>'), index);
             index++;
         } else {
             inside--;
             index = nextclose + 1;
-            while (message.at(index) != '>')
-                index++;
+            index = message.indexOf(QLatin1Char('>'), index);
             index++;
             if (!inside) {
 #ifdef POXML_DEBUG
-                qDebug("ending on exit %d", index >= message.length());
+                qDebug("ending on exit %d", index >= messageLength);
 #endif
-                return index >= message.length();
+                return index >= messageLength;
             }
         }
     }
@@ -285,7 +285,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
     if (msg.msgid.isEmpty())
         return true;
 
-    for (int index = 0; msg.msgid.at(index) == ' '; index++, offset++)
+    for (int index = 0; msg.msgid.at(index) == QLatin1Char(' '); index++, offset++)
         ;
     stripWhiteSpace( msg.msgid );
 
@@ -294,49 +294,47 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
     {
         int slen = strlen(singletags[index]);
 
-        if (msg.msgid.left(slen + 1) == QString::fromLatin1("<%1").arg(singletags[index]) &&
+        if (msg.msgid.at(0) == QLatin1Char('<') && msg.msgid.midRef(1, slen) == QLatin1String(singletags[index]) &&
             !msg.msgid.at( slen + 1 ).isLetterOrNumber() )
         {
 #ifdef POXML_DEBUG
             qDebug("removing single tag %s", singletags[index]);
 #endif
-            int strindex = strlen(singletags[index]) + 1;
-            while (msg.msgid.at(strindex) != '>')
-                strindex++;
+            int strindex = slen + 1;
+            strindex = msg.msgid.indexOf(QLatin1Char('>'), strindex);
             msg.msgid = msg.msgid.mid(strindex + 1);
             changed = true;
             offset += strindex + 1;
-            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
+            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == QLatin1Char(' '); index++, offset++)
                 ;
             stripWhiteSpace( msg.msgid );
         }
     }
 
-    while (msg.msgid.right(2) == "/>" && msg.msgid.startsWith('<'))
+    while (msg.msgid.right(2) == "/>" && msg.msgid.startsWith(QLatin1Char('<')))
     {
         int strindex = msg.msgid.length() - 2;
-        while (msg.msgid.at(strindex) != '<')
-            strindex--;
+        strindex = msg.msgid.lastIndexOf(QLatin1Char('<'), strindex);
         msg.msgid = msg.msgid.left(strindex);
         stripWhiteSpace( msg.msgid ); // only removed space at the end
         changed = true;
     }
 
-    for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
+    for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == QLatin1Char(' '); index++, offset++)
         ;
     stripWhiteSpace( msg.msgid );
 
     while (true) {
-        if (msg.msgid.isEmpty() || msg.msgid.at(0) != '<')
+        if (msg.msgid.isEmpty() || msg.msgid.at(0) != QLatin1Char('<'))
             break;
-        if (msg.msgid.at(msg.msgid.length() - 1) != '>')
+        if (msg.msgid.at(msg.msgid.length() - 1) != QLatin1Char('>'))
             break;
         int strindex = 1;
-        while (msg.msgid.at(strindex) != ' ' && msg.msgid.at(strindex) != '>')
+        while (msg.msgid.at(strindex) != QLatin1Char(' ') && msg.msgid.at(strindex) != QLatin1Char('>'))
             strindex++;
         QString starttag = msg.msgid.mid(1, strindex - 1);
         int endindex = msg.msgid.length() - 2;
-        while (msg.msgid.at(endindex) != '<' && msg.msgid.at(endindex + 1) != '/')
+        while (msg.msgid.at(endindex) != QLatin1Char('<') && msg.msgid.at(endindex + 1) != '/')
             endindex--;
 #ifdef POXML_DEBUG
         qDebug("endIndex %d", endindex);
@@ -345,7 +343,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         QString orig = msg.msgid;
 
         QString endtag = msg.msgid.mid(endindex + 2, msg.msgid.length() - (endindex + 2) - 1);
-        QString endtag_attr = endtag.mid(endtag.indexOf(' '), endtag.length());
+        QString endtag_attr = endtag.mid(endtag.indexOf(QLatin1Char(' ')), endtag.length());
         endtag.remove(infos_reg);
         if (endtag == starttag) {
             if (!closureTag(msg.msgid, starttag))
@@ -353,9 +351,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
 
             // removing start/end tags
             msg.msgid = msg.msgid.left(endindex);
-            strindex = 0;
-            while (msg.msgid.at(strindex) != '>')
-                strindex++;
+            strindex = msg.msgid.indexOf(QLatin1Char('>'), 0);
             QString attr = msg.msgid.left(strindex);
             QString real_attr = attr.mid(starttag.length() + 1);
             const int real_attr_infos_reg_pos = infos_reg.indexIn(real_attr);
@@ -365,7 +361,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             msg.msgid = msg.msgid.mid(strindex + 1);
             msg.attrs = real_attr;
             offset += strindex + 1;
-            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == ' '; index++, offset++)
+            for (int index = 0; index < msg.msgid.length() && msg.msgid.at(index) == QLatin1Char(' '); index++, offset++)
                 ;
             stripWhiteSpace( msg.msgid );
             msg.tag = starttag;
@@ -420,11 +416,12 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
     qDebug("splitMessage %s", qPrintable(message));
 #endif
 
-    if (!message.isEmpty() && message.at(0) == '<') {
+    if (!message.isEmpty() && message.at(0) == QLatin1Char('<')) {
         int endindex = 1;
-        while (!message.at(endindex).isSpace() && message.at(endindex) != '>')
+        while (!message.at(endindex).isSpace() && message.at(endindex) != QLatin1Char('>'))
             endindex++;
         QString tag = message.mid(1, endindex - 1);
+        const int tagLength = tag.length();
 
         if (closureTag(message, tag))
             goto error;
@@ -455,9 +452,8 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 // when a new start was found, we set the start_index after the next match
                 // (and set strindex to it later - increasing inside)
                 if (starting_index != -1) {
-                    starting_index += tag.length() + 1;
-                    while (message.at(starting_index) != '>')
-                        starting_index++;
+                    starting_index += tagLength + 1;
+                    starting_index = message.indexOf(QLatin1Char('>'), starting_index);
                     starting_index++;
                 }
 
@@ -466,8 +462,8 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 #endif
 
                 assert(closing_index != -1);
-                closing_index += 3 + tag.length();
-                while (message.at(closing_index - 1) != '>')
+                closing_index += 3 + tagLength;
+                while (message.at(closing_index - 1) != QLatin1Char('>'))
                     closing_index++;
 
                 if (starting_index == -1) {
@@ -529,14 +525,15 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 
     }
 
-    if (!message.isEmpty() && message.at(message.length() - 1 ) == '>')
+    if (!message.isEmpty() && message.at(message.length() - 1 ) == QLatin1Char('>'))
     {
         int endindex = message.length() - 1;
-        while (endindex >= 0 && (message.at(endindex) != '<' || message.at(endindex + 1) != '/'))
+        while (endindex >= 0 && (message.at(endindex) != QLatin1Char('<') || message.at(endindex + 1) != QLatin1Char('/')))
             endindex--;
         QString tag = message.mid(endindex + 2, message.length() - endindex - 3);
-        if (tag.indexOf(' ') > 0 ) {
-            tag = tag.left(tag.indexOf(' '));
+        const int indexOfSpace = tag.indexOf(QLatin1Char(' '));
+        if (indexOfSpace > 0 ) {
+            tag = tag.left(indexOfSpace);
         }
 #ifdef POXML_DEBUG
         qDebug("behind tag %s", qPrintable(tag));
@@ -626,10 +623,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 
     if (inside) {
         if (!isSingleTag(qName)) {
-            message += QString("</%1").arg(tname);
-            message += QString(" poxml_line=\"%1\"").arg(locator->lineNumber());
-            message += QString(" poxml_col=\"%1\"").arg(locator->columnNumber());
-            message += '>';
+            message += QString::fromLatin1("</%1 poxml_line=\"%2\" poxml_col=\"%3\">").arg(tname).arg(locator->lineNumber()).arg(locator->columnNumber());
         }
     }
 
@@ -659,7 +653,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 #endif
                 // if the remaining text still starts with a tag, the poxml_ info
                 // is most probably more correct
-                if (!(*it).msgid.isEmpty() && (*it).msgid.at(0) == '<' && isClosure((*it).msgid)) {
+                if (!(*it).msgid.isEmpty() && (*it).msgid.at(0) == QLatin1Char('<') && isClosure((*it).msgid)) {
                     if (infos_reg.indexIn((*it).msgid) >= 0) {
                         (*it).lines.first().start_line = infos_reg.cap(1).toInt();
                         (*it).lines.first().start_col =  infos_reg.cap(2).toInt();;
@@ -679,7 +673,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
 
 bool StructureParser::comment ( const QString &c )
 {
-    if (c.left(7) != " TRANS:")
+    if (c.leftRef(7) != QLatin1String(" TRANS:"))
         return true;
 
     assert(false);
@@ -689,11 +683,11 @@ bool StructureParser::comment ( const QString &c )
 QString StructureParser::escapeLiterals( const QString &_contents) {
     QString contents = _contents;
 
-    contents.replace('\n', "&POXML_LINEFEED;");
-    contents.replace('<', "&POXML_LT;");
-    contents.replace('>', "&POXML_GT;");
-    contents.replace('\t', "        ");
-    contents.replace(' ', "&POXML_SPACE;");
+    contents.replace(QChar::fromLatin1('\n'), QString::fromLatin1("&POXML_LINEFEED;"));
+    contents.replace(QChar::fromLatin1('<'), QString::fromLatin1("&POXML_LT;"));
+    contents.replace(QChar::fromLatin1('>'), QString::fromLatin1("&POXML_GT;"));
+    contents.replace(QChar::fromLatin1('\t'), QString::fromLatin1("        "));
+    contents.replace(QChar::fromLatin1(' '), QString::fromLatin1("&POXML_SPACE;"));
 
     return contents;
 }
@@ -701,11 +695,11 @@ QString StructureParser::escapeLiterals( const QString &_contents) {
 QString StructureParser::descapeLiterals( const QString &_contents) {
     QString contents = _contents;
 
-    contents.replace("&POXML_LINEFEED;", "\n");
-    contents.replace("&POXML_LT;", "<");
-    contents.replace("&POXML_GT;", ">");
-    contents.replace("&POXML_SPACE;", " ");
-    contents.replace("!POXML_AMP!", "&");
+    contents.replace(QLatin1String("&POXML_LINEFEED;"), QLatin1String("\n"));
+    contents.replace(QLatin1String("&POXML_LT;"), QLatin1String("<"));
+    contents.replace(QLatin1String("&POXML_GT;"), QLatin1String(">"));
+    contents.replace(QLatin1String("&POXML_SPACE;"), QLatin1String(" "));
+    contents.replace(QLatin1String("!POXML_AMP!"), QLatin1String("&"));
     return contents;
 }
 
@@ -715,20 +709,20 @@ void StructureParser::stripWhiteSpace( QString &contents)
     bool changed;
     do {
         changed = false;
-        if (contents.startsWith("&POXML_LINEFEED;")) {
-            contents = contents.mid(strlen("&POXML_LINEFEED;"), contents.length());
+        if (contents.startsWith(QLatin1String("&POXML_LINEFEED;"))) {
+            contents = contents.mid(strlen("&POXML_LINEFEED;"));
             changed = true;
         }
-        if (contents.startsWith("&POXML_SPACE;")) {
-            contents = contents.mid(strlen("&POXML_SPACE;"), contents.length());
+        if (contents.startsWith(QLatin1String("&POXML_SPACE;"))) {
+            contents = contents.mid(strlen("&POXML_SPACE;"));
             changed = true;
         }
-        if (contents.endsWith("&POXML_LINEFEED;")) {
-            contents = contents.left(contents.length() - strlen("&POXML_LINEFEED;"));
+        if (contents.endsWith(QLatin1String("&POXML_LINEFEED;"))) {
+            contents.chop(strlen("&POXML_LINEFEED;"));
             changed = true;
         }
-        if (contents.endsWith("&POXML_SPACE;")) {
-            contents = contents.left( contents.length() - strlen("&POXML_SPACE;"));
+        if (contents.endsWith(QLatin1String("&POXML_SPACE;"))) {
+            contents.chop(strlen("&POXML_SPACE;"));
             changed = true;
         }
     } while (changed);
@@ -736,18 +730,17 @@ void StructureParser::stripWhiteSpace( QString &contents)
 
 void StructureParser::cleanupTags( QString &contents )
 {
-    contents.replace('&', "!POXML_AMP!");
+    contents.replace(QChar::fromLatin1('&'), QString::fromLatin1("!POXML_AMP!"));
 
     for (int index = 0; literaltags[index]; index++) {
-        QRegExp start(QString("<%1[\\s>]").arg(literaltags[index]));
-        QRegExp end(QString("</%1[\\s>]").arg(literaltags[index]));
+        QRegExp start(QString::fromLatin1("<%1[\\s>]").arg(literaltags[index]));
+        QRegExp end(QString::fromLatin1("</%1[\\s>]").arg(literaltags[index]));
         int strindex = 0;
         while (true) {
             strindex = contents.indexOf(start, strindex);
             if (strindex < 0)
                 break;
-            while (contents.at(strindex) != '>')
-                strindex++;
+            strindex = contents.indexOf(QLatin1Char('>'), strindex);
             strindex++; // one more
             int endindex = contents.indexOf(end, strindex);
             QString part = contents.mid(strindex, endindex - strindex);
@@ -765,7 +758,7 @@ void StructureParser::cleanupTags( QString &contents )
         if (index < 0)
             break;
         QString tag = unclosed.cap(1);
-        contents.replace(index, unclosed.matchedLength(), QString("</%1>").arg(tag));
+        contents.replace(index, unclosed.matchedLength(), QString::fromLatin1("</%1>").arg(tag));
     }
 
     QRegExp start("<((\\s*[^<>\\s])*)\\s\\s*(/*)>");
@@ -779,7 +772,7 @@ void StructureParser::cleanupTags( QString &contents )
         QString tag = start.cap(1);
 	QString cut = start.capturedTexts().last();
         // qDebug("UNCLO %s %d -%s- -%s-", qPrintable(start.cap(0)), index, qPrintable(tag), qPrintable(cut));
-        contents.replace(index, start.matchedLength(), QString("<%1%2>").arg(tag).arg(cut));
+        contents.replace(index, start.matchedLength(), QString::fromLatin1("<%1%2>").arg(tag, cut));
     }
     QRegExp singletag("<(\\w*)\\s([^><]*)/>");
 
@@ -790,7 +783,7 @@ void StructureParser::cleanupTags( QString &contents )
             break;
         QString tag = singletag.cap(1);
         if (!StructureParser::isSingleTag(tag)) {
-            contents.replace(index, singletag.matchedLength(), QString("<%1 %2></%3>").arg(tag).arg(singletag.cap(2)).arg(tag));
+            contents.replace(index, singletag.matchedLength(), QString::fromLatin1("<%1 %2></%3>").arg(tag, singletag.cap(2), tag));
         }
     }
 
@@ -801,7 +794,7 @@ void StructureParser::cleanupTags( QString &contents )
         if (index < 0)
             break;
         QString msgid = trans_comment.cap(1);
-        contents.replace(index, trans_comment.matchedLength(), QString("<trans_comment>%1</trans_comment>").arg(msgid));
+        contents.replace(index, trans_comment.matchedLength(), QString::fromLatin1("<trans_comment>%1</trans_comment>").arg(msgid));
     }
 
 #ifdef POXML_DEBUG
@@ -814,7 +807,7 @@ static bool removeEmptyTag( QString &contents, const QString & tag)
 {
 //    qDebug("cont %s %s", qPrintable(contents), qPrintable(tag));
 
-    QRegExp empty(QString("<%1[^>]*>[\\s\n][\\s\n]*</%2\\s*>").arg(tag).arg(tag));
+    QRegExp empty(QString::fromLatin1("<%1[^>]*>[\\s\n]+</%2\\s*>").arg(tag, tag));
     int strindex = 0;
     while (true) {
         strindex = contents.indexOf(empty, strindex);
@@ -835,14 +828,14 @@ void StructureParser::removeEmptyTags( QString &contents )
         removed = false;
 
         for (int index = 0; cuttingtags[index]; index++) {
-            if (removeEmptyTag(contents, cuttingtags[index])) {
+            if (removeEmptyTag(contents, QLatin1String(cuttingtags[index]))) {
                 removed = true;
                 break;
             }
         }
         // as glossterm has two different semantics, it's likely
         // to break something when it's cuttingtag
-        if (removeEmptyTag(contents, "glossterm"))
+        if (removeEmptyTag(contents, QLatin1String("glossterm")))
             removed = true;
 
     } while (removed);
@@ -947,8 +940,7 @@ MsgList parseXML(const char *filename)
         {
             QMap<QString,QString>::Iterator found = msgids.find((*it).msgid);
             if ((*it).msgid.length() < 4) {
-                (*it).msgid = QString("<%1>").arg((*it).tag) + (*it).msgid +
-                              QString("</%1>").arg((*it).tag);
+                (*it).msgid = QString::fromLatin1("<%1>%2</%3>").arg((*it).tag, (*it).msgid, (*it).tag);
                 changed = true;
                 break;
             }
@@ -963,7 +955,7 @@ MsgList parseXML(const char *filename)
                          it2 != english.end(); it2++)
                     {
                         if ((*it2).msgid == msgid)
-                            (*it2).msgid = QString("<%1%2>").arg((*it2).tag).arg((*it2).attrs) + msgid + QString("</%1>").arg((*it2).tag);
+                            (*it2).msgid = QString::fromLatin1("<%1%2>%3</%4>").arg((*it2).tag, (*it2).attrs, msgid, (*it2).tag);
                     }
                     break;
                 }
