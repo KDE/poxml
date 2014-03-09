@@ -201,8 +201,7 @@ int main( int argc, char **argv )
     if ( !getenv( "NO_CREDITS" ) ) {
 
         if ( !have_roles_of_translators ) {
-            if (!insertSimpleMessage(out_it, "ROLES_OF_TRANSLATORS",
-                                     "<!--TRANS:ROLES_OF_TRANSLATORS-->")) {
+            if (!insertSimpleMessage(out_it, "ROLES_OF_TRANSLATORS", "")) {
                 po_message_iterator_free(out_it);
                 po_file_free(po);
                 return 1;
@@ -210,8 +209,7 @@ int main( int argc, char **argv )
         }
 
 	if ( !have_credit_for_translators) {
-            if (!insertSimpleMessage(out_it, "CREDIT_FOR_TRANSLATORS",
-                                     "<!--TRANS:CREDIT_FOR_TRANSLATORS-->")) {
+            if (!insertSimpleMessage(out_it, "CREDIT_FOR_TRANSLATORS", "")) {
                 po_message_iterator_free(out_it);
                 po_file_free(po);
                 return 1;
