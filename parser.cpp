@@ -294,7 +294,8 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
     {
         int slen = strlen(singletags[index]);
 
-        if (msg.msgid.at(0) == QLatin1Char('<') && msg.msgid.midRef(1, slen) == QLatin1String(singletags[index]) &&
+        if (!msg.msgid.isEmpty() &&
+            msg.msgid.at(0) == QLatin1Char('<') && msg.msgid.midRef(1, slen) == QLatin1String(singletags[index]) &&
             !msg.msgid.at( slen + 1 ).isLetterOrNumber() )
         {
 #ifdef POXML_DEBUG
