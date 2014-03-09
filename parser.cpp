@@ -269,7 +269,7 @@ void StructureParser::descape(QString &message)
 
         index++;
     }
-    message.remove(QRegExp("\010"));
+    message.remove('\010');
 }
 
 bool StructureParser::formatMessage(MsgBlock &msg) const
@@ -666,7 +666,7 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
                         (*it).lines.first().offset = 0;
                     }
                 }
-                (*it).msgid.replace(infos_reg, QString());
+                (*it).msgid.remove(infos_reg);
 
                 if (!(*it).msgid.isEmpty())
                     list.append(*it);
@@ -689,11 +689,11 @@ bool StructureParser::comment ( const QString &c )
 QString StructureParser::escapeLiterals( const QString &_contents) {
     QString contents = _contents;
 
-    contents.replace(QRegExp("\n"), "&POXML_LINEFEED;");
-    contents.replace(QRegExp("<"), "&POXML_LT;");
-    contents.replace(QRegExp(">"), "&POXML_GT;");
-    contents.replace(QRegExp("\t"), "        ");
-    contents.replace(QRegExp(" "), "&POXML_SPACE;");
+    contents.replace('\n', "&POXML_LINEFEED;");
+    contents.replace('<', "&POXML_LT;");
+    contents.replace('>', "&POXML_GT;");
+    contents.replace('\t', "        ");
+    contents.replace(' ', "&POXML_SPACE;");
 
     return contents;
 }
@@ -701,11 +701,11 @@ QString StructureParser::escapeLiterals( const QString &_contents) {
 QString StructureParser::descapeLiterals( const QString &_contents) {
     QString contents = _contents;
 
-    contents.replace(QRegExp("&POXML_LINEFEED;"), "\n");
-    contents.replace(QRegExp("&POXML_LT;"), "<");
-    contents.replace(QRegExp("&POXML_GT;"), ">");
-    contents.replace(QRegExp("&POXML_SPACE;"), " ");
-    contents.replace(QRegExp("!POXML_AMP!"), "&");
+    contents.replace("&POXML_LINEFEED;", "\n");
+    contents.replace("&POXML_LT;", "<");
+    contents.replace("&POXML_GT;", ">");
+    contents.replace("&POXML_SPACE;", " ");
+    contents.replace("!POXML_AMP!", "&");
     return contents;
 }
 
@@ -736,7 +736,7 @@ void StructureParser::stripWhiteSpace( QString &contents)
 
 void StructureParser::cleanupTags( QString &contents )
 {
-    contents.replace(QRegExp("&"), "!POXML_AMP!");
+    contents.replace('&', "!POXML_AMP!");
 
     for (int index = 0; literaltags[index]; index++) {
         QRegExp start(QString("<%1[\\s>]").arg(literaltags[index]));
@@ -821,7 +821,7 @@ static bool removeEmptyTag( QString &contents, const QString & tag)
         if (strindex < 0)
             break;
         qDebug("found empty tag %s", qPrintable(tag));
-        contents.replace(strindex, empty.matchedLength(), " ");
+        contents.replace(strindex, empty.matchedLength(), ' ');
         strindex++;
         return true;
     }

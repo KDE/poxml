@@ -158,7 +158,7 @@ int main( int argc, char **argv )
             {
                 end_index++;
             }
-            xml.replace(index, end_index + 1 - index, "");
+            xml.remove(index, end_index + 1 - index);
             index = end_index;
         }
         StructureParser::descape(xml);
