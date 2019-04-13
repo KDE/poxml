@@ -92,25 +92,25 @@ public:
 class StructureParser : public QXmlDefaultHandler
 {
 public:
-    bool startDocument();
+    bool startDocument() override;
     bool startElement( const QString&, const QString&, const QString& ,
-                       const QXmlAttributes& );
-    bool endElement( const QString&, const QString&, const QString& );
-    bool characters( const QString &ch);
+                       const QXmlAttributes& ) override;
+    bool endElement( const QString&, const QString&, const QString& ) override;
+    bool characters( const QString &ch) override;
     static bool isCuttingTag(const QString &tag);
     static bool isSingleTag(const QString &qName);
     static bool isLiteralTag(const QString &qName);
-    void setDocumentLocator ( QXmlLocator * l ) { locator = l; }
-    bool skippedEntity ( const QString & name );
-    bool fatalError ( const QXmlParseException & );
-    bool comment ( const QString & );
-    bool error(const QXmlParseException &e ) { return fatalError(e); }
-    bool warning(const QXmlParseException &e ) { return fatalError(e); }
+    void setDocumentLocator ( QXmlLocator * l ) override { locator = l; }
+    bool skippedEntity ( const QString & name ) override;
+    bool fatalError ( const QXmlParseException & ) override;
+    bool comment ( const QString & ) override;
+    bool error(const QXmlParseException &e ) override { return fatalError(e); }
+    bool warning(const QXmlParseException &e ) override { return fatalError(e); }
     MsgList getList() const { return list; }
     MsgList splitMessage(const MsgBlock &message);
 
-    virtual bool startCDATA();
-    virtual bool endCDATA();
+    bool startCDATA() override;
+    bool endCDATA() override;
 
     static bool closureTag(const QString& message, const QString &tag);
     static bool isClosure(const QString &message);
