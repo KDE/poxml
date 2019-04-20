@@ -505,7 +505,7 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                  msg1.lines.first().end_col > msg2.lines.first().start_col))
             {
                 msg2.lines.first().start_line = msg1.lines.first().end_line;
-                msg2.lines.first().start_col = msg1.lines.first().end_col;
+                msg2.lines.first().start_col = msg1.lines.first().end_col - 1;
             }
 
 #ifdef POXML_DEBUG

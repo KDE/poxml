@@ -28,9 +28,9 @@
 <sect2>
 <title>Section 1.1</title>
   <anchor id="try"/>
-       <para><emphasis><emphasis role="blah">Warum kann ich
-        meinem Rechner nicht einfach
-        ausschalten?</emphasis></emphasis>Hier noch</para>
+       <para><emphasis><emphasis role="blah">Why can't I
+        switch off my computer
+        easily?</emphasis></emphasis>Some more</para>
     <para><application>me</application> can't be turned off.</para>
 <para>
   <note><para>
@@ -233,6 +233,12 @@ Send             ppp
         /** the modified flag of the current document */
         bool modified;
 </programlisting>
+</para>
+<para>
+  <itemizedlist>
+    <listitem><para>Yellow ducks</para></listitem>
+    <listitem><para>Pink flamingos</para><!-- not pink floyds --></listitem>
+  </itemizedlist>Extra text we want intact
 </para>
 </sect2>
 </sect1>
