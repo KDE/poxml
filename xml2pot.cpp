@@ -44,7 +44,7 @@ int main( int argc, char **argv )
 
     const struct poheader headers[] = {
         { "Project-Id-Version", "PACKAGE VERSION" },
-        { "Report-Msgid-Bugs-To", "http://bugs.kde.org" },
+        { "Report-Msgid-Bugs-To", "https://bugs.kde.org" },
         { "POT-Creation-Date", datestring.constData() },
         { "PO-Revision-Date", "YEAR-MO-DA HO:MI+ZONE" },
         { "Last-Translator", "FULL NAME <EMAIL@ADDRESS>" },

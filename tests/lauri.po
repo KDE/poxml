@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pure_nonsense\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2019-04-19 08:07+0000\n"
 "PO-Revision-Date: 2019-04-19 09:45+0100\n"
 "Last-Translator: Eric Bischoff <bischoff@kde.org>\n"
