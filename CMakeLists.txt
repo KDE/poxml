@@ -82,7 +82,9 @@ install(TARGETS swappo  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 
-add_subdirectory(tests)
+if (BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
 
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
