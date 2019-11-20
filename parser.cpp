@@ -922,7 +922,7 @@ MsgList parseXML(const char *filename)
     QTextStream ts(contents.toUtf8(), QIODevice::ReadOnly);
     QXmlInputSource source( ts.device() );
     QXmlSimpleReader reader;
-    reader.setFeature( "http://trolltech.com/xml/features/report-start-end-entity", true);
+    reader.setFeature( "http://qt-project.org/xml/features/report-start-end-entity", true);
     reader.setContentHandler( &handler );
     reader.setLexicalHandler( &handler );
     reader.setDTDHandler( &handler );
