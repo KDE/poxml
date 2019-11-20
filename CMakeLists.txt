@@ -15,7 +15,7 @@ include(KDECMakeSettings)
 find_package(GettextPO REQUIRED)
 set_package_properties("gettext-po" PROPERTIES
         DESCRIPTION "A library for processing PO files"
-        URL "http://www.gnu.org/software/gettext"
+        URL "https://www.gnu.org/software/gettext"
         TYPE REQUIRED
         PURPOSE "Required to build the poxml tools.")
 
