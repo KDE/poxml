@@ -872,7 +872,7 @@ MsgList parseXML(const char *filename)
             const int start = index;
             index = contents.indexOf( delim, index + rx.matchedLength() );
             index = contents.indexOf( '>', index );
-            if ( !name.startsWith( "i18n-" ) )
+            if ( !name.startsWith( QLatin1String("i18n-") ) )
                 continue;
             const QString entity = contents.mid( start, index - start + 1 );
             MsgBlock block;
