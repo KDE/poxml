@@ -7,6 +7,7 @@
 #include <assert.h>
 #include <qregexp.h>
 
+#include <QFile>
 #include <QList>
 #include <QTextStream>
 
@@ -232,9 +233,9 @@ int main( int argc, char **argv )
             old_pos = end_pos;
         } else {
             if (start_pos != old_pos) {
-		if (start_pos < old_pos) {
-			qDebug("so far: '%s'", qPrintable(output));
-		}
+                if (start_pos < old_pos) {
+                    qDebug("so far: '%s'", qPrintable(output));
+                }
                 assert(start_pos > old_pos);
                 ts << xml_text.mid(old_pos, start_pos - old_pos);
             }

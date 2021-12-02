@@ -5,8 +5,12 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <qregexp.h>
-//Added by qt3to4:
+
+#include <QDebug>
+#include <QFile>
+#include <QRegularExpression>
 #include <QTextStream>
+#include <QXmlStreamReader>
 
 using namespace std;
 
@@ -63,20 +67,12 @@ static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "titl
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 				    "programlisting", 0};
 
-bool StructureParser::fatalError ( const QXmlParseException &e )
-{
-    cerr << "fatalError " << qPrintable(e.message()) << " " << e.lineNumber() << " "
-         << e.columnNumber() << endl;
-    return false;
-}
-
-bool StructureParser::startDocument()
+void StructureParser::startDocument()
 {
     infos_reg = QRegExp("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
     do_not_split_reg = QRegExp("\\s*condition=\"do-not-split\"");
     message = "";
     inside = 0;
-    return true;
 }
 
 bool StructureParser::isCuttingTag(const QString &qName)
@@ -90,7 +86,7 @@ bool StructureParser::isCuttingTag(const QString &qName)
     return isLiteralTag(qName);
 }
 
-bool StructureParser::isSingleTag(const QString &qName)
+bool StructureParser::isSingleTag(const QStringRef &qName)
 {
     int index = 0;
     while (singletags[index]) {
@@ -112,18 +108,15 @@ bool StructureParser::isLiteralTag(const QString &qName)
     return false;
 }
 
-bool StructureParser::skippedEntity ( const QString & name )
+void StructureParser::skippedEntity ( const QStringRef & name )
 {
     if (inside)
         message += QString::fromLatin1("&%1;").arg(name);
-    return true;
 }
 
-bool StructureParser::startElement( const QString& , const QString& ,
-                                    const QString& qName,
-                                    const QXmlAttributes & attr )
+void StructureParser::startElement( int lineNumber, int columnNumber, const QStringRef& qName, const QXmlStreamAttributes & attr )
 {
-    QString tname = qName.toLower();
+    const QString tname = qName.toString().toLower();
 
     bool first = false;
 
@@ -131,8 +124,8 @@ bool StructureParser::startElement( const QString& , const QString& ,
         if (!inside) {
             message = QString();
             list.pc.increasePara();
-            startline = locator->lineNumber();
-            startcol = locator->columnNumber();
+            startline = lineNumber;
+            startcol = columnNumber;
             first = true;
         }
         inside++;
@@ -142,10 +135,10 @@ bool StructureParser::startElement( const QString& , const QString& ,
     {
         QString tmp = '<' + tname;
         for (int i = 0; i < attr.length(); i++) {
-            tmp += QString::fromLatin1(" %1=\"%2\"").arg(attr.qName(i), attr.value(i));
+            tmp += QString::fromLatin1(" %1=\"%2\"").arg(attr[i].qualifiedName(), attr[i].value());
         }
-        tmp += QString::fromLatin1(" poxml_line=\"%1\"").arg(locator->lineNumber());
-        tmp += QString::fromLatin1(" poxml_col=\"%1\"").arg(locator->columnNumber());
+        tmp += QString::fromLatin1(" poxml_line=\"%1\"").arg(lineNumber);
+        tmp += QString::fromLatin1(" poxml_col=\"%1\"").arg(columnNumber);
 
         if (isSingleTag(qName))
             tmp += QString::fromLatin1("/>");
@@ -157,23 +150,7 @@ bool StructureParser::startElement( const QString& , const QString& ,
     }
 
     if (tname == QLatin1String("anchor") || tname.leftRef(4) == QLatin1String("sect") || tname == QLatin1String("chapter"))
-        if (!attr.value("id").isEmpty()) list.pc.addAnchor(attr.value("id"));
-
-    return true;
-}
-
-bool StructureParser::startCDATA()
-{
-    if ( inside )
-        message += QLatin1String("<![CDATA[");
-    return true;
-}
-
-bool StructureParser::endCDATA()
-{
-    if ( inside )
-        message += QLatin1String("]]>");
-    return true;
+        if (!attr.value("id").isEmpty()) list.pc.addAnchor(attr.value("id").toString());
 }
 
 bool StructureParser::isClosure(const QString &message)
@@ -616,15 +593,15 @@ error:
     return result;
 }
 
-bool StructureParser::endElement( const QString& , const QString&, const QString& qName)
+void StructureParser::endElement( int lineNumber, int columnNumber, const QStringRef& qName)
 {
-    QString tname = qName.toLower();
+    const QString tname = qName.toString().toLower();
 
     // qDebug("endElement %s - %s %d", qPrintable(tname), qPrintable(message), inside);
 
     if (inside) {
         if (!isSingleTag(qName)) {
-            message += QString::fromLatin1("</%1 poxml_line=\"%2\" poxml_col=\"%3\">").arg(tname).arg(locator->lineNumber()).arg(locator->columnNumber());
+            message += QString::fromLatin1("</%1 poxml_line=\"%2\" poxml_col=\"%3\">").arg(tname).arg(lineNumber).arg(columnNumber);
         }
     }
 
@@ -638,8 +615,8 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             BlockInfo bi;
             bi.start_line = startline;
             bi.start_col = startcol;
-            bi.end_line = locator->lineNumber();
-            bi.end_col = locator->columnNumber() + 1;
+            bi.end_line = lineNumber;
+            bi.end_col = columnNumber + 1;
             if (m.lines.isEmpty()) bi.offset = 0;
             else bi.offset = m.lines.first().offset;
             m.lines.append(bi);
@@ -668,17 +645,14 @@ bool StructureParser::endElement( const QString& , const QString&, const QString
             }
         }
     }
-
-    return true;
 }
 
-bool StructureParser::comment ( const QString &c )
+void StructureParser::comment ( const QStringRef &c )
 {
-    if (c.leftRef(7) != QLatin1String(" TRANS:"))
-        return true;
+    if (c.left(7) != QLatin1String(" TRANS:"))
+        return;
 
     assert(false);
-    return true;
 }
 
 QString StructureParser::escapeLiterals( const QString &_contents) {
@@ -782,8 +756,8 @@ void StructureParser::cleanupTags( QString &contents )
         index = singletag.indexIn(contents, index + 1);
         if (index < 0)
             break;
-        QString tag = singletag.cap(1);
-        if (!StructureParser::isSingleTag(tag)) {
+        const QString tag = singletag.cap(1);
+        if (!StructureParser::isSingleTag(QStringRef(&tag))) {
             contents.replace(index, singletag.matchedLength(), QString::fromLatin1("<%1 %2></%3>").arg(tag, singletag.cap(2), tag));
         }
     }
@@ -842,16 +816,73 @@ void StructureParser::removeEmptyTags( QString &contents )
     } while (removed);
 }
 
-bool StructureParser::characters(const QString &ch)
+void StructureParser::characters(const QStringRef &ch)
 {
     if (inside && !ch.isEmpty())
         message += ch;
-    return true;
+}
+
+static MsgList parseContents(const QString &contents)
+{
+    QXmlStreamReader xmlReader(contents);
+    StructureParser handler;
+    bool foundDtd = false;
+    while (!xmlReader.atEnd()) {
+        const QXmlStreamReader::TokenType token = xmlReader.readNext();
+        switch (token) {
+            case QXmlStreamReader::StartDocument:
+                handler.startDocument();
+                break;
+            case QXmlStreamReader::EndDocument:
+                // Nothing
+                break;
+            case QXmlStreamReader::Comment:
+                handler.comment(xmlReader.text());
+                break;
+            case QXmlStreamReader::DTD:
+                foundDtd = true;
+                break;
+            case QXmlStreamReader::StartElement:
+                handler.startElement(xmlReader.lineNumber(), xmlReader.columnNumber(), xmlReader.qualifiedName(), xmlReader.attributes());
+                break;
+            case QXmlStreamReader::EndElement:
+                handler.endElement(xmlReader.lineNumber(), xmlReader.columnNumber(), xmlReader.qualifiedName());
+                break;
+            case QXmlStreamReader::Characters:
+                handler.characters(xmlReader.text());
+                break;
+            case QXmlStreamReader::EntityReference:
+                handler.skippedEntity(xmlReader.name());
+                break;
+            case QXmlStreamReader::Invalid:
+                // QXmlStreamReader is annoying and won't accept custom entities like &POXML_LINEFEED;
+                // unless the file has a DTD, so if we fail parsing, inject a DTD into the XML contents and parse again
+                if (!foundDtd) {
+                     const QRegularExpression xmlDeclarationRegExp("^.*<\\?xml.*?\\?>");
+                     const QRegularExpressionMatch match = xmlDeclarationRegExp.match(contents);
+                     const QString fakeDTD = QStringLiteral("<!DOCTYPE fake PUBLIC \"fake\" \"fake\" []>");
+                     if (match.hasMatch()) {
+                         const QString xmlDeclaration = match.captured(0);
+                        return parseContents(xmlDeclaration + fakeDTD + contents.mid(xmlDeclaration.indexOf(xmlDeclaration) + xmlDeclaration.length()));
+                     } else {
+                        return parseContents(fakeDTD + contents);
+                     }
+                }
+                qWarning() << "Invalid token found" << xmlReader.errorString() << xmlReader.lineNumber() << xmlReader.columnNumber() << contents;
+                break;
+            case QXmlStreamReader::ProcessingInstruction:
+                // Nothing
+                break;
+            default:
+                qWarning() << "unexpected token" << token;
+        }
+    }
+
+    return handler.getList();
 }
 
 MsgList parseXML(const char *filename)
 {
-    StructureParser handler;
     QFile xmlFile(QFile::decodeName(filename));
     xmlFile.open(QIODevice::ReadOnly);
 
@@ -919,16 +950,7 @@ MsgList parseXML(const char *filename)
         contents.replace(index, endindex - index, replacement);
     }
 
-    QTextStream ts(contents.toUtf8(), QIODevice::ReadOnly);
-    QXmlInputSource source( ts.device() );
-    QXmlSimpleReader reader;
-    reader.setFeature( "http://qt-project.org/xml/features/report-start-end-entity", true);
-    reader.setContentHandler( &handler );
-    reader.setLexicalHandler( &handler );
-    reader.setDTDHandler( &handler );
-    // reader.setErrorHandler( &handler );
-    reader.parse( source );
-    english += handler.getList();
+    english += parseContents(contents);
 
     bool changed = false;
 

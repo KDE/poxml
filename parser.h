@@ -1,11 +1,12 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#include <qxml.h>
 #include <qmap.h>
 #include <qregexp.h>
 
 #include <QList>
+
+class QXmlStreamAttributes;
 
 struct BlockInfo {
     int start_line;
@@ -89,28 +90,20 @@ public:
     }
 };
 
-class StructureParser : public QXmlDefaultHandler
+class StructureParser
 {
 public:
-    bool startDocument() override;
-    bool startElement( const QString&, const QString&, const QString& ,
-                       const QXmlAttributes& ) override;
-    bool endElement( const QString&, const QString&, const QString& ) override;
-    bool characters( const QString &ch) override;
+    void startDocument();
+    void startElement( int lineNumber, int columnNumber, const QStringRef& qName, const QXmlStreamAttributes & attr );
+    void endElement( int lineNumber, int columnNumber, const QStringRef& qName);
+    void characters( const QStringRef &ch);
     static bool isCuttingTag(const QString &tag);
-    static bool isSingleTag(const QString &qName);
+    static bool isSingleTag(const QStringRef &qName);
     static bool isLiteralTag(const QString &qName);
-    void setDocumentLocator ( QXmlLocator * l ) override { locator = l; }
-    bool skippedEntity ( const QString & name ) override;
-    bool fatalError ( const QXmlParseException & ) override;
-    bool comment ( const QString & ) override;
-    bool error(const QXmlParseException &e ) override { return fatalError(e); }
-    bool warning(const QXmlParseException &e ) override { return fatalError(e); }
+    void skippedEntity ( const QStringRef & name );
+    void comment ( const QStringRef & );
     MsgList getList() const { return list; }
     MsgList splitMessage(const MsgBlock &message);
-
-    bool startCDATA() override;
-    bool endCDATA() override;
 
     static bool closureTag(const QString& message, const QString &tag);
     static bool isClosure(const QString &message);
@@ -124,7 +117,6 @@ public:
 private:
     bool formatMessage(MsgBlock &message) const;
 
-    QXmlLocator *locator;
     QString message;
     int inside, startline, startcol;
     int line;
