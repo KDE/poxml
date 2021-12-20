@@ -44,7 +44,7 @@ resulting translated XML file is sent to standard output.</para>
 <refsect1>
 <title>See Also</title>
 
-<para>split2po(1), swappo(1), transxx(1), xml2pot(1)</para>
+<para>split2po(1), swappo(1), xml2pot(1)</para>
 
 </refsect1>
 
