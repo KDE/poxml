@@ -28,6 +28,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DocTools)
 
 
 add_subdirectory( doc )
+kdoctools_install(po)
 
 include_directories(${GETTEXTPO_INCLUDE_DIR})
 
