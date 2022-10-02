@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Erzeugt aus DocBook XML eine PO-Vorlagendatei.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>ursprüngliches XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+
+<para
+><command
+>xml2pot</command
+> ist ein Werkzeug für die Befehlszeile. Es erzeugt aus DocBook XML-Daten eine PO-Vorlagendatei im Gettext-Format. Das Ergebnis wird auf der Standard-Ausgabe ausgegeben.</para>
+
+<para
+>Die resultierende PO-Vorlage kann verwendet werden, um Gettext PO-Dateien in verschiedenen Sprachen zu erzeugen. Diese können dann wiederum mittels <command
+>po2xml</command
+>(1) in das ursprüngliche XML-Format in verschiedenen Sprachen umgewandelt werden.</para>
+
+
+<para
+>Dieses Hilfsprogramm ist Teil der &kde; Software-Entwicklungswerkzeuge.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1), transxx(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+
+<para
+>Die PO XML-Werkzeuge wurden geschrieben von &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Diese Handbuchseite wurde geschrieben von <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Danish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7. april, 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>swappo</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>swappo</command
+></refname>
+<refpurpose
+>ombyt felterne med originaltekst og oversat tekst i en PO-fil</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>swappo</command
+> <group
+><option
+><replaceable
+>filnavn.po</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivelse</title>
+
+<para
+><command
+>swappo</command
+> læser den givne PO-filen og ombytter felterne med originaltekst og oversat tekst for alle meddelelser. Resultatet er en ny PO-fil som oversætter i modsat retning. Hvis PO-filen for eksempel oversætter fra engelsk til fransk, kommer den nye PO-fil til at oversætte fra fransk til engelsk.</para>
+
+<para
+>Den nye PO-filen skrives til standardudskriften. Den gamle PO-filen forbliver uberørt.</para>
+
+<para
+>Værktøjet er en del af &kde;'s programmeludviklingsmiljø.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Se også</title>
+
+<para
+>po2xml(1), split2po(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Forfattere</title>
+<para
+>PO-XML værktøjet er skrevet af &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Denne manualside er skrevet af <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

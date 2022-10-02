@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Estonian  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7. aprill 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Loob kahest DocBooki XML-failist PO-faili</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>Algne-XML</replaceable
+></option
+> <option
+><replaceable
+>Tõlgitud-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Kirjeldus</title>
+
+<para
+><command
+>split2po</command
+> on käsureatööriist, mis võtab kaks määratud DocBooki XML-faili ja tekitab <command
+>gettext</command
+>i teadetefaili (PO-faili), mis esindab nende erinevusi. Tekitatud PO-fail saadetakse standardväljundisse.</para>
+
+<para
+><filename
+>Tõlgitud-XML</filename
+> peab olema faili <filename
+>algne-XML</filename
+> tõlkimise tulemus mõnesse muusse keelde. Just seda tõlget esindab tulemuseks saadav PO-fail.</para>
+
+<para
+>See utiliit kuulub KDE tarkvaraarenduse komplekti koosseisu. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vaata ka</title>
+
+<para
+>po2xml(1), swappo(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autorid</title>
+
+<para
+>PO-XML-tööriistad kirjutas &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Käesoleva manuaalilehekülje kirjutas <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

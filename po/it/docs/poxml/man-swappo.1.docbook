@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>swappo</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>swappo</command
+></refname>
+<refpurpose
+>inverte i campi msgid e msgstr in un file PO</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>swappo</command
+> <group
+><option
+><replaceable
+>nomefile.po</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrizione</title>
+
+<para
+><command
+>swappo</command
+> legge il file PO specificato e inverte i capi msgid e msgstr di ogni messaggio. Il risultato è un nuovo file PO che traduce nel verso opposto. Per esempio, se un file PO traduce da inglese a francese, il nuovo file PO tradurrà da francese a inglese.</para>
+
+<para
+>Il nuovo file PO sarà inviato sullo standard output. Il vecchio file PO rimarrà inalterato.</para>
+
+<para
+>Questa applicazione è parte del pacchetto di sviluppo software di &kde;.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+
+<para
+>po2xml(1), split2po(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+<para
+>Gli strumenti PO XML sono stati scritti da &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Questa pagina di manuale è stata scritta da <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

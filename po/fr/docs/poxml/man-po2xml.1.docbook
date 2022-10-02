@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % French "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>08-04-2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>po2xml</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>po2xml</command
+></refname>
+<refpurpose
+>Traduit un fichier XML DocBook en utilisant un fichier PO.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>po2xml</command
+> <group
+><option
+><replaceable
+>original-XML</replaceable
+> <replaceable
+>translated-PO</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Description</title>
+
+<para
+><command
+>po2xml</command
+> est un outil en ligne de commande qui traduit le fichier XML DocBook <replaceable
+>original-XML</replaceable
+> en utilisant le fichier de message Gettext <replaceable
+>translated-PO</replaceable
+>. Le fichier XML traduit qui en résulte est envoyé à la sortie standard.</para>
+
+<para
+>Cet utilitaire est un élément du kit de développement logiciel de KDE.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Voir aussi</title>
+
+<para
+>split2po(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>Les outils PO-XML ont été écrits par &Stephan.Kulow; &Stephan.Kulow.mail;.</para>
+<para
+>Le manuel a été écrit par <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

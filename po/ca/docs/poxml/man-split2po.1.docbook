@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 d'abril de 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Crea un fitxer po a partir dos fitxers DocBook XML</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>XML_original</replaceable
+></option
+> <option
+><replaceable
+>XML_traduït</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descripció</title>
+
+<para
+>El <command
+>split2po</command
+> és una ordre de consola que agafa dos fitxers XML de DocBook i genera un fitxer de missatges de <command
+>gettext</command
+> (PO) amb els canvis entre tots dos. El fitxer resultant s'envia a la sortida estàndard.</para>
+
+<para
+>El fitxer <filename
+>XML-traduït</filename
+> haurà de ser el resultat de traduir el fitxer <filename
+>XML-original</filename
+> a un altre idioma. Aquesta traducció és el que el fitxer PO resultant representarà.</para>
+
+<para
+>Aquesta utilitat forma part del joc de desenvolupament de programari del &kde;. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vegeu també</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+
+<para
+>Les eines PO-XML han estat escrites per en &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Aquesta pàgina del manual ha estat preparada per en <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

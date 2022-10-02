@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Spanish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Crea un archivo PO a partir de dos archivos DocBook XML.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>Original-XML</replaceable
+></option
+> <option
+><replaceable
+>Traducción-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descripción</title>
+
+<para
+><command
+>split2po</command
+> es un comando de consola que toma dos archvos DocBook XML y produce un archivo <command
+>gettext</command
+> (PO) con los cambios entre ellos. El archivo resultando se envía a la salida estándar.</para>
+
+<para
+><filename
+>XML-traducido</filename
+> debe ser el resultado de traducir <filename
+>XML-Original</filename
+> a otro idioma. Esta traducción es lo que el archivo PO resultante representará.</para>
+
+<para
+>Esta herramienta forma parte del kit de desarrollo de KDE. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vea también</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+
+<para
+>&Stephan.Kulow; &Stephan.Kulow.mail; ha escrito estas herramientas PO XML.</para>
+<para
+>Página de manual preparada por <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

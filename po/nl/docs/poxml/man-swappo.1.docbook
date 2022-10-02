@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>swappo</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>swappo</command
+></refname>
+<refpurpose
+>Wisselt de msgid en msgstr om in een PO-bestand</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>swappo</command
+> <group
+><option
+><replaceable
+>bestandsnaam.po</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschrijving</title>
+
+<para
+><command
+>swappo</command
+> leest het gegeven PO-bestand in en wisselt voor iedere tekst de msgid en de msgstr om. Het resultaat is een PO-bestand dat vertaalbaar is in de omgekeerde richting. Wanneer in een PO-bestand van Engels naar Nederlands vertaald wordt, zal het resultaat van Nederlands naar Engels vertalen.</para>
+
+<para
+>Het nieuwe PO-bestand zal naar de standaard uitvoer geschreven wordt. Het oorspronkelijke PO-bestand zal niet gewijzigd worden.</para>
+
+<para
+>Dit hulpmiddel is een onderdeel van het software-ontwikkelpakket van &kde;</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+
+<para
+>po2xml(1), split2po(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>De PO-XML-hulpmiddelen zijn geschreven door &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Deze manpage was geschreven door <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

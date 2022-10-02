@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Russian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 апреля 2003 г.</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Создаёт PO-файл, основываясь на оригинальном и переведенном файлах в формате DocBook XML</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>XML-оригинал</replaceable
+></option
+> <option
+><replaceable
+>XML-перевод</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>ОПИСАНИЕ</title>
+
+<para
+><command
+>split2po</command
+> - консольная программа, анализирующая два файла DocBook XML и генерирующая на основе их файл сообщений <command
+>gettext</command
+> (т.н. PO-файл), который фактически содержит изменения во втором файле по сравнению с первым. Генерируемый PO-файл передаётся на стандартный вывод.</para>
+
+<para
+>XML-файлы должны иметь идентичную структуру (набор и порядок тегов и т.д.).</para>
+
+<para
+>Эта утилита является частью пакета KDE Software Development Kit. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>СМ. ТАКЖЕ</title>
+
+<para
+>po2xml(1), swappo(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>АВТОРЫ</title>
+
+<para
+>PO XML tools написаны &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Man-страницу подготовил <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

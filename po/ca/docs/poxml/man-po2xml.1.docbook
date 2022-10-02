@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>8 d'abril de 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>po2xml</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>po2xml</command
+></refname>
+<refpurpose
+>Tradueix un fitxer DocBook XML usant un fitxer PO</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>po2xml</command
+> <group
+><option
+><replaceable
+>XML_original</replaceable
+> <replaceable
+>PO_traduït</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descripció</title>
+
+<para
+>El <command
+>po2xml</command
+> és una ordre que tradueix un fitxer XML de DockBook <replaceable
+>XML-original</replaceable
+> mitjançant un fitxer de missatges de gettext <replaceable
+>PO-traduït</replaceable
+>. El fitxer XML resultant s'envia a l'eixida estàndard.</para>
+
+<para
+>Aquesta utilitat forma part del joc de desenvolupament de programari del &kde;.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vegeu també</title>
+
+<para
+>split2po(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+<para
+>Les eines PO-XML han estat escrites per en &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Aquesta pàgina del manual ha estat preparada per en <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 квітня 2003 року</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Створює файл po з двох файлів XML DocBook</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>Початковий-XML</replaceable
+></option
+> <option
+><replaceable
+>Перекладений-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Опис</title>
+
+<para
+><command
+>split2po</command
+> — це інструмент командного рядка, який за двома вказаними файлами XML DocBook створює файл повідомлень <command
+>gettext</command
+> (файл PO), у якому буде показано відмінності між цими файлами. Остаточний файл PO буде надіслано до стандартного виводу.</para>
+
+<para
+><filename
+>Перекладений-XML</filename
+> має бути результатом перекладу <filename
+>Початкового-XML</filename
+> якоюсь мовою. Саме цей переклад і відбиватиме остаточний файл PO.</para>
+
+<para
+>Цей інструмент є частиною набору для розробки програмного забезпечення KDE. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Прочитайте також</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+
+<para
+>Автором інструментів XML PO є &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Цю сторінку довідника було підготовлено <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

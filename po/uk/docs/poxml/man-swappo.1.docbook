@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 квітня 2003 року</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>swappo</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>swappo</command
+></refname>
+<refpurpose
+>міняє місцями поля msgid і msgstr у файлі PO</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>swappo</command
+> <group
+><option
+><replaceable
+>назва_файла.po</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Опис</title>
+
+<para
+><command
+>swappo</command
+> читає вказаний файл PO і міняє місцями поля msgid і msgstr для кожного з повідомлень. У результаті буде отримано новий файл PO, який виконує переклад у протилежному напрямку. Наприклад, якщо файл PO виконує переклад з англійської на українську, новий файл PO виконуватиме переклад з української на англійську.</para>
+
+<para
+>Новий файл PO буде записано до стандартного виводу. Старий файл PO залишиться незміненим.</para>
+
+<para
+>Цей інструмент є частиною набору інструментів для розробки програм &kde;</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Прочитайте також</title>
+
+<para
+>po2xml(1), split2po(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>Автором інструментів PO-XML є &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Цю сторінку довідника було підготовлено <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

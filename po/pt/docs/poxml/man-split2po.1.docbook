@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 de Abril de 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Cria um ficheiro po a partir de dois ficheiros DocBook XML</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>XML-original</replaceable
+></option
+> <option
+><replaceable
+>XML-traduzido</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrição</title>
+
+<para
+>O <command
+>split2po</command
+> é uma ferramenta da linha de comandos que recebe os dois ficheiros DocBook em XML e produz um ficheiro de mensagens do <command
+>gettext</command
+> (ficheiro PO), que representa as alterações entre estes. O ficheiro PO resultante é enviado para o 'standard output'.</para>
+
+<para
+>O <filename
+>XML-traduzido</filename
+> deverá ser o resultado da tradução do <filename
+>XML-original</filename
+> para outra língua. Esta é a tradução que o ficheiro PO resultante irá representar.</para>
+
+<para
+>Este utilitário faz parte do Kit de Desenvolvimento de Software do KDE. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja Também</title>
+
+<para
+>po2xml(1), swappo(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+
+<para
+>As ferramentas de PO para XML foram criadas por &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Esta página de manual foi preparada por <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

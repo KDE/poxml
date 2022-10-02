@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Spanish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Crea una plantilla PO a partir de un archivo DocBook XML.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>original-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descripción</title>
+
+<para
+><command
+>xml2pot</command
+> es un comando que crea una plantilla de mansajes gettext a partir de un archivo DocBook.<filename
+>original-XML</filename
+>. Dicha plantilla se envía a la  salida estándar.</para>
+
+<para
+>La plantilla resultante puede usarse para crear archivos de mensages gettext (archivos PO) para diversos lenguajes. Puede usarse junto con <command
+>po2xml</command
+> (1) para traducir archivos XML a varios idiomas.</para>
+
+
+<para
+>Esta herramienta forma parte del kit de desarrollo de KDE.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Vea también</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+
+<para
+>&Stephan.Kulow; &Stephan.Kulow.mail; ha escrito las herramientas PO XML.</para>
+<para
+>Esta página de manual fue escrita por <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>

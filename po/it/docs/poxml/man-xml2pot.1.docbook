@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Crea un file modello PO da un file DocBook XML.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>XML originale</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrizione</title>
+
+<para
+><command
+>xml2pot</command
+> è uno strumento a riga di comando che produce un modello di messaggi gettext a partire dal file DocBook XML <filename
+>XML originale</filename
+>. Il file modello è inviato sullo standard output.</para>
+
+<para
+>Il modello risultante può essere usato per creare file di messaggi gettext (file PO) per varie lingue. Questi file PO possono essere usati insieme al comando <command
+>po2xml</command
+>(1) per tradurre il file XML originale nelle varie lingue.</para>
+
+
+<para
+>Questa applicazione è parte del pacchetto di sviluppo software di &kde;.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+
+<para
+>Gli strumenti PO XML sono stati scritti da &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Questa pagina di manuale è stata preparata da <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>

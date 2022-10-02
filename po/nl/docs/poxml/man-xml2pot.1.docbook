@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Maakt een PO-sjabloonbestand aan uit een DocBook XML-bestand.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>originele-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschrijving</title>
+
+<para
+><command
+>xml2pot</command
+> is een commandoregelhulpmiddel die een 'gettext message template'-bestand aanmaakt uit het DocBook XML-bestand <filename
+>originele-XML</filename
+>. Het template/sjabloonbestand gaat naar standaard uitvoer.</para>
+
+<para
+>Het resulterende sjabloonbestand kan worden gebruikt om 'gettext message' bestanden (PO-bestanden) voor andere talen te maken. Deze kunnen dan worden gebruikt, samen met <command
+>po2xml</command
+>(1), om het originele XML-bestand te vertalen in deze andere talen.</para>
+
+
+<para
+>Dit hulpmiddel is een onderdeel van het software-ontwikkelpakket van &kde;.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+
+<para
+>De PO-XML-hulpmiddelen zijn geschreven door &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>De manpage werd geschreven door <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>

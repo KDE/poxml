@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 de abril de 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Cria um arquivo de modelo PO a partir de um arquivo XML do DocBook.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>XML-original</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrição</title>
+
+<para
+>O <command
+>xml2pot</command
+> é uma ferramenta da linha de comando que produz um arquivo de modelo de mensagens do 'gettext' a partir do arquivo XML de DocBook original <filename
+>XML-original</filename
+>. O arquivo de modelo é enviado para o 'standard output'.</para>
+
+<para
+>O arquivo de modelo resultante poderá ser usado para criar arquivos de mensagens do 'gettext' (arquivos PO) para uma variedade de línguas. Estes arquivos poderão então ser usados com o <command
+>po2xml</command
+>(1) para traduzir o arquivo XML original para estas outros idiomas.</para>
+
+
+<para
+>Este utilitário faz parte do Kit de Desenvolvimento de Software do KDE.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja também</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1), transxx(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+
+<para
+>As ferramentas de PO para XML foram criadas por &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Esta página de manual foi preparada por <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>

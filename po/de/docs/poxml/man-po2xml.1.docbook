@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-08</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>po2xml</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>po2xml</command
+></refname>
+<refpurpose
+>Übersetzt eine DocBook-XML-Datei unter Verwendung einer Übersetzungsdatei (.po-Datei).</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>po2xml</command
+> <group
+><option
+><replaceable
+>original-XML</replaceable
+> <replaceable
+>translated-PO</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+
+<para
+><command
+>po2xml</command
+> ist ein Befehlszeilenprogramm, das die DocBook-XML-Datei <replaceable
+>original-XML</replaceable
+> mit Hilfe der gettext-Nachrichtendatei <replaceable
+>translated-PO</replaceable
+> übersetzt. Die erzeugte XML-Datei wird auf der Standardausgabe ausgegeben.</para>
+
+<para
+>Dieses Hilfsprogramm ist Teil der &kde; Software-Entwicklungswerkzeuge.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+
+<para
+>split2po(1), swappo(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>Die PO-XML-Hilfsprogramme wurden von &Stephan.Kulow;&Stephan.Kulow.mail; geschrieben.</para>
+<para
+>Diese Handbuchseite wurde von <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+> erstellt.</para>
+
+</refsect1>
+
+</refentry>

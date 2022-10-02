@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % French "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>07-04-2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Crée un fichier po à partir de deux fichiers XML DocBook</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>XML-original</replaceable
+></option
+> <option
+><replaceable
+>XML-traduit</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Description</title>
+
+<para
+><command
+>split2po</command
+> est un outil en ligne de commande qui à partir de deux fichiers XML DocBook produit un fichier de messages <command
+>gettext</command
+> (fichier PO). Ce fichier PO représente les changements entre ces deux fichiers. Il est renvoyé sur la sortie standard.</para>
+
+<para
+><filename
+>XML-traduit</filename
+> doit résulter de la traduction de <filename
+>XML-original</filename
+> dans une autre langue. Il s'agit de la traduction que le fichier PO résultant représentera.</para>
+
+<para
+>Cet utilitaire fait partie du kit de développement de logiciels de KDE. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Voir aussi</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+
+<para
+>Les outils PO XML ont été écrits par &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Cette page de manuel a été préparée par <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

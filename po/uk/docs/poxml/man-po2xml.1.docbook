@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>8 квітня 2003 року</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>po2xml</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>po2xml</command
+></refname>
+<refpurpose
+>Перекладає файл XML DocBook за допомогою файла PO</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>po2xml</command
+> <group
+><option
+><replaceable
+>початковий-XML</replaceable
+> <replaceable
+>перекладений-PO</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Опис</title>
+
+<para
+><command
+>po2xml</command
+> — це інструмент командного рядка, за допомогою якого можна перекласти файл XML DocBook <replaceable
+>початковий-XML</replaceable
+> за допомогою файла повідомлень gettext <replaceable
+>перекладений-PO</replaceable
+>. Отриманий перекладений файл XML буде надіслано до стандартного виводу.</para>
+
+<para
+>Цей інструмент є частиною набору для розробки програмного забезпечення KDE.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Прочитайте також</title>
+
+<para
+>split2po(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>Автором інструментів PO-XML є &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Цю сторінку довідника було підготовлено <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

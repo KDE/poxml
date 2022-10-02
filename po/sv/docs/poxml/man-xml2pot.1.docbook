@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Skapar en PO-mallfil från en DocBook XML-fil.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>original-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivning</title>
+
+<para
+><command
+>xml2pot</command
+> är ett kommandoradsverktyg som skapar en gettext meddelandemallfil från DocBook XML-filen <filename
+>original-XML</filename
+>. Mallfilen skickas till standardutmatningen.</para>
+
+<para
+>Den resulterande mallfilen kan användas för att skapa gettext meddelandefiler (PO-filer) för en mängd språk. Dessa kan därefter användas tillsammans med <command
+>po2xml</command
+>(1) för att översätta original-XML filen till dessa andra språk.</para>
+
+
+<para
+>Verktyget är en del av KDE:s programvaruutvecklingsmiljö.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+
+<para
+>PO-XML verktygen är skriva av &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Den här manualsidan är framtagen av <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>

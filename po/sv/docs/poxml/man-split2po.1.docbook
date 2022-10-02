@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Skapa en PO-fil från två DocBook XML-filer</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>original-XML</replaceable
+></option
+> <option
+><replaceable
+>översatt-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivning</title>
+
+<para
+><command
+>split2po</command
+> är ett kommandoradsverktyg som tar två givna DocBook XML-filer och skapar en <command
+>gettext</command
+> meddelandefil (PO-fil) som representerar ändringarna mellan dem. Den resulterade PO-filen skickas till standardutmatningen.</para>
+
+<para
+><filename
+>översatt-XML</filename
+> måste vara resultatet av att översätta <filename
+>original-XML</filename
+> till ett annat språk. Det är den här översättningen som den resulterande PO-filen representerar.</para>
+
+<para
+>Verktyget är en del av KDE:s programvaruutvecklingsmiljö. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+
+<para
+>PO-XML verktygen är skriva av &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Den här manualsidan är framtagen av <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

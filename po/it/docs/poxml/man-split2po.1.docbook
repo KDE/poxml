@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Crea un file PO a partire da due file XML DocBook</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>XML originale</replaceable
+></option
+> <option
+><replaceable
+>XML tradotto</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrizione</title>
+
+<para
+><command
+>split2po</command
+> è uno strumento a riga di comando che prende i due file XML DocBook specificati e produce un file di messaggi <command
+>gettext</command
+> (file PO) che rappresenta le differenze tra i due file. Il file PO risultante è inviato allo standard output.</para>
+
+<para
+><filename
+>XML tradotto</filename
+> deve essere il risultato della traduzione di <filename
+>XML originale</filename
+> in un'altra lingua. Il file PO rappresenterà proprio questa traduzione.</para>
+
+<para
+>Questa applicazione è parte del pacchetto di sviluppo software di &kde;. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+
+<para
+>Gli strumenti PO XML sono stati scritti da &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Questa pagina di manuale è stata scritta da <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

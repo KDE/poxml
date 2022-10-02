@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7 d'abril de 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>swappo</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>swappo</command
+></refname>
+<refpurpose
+>Intercanvia els camps msgid i msgtr en un fitxer PO</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>swappo</command
+> <group
+><option
+><replaceable
+>nom_fitxer.po</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descripció</title>
+
+<para
+>El <command
+>swappo</command
+> llegeix el fitxer PO i intercanvia els camps msgid i msgstr per a cada missatge. El resultat és un nou fitxer per a traduir a la inversa, &ead;, si el fitxer era per a traduir des de l'anglès al català, el nou serà per a traduir des del català a l'anglès.</para>
+
+<para
+>El nou fitxer PO s'escriurà a l'eixida estàndard. L'antic fitxer PO romandrà sense alterar.</para>
+
+<para
+>Aquesta utilitat forma part del joc de desenvolupament de programari del &kde;</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Vegeu també</title>
+
+<para
+>po2xml(1), split2po(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+<para
+>Les eines PO-XML han estat escrites per en &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Aquesta pàgina del manual ha estat preparada per en <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

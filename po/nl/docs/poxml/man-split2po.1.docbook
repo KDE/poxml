@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>split2po</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>split2po</command
+></refname>
+<refpurpose
+>Maakt een PO-bestand aan van twee DocBook XML-bestanden</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>split2po</command
+> <group choice="req"
+><option
+><replaceable
+>Oorspronkelijke-XML</replaceable
+></option
+> <option
+><replaceable
+>Vertaalde-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschrijving</title>
+
+<para
+><command
+>split2po</command
+> is een hulpmiddel op de commandoregel om van twee gegeven DocBook XML-bestanden een vertaalbestand te maken (PO-bestand). Het bestand bevat de veranderingen tussen de twee XML-bestanden. Het resultaat wordt op de standaard uitvoer afgedrukt.</para>
+
+<para
+><filename
+>vertaalde-XML</filename
+> dient het resultaat te zijn van de vertaling van het <filename
+>oorspronkelijke-XML</filename
+>. De vertaling komt in het PO-bestand terecht.</para>
+
+<para
+>Dit hulpmiddel is een onderdeel van het software-ontwikkelpakket van &kde;. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+
+<para
+>po2xml(1), swappo(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+
+<para
+>De PO-XML-hulpmiddelen zijn geschreven door &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>De manpage was geschreven door <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>swappo</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>swappo</command
+></refname>
+<refpurpose
+>Tauscht die Felder msgid und msgstr in einer PO-Datei.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>swappo</command
+> <group
+><option
+><replaceable
+>dateiname.po</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+
+<para
+>Das Befehlszeilenwerkzeug <command
+>swappo</command
+> list die angegebene PO-Datei ein und tauscht den Inhalt der msgid- und msgstr-Felder für jede Nachricht. Das Ergebnis ist eine PO-Datei, die in die umgekehrte Richtung übersetzt ist. Wenn beispielsweise die ursprüngliche PO-Datei vom Englischen ins Deutsche übersetzt ist, wird die neue PO-Datei vom Deutschen ins Englische übersetzt sein.</para>
+
+<para
+>Die neue PO-Datei wird auf der Standard-Ausgabe ausgegeben. Die ursprüngliche PO-Datei wird nicht verändert.</para>
+
+<para
+>Dieses Hilfsprogramm ist Teil der &kde; Software-Entwicklungswerkzeuge.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+
+<para
+>po2xml(1), split2po(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>Die PO-XML-Hilfsprogramme wurden von &Stephan.Kulow;&Stephan.Kulow.mail; geschrieben. </para>
+<para
+>Diese Handbuchseite wurde geschrieben von <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

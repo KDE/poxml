@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Danish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>8. april, 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>po2xml</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>po2xml</command
+></refname>
+<refpurpose
+>Oversætter en DocBook XML-fil ved brug af en PO-fil</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>po2xml</command
+> <group
+><option
+><replaceable
+>original-XML</replaceable
+> <replaceable
+>oversat-PO</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivelse</title>
+
+<para
+><command
+>po2xml</command
+> er et kommandolinjeværktøj som oversætter DocBook XML-filen <replaceable
+>original-XML</replaceable
+> med gettext meddelelsesfilen <replaceable
+>oversat-PO</replaceable
+>. Den resulterende oversatte XML-fil sendes til standardudskriften.</para>
+
+<para
+>Værktøjet er en del af KDE's programmeludviklingsmiljø.</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se også</title>
+
+<para
+>split2po(1), swappo(1), transxx(1), xml2pot(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Forfattere</title>
+<para
+>PO-XML værktøjet er skrevet af &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Denne manualside er skrevet af <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+
+</refsect1>
+
+</refentry>

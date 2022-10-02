@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Danish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>7. april, 2003</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>Opretter en PO-skabelon-fil ud fra en DocBook XML-fil.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>original-XML</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivelse</title>
+
+<para
+><command
+>xml2pot</command
+> er et kommandolinjeværktøj som laver en gettext meddelelses-skabelonfil ud fra DocBook XML-filen <filename
+>original-XML</filename
+>. Skabelonfilen sendes til standardudskriften.</para>
+
+<para
+>Den resulterende skabelonfile kan bruges til at lave gettext meddelelsefiler (PO-filer) for en mængde sprog. Disse kan derefter bruges sammen med <command
+>po2xml</command
+>(1) til at oversætte original-XML filen til disse andre sprog.</para>
+
+
+<para
+>Værktøjet er en del af KDE's programmeludviklingsmiljø.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>Se også</title>
+
+<para
+>po2xml(1), split2po(1), swappo(1), transxx(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Forfattere</title>
+
+<para
+>PO-XML værktøjet er skrevet af &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>Denne manualside er skrevet af <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>
