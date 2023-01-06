@@ -1,107 +1,63 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-<!ENTITY % German "INCLUDE">
+<!ENTITY % English "INCLUDE">
 ]>
 
 <refentry lang="&language;">
 <refentryinfo>
-<author
-><personname
-><firstname
->Ben</firstname
-><surname
->Burton</surname
-></personname
-><email
->bab@debian.org</email
-></author>
-<date
->2003-04-07</date>
+<author><personname><firstname>Ben</firstname><surname>Burton</surname></personname><email>bab@debian.org</email></author>
+<date>2003-04-07</date>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle
-><command
->split2po</command
-></refentrytitle>
-<manvolnum
->1</manvolnum>
+<refentrytitle><command>split2po</command></refentrytitle>
+<manvolnum>1</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname
-><command
->split2po</command
-></refname>
-<refpurpose
->Erzeugt eine PO-Datei aus zwei DocBook XML-Dateien.</refpurpose>
+<refname><command>split2po</command></refname>
+<refpurpose>Creates a po file from two DocBook XML files</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
-<cmdsynopsis
-><command
->split2po</command
-> <group choice="req"
-><option
-><replaceable
->Ursprüngliches-XML</replaceable
-></option
-> <option
-><replaceable
->Übersetztes-XML</replaceable
-></option
-></group
-> </cmdsynopsis>
+<cmdsynopsis>
+<command>split2po</command>
+<group choice="req"><option><replaceable>Original-XML</replaceable></option>
+<option><replaceable>Translated-XML</replaceable></option></group>
+</cmdsynopsis>
 </refsynopsisdiv>
 
 <refsect1>
-<title
->Beschreibung</title>
+<title>Description</title>
 
-<para
->Das Befehlszeilenprogramm <command
->split2po</command
-> erzeugt aus zwei DocBook XML-Dateien eine <command
->gettext</command
-> PO-Datei, die die Änderungen zwischen ihnen repräsentiert. Die resultierende PO-Datei wird an der Standard-Ausgabe ausgegeben.</para>
+<para><command>split2po</command> is a command-line tool that
+takes the two given DocBook XML files and produces a
+<command>gettext</command> message file (PO-file) that represents the
+changes between them. The resulting PO-file is sent to standard
+output.</para>
 
-<para
-><filename
->Übersetztes-XML</filename
-> muss das Ergebnis der Übersetzung von <filename
->Ursprüngliches-XML</filename
-> in eine andere Sprache sein. Es ist die Übersetzung, die von der resultierende PO-Datei repräsentiert wird.</para>
+<para><filename>translated-XML</filename> must be the result of
+translating <filename>original-XML</filename> into another
+language. It is this translation that the resulting PO-file will
+represent.</para>
 
-<para
->Dieses Hilfsprogramm ist Teil der &kde; Software-Entwicklungswerkzeuge. </para>
+<para>This utility is part of the KDE Software Development Kit. </para>
 
 </refsect1>
 
 <refsect1>
-<title
->Siehe auch</title>
+<title>See Also</title>
 
-<para
->po2xml(1), swappo(1), transxx(1), xml2pot(1)</para>
+<para>po2xml(1), swappo(1), xml2pot(1)</para>
 
 </refsect1>
 
 <refsect1>
-<title
->Autoren</title>
+<title>Authors</title>
 
-<para
->Die PO XML-Werkzeuge wurden geschrieben von &Stephan.Kulow; &Stephan.Kulow.mail;</para>
-<para
->Diese Handbuchseite wurde geschrieben von <personname
-><firstname
->Ben</firstname
-><surname
->Burton</surname
-></personname
-><email
->bab@debian.org</email
-></para>
+<para>The PO XML tools were written by &Stephan.Kulow;
+&Stephan.Kulow.mail;</para>
+<para>This manual page was prepared by <personname><firstname>Ben</firstname><surname>Burton</surname></personname><email>bab@debian.org</email></para>
 
 </refsect1>
 
