@@ -34,7 +34,7 @@
 >swappo</command
 ></refname>
 <refpurpose
->Échanger des champs msgid et msgstr dans un fichier PO.</refpurpose>
+>Échanger des champs « msgid » et « msgstr » dans un fichier « po ».</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -57,7 +57,7 @@
 <para
 ><command
 >swappo</command
-> lit un fichier PO donné et échange les champs msgid et msgstr pour tous les messages. Le résultat est un nouveau fichier PO qui traduit dans la direction contraire. Par exemple, si un fichier PO traduit de l'anglais vers le français, le nouveau fichier PO traduira du français vers l'anglais.</para>
+> lit un fichier « po » donné et échange les champs « msgid » et « msgstr » pour tous les messages. Le résultat est un nouveau fichier « po » qui traduit dans la direction contraire. Par exemple, si un fichier « po » traduit de l'anglais vers le français, le nouveau fichier « po » traduira du français vers l'anglais.</para>
 
 <para
 >Le nouveau fichier PO sera écrit dans la sortie standard. L'ancien fichier PO restera inchangé.</para>

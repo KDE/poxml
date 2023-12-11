@@ -44,9 +44,9 @@
 > <group
 ><option
 ><replaceable
->original-XML</replaceable
+>XML-original</replaceable
 > <replaceable
->translated-PO</replaceable
+>PO-traduit</replaceable
 ></option
 ></group
 > </cmdsynopsis>
@@ -59,11 +59,11 @@
 <para
 ><command
 >po2xml</command
-> est un outil en ligne de commande qui traduit le fichier XML DocBook <replaceable
->original-XML</replaceable
+> est un outil en ligne de commande traduisant le fichier XML DocBook <replaceable
+>XML-original</replaceable
 > en utilisant le fichier de message Gettext <replaceable
->translated-PO</replaceable
->. Le fichier XML traduit qui en résulte est envoyé à la sortie standard.</para>
+>PO-Traduit</replaceable
+>. Le fichier « XML » traduit qui en résulte est envoyé vers la sortie standard.</para>
 
 <para
 >Cet utilitaire est un élément du kit de développement logiciel de KDE.</para>
