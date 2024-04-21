@@ -2,9 +2,9 @@
 #define PARSER_H
 
 #include <qmap.h>
-#include <qregexp.h>
 
 #include <QList>
+#include <QRegularExpression>
 
 class QXmlStreamAttributes;
 
@@ -121,8 +121,8 @@ private:
     int inside, startline, startcol;
     int line;
     MsgList list;
-    mutable QRegExp infos_reg;
-    mutable QRegExp do_not_split_reg;
+    QRegularExpression infos_reg;
+    QRegularExpression do_not_split_reg;
 };
 
 MsgList parseXML(const char *filename);

@@ -4,7 +4,6 @@
 #include <iostream>
 #include <stdlib.h>
 #include <assert.h>
-#include <qregexp.h>
 
 #include <QDebug>
 #include <QFile>
@@ -69,8 +68,8 @@ static const char *literaltags[] = {"literallayout", "synopsis", "screen",
 
 void StructureParser::startDocument()
 {
-    infos_reg = QRegExp("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
-    do_not_split_reg = QRegExp("\\s*condition=\"do-not-split\"");
+    infos_reg = QRegularExpression("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
+    do_not_split_reg = QRegularExpression("\\s*condition=\"do-not-split\"");
     message = "";
     inside = 0;
 }
@@ -174,8 +173,8 @@ bool StructureParser::closureTag(const QString& message, const QString &tag)
     const int messageLength = message.length();
     while (true)
     {
-        int nextclose = message.indexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)), index);
-        int nextstart = message.indexOf(QRegExp(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
+        int nextclose = message.indexOf(QRegularExpression(QString::fromLatin1("</%1[\\s>]").arg(tag)), index);
+        int nextstart = message.indexOf(QRegularExpression(QString::fromLatin1("<%1[>\\s]").arg(tag)), index);
         //  qDebug("finding %d %d %d %d", nextstart, nextclose, index, inside);
         if (nextclose == -1) {
 #ifdef POXML_DEBUG
@@ -332,7 +331,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             strindex = msg.msgid.indexOf(QLatin1Char('>'), 0);
             QString attr = msg.msgid.left(strindex);
             QString real_attr = attr.mid(starttag.length() + 1);
-            const int real_attr_infos_reg_pos = infos_reg.indexIn(real_attr);
+            const int real_attr_infos_reg_pos = infos_reg.match(real_attr).capturedStart();
             if (real_attr_infos_reg_pos >= 0) {
                 real_attr = real_attr.left(real_attr_infos_reg_pos);
             }
@@ -344,20 +343,20 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             stripWhiteSpace( msg.msgid );
             msg.tag = starttag;
 
-            if (infos_reg.indexIn(attr) >= 0) {
-                msg.lines.first().start_line = infos_reg.cap(1).toInt();
-                msg.lines.first().start_col = infos_reg.cap(2).toInt();
+            if (const auto match = infos_reg.match(attr); match.hasMatch()) {
+                msg.lines.first().start_line = match.capturedView(1).toInt();
+                msg.lines.first().start_col = match.capturedView(2).toInt();
 #ifdef POXML_DEBUG
                 qDebug("col %s %s %d", qPrintable(attr), qPrintable(msg.msgid), msg.lines.first().start_col);
 #endif
                 offset = 0;
 
-                if (infos_reg.indexIn(endtag_attr) >= 0) {
-                    msg.lines.first().end_line = infos_reg.cap(1).toInt();
-                    msg.lines.first().end_col = infos_reg.cap(2).toInt() + 1;
+                if (const auto match = infos_reg.match(endtag_attr); match.hasMatch()) {
+                    msg.lines.first().end_line = match.capturedView(1).toInt();
+                    msg.lines.first().end_col = match.capturedView(2).toInt() + 1;
                 }
             }
-            if (do_not_split_reg.indexIn(attr) >= 0) {
+            if (do_not_split_reg.match(attr).hasMatch()) {
                 msg.do_not_split = true;
                 break;
             }
@@ -418,9 +417,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
 #endif
 
                 // the exception for poxml_* attributes is made in the closing tag
-                int closing_index = message.indexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
+                int closing_index = message.indexOf(QRegularExpression(QString::fromLatin1("</%1[\\s>]").arg(tag)),
                                                  strindex);
-                int starting_index = message.indexOf(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
+                int starting_index = message.indexOf(QRegularExpression(QString::fromLatin1("<%1[\\s>]").arg(tag)),
                                                   strindex);
 
 #ifdef POXML_DEBUG
@@ -529,9 +528,9 @@ MsgList StructureParser::splitMessage(const MsgBlock &mb)
                 qDebug("inside %s %d", qPrintable(message.mid(strindex, 35)), inside);
 #endif
 
-                int closing_index = message.lastIndexOf(QRegExp(QString::fromLatin1("</%1[\\s>]").arg(tag)),
+                int closing_index = message.lastIndexOf(QRegularExpression(QString::fromLatin1("</%1[\\s>]").arg(tag)),
                                                     strindex - 1);
-                int starting_index = message.lastIndexOf(QRegExp(QString::fromLatin1("<%1[\\s>]").arg(tag)),
+                int starting_index = message.lastIndexOf(QRegularExpression(QString::fromLatin1("<%1[\\s>]").arg(tag)),
                                                      strindex - 1);
 
 #ifdef POXML_DEBUG
@@ -632,9 +631,9 @@ void StructureParser::endElement( int lineNumber, int columnNumber, const QStrin
                 // if the remaining text still starts with a tag, the poxml_ info
                 // is most probably more correct
                 if (!(*it).msgid.isEmpty() && (*it).msgid.at(0) == QLatin1Char('<') && isClosure((*it).msgid)) {
-                    if (infos_reg.indexIn((*it).msgid) >= 0) {
-                        (*it).lines.first().start_line = infos_reg.cap(1).toInt();
-                        (*it).lines.first().start_col =  infos_reg.cap(2).toInt();;
+                    if (const auto match = infos_reg.match((*it).msgid); match.hasMatch()) {
+                        (*it).lines.first().start_line = match.capturedView(1).toInt();
+                        (*it).lines.first().start_col = match.capturedView(2).toInt();;
                         (*it).lines.first().offset = 0;
                     }
                 }
@@ -708,8 +707,8 @@ void StructureParser::cleanupTags( QString &contents )
     contents.replace(QChar::fromLatin1('&'), QString::fromLatin1("!POXML_AMP!"));
 
     for (int index = 0; literaltags[index]; index++) {
-        QRegExp start(QString::fromLatin1("<%1[\\s>]").arg(literaltags[index]));
-        QRegExp end(QString::fromLatin1("</%1[\\s>]").arg(literaltags[index]));
+        const QRegularExpression start(QString::fromLatin1("<%1[\\s>]").arg(literaltags[index]));
+        const QRegularExpression end(QString::fromLatin1("</%1[\\s>]").arg(literaltags[index]));
         int strindex = 0;
         while (true) {
             strindex = contents.indexOf(start, strindex);
@@ -726,50 +725,53 @@ void StructureParser::cleanupTags( QString &contents )
         }
     }
 
-    QRegExp unclosed("</(\\w*)\\s\\s*>");
-    int index = -1;
+    const QRegularExpression unclosed("</(\\w*)\\s\\s*>");
+    int index = 0;
     while (true) {
-        index = unclosed.indexIn(contents, index + 1);
-        if (index < 0)
+        const auto match = unclosed.match(contents, index );
+        if (!match.hasMatch())
             break;
-        QString tag = unclosed.cap(1);
-        contents.replace(index, unclosed.matchedLength(), QString::fromLatin1("</%1>").arg(tag));
+        index = match.capturedStart();
+        QString tag = match.captured(1);
+        contents.replace(index, match.capturedLength(), QString::fromLatin1("</%1>").arg(tag));
     }
 
-    QRegExp start("<((\\s*[^<>\\s])*)\\s\\s*(/*)>");
-    start.setMinimal(true);
+    const QRegularExpression start("<((\\s*[^<>\\s])*)\\s\\s*(/*)>", QRegularExpression::InvertedGreedinessOption);
 
     index = -1;
     while (true) {
-        index = start.indexIn(contents, index + 1);
-        if (index < 0)
+        const auto match = start.match(contents, index + 1);
+        if (!match.hasMatch())
             break;
-        QString tag = start.cap(1);
-	QString cut = start.capturedTexts().last();
+        index = match.capturedStart();
+        QString tag = match.captured(1);
+	QString cut = match.capturedTexts().last();
         // qDebug("UNCLO %s %d -%s- -%s-", qPrintable(start.cap(0)), index, qPrintable(tag), qPrintable(cut));
-        contents.replace(index, start.matchedLength(), QString::fromLatin1("<%1%2>").arg(tag, cut));
+        contents.replace(index, match.capturedLength(), QString::fromLatin1("<%1%2>").arg(tag, cut));
     }
-    QRegExp singletag("<(\\w*)\\s([^><]*)/>");
+    const QRegularExpression singletag("<(\\w*)\\s([^><]*)/>");
 
     index = -1;
     while (true) {
-        index = singletag.indexIn(contents, index + 1);
-        if (index < 0)
+        const auto match = singletag.match(contents, index + 1);
+        if (!match.hasMatch())
             break;
-        const QString tag = singletag.cap(1);
+        index = match.capturedStart();
+        const QString tag = match.captured(1);
         if (!StructureParser::isSingleTag(QStringRef(&tag))) {
-            contents.replace(index, singletag.matchedLength(), QString::fromLatin1("<%1 %2></%3>").arg(tag, singletag.cap(2), tag));
+            contents.replace(index, match.capturedLength(), QString::fromLatin1("<%1 %2></%3>").arg(tag, match.captured(2), tag));
         }
     }
 
-    QRegExp trans_comment("<!-- TRANS:([^<>]*)-->");
+    const QRegularExpression trans_comment("<!-- TRANS:([^<>]*)-->");
     index = -1;
     while (true) {
-        index = trans_comment.indexIn(contents, index + 1);
-        if (index < 0)
+        const auto match = trans_comment.match(contents, index + 1);
+        if (!match.hasMatch())
             break;
-        QString msgid = trans_comment.cap(1);
-        contents.replace(index, trans_comment.matchedLength(), QString::fromLatin1("<trans_comment>%1</trans_comment>").arg(msgid));
+        index = match.capturedStart();
+        QString msgid = match.captured(1);
+        contents.replace(index, match.capturedLength(), QString::fromLatin1("<trans_comment>%1</trans_comment>").arg(msgid));
     }
 
 #ifdef POXML_DEBUG
@@ -782,14 +784,15 @@ static bool removeEmptyTag( QString &contents, const QString & tag)
 {
 //    qDebug("cont %s %s", qPrintable(contents), qPrintable(tag));
 
-    QRegExp empty(QString::fromLatin1("<%1[^>]*>[\\s\n]+</%2\\s*>").arg(tag, tag));
+    const QRegularExpression empty(QString::fromLatin1("<%1[^>]*>[\\s\n]+</%2\\s*>").arg(tag, tag));
     int strindex = 0;
     while (true) {
-        strindex = contents.indexOf(empty, strindex);
-        if (strindex < 0)
+        const auto match = empty.match(contents, strindex);
+        if (!match.hasMatch())
             break;
+        strindex = match.capturedStart();
         qDebug("found empty tag %s", qPrintable(tag));
-        contents.replace(strindex, empty.matchedLength(), ' ');
+        contents.replace(strindex, match.capturedLength(), ' ');
         strindex++;
         return true;
     }
@@ -896,12 +899,17 @@ MsgList parseXML(const char *filename)
     {
         // find internal entities that start with "i18n-", and extract
         // their replacement texts:
-        QRegExp rx( "<!ENTITY\\s+([^\\s]+)\\s+([\"'])" );
-        for ( int index = rx.indexIn( contents, 0 ) ; index >= 0 ; index = rx.indexIn( contents, index ) ) {
-            const QString name = rx.cap( 1 );
-            const QChar delim = rx.cap( 2 ).at( 0 );
+        const QRegularExpression rx( "<!ENTITY\\s+([^\\s]+)\\s+([\"'])" );
+        for ( int index = 0 ;; ) {
+            const auto match = rx.match(contents, index);
+            if (!match.hasMatch()) {
+                break;
+            }
+            index = match.capturedStart();
+            const QString name = match.captured( 1 );
+            const QChar delim = match.captured( 2 ).at( 0 );
             const int start = index;
-            index = contents.indexOf( delim, index + rx.matchedLength() );
+            index = contents.indexOf( delim, index + match.capturedLength() );
             index = contents.indexOf( '>', index );
             if ( !name.startsWith( QLatin1String("i18n-") ) )
                 continue;

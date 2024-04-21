@@ -5,10 +5,10 @@
 #include <stdlib.h>
 #include <iostream>
 #include <assert.h>
-#include <qregexp.h>
 
 #include <QFile>
 #include <QList>
+#include <QRegularExpression>
 #include <QTextStream>
 
 using namespace std;
@@ -246,14 +246,14 @@ int main( int argc, char **argv )
 
     ts << xml_text.mid(old_pos);
 
-    output.remove(QRegExp("<trans_comment\\s*>"));
-    output.remove(QRegExp("</trans_comment\\s*>"));
+    output.remove(QRegularExpression("<trans_comment\\s*>"));
+    output.remove(QRegularExpression("</trans_comment\\s*>"));
 
     StructureParser::removeEmptyTags(output);
 
     index = 0;
     while (true) {
-        index = output.indexOf(QRegExp(">[^\n]"), index );
+        index = output.indexOf(QRegularExpression(">[^\n]"), index );
         if ( index == -1 )
             break;
         if ( output.at( index - 1 ) == '/' || output.at( index - 1 ) == '-' ||
