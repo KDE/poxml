@@ -69,7 +69,7 @@ public:
 
     ParaCounter & operator+=( const ParaCounter & other ) {
         current += other.current;
-        anchors.unite( other.anchors );
+        anchors.insert( other.anchors );
         return *this;
     }
 
