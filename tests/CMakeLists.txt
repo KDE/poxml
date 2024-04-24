@@ -5,7 +5,7 @@ if (GETTEXT_FOUND)
 
 add_custom_command(
   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/lauri.pot
-  COMMAND checkXML5 ${lauri_xml}
+  COMMAND checkXML6 ${lauri_xml}
   COMMAND xml2pot ${lauri_xml} > lauri.pot
   COMMAND msgmerge -o lauri.pot lauri.pot lauri.pot
   DEPENDS ${lauri_xml}
@@ -38,7 +38,7 @@ add_custom_target(tests-data ALL
 
 add_test(
   NAME lauri_de
-  COMMAND checkXML5 lauri_de.xml
+  COMMAND checkXML6 lauri_de.xml
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 

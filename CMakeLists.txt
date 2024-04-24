@@ -23,8 +23,8 @@ set_package_properties("gettext-po" PROPERTIES
         PURPOSE "Required to build the poxml tools.")
 
 find_package(Gettext)
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Xml)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DocTools)
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Xml)
+find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS DocTools)
 
 
 add_subdirectory( doc )
@@ -39,7 +39,7 @@ set(split2po_SRCS split.cpp parser.cpp gettextpoutils.cpp)
 
 add_executable(split2po ${split2po_SRCS})
 
-target_link_libraries(split2po ${GETTEXTPO_LIBRARY} Qt5::Xml Qt5::Core)
+target_link_libraries(split2po ${GETTEXTPO_LIBRARY} Qt6::Xml Qt6::Core)
 
 install(TARGETS split2po  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -51,7 +51,7 @@ set(xml2pot_SRCS xml2pot.cpp parser.cpp gettextpoutils.cpp)
 
 add_executable(xml2pot ${xml2pot_SRCS})
 
-target_link_libraries(xml2pot ${GETTEXTPO_LIBRARY} Qt5::Xml Qt5::Core)
+target_link_libraries(xml2pot ${GETTEXTPO_LIBRARY} Qt6::Xml Qt6::Core)
 
 install(TARGETS xml2pot  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -66,7 +66,7 @@ set(po2xml_SRCS
 
 add_executable(po2xml ${po2xml_SRCS})
 
-target_link_libraries(po2xml ${GETTEXTPO_LIBRARY} Qt5::Xml Qt5::Core)
+target_link_libraries(po2xml ${GETTEXTPO_LIBRARY} Qt6::Xml Qt6::Core)
 
 install(TARGETS po2xml  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

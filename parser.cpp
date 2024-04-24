@@ -85,7 +85,7 @@ bool StructureParser::isCuttingTag(const QString &qName)
     return isLiteralTag(qName);
 }
 
-bool StructureParser::isSingleTag(const QStringRef &qName)
+bool StructureParser::isSingleTag(QStringView qName)
 {
     int index = 0;
     while (singletags[index]) {
@@ -107,13 +107,13 @@ bool StructureParser::isLiteralTag(const QString &qName)
     return false;
 }
 
-void StructureParser::skippedEntity ( const QStringRef & name )
+void StructureParser::skippedEntity ( QStringView name )
 {
     if (inside)
         message += QString::fromLatin1("&%1;").arg(name);
 }
 
-void StructureParser::startElement( int lineNumber, int columnNumber, const QStringRef& qName, const QXmlStreamAttributes & attr )
+void StructureParser::startElement( int lineNumber, int columnNumber, QStringView qName, const QXmlStreamAttributes & attr )
 {
     const QString tname = qName.toString().toLower();
 
@@ -148,7 +148,7 @@ void StructureParser::startElement( int lineNumber, int columnNumber, const QStr
             startcol -= message.length();
     }
 
-    if (tname == QLatin1String("anchor") || tname.leftRef(4) == QLatin1String("sect") || tname == QLatin1String("chapter"))
+    if (tname == QLatin1String("anchor") || QStringView(tname).left(4) == QLatin1String("sect") || tname == QLatin1String("chapter"))
         if (!attr.value("id").isEmpty()) list.pc.addAnchor(attr.value("id").toString());
 }
 
@@ -271,7 +271,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         int slen = strlen(singletags[index]);
 
         if (!msg.msgid.isEmpty() &&
-            msg.msgid.at(0) == QLatin1Char('<') && msg.msgid.midRef(1, slen) == QLatin1String(singletags[index]) &&
+            msg.msgid.at(0) == QLatin1Char('<') && QStringView(msg.msgid).mid(1, slen) == QLatin1String(singletags[index]) &&
             !msg.msgid.at( slen + 1 ).isLetterOrNumber() )
         {
 #ifdef POXML_DEBUG
@@ -592,7 +592,7 @@ error:
     return result;
 }
 
-void StructureParser::endElement( int lineNumber, int columnNumber, const QStringRef& qName)
+void StructureParser::endElement( int lineNumber, int columnNumber, QStringView qName)
 {
     const QString tname = qName.toString().toLower();
 
@@ -646,7 +646,7 @@ void StructureParser::endElement( int lineNumber, int columnNumber, const QStrin
     }
 }
 
-void StructureParser::comment ( const QStringRef &c )
+void StructureParser::comment ( QStringView c )
 {
     if (c.left(7) != QLatin1String(" TRANS:"))
         return;
@@ -758,7 +758,7 @@ void StructureParser::cleanupTags( QString &contents )
             break;
         index = match.capturedStart();
         const QString tag = match.captured(1);
-        if (!StructureParser::isSingleTag(QStringRef(&tag))) {
+        if (!StructureParser::isSingleTag(tag)) {
             contents.replace(index, match.capturedLength(), QString::fromLatin1("<%1 %2></%3>").arg(tag, match.captured(2), tag));
         }
     }
@@ -819,7 +819,7 @@ void StructureParser::removeEmptyTags( QString &contents )
     } while (removed);
 }
 
-void StructureParser::characters(const QStringRef &ch)
+void StructureParser::characters(QStringView ch)
 {
     if (inside && !ch.isEmpty())
         message += ch;

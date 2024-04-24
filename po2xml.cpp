@@ -88,7 +88,7 @@ int main( int argc, char **argv )
     QFile xml(QFile::decodeName(argv[1]));
     xml.open(QIODevice::ReadOnly);
     QTextStream ds(&xml);
-    ds.setCodec("UTF-8");
+    ds.setEncoding(QStringConverter::Utf8);
     QString xml_text = ds.readAll();
     xml.close();
     QString output;

@@ -94,14 +94,14 @@ class StructureParser
 {
 public:
     void startDocument();
-    void startElement( int lineNumber, int columnNumber, const QStringRef& qName, const QXmlStreamAttributes & attr );
-    void endElement( int lineNumber, int columnNumber, const QStringRef& qName);
-    void characters( const QStringRef &ch);
+    void startElement( int lineNumber, int columnNumber, QStringView qName, const QXmlStreamAttributes & attr );
+    void endElement( int lineNumber, int columnNumber, QStringView qName);
+    void characters( QStringView ch);
     static bool isCuttingTag(const QString &tag);
-    static bool isSingleTag(const QStringRef &qName);
+    static bool isSingleTag(QStringView qName);
     static bool isLiteralTag(const QString &qName);
-    void skippedEntity ( const QStringRef & name );
-    void comment ( const QStringRef & );
+    void skippedEntity ( QStringView name );
+    void comment ( QStringView );
     MsgList getList() const { return list; }
     MsgList splitMessage(const MsgBlock &message);
 

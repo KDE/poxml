@@ -4,8 +4,8 @@
 Dependencies:
 - 'on': ['@all']
   'require':
-    'frameworks/extra-cmake-modules': '@stable'
-    'frameworks/kdoctools': '@stable'
+    'frameworks/extra-cmake-modules': '@stable-kf6'
+    'frameworks/kdoctools': '@stable-kf6'
 
 Options:
   require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
