@@ -2,8 +2,11 @@ cmake_minimum_required (VERSION 3.16 FATAL_ERROR)
 
 project(poxml)
 
-set (QT_MIN_VERSION "5.12.0")
-set (KF_MIN_VERSION "5.68.0")
+set (QT_MIN_VERSION "6.5.0")
+set (KF_MIN_VERSION "6.0.0")
+
+# TODO cleanup code so that this isn't needed
+set(KDE_COMPILERSETTINGS_LEVEL "5.84")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
