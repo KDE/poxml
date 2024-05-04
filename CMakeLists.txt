@@ -1,6 +1,6 @@
-project(poxml)
-
 cmake_minimum_required (VERSION 3.16 FATAL_ERROR)
+
+project(poxml)
 
 set (QT_MIN_VERSION "5.12.0")
 set (KF_MIN_VERSION "5.68.0")
