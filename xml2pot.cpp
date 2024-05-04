@@ -37,7 +37,7 @@ int main( int argc, char **argv )
     }
 
     const QDateTime now = QDateTime::currentDateTime().toUTC();
-    const QByteArray datestring = now.toString("yyyy-MM-dd hh:mm").toUtf8() + "+0000";
+    const QByteArray datestring = now.toString(QStringLiteral("yyyy-MM-dd hh:mm")).toUtf8() + "+0000";
 
     po_file_t po = NULL;
     po_message_iterator_t out_it = NULL;
@@ -52,7 +52,7 @@ int main( int argc, char **argv )
         { "MIME-Version", "1.0" },
         { "Content-Type", "text/plain; charset=UTF-8" },
         { "Content-Transfer-Encoding", "8bit" },
-        { 0, 0 }
+        { nullptr, nullptr }
     };
     const char headercomment[] = "SOME DESCRIPTIVE TITLE.\n"
                                   "FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n"
@@ -66,7 +66,7 @@ int main( int argc, char **argv )
 
     const QByteArray fname = QFileInfo(QFile::decodeName(argv[1])).fileName().toUtf8();
 
-    foreach (const MsgBlock &block, english)
+    for (const MsgBlock &block : std::as_const(english))
     {
 #ifdef POXML_DEBUG
         qDebug("adding message: %s", qPrintable(block.msgid));
@@ -80,7 +80,7 @@ int main( int argc, char **argv )
 
         const QByteArray tagstring = "Tag: " + block.tag.toUtf8();
         po_message_set_extracted_comments(msg, tagstring.constData());
-        foreach (const BlockInfo &bi, block.lines) {
+        for (const BlockInfo &bi : block.lines) {
             po_message_add_filepos(msg, fname.constData(), bi.start_line);
         }
         po_message_set_format(msg, "c-format", 0);

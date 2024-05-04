@@ -46,7 +46,7 @@ static void mergeTranslationsUntilSameTag(MsgList &list1, int index1, MsgList &l
     // of the following ones
     for (int index = index2; index < j; ++index) {
         if (!list1[index1 - 1].msgstr.isEmpty()) {
-            list1[index1 - 1].msgstr += " ";
+            list1[index1 - 1].msgstr += QLatin1Char(' ');
         }
         list1[index1 - 1].msgstr += QString::fromLatin1("<%1>%2</%3>").arg(list2[index].tag, list2[index].msgid, list2[index].tag);
     }
@@ -167,13 +167,13 @@ int main( int argc, char **argv )
         { "PO-Revision-Date", "YEAR-MO-DA HO:MI+ZONE" },
         { "Last-Translator", "FULL NAME <EMAIL@ADDRESS>" },
         { "Content-Type", "text/plain; charset=utf-8" },
-        { 0, 0 }
+        { nullptr, nullptr }
     };
     if (!createPOWithHeader(headers, NULL, &po, &out_it)) {
         return 1;
     }
 
-    foreach (const MsgBlock &block, english)
+    for (const MsgBlock &block : std::as_const(english))
     {
         po_message_t msg = po_message_create();
         if (!msg) {
@@ -182,7 +182,7 @@ int main( int argc, char **argv )
             return 1;
         }
 
-        foreach (const BlockInfo &bi, block.lines) {
+        for (const BlockInfo &bi : block.lines) {
             po_message_add_filepos(msg, "index.docbook", bi.start_line);
         }
         po_message_set_msgid(msg, StructureParser::descapeLiterals(block.msgid).toUtf8().constData());

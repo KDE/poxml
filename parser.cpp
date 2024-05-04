@@ -29,7 +29,7 @@ static const char *singletags[] = {"beginpage","imagedata", "colspec", "spanspec
                                    "anchor", "xref", "area",
                                    "footnoteref", "void", "inlinegraphic",
                                    "glosssee", "graphic", "xi:include",
-                                   0};
+                                   nullptr};
 static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "title", "term",
                                     "entry", "contrib", "keyword", "example",
                                     "note", "footnote", "caution",
@@ -62,15 +62,15 @@ static const char *cuttingtags[] = {"bridgehead", "trans_comment", "para", "titl
                                     "revdescription", "glossentry", "partinfo",
 				    "segmentedlist", "segtitle", "seg", "seglistitem", "screenco",
 				    "titleabbrev", "date", "authorinitials", "holder", "releaseinfo",
-                                    0};
+                                    nullptr};
 static const char *literaltags[] = {"literallayout", "synopsis", "screen",
-				    "programlisting", 0};
+				    "programlisting", nullptr};
 
 void StructureParser::startDocument()
 {
-    infos_reg = QRegularExpression("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\"");
-    do_not_split_reg = QRegularExpression("\\s*condition=\"do-not-split\"");
-    message = "";
+    infos_reg = QRegularExpression(QStringLiteral("\\s*poxml_line=\"(\\d+)\" poxml_col=\"(\\d+)\""));
+    do_not_split_reg = QRegularExpression(QStringLiteral("\\s*condition=\"do-not-split\""));
+    message = QString();
     inside = 0;
 }
 
@@ -132,7 +132,7 @@ void StructureParser::startElement( int lineNumber, int columnNumber, QStringVie
 
     if (inside)
     {
-        QString tmp = '<' + tname;
+        QString tmp = QLatin1Char('<') + tname;
         for (int i = 0; i < attr.length(); i++) {
             tmp += QString::fromLatin1(" %1=\"%2\"").arg(attr[i].qualifiedName(), attr[i].value());
         }
@@ -142,7 +142,7 @@ void StructureParser::startElement( int lineNumber, int columnNumber, QStringVie
         if (isSingleTag(qName))
             tmp += QString::fromLatin1("/>");
         else
-            tmp += '>';
+            tmp += QLatin1Char('>');
         message += tmp;
         if (first)
             startcol -= message.length();
@@ -154,7 +154,7 @@ void StructureParser::startElement( int lineNumber, int columnNumber, QStringVie
 
 bool StructureParser::isClosure(const QString &message)
 {
-    assert(message.at(0) == '<');
+    assert(message.at(0) == QLatin1Char('<'));
     int endindex = 1;
     while (!message.at(endindex).isSpace() && message.at(endindex) != QLatin1Char('>'))
         endindex++;
@@ -219,19 +219,19 @@ void StructureParser::descape(QString &message)
             case '\t':
             case '\r':
                 if (!inside)
-                    message[index] = ' ';
+                    message[index] = QLatin1Char(' ');
             case ' ':
                 if (!inside && lastws)
-                    message[index] = '\010';
+                    message[index] = QLatin1Char('\010');
                 lastws = true;
                 break;
             case '<': {
                 int endindex = index+1;
                 while (endindex < message.length() && !message.at(endindex).isSpace() &&
-                       message.at(endindex) != '>')
+                       message.at(endindex) != QLatin1Char('>'))
                     endindex++;
                 QString tag = message.mid(index + 1, endindex - index - 1);
-                if (tag.at(0) == '/') {
+                if (tag.at(0) == QLatin1Char('/')) {
                     if (isLiteralTag(tag.mid(1)))
                         inside--;
                 } else
@@ -245,7 +245,7 @@ void StructureParser::descape(QString &message)
 
         index++;
     }
-    message.remove('\010');
+    message.remove(QLatin1Char('\010'));
 }
 
 bool StructureParser::formatMessage(MsgBlock &msg) const
@@ -288,7 +288,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
         }
     }
 
-    while (msg.msgid.right(2) == "/>" && msg.msgid.startsWith(QLatin1Char('<')))
+    while (msg.msgid.right(2) == QStringLiteral("/>") && msg.msgid.startsWith(QLatin1Char('<')))
     {
         int strindex = msg.msgid.length() - 2;
         strindex = msg.msgid.lastIndexOf(QLatin1Char('<'), strindex);
@@ -311,7 +311,7 @@ bool StructureParser::formatMessage(MsgBlock &msg) const
             strindex++;
         QString starttag = msg.msgid.mid(1, strindex - 1);
         int endindex = msg.msgid.length() - 2;
-        while (msg.msgid.at(endindex) != QLatin1Char('<') && msg.msgid.at(endindex + 1) != '/')
+        while (msg.msgid.at(endindex) != QLatin1Char('<') && msg.msgid.at(endindex + 1) != QLatin1Char('/'))
             endindex--;
 #ifdef POXML_DEBUG
         qDebug("endIndex %d", endindex);
@@ -707,8 +707,8 @@ void StructureParser::cleanupTags( QString &contents )
     contents.replace(QChar::fromLatin1('&'), QString::fromLatin1("!POXML_AMP!"));
 
     for (int index = 0; literaltags[index]; index++) {
-        const QRegularExpression start(QString::fromLatin1("<%1[\\s>]").arg(literaltags[index]));
-        const QRegularExpression end(QString::fromLatin1("</%1[\\s>]").arg(literaltags[index]));
+        const QRegularExpression start(QString::fromLatin1("<%1[\\s>]").arg(QString::fromLatin1(literaltags[index])));
+        const QRegularExpression end(QString::fromLatin1("</%1[\\s>]").arg(QString::fromLatin1(literaltags[index])));
         int strindex = 0;
         while (true) {
             strindex = contents.indexOf(start, strindex);
@@ -725,7 +725,7 @@ void StructureParser::cleanupTags( QString &contents )
         }
     }
 
-    const QRegularExpression unclosed("</(\\w*)\\s\\s*>");
+    const QRegularExpression unclosed(QStringLiteral("</(\\w*)\\s\\s*>"));
     int index = 0;
     while (true) {
         const auto match = unclosed.match(contents, index );
@@ -736,7 +736,7 @@ void StructureParser::cleanupTags( QString &contents )
         contents.replace(index, match.capturedLength(), QString::fromLatin1("</%1>").arg(tag));
     }
 
-    const QRegularExpression start("<((\\s*[^<>\\s])*)\\s\\s*(/*)>", QRegularExpression::InvertedGreedinessOption);
+    const QRegularExpression start(QStringLiteral("<((\\s*[^<>\\s])*)\\s\\s*(/*)>"), QRegularExpression::InvertedGreedinessOption);
 
     index = -1;
     while (true) {
@@ -749,7 +749,7 @@ void StructureParser::cleanupTags( QString &contents )
         // qDebug("UNCLO %s %d -%s- -%s-", qPrintable(start.cap(0)), index, qPrintable(tag), qPrintable(cut));
         contents.replace(index, match.capturedLength(), QString::fromLatin1("<%1%2>").arg(tag, cut));
     }
-    const QRegularExpression singletag("<(\\w*)\\s([^><]*)/>");
+    const QRegularExpression singletag(QStringLiteral("<(\\w*)\\s([^><]*)/>"));
 
     index = -1;
     while (true) {
@@ -763,7 +763,7 @@ void StructureParser::cleanupTags( QString &contents )
         }
     }
 
-    const QRegularExpression trans_comment("<!-- TRANS:([^<>]*)-->");
+    const QRegularExpression trans_comment(QStringLiteral("<!-- TRANS:([^<>]*)-->"));
     index = -1;
     while (true) {
         const auto match = trans_comment.match(contents, index + 1);
@@ -792,7 +792,7 @@ static bool removeEmptyTag( QString &contents, const QString & tag)
             break;
         strindex = match.capturedStart();
         qDebug("found empty tag %s", qPrintable(tag));
-        contents.replace(strindex, match.capturedLength(), ' ');
+        contents.replace(strindex, match.capturedLength(), QLatin1Char(' '));
         strindex++;
         return true;
     }
@@ -861,7 +861,7 @@ static MsgList parseContents(const QString &contents)
                 // QXmlStreamReader is annoying and won't accept custom entities like &POXML_LINEFEED;
                 // unless the file has a DTD, so if we fail parsing, inject a DTD into the XML contents and parse again
                 if (!foundDtd) {
-                     const QRegularExpression xmlDeclarationRegExp("^.*<\\?xml.*?\\?>");
+                     const QRegularExpression xmlDeclarationRegExp(QStringLiteral("^.*<\\?xml.*?\\?>"));
                      const QRegularExpressionMatch match = xmlDeclarationRegExp.match(contents);
                      const QString fakeDTD = QStringLiteral("<!DOCTYPE fake PUBLIC \"fake\" \"fake\" []>");
                      if (match.hasMatch()) {
@@ -899,7 +899,7 @@ MsgList parseXML(const char *filename)
     {
         // find internal entities that start with "i18n-", and extract
         // their replacement texts:
-        const QRegularExpression rx( "<!ENTITY\\s+([^\\s]+)\\s+([\"'])" );
+        const QRegularExpression rx( QStringLiteral("<!ENTITY\\s+([^\\s]+)\\s+([\"'])") );
         for ( int index = 0 ;; ) {
             const auto match = rx.match(contents, index);
             if (!match.hasMatch()) {
@@ -910,17 +910,17 @@ MsgList parseXML(const char *filename)
             const QChar delim = match.captured( 2 ).at( 0 );
             const int start = index;
             index = contents.indexOf( delim, index + match.capturedLength() );
-            index = contents.indexOf( '>', index );
+            index = contents.indexOf( QLatin1Char('>'), index );
             if ( !name.startsWith( QLatin1String("i18n-") ) )
                 continue;
             const QString entity = contents.mid( start, index - start + 1 );
             MsgBlock block;
-            block.tag = "!ENTITY";
+            block.tag = QStringLiteral("!ENTITY");
             BlockInfo bi;
-            bi.start_line = countRev( contents, '\n', index ) + 1;
-            bi.start_col  = start - contents.lastIndexOf( '\n', start ) - 1;
-            bi.end_line   = bi.start_line + entity.count( '\n' );
-            bi.end_col    = index - contents.lastIndexOf( '\n', index ) + 1;
+            bi.start_line = countRev( contents, QLatin1Char('\n'), index ) + 1;
+            bi.start_col  = start - contents.lastIndexOf( QLatin1Char('\n'), start ) - 1;
+            bi.end_line   = bi.start_line + entity.count( QLatin1Char('\n') );
+            bi.end_col    = index - contents.lastIndexOf( QLatin1Char('\n'), index ) + 1;
 #ifdef POXML_DEBUG
             qDebug( "ENTITY %s @ i:%d l:%d c:%d->l:%d c:%d", qPrintable( name ),
                     index, bi.start_line, bi.start_col, bi.end_line, bi.end_col );
@@ -933,13 +933,13 @@ MsgList parseXML(const char *filename)
 
     // Remove all entity definitions now:
     while (true) {
-        int index = contents.indexOf("<!ENTITY");
+        int index = contents.indexOf(QStringLiteral("<!ENTITY"));
         if (index < 0)
             break;
         int inside = 0;
         int endindex = index + 1;
-        QString replacement = "";
-        while (contents.at(endindex) != '>' || inside)
+        QString replacement;
+        while (contents.at(endindex) != QLatin1Char('>') || inside)
         {
             switch (contents.at(endindex).toLatin1()) {
                 case '<':
@@ -947,7 +947,7 @@ MsgList parseXML(const char *filename)
                 case '>':
                     inside--; break;
                 case '\n':
-                    replacement += '\n';
+                    replacement += QLatin1Char('\n');
                     break;
                 default:
                     break;

@@ -35,12 +35,12 @@ static bool readBlock(po_message_t msg, void *data)
 QString translate(QString xml, const QString &orig, const QString &translation)
 {
     QString prefix;
-    while (xml.at(0) == '<' && orig.at(0) != '<') {
+    while (xml.at(0) == QLatin1Char('<') && orig.at(0) != QLatin1Char('<')) {
         // a XML tag as prefix
-        int index = xml.indexOf('>');
+        int index = xml.indexOf(QLatin1Char('>'));
         assert(index != -1);
         index++;
-        while (xml.at(index) == ' ')
+        while (xml.at(index) == QLatin1Char(' '))
             index++;
         prefix = prefix + xml.left(index);
         xml = xml.mid(index, xml.length());
@@ -72,11 +72,11 @@ int main( int argc, char **argv )
     }
 
     QMap<QString, QString> translations;
-    foreach (const MsgBlock &block, translated)
+    for (const MsgBlock &block : std::as_const(translated))
     {
         QString msgstr;
         const QString msgid = block.msgid;
-        if (block.comment.indexOf("fuzzy") < 0)
+        if (block.comment.indexOf(QStringLiteral("fuzzy")) < 0)
             msgstr = block.msgstr;
 
 #ifdef POXML_DEBUG
@@ -99,7 +99,7 @@ int main( int argc, char **argv )
     line_offsets.append(0);
     int index = 0;
     while (true) {
-        index = xml_text.indexOf('\n', index) + 1;
+        index = xml_text.indexOf(QLatin1Char('\n'), index) + 1;
         if (index <= 0)
             break;
         line_offsets.append(index);
@@ -148,13 +148,13 @@ int main( int argc, char **argv )
         QString xml = xml_text.mid(start_pos, end_pos - start_pos);
         int positionOfCommentStart = 0;
         while (true) {
-            positionOfCommentStart = xml.indexOf("<!--");
+            positionOfCommentStart = xml.indexOf(QStringLiteral("<!--"));
             if (positionOfCommentStart == -1)
                 break;
             int end_index = positionOfCommentStart + 4;
-            while (xml.at(end_index) != '>' ||
-                   xml.at(end_index-1) != '-' ||
-                   xml.at(end_index-2) != '-')
+            while (xml.at(end_index) != QLatin1Char('>') ||
+                   xml.at(end_index-1) != QLatin1Char('-') ||
+                   xml.at(end_index-2) != QLatin1Char('-'))
             {
                 end_index++;
             }
@@ -170,40 +170,40 @@ int main( int argc, char **argv )
         // assert(!descaped.isEmpty());
 #endif
 
-        if ((*it).msgid.at(0) == '<' &&  StructureParser::isClosure((*it).msgid)) {
+        if ((*it).msgid.at(0) == QLatin1Char('<') &&  StructureParser::isClosure((*it).msgid)) {
             // if the id starts with a tag, then we remembered the
             // correct line information and need to strip the target
             // now, so it fits
             int index = 0;
-            while ((*it).msgid.at(index) != '>')
+            while ((*it).msgid.at(index) != QLatin1Char('>'))
                 index++;
             index++;
-            while ((*it).msgid.at(index) == ' ')
+            while ((*it).msgid.at(index) == QLatin1Char(' '))
                 index++;
             QString omsgid = (*it).msgid;
             (*it).msgid = (*it).msgid.mid(index);
 
             index = (*it).msgid.length() - 1;
-            while ((*it).msgid.at(index) != '<')
+            while ((*it).msgid.at(index) != QLatin1Char('<'))
                 index--;
 
             (*it).msgid = (*it).msgid.left(index);
 
             if (!descaped.isEmpty()) {
-                if (descaped.at(0) != '<') {
+                if (descaped.at(0) != QLatin1Char('<')) {
                     qWarning("the translation of '%s' doesn't start with a tag.", qPrintable(omsgid));
                     exit(1);
                 }
                 index = 0;
-                while (index <= (int)descaped.length() && descaped.at(index) != '>')
+                while (index <= (int)descaped.length() && descaped.at(index) != QLatin1Char('>'))
                     index++;
                 index++;
-                while (descaped.at(index) == ' ')
+                while (descaped.at(index) == QLatin1Char(' '))
                     index++;
                 descaped = descaped.mid(index);
 
                 index = descaped.length() - 1;
-                while (index >= 0 && descaped.at(index) != '<')
+                while (index >= 0 && descaped.at(index) != QLatin1Char('<'))
                     index--;
 
                 descaped = descaped.left(index);
@@ -246,21 +246,21 @@ int main( int argc, char **argv )
 
     ts << xml_text.mid(old_pos);
 
-    output.remove(QRegularExpression("<trans_comment\\s*>"));
-    output.remove(QRegularExpression("</trans_comment\\s*>"));
+    output.remove(QRegularExpression(QStringLiteral("<trans_comment\\s*>")));
+    output.remove(QRegularExpression(QStringLiteral("</trans_comment\\s*>")));
 
     StructureParser::removeEmptyTags(output);
 
     index = 0;
     while (true) {
-        index = output.indexOf(QRegularExpression(">[^\n]"), index );
+        index = output.indexOf(QRegularExpression(QStringLiteral(">[^\n]")), index );
         if ( index == -1 )
             break;
-        if ( output.at( index - 1 ) == '/' || output.at( index - 1 ) == '-' ||
-             output.at( index - 1 ) == ']' || output.at( index - 1 ) == '?' )
+        if ( output.at( index - 1 ) == QLatin1Char('/') || output.at( index - 1 ) == QLatin1Char('-') ||
+             output.at( index - 1 ) == QLatin1Char(']') || output.at( index - 1 ) == QLatin1Char('?') )
             index = index + 1;
         else {
-            output.replace( index, 1, "\n>" );
+            output.replace( index, 1, QStringLiteral("\n>") );
             index = index + 2;
         }
     }
