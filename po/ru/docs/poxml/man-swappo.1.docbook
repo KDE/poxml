@@ -52,7 +52,7 @@
 
 <refsect1>
 <title
->ОПИСАНИЕ</title>
+>Описание</title>
 
 <para
 ><command
@@ -70,16 +70,16 @@
 
 <refsect1>
 <title
->СМ. ТАКЖЕ</title>
+>Смотрите также</title>
 
 <para
->po2xml(1), split2po(1), transxx(1), xml2pot(1)</para>
+>po2xml(1), split2po(1), xml2pot(1)</para>
 
 </refsect1>
 
 <refsect1>
 <title
->АВТОРЫ</title>
+>Авторы</title>
 <para
 >PO XML tools написаны &Stephan.Kulow; &Stephan.Kulow.mail;</para>
 <para
