@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Arabic "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<author
+><personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+><email
+>bab@debian.org</email
+></author>
+<date
+>2003-04-07</date>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>xml2pot</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>xml2pot</command
+></refname>
+<refpurpose
+>ينشئ ملف قالب PO من ملف DocBook XML.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>xml2pot</command
+> <group
+><option
+><replaceable
+>XML-أصلي</replaceable
+></option
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>الوصف</title>
+
+<para
+><command
+>xml2pot</command
+> هي أداة سطر أوامر تُنتج ملف قالب رسائل gettext من ملف DocBook XML <filename
+>XML-أصلي</filename
+>. يُرسل ملف القالب إلى المخرج المعياري.</para>
+
+<para
+>يمكن استخدام ملف القالب الناتج لإنشاء ملفات رسائل gettext (ملفات PO) لمجموعة متنوعة من اللغات. يمكن بعد ذلك استخدامها مع <command
+>po2xml</command
+>(1) لترجمة ملف XML الأصلي إلى هذه اللغات الأخرى.</para>
+
+
+<para
+>هذه الأداة المساعدة جزء من طقم تطوير برمجيات كيدي.</para
+> 
+
+</refsect1>
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+
+<para
+>po2xml(1)، split2po(1)، swappo(1)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>المؤلفون</title>
+
+<para
+>أدوات PO XML كُتبت بواسطة &Stephan.Kulow; &Stephan.Kulow.mail;</para>
+<para
+>صفحة الدليل هذه أعدها <personname
+><firstname
+>بن</firstname
+><surname
+>بيرتون</surname
+></personname
+><email
+>bab@debian.org</email
+></para>
+</refsect1>
+
+</refentry>
